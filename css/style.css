@@ -1,0 +1,375 @@
+@charset "utf-8";
+/*-------------------------------------------
+  style.css
+  Copyright 2019 Diego Carmona Bernal
+-------------------------------------------*/
+/*-------------------------------------------
+  Inicio | Estructura
+-------------------------------------------*/
+* { margin: 0; padding: 0; line-height: 1.2; }
+
+/**::-webkit-scrollbar { display: none; }*/
+
+::selection { background: #9F9F9F; color: #ffffff; }
+
+::-webkit-selection { background: #9F9F9F; color: #ffffff; }
+
+::-moz-selection { background: #9F9F9F; color: #ffffff; }
+
+body { font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif; background: #E9ECF4; color: #444444; }
+
+body.login { font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif; background: #f8f4f4 url(../images/background-login.jpg) no-repeat center fixed; background-size: cover !important; }
+
+.wrapper { width: 1300px; margin: 0 auto; }
+
+.wrapper:after { display: block; content: ""; clear: both; }
+
+/*-------------------------------------------
+  Inicio | Header
+-------------------------------------------*/
+.header { width: 970px; float: right; height: 50px; margin: 20px 0 35px 0; background: #ffffff; box-shadow: 0 1px 6px rgba(0,0,0,0.1); }
+
+.header:after { display: block; content: ""; clear: both; }
+
+/*-------------------------------------------
+  Inicio | Información Usuario
+-------------------------------------------*/
+.info-user { float: right; height: 100%; width: 295px; border-left: 5px solid #E9ECF4; }
+
+.info-user img.image_user { float: left; width: 35px; height: 35px; background: #ffffff; margin: 7px 0 7px 15px; border: 1px solid #808080; border-radius: 3em; pointer-events: none; }
+
+.info-user .name_user { display: block; float: left; margin: 5px 0 0 10px; color: #606060; font-size: 1em; font-weight: bold; text-transform: capitalize; }
+
+.info-user .logout a { display: block; float: left; margin: 2px 0 0 10px; text-decoration: none; color: #606060; font-size: 0.9em; font-weight: bold; text-transform: capitalize; }
+
+.info-user .logout a:hover, .info-user .logout a:focus { color: #538170; outline: none; text-decoration: underline; }
+
+.info-user .user_active { display: block; float: right; margin: -7px 20px 0 0; background: #6faf9f; width: 15px; height: 15px; border-radius: 2em; }
+
+.info-school-period { float: left; height: 100%; width: 450px; }
+
+.info-school-period .school_period_user { display: block; float: left; margin: 14px 0 14px 20px; color: #606060; font-size: 1em; font-weight: bold; text-transform: capitalize; }
+
+.info-school-period .school_period_user a { margin: 14px 0 14px 0px; color: #606060; font-size: 1em; font-weight: bold; text-transform: capitalize; text-decoration: none; }
+
+.info-school-period .school_period_user a:hover, .info-school-period .school_period_user a:focus { color: #538170; outline: none; }
+
+/*-------------------------------------------
+  Inicio | Nav Admin
+-------------------------------------------*/
+.nav-admin-home { position: fixed; width: 300px; margin: 20px 0 20px 0; top: 0; bottom: 0; background: #6faf9f; box-shadow: 0 1px 6px rgba(0,0,0,0.1); }
+
+.nav-admin-home ul { list-style: none; }
+
+.nav-admin-home img.image_user { display: block; width: 120px; height: 120px; background: #ffffff; margin: 25px auto 10px; border: 4px solid rgb(73, 136, 120); border-radius: 10em; pointer-events: none; }
+
+.nav-admin-home span.name_user { display: block; color: #ffffff; font-size: 1.2em; font-weight: bold; text-align: center; text-transform: capitalize; }
+
+.nav-admin-home ul.first { margin: 30px 0 0 0; padding: 10px 0; list-style: none; border-top: 2px solid rgb(73, 136, 120); border-bottom: 2px solid rgb(73, 136, 120); }
+
+.nav-admin-home ul.second { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(73, 136, 120); }
+
+.nav-admin-home ul.last { list-style: none; padding: 10px 0; border-bottom: 2px solid rgb(73, 136, 120); }
+
+.nav-admin-home ul li a{ display: block; color: #ffffff; padding: 10px 30px; font-weight: bold; font-size: 0.8em; text-transform: uppercase; text-decoration: none; }
+
+.nav-admin-home ul li a.active{ border-left: 2px solid #ffffff; background:rgb(73, 136, 120); padding: 10px 28px; }
+
+/*-------------------------------------------
+  Inicio | Mensajes
+-------------------------------------------*/
+.wrap-message-info { float: right; margin: 20px 0 0 0; width: 300px; height: 100px; background: url(../images/message.png)#ffffff no-repeat; background-size: 53px; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.4em; }
+
+.wrap-message-error { float: right; margin: 20px 0 0 0; width: 300px; height: 100px; background: url(../images/message-error.png)#ffffff no-repeat; background-size: 53px; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.4em; }
+
+.wrap-message-info p, .wrap-message-error p { margin: 28px 35px 0 60px; color: #2b2a2a; font-size: 0.9em; line-height: 1.5em; }
+
+.wrap-message-info .button, .wrap-message-error .button { float: right; margin: 8px 8px 0 0; width: 25px; height: 25px; background: #f2f2f7; color: #b4b3c5; font-weight: bold; font-size: 1.5ex; border: none; border-radius: 2em; cursor: pointer; }
+
+.wrap-message-info .button:hover, .wrap-message-info .button:focus, .wrap-message-error .button:hover, .wrap-message-error .button:focus { background: #b4b3c5; color: #f2f2f7; }
+
+/*-------------------------------------------
+  Formularios
+-------------------------------------------*/
+.content { float: right; margin: 0 0 0 0; width: 970px; }
+
+.content:after { display: block; content: ""; clear: both; }
+
+/*-------------------------------------------
+  Formulario Iniciar Sesión
+-------------------------------------------*/
+.wrap-title-login { height: 230px; background: #6faf9f; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
+.wrap-title-login .title-login h1{ text-align: center; padding: 25px 0 0 0; font-size: 3.2em; color: #ffffff; }
+
+.wrap-form-login { width: 380px; height: 340px; margin: -55px auto 0; background-color: #ffffff; border-top: 3px solid #538170; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.5em; }
+
+.logo-form-login { position: absolute; width: 140px; height: 140px; margin: -55px 0  0 116px; background: url(../images/asistencia-icon.png)#ffffff no-repeat bottom / 125px 125px; border: 4px solid #538170; border-radius: 5em; }
+
+.logo-form-login img { width: 130px; height: 130px; margin: 5px 0 0 5px; border-radius: 5em; }
+
+.wrap-form-login .label { display: block; padding: 100px 0 20px 0; color: #444444; font-size: 1.8em; text-align: center; }
+
+.wrap-form-login .labelrecordar { float: left; margin: 28px 0 0 10px; color: #444444; font-size: 0.8em; font-weight: bold; }
+
+.wrap-form-login .text { width: 325px; height: 40px; margin: 0 0 0 22.5px; padding: 0 0 0 10px; border: 1px solid #CECECE; border-radius: 0.4em; font-size: .9em; }
+
+.wrap-form-login .textcontrasena { width: 325px; height: 40px; margin: 15px 0 0 22.5px; padding: 0 0 0 10px; border: 1px solid #CECECE; border-radius: 0.4em; font-size: .9em; }
+
+.wrap-form-login .button { float: right; width: 120px; height: 35px; margin: 20px 22.5px 0 0 ; background: #6faf9f; border: none; border-radius: 0.6em; color: #ffffff; font-size: .9em; font-weight: bold; cursor: pointer; }
+.wrap-form-login .button:hover, .wrap-form-login .button:focus { background: #538170; border: none; }
+
+.wrap-form-login #checkboxrecordar { float: left; margin: 30px 0 0 22.5px; }
+
+/*-------------------------------------------
+  Formulario Load Table
+-------------------------------------------*/
+.form-load { float: left; margin: 0 0 35px 0; width: 650px; background: #ffffff; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.4em; }
+
+.form-load .head { padding: 15px 25px 10px; border-bottom: solid #e6e6e6 1px; }
+
+.form-load .head h1 { display: inline-block; color: #444444; font-size: 1.8em; font-weight: bold; }
+
+.form-load .form-year .number { display: block; float: left; width: 60px; height: 35px; margin: 20px 0 20px 25px; padding: 0 12px; background: #ffffff; border: solid #e6e6e6 1px; border-radius: 0.4em; ; color: #444444; font-size: 1em; }
+
+.form-load .form-year .number:hover, .form-load .form-year .number:focus { outline: none; }
+
+.form-load .form-year .btn { display: block; float: left; width: 90px; height: 37px; margin: 20px 0 20px 10px; background: #6faf9f; color: #ffffff; font-weight: bold; border-radius: 0.6em; border: none; cursor: pointer; }
+
+.form-load .form-year .btn:hover, .form-load .form-year .btn:focus { background: #538170; border: none; }
+
+.form-load table { margin: 30px 25px; width: 600px; border-left: solid #e6e6e6 1px; border-collapse: collapse; border-radius: .5em; overflow: hidden; }
+
+.form-load th { padding: 8px 7px; background: #6faf9f; color: #ffffff; border: none; text-align: left; font-size: 0.9em; font-weight: bold; text-transform: capitalize; }
+
+.form-load th.center { text-align: center; }
+
+.form-load th.view { background: #6faf9f; }
+
+.form-load th.edit { background: #3c93a3; }
+
+.form-load th.delete { background: #e94848; }
+
+.form-load td { padding: 8px 7px; background: #ffffff; color: #444444; border-top: none; border-left: none; border-right: none; border-bottom: solid #e6e6e6 1px; font-size: 0.9em; font-weight: normal; text-align: left; }
+
+.form-load td.center { text-align: center; }
+
+.form-load td button.btnview { margin: 0 auto; display: block; width: 20px; height: 20px; background: #6faf9f; border: none; border-radius: 2em; color: #ffffff; text-decoration: none; cursor: pointer; }
+
+.form-load td button.btnview:hover, .form-load td button.btnview:focus { background: #538170; border: none; }
+
+.form-load td button.btnedit { margin: 0 auto; display: block; width: 20px; height: 20px; background: #3c93a3; border: none; border-radius: 2em; color: #ffffff; text-decoration: none; cursor: pointer; }
+
+.form-load td button.btnedit:hover, .form-load td button.btnedit:focus { background: #356694; border: none; }
+
+.form-load td button.btndelete { margin: 0 auto; display: block; width: 20px; height: 20px; background: #e94848; border: none; border-radius: 2em; color: #ffffff; text-decoration: none; cursor: pointer; }
+
+.form-load td button.btndelete:hover, .form-load td button.btndelete:focus { background: #aa3535; border: none; }
+
+.form-load th a { color: #ffffff; font-size: 1.4em; text-decoration: none; }
+
+.form-load tr:hover td { background: #f4fdf3; }
+
+.form-load .pages { margin: 40px 0 25px 25px; }
+
+.form-load .pages:after { display: block; content: ""; clear: both; }
+
+.form-load .pages ul li { list-style: none; }
+
+.form-load .pages ul li button { float: left; margin: 0 10px 0 0; width: 30px; height: 30px; background: #6faf9f; border: solid #538170 3px; border-radius: 2em; color: #ffffff; font-size: 0.8em; font-weight: bold; }
+
+.form-load .pages ul li button:hover, .form-load .pages ul li button:focus { background: #538170; border: solid #6faf9f 3px; cursor: pointer; }
+
+.form-load .pages ul li.active button { background: #538170; border: solid #6faf9f 3px; }
+
+.form-load .pages ul li.active button:hover, .form-load .pages ul li.active button:focus { background: #6faf9f; border: solid #538170 3px; cursor: pointer; }
+
+/*-------------------------------------------
+  Formulario Herramientas
+-------------------------------------------*/
+.form-options { float: right; margin: 0 0 0 0; width: 300px; background: #ffffff; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.4em; }
+
+.form-options .head { padding: 10.5px 0; border-bottom: solid #e6e6e6 1px; }
+
+.form-options .head h1 { display: block; color: #444444; font-size: 2.4em; text-align: center; text-transform: uppercase; text-decoration: none; }
+
+.form-options .search { margin: 20px 0; }
+
+.form-options .search:after { display: block; content: ""; clear: both; }
+
+.form-options .search .text { float: left; width: 203px; height: 40px; margin: 0 0 0 10px; padding: 0 12px; background: #ffffff; border: solid #e6e6e6 1px; border-radius: 1.5em; ; color: #444444; font-size: 1em; }
+
+.form-options .search .btn-search { float: left; margin: 0 0 0 10px; width: 40px; height: 40px; background: #6faf9f; border: solid #538170 3px; border-radius: 2em; color: #ffffff; font-size: 1.2em; cursor: pointer; }
+
+.form-options .search .btn-search:hover, .form-options .search .btn-search:focus { background: #538170; border: solid #6faf9f 3px; }
+
+.form-options .options { margin: 0 0 0 0; padding: 10px 0 10px 0; border-bottom: solid #e6e6e6 1px; }
+
+.form-options .options:after { display: block; content: ""; clear: both; }
+
+.form-options .options .btn { float: left; margin: 0 0 0 28px; width: 40px; height: 40px; background: #6faf9f; color: #ffffff; font-size: 1.2em; border: solid #538170 3px; border-radius: 2em; cursor: pointer; }
+
+.form-options .options .btn:hover, .form-options .options .btn:focus { background: #538170; border: solid #6faf9f 3px; }
+
+.form-options .options .btnexit { float: left; margin: 0 0 0 28px; width: 40px; height: 40px; background: #e94848; color: #ffffff; font-size: 1.2em; border: solid #aa3535 3px; border-radius: 2em; cursor: pointer; }
+
+.form-options .options .btnexit:hover, .form-options .options .btnexit:focus { background: #aa3535; border: solid #e94848 3px; }
+
+.form-options .options .btncoding { float: left; margin: 0 0 0 28px; width: 40px; height: 40px; background: #d8459b; color: #ffffff; font-size: 1.2em; border: solid #aa356c 3px; border-radius: 2em; cursor: pointer; }
+
+.form-options .options .btncoding:hover, .form-options .options .btncoding:focus { background: #aa356c; border: solid #d8459b 3px; }
+
+.form-options .options .btnprinter { float: left; margin: 0 0 0 28px; width: 40px; height: 40px; background: #3c93a3; color: #ffffff; font-size: 1.2em; border: solid #356694 3px; border-radius: 2em; cursor: pointer; }
+
+.form-options .options .btnprinter:hover, .form-options .options .btnprinter:focus { background: #356694; border: solid #3c93a3 3px; }
+
+.form-options .options .btn.disabled { background: #e6e6e6; border: solid #a5a5a5 3px; color: #a5a5a5; cursor: initial; }
+
+/*-------------------------------------------
+  Formulario - Agregar / Actualizar
+-------------------------------------------*/
+.form-data { float: left; width: 650px; margin: 0 0 35px 0; background: #ffffff; box-shadow: 0 1px 6px rgba(0,0,0,0.1); border-radius: 0.4em; }
+
+.form-data .head { padding: 15px 25px 10px; border-bottom: solid #e6e6e6 1px; }
+
+.form-data .head h1 { color: #444444; font-size: 1.8em; font-weight: bold; }
+
+.form-data .body .wrap { overflow: hidden; }
+
+.form-data .body .first { float: left; margin: 15px 0 5px 25px; }
+
+.form-data .body .last { float: right; margin: 15px 25px 5px 0; }
+
+.form-data .body .label { display: block; margin: 20px 0 8px 0; color: #505050; font-size: 1em; font-weight: bold; }
+
+.form-data .body .text { width: 262px; height: 40px; margin: 0 0 0 0; padding: 0 12px; background: #ffffff; border: solid #e6e6e6 1px; border-radius: 0.4em; ; color: #444444; font-size: 1em; }
+
+.form-data .body .textarea { width: 262px; height: 113px; margin: 0 0 0 0; padding: 8px 12px; background: #ffffff; border: solid #e6e6e6 1px; border-radius: 0.4em; ; color: #444444; font-size: 1.1em; text-align: justify; resize: none; }
+
+.form-data .body .select { width: 288px; height: 42px; margin: 0 0 0 0; padding: 0 12px; outline-color: #1b5a42; border: 1px solid #e6e6e6; border-radius: 0.4em; color: #444444; font-size: .9em; font-weight: bold; }
+
+.form-data .body .date { width: 262px; height: 40px; margin: 0 0 0 0; padding: 0 12px; background: #ffffff; border: solid #e6e6e6 1px; border-radius: 0.4em; ; color: #444444; font-size: 1em; }
+
+.form-data .body [type="date"]::-webkit-inner-spin-button { display: none; }
+
+.form-data .body [type="date"]::-webkit-calendar-picker-indicator { opacity: 1; }
+
+.form-data .body .user-image { display: block; position: absolute; width: 216px; height: 216px; border: solid rgb(61, 151, 131) 3px; border-radius: 0.4em; pointer-events: none; }
+
+.form-data .body .file { display: block; position: relative; margin: 190px 0 0 0; padding: 7px 12px 0; width: 198px; height: 31px; background: rgba(61, 151, 131, 0.6); border-radius: 0.2em; color: #ffffff; text-align: center; font-size: 1em; cursor: pointer; }
+
+.form-data .body .file:hover { background: rgba(61, 151, 131, 1); }
+
+.form-data .body .btn { display: block; float: right; margin: 30px 25px 20px 0; width: 40px; height: 40px; background: #6faf9f; border: solid #538170 3px; border-radius: 2em; color: #ffffff; font-size: 1.3em; cursor: pointer; }
+
+.form-data .body .btn:hover, .form-data .body .btn:focus { background: #538170; border: solid #6faf9f 3px; }
+
+.text:focus, .textarea:focus, .textcontrasena, .date:focus, button:focus { outline:none !important; outline-width: 0 !important; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; }
+
+/*-------------------------------------------
+  Formulario Eliminar Registro
+-------------------------------------------*/
+.form-data .delete { margin: 30px 0 0 0; text-align: center; }
+
+.form-data .delete h1 { color: #444444; font-size: 1.8em; font-weight: bold; }
+
+.form-data .delete .btn-si { float: left; margin: 35px 0 37px 150px; width: 80px; height: 45px; background: #e94848; border: solid #aa3535 3px; border-radius: 2em; color: #ffffff; font-size: 1.6em; cursor: pointer; }
+
+.form-data .delete .btn-no{ float: right; margin: 35px 150px 37px 0; width: 80px; height: 45px; background: #3c93a3; border: solid #356694 3px; border-radius: 2em; color: #ffffff; font-size: 1.6em; cursor: pointer; }
+
+.form-data .delete .btn-si:hover, .form-data .delete .btn-si:focus { background: #aa3535; border: solid #e94848 3px; }
+
+.form-data .delete .btn-no:hover, .form-data .delete .btn-no:focus { background: #356694; border: solid #3c93a3 3px; }
+
+/*-------------------------------------------
+  Formulario Grupos
+-------------------------------------------*/
+.form-data .form-year .number { display: block; float: left; width: 60px; height: 35px; margin: 10px 0 20px 25px; padding: 0 12px; background: #ffffff; border: solid #e6e6e6 1px; border-radius: 0.4em; ; color: #444444; font-size: 1em; }
+
+.form-data .form-year .number:hover, .form-data .form-year .number:focus { outline: none; }
+
+.form-data .form-year .btn { display: block; float: left; width: 90px; height: 37px; margin: 10px 0 20px 10px; background: #6faf9f; color: #ffffff; font-size: 0.8em; font-weight: bold; border-radius: 0.6em; border: none; cursor: pointer; }
+
+.form-data .form-year .btn:hover, .form-data .form-year .btn:focus { background: #538170; border: none; }
+
+.form-data table { margin: 10px 25px 30px; width: 600px; border-left: solid #e6e6e6 1px; border-collapse: collapse; border-radius: .5em; overflow: hidden; }
+
+.form-data th { padding: 10px 7px; background: #6faf9f; color: #ffffff; border: none; text-align: left; font-size: 0.8em; text-transform: uppercase; font-weight: bold; }
+
+.form-data th.center { text-align: center; }
+
+.form-data th.view { background: #6faf9f; }
+
+.form-data th.edit { background: #3c93a3; }
+
+.form-data th.delete { background: #e94848; }
+
+.form-data td { padding: 0 7px; background: #ffffff; color: #444444; border-top: none; border-left: none; border-right: none; border-bottom: solid #e6e6e6 1px; font-size: 0.9em; font-weight: normal; text-align: left; }
+
+.form-data td.center { text-align: center; }
+
+.form-data td label { display: block; padding: 10px 0; }
+
+.form-data td button.btnview { margin: 0 auto; display: block; width: 20px; height: 20px; background: #6faf9f; border: none; border-radius: 2em; color: #ffffff; text-decoration: none; cursor: pointer; }
+
+.form-data td button.btnview:hover, .form-data td button.btnview:focus { background: #538170; border: none; }
+
+.form-data td button.btnedit { margin: 0 auto; display: block; width: 20px; height: 20px; background: #3c93a3; border: none; border-radius: 2em; color: #ffffff; text-decoration: none; cursor: pointer; }
+
+.form-data td button.btnedit:hover, .form-data td button.btnedit:focus { background: #356694; border: none; }
+
+.form-data td button.btndelete { margin: 0 auto; display: block; width: 20px; height: 20px; background: #e94848; border: none; border-radius: 2em; color: #ffffff; text-decoration: none; cursor: pointer; }
+
+.form-data td button.btndelete:hover, .form-data td button.btndelete:focus { background: #aa3535; border: none; }
+
+.form-data th a { color: #ffffff; font-size: 1.4em; text-decoration: none; }
+
+.form-data tr:hover td { background: #f4fdf3; }
+
+.form-data td .cbox-subject, .form-data td .cbox-student { margin: 4px 0 0 11px; background-position: 0 0; width: 18px; height: 18px; background: #ffffff; }
+
+.form-data button.btn-add-subjects { width: 288px; height: 40px; margin: 30px 0 20px 25px; background: #6faf9f; color: #ffffff; font-size: 0.8em; font-weight: bold; border-radius: 0.6em; border: none; cursor: pointer; }
+
+.form-data button.btn-add-subjects:hover, .form-data button.btn-add-subjects:focus { background: #538170; }
+
+.form-data button.btn-add-students { width: 288px; height: 40px; margin: 0 0 20px 19.5px; background: #6faf9f; color: #ffffff; font-size: 0.8em; font-weight: bold; border-radius: 0.6em; border: none; cursor: pointer; }
+
+.form-data button.btn-add-students:hover, .form-data button.btn-add-students:focus { background: #538170; }
+
+.form-data .btn-add-group-students { display: block; float: right; margin: 0 25px 20px 0; width: 40px; height: 40px; background: #6faf9f; border: solid #538170 3px; border-radius: 2em; color: #ffffff; font-size: 1.3em; cursor: pointer; }
+
+.form-data .btn-add-group-students:hover, .form-data .body .btn-add-group-students:focus { background: #538170; border: solid #6faf9f 3px; }
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+
+/*-------------------------------------------
+  Formulario Iniciar Sesión
+-------------------------------------------*/
+.wrap-title-login { height: 200px; background: #6faf9f; box-shadow: 0 1px 6px rgba(0,0,0,0.3); }
+
+.wrap-title-login .title-login h1{ text-align: center; padding: 25px 0 0 0; font-size: 2.2em; color: #ffffff; }
+
+.wrap-form-login { width: 300px; height: 355px; margin: -55px auto 0; background-color: #ffffff; border-top: 3px solid #538170; box-shadow: 0 1px 6px rgba(0,0,0,0.2); border-radius: 0.5em; }
+
+.logo-form-login { position: absolute; width: 140px; height: 140px; margin: -55px 0  0 75px; background: url(../images/asistencia-icon.png)#ffffff no-repeat bottom / 125px 125px; border: 4px solid #538170; border-radius: 5em; }
+
+.logo-form-login img { width: 130px; height: 130px; margin: 5px 0 0 5px; border-radius: 5em; }
+
+.wrap-form-login .label { display: block; padding: 100px 0 20px 0; color: #444444; font-size: 1.8em; text-align: center; }
+
+.wrap-form-login .labelrecordar { float: left; margin: 21px 0 0 10px; color: #444444; font-size: 0.8em; font-weight: bold; }
+
+.wrap-form-login .text { width: 245px; height: 40px; margin: 0 0 0 22.5px; padding: 0 0 0 10px; border: 1px solid #CECECE; border-radius: 0.4em; font-size: .9em; }
+
+.wrap-form-login .textcontrasena { width: 245px; height: 40px; margin: 15px 0 0 22.5px; padding: 0 0 0 10px; border: 1px solid #CECECE; border-radius: 0.4em; font-size: .9em; }
+
+.wrap-form-login .button { width: 253px; height: 35px; margin: 20px 22.5px 0 0 ; background: #6faf9f; border: none; border-radius: 0.6em; color: #ffffff; font-size: .9em; font-weight: bold; cursor: pointer; }
+.wrap-form-login .button:hover, .wrap-form-login .button:focus { background: #538170; border: none; }
+
+.wrap-form-login #checkboxrecordar { float: left; margin: 20px 0 0 22.5px; }
+}
