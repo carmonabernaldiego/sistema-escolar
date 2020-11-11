@@ -28,7 +28,8 @@
 				include_once "modules/sections/about-user.php";
 			?>
 		</header>
-		<aside>
+	</div>
+	<aside>
 			<?php
 				if (!empty($_SESSION['section-admin']) == 'go-'.$_SESSION['user'])
 				{
@@ -36,7 +37,5 @@
 				}
 			?>
 		</aside>
-		<img style="width:971px; float:right; box-shadow: 0 2px 6px rgba(0,0,0,0.1); pointer-events: none;" src="images/dashboard.png" />
-	</div>
 </body>
 </html>

@@ -17,26 +17,22 @@
 	}
 	else
 	{
-		$output[1] = '';
+		$output[1] = 'home';
 	}
 ?>
 <div class="nav-admin-home">
+	<span class="name_system">Control de Asistencias</span>
 	<img class="image_user" src="/images/users/<?php echo $_SESSION['image'];?>" />
 	<span class="name_user"><?php print $_SESSION['name'].' '.$_SESSION['surnames'];?></span>
-	<ul class="first">
-		<li><a class="<?php if($output[1] == 'school_periods'){ echo 'active'; } ?>" href="/modules/school_periods">Periodo Escolar</a></li>
-	</ul>
-	<ul class="second">
-		<li><a class="<?php if($output[1] == 'users'){ echo 'active'; } ?>" href="/modules/users">Usuarios</a></li>
-		<li><a class="<?php if($output[1] == 'administratives'){ echo 'active'; } ?>" href="/modules/administratives">Administrativos</a></li>
-		<li><a class="<?php if($output[1] == 'teachers'){ echo 'active'; } ?>" href="/modules/teachers">Docentes</a></li>
-		<li><a class="<?php if($output[1] == 'students'){ echo 'active'; } ?>" href="/modules/students">Alumnos</a></li>
-	</ul>
-	<ul class="last">
-		<li><a class="<?php if($output[1] == 'subjects'){ echo 'active'; } ?>" href="/modules/subjects">Materias</a></li>
-		<li><a class="<?php if($output[1] == 'groups'){ echo 'active'; } ?>" href="/modules/groups">Grupos</a></li>
-	</ul>
-	<ul class="last">
-		<li><a  class="<?php if($output[1] == 'assists'){ echo 'active'; } ?>" href="/modules/assists">Asistencias</a></li>
+	<ul>
+		<li><a class="<?php if($output[1] == 'home'){ echo 'active'; } ?>" href="/home"><span class="icon">dashboard</span>Dashboard</a></li>
+		<li><a class="<?php if($output[1] == 'school_periods'){ echo 'active'; } ?>" href="/modules/school_periods"><span class="icon">a</span>Periodo Escolar</a></li>
+		<li><a class="<?php if($output[1] == 'users'){ echo 'active'; } ?>" href="/modules/users"><span class="icon">a</span>Usuarios</a></li>
+		<li><a class="<?php if($output[1] == 'administratives'){ echo 'active'; } ?>" href="/modules/administratives"><span class="icon">a</span>Administrativos</a></li>
+		<li><a class="<?php if($output[1] == 'teachers'){ echo 'active'; } ?>" href="/modules/teachers"><span class="icon">a</span>Docentes</a></li>
+		<li><a class="<?php if($output[1] == 'students'){ echo 'active'; } ?>" href="/modules/students"><span class="icon">a</span>Alumnos</a></li>
+		<li><a class="<?php if($output[1] == 'subjects'){ echo 'active'; } ?>" href="/modules/subjects"><span class="icon">a</span>Materias</a></li>
+		<li><a class="<?php if($output[1] == 'groups'){ echo 'active'; } ?>" href="/modules/groups"><span class="icon">a</span>Grupos</a></li>
+		<li><a  class="<?php if($output[1] == 'assists'){ echo 'active'; } ?>" href="/modules/assists"><span class="icon">a</span>Asistencias</a></li>
 	</ul>
 </div>
