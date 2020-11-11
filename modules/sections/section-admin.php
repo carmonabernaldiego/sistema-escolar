@@ -17,7 +17,7 @@
 	}
 	else
 	{
-		$output[1] = 'home';
+		$output[1] = 'homes';
 	}
 ?>
 <div class="nav-admin-home">
