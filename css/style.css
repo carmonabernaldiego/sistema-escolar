@@ -24,7 +24,7 @@
 .icon {
     font-family: "icons" !important;
     float: left;
-    margin-top: 1px;
+    margin-top: 2.2px;
     margin-right: 15px;
 }
 
@@ -86,13 +86,13 @@ body.login {
 -------------------------------------------*/
 
 .header {
-    width: 970px;
+    width: 70%;
     float: right;
     height: 50px;
-    margin: 20px 0 35px 0;
+    margin: 35px 5%;
     background: #44475a;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.4em;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.6em;
 }
 
 .header:after {
@@ -104,6 +104,43 @@ body.login {
 
 /*-------------------------------------------
   Inicio | Información Usuario
+-------------------------------------------*/
+
+.info-school-period {
+    float: right;
+    height: 100%;
+    width: 25%;
+    border-left: 1px solid #4a567c;
+}
+
+.info-school-period .school_period_user {
+    display: block;
+    margin: 14px 0;
+    color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.info-school-period .school_period_user a {
+    color: #eef4ff;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.info-school-period .school_period_user a:hover,
+.info-school-period .school_period_user a:focus {
+    color: #9492c0;
+    outline: none;
+    transition: all 350ms;
+}
+
+
+/*-------------------------------------------
+  Inicio | Nav Admin
 -------------------------------------------*/
 
 .info-user {
@@ -127,7 +164,7 @@ body.login {
 .info-user .name_user {
     display: block;
     float: left;
-    margin: 5px 0 0 10px;
+    margin: 15px 0 0 10px;
     color: #eef4ff;
     font-size: 1em;
     font-weight: bold;
@@ -147,7 +184,7 @@ body.login {
 
 .info-user .logout a:hover,
 .info-user .logout a:focus {
-    color: #538170;
+    color: #9492c0;
     outline: none;
     text-decoration: underline;
 }
@@ -162,42 +199,6 @@ body.login {
     border-radius: 2em;
 }
 
-.info-school-period {
-    float: left;
-    height: 100%;
-    width: 450px;
-}
-
-.info-school-period .school_period_user {
-    display: block;
-    float: left;
-    margin: 14px 0 14px 20px;
-    color: #eef4ff;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-.info-school-period .school_period_user a {
-    margin: 14px 0 14px 0px;
-    color: #eef4ff;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: capitalize;
-    text-decoration: none;
-}
-
-.info-school-period .school_period_user a:hover,
-.info-school-period .school_period_user a:focus {
-    color: #538170;
-    outline: none;
-}
-
-
-/*-------------------------------------------
-  Inicio | Nav Admin
--------------------------------------------*/
-
 .nav-admin-home {
     position: fixed;
     width: 20%;
@@ -205,7 +206,7 @@ body.login {
     bottom: 0;
     background: #383a59;
     border-right: 1px solid #4a567c;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
 }
 
 .nav-admin-home ul {
@@ -217,7 +218,8 @@ body.login {
     width: 75px;
     height: 75px;
     background: #282a36;
-    margin: 20px auto 8px;
+    box-shadow: 0px 0px 3px rgba(98, 114, 164, 0.7);
+    margin: 20px auto 13px;
     border: 3px solid #4a567c;
     border-radius: 10em;
     pointer-events: none;
@@ -239,7 +241,7 @@ body.login {
     display: block;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -248,8 +250,8 @@ body.login {
 }
 
 .nav-admin-home ul {
-    margin: 10px 0 0 0;
-    padding: 10px 0;
+    margin: 10 0 0 0;
+    padding: 25px 0;
     list-style: none;
 }
 
@@ -263,12 +265,20 @@ body.login {
     text-decoration: none;
 }
 
+.nav-admin-home ul a:hover {
+    color: #9492c0;
+    text-shadow: none;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: all 350ms;
+}
+
 .nav-admin-home ul li a.active {
     color: #9492c0;
     text-shadow: none;
     font-weight: bold;
     border-left: 4px solid #6272a4;
-    padding: 10px 25px;
+    padding: 10px 26px;
 }
 
 
@@ -369,7 +379,7 @@ body.login {
     height: 340px;
     margin: -55px auto 0;
     background-color: #ffffff;
-    border-top: 3px solid #538170;
+    border-top: 3px solid #9492c0;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
 }
@@ -380,7 +390,7 @@ body.login {
     height: 140px;
     margin: -55px 0 0 116px;
     background: url(../images/asistencia-icon.png)#ffffff no-repeat bottom / 125px 125px;
-    border: 4px solid #538170;
+    border: 4px solid #9492c0;
     border-radius: 5em;
 }
 
@@ -443,7 +453,7 @@ body.login {
 
 .wrap-form-login .button:hover,
 .wrap-form-login .button:focus {
-    background: #538170;
+    background: #9492c0;
     border: none;
 }
 
@@ -514,7 +524,7 @@ body.login {
 
 .form-load .form-year .btn:hover,
 .form-load .form-year .btn:focus {
-    background: #538170;
+    background: #9492c0;
     border: none;
 }
 
@@ -586,7 +596,7 @@ body.login {
 
 .form-load td button.btnview:hover,
 .form-load td button.btnview:focus {
-    background: #538170;
+    background: #9492c0;
     border: none;
 }
 
@@ -658,7 +668,7 @@ body.login {
     width: 30px;
     height: 30px;
     background: #6faf9f;
-    border: solid #538170 3px;
+    border: solid #9492c0 3px;
     border-radius: 2em;
     color: #ffffff;
     font-size: 0.8em;
@@ -667,20 +677,20 @@ body.login {
 
 .form-load .pages ul li button:hover,
 .form-load .pages ul li button:focus {
-    background: #538170;
+    background: #9492c0;
     border: solid #6faf9f 3px;
     cursor: pointer;
 }
 
 .form-load .pages ul li.active button {
-    background: #538170;
+    background: #9492c0;
     border: solid #6faf9f 3px;
 }
 
 .form-load .pages ul li.active button:hover,
 .form-load .pages ul li.active button:focus {
     background: #6faf9f;
-    border: solid #538170 3px;
+    border: solid #9492c0 3px;
     cursor: pointer;
 }
 
@@ -742,7 +752,7 @@ body.login {
     width: 40px;
     height: 40px;
     background: #6faf9f;
-    border: solid #538170 3px;
+    border: solid #9492c0 3px;
     border-radius: 2em;
     color: #ffffff;
     font-size: 1.2em;
@@ -751,7 +761,7 @@ body.login {
 
 .form-options .search .btn-search:hover,
 .form-options .search .btn-search:focus {
-    background: #538170;
+    background: #9492c0;
     border: solid #6faf9f 3px;
 }
 
@@ -775,14 +785,14 @@ body.login {
     background: #6faf9f;
     color: #ffffff;
     font-size: 1.2em;
-    border: solid #538170 3px;
+    border: solid #9492c0 3px;
     border-radius: 2em;
     cursor: pointer;
 }
 
 .form-options .options .btn:hover,
 .form-options .options .btn:focus {
-    background: #538170;
+    background: #9492c0;
     border: solid #6faf9f 3px;
 }
 
@@ -995,7 +1005,7 @@ body.login {
     width: 40px;
     height: 40px;
     background: #6faf9f;
-    border: solid #538170 3px;
+    border: solid #9492c0 3px;
     border-radius: 2em;
     color: #ffffff;
     font-size: 1.3em;
@@ -1004,7 +1014,7 @@ body.login {
 
 .form-data .body .btn:hover,
 .form-data .body .btn:focus {
-    background: #538170;
+    background: #9492c0;
     border: solid #6faf9f 3px;
 }
 
@@ -1116,7 +1126,7 @@ button:focus {
 
 .form-data .form-year .btn:hover,
 .form-data .form-year .btn:focus {
-    background: #538170;
+    background: #9492c0;
     border: none;
 }
 
@@ -1193,7 +1203,7 @@ button:focus {
 
 .form-data td button.btnview:hover,
 .form-data td button.btnview:focus {
-    background: #538170;
+    background: #9492c0;
     border: none;
 }
 
@@ -1269,7 +1279,7 @@ button:focus {
 
 .form-data button.btn-add-subjects:hover,
 .form-data button.btn-add-subjects:focus {
-    background: #538170;
+    background: #9492c0;
 }
 
 .form-data button.btn-add-students {
@@ -1287,7 +1297,7 @@ button:focus {
 
 .form-data button.btn-add-students:hover,
 .form-data button.btn-add-students:focus {
-    background: #538170;
+    background: #9492c0;
 }
 
 .form-data .btn-add-group-students {
@@ -1297,7 +1307,7 @@ button:focus {
     width: 40px;
     height: 40px;
     background: #6faf9f;
-    border: solid #538170 3px;
+    border: solid #9492c0 3px;
     border-radius: 2em;
     color: #ffffff;
     font-size: 1.3em;
@@ -1306,7 +1316,7 @@ button:focus {
 
 .form-data .btn-add-group-students:hover,
 .form-data .body .btn-add-group-students:focus {
-    background: #538170;
+    background: #9492c0;
     border: solid #6faf9f 3px;
 }
 
@@ -1330,7 +1340,7 @@ button:focus {
         height: 355px;
         margin: -55px auto 0;
         background-color: #ffffff;
-        border-top: 3px solid #538170;
+        border-top: 3px solid #9492c0;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         border-radius: 0.5em;
     }
@@ -1340,7 +1350,7 @@ button:focus {
         height: 140px;
         margin: -55px 0 0 75px;
         background: url(../images/asistencia-icon.png)#ffffff no-repeat bottom / 125px 125px;
-        border: 4px solid #538170;
+        border: 4px solid #9492c0;
         border-radius: 5em;
     }
     .logo-form-login img {
@@ -1395,7 +1405,7 @@ button:focus {
     }
     .wrap-form-login .button:hover,
     .wrap-form-login .button:focus {
-        background: #538170;
+        background: #9492c0;
         border: none;
     }
     .wrap-form-login #checkboxrecordar {
