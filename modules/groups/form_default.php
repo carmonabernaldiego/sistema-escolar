@@ -70,7 +70,7 @@
 			<button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
 		</form>
 		<form action="/">
-			<button class="btnexit icon" type="submit">exit_to_app</button>
+			<button class="btn btnexit icon" type="submit">exit_to_app</button>
 		</form>
 	</div>
 	<div class="search">

@@ -65,6 +65,10 @@ table .icon {
     color: #eef4ff;
 }
 
+::placeholder {
+    color: #687292;
+}
+
 body {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     background: #282a36;
@@ -109,7 +113,7 @@ body.login {
 
 .info-title .title {
     display: block;
-    margin: 10.5px 25px;
+    margin: 10.5px 0 10.5px 32px;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
@@ -528,6 +532,7 @@ body.login {
 .form-load table {
     margin: 4.5% auto;
     width: 92%;
+    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
     border-top-left-radius: 0.6em;
     border-top-right-radius: 0.6em;
@@ -711,29 +716,32 @@ body.login {
 
 .form-options .search .text {
     float: left;
-    width: 71%;
+    width: 66%;
     height: 40px;
-    margin: 0 0 0 5%;
+    margin: 0 0 0 7%;
     padding-left: 5%;
     background: #eef4ff;
+    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
     border: none;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-top-left-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
     color: #4a567c;
+    font-weight: bold;
     font-size: 1em;
 }
 
 .form-options .search .btn-search {
-    float: left;
-    margin: 0 4% 0 0;
-    width: 15%;
+    float: right;
+    margin: 0 6% 0 0;
+    width: 16%;
     height: 40px;
     background: #6272a4;
+    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
     border: none;
     color: #eef4ff;
     cursor: initial;
-    border-top-right-radius: 1em;
-    border-bottom-right-radius: 1em;
+    border-top-right-radius: 0.8em;
+    border-bottom-right-radius: 0.8em;
     font-size: 1.2em;
     cursor: pointer;
 }
@@ -745,7 +753,11 @@ body.login {
 }
 
 .form-options .options {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     border-bottom: solid #4a567c 1px;
+    padding: 2% 5% 3% 5%;
 }
 
 .form-options .options:after {
@@ -755,10 +767,10 @@ body.login {
 }
 
 .form-options .options .btn {
-    float: left;
-    margin: 20px 6%;
-    width: 38px;
-    height: 38px;
+    width: 80%;
+    height: 70%;
+    margin: 10px;
+    padding: 5px;
     background: #5b857f;
     box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
     color: #eef4ff;
@@ -776,17 +788,8 @@ body.login {
 }
 
 .form-options .options .btnexit {
-    float: right;
-    margin: 20px 6% 20px 0;
-    width: 38px;
-    height: 38px;
     background: #db4949;
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
-    border: none;
-    color: #eef4ff;
-    font-size: 1.2em;
-    border-radius: 2em;
-    cursor: pointer;
 }
 
 .form-options .options .btnexit:hover,
