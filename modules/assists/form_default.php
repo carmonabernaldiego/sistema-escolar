@@ -6,15 +6,12 @@
 	}
 ?>
 <div class="form-load">
-	<div class="head">
-		<h1 class="titulo">Asistencias</h1>
-    </div>
 	<table>
 		<tr>
 			<th>Grupo</th>
 			<th>Nombre</th>
 			<th class="center">Semestre</th>
-			<th class="view center"><a class="icon icon-eye"></a></th>
+			<th class="view center"><a class="icon">visibility</a></th>
 			<th class="delete center"><a class="icon">delete</a></th>
     	</tr>
 		<?php

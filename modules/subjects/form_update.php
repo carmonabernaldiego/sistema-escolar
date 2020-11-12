@@ -112,7 +112,7 @@ echo'
 <div class="form-options">
 	<div class="options">
 		<form action="#" method="POST">
-			<button class="btn disabled icon icon-plus" name="btn" value="form_add" type="submit" disabled></button>
+			<button class="btn disabled icon" name="btn" value="form_add" type="submit" disabled>add</button>
 		</form>
 		<form action="#" method="POST">
 			<button class="btn disabled icon" name="btn" value="form_coding" type="submit" disabled>code</button>		</form>
@@ -120,7 +120,7 @@ echo'
 			<button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
 		</form>
 		<form action="#" method="POST">
-			<button class="btnexit icon icon-exit" name="btn" value="form_default" type="submit"></button>
+			<button class="btnexit icon" name="btn" value="form_default" type="submit">close</button>
 		</form>
     </div>
 	<div class="search">

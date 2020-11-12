@@ -31,8 +31,9 @@ table .icon {
 .icon {
     font-family: "icons" !important;
     float: left;
-    margin-top: 2.2px;
+    margin-top: -1px;
     margin-right: 15px;
+    text-transform: none;
 }
 
 
@@ -43,7 +44,7 @@ table .icon {
 * {
     margin: 0;
     padding: 0;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 
@@ -51,40 +52,29 @@ table .icon {
 
 ::selection {
     background: #9F9F9F;
-    color: #ffffff;
+    color: #eef4ff;
 }
 
 ::-webkit-selection {
     background: #9F9F9F;
-    color: #ffffff;
+    color: #eef4ff;
 }
 
 ::-moz-selection {
     background: #9F9F9F;
-    color: #ffffff;
+    color: #eef4ff;
 }
 
 body {
-    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     background: #282a36;
     color: #4a567c;
 }
 
 body.login {
-    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     background: #f8f4f4 url(../images/background-login.jpg) no-repeat center fixed;
     background-size: cover !important;
-}
-
-.wrapper {
-    width: 1300px;
-    margin: 0 auto;
-}
-
-.wrapper:after {
-    display: block;
-    content: "";
-    clear: both;
 }
 
 
@@ -93,10 +83,10 @@ body.login {
 -------------------------------------------*/
 
 .header {
-    width: 70%;
+    width: 72%;
     float: right;
     height: 50px;
-    margin: 35px 5%;
+    margin: 35px 3%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
@@ -119,7 +109,7 @@ body.login {
 
 .info-title .title {
     display: block;
-    margin: 11.5px 25px;
+    margin: 10.5px 25px;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
@@ -131,15 +121,16 @@ body.login {
 .info-school-period {
     float: right;
     width: 25%;
+    height: 100%;
     border-left: 1px solid #4a567c;
 }
 
 .info-school-period .school_period_user {
     display: block;
-    margin: 14.5px 0;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
+    line-height: 3.1;
     font-size: 1em;
     font-weight: bold;
     text-transform: capitalize;
@@ -175,7 +166,7 @@ body.login {
     float: left;
     width: 35px;
     height: 35px;
-    background: #ffffff;
+    background: #eef4ff;
     margin: 7px 0 7px 15px;
     border: 1px solid #808080;
     border-radius: 3em;
@@ -214,7 +205,7 @@ body.login {
     display: block;
     float: right;
     margin: -7px 20px 0 0;
-    background: #6faf9f;
+    background: #5b857f;
     width: 15px;
     height: 15px;
     border-radius: 2em;
@@ -222,7 +213,7 @@ body.login {
 
 .nav-admin-home {
     position: fixed;
-    width: 20%;
+    width: 22%;
     top: 0;
     bottom: 0;
     background: #383a59;
@@ -261,7 +252,7 @@ body.login {
     display: block;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -287,7 +278,6 @@ body.login {
 
 .nav-admin-home ul a:hover {
     color: #9492c0;
-    text-shadow: none;
     font-weight: bold;
     padding: 10px 30px;
     transition: all 350ms;
@@ -366,8 +356,8 @@ body.login {
 
 .content {
     float: right;
-    margin: 0 5%;
-    width: 70%;
+    margin: 0 3%;
+    width: 72%;
 }
 
 .content:after {
@@ -383,7 +373,7 @@ body.login {
 
 .wrap-title-login {
     height: 230px;
-    background: #6faf9f;
+    background: #5b857f;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -391,15 +381,15 @@ body.login {
     text-align: center;
     padding: 25px 0 0 0;
     font-size: 3.2em;
-    color: #ffffff;
+    color: #eef4ff;
 }
 
 .wrap-form-login {
     width: 380px;
     height: 340px;
     margin: -55px auto 0;
-    background-color: #ffffff;
-    border-top: 3px solid #9492c0;
+    background-color: #eef4ff;
+    border-top: 3px solid #6272a4;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
 }
@@ -410,7 +400,7 @@ body.login {
     height: 140px;
     margin: -55px 0 0 116px;
     background: url(../images/asistencia-icon.png)#ffffff no-repeat bottom / 125px 125px;
-    border: 4px solid #9492c0;
+    border: 4px solid #6272a4;
     border-radius: 5em;
 }
 
@@ -462,10 +452,10 @@ body.login {
     width: 120px;
     height: 35px;
     margin: 20px 22.5px 0 0;
-    background: #6faf9f;
+    background: #5b857f;
     border: none;
     border-radius: 0.6em;
-    color: #ffffff;
+    color: #eef4ff;
     font-size: .9em;
     font-weight: bold;
     cursor: pointer;
@@ -473,7 +463,7 @@ body.login {
 
 .wrap-form-login .button:hover,
 .wrap-form-login .button:focus {
-    background: #9492c0;
+    background: #6272a4;
     border: none;
 }
 
@@ -490,7 +480,7 @@ body.login {
 .form-load {
     float: left;
     margin: 0 0 35px 0;
-    width: 70%;
+    width: 71%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
@@ -503,10 +493,9 @@ body.login {
     height: 35px;
     margin: 20px 0 20px 25px;
     padding: 0 12px;
-    background: #ffffff;
+    background: #eef4ff;
     border: solid #4a567c 1px;
     border-radius: 0.4em;
-    ;
     color: #4a567c;
     font-size: 1em;
 }
@@ -522,8 +511,8 @@ body.login {
     width: 90px;
     height: 37px;
     margin: 20px 0 20px 10px;
-    background: #6faf9f;
-    color: #ffffff;
+    background: #5b857f;
+    color: #eef4ff;
     font-weight: bold;
     border-radius: 0.6em;
     border: none;
@@ -532,23 +521,26 @@ body.login {
 
 .form-load .form-year .btn:hover,
 .form-load .form-year .btn:focus {
-    background: #9492c0;
+    background: #6272a4;
     border: none;
 }
 
 .form-load table {
     margin: 4.5% auto;
     width: 92%;
-    border-left: solid #4a567c 1px;
     border-collapse: collapse;
-    border-radius: 0.3em;
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
     overflow: hidden;
 }
 
 .form-load th {
-    padding: 8px 7px;
-    background: #6faf9f;
-    color: #ffffff;
+    padding: 7px 15px;
+    background: #282a36;
+    color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     border: none;
     text-align: left;
     font-size: 0.9em;
@@ -560,28 +552,14 @@ body.login {
     text-align: center;
 }
 
-.form-load th.view {
-    background: #6faf9f;
-}
-
-.form-load th.edit {
-    background: #3c93a3;
-}
-
-.form-load th.delete {
-    background: #e94848;
-}
-
 .form-load td {
-    padding: 8px 7px;
-    background: #ffffff;
+    padding: 8px 15px;
+    background: #f2ebfd;
     color: #4a567c;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid #4a567c 1px;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.2);
+    border: none;
     font-size: 0.9em;
-    font-weight: normal;
+    font-weight: bold;
     text-align: left;
 }
 
@@ -592,50 +570,55 @@ body.login {
 .form-load td button.btnview {
     margin: 0 auto;
     display: block;
-    width: 20px;
-    height: 20px;
-    background: #6faf9f;
+    width: 18px;
+    height: 18px;
+    background: #5b857f;
+    box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
     border: none;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
 }
 
 .form-load td button.btnview:hover,
 .form-load td button.btnview:focus {
-    background: #9492c0;
+    background: #3d5854;
     border: none;
+    transition: all 350ms;
 }
 
 .form-load td button.btnedit {
     margin: 0 auto;
     display: block;
-    width: 20px;
-    height: 20px;
-    background: #3c93a3;
+    width: 18px;
+    height: 18px;
+    background: #3f6992;
+    box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
     border: none;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
 }
 
 .form-load td button.btnedit:hover,
 .form-load td button.btnedit:focus {
-    background: #356694;
+    background: #2a4866;
     border: none;
+    transition: all 350ms;
 }
 
 .form-load td button.btndelete {
     margin: 0 auto;
     display: block;
-    width: 20px;
-    height: 20px;
-    background: #e94848;
+    width: 18px;
+    height: 18px;
+    background: #db4949;
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     border: none;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
 }
@@ -644,20 +627,21 @@ body.login {
 .form-load td button.btndelete:focus {
     background: #aa3535;
     border: none;
+    transition: all 350ms;
 }
 
 .form-load th a {
-    color: #ffffff;
+    color: #eef4ff;
     font-size: 1.4em;
     text-decoration: none;
 }
 
 .form-load tr:hover td {
-    background: #f4fdf3;
+    background: #e3daf3;
 }
 
 .form-load .pages {
-    margin: 40px 0 25px 25px;
+    margin: 0 0 20px 25px;
 }
 
 .form-load .pages:after {
@@ -673,33 +657,32 @@ body.login {
 .form-load .pages ul li button {
     float: left;
     margin: 0 10px 0 0;
-    width: 30px;
-    height: 30px;
-    background: #6faf9f;
-    border: solid #9492c0 3px;
-    border-radius: 2em;
-    color: #ffffff;
+    width: 5%;
+    height: 23px;
+    background: #5b857f;
+    box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
+    border: none;
+    border-radius: 1em;
+    color: #eef4ff;
     font-size: 0.8em;
     font-weight: bold;
 }
 
 .form-load .pages ul li button:hover,
 .form-load .pages ul li button:focus {
-    background: #9492c0;
-    border: solid #6faf9f 3px;
+    background: #6272a4;
     cursor: pointer;
 }
 
 .form-load .pages ul li.active button {
-    background: #9492c0;
-    border: solid #6faf9f 3px;
+    background: #6272a4;
 }
 
 .form-load .pages ul li.active button:hover,
 .form-load .pages ul li.active button:focus {
-    background: #6faf9f;
-    border: solid #9492c0 3px;
+    background: #4c597e;
     cursor: pointer;
+    transition: all 300ms;
 }
 
 
@@ -709,25 +692,11 @@ body.login {
 
 .form-options {
     float: right;
-    margin: 0 0 0 0;
+    margin: 0 0 35px 0;
     width: 27%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
-}
-
-.form-options .head {
-    padding: 10.5px 0;
-    border-bottom: solid #4a567c 1px;
-}
-
-.form-options .head h1 {
-    display: block;
-    color: #4a567c;
-    font-size: 2.4em;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
 }
 
 .form-options .search {
@@ -742,12 +711,12 @@ body.login {
 
 .form-options .search .text {
     float: left;
-    width: 70%;
+    width: 71%;
     height: 40px;
-    margin: 0 0 0 4.5%;
+    margin: 0 0 0 5%;
     padding-left: 5%;
     background: #eef4ff;
-    border: solid #4a567c 1px;
+    border: none;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     color: #4a567c;
@@ -758,8 +727,8 @@ body.login {
     float: left;
     margin: 0 4% 0 0;
     width: 15%;
-    height: 41px;
-    background: #4a567c;
+    height: 40px;
+    background: #6272a4;
     border: none;
     color: #eef4ff;
     cursor: initial;
@@ -771,12 +740,11 @@ body.login {
 
 .form-options .search .btn-search:hover,
 .form-options .search .btn-search:focus {
-    background: #9492c0;
+    background: #4a567c;
+    transition: all 350ms;
 }
 
 .form-options .options {
-    margin: 0 0 0 0;
-    padding: 10px 0 10px 0;
     border-bottom: solid #4a567c 1px;
 }
 
@@ -788,32 +756,35 @@ body.login {
 
 .form-options .options .btn {
     float: left;
-    margin: 0 0 0 28px;
-    width: 40px;
-    height: 40px;
-    background: #6faf9f;
-    color: #ffffff;
+    margin: 20px 6%;
+    width: 38px;
+    height: 38px;
+    background: #5b857f;
+    box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
+    color: #eef4ff;
     font-size: 1.2em;
-    border: solid #9492c0 3px;
+    border: none;
     border-radius: 2em;
     cursor: pointer;
 }
 
 .form-options .options .btn:hover,
 .form-options .options .btn:focus {
-    background: #9492c0;
-    border: solid #6faf9f 3px;
+    background: #3d5854;
+    border: none;
+    transition: all 300ms;
 }
 
 .form-options .options .btnexit {
-    float: left;
-    margin: 0 0 0 28px;
-    width: 40px;
-    height: 40px;
-    background: #e94848;
-    color: #ffffff;
+    float: right;
+    margin: 20px 6% 20px 0;
+    width: 38px;
+    height: 38px;
+    background: #db4949;
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    border: none;
+    color: #eef4ff;
     font-size: 1.2em;
-    border: solid #aa3535 3px;
     border-radius: 2em;
     cursor: pointer;
 }
@@ -821,50 +792,12 @@ body.login {
 .form-options .options .btnexit:hover,
 .form-options .options .btnexit:focus {
     background: #aa3535;
-    border: solid #e94848 3px;
-}
-
-.form-options .options .btncoding {
-    float: left;
-    margin: 0 0 0 28px;
-    width: 40px;
-    height: 40px;
-    background: #d8459b;
-    color: #ffffff;
-    font-size: 1.2em;
-    border: solid #aa356c 3px;
-    border-radius: 2em;
-    cursor: pointer;
-}
-
-.form-options .options .btncoding:hover,
-.form-options .options .btncoding:focus {
-    background: #aa356c;
-    border: solid #d8459b 3px;
-}
-
-.form-options .options .btnprinter {
-    float: left;
-    margin: 0 0 0 28px;
-    width: 40px;
-    height: 40px;
-    background: #3c93a3;
-    color: #ffffff;
-    font-size: 1.2em;
-    border: solid #356694 3px;
-    border-radius: 2em;
-    cursor: pointer;
-}
-
-.form-options .options .btnprinter:hover,
-.form-options .options .btnprinter:focus {
-    background: #356694;
-    border: solid #3c93a3 3px;
+    border: none;
+    transition: all 300ms;
 }
 
 .form-options .options .btn.disabled {
-    background: #4a567c;
-    border: solid #eef4ff 3px;
+    background: #6a7186;
     color: #eef4ff;
     cursor: initial;
 }
@@ -876,21 +809,21 @@ body.login {
 
 .form-data {
     float: left;
-    width: 650px;
     margin: 0 0 35px 0;
-    background: #ffffff;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.4em;
+    width: 71%;
+    background: #44475a;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.6em;
 }
 
 .form-data .head {
-    padding: 15px 25px 10px;
+    padding: 12px 25px;
     border-bottom: solid #4a567c 1px;
 }
 
 .form-data .head h1 {
-    color: #4a567c;
-    font-size: 1.8em;
+    color: #eef4ff;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -910,8 +843,8 @@ body.login {
 
 .form-data .body .label {
     display: block;
-    margin: 20px 0 8px 0;
-    color: #505050;
+    margin: 0 0 8px 0;
+    color: #eef4ff;
     font-size: 1em;
     font-weight: bold;
 }
@@ -919,13 +852,13 @@ body.login {
 .form-data .body .text {
     width: 262px;
     height: 40px;
-    margin: 0 0 0 0;
+    margin: 0 0 15px 0;
     padding: 0 12px;
-    background: #ffffff;
-    border: solid #4a567c 1px;
+    background: #eef4ff;
+    border: none;
     border-radius: 0.4em;
-    ;
     color: #4a567c;
+    font-weight: bold;
     font-size: 1em;
 }
 
@@ -934,10 +867,9 @@ body.login {
     height: 113px;
     margin: 0 0 0 0;
     padding: 8px 12px;
-    background: #ffffff;
-    border: solid #4a567c 1px;
+    background: #eef4ff;
+    border: none;
     border-radius: 0.4em;
-    ;
     color: #4a567c;
     font-size: 1.1em;
     text-align: justify;
@@ -962,10 +894,9 @@ body.login {
     height: 40px;
     margin: 0 0 0 0;
     padding: 0 12px;
-    background: #ffffff;
+    background: #eef4ff;
     border: solid #4a567c 1px;
     border-radius: 0.4em;
-    ;
     color: #4a567c;
     font-size: 1em;
 }
@@ -997,7 +928,7 @@ body.login {
     height: 31px;
     background: rgba(61, 151, 131, 0.6);
     border-radius: 0.2em;
-    color: #ffffff;
+    color: #eef4ff;
     text-align: center;
     font-size: 1em;
     cursor: pointer;
@@ -1013,18 +944,18 @@ body.login {
     margin: 30px 25px 20px 0;
     width: 40px;
     height: 40px;
-    background: #6faf9f;
+    background: #5b857f;
     border: solid #9492c0 3px;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     font-size: 1.3em;
     cursor: pointer;
 }
 
 .form-data .body .btn:hover,
 .form-data .body .btn:focus {
-    background: #9492c0;
-    border: solid #6faf9f 3px;
+    background: #6272a4;
+    border: solid #5b857f;
 }
 
 .text:focus,
@@ -1060,10 +991,10 @@ button:focus {
     margin: 35px 0 37px 150px;
     width: 80px;
     height: 45px;
-    background: #e94848;
+    background: #db4949;
     border: solid #aa3535 3px;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     font-size: 1.6em;
     cursor: pointer;
 }
@@ -1073,10 +1004,10 @@ button:focus {
     margin: 35px 150px 37px 0;
     width: 80px;
     height: 45px;
-    background: #3c93a3;
+    background: #3f6992;
     border: solid #356694 3px;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     font-size: 1.6em;
     cursor: pointer;
 }
@@ -1084,13 +1015,13 @@ button:focus {
 .form-data .delete .btn-si:hover,
 .form-data .delete .btn-si:focus {
     background: #aa3535;
-    border: solid #e94848 3px;
+    border: solid #ff5555 3px;
 }
 
 .form-data .delete .btn-no:hover,
 .form-data .delete .btn-no:focus {
-    background: #356694;
-    border: solid #3c93a3 3px;
+    background: #2a4866;
+    border: solid #4e7091 3px;
 }
 
 
@@ -1105,10 +1036,9 @@ button:focus {
     height: 35px;
     margin: 10px 0 20px 25px;
     padding: 0 12px;
-    background: #ffffff;
+    background: #eef4ff;
     border: solid #4a567c 1px;
     border-radius: 0.4em;
-    ;
     color: #4a567c;
     font-size: 1em;
 }
@@ -1124,8 +1054,8 @@ button:focus {
     width: 90px;
     height: 37px;
     margin: 10px 0 20px 10px;
-    background: #6faf9f;
-    color: #ffffff;
+    background: #5b857f;
+    color: #eef4ff;
     font-size: 0.8em;
     font-weight: bold;
     border-radius: 0.6em;
@@ -1135,7 +1065,7 @@ button:focus {
 
 .form-data .form-year .btn:hover,
 .form-data .form-year .btn:focus {
-    background: #9492c0;
+    background: #6272a4;
     border: none;
 }
 
@@ -1150,8 +1080,8 @@ button:focus {
 
 .form-data th {
     padding: 10px 7px;
-    background: #6faf9f;
-    color: #ffffff;
+    background: #5b857f;
+    color: #eef4ff;
     border: none;
     text-align: left;
     font-size: 0.8em;
@@ -1164,20 +1094,20 @@ button:focus {
 }
 
 .form-data th.view {
-    background: #6faf9f;
+    background: #5b857f;
 }
 
 .form-data th.edit {
-    background: #3c93a3;
+    background: #3f6992;
 }
 
 .form-data th.delete {
-    background: #e94848;
+    background: #db4949;
 }
 
 .form-data td {
     padding: 0 7px;
-    background: #ffffff;
+    background: #eef4ff;
     color: #4a567c;
     border-top: none;
     border-left: none;
@@ -1202,17 +1132,17 @@ button:focus {
     display: block;
     width: 20px;
     height: 20px;
-    background: #6faf9f;
+    background: #5b857f;
     border: none;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
 }
 
 .form-data td button.btnview:hover,
 .form-data td button.btnview:focus {
-    background: #9492c0;
+    background: #6272a4;
     border: none;
 }
 
@@ -1221,17 +1151,17 @@ button:focus {
     display: block;
     width: 20px;
     height: 20px;
-    background: #3c93a3;
+    background: #3f6992;
     border: none;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
 }
 
 .form-data td button.btnedit:hover,
 .form-data td button.btnedit:focus {
-    background: #356694;
+    background: #2a4866;
     border: none;
 }
 
@@ -1240,10 +1170,10 @@ button:focus {
     display: block;
     width: 20px;
     height: 20px;
-    background: #e94848;
+    background: #db4949;
     border: none;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
 }
@@ -1255,7 +1185,7 @@ button:focus {
 }
 
 .form-data th a {
-    color: #ffffff;
+    color: #eef4ff;
     font-size: 1.4em;
     text-decoration: none;
 }
@@ -1270,15 +1200,15 @@ button:focus {
     background-position: 0 0;
     width: 18px;
     height: 18px;
-    background: #ffffff;
+    background: #eef4ff;
 }
 
 .form-data button.btn-add-subjects {
     width: 288px;
     height: 40px;
     margin: 30px 0 20px 25px;
-    background: #6faf9f;
-    color: #ffffff;
+    background: #5b857f;
+    color: #eef4ff;
     font-size: 0.8em;
     font-weight: bold;
     border-radius: 0.6em;
@@ -1288,15 +1218,15 @@ button:focus {
 
 .form-data button.btn-add-subjects:hover,
 .form-data button.btn-add-subjects:focus {
-    background: #9492c0;
+    background: #6272a4;
 }
 
 .form-data button.btn-add-students {
     width: 288px;
     height: 40px;
     margin: 0 0 20px 19.5px;
-    background: #6faf9f;
-    color: #ffffff;
+    background: #5b857f;
+    color: #eef4ff;
     font-size: 0.8em;
     font-weight: bold;
     border-radius: 0.6em;
@@ -1306,7 +1236,7 @@ button:focus {
 
 .form-data button.btn-add-students:hover,
 .form-data button.btn-add-students:focus {
-    background: #9492c0;
+    background: #6272a4;
 }
 
 .form-data .btn-add-group-students {
@@ -1315,18 +1245,18 @@ button:focus {
     margin: 0 25px 20px 0;
     width: 40px;
     height: 40px;
-    background: #6faf9f;
+    background: #5b857f;
     border: solid #9492c0 3px;
     border-radius: 2em;
-    color: #ffffff;
+    color: #eef4ff;
     font-size: 1.3em;
     cursor: pointer;
 }
 
 .form-data .btn-add-group-students:hover,
 .form-data .body .btn-add-group-students:focus {
-    background: #9492c0;
-    border: solid #6faf9f 3px;
+    background: #6272a4;
+    border: solid #5b857f;
 }
 
 @media only screen and (max-width: 700px) {
@@ -1335,21 +1265,21 @@ button:focus {
 -------------------------------------------*/
     .wrap-title-login {
         height: 200px;
-        background: #6faf9f;
+        background: #5b857f;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
     }
     .wrap-title-login .title-login h1 {
         text-align: center;
         padding: 25px 0 0 0;
         font-size: 2.2em;
-        color: #ffffff;
+        color: #eef4ff;
     }
     .wrap-form-login {
         width: 300px;
         height: 355px;
         margin: -55px auto 0;
-        background-color: #ffffff;
-        border-top: 3px solid #9492c0;
+        background-color: #eef4ff;
+        border-top: 3px solid #6272a4;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         border-radius: 0.5em;
     }
@@ -1359,7 +1289,7 @@ button:focus {
         height: 140px;
         margin: -55px 0 0 75px;
         background: url(../images/asistencia-icon.png)#ffffff no-repeat bottom / 125px 125px;
-        border: 4px solid #9492c0;
+        border: 4px solid #6272a4;
         border-radius: 5em;
     }
     .logo-form-login img {
@@ -1404,17 +1334,17 @@ button:focus {
         width: 253px;
         height: 35px;
         margin: 20px 22.5px 0 0;
-        background: #6faf9f;
+        background: #5b857f;
         border: none;
         border-radius: 0.6em;
-        color: #ffffff;
+        color: #eef4ff;
         font-size: .9em;
         font-weight: bold;
         cursor: pointer;
     }
     .wrap-form-login .button:hover,
     .wrap-form-login .button:focus {
-        background: #9492c0;
+        background: #6272a4;
         border: none;
     }
     .wrap-form-login #checkboxrecordar {

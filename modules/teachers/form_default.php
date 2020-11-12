@@ -6,15 +6,12 @@
 	}
 ?>
 <div class="form-load">
-	<div class="head">
-		<h1 class="titulo">Docentes</h1>
-    </div>
 	<table>
 		<tr>
 			<th>Usuario</th>
 			<th>Nombre</th>
 			<th>CURP</th>
-			<th class="view center"><a class="icon icon-eye"></a></th>
+			<th class="view center"><a class="icon">visibility</a></th>
 			<th class="edit center"><a class="icon">edit</a></th>
 			<th class="delete center"><a class="icon">delete</a></th>
     	</tr>
