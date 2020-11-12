@@ -51,7 +51,7 @@
 	<meta name="keywords" content="" />
 </head>
 <body>
-	<div class="wrapper">
+	
 		<header class="header">
 			<?php
 				include_once "../sections/about-user.php";
@@ -70,6 +70,5 @@
 				include_once $view_form;
 			?>
 		</section>
-	</div>
 </body>
 </html>

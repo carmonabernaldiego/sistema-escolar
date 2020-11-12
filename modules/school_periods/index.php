@@ -40,36 +40,38 @@
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-	<title>Periodo Escolar | Sistema de Control Escolar</title>
-	<link rel="icon" type="image/png" href="../../images/favicon.ico" />
-	<link rel="stylesheet" href="../../css/style.css" media="screen, projection" type="text/css" />
-	<link rel="stylesheet" href="../../css/style_icons.css" media="screen, projection" type="text/css" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <title>Periodo Escolar | Sistema de Control Escolar</title>
+    <link rel="icon" type="image/png" href="../../images/favicon.ico" />
+    <link rel="stylesheet" href="../../css/style.css" media="screen, projection" type="text/css" />
+    <link rel="stylesheet" href="../../css/style_icons.css" media="screen, projection" type="text/css" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 </head>
+
 <body>
-	<div class="wrapper">
-		<header class="header">
-			<?php
+    <header class="header">
+        <?php
 				include_once "../sections/about-user.php";
 			?>
-		</header>
-		<aside>
-			<?php
+    </header>
+    <aside>
+        <?php
 				if (!empty($_SESSION['section-admin']) == 'go-'.$_SESSION['user'])
 				{
 					include_once '../sections/section-admin.php';
 				}
 			?>
-		</aside>
-		<section class="content">
-			<?php
+    </aside>
+    <section class="content">
+        <?php
 				include_once $view_form;
 			?>
-		</section>
-	</div>
+    </section>
 </body>
+
 </html>

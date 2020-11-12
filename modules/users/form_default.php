@@ -6,16 +6,13 @@
 	}
 ?>
 <div class="form-load">
-	<div class="head">
-		<h1 class="titulo">Usuarios</h1>
-    </div>
 	<table>
 		<tr>
 			<th>Usuario</th>
 			<th>Permisos</th>
 			<th>Imagen</th>
-			<th class="edit center"><a class="icon icon-edit"></a></th>
-			<th class="delete center"><a class="icon icon-trash"></a></th>
+			<th class="edit center"><a class="icon">edit</a></th>
+			<th class="delete center"><a class="icon">delete</a></th>
     	</tr>
 		<?php
 			for ($i = 0; $i < $_SESSION['total_users']; $i++)
@@ -64,23 +61,22 @@
 <div class="form-options">
 	<div class="options">
 		<form action="#" method="POST">
-			<button class="btn icon icon-plus" name="btn" value="form_add" type="submit"></button>
+			<button class="btn icon" name="btn" value="form_add" type="submit">add</button>
 		</form>
 		<form action="#" method="POST">
-			<button class="btn disabled icon icon-coding" name="btn" value="form_coding" type="submit" disabled></button>
-		</form>
+			<button class="btn disabled icon" name="btn" value="form_coding" type="submit" disabled>code</button>		</form>
 		<form action="#" method="POST">
-			<button class="btn disabled icon icon-printer" name="btn" value="form_printer" type="submit" disabled></button>
+			<button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
 		</form>
 		<form action="/">
-			<button class="btnexit icon icon-exit" type="submit"></button>
+			<button class="btnexit icon" type="submit">exit_to_app</button>
 		</form>
     </div>
 	<div class="search">
 		<form name="form-search" action="#" method="POST">
 			<p>
 				<input type="text" class="text" name="search" placeholder="Buscar...">
-				<button class="btn-search icon  icon-search" type="submit"></button>
+				<button class="btn-search icon" type="submit">search</button>
 			</p>
 		</form>
 	</div>

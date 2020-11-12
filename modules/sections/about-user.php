@@ -1,12 +1,79 @@
+<?php
+	include_once 'security.php';
+
+	if ($_SESSION['permissions'] != 'admin')
+	{
+		header('Location: /');
+		exit();
+	}
+
+	$url_actual = $_SERVER["REQUEST_URI"];
+
+	if(strpos($url_actual, 'modules'))
+	{
+		$input = $url_actual;
+		preg_match('~modules/(.*?)/~', $input, $name_page);
+        $name_page[1];
+        
+        if($name_page[1] == 'school_periods')
+        {
+            $_SESSION['title_form_section'] = 'Periodo Escolar'; 
+        }
+        elseif($name_page[1] == 'users')
+        {
+            $_SESSION['title_form_section'] = 'Usuarios'; 
+        }
+        elseif($name_page[1] == 'administratives')
+        {
+            $_SESSION['title_form_section'] = 'Administrativos'; 
+        }
+        elseif($name_page[1] == 'teachers')
+        {
+            $_SESSION['title_form_section'] = 'Docentes'; 
+        }
+        elseif($name_page[1] == 'students')
+        {
+            $_SESSION['title_form_section'] = 'Alumnos'; 
+        }
+        elseif($name_page[1] == 'subjects')
+        {
+            $_SESSION['title_form_section'] = 'Materias'; 
+        }
+        elseif($name_page[1] == 'groups')
+        {
+            $_SESSION['title_form_section'] = 'Grupos'; 
+        }
+        elseif($name_page[1] == 'assists')
+        {
+            $_SESSION['title_form_section'] = 'Asistencias';
+        }
+	}
+	else
+	{
+        $name_page[1] = 'home';
+
+        if($name_page[1] == 'home')
+        {
+            $_SESSION['title_form_section'] = 'Inicio'; 
+        }
+    }
+?>
 <!--<div class="info-user">
 	<img class="image_user" src="/images/users/<?php echo $_SESSION['image'];?>" />
 	<span class="name_user"><?php print $_SESSION['name'].' '.$_SESSION['surnames'];?></span>
 	<span class="logout"><a href="/modules/logout.php">Cerrar Sesión</a></span>
 	<span class="user_active"></span>
 </div>-->
+<div class="info-title">
+    <span class="title">
+        <?php
+            echo $_SESSION['title_form_section'];
+        ?>
+    </span>
+</div>
 <div class="info-school-period">
     <span class="school_period_user">
-        Periodo Escolar / 
+        Periodo Escolar /
         <a href="#"><?php print $_SESSION['school_period']; ?></a>
     </span>
 </div>
