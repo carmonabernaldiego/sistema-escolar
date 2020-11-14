@@ -82,10 +82,10 @@ echo'
 					</select>
 				</div>
 				<div class="last">
-					<label class="label">Imagen</label>
-					<img class="user-image" src="'.'/images/users/'.$_SESSION['user_image'][0].'" />
+					<label class="label" style="text-align:center;">Imagen</label>
+					<img id="userimage" class="user-image" src="'.'/images/users/'.$_SESSION['user_image'][0].'" />
 					<label class="file" for="fileimage">Abrir Imagen</label>
-					<input id="fileimage" style="display: none;" type="file" name="fileimage" accept="image|*" />
+					<input id="fileimage" style="display: none;" type="file" name="fileimage" accept=".jpg, .jpeg, .png" />
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
@@ -117,5 +117,22 @@ echo'
 		</form>
 	</div>
 </div>
+
 ';
 ?>
+<script>
+document.getElementById("fileimage").onchange = function(e) {
+    // Creamos el objeto de la clase FileReader
+    let reader = new FileReader();
+
+    // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+    reader.readAsDataURL(e.target.files[0]);
+
+    // Le decimos que cuando este listo ejecute el código interno
+    reader.onload = function() {
+        image = document.getElementById('userimage');
+
+        image.src = reader.result;
+    };
+}
+</script>

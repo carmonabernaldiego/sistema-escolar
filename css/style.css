@@ -922,31 +922,34 @@ body.login {
 
 .form-data .body .user-image {
     display: block;
-    position: absolute;
-    width: 216px;
-    height: 216px;
-    border: solid rgb(61, 151, 131) 3px;
+    width: 67.5%;
+    margin: 0 auto;
+    border: solid #282a36 3px;
     border-radius: 0.4em;
     pointer-events: none;
+    box-shadow: 0px 0px 3px rgba(98, 114, 164, 0.7);
 }
 
 .form-data .body .file {
     display: block;
-    position: relative;
-    margin: 190px 0 0 0;
-    padding: 7px 12px 0;
-    width: 198px;
-    height: 31px;
-    background: rgba(61, 151, 131, 0.6);
-    border-radius: 0.2em;
+    margin: 0 auto 0;
+    padding: 1% 0 1.5%;
+    width: 40%;
+    background: #282a36;
+    box-shadow: 0px 1px 3px rgba(98, 114, 164, 0.7);
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
     color: #eef4ff;
     text-align: center;
-    font-size: 1em;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
 }
 
 .form-data .body .file:hover {
-    background: rgba(61, 151, 131, 1);
+    background: #4a567c;
+    transition: all 350ms;
 }
 
 .form-data .body .btn {

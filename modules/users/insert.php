@@ -24,7 +24,7 @@
 	}
 
 	$directorioSubida = "../../images/users/";
-	$max_file_size = "1024000";
+	$max_file_size = "20480000";
 	$extensionesValidas = array("jpg", "png");
 
 	if(isset($_FILES['fileimage']))
