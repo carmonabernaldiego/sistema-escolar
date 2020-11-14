@@ -71,6 +71,7 @@ echo'
 					<textarea disabled class="textarea" name="txtsubjectdescription">'.$_SESSION['subject_description'][0].'</textarea>
 				</div>
 			</div>
+</div>
 			<button class="btn icon" type="submit">save</button>
 </div>
         </form>

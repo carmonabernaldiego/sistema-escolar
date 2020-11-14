@@ -18,6 +18,7 @@
     </div>
    <div class="body">
         <form name="form-add-students" action="insert.php" method="POST">
+<div class="wrap">
 		<div class="first">
                 <label class="label">Usuario</label>
 				<input class="text" style=" display: none;" type="text" name="txtuserid" value="<?php echo $id_generate;?>" maxlength="50" required/>
@@ -51,6 +52,7 @@
 				<label class="label">Observación</label>
 				<input class="text" type="text" name="txtobservation" value="" maxlength="200"/>
 			</div>
+</div>
 			<button class="btn icon" type="submit">save</button>
 </div>
         </form>
