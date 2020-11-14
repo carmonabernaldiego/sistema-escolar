@@ -22,7 +22,6 @@
 }
 
 table .icon {
-    display: block;
     float: none !important;
     font-family: "icons" !important;
     margin: 1px 0 0 0 !important;
@@ -50,6 +49,16 @@ table .icon {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+::selection {
+    background: #a4b5d3!important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: #dde8fc !important;
 }
 
 ::selection {
@@ -715,7 +724,7 @@ body.login {
     float: left;
     width: 66%;
     height: 40px;
-    margin: 0 0 0 7%;
+    margin: 0 0 0 6.5%;
     padding-left: 5%;
     background: #eef4ff;
     box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
@@ -729,7 +738,7 @@ body.login {
 
 .form-options .search .btn-search {
     float: right;
-    margin: 0 6% 0 0;
+    margin: 0 6.5% 0 0;
     width: 16%;
     height: 40px;
     background: #6272a4;
@@ -754,7 +763,7 @@ body.login {
     flex-flow: row wrap;
     justify-content: space-between;
     border-bottom: solid #4a567c 1px;
-    padding: 20px 10% 30px 10%;
+    padding: 20px 10% 30px 9%;
 }
 
 .form-options .options .btn {
@@ -810,13 +819,13 @@ body.login {
 }
 
 .form-data .head {
-    padding: 12px 0;
+    padding: 14px 0 12px 0;
     border-bottom: solid #4a567c 1px;
 }
 
 .form-data .head h1 {
     color: #eef4ff;
-    font-size: 1em;
+    font-size: 0.9em;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
     font-weight: bold;
@@ -824,32 +833,32 @@ body.login {
 }
 
 .form-data .body .wrap {
-    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 5% 0;
 }
 
-.form-data .body .first {
-    float: left;
-    margin: 15px 0 5px 25px;
-}
-
+.form-data .body .first,
 .form-data .body .last {
-    float: right;
-    margin: 15px 25px 5px 0;
+    width: 45%;
 }
 
 .form-data .body .label {
     display: block;
-    margin: 0 0 8px 0;
+    margin: 0 0 2% 0;
     color: #eef4ff;
-    font-size: 1em;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    font-size: 0.8em;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .form-data .body .text {
-    width: 262px;
+    width: 90%;
     height: 40px;
-    margin: 0 0 15px 0;
-    padding: 0 12px;
+    margin: 0 0 10% 0;
+    padding: 0 5%;
     background: #eef4ff;
     border: none;
     border-radius: 0.4em;
@@ -859,42 +868,48 @@ body.login {
 }
 
 .form-data .body .textarea {
-    width: 262px;
-    height: 113px;
-    margin: 0 0 0 0;
-    padding: 8px 12px;
+    width: 89%;
+    height: 40%;
+    margin: 0 0 10% 0;
+    padding: 10px 5.5% 10px;
     background: #eef4ff;
     border: none;
     border-radius: 0.4em;
     color: #4a567c;
-    font-size: 1.1em;
+    line-height: 1.7;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
     text-align: justify;
     resize: none;
 }
 
 .form-data .body .select {
-    width: 288px;
-    height: 42px;
-    margin: 0 0 0 0;
-    padding: 0 12px;
-    outline-color: #1b5a42;
-    border: 1px solid #4a567c;
+    width: 100%;
+    height: 40px;
+    margin: 0 0 10% 0;
+    padding: 0 4%;
+    background: #eef4ff;
+    border: none;
     border-radius: 0.4em;
     color: #4a567c;
-    font-size: .9em;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 1em;
     font-weight: bold;
 }
 
 .form-data .body .date {
-    width: 262px;
+    width: 92.2%;
     height: 40px;
-    margin: 0 0 0 0;
-    padding: 0 12px;
+    margin: 0 0 10% 0;
+    padding: 0 4%;
     background: #eef4ff;
-    border: solid #4a567c 1px;
+    border: none;
     border-radius: 0.4em;
     color: #4a567c;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 1em;
+    font-weight: bold;
 }
 
 .form-data .body [type="date"]::-webkit-inner-spin-button {
@@ -937,21 +952,25 @@ body.login {
 .form-data .body .btn {
     display: block;
     float: right;
-    margin: 30px 25px 20px 0;
-    width: 40px;
-    height: 40px;
-    background: #5b857f;
-    border: solid #9492c0 3px;
-    border-radius: 2em;
+    width: 50px;
+    height: 50px;
+    margin: -15px 0 0 0;
+    padding: 10px 0 0 5px;
+    background: #6272a4;
+    box-shadow: -2px -1px 4px rgba(142, 136, 192, 0.4);
+    border: none;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 0.6em;
     color: #eef4ff;
-    font-size: 1.3em;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
 .form-data .body .btn:hover,
 .form-data .body .btn:focus {
-    background: #6272a4;
-    border: solid #5b857f;
+    background: #4a567c;
+    border: none;
+    transition: all 350ms;
 }
 
 .text:focus,

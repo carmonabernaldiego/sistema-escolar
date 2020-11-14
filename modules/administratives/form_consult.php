@@ -35,7 +35,8 @@ echo'
     </div>
    <div class="body">
         <form name="form-consult-administratives" action="#" method="POST">
-            <div class="first">
+			<div class="wrap">
+				<div class="first">
                 <label class="label">Usuario</label>
                 <input style="display: none;" type="text" name="btn" value="form_default"/>
                 <input class="text" type="text" name="txt" value="'.$_SESSION['user_id'][0].'" disabled/>
@@ -122,7 +123,7 @@ echo'
 				<label class="label">Observación</label>
 				<input class="text" type="text" name="txtobservation" value="'.$_SESSION['administrative_observation'][0].'" disabled/>
 			</div>
-			<button class="btn icon icon-confirm" type="submit"></button>
+</div><button class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

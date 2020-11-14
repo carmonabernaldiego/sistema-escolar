@@ -32,7 +32,8 @@ echo'
     </div>
    <div class="body">
         <form name="form-update-school-periods" action="update.php" method="POST">
-            <div class="first">
+			<div class="wrap">
+				<div class="first">
                 <label class="label">Periodo escolar</label>
                 <input style="display: none;" type="text" name="txtspid" value="'.$_SESSION['sp_id'][0].'"/>
 				<input class="text" type="text" name="txt" value="'.$_SESSION['sp_id'][0].'" disabled/>
@@ -88,7 +89,7 @@ echo'
 				<select style="visibility: hidden;" class="select" name="" autofocus>
 				</select>
 			</div>
-			<button class="btn icon icon-confirm" type="submit"></button>
+</div><button class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

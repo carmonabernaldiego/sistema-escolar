@@ -70,7 +70,8 @@
 					<textarea class="textarea" name="txtsubjectdescription"></textarea>
 				</div>
 			</div>
-			<button class="btn icon icon-confirm" type="submit"></button>
+			<button class="btn icon" type="submit">save</button>
+</div>
         </form>
     </div>
 </div>

@@ -11,7 +11,8 @@
     </div>
    <div class="body">
         <form name="form-add-school-periods" action="insert.php" method="POST">
-            <div class="first">
+			<div class="wrap">
+				<div class="first">
                 <label class="label">Periodo escolar</label>
                 <input class="text" type="text" name="txtspid" value="" maxlength="30" required autofocus/>
 				<label class="label">Inicia</label>
@@ -34,7 +35,7 @@
 				<select style="visibility: hidden;" class="select" name="" autofocus>
 				</select>
 			</div>
-			<button class="btn icon icon-confirm" type="submit"></button>
+</div><button class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

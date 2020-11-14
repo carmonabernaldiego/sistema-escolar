@@ -51,7 +51,8 @@
 				<label class="label">Observación</label>
 				<input class="text" type="text" name="txtobservation" value="" maxlength="200"/>
 			</div>
-			<button class="btn icon icon-confirm" type="submit"></button>
+			<button class="btn icon" type="submit">save</button>
+</div>
         </form>
     </div>
 </div>
