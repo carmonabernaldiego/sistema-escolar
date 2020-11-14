@@ -88,7 +88,6 @@ echo'
 					<input id="fileimage" style="display: none;" type="file" name="fileimage" accept="image|*" />
 				</div>
 			</div>
-</div>
 			<button class="btn icon" type="submit">save</button>
 </div>
         </form>
