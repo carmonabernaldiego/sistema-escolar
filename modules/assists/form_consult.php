@@ -219,7 +219,7 @@
 					</table>
 				';
 			?>
-			<button style="margin-top: -4px;" class="btn icon icon-confirm" name="btn" value="form_default" type="submit"></button>
+			<button class="btn icon icon-confirm" name="btn" value="form_default" type="submit"></button>
 		</form>
     </div>
 </div>

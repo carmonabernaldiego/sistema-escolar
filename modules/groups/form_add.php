@@ -231,7 +231,7 @@
 				echo
 				'
 					<form action="insert.php" method="POST">
-						<button name="btnsave" class="btn-add-group-students icon icon-confirm" type="submit"></button>
+						<button name="btnsave" class="btn icon" type="submit">save</button>
 					</form>
 				';
 			}
