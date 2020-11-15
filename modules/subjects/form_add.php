@@ -6,35 +6,25 @@
 	}
 ?>
 <div class="form-data">
-	<div class="head">
-		<h1 class="titulo">Agregar</h1>
+    <div class="head">
+        <h1 class="titulo">Agregar</h1>
     </div>
-   <div class="body">
-		<form name="form-add-subjects" action="insert.php" method="POST">
-			<div class="wrap">
-				<div class="first">
-					<label class="label">Materia</label>
-					<input class="text" type="text" name="txtsubject" value="" maxlength="20" autofocus required/>
-					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtsubjectname" value="" maxlength="100" required/>
-					<label class="label">Semestre</label>
-					<input class="text" type="number" name="txtsubjectsemester" value="" maxlength="2" min="1" max="12" list="defaultsemestres" required/>
-					<datalist id="defaultsemestres">
-					<?php
-						for($i = 1; $i <= 12; $i ++)
-						{
-							echo
-							'
-								<option value="'.$i.'">
-							';
-						}
-					?>
-					</datalist>
-				</div>
-				<div class="last">
-					<label class="label">Docente</label>
-					<select class="select" name="selectuserteacher">
-					<?php
+    <div class="body">
+        <form name="form-add-subjects" action="insert.php" method="POST">
+            <div class="wrap">
+                <div class="first">
+                    <label class="label">Materia</label>
+                    <input class="text" type="text" name="txtsubject" value="" maxlength="20" autofocus required />
+                    <label class="label">Nombre</label>
+                    <input class="text" type="text" name="txtsubjectname" value="" maxlength="100" required />
+                    <label class="label">Descripción</label>
+                    <textarea class="textarea" name="txtsubjectdescription"></textarea>
+
+                </div>
+                <div class="last">
+                    <label class="label">Docente</label>
+                    <select class="select" name="selectuserteacher">
+                        <?php
 						$_SESSION['user_teacher'] = array();
 						$_SESSION['name_teacher'] = array();
 
@@ -65,36 +55,51 @@
 							$i += 1;
 						}
 					?>
-					</select>
-					<label class="label">Descripción</label>
-					<textarea class="textarea" name="txtsubjectdescription"></textarea>
-				</div>
-			</div>
-			<button class="btn icon" type="submit">save</button>
-</div>
-        </form>
+                    </select>
+                    <label class="label">Semestre</label>
+
+                    <input class="text" type="number" name="txtsubjectsemester" value="" maxlength="2" min="1" max="12"
+                        list="defaultsemestres" required />
+                    <datalist id="defaultsemestres">
+                        <?php
+	for($i = 1; $i <= 12; $i ++)
+	{
+		echo
+		'
+			<option value="'.$i.'">
+		';
+	}
+?>
+                    </datalist>
+
+                </div>
+            </div>
+            <button class="btn icon" type="submit">save</button>
     </div>
+    </form>
+</div>
 </div>
 <div class="form-options">
-	<div class="options">
-		<form action="#" method="POST">
-			<button class="btn disabled icon" name="btn" value="form_add" type="submit" disabled>add</button>
-		</form>
-		<form action="#" method="POST">
-			<button class="btn disabled icon" name="btn" value="form_coding" type="submit" disabled>code</button>		</form>
-		<form action="#" method="POST">
-			<button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
-		</form>
-		<form action="#" method="POST">
-			<button class="btn btnexit icon" name="btn" value="form_default" type="submit">close</button>
-		</form>
+    <div class="options">
+        <form action="#" method="POST">
+            <button class="btn disabled icon" name="btn" value="form_add" type="submit" disabled>add</button>
+        </form>
+        <form action="#" method="POST">
+            <button class="btn disabled icon" name="btn" value="form_coding" type="submit" disabled>code</button>
+        </form>
+        <form action="#" method="POST">
+            <button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
+        </form>
+        <form action="#" method="POST">
+            <button class="btn btnexit icon" name="btn" value="form_default" type="submit">close</button>
+        </form>
     </div>
-	<div class="search">
-		<form name="form-search" action="#" method="POST">
-			<p>
-				<input type="text" class="text" name="search" placeholder="Buscar...">
-				<button class="btn-search icon" type="submit">search</button>
-			</p>
-		</form>
-	</div>
+    <div class="search">
+        <form name="form-search" action="#" method="POST">
+            <p>
+                <input type="text" class="text" name="search" placeholder="Buscar...">
+                <button class="btn-search icon" type="submit">search</button>
+            </p>
+        </form>
+    </div>
 </div>

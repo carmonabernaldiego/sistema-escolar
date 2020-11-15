@@ -47,39 +47,6 @@ table .icon {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-::selection {
-    background: #a4b5d3!important;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    background: #dde8fc !important;
-}
-
-::selection {
-    background: #9F9F9F;
-    color: #eef4ff;
-}
-
-::-webkit-selection {
-    background: #9F9F9F;
-    color: #eef4ff;
-}
-
-::-moz-selection {
-    background: #9F9F9F;
-    color: #eef4ff;
-}
-
-::placeholder {
-    color: #687292;
-}
-
 body {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     background: #282a36;
@@ -90,6 +57,43 @@ body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     background: #f8f4f4 url(../images/background-login.jpg) no-repeat center fixed;
     background-size: cover !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+    background: #a4b5d3;
+    color: #eef4ff;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: #dde8fc !important;
+}
+
+::selection {
+    background: #a4b5d3;
+    color: #eef4ff;
+}
+
+::-webkit-selection {
+    background: #a4b5d3;
+    color: #eef4ff;
+}
+
+::-moz-selection {
+    background: #a4b5d3;
+    color: #eef4ff;
+}
+
+::placeholder {
+    color: #687292;
 }
 
 
@@ -539,7 +543,7 @@ body.login {
 .form-load table {
     width: 92%;
     margin: 4.5% auto;
-    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
+    box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
     border-top-left-radius: 0.6em;
     border-top-right-radius: 0.6em;
@@ -722,16 +726,18 @@ body.login {
 
 .form-options .search .text {
     float: left;
-    width: 66%;
+    width: 60.5%;
     height: 40px;
     margin: 0 0 0 6.5%;
-    padding-left: 5%;
+    padding: 0 5%;
     background: #eef4ff;
-    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
+    box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
     border: none;
     border-top-left-radius: 0.4em;
     border-bottom-left-radius: 0.4em;
-    color: #4a567c;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #687292;
     font-weight: bold;
     font-size: 1em;
 }
@@ -748,6 +754,8 @@ body.login {
     cursor: initial;
     border-top-right-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     font-size: 1.2em;
     cursor: pointer;
 }
@@ -836,7 +844,7 @@ body.login {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 5% 0;
+    padding: 5% 0 2% 0;
 }
 
 .form-data .body .first,
@@ -860,22 +868,24 @@ body.login {
     margin: 0 0 10% 0;
     padding: 0 5%;
     background: #eef4ff;
+    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
     border-radius: 0.4em;
-    color: #4a567c;
+    color: #687292;
     font-weight: bold;
     font-size: 1em;
 }
 
 .form-data .body .textarea {
-    width: 89%;
-    height: 40%;
-    margin: 0 0 10% 0;
-    padding: 10px 5.5% 10px;
+    width: 197.5%;
+    height: 30%;
+    margin: 0 0 30% 0;
+    padding: 12px 5% 12px;
     background: #eef4ff;
+    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
     border-radius: 0.4em;
-    color: #4a567c;
+    color: #687292;
     line-height: 1.7;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
@@ -890,11 +900,17 @@ body.login {
     margin: 0 0 10% 0;
     padding: 0 4%;
     background: #eef4ff;
+    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
     border-radius: 0.4em;
-    color: #4a567c;
+    color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 1em;
+    font-weight: bold;
+}
+
+.form-data .body .select option {
+    color: #687292;
     font-weight: bold;
 }
 
@@ -904,9 +920,10 @@ body.login {
     margin: 0 0 10% 0;
     padding: 0 4%;
     background: #eef4ff;
+    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
     border-radius: 0.4em;
-    color: #4a567c;
+    color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 1em;
     font-weight: bold;
@@ -922,12 +939,13 @@ body.login {
 
 .form-data .body .user-image {
     display: block;
-    width: 67.5%;
+    width: 70%;
+    height: 78%;
     margin: 0 auto;
     border: solid #282a36 3px;
     border-radius: 0.4em;
     pointer-events: none;
-    box-shadow: 0px 0px 3px rgba(98, 114, 164, 0.7);
+    box-shadow: 0px 0px 4px rgba(98, 114, 164, 0.7);
 }
 
 .form-data .body .file {
@@ -936,7 +954,7 @@ body.login {
     padding: 1% 0 1.5%;
     width: 40%;
     background: #282a36;
-    box-shadow: 0px 1px 3px rgba(98, 114, 164, 0.7);
+    box-shadow: 0px 1px 4px rgba(98, 114, 164, 0.7);
     border-bottom-left-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
     color: #eef4ff;
@@ -958,7 +976,7 @@ body.login {
     width: 50px;
     height: 50px;
     margin: -15px 0 0 0;
-    padding: 10px 0 0 5px;
+    padding: 10px 0 0 10px;
     background: #6272a4;
     box-shadow: -2px -1px 4px rgba(142, 136, 192, 0.4);
     border: none;
@@ -978,14 +996,16 @@ body.login {
 
 .text:focus,
 .textarea:focus,
-.textcontrasena,
+.textcontrasena:focus,
 .date:focus,
+.select:focus,
 button:focus {
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    color: #4a567c !important;
 }
 
 
@@ -1052,50 +1072,10 @@ button:focus {
   Formulario Grupos
 -------------------------------------------*/
 
-.form-data .form-year .number {
-    display: block;
-    float: left;
-    width: 60px;
-    height: 35px;
-    margin: 10px 0 20px 25px;
-    padding: 0 12px;
-    background: #eef4ff;
-    border: solid #4a567c 1px;
-    border-radius: 0.4em;
-    color: #4a567c;
-    font-size: 1em;
-}
-
-.form-data .form-year .number:hover,
-.form-data .form-year .number:focus {
-    outline: none;
-}
-
-.form-data .form-year .btn {
-    display: block;
-    float: left;
-    width: 90px;
-    height: 37px;
-    margin: 10px 0 20px 10px;
-    background: #5b857f;
-    color: #eef4ff;
-    font-size: 0.8em;
-    font-weight: bold;
-    border-radius: 0.6em;
-    border: none;
-    cursor: pointer;
-}
-
-.form-data .form-year .btn:hover,
-.form-data .form-year .btn:focus {
-    background: #6272a4;
-    border: none;
-}
-
 .form-data table {
     width: 92%;
     margin: 4.5% auto;
-    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
+    box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
     border-top-left-radius: 0.6em;
     border-top-right-radius: 0.6em;

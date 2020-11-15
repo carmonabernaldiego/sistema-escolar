@@ -39,20 +39,9 @@ echo'
 					<input class="text" type="text" name="txtsubject" value="'.$_SESSION['subject'][0].'" disabled/>
 					<label class="label">Nombre</label>
 					<input class="text" type="text" name="txtsubjectname" value="'.$_SESSION['subject_name'][0].'" maxlength="100" required autofocus/>
-					<label class="label">Semestre</label>
-					<input class="text" type="number" name="txtsubjectsemester" value="'.$_SESSION['subject_semester'][0].'" maxlength="2" min="1" max="12" list="defaultsemestres"/>
-					<datalist id="defaultsemestres">
-					';
-						for($i = 1; $i <= 12; $i ++)
-						{
-							echo
-							'
-								<option value="'.$i.'">
-							';
-						}
-					echo
-					'
-					</datalist>
+					<label class="label">Descripción</label>
+					<textarea class="textarea" name="txtsubjectdescription">'.$_SESSION['subject_description'][0].'</textarea>
+					
 				</div>
 				<div class="last">
 					<label class="label">Docente</label>
@@ -101,8 +90,20 @@ echo'
 					echo
 					'
 					</select>
-					<label class="label">Descripción</label>
-					<textarea class="textarea" name="txtsubjectdescription">'.$_SESSION['subject_description'][0].'</textarea>
+					<label class="label">Semestre</label>
+					<input class="text" type="number" name="txtsubjectsemester" value="'.$_SESSION['subject_semester'][0].'" maxlength="2" min="1" max="12" list="defaultsemestres"/>
+					<datalist id="defaultsemestres">
+					';
+						for($i = 1; $i <= 12; $i ++)
+						{
+							echo
+							'
+								<option value="'.$i.'">
+							';
+						}
+					echo
+					'
+					</datalist>
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
