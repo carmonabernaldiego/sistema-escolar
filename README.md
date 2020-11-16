@@ -1,2 +1,2 @@
 # asistencia_escolar
-Sistema de Gestión de Asistencias
+Sistema de Control de Asistencia Escolar
