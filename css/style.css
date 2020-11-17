@@ -77,6 +77,13 @@ textarea:focus {
     background: #dde8fc !important;
 }
 
+select[disabled],
+input[disabled] {
+    background: #eef4ff !important;
+    opacity: 1;
+    color: #4a567c !important;
+}
+
 ::selection {
     background: #a4b5d3;
     color: #eef4ff;
@@ -939,8 +946,7 @@ textarea:focus {
 
 .form-data .body .user-image {
     display: block;
-    width: 70%;
-    height: 78%;
+    width: 66.5%;
     margin: 0 auto;
     border: solid #282a36 3px;
     border-radius: 0.4em;
@@ -1074,7 +1080,7 @@ button:focus {
 
 .form-data table {
     width: 93.5%;
-    margin: -4.5% auto 9%;
+    margin: -2% auto 9%;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
     border-top-left-radius: 0.6em;
