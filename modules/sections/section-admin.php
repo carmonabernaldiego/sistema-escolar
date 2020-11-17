@@ -24,11 +24,17 @@
     <span class="name_system">Control de Asistencias</span>
     <img class="image_user" src="/images/users/<?php echo $_SESSION['image'];?>" />
     <span class="name_user">
-		<?php print $_SESSION['name'].' '.$_SESSION['surnames'];?>
-		<span class="icon">
-			expand_more
-			
-		</span>
+        <?php print $_SESSION['name'].' '.$_SESSION['surnames'];?>
+        <ul>
+            <li>
+                <a class="icon" href="#">expand_more</a>
+                <ul>
+                    <li>
+                        <a href="modules/logout">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </span>
     <ul>
         <li><a class="<?php if($output[1] == 'home'){ echo 'active'; } ?>" href="/home"><span

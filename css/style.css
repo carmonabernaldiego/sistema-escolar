@@ -21,23 +21,14 @@
     src: local('Material Icons'), local('MaterialIcons-Regular'), url(fonts/MaterialIcons-Regular.woff2) format('woff2'), url(fonts/MaterialIcons-Regular.woff) format('woff'), url(fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
 
-table .icon {
-    float: none !important;
-    font-family: "icons" !important;
-    margin: 1px 0 0 0 !important;
-}
-
 .icon {
     font-family: "icons" !important;
-    float: left;
-    margin-top: -1px;
-    margin-right: 15px;
     text-transform: none;
 }
 
 
 /*-------------------------------------------
-  Inicio | Estructura
+  Home | Estructura
 -------------------------------------------*/
 
 * {
@@ -105,7 +96,7 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Inicio | Header
+  Home | Header
 -------------------------------------------*/
 
 .header {
@@ -116,12 +107,6 @@ input[disabled] {
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
-}
-
-.header:after {
-    display: block;
-    content: "";
-    clear: both;
 }
 
 .info-title {
@@ -173,7 +158,7 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Inicio | Navigation
+  Home | Navigation
 -------------------------------------------*/
 
 .nav-home {
@@ -185,6 +170,18 @@ input[disabled] {
     box-shadow: 0px 3px 2px rgba(73, 80, 104, 0.4);
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.nav-home span.name_system {
+    display: block;
+    color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+    border-bottom: 1px solid #4a567c;
 }
 
 .nav-home img.image_user {
@@ -211,16 +208,32 @@ input[disabled] {
     border-bottom: 1px solid #4a567c;
 }
 
-.nav-home span.name_system {
+.nav-home span.name_user>ul>li>ul {
+    display: none;
+    position: absolute;
+    width: 80%;
+    margin: -6% 9%;
+    background: #282a36;
+    box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
+    border: solid #eef4ff 2px;
+    border-radius: 0.4em;
+    z-index: 1;
+}
+
+.nav-home span.name_user>ul>li>ul:hover {
+    background: #555975;
+}
+
+.nav-home span.name_user>ul>li:hover>ul {
     display: block;
+    transition: all 350ms;
+}
+
+.nav-home span.name_user>ul>li>ul>li>a {
+    margin: 0 auto;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 20px 0;
-    border-bottom: 1px solid #4a567c;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.4);
+    font-size: 0.8em;
 }
 
 .nav-home ul {
@@ -240,6 +253,12 @@ input[disabled] {
     text-decoration: none;
 }
 
+.nav-home ul li a .icon {
+    float: left;
+    margin-top: -1px;
+    margin-right: 15px;
+}
+
 .nav-home ul a:hover {
     color: #9492c0;
     transition: all 350ms;
@@ -254,7 +273,7 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Inicio | Mensajes
+  Home | Mensajes
 -------------------------------------------*/
 
 .wrap-message-info {
@@ -447,45 +466,6 @@ input[disabled] {
     border-radius: 0.6em;
 }
 
-.form-gridview .form-year .number {
-    display: block;
-    float: left;
-    width: 60px;
-    height: 35px;
-    margin: 20px 0 20px 25px;
-    padding: 0 12px;
-    background: #eef4ff;
-    border: solid #4a567c 1px;
-    border-radius: 0.4em;
-    color: #4a567c;
-    font-size: 1em;
-}
-
-.form-gridview .form-year .number:hover,
-.form-gridview .form-year .number:focus {
-    outline: none;
-}
-
-.form-gridview .form-year .btn {
-    display: block;
-    float: left;
-    width: 90px;
-    height: 37px;
-    margin: 20px 0 20px 10px;
-    background: #5b857f;
-    color: #eef4ff;
-    font-weight: bold;
-    border-radius: 0.6em;
-    border: none;
-    cursor: pointer;
-}
-
-.form-gridview .form-year .btn:hover,
-.form-gridview .form-year .btn:focus {
-    background: #6272a4;
-    border: none;
-}
-
 .form-gridview table {
     width: 92%;
     margin: 4.5% auto;
@@ -512,6 +492,12 @@ input[disabled] {
 
 .form-gridview th.center {
     text-align: center;
+}
+
+.form-gridview th a {
+    color: #eef4ff;
+    font-size: 1.3em;
+    text-decoration: none;
 }
 
 .form-gridview td {
@@ -592,18 +578,12 @@ input[disabled] {
     transition: all 350ms;
 }
 
-.form-gridview th a {
-    color: #eef4ff;
-    font-size: 1.4em;
-    text-decoration: none;
-}
-
 .form-gridview tr:hover td {
     background: #dde8fc;
 }
 
 .form-gridview .pages {
-    margin: 0 0 20px 25px;
+    margin: 0 0 2.5% 3.9%;
 }
 
 .form-gridview .pages:after {
@@ -717,13 +697,13 @@ input[disabled] {
     flex-flow: row wrap;
     justify-content: space-between;
     border-bottom: solid #4a567c 1px;
-    padding: 20px 10% 30px 9%;
+    padding: 5% 10%;
 }
 
 .form-options .options .btn {
     display: block;
-    width: 110%;
-    height: 150%;
+    width: 40px;
+    height: 40px;
     background: #5b857f;
     box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
     color: #eef4ff;
