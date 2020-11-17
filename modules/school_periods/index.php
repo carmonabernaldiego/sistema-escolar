@@ -56,7 +56,7 @@
 <body>
     <header class="header">
         <?php
-				include_once "../sections/about-user.php";
+				include_once "../sections/about-section.php";
 			?>
     </header>
     <aside>

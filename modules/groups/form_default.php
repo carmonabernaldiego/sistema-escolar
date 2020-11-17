@@ -5,7 +5,7 @@
 		exit();
 	}
 ?>
-<div class="form-load">
+<div class="form-gridview">
 	<table>
 		<tr>
 			<th>Grupo</th>

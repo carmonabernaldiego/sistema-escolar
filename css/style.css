@@ -124,11 +124,6 @@ input[disabled] {
     clear: both;
 }
 
-
-/*-------------------------------------------
-  Inicio | Información Usuario
--------------------------------------------*/
-
 .info-title {
     float: left;
 }
@@ -178,66 +173,10 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Inicio | Nav Admin
+  Inicio | Navigation
 -------------------------------------------*/
 
-.info-user {
-    float: right;
-    height: 100%;
-    width: 295px;
-    border-left: 2px solid #4a567c;
-}
-
-.info-user img.image_user {
-    float: left;
-    width: 35px;
-    height: 35px;
-    background: #eef4ff;
-    margin: 7px 0 7px 15px;
-    border: 1px solid #808080;
-    border-radius: 3em;
-    pointer-events: none;
-}
-
-.info-user .name_user {
-    display: block;
-    float: left;
-    margin: 15px 0 0 10px;
-    color: #eef4ff;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-.info-user .logout a {
-    display: block;
-    float: left;
-    margin: 2px 0 0 10px;
-    text-decoration: none;
-    color: #eef4ff;
-    font-size: 0.9em;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-.info-user .logout a:hover,
-.info-user .logout a:focus {
-    color: #9492c0;
-    outline: none;
-    text-decoration: underline;
-}
-
-.info-user .user_active {
-    display: block;
-    float: right;
-    margin: -7px 20px 0 0;
-    background: #5b857f;
-    width: 15px;
-    height: 15px;
-    border-radius: 2em;
-}
-
-.nav-admin-home {
+.nav-home {
     position: fixed;
     width: 22%;
     top: 0;
@@ -248,7 +187,7 @@ input[disabled] {
     overflow-y: auto;
 }
 
-.nav-admin-home img.image_user {
+.nav-home img.image_user {
     display: block;
     width: 75px;
     height: 75px;
@@ -260,7 +199,7 @@ input[disabled] {
     pointer-events: none;
 }
 
-.nav-admin-home span.name_user {
+.nav-home span.name_user {
     display: block;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
@@ -272,7 +211,7 @@ input[disabled] {
     border-bottom: 1px solid #4a567c;
 }
 
-.nav-admin-home span.name_system {
+.nav-home span.name_system {
     display: block;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
@@ -284,13 +223,13 @@ input[disabled] {
     border-bottom: 1px solid #4a567c;
 }
 
-.nav-admin-home ul {
+.nav-home ul {
     display: flex;
     flex-flow: column wrap;
     list-style: none;
 }
 
-.nav-admin-home ul li a {
+.nav-home ul li a {
     display: block;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
@@ -301,12 +240,12 @@ input[disabled] {
     text-decoration: none;
 }
 
-.nav-admin-home ul a:hover {
+.nav-home ul a:hover {
     color: #9492c0;
     transition: all 350ms;
 }
 
-.nav-admin-home ul li a.active {
+.nav-home ul li a.active {
     color: #9492c0;
     text-shadow: none;
     padding: 3% 26px;
@@ -496,10 +435,10 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Formulario Load Table
+  Formulario GridView
 -------------------------------------------*/
 
-.form-load {
+.form-gridview {
     float: left;
     margin: 0 0 35px 0;
     width: 71%;
@@ -508,7 +447,7 @@ input[disabled] {
     border-radius: 0.6em;
 }
 
-.form-load .form-year .number {
+.form-gridview .form-year .number {
     display: block;
     float: left;
     width: 60px;
@@ -522,12 +461,12 @@ input[disabled] {
     font-size: 1em;
 }
 
-.form-load .form-year .number:hover,
-.form-load .form-year .number:focus {
+.form-gridview .form-year .number:hover,
+.form-gridview .form-year .number:focus {
     outline: none;
 }
 
-.form-load .form-year .btn {
+.form-gridview .form-year .btn {
     display: block;
     float: left;
     width: 90px;
@@ -541,13 +480,13 @@ input[disabled] {
     cursor: pointer;
 }
 
-.form-load .form-year .btn:hover,
-.form-load .form-year .btn:focus {
+.form-gridview .form-year .btn:hover,
+.form-gridview .form-year .btn:focus {
     background: #6272a4;
     border: none;
 }
 
-.form-load table {
+.form-gridview table {
     width: 92%;
     margin: 4.5% auto;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
@@ -559,7 +498,7 @@ input[disabled] {
     overflow: hidden;
 }
 
-.form-load th {
+.form-gridview th {
     padding: 7px 15px;
     background: #282a36;
     color: #eef4ff;
@@ -571,11 +510,11 @@ input[disabled] {
     text-transform: capitalize;
 }
 
-.form-load th.center {
+.form-gridview th.center {
     text-align: center;
 }
 
-.form-load td {
+.form-gridview td {
     padding: 8px 15px;
     background: #eef4ff;
     color: #4a567c;
@@ -586,11 +525,11 @@ input[disabled] {
     text-align: left;
 }
 
-.form-load td.center {
+.form-gridview td.center {
     text-align: center;
 }
 
-.form-load td button.btnview {
+.form-gridview td button.btnview {
     margin: 0 auto;
     display: block;
     width: 18px;
@@ -604,14 +543,14 @@ input[disabled] {
     cursor: pointer;
 }
 
-.form-load td button.btnview:hover,
-.form-load td button.btnview:focus {
+.form-gridview td button.btnview:hover,
+.form-gridview td button.btnview:focus {
     background: #3d5854;
     border: none;
     transition: all 350ms;
 }
 
-.form-load td button.btnedit {
+.form-gridview td button.btnedit {
     margin: 0 auto;
     display: block;
     width: 18px;
@@ -625,14 +564,14 @@ input[disabled] {
     cursor: pointer;
 }
 
-.form-load td button.btnedit:hover,
-.form-load td button.btnedit:focus {
+.form-gridview td button.btnedit:hover,
+.form-gridview td button.btnedit:focus {
     background: #2a4866;
     border: none;
     transition: all 350ms;
 }
 
-.form-load td button.btndelete {
+.form-gridview td button.btndelete {
     margin: 0 auto;
     display: block;
     width: 18px;
@@ -646,38 +585,38 @@ input[disabled] {
     cursor: pointer;
 }
 
-.form-load td button.btndelete:hover,
-.form-load td button.btndelete:focus {
+.form-gridview td button.btndelete:hover,
+.form-gridview td button.btndelete:focus {
     background: #aa3535;
     border: none;
     transition: all 350ms;
 }
 
-.form-load th a {
+.form-gridview th a {
     color: #eef4ff;
     font-size: 1.4em;
     text-decoration: none;
 }
 
-.form-load tr:hover td {
+.form-gridview tr:hover td {
     background: #dde8fc;
 }
 
-.form-load .pages {
+.form-gridview .pages {
     margin: 0 0 20px 25px;
 }
 
-.form-load .pages:after {
+.form-gridview .pages:after {
     display: block;
     content: "";
     clear: both;
 }
 
-.form-load .pages ul li {
+.form-gridview .pages ul li {
     list-style: none;
 }
 
-.form-load .pages ul li button {
+.form-gridview .pages ul li button {
     float: left;
     margin: 0 10px 0 0;
     width: 5%;
@@ -691,18 +630,18 @@ input[disabled] {
     font-weight: bold;
 }
 
-.form-load .pages ul li button:hover,
-.form-load .pages ul li button:focus {
+.form-gridview .pages ul li button:hover,
+.form-gridview .pages ul li button:focus {
     background: #6272a4;
     cursor: pointer;
 }
 
-.form-load .pages ul li.active button {
+.form-gridview .pages ul li.active button {
     background: #6272a4;
 }
 
-.form-load .pages ul li.active button:hover,
-.form-load .pages ul li.active button:focus {
+.form-gridview .pages ul li.active button:hover,
+.form-gridview .pages ul li.active button:focus {
     background: #4c597e;
     cursor: pointer;
     transition: all 300ms;

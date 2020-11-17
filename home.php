@@ -27,7 +27,7 @@
 <body>
     <header class="header">
         <?php
-				include_once "modules/sections/about-user.php";
+				include_once "modules/sections/about-section.php";
 			?>
     </header>
     <aside class="aside">

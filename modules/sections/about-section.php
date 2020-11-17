@@ -58,12 +58,6 @@
         }
     }
 ?>
-<!--<div class="info-user">
-	<img class="image_user" src="/images/users/<?php echo $_SESSION['image'];?>" />
-	<span class="name_user"><?php print $_SESSION['name'].' '.$_SESSION['surnames'];?></span>
-	<span class="logout"><a href="/modules/logout.php">Cerrar Sesión</a></span>
-	<span class="user_active"></span>
-</div>-->
 <div class="info-title">
     <span class="title">
         <?php
