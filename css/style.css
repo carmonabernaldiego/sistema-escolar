@@ -276,38 +276,43 @@ input[disabled] {
   Home | Mensajes
 -------------------------------------------*/
 
-.wrap-message-info {
+.box-notification-ok {
     float: right;
-    margin: 20px 0 0 0;
-    width: 300px;
-    height: 100px;
-    background: url(../images/message.png)#ffffff no-repeat;
-    background-size: 53px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.4em;
+    width: 27%;
+    margin: 2% 0;
+    background: url(../images/message.png) #44475a no-repeat;
+    background-size: 18.5%;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.6em;
 }
 
-.wrap-message-error {
-    float: right;
-    margin: 20px 0 0 0;
-    width: 300px;
-    height: 100px;
-    background: url(../images/message-error.png)#ffffff no-repeat;
-    background-size: 53px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.4em;
+.box-notification-ok:after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
-.wrap-message-info p,
-.wrap-message-error p {
-    margin: 28px 35px 0 60px;
-    color: #2b2a2a;
+.box-notification-error {
+    float: right;
+    width: 27%;
+    margin: 2% 0;
+    background: url(../images/message-error.png) #44475a no-repeat;
+    background-size: 53px;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.6em;
+}
+
+.box-notification-ok p,
+.box-notification-error p {
+    padding: 10% 0;
+    color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;
-    line-height: 1.5em;
+    font-weight: bold;
 }
 
-.wrap-message-info .button,
-.wrap-message-error .button {
+.box-notification-ok .button,
+.box-notification-error .button {
     float: right;
     margin: 8px 8px 0 0;
     width: 25px;
@@ -321,10 +326,10 @@ input[disabled] {
     cursor: pointer;
 }
 
-.wrap-message-info .button:hover,
-.wrap-message-info .button:focus,
-.wrap-message-error .button:hover,
-.wrap-message-error .button:focus {
+.box-notification-ok .button:hover,
+.box-notification-ok .button:focus,
+.box-notification-error .button:hover,
+.box-notification-error .button:focus {
     background: #b4b3c5;
     color: #f2f2f7;
 }
