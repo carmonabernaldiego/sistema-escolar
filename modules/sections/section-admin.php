@@ -30,7 +30,7 @@
                 <a class="icon" href="#">expand_more</a>
                 <ul>
                     <li>
-                        <a href="modules/logout">Cerrar Sesión</a>
+                        <a href="/modules/logout">Cerrar Sesión</a>
                     </li>
                 </ul>
             </li>
