@@ -144,7 +144,7 @@ input[disabled] {
 
 .info-school-period .school_period_user a {
     color: #eef4ff;
-    font-size: 0.9em;
+    font-size: 0.95em;
     font-weight: bold;
     text-decoration: none;
 }
@@ -336,7 +336,7 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Formularios
+  Contenedor Formularios
 -------------------------------------------*/
 
 .content {
@@ -353,7 +353,7 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Formulario Iniciar Sesión
+  Formulario | Iniciar Sesión
 -------------------------------------------*/
 
 .wrap-title-login {
@@ -459,7 +459,118 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Formulario GridView
+  Formulario | Herramientas
+-------------------------------------------*/
+
+.form-options {
+    float: right;
+    width: 27%;
+    background: #44475a;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.6em;
+}
+
+.form-options .search {
+    margin: 20px 0;
+}
+
+.form-options .search:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.form-options .search .text {
+    float: left;
+    width: 60.5%;
+    height: 40px;
+    margin: 0 0 0 6.5%;
+    padding: 0 5%;
+    background: #eef4ff;
+    box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
+    border: none;
+    border-top-left-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #687292;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.form-options .search .btn-search {
+    float: right;
+    margin: 0 6.5% 0 0;
+    width: 16%;
+    height: 40px;
+    background: #6272a4;
+    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
+    border: none;
+    color: #eef4ff;
+    cursor: initial;
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.form-options .search .btn-search:hover,
+.form-options .search .btn-search:focus {
+    background: #4a567c;
+    transition: all 350ms;
+}
+
+.form-options .options {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-bottom: solid #4a567c 1px;
+    padding: 5% 10%;
+}
+
+.form-options .options .btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #5b857f;
+    box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
+    color: #eef4ff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.form-options .options .btn:hover,
+.form-options .options .btn:focus {
+    background: #3d5854;
+    border: none;
+    transition: all 300ms;
+}
+
+.form-options .options .btnexit {
+    background: #db4949;
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+}
+
+.form-options .options .btnexit:hover,
+.form-options .options .btnexit:focus {
+    background: #aa3535;
+    border: none;
+    transition: all 300ms;
+}
+
+.form-options .options .btn.disabled {
+    background: #6a7186;
+    color: #eef4ff;
+    cursor: initial;
+}
+
+
+/*-------------------------------------------
+  Formulario | GridView
 -------------------------------------------*/
 
 .form-gridview {
@@ -634,118 +745,7 @@ input[disabled] {
 
 
 /*-------------------------------------------
-  Formulario Herramientas
--------------------------------------------*/
-
-.form-options {
-    float: right;
-    width: 27%;
-    background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.6em;
-}
-
-.form-options .search {
-    margin: 20px 0;
-}
-
-.form-options .search:after {
-    display: block;
-    content: "";
-    clear: both;
-}
-
-.form-options .search .text {
-    float: left;
-    width: 60.5%;
-    height: 40px;
-    margin: 0 0 0 6.5%;
-    padding: 0 5%;
-    background: #eef4ff;
-    box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
-    border: none;
-    border-top-left-radius: 0.4em;
-    border-bottom-left-radius: 0.4em;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    color: #687292;
-    font-weight: bold;
-    font-size: 1em;
-}
-
-.form-options .search .btn-search {
-    float: right;
-    margin: 0 6.5% 0 0;
-    width: 16%;
-    height: 40px;
-    background: #6272a4;
-    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
-    border: none;
-    color: #eef4ff;
-    cursor: initial;
-    border-top-right-radius: 0.4em;
-    border-bottom-right-radius: 0.4em;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.form-options .search .btn-search:hover,
-.form-options .search .btn-search:focus {
-    background: #4a567c;
-    transition: all 350ms;
-}
-
-.form-options .options {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    border-bottom: solid #4a567c 1px;
-    padding: 5% 10%;
-}
-
-.form-options .options .btn {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: #5b857f;
-    box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
-    color: #eef4ff;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.form-options .options .btn:hover,
-.form-options .options .btn:focus {
-    background: #3d5854;
-    border: none;
-    transition: all 300ms;
-}
-
-.form-options .options .btnexit {
-    background: #db4949;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
-}
-
-.form-options .options .btnexit:hover,
-.form-options .options .btnexit:focus {
-    background: #aa3535;
-    border: none;
-    transition: all 300ms;
-}
-
-.form-options .options .btn.disabled {
-    background: #6a7186;
-    color: #eef4ff;
-    cursor: initial;
-}
-
-
-/*-------------------------------------------
-  Formulario - Agregar / Actualizar
+  Formulario | Add / Update
 -------------------------------------------*/
 
 .form-data {
@@ -758,17 +758,17 @@ input[disabled] {
 }
 
 .form-data .head {
-    padding: 14px 0 12px 0;
+    padding: 2% 0;
     border-bottom: solid #4a567c 1px;
 }
 
 .form-data .head h1 {
     color: #eef4ff;
-    font-size: 0.9em;
+    font-size: 1em;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .form-data .body .wrap {
@@ -788,9 +788,9 @@ input[disabled] {
     margin: 0 0 2% 0;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .form-data .body .text {
@@ -889,9 +889,9 @@ input[disabled] {
     border-bottom-right-radius: 0.4em;
     color: #eef4ff;
     text-align: center;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     cursor: pointer;
 }
 
@@ -928,8 +928,7 @@ input[disabled] {
 .textarea:focus,
 .textcontrasena:focus,
 .date:focus,
-.select:focus,
-button:focus {
+.select:focus {
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
@@ -938,73 +937,23 @@ button:focus {
     color: #4a567c !important;
 }
 
-
-/*-------------------------------------------
-  Formulario Eliminar Registro
--------------------------------------------*/
-
-.form-data .delete {
-    margin: 30px 0 0 0;
-    text-align: center;
-}
-
-.form-data .delete h1 {
-    color: #eef4ff;
-    font-size: 1.4em;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.form-data .delete .btn-si {
-    float: left;
-    margin: 25px 0 35px 25%;
-    width: 70px;
-    height: 40px;
-    background: #db4949;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
-    border: none;
-    border-radius: 0.6em;
-    color: #eef4ff;
-    font-size: 1.6em;
-    cursor: pointer;
-}
-
-.form-data .delete .btn-no {
-    float: right;
-    margin: 25px 25% 35px 0;
-    width: 70px;
-    height: 40px;
-    background: #3f6992;
-    box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
-    border: none;
-    border-radius: 0.6em;
-    color: #eef4ff;
-    font-size: 1.6em;
-    cursor: pointer;
-}
-
-.form-data .delete .btn-si:hover,
-.form-data .delete .btn-si:focus {
-    background: #aa3535;
-    border: none;
-    transition: all 350ms;
-}
-
-.form-data .delete .btn-no:hover,
-.form-data .delete .btn-no:focus {
-    background: #2a4866;
-    border: none;
-    transition: all 350ms;
+button:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    color: #b6c1d4 !important;
 }
 
 
 /*-------------------------------------------
-  Formulario Grupos
+  Formulario | Groups
 -------------------------------------------*/
 
 .form-data table {
     width: 93.5%;
-    margin: -2% auto 9%;
+    margin: 0 auto 3%;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
     border-top-left-radius: 0.6em;
@@ -1146,7 +1095,7 @@ button:focus {
     box-shadow: 0 1px 4px rgba(142, 136, 192, 0.4);
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 1);
-    text-transform: uppercase;
+    text-transform: capitalize;
     line-height: 2.9;
     font-size: 0.9em;
     font-weight: bold;
@@ -1163,18 +1112,19 @@ button:focus {
 }
 
 .form-data button.btn-add-students {
-    width: 100%;
+    width: 35%;
     height: 40px;
-    margin: 0 0 10% 0;
+    margin: 2% auto -2%;
     background: #6272a4;
-    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.4);
+    box-shadow: 0 -1px 3px rgba(142, 136, 192, 0.3);
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 1);
-    text-transform: uppercase;
+    text-transform: capitalize;
     line-height: 2.9;
     font-size: 0.9em;
     font-weight: bold;
-    border-radius: 0.4em;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
     border: none;
     cursor: pointer;
 }
@@ -1182,6 +1132,65 @@ button:focus {
 .form-data button.btn-add-students:hover,
 .form-data button.btn-add-students:focus {
     background: #4a567c;
+    border: none;
+    transition: all 350ms;
+}
+
+
+/*-------------------------------------------
+  Formulario | Delete
+-------------------------------------------*/
+
+.form-data .delete {
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+.form-data .delete h1 {
+    color: #eef4ff;
+    font-size: 1.4em;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.form-data .delete .btn-si {
+    float: left;
+    margin: 25px 0 35px 25%;
+    width: 70px;
+    height: 40px;
+    background: #db4949;
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    border: none;
+    border-radius: 0.6em;
+    color: #eef4ff;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.form-data .delete .btn-no {
+    float: right;
+    margin: 25px 25% 35px 0;
+    width: 70px;
+    height: 40px;
+    background: #3f6992;
+    box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
+    border: none;
+    border-radius: 0.6em;
+    color: #eef4ff;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.form-data .delete .btn-si:hover,
+.form-data .delete .btn-si:focus {
+    background: #aa3535;
+    border: none;
+    transition: all 350ms;
+}
+
+.form-data .delete .btn-no:hover,
+.form-data .delete .btn-no:focus {
+    background: #2a4866;
     border: none;
     transition: all 350ms;
 }

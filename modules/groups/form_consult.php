@@ -130,27 +130,34 @@
 	}
 ?>
 <div class="form-data">
-	<div class="head">
-		<h1 class="titulo">Consultar</h1>
+    <div class="head">
+        <h1 class="titulo">Consultar</h1>
     </div>
-   <div class="body">
-		<form name="form-add-groups" action="#" method="POST">
-			<div class="wrap">
-				<div class="first">
-					<label class="label">Grupo</label>
-					<input class="text" type="text" name="txtgroup" value="<?php if(!empty($_SESSION['id_group'])){ echo $_SESSION['id_group']; } ?>" maxlength="20" autofocus required disabled/>
-					<label class="label">Periodo Escolar</label>
-					<select class="select" name="selectgroupschoolperiod" disabled>
-						<option value="<?php echo $_SESSION['school_period']; ?>"><?php echo $_SESSION['school_period']; ?></option>
-					</select>
-				</div>
-				<div class="last">
-					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtgroupname" value="<?php if(!empty($_SESSION['name_group'])){ echo $_SESSION['name_group']; } ?>" maxlength="100" required disabled/>
-					<label class="label">Semestre</label>
-					<input class="text" type="number" name="txtgroupsemester" value="<?php if(!empty($_SESSION['semester_group'])){ echo $_SESSION['semester_group']; } ?>" maxlength="2" min="1" max="12" list="defaultsemestres" required disabled/>
-					<datalist id="defaultsemestres">
-					<?php
+    <div class="body">
+        <form name="form-add-groups" action="#" method="POST">
+            <div class="wrap">
+                <div class="first">
+                    <label class="label">Grupo</label>
+                    <input class="text" type="text" name="txtgroup"
+                        value="<?php if(!empty($_SESSION['id_group'])){ echo $_SESSION['id_group']; } ?>" maxlength="20"
+                        autofocus required disabled />
+                    <label class="label">Nombre</label>
+                    <input class="text" type="text" name="txtgroupname"
+                        value="<?php if(!empty($_SESSION['name_group'])){ echo $_SESSION['name_group']; } ?>"
+                        maxlength="100" required disabled />
+                </div>
+                <div class="last">
+                    <label class="label">Periodo Escolar</label>
+                    <select class="select" name="selectgroupschoolperiod" disabled>
+                        <option value="<?php echo $_SESSION['school_period']; ?>">
+                            <?php echo $_SESSION['school_period']; ?></option>
+                    </select>
+                    <label class="label">Semestre</label>
+                    <input class="text" type="number" name="txtgroupsemester"
+                        value="<?php if(!empty($_SESSION['semester_group'])){ echo $_SESSION['semester_group']; } ?>"
+                        maxlength="2" min="1" max="12" list="defaultsemestres" required disabled />
+                    <datalist id="defaultsemestres">
+                        <?php
 						for($i = 1; $i <= 12; $i ++)
 						{
 							echo
@@ -159,10 +166,10 @@
 							';
 						}
 					?>
-					</datalist>	
-				</div>
-			</div>
-			<?php
+                    </datalist>
+                </div>
+            </div>
+            <?php
 				echo
 				'
 					</br>
@@ -219,8 +226,8 @@
 					</table>
 				';
 			?>
-			<button class="btn icon" name="btn" value="form_default" type="submit">save</button>
-		</form>
+            <button class="btn icon" name="btn" value="form_default" type="submit">save</button>
+        </form>
     </div>
 </div>
 <?php

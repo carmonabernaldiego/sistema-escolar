@@ -15,19 +15,14 @@
             <div class="wrap">
                 <div class="first">
                     <label class="label">Grupo</label>
-                    <input class="text" type="text" name="txtgroup"
-                        value="<?php if(!empty($_SESSION['id_group'])){ echo $_SESSION['id_group']; } ?>" maxlength="20"
-                        autofocus required />
+                    <input class="text" type="text" name="txtgroup" value="" maxlength="20" autofocus required />
                     <label class="label">Nombre</label>
-                    <input class="text" type="text" name="txtgroupname"
-                        value="<?php if(!empty($_SESSION['name_group'])){ echo $_SESSION['name_group']; } ?>"
-                        maxlength="100" required />
+                    <input class="text" type="text" name="txtgroupname" value="" maxlength="100" required />
                 </div>
                 <div class="last">
                     <label class="label">Semestre</label>
-                    <input class="text" type="number" name="txtgroupsemester"
-                        value="<?php if(!empty($_SESSION['semester_group'])){ echo $_SESSION['semester_group']; } ?>"
-                        maxlength="2" min="1" max="12" list="defaultsemestres" required />
+                    <input class="text" type="number" name="txtgroupsemester" value="" maxlength="2" min="1" max="12"
+                        list="defaultsemestres" required />
                     <datalist id="defaultsemestres">
                         <?php
 						for($i = 1; $i <= 12; $i ++)
@@ -40,7 +35,8 @@
 					?>
                     </datalist>
                     <label class="label">Asignar</label>
-					<button class="btn-add-subjects" name="btn-add-subjects" type="submit">Materias</button>
+                    <button class="btn-add-subjects" name="btn" value="form_add_subjects"
+                        type="submit">Materias</button>
                 </div>
             </div>
         </form>

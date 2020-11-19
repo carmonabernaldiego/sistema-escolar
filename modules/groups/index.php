@@ -12,16 +12,16 @@
 	}
 
 	// Formulario actual
-		if (!empty($_POST['btn']))
+	if (!empty($_POST['btn']))
 	{
-		$_SESSION['view_form'] = $_POST['btn'].'.php';
+		$view_form = $_POST['btn'].'.php';
 	}
-	elseif(!isset($_SESSION['view_form']))
+	else
 	{
-		$_SESSION['view_form'] = 'form_default.php';
+		$view_form = 'form_default.php';
 	}
 
-	if($_SESSION['view_form'] == 'form_default.php')
+	if($view_form == 'form_default.php')
 	{
 		unset($_SESSION['id_group']);
 		unset($_SESSION['school_period_group']);
@@ -85,7 +85,7 @@
 		</aside>
 		<section class="content">
 			<?php
-				include_once $_SESSION['view_form'];
+				include_once $view_form;
 			?>
 		</section>
 </body>
