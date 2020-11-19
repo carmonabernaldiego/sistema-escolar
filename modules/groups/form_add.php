@@ -5,110 +5,6 @@
 		exit();
 	
 	}
-
-	//Rellenamos campos en caso de que ya se hayan ingresado datos.
-	if(isset($_POST['btn-add-subjects']) || isset($_POST['btn-add-students']))
-	{
-		$_SESSION['id_group'] = $_POST['txtgroup'];
-		$_SESSION['school_period_group'] = $_POST['selectgroupschoolperiod'];
-		$_SESSION['name_group'] = $_POST['txtgroupname'];
-		$_SESSION['semester_group'] = $_POST['txtgroupsemester'];
-	}
-
-	//Cargamos datos de las materias
-	if(isset($_SESSION['school_period_group']) != '')
-	{
-		$_SESSION['subjects_group'] = array();
-		$_SESSION['subject_name_group'] = array();
-
-		$i = 0;
-
-		$sql = "SELECT * FROM subjects WHERE school_period = '".$_SESSION['school_period_group']."' AND semester = '".$_SESSION['semester_group']."' ORDER BY name";
-
-		if($result = $conexion -> query($sql))
-		{
-			while ($row = mysqli_fetch_array($result))
-			{
-				$_SESSION['subjects_group'][$i] = $row['subject'];
-				$_SESSION['subject_name_group'][$i] = $row['name'];
-
-				$i += 1;
-			}
-		}
-	}
-
-	//Recuperamos las materias seleccionadas
-	$i = 0;
-
-	$_SESSION['subjects'] = '';
-
-	if(isset($_SESSION['subjects_group']))
-	{
-		foreach($_SESSION['subjects_group'] as $row)
-		{
-			if(isset($_POST['check-subject-group'.$i.'']))
-			{
-				$_SESSION['subjects'] .= $_POST['check-subject-group'.$i.''].',';
-	
-				$_SESSION['checked_subject'][$i] = 'checked';
-			}
-			else
-			{
-				$_SESSION['checked_subject'][$i] = '';
-			}
-	
-			$i += 1;
-		}
-	}
-
-	//Cargamos datos de estudiantes
-	if(isset($_SESSION['school_period_group']) != '')
-	{
-		$_SESSION['users_student_group'] = array();
-		$_SESSION['name_student_group'] = array();
-
-		$i = 0;
-
-		$sql = "SELECT * FROM students WHERE school_period = '".$_SESSION['school_period']."' ORDER BY name";
-
-		if ($result = $conexion -> query($sql))
-		{
-			while ($row = mysqli_fetch_array($result))
-			{
-				$_SESSION['users_student_group'][$i] = $row['user'];
-				$_SESSION['name_student_group'][$i] = $row['name'].' '.$row['surnames'];
-
-				$i += 1;
-			}
-		}
-	}
-
-	//Recuperamos los alumnos seleccionados
-	$i = 0;
-
-	$_SESSION['students'] = array();
-	$_SESSION['students_button'] = '';
-
-	if(isset($_SESSION['users_student_group']))
-	{
-		foreach($_SESSION['users_student_group'] as $row)
-		{
-			if(isset($_POST['check-student-group'.$i.'']))
-			{
-				$_SESSION['checked_student'][$i] = 'checked';
-				$_SESSION['students'][$i] = $_POST['check-student-group'.$i.''];
-				
-				$_SESSION['students_button'] .= $_POST['check-student-group'.$i.''].',';
-			}
-			else
-			{
-				$_SESSION['checked_student'][$i] = '';
-				$_SESSION['students'][$i] = '';
-			}
-	
-			$i += 1;
-		}
-	}
 ?>
 <div class="form-data">
 	<div class="head">
@@ -120,14 +16,10 @@
 				<div class="first">
 					<label class="label">Grupo</label>
 					<input class="text" type="text" name="txtgroup" value="<?php if(!empty($_SESSION['id_group'])){ echo $_SESSION['id_group']; } ?>" maxlength="20" autofocus required/>
-					<label class="label">Periodo Escolar</label>
-					<select class="select" name="selectgroupschoolperiod">
-						<option value="<?php echo $_SESSION['school_period']; ?>"><?php echo $_SESSION['school_period']; ?></option>
-					</select>
-				</div>
-				<div class="last">
 					<label class="label">Nombre</label>
 					<input class="text" type="text" name="txtgroupname" value="<?php if(!empty($_SESSION['name_group'])){ echo $_SESSION['name_group']; } ?>" maxlength="100" required/>
+				</div>
+				<div class="last">
 					<label class="label">Semestre</label>
 					<input class="text" type="number" name="txtgroupsemester" value="<?php if(!empty($_SESSION['semester_group'])){ echo $_SESSION['semester_group']; } ?>" maxlength="2" min="1" max="12" list="defaultsemestres" required/>
 					<datalist id="defaultsemestres">
@@ -225,39 +117,9 @@
 				}
 			?>
 		</form>
-		<?php
-			if(isset($_SESSION['id_group']) && $_SESSION['subjects'] != '' && $_SESSION['students_button'] != '')
-			{
-				echo
-				'
-					<form action="insert.php" method="POST">
-						<button name="btnsave" class="btn icon" type="submit">save</button>
-					</form>
-				';
-			}
-		?>
+
     </div>
 </div>
-<div class="form-options">
-	<div class="options">
-		<form action="#" method="POST">
-			<button class="btn disabled icon" name="btn" value="form_add" type="submit" disabled>add</button>
-		</form>
-		<form action="#" method="POST">
-			<button class="btn disabled icon" name="btn" value="form_coding" type="submit" disabled>code</button>		</form>
-		<form action="#" method="POST">
-			<button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
-		</form>
-		<form action="#" method="POST">
-			<button class="btn btnexit icon" name="btn" value="form_default" type="submit">close</button>
-		</form>
-    </div>
-	<div class="search">
-		<form name="form-search" action="#" method="POST">
-			<p>
-				<input type="text" class="text" name="search" placeholder="Buscar...">
-				<button class="btn-search icon" type="submit">search</button>
-			</p>
-		</form>
-	</div>
-</div>
+<?php
+include_once "../sections/options-disabled.php";
+?>
