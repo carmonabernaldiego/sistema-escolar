@@ -2,7 +2,7 @@
 	include_once '../security.php';
 	include_once '../conexion.php';
 	include_once '../functions.php';
-	include_once '../close_msgbox_info.php';
+	include_once '../close_notif_info.php';
 
 	header('Content-Type: text/html; charset=UTF-8');
 
@@ -46,7 +46,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<title>Alumnos | Sistema Escolar</title>
-	<link rel="icon" type="image/png" href="../../images/asistencia-icon.png" />
+	<link rel="icon" type="image/png" href="../../images/asistencia_icon.png" />
 	<link rel="stylesheet" href="../../css/style.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../../css/style_icons.css" media="screen, projection" type="text/css" />
 	<meta name="description" content="" />

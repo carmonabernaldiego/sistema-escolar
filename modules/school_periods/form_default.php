@@ -62,6 +62,6 @@
 	</div>
 </div>
 <?php
+	include_once '../notif_info.php';
 	include_once "../sections/options.php";
-	include_once '../msgbox_info.php';
 ?>

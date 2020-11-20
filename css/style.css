@@ -46,7 +46,7 @@ body {
 
 body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #f8f4f4 url(../images/background-login.jpg) no-repeat center fixed;
+    background: #f8f4f4 url(../images/background_login.jpg) no-repeat center fixed;
     background-size: cover !important;
 }
 
@@ -208,32 +208,42 @@ input[disabled] {
     border-bottom: 1px solid #4a567c;
 }
 
-.nav-home span.name_user>ul>li>ul {
+.nav-home span.name_user>ul>li {
+    width: 10%;
+    margin: 0 auto;
+}
+
+.nav-home span.name_user>ul>li>a {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav-home span.name_user>ul>li>ul>li {
     display: none;
     position: absolute;
-    width: 80%;
-    margin: -6% 9%;
-    background: #282a36;
-    box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
-    border: solid #eef4ff 2px;
+    width: 70%;
+    height: 40px;
+    margin: 0 -30%;
+    background: #6272a4;
+    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
     border-radius: 0.4em;
     z-index: 1;
 }
 
-.nav-home span.name_user>ul>li>ul:hover {
-    background: #555975;
+.nav-home span.name_user>ul>li>ul>li>a {
+    line-height: 0.5;
+    color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.4);
+    font-size: 0.8em;
 }
 
-.nav-home span.name_user>ul>li:hover>ul {
+.nav-home span.name_user>ul>li:hover>ul>li {
     display: block;
     transition: all 350ms;
 }
 
-.nav-home span.name_user>ul>li>ul>li>a {
-    margin: 0 auto;
-    color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.4);
-    font-size: 0.8em;
+.nav-home span.name_user>ul>li>ul>li:hover {
+    background: #4a567c;
 }
 
 .nav-home ul {
@@ -279,46 +289,44 @@ input[disabled] {
 .box-notification-ok {
     float: right;
     width: 27%;
-    margin: 2% 0;
-    background: url(../images/message.png) #44475a no-repeat;
-    background-size: 18.5%;
+    margin: 0 0 2%;
+    background: url(../images/notif_ok.png) #44475a no-repeat left center;
+    background-size: cover;
+    background-size: 18%;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
-}
-
-.box-notification-ok:after {
-    display: block;
-    content: "";
-    clear: both;
 }
 
 .box-notification-error {
     float: right;
     width: 27%;
-    margin: 2% 0;
-    background: url(../images/message-error.png) #44475a no-repeat;
-    background-size: 53px;
+    margin: 0 0 2%;
+    background: url(../images/notif_error.png) #44475a no-repeat left center;
+    background-size: cover;
+    background-size: 18%;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
 }
 
 .box-notification-ok p,
 .box-notification-error p {
-    padding: 10% 0;
+    padding: 10% 0 10% 21%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;
     font-weight: bold;
+    overflow-y: scroll;
 }
 
 .box-notification-ok .button,
 .box-notification-error .button {
     float: right;
-    margin: 8px 8px 0 0;
+    margin: 3% 3% 0 0;
     width: 25px;
     height: 25px;
-    background: #f2f2f7;
-    color: #b4b3c5;
+    background: #db4949;
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    color: #eef4ff;
     font-weight: bold;
     font-size: 1.5ex;
     border: none;
@@ -330,8 +338,9 @@ input[disabled] {
 .box-notification-ok .button:focus,
 .box-notification-error .button:hover,
 .box-notification-error .button:focus {
-    background: #b4b3c5;
-    color: #f2f2f7;
+    background: #aa3535;
+    border: none;
+    transition: all 350ms;
 }
 
 
@@ -384,7 +393,7 @@ input[disabled] {
     width: 140px;
     height: 140px;
     margin: -55px 0 0 116px;
-    background: url(../images/asistencia-icon.png)#eef4ff no-repeat bottom / 125px 125px;
+    background: url(../images/asistencia_icon.png)#eef4ff no-repeat bottom / 125px 125px;
     border: 4px solid #6272a4;
     border-radius: 5em;
 }
@@ -547,7 +556,7 @@ input[disabled] {
 .form-options .options .btn:focus {
     background: #3d5854;
     border: none;
-    transition: all 300ms;
+    transition: all 350ms;
 }
 
 .form-options .options .btnexit {
@@ -559,7 +568,7 @@ input[disabled] {
 .form-options .options .btnexit:focus {
     background: #aa3535;
     border: none;
-    transition: all 300ms;
+    transition: all 350ms;
 }
 
 .form-options .options .btn.disabled {
@@ -740,7 +749,7 @@ input[disabled] {
 .form-gridview .pages ul li.active button:focus {
     background: #4c597e;
     cursor: pointer;
-    transition: all 300ms;
+    transition: all 350ms;
 }
 
 
@@ -1250,7 +1259,7 @@ button:focus {
         width: 140px;
         height: 140px;
         margin: -55px 0 0 75px;
-        background: url(../images/asistencia-icon.png)#ffffff no-repeat bottom / 125px 125px;
+        background: url(../images/asistencia_icon.png)#ffffff no-repeat bottom / 125px 125px;
         border: 4px solid #6272a4;
         border-radius: 5em;
     }
