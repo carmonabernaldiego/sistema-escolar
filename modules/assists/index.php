@@ -4,6 +4,8 @@
 	include_once '../functions.php';
 	include_once '../close_msgbox_info.php';
 
+	header('Content-Type: text/html; charset=UTF-8');
+
 	//Permisos de administrador
 	if ($_SESSION['permissions'] != 'admin')
 	{
@@ -12,16 +14,16 @@
 	}
 
 	// Formulario actual
-		if (!empty($_POST['btn']))
+	if (!empty($_POST['btn']))
 	{
-		$_SESSION['view_form'] = $_POST['btn'].'.php';
+		$view_form = $_POST['btn'].'.php';
 	}
-	elseif(!isset($_SESSION['view_form']))
+	else
 	{
-		$_SESSION['view_form'] = 'form_default.php';
+		$view_form = 'form_default.php';
 	}
 
-	if($_SESSION['view_form'] == 'form_default.php')
+	if($view_form == 'form_default.php')
 	{
 		unset($_SESSION['id_group']);
 		unset($_SESSION['school_period_group']);
@@ -32,7 +34,7 @@
 		unset($_SESSION['subject_name_group']);
 		unset($_SESSION['checked_subject']);
 		unset($_SESSION['students']);
-		unset($_SESSION['students_button']);
+		unset($_SESSION['students_count']);
 		unset($_SESSION['users_student_group']);
 		unset($_SESSION['name_student_group']);
 		unset($_SESSION['checked_student']);
@@ -61,7 +63,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-	<title>Asistencias | Sistema de Control Escolar</title>
+	<title>Grupos | Sistema de Control Escolar</title>
 	<link rel="icon" type="image/png" href="../../images/asistencia-icon.png" />
 	<link rel="stylesheet" href="../../css/style.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../../css/style_icons.css" media="screen, projection" type="text/css" />
@@ -85,7 +87,7 @@
 		</aside>
 		<section class="content">
 			<?php
-				include_once $_SESSION['view_form'];
+				include_once $view_form;
 			?>
 		</section>
 </body>

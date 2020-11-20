@@ -1,4 +1,6 @@
 <?php
+    header('Content-Type: text/html; charset=UTF-8');
+    
 	include_once 'modules/security.php';
 	include_once 'modules/conexion.php';
 	include_once 'modules/functions.php';

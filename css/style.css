@@ -963,6 +963,10 @@ button:focus {
     overflow: hidden;
 }
 
+.form-data table.consult {
+    margin: -4% auto 9%;
+}
+
 .form-data th {
     padding: 7px 15px;
     background: #282a36;
@@ -1080,8 +1084,7 @@ button:focus {
 
 .form-data td .cbox-subject,
 .form-data td .cbox-student {
-    margin: 4px 0 0 11px;
-    background-position: 0 0;
+    margin: 16% 0 0 45%;
     width: 18px;
     height: 18px;
     background: #eef4ff;

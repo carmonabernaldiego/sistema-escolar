@@ -4,6 +4,8 @@
 	include_once '../functions.php';
 	include_once '../close_msgbox_info.php';
 
+	header('Content-Type: text/html; charset=UTF-8');
+	
 	//Permisos de administrador
 	if ($_SESSION['permissions'] != 'admin')
 	{

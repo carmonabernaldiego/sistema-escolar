@@ -19,12 +19,11 @@
 				$_SESSION['name_group'] = $row['name'];
 				$_SESSION['semester_group'] = $row['semester'];
 				$_SESSION['get_subjects'] = $row['subjects'];
-				$_SESSION['n_load'] = 0;
 			}
 		}
 	}
 
-	//Cargamos datos de las Asignaturas
+	//Cargamos las asignaturas
 	if(isset($_SESSION['school_period_group']) != '')
 	{
 		$array_subjects = array();
@@ -55,23 +54,8 @@
 			}
 			$i += 1;
 		}
-
-		$array_subjects = implode("','",$array_subjects);
-		
-		$sql = "SELECT * FROM subjects WHERE subject NOT IN('".$array_subjects."') AND school_period = '".$_SESSION['school_period_group']."'";
-
-		if($result = $conexion -> query($sql))
-		{
-			while ($row = mysqli_fetch_array($result))
-			{
-				$_SESSION['subjects_group'][$i] = $row['subject'];
-				$_SESSION['subject_name_group'][$i] = $row['name'];
-				$_SESSION['checked_subject'][$i] = '';
-
-				$i += 1;
-			}
-		}
 	}
+
 	//Cargamos datos de estudiantes
 	if(isset($_SESSION['school_period_group']) != '')
 	{
@@ -107,50 +91,32 @@
 				$i += 1;
 			}
 		}
-
-		$_SESSION['get_students'] = trim($_SESSION['get_students'], ',');
-
-		$array_students = explode( ',', $_SESSION['get_students']);
-
-		$array_students = implode("','",$array_students);
-		
-		$sql = "SELECT * FROM students WHERE user NOT IN('".$array_students."') AND school_period = '".$_SESSION['school_period_group']."'";
-
-		if($result = $conexion -> query($sql))
-		{
-			while ($row = mysqli_fetch_array($result))
-			{
-				$_SESSION['checked_student'][$i] = '';
-				$_SESSION['users_student_group'][$i] = $row['user'];
-				$_SESSION['name_student_group'][$i] = $row['name'].' '.$row['surnames'];
-
-				$i += 1;
-			}
-		}
 	}
 ?>
 <div class="form-data">
-	<div class="head">
-		<h1 class="titulo">Consultar</h1>
+    <div class="head">
+        <h1 class="titulo">Consultar</h1>
     </div>
-   <div class="body">
-		<form name="form-add-groups" action="#" method="POST">
-			<div class="wrap">
-				<div class="first">
-					<label class="label">Grupo</label>
-					<input class="text" type="text" name="txtgroup" value="<?php if(!empty($_SESSION['id_group'])){ echo $_SESSION['id_group']; } ?>" maxlength="20" autofocus required disabled/>
-					<label class="label">Periodo Escolar</label>
-					<select class="select" name="selectgroupschoolperiod" disabled>
-						<option value="<?php echo $_SESSION['school_period']; ?>"><?php echo $_SESSION['school_period']; ?></option>
-					</select>
-				</div>
-				<div class="last">
-					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtgroupname" value="<?php if(!empty($_SESSION['name_group'])){ echo $_SESSION['name_group']; } ?>" maxlength="100" required disabled/>
-					<label class="label">Semestre</label>
-					<input class="text" type="number" name="txtgroupsemester" value="<?php if(!empty($_SESSION['semester_group'])){ echo $_SESSION['semester_group']; } ?>" maxlength="2" min="1" max="12" list="defaultsemestres" required disabled/>
-					<datalist id="defaultsemestres">
-					<?php
+    <div class="body">
+        <form name="form-add-groups" action="#" method="POST">
+            <div class="wrap">
+                <div class="first">
+                    <label class="label">Grupo</label>
+                    <input class="text" type="text" name="txtgroup"
+                        value="<?php if(!empty($_SESSION['id_group'])){ echo $_SESSION['id_group']; } ?>" maxlength="20"
+                        autofocus required disabled />
+                    <label class="label">Nombre</label>
+                    <input class="text" type="text" name="txtgroupname"
+                        value="<?php if(!empty($_SESSION['name_group'])){ echo $_SESSION['name_group']; } ?>"
+                        maxlength="100" required disabled />
+                </div>
+                <div class="last">
+                    <label class="label">Semestre</label>
+                    <input class="text" type="number" name="txtgroupsemester"
+                        value="<?php if(!empty($_SESSION['semester_group'])){ echo $_SESSION['semester_group']; } ?>"
+                        maxlength="2" min="1" max="12" list="defaultsemestres" required disabled />
+                    <datalist id="defaultsemestres">
+                        <?php
 						for($i = 1; $i <= 12; $i ++)
 						{
 							echo
@@ -159,22 +125,25 @@
 							';
 						}
 					?>
-					</datalist>	
-				</div>
-			</div>
-			<?php
+                    </datalist>
+                    <label class="label">Periodo Escolar</label>
+                    <select class="select" name="selectgroupschoolperiod" disabled>
+                        <option value="<?php echo $_SESSION['school_period']; ?>">
+                            <?php echo $_SESSION['school_period']; ?></option>
+                    </select>
+                </div>
+            </div>
+            <?php
 				echo
 				'
 					</br>
-					<table>
+					<table class="consult">
 						<tr>
 							<th class="center" colspan="2">Asignaturas</th>
 						</tr>
 						';
 							$i = 0;
-
-							if(!empty($_SESSION['subjects_group']))
-							{
+						
 								foreach($_SESSION['subjects_group'] as $row)
 								{ 
 									echo'
@@ -186,18 +155,9 @@
 					
 									$i += 1;
 								}
-							}
-							else
-							{
-								$_SESSION['msgbox_error'] = 1;
-								$_SESSION['text_msgbox_error'] = 'No se encontraron Asignaturas para el semestre seleccionado.';
-
-								$_SESSION['view_form'] = 'form_default.php';
-								header ('Location: /modules/groups');
-							}
 						echo '
 					</table>
-					<table>
+					<table class="consult">
 						<tr>
 							<th class="center" colspan="2">Alumnos</th>
 						</tr>
@@ -219,8 +179,8 @@
 					</table>
 				';
 			?>
-			<button class="btn icon icon-confirm" name="btn" value="form_default" type="submit"></button>
-		</form>
+            <button class="btn icon" name="btn" value="form_default" type="submit">save</button>
+        </form>
     </div>
 </div>
 <?php

@@ -15,7 +15,32 @@
 		exit();
 	}
 
-	if($_SESSION['students_button'] == '')
+	//Recuperamos los alumnos seleccionados
+	$i = 0;
+
+	$_SESSION['students'] = array();
+	$_SESSION['students_count'] = 0;
+
+	if(isset($_SESSION['users_student_group']))
+	{
+		foreach($_SESSION['users_student_group'] as $row)
+		{
+			if(isset($_POST['check-student-group'.$i.'']))
+			{
+				$_SESSION['students'][$i] = $_POST['check-student-group'.$i.''];
+				
+				$_SESSION['students_count'] += 1;
+			}
+			else
+			{
+				$_SESSION['students'][$i] +=0;
+			}
+	
+			$i += 1;
+		}
+	}
+
+	if($_SESSION['students_count'] == 0)
 	{
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Debe seleccionar minimo un estudiante.';

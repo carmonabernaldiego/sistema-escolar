@@ -19,12 +19,11 @@
 				$_SESSION['name_group'] = $row['name'];
 				$_SESSION['semester_group'] = $row['semester'];
 				$_SESSION['get_subjects'] = $row['subjects'];
-				$_SESSION['n_load'] = 0;
 			}
 		}
 	}
 
-	//Cargamos datos de las Asignaturas
+	//Cargamos las asignaturas
 	if(isset($_SESSION['school_period_group']) != '')
 	{
 		$array_subjects = array();
@@ -55,23 +54,8 @@
 			}
 			$i += 1;
 		}
-
-		$array_subjects = implode("','",$array_subjects);
-		
-		$sql = "SELECT * FROM subjects WHERE subject NOT IN('".$array_subjects."') AND school_period = '".$_SESSION['school_period_group']."'";
-
-		if($result = $conexion -> query($sql))
-		{
-			while ($row = mysqli_fetch_array($result))
-			{
-				$_SESSION['subjects_group'][$i] = $row['subject'];
-				$_SESSION['subject_name_group'][$i] = $row['name'];
-				$_SESSION['checked_subject'][$i] = '';
-
-				$i += 1;
-			}
-		}
 	}
+
 	//Cargamos datos de estudiantes
 	if(isset($_SESSION['school_period_group']) != '')
 	{
@@ -107,26 +91,6 @@
 				$i += 1;
 			}
 		}
-
-		$_SESSION['get_students'] = trim($_SESSION['get_students'], ',');
-
-		$array_students = explode( ',', $_SESSION['get_students']);
-
-		$array_students = implode("','",$array_students);
-		
-		$sql = "SELECT * FROM students WHERE user NOT IN('".$array_students."') AND school_period = '".$_SESSION['school_period_group']."'";
-
-		if($result = $conexion -> query($sql))
-		{
-			while ($row = mysqli_fetch_array($result))
-			{
-				$_SESSION['checked_student'][$i] = '';
-				$_SESSION['users_student_group'][$i] = $row['user'];
-				$_SESSION['name_student_group'][$i] = $row['name'].' '.$row['surnames'];
-
-				$i += 1;
-			}
-		}
 	}
 ?>
 <div class="form-data">
@@ -147,11 +111,6 @@
                         maxlength="100" required disabled />
                 </div>
                 <div class="last">
-                    <label class="label">Periodo Escolar</label>
-                    <select class="select" name="selectgroupschoolperiod" disabled>
-                        <option value="<?php echo $_SESSION['school_period']; ?>">
-                            <?php echo $_SESSION['school_period']; ?></option>
-                    </select>
                     <label class="label">Semestre</label>
                     <input class="text" type="number" name="txtgroupsemester"
                         value="<?php if(!empty($_SESSION['semester_group'])){ echo $_SESSION['semester_group']; } ?>"
@@ -167,21 +126,24 @@
 						}
 					?>
                     </datalist>
+                    <label class="label">Periodo Escolar</label>
+                    <select class="select" name="selectgroupschoolperiod" disabled>
+                        <option value="<?php echo $_SESSION['school_period']; ?>">
+                            <?php echo $_SESSION['school_period']; ?></option>
+                    </select>
                 </div>
             </div>
             <?php
 				echo
 				'
 					</br>
-					<table>
+					<table class="consult">
 						<tr>
 							<th class="center" colspan="2">Asignaturas</th>
 						</tr>
 						';
 							$i = 0;
-
-							if(!empty($_SESSION['subjects_group']))
-							{
+						
 								foreach($_SESSION['subjects_group'] as $row)
 								{ 
 									echo'
@@ -193,18 +155,9 @@
 					
 									$i += 1;
 								}
-							}
-							else
-							{
-								$_SESSION['msgbox_error'] = 1;
-								$_SESSION['text_msgbox_error'] = 'No se encontraron Asignaturas para el semestre seleccionado.';
-
-								$_SESSION['view_form'] = 'form_default.php';
-								header ('Location: /modules/groups');
-							}
 						echo '
 					</table>
-					<table>
+					<table class="consult">
 						<tr>
 							<th class="center" colspan="2">Alumnos</th>
 						</tr>

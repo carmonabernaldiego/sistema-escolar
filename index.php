@@ -1,6 +1,8 @@
 <?php
 	session_start();
 
+	header('Content-Type: text/html; charset=UTF-8');
+	
 	include_once 'modules/conexion.php';
 	include_once 'modules/cookie.php';
 	include_once 'modules/functions.php';
