@@ -25,7 +25,7 @@
 
 	$directorioSubida = "../../images/users/";
 	$max_file_size = "20480000";
-	$extensionesValidas = array("jpg", "png");
+	$extensionesValidas = array("jpg", "png", "jpeg");
 
 	if(isset($_FILES['fileimage']))
 	{
@@ -44,13 +44,13 @@
 
 		// Comprobamos el tamaño del archivo
 		if($filesize > $max_file_size){
-			$errores[] = "La imagen debe de tener un tamaño inferior a 1 mb";
+			$errores[] = "La imagen debe de tener un tamaño inferior a 20 mb";
 		}
 
 		// Comprobamos y renombramos el nombre del archivo
 		$nombreArchivo = $arrayArchivo['filename'];
 		$nombreArchivo = preg_replace("/[^A-Z0-9._-]/i", "_", $nombreArchivo);
-		$nombreArchivo = $nombreArchivo . rand(1, 1000);
+		$nombreArchivo = $_POST['txtuserid'] . rand(1, 1000);
 
 		// Desplazamos el archivo si no hay errores
 		if(empty($errores))

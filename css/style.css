@@ -189,9 +189,8 @@ input[disabled] {
     width: 75px;
     height: 75px;
     background: #282a36;
-    box-shadow: 0px 0px 3px rgba(98, 114, 164, 0.7);
+    box-shadow: 0px 0px 6px rgba(98, 114, 164, 0.8);
     margin: 20px auto 13px;
-    border: 3px solid #4a567c;
     border-radius: 10em;
     pointer-events: none;
 }
@@ -204,7 +203,7 @@ input[disabled] {
     font-weight: bold;
     text-align: center;
     text-transform: capitalize;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #4a567c;
 }
 
@@ -221,17 +220,20 @@ input[disabled] {
 .nav-home span.name_user>ul>li>ul>li {
     display: none;
     position: absolute;
-    width: 70%;
-    height: 40px;
-    margin: 0 -30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 65%;
+    height: 38px;
     background: #6272a4;
-    box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
-    border-radius: 0.4em;
+    box-shadow: 1px 2px 4px rgba(142, 136, 192, 0.4);
+    border-radius: 0.3em;
     z-index: 1;
+    cursor: pointer;
 }
 
 .nav-home span.name_user>ul>li>ul>li>a {
-    line-height: 0.5;
+    padding: 0 0 0 0;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.4);
     font-size: 0.8em;
@@ -244,6 +246,7 @@ input[disabled] {
 
 .nav-home span.name_user>ul>li>ul>li:hover {
     background: #4a567c;
+    transition: all 350ms;
 }
 
 .nav-home ul {

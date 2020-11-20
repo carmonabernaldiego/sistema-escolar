@@ -12,6 +12,7 @@
 			<th>Nombre</th>
 			<th class="center">Semestre</th>
 			<th class="view center"><a class="icon">visibility</a></th>
+			<th class="edit center"><a class="icon">edit</a></th>
 			<th class="delete center"><a class="icon">delete</a></th>
     	</tr>
 		<?php
@@ -27,6 +28,13 @@
 								<input style="display:none;" type="text" name="txtgroup" value="'.$_SESSION["group"][$i].'"/>
 								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="'.$_SESSION['group_school_period'][$i].'"/>
 								<button class="btnview" name="btn" value="form_consult" type="submit"></button>
+							</form>
+						</td>
+						<td>
+							<form action="#" method="POST">
+								<input style="display:none;" type="text" name="txtgroup" value="'.$_SESSION["group"][$i].'"/>
+								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="'.$_SESSION['group_school_period'][$i].'"/>
+								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
 						</td>
 						<td>

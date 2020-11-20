@@ -17,7 +17,7 @@
 
 	$directorioSubida = "../../images/users/";
 	$max_file_size = "20480000";
-	$extensionesValidas = array("jpg", "png");
+	$extensionesValidas = array("jpg", "png", "jpeg");
 
 	if(isset($_FILES['fileimage']))
 	{
@@ -42,7 +42,7 @@
 		// Comprobamos y renombramos el nombre del archivo
 		$nombreArchivo = $arrayArchivo['filename'];
 		$nombreArchivo = preg_replace("/[^A-Z0-9._-]/i", "_", $nombreArchivo);
-		$nombreArchivo = $nombreArchivo . rand(1, 1000);
+		$nombreArchivo = $_POST['txtuserid'] . rand(1, 1000);
 
 		// Desplazamos el archivo si no hay errores
 		if(empty($errores))
@@ -61,6 +61,10 @@
 
 	mysqli_query($conexion, $sql_update);
 
+	if ($_POST['txtuserid'] == $_SESSION['user']) {
+		$_SESSION['image'] = $nombre_img;
+	}
+	
 	$_SESSION['msgbox_info'] = 1;
 	$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
 
