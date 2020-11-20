@@ -37,7 +37,7 @@
         }
         elseif($name_page[1] == 'subjects')
         {
-            $_SESSION['title_form_section'] = 'Materias'; 
+            $_SESSION['title_form_section'] = 'Asignaturas'; 
         }
         elseif($name_page[1] == 'groups')
         {

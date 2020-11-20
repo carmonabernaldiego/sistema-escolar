@@ -4,10 +4,37 @@
 		header('Location: /');
 		exit();
 	
-    }
+	}
 
-    //Recuperar datos del form_add_subjects
+	//Recuperamos las Asignaturas seleccionadas del form_add_subjects
+	$i = 0;
 
+	$_SESSION['subjects'] = '';
+	$_SESSION['subjects_count'] = 0;
+
+	if(isset($_SESSION['subjects_group']))
+	{
+		foreach($_SESSION['subjects_group'] as $row)
+		{
+			if(isset($_POST['check-subject-group'.$i.'']))
+			{
+				$_SESSION['subjects'] .= $_POST['check-subject-group'.$i.''].',';
+
+				$_SESSION['subjects_count'] += 1;
+			}
+			$i += 1;
+		}
+	}
+
+	if($_SESSION['subjects_count'] == 0)
+	{
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Debe seleccionar minimo una asignatura.';
+		$_SESSION['view_form'] = 'form_default.php';
+
+		header ('Location: /modules/groups');
+		exit();
+	}
     
     //Cargamos datos de estudiantes
 	if(isset($_SESSION['school_period_group']) != '')
@@ -33,10 +60,10 @@
 ?>
 <div class="form-data">
     <div class="head">
-        <h1 class="titulo">Agregar</h1>
+		<h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-groups-students" action="#" method="POST">
+        <form name="form-add-groups-students" action="insert.php" method="POST">
             <div class="wrap">
 				<?php
 				echo
@@ -63,7 +90,7 @@
 						</table>
 					';
                     ?>
-                <button class="btn-add-students" name="btn" value="form_add_students" type="submit">Asignar Alumnos</button>
+                <button class="btn-save icon" name="btnsave" type="submit">save</button>
             </div>
         </form>
     </div>

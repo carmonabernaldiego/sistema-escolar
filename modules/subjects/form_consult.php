@@ -34,7 +34,7 @@ echo'
 		<form name="form-consult-subjects" action="#" method="POST">
 			<div class="wrap">
 				<div class="first">
-					<label class="label">Materia</label>
+					<label class="label">Asignatura</label>
 					<input style="display: none;" type="text" name="txtsubject" value="'.$_SESSION['subject'][0].'"/>
 					<input class="text" type="text" name="txtsubject" value="'.$_SESSION['subject'][0].'" disabled/>
 					<label class="label">Nombre</label>

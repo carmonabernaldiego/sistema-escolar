@@ -36,7 +36,7 @@
                     </datalist>
                     <label class="label">Asignar</label>
                     <button class="btn-add-subjects" name="btn" value="form_add_subjects"
-                        type="submit">Materias</button>
+                        type="submit">Asignaturas</button>
                 </div>
             </div>
         </form>

@@ -15,7 +15,7 @@
 		$_SESSION['semester_group'] = $_POST['txtgroupsemester'];
 	}
     
-    //Cargamos datos de las materias
+    //Cargamos datos de las Asignaturas
 	if(isset($_SESSION['school_period_group']) != '')
 	{
 		$_SESSION['subjects_group'] = array();
@@ -49,7 +49,7 @@
 					'
 						<table>
 							<tr>
-								<th class="center" colspan="2">Materias</th>
+								<th class="center" colspan="2">Asignaturas</th>
 							</tr>
 							';
 								$i = 0;
@@ -71,7 +71,7 @@
 								else
 								{
 									$_SESSION['msgbox_error'] = 1;
-									$_SESSION['text_msgbox_error'] = 'No se encontraron materias para el semestre seleccionado.';
+									$_SESSION['text_msgbox_error'] = 'No se encontraron Asignaturas para el semestre seleccionado.';
 
 									$_SESSION['view_form'] = 'form_default.php';
 									header ('Location: /modules/groups');

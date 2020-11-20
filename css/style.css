@@ -1136,6 +1136,29 @@ button:focus {
     transition: all 350ms;
 }
 
+.form-data button.btn-save {
+    width: 20%;
+    height: 40px;
+    margin: 2% auto -2%;
+    background: #6272a4;
+    box-shadow: 0 -1px 3px rgba(142, 136, 192, 0.3);
+    color: #eef4ff;
+    text-transform: none;
+    line-height: 1.6;
+    font-size: 1.4em;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    border: none;
+    cursor: pointer;
+}
+
+.form-data button.btn-save:hover,
+.form-data button.btn-save:focus {
+    background: #4a567c;
+    border: none;
+    transition: all 350ms;
+}
+
 
 /*-------------------------------------------
   Formulario | Delete

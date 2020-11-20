@@ -13,7 +13,7 @@
         <form name="form-add-subjects" action="insert.php" method="POST">
             <div class="wrap">
                 <div class="first">
-                    <label class="label">Materia</label>
+                    <label class="label">Asignatura</label>
                     <input class="text" type="text" name="txtsubject" value="" maxlength="20" autofocus required />
                     <label class="label">Nombre</label>
                     <input class="text" type="text" name="txtsubjectname" value="" maxlength="100" required />

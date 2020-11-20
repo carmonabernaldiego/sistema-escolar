@@ -50,7 +50,7 @@
         <li><a class="<?php if($output[1] == 'students'){ echo 'active'; } ?>" href="/modules/students"><span
                     class="icon">recent_actors</span>Alumnos</a></li>
         <li><a class="<?php if($output[1] == 'subjects'){ echo 'active'; } ?>" href="/modules/subjects"><span
-                    class="icon">style</span>Materias</a></li>
+                    class="icon">style</span>Asignaturas</a></li>
         <li><a class="<?php if($output[1] == 'groups'){ echo 'active'; } ?>" href="/modules/groups"><span
                     class="icon">group_work</span>Grupos</a></li>
         <li><a class="<?php if($output[1] == 'assists'){ echo 'active'; } ?>" href="/modules/assists"><span

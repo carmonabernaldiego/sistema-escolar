@@ -32,7 +32,7 @@
 		unset($_SESSION['subject_name_group']);
 		unset($_SESSION['checked_subject']);
 		unset($_SESSION['students']);
-		unset($_SESSION['students_button']);
+		unset($_SESSION['students_count']);
 		unset($_SESSION['users_student_group']);
 		unset($_SESSION['name_student_group']);
 		unset($_SESSION['checked_student']);
