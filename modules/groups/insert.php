@@ -50,7 +50,7 @@
 		exit();
 	}
 	else
-	{/*
+	{
 		$sql = "SELECT * FROM groups WHERE id_group = '".$_SESSION['id_group']."' AND school_period = '".$_SESSION['school_period_group']."'";
 
 		if ($result = $conexion -> query($sql))
@@ -90,7 +90,6 @@
 
 				header ('Location: /modules/groups');
 			}
-		}*/
-		echo 'Jiji';
+		}
 	}
 ?>
