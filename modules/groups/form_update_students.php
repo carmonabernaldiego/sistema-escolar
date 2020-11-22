@@ -35,7 +35,28 @@
 		header ('Location: /modules/groups');
 		exit();
 	}
-    
+	
+	//Recuperar alumnos guardados
+	if(isset($_SESSION['school_period_group']) != '')
+	{
+		$_SESSION['get_students'] = '';
+
+		$i = 0;
+
+		$sql = "SELECT * FROM groups_students WHERE id_group = '".$_SESSION['id_group']."' AND school_period = '".$_SESSION['school_period']."'";
+
+		if ($result = $conexion -> query($sql))
+		{
+			while ($row = mysqli_fetch_array($result))
+			{
+				$_SESSION['get_students'] .= $row['user_student'].',';
+
+				$i += 1;
+			}
+		}
+	}
+	$get_students = explode(",", $_SESSION['get_students']);
+	
     //Cargamos datos de estudiantes
 	if(isset($_SESSION['school_period_group']) != '')
 	{
@@ -50,6 +71,14 @@
 		{
 			while ($row = mysqli_fetch_array($result))
 			{
+				$_SESSION['checked_student'][$i] = '';
+
+				foreach ($get_students as $key => $student) {
+					if ($student == $row['user']) {
+						$_SESSION['checked_student'][$i] = 'checked';
+					}
+				}
+
 				$_SESSION['user_student_group'][$i] = $row['user'];
 				$_SESSION['name_student_group'][$i] = $row['name'].' '.$row['surnames'];
 
@@ -60,10 +89,10 @@
 ?>
 <div class="form-data">
     <div class="head">
-		<h1 class="titulo">Agregar</h1>
+		<h1 class="titulo">Actualizar</h1>
     </div>
     <div class="body">
-        <form name="form-add-groups-students" action="update.php" method="POST">
+        <form name="form-add-groups-students" action="insert.php" method="POST">
             <div class="wrap">
 				<?php
 				echo
@@ -79,7 +108,7 @@
 								{ 
 									echo'
 										<tr>
-											<td style="width: 40px;"><input id="cbox-student'.$i.'" class="cbox-student" type="checkbox" name="check-student-group'.$i.'" value="'.$_SESSION["user_student_group"][$i].'"></td>
+											<td style="width: 40px;"><input id="cbox-student'.$i.'" class="cbox-student" type="checkbox" name="check-student-group'.$i.'" value="'.$_SESSION["user_student_group"][$i].'"'.' '.$_SESSION['checked_student'][$i].'></td>
 											<td><label for="cbox-student'.$i.'">'.$_SESSION['name_student_group'][$i].'</label></td>
 										</tr>
 										';

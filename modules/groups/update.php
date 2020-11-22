@@ -65,9 +65,9 @@
 			}
 			else
 			{
-				$sql_insert = "INSERT INTO groups(id_group, school_period, name, semester, subjects) VALUES('".$_SESSION['id_group']."', '".$_SESSION['school_period_group']."', '".$_SESSION['name_group']."', '".intval($_SESSION['semester_group'])."', '".$_SESSION['subjects']."')";
+				/*$sql_insert*/$f = "INSERT INTO groups(id_group, school_period, name, semester, subjects) VALUES('".$_SESSION['id_group']."', '".$_SESSION['school_period_group']."', '".$_SESSION['name_group']."', '".intval($_SESSION['semester_group'])."', '".$_SESSION['subjects']."')";
 			
-				if(mysqli_query($conexion, $sql_insert))
+				if(mysqli_query($conexion, /*$sql_insert*/$f))
 				{
 					$i = 0;
 
@@ -75,9 +75,9 @@
 					{
 						if($_SESSION['students'][$i] != '')
 						{
-							$sql_insert = "INSERT INTO groups_students(id_group, school_period, user_student) VALUES('".$_SESSION['id_group']."', '".$_SESSION['school_period_group']."', '".$_SESSION['students'][$i]."')";
+							/*$sql_insert*/$f = "INSERT INTO groups_students(id_group, school_period, user_student) VALUES('".$_SESSION['id_group']."', '".$_SESSION['school_period_group']."', '".$_SESSION['students'][$i]."')";
 							
-							mysqli_query($conexion, $sql_insert);
+							mysqli_query($conexion, /*$sql_insert*/$f);
 						}
 				
 						$i += 1;

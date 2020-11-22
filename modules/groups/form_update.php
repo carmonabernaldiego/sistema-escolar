@@ -25,14 +25,15 @@
 ?>
 <div class="form-data">
     <div class="head">
-        <h1 class="titulo">Agregar</h1>
+        <h1 class="titulo">Actualizar</h1>
     </div>
     <div class="body">
         <form name="form-add-groups" action="#" method="POST">
             <div class="wrap">
                 <div class="first">
                     <label class="label">Grupo</label>
-                    <input class="text" type="text" name="txtgroup" value="<?php echo $_SESSION['id_group']; ?>" maxlength="20" disabled/>
+                    <input style="display: none;" type="text" name="txtgroup" value="<?php echo $_SESSION['id_group']; ?>"/>
+                    <input class="text" type="text" name="txt" value="<?php echo $_SESSION['id_group']; ?>" maxlength="20" disabled/>
                     <label class="label">Nombre</label>
                     <input class="text" type="text" name="txtgroupname" value="<?php echo $_SESSION['name_group']; ?>" maxlength="100" autofocus required />
                 </div>
@@ -52,7 +53,7 @@
 					?>
                     </datalist>
                     <label class="label">Asignar</label>
-                    <button class="btn-add-subjects" name="btn" value="form_add_subjects"
+                    <button class="btn-add-subjects" name="btn" value="form_update_subjects"
                         type="submit">Asignaturas</button>
                 </div>
             </div>
