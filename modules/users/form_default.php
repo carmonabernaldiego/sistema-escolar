@@ -58,7 +58,9 @@
 	    </ul>
 	</div>
 </div>
+<div class="content-aside">
 <?php
 	include_once '../notif_info.php';
 	include_once "../sections/options.php";
 ?>
+</div>

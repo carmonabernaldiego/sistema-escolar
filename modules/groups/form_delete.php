@@ -23,5 +23,7 @@
             </div>
         </div>
         ';
-include_once "../sections/options-disabled.php";
+echo '<div class="content-aside">';
+	include_once "../sections/options-disabled.php";
+echo '</div>';
 ?>

@@ -63,7 +63,7 @@
 		<h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-groups-students" action="update.php" method="POST">
+        <form name="form-add-groups-students" action="insert.php" method="POST">
             <div class="wrap">
 				<?php
 				echo
@@ -95,6 +95,8 @@
         </form>
     </div>
 </div>
+<div class="content-aside">
 <?php
-include_once "../sections/options-disabled.php";
+	include_once "../sections/options-disabled.php";
 ?>
+</div>

@@ -92,7 +92,7 @@
 		<h1 class="titulo">Actualizar</h1>
     </div>
     <div class="body">
-        <form name="form-add-groups-students" action="insert.php" method="POST">
+        <form name="form-add-groups-students" action="update.php" method="POST">
             <div class="wrap">
 				<?php
 				echo
@@ -124,6 +124,8 @@
         </form>
     </div>
 </div>
+<div class="content-aside">
 <?php
-include_once "../sections/options-disabled.php";
+	include_once "../sections/options-disabled.php";
 ?>
+</div>

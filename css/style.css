@@ -290,30 +290,35 @@ input[disabled] {
 -------------------------------------------*/
 
 .box-notification-ok {
-    float: right;
-    width: 27%;
-    margin: 0 0 2%;
+    width: 100%;
+    margin: 0 0 8% 0;
     background: url(../images/notif_ok.png) #44475a no-repeat left center;
     background-size: cover;
-    background-size: 18%;
+    background-size: 17%;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
 }
 
 .box-notification-error {
-    float: right;
-    width: 27%;
-    margin: 0 0 2%;
+    width: 100%;
+    margin: 0 0 8% 0;
     background: url(../images/notif_error.png) #44475a no-repeat left center;
     background-size: cover;
-    background-size: 18%;
+    background-size: 17%;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
 }
 
+.box-notification-error:after,
+.box-notification-info:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
 .box-notification-ok p,
 .box-notification-error p {
-    padding: 10% 0 10% 21%;
+    padding: 10% 0 10% 18%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;
@@ -352,12 +357,20 @@ input[disabled] {
 -------------------------------------------*/
 
 .content {
+    display: block;
     float: right;
     margin: 0 3%;
     width: 72%;
 }
 
-.content:after {
+.content-aside {
+    display: block;
+    float: right;
+    width: 27%;
+}
+
+.content:after,
+.content-aside:after {
     display: block;
     content: "";
     clear: both;
@@ -475,8 +488,7 @@ input[disabled] {
 -------------------------------------------*/
 
 .form-options {
-    float: right;
-    width: 27%;
+    width: 100%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
@@ -484,6 +496,7 @@ input[disabled] {
 
 .form-options .search {
     margin: 20px 0;
+    padding-bottom: 20px;
 }
 
 .form-options .search:after {

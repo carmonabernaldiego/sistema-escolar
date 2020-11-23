@@ -33,7 +33,7 @@
 			}
 			else
 			{
-				$_SESSION['students'][$i] +=0;
+				$_SESSION['students'][$i] = '';
 			}
 	
 			$i += 1;
@@ -57,35 +57,40 @@
 		{
 			if ($row = mysqli_fetch_array($result))
 			{
-				$_SESSION['msgbox_error'] = 1;
-				$_SESSION['text_msgbox_error'] = 'El grupo que intenta crear ya éxiste.';
+				$sql_update = "UPDATE groups SET name = '".$_SESSION['name_group']."', semester = '".$_SESSION['semester_group']."', subjects = '".$_SESSION['subjects']."' WHERE id_group = '".$_SESSION['id_group']."' AND school_period = '".$_SESSION['school_period_group']."'";
+
+				if(mysqli_query($conexion, $sql_update))
+				{
+					$i = 0;
+
+					//Eliminamos alumnos para no tener duplicados, ya que se actualizaran e ingresaran como nuevos acorde al formulario form_update_students
+					$sql_delete = "DELETE FROM groups_students WHERE id_group = '".$_SESSION['id_group']."' AND school_period = '".$_SESSION['school_period_group']."'";
+
+					mysqli_query($conexion, $sql_delete);
+
+					foreach($_SESSION['students'] as $row)
+					{
+						if($_SESSION['students'][$i] != '')
+						{		
+							$sql_insert = "INSERT INTO groups_students(id_group, school_period, user_student) VALUES('".$_SESSION['id_group']."', '".$_SESSION['school_period_group']."', '".$_SESSION['students'][$i]."')";
+							
+							mysqli_query($conexion, $sql_insert);	
+						}
+
+						$i += 1;
+					}
+				}
+
+				$_SESSION['msgbox_info'] = 1;
+				$_SESSION['text_msgbox_info'] = 'Registro actualizado correctamente.';
 				$_SESSION['view_form'] = 'form_default.php';
 
 				header ('Location: /modules/groups');
 			}
 			else
 			{
-				/*$sql_insert*/$f = "INSERT INTO groups(id_group, school_period, name, semester, subjects) VALUES('".$_SESSION['id_group']."', '".$_SESSION['school_period_group']."', '".$_SESSION['name_group']."', '".intval($_SESSION['semester_group'])."', '".$_SESSION['subjects']."')";
-			
-				if(mysqli_query($conexion, /*$sql_insert*/$f))
-				{
-					$i = 0;
-
-					foreach($_SESSION['students'] as $row)
-					{
-						if($_SESSION['students'][$i] != '')
-						{
-							/*$sql_insert*/$f = "INSERT INTO groups_students(id_group, school_period, user_student) VALUES('".$_SESSION['id_group']."', '".$_SESSION['school_period_group']."', '".$_SESSION['students'][$i]."')";
-							
-							mysqli_query($conexion, /*$sql_insert*/$f);
-						}
-				
-						$i += 1;
-					}
-				}
-
-				$_SESSION['msgbox_info'] = 1;
-				$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+				$_SESSION['msgbox_error'] = 1;
+				$_SESSION['text_msgbox_error'] = 'El grupo que intenta actualizar no éxiste.';
 				$_SESSION['view_form'] = 'form_default.php';
 
 				header ('Location: /modules/groups');

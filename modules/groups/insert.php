@@ -33,7 +33,7 @@
 			}
 			else
 			{
-				$_SESSION['students'][$i] +=0;
+				$_SESSION['students'][$i] = '';
 			}
 	
 			$i += 1;
