@@ -9,7 +9,12 @@
 			<th class="center">Semestre</th>
 			<th class="view center"><a class="icon">visibility</a></th>
 			<th class="edit center"><a class="icon">edit</a></th>
-			<th class="delete center"><a class="icon">delete</a></th>
+			<?php
+				if($_SESSION['permissions'] != 'editor')
+				{
+					echo '<th class="delete center"><a class="icon">delete</a></th>';
+				}
+			?>
     	</tr>
 		<?php
 			for ($i = 0; $i < $_SESSION['total_groups']; $i++)
@@ -32,14 +37,20 @@
 								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="'.$_SESSION['group_school_period'][$i].'"/>
 								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
-						</td>
-						<td>
-							<form action="#" method="POST">
-								<input style="display:none;" type="text" name="txtgroup" value="'.$_SESSION["group"][$i].'"/>
-								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="'.$_SESSION['group_school_period'][$i].'"/>
-								<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
-							</form>
-						</td>
+						</td>';
+						if($_SESSION['permissions'] != 'editor')
+						{
+							echo '
+								<td>
+									<form action="#" method="POST">
+										<input style="display:none;" type="text" name="txtgroup" value="'.$_SESSION["group"][$i].'"/>
+										<input style="display:none;" type="text" name="txtgroupschoolperiod" value="'.$_SESSION['group_school_period'][$i].'"/>
+										<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
+									</form>
+								</td>
+							';
+						}
+						echo '
 					</tr>
 				';
 			}
