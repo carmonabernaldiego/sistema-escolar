@@ -245,7 +245,7 @@ button:focus {
 .nav-home span.name_user>ul>li>ul>li>a {
     padding: 0 0 0 0;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.4);
+    text-shadow: 2px 2px 6px rgba(59, 64, 80, 0.8);
     font-size: 0.8em;
 }
 
