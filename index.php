@@ -15,26 +15,29 @@
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-	<title>Sistema Escolar</title>
-	<link rel="icon" type="image/png" href="images/asistencia_icon.png" />
-	<link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <title>Sistema Escolar</title>
+    <link rel="icon" type="image/png" href="images/asistencia_icon.png" />
+    <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 </head>
+
 <body class="login">
-	<div class="wrap-title-login">
-		<div class="title-login">
-			<h1>Sistema Escolar</h1>
-		</div>
-	</div>
-	<div class="wrap-form-login">
-		<div class="logo-form-login">
-		</div>
-		<form name="frm-login" action="#" method="POST">
-			<?php
+    <div class="wrap-title-login">
+        <div class="title-login">
+            <h1>Sistema Escolar</h1>
+        </div>
+    </div>
+    <div class="wrap-form-login">
+        <div class="logo-form-login">
+        </div>
+        <form name="frm-login" action="#" method="POST">
+            <?php
 				if (!empty($_POST['txtuser']) and !empty($_POST['txtpass']))
 				{
 					//Limpiar String
@@ -74,6 +77,10 @@
 											}
 										}
 									}
+									else
+									{
+										goto error_user;
+									}
 
 									if (!empty($_POST['remember_session']))
 									{
@@ -82,6 +89,46 @@
 									else
 									{
 										$_SESSION['section-admin'] = 'section-admin-'.$user;
+									}
+								}
+							}
+							elseif ($row['permissions'] == 'editor')
+							{
+								$user = $row['user'];
+								$image = $row['image'];
+								$permissions = $row['permissions'];
+
+								$sql = "SELECT * FROM administratives WHERE user = '$user' LIMIT 1";
+								
+								if ($result = $conexion -> query($sql))
+								{
+									if($row = mysqli_fetch_array($result))
+									{
+										$name = $row['name'];
+										$surnames = $row['surnames'];
+										
+										$sql = "SELECT * FROM school_periods WHERE active = 1 AND current = 1 LIMIT 1";
+
+										if ($result = $conexion -> query($sql))
+										{
+											if($row = mysqli_fetch_array($result))
+											{
+												$school_period = $row['school_period'];
+											}
+										}
+									}
+									else
+									{
+										goto error_user;
+									}
+
+									if (!empty($_POST['remember_session']))
+									{
+										$_SESSION['section-editor'] = setcookie('section-editor', 'section-editor-'.$user, time() + 365 * 24 * 60 * 60);
+									}
+									else
+									{
+										$_SESSION['section-editor'] = 'section-editor-'.$user;
 									}
 								}
 							}
@@ -115,6 +162,7 @@
 						}
 						else
 						{
+							error_user:
 							echo '
 									<label class="label" style="margin: 9px 0 0 0; color: #c93f3f; font-size: 1.2em; font-weight: bold;">usuario/contraseña - ¡incorrecto!</label>
 									<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
@@ -138,7 +186,8 @@
 					';
 				}
 			?>
-		</form>
-	</div>
+        </form>
+    </div>
 </body>
+
 </html>

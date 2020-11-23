@@ -1,11 +1,7 @@
 <?php
 	include_once 'security.php';
 
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
 	$url_actual = $_SERVER["REQUEST_URI"];
 

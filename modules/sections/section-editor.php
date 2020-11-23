@@ -35,12 +35,6 @@
     <ul>
         <li><a class="<?php if($output[1] == 'home'){ echo 'active'; } ?>" href="/home"><span
                     class="icon">dashboard</span>Dashboard</a></li>
-        <li><a class="<?php if($output[1] == 'school_periods'){ echo 'active'; } ?>"
-                href="/modules/school_periods"><span class="icon">event_note</span>Periodo Escolar</a></li>
-        <li><a class="<?php if($output[1] == 'users'){ echo 'active'; } ?>" href="/modules/users"><span
-                    class="icon">assignment_ind</span>Usuarios</a></li>
-        <li><a class="<?php if($output[1] == 'administratives'){ echo 'active'; } ?>"
-                href="/modules/administratives"><span class="icon">supervisor_account</span>Administrativos</a></li>
         <li><a class="<?php if($output[1] == 'teachers'){ echo 'active'; } ?>" href="/modules/teachers"><span
                     class="icon">person_pin</span>Docentes</a></li>
         <li><a class="<?php if($output[1] == 'students'){ echo 'active'; } ?>" href="/modules/students"><span

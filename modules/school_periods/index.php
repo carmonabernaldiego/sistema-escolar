@@ -7,11 +7,7 @@
 	header('Content-Type: text/html; charset=UTF-8');
 
 	//Permisos de administrador
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 
 	// Formulario actual
 	if (!empty($_POST['btn']))

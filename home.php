@@ -3,7 +3,9 @@
     
 	include_once 'modules/security.php';
 	include_once 'modules/conexion.php';
-	include_once 'modules/functions.php';
+    include_once 'modules/functions.php';
+
+    $_SESSION['raiz'] = dirname(__FILE__);
 
 	$_SESSION['msgbox_info'] = '';
 	$_SESSION['text_msgbox_info'] = '';
@@ -37,6 +39,10 @@
 				if (!empty($_SESSION['section-admin']) == 'go-'.$_SESSION['user'])
 				{
 					include_once 'modules/sections/section-admin.php';
+                }
+                elseif (!empty($_SESSION['section-editor']) == 'go-'.$_SESSION['user'])
+				{
+					include_once 'modules/sections/section-editor.php';
 				}
 			?>
     </aside>

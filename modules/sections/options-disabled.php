@@ -1,3 +1,6 @@
+<?php
+	include_once 'security.php';
+?>
 <div class="form-options">
 	<div class="options">
 		<form action="#" method="POST">

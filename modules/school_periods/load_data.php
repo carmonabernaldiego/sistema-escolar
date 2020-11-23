@@ -1,9 +1,5 @@
 <?php
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 	
 	$sql = "SELECT COUNT(school_period) AS total FROM school_periods";
 

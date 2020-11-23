@@ -1,9 +1,5 @@
 <?php
-if ($_SESSION['permissions'] != 'admin')
-{
-	header('Location: /');
-	exit();
-}
+require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
 $_SESSION['subject'] = array();
 $_SESSION['subject_name'] = array();

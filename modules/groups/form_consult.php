@@ -1,10 +1,5 @@
 <?php
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
 	if(isset($_POST['txtgroup']))
 	{

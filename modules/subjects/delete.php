@@ -3,11 +3,7 @@
 	include_once '../conexion.php';
 	include_once '../functions.php';
 
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 	
 	if (empty($_POST['txtsubject']))
 	{

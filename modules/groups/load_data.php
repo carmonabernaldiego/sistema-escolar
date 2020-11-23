@@ -1,9 +1,5 @@
 <?php
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
 	$sql = "SELECT COUNT(id_group) AS total FROM groups WHERE school_period = '".$_SESSION['school_period']."'";
 

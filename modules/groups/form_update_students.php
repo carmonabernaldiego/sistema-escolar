@@ -1,10 +1,5 @@
 <?php
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
 	//Recuperamos las Asignaturas seleccionadas del form_add_subjects
 	$i = 0;

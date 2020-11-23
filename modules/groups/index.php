@@ -7,11 +7,7 @@
 	header('Content-Type: text/html; charset=UTF-8');
 
 	//Permisos de administrador
-	if ($_SESSION['permissions'] != 'admin')
-	{
-		header('Location: /');
-		exit();
-	}
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
 	// Formulario actual
 	if (!empty($_POST['btn']))
@@ -38,7 +34,6 @@
 		unset($_SESSION['user_student_group']);
 		unset($_SESSION['name_student_group']);
 		unset($_SESSION['checked_student']);
-		unset($_SESSION['display']);
 	}
 
 	// Pagina actual
@@ -82,6 +77,10 @@
 				if (!empty($_SESSION['section-admin']) == 'go-'.$_SESSION['user'])
 				{
 					include_once '../sections/section-admin.php';
+				}
+				elseif (!empty($_SESSION['section-editor']) == 'go-'.$_SESSION['user'])
+				{
+					include_once '../sections/section-editor.php';
 				}
 			?>
 		</aside>
