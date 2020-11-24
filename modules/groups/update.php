@@ -40,7 +40,6 @@
 	{
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Debe seleccionar minimo un estudiante.';
-		$_SESSION['view_form'] = 'form_default.php';
 
 		header ('Location: /modules/groups');
 		exit();
@@ -75,11 +74,15 @@
 
 						$i += 1;
 					}
-				}
 
-				$_SESSION['msgbox_info'] = 1;
-				$_SESSION['text_msgbox_info'] = 'Registro actualizado correctamente.';
-				$_SESSION['view_form'] = 'form_default.php';
+					$_SESSION['msgbox_info'] = 1;
+					$_SESSION['text_msgbox_info'] = 'Registro actualizado correctamente.';
+				}
+				else
+				{
+					$_SESSION['msgbox_error'] = 1;
+					$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
+				}
 
 				header ('Location: /modules/groups');
 			}
@@ -87,7 +90,6 @@
 			{
 				$_SESSION['msgbox_error'] = 1;
 				$_SESSION['text_msgbox_error'] = 'El grupo que intenta actualizar no éxiste.';
-				$_SESSION['view_form'] = 'form_default.php';
 
 				header ('Location: /modules/groups');
 			}

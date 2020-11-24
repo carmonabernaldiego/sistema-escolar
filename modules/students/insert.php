@@ -11,12 +11,18 @@
 		exit();
 	}
 
-	$sql_insert = "INSERT INTO students(user, admission_year, name, surnames, curp, rfc, address, phone, level_studies, documentation, observations) VALUES('".$_POST['txtuserid']."', '".date("Y")."', '".$_POST['txtname']."', '".$_POST['txtsurnames']."', '".$_POST['txtcurp']."', '".$_POST['txtrfc']."', '".$_POST['txtaddress']."', '".$_POST['txtphone']."', '".$_POST['selectlevelstudies']."', '".$_POST['selectdocumentation']."', '".$_POST['txtobservation']."')";
+	$sql_insert = "INSERT INTO students(user, school_period, name, surnames, curp, rfc, address, phone, level_studies, documentation, observations) VALUES('".$_POST['txtuserid']."', '".$_SESSION['school_period']."', '".$_POST['txtname']."', '".$_POST['txtsurnames']."', '".$_POST['txtcurp']."', '".$_POST['txtrfc']."', '".$_POST['txtaddress']."', '".$_POST['txtphone']."', '".$_POST['selectlevelstudies']."', '".$_POST['selectdocumentation']."', '".$_POST['txtobservation']."')";
 
-	mysqli_query($conexion, $sql_insert);
-
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+	if(mysqli_query($conexion, $sql_insert))
+	{
+		$_SESSION['msgbox_info'] = 1;
+		$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+	}
+	else
+	{
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
+	}
 
 	header ('Location: /modules/students');
 ?>

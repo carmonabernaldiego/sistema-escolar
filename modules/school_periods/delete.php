@@ -13,10 +13,17 @@
 
 	$sql_delete = "DELETE FROM school_periods WHERE school_period = '".$_POST['txtspid']."'";
 
-	mysqli_query($conexion, $sql_delete);
+	if(mysqli_query($conexion, $sql_delete))
+	{
+		$_SESSION['msgbox_info'] = 1;
+		$_SESSION['text_msgbox_info'] = 'Registro eliminado correctamente.';
+	}
+	else
+	{
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Error al eliminar datos en tabla.';
+	}
 
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro eliminado correctamente.';
 
 	header ('Location: /modules/school_periods');
 ?>

@@ -11,12 +11,18 @@
 		exit();
 	}
 
-	echo $sql_update = "UPDATE teachers SET name = '".$_POST['txtname']."', surnames = '".$_POST['txtsurnames']."', curp = '".$_POST['txtcurp']."', rfc = '".$_POST['txtrfc']."', address = '".$_POST['txtaddress']."', phone = '".$_POST['txtphone']."', level_studies = '".$_POST['selectlevelstudies']."', documentation = '".$_POST['selectdocumentation']."', observations = '".$_POST['txtobservation']."' WHERE user = '".$_POST['txtuserid']."'";
+	$sql_update = "UPDATE teachers SET name = '".$_POST['txtname']."', surnames = '".$_POST['txtsurnames']."', curp = '".$_POST['txtcurp']."', rfc = '".$_POST['txtrfc']."', address = '".$_POST['txtaddress']."', phone = '".$_POST['txtphone']."', level_studies = '".$_POST['selectlevelstudies']."', documentation = '".$_POST['selectdocumentation']."', observations = '".$_POST['txtobservation']."' WHERE user = '".$_POST['txtuserid']."'";
 
-	mysqli_query($conexion, $sql_update);
-
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
+	if(mysqli_query($conexion, $sql_update))
+	{
+		$_SESSION['msgbox_info'] = 1;
+		$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
+	}
+	else
+	{
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
+	}
 
 	header ('Location: /modules/teachers');
 ?>

@@ -79,7 +79,6 @@
 									$_SESSION['msgbox_error'] = 1;
 									$_SESSION['text_msgbox_error'] = 'No se encontraron Asignaturas para el semestre seleccionado.';
 
-									$_SESSION['view_form'] = 'form_default.php';
 									header ('Location: /modules/groups');
 								}
 							echo '

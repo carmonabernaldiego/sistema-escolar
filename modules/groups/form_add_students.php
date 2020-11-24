@@ -25,7 +25,6 @@
 	{
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Debe seleccionar minimo una asignatura.';
-		$_SESSION['view_form'] = 'form_default.php';
 
 		header ('Location: /modules/groups');
 		exit();

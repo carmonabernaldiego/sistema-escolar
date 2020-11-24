@@ -22,10 +22,16 @@
 
 	$sql_insert = "INSERT INTO school_periods(school_period, start_date, end_date, active, current) VALUES('".$_POST['txtspid']."', '".$_POST['datespstart']."', '".$_POST['datespend']."', '".$_POST['selectactive']."', '".$_POST['selectcurrent']."')";
 
-	mysqli_query($conexion, $sql_insert);
-
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+	if(mysqli_query($conexion, $sql_insert))
+	{
+		$_SESSION['msgbox_info'] = 1;
+		$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+	}
+	else
+	{
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
+	}
 
 	header ('Location: /modules/school_periods');
 ?>

@@ -13,15 +13,26 @@
 
 	$sql_delete = "DELETE FROM groups WHERE id_group = '".$_POST['txtgroup']."' AND school_period = '".$_POST['txtgroupschoolperiod']."'";
 
-	mysqli_query($conexion, $sql_delete);
+	if(mysqli_query($conexion, $sql_delete))
+	{
+		$sql_delete = "DELETE FROM groups_students WHERE id_group = '".$_POST['txtgroup']."' AND school_period = '".$_POST['txtgroupschoolperiod']."'";
 
-	$sql_delete = "DELETE FROM groups_students WHERE id_group = '".$_POST['txtgroup']."' AND school_period = '".$_POST['txtgroupschoolperiod']."'";
-
-	mysqli_query($conexion, $sql_delete);
-
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro eliminado correctamente.';
-	$_SESSION['view_form'] = 'form_default.php';
+		if(mysqli_query($conexion, $sql_delete))
+		{
+			$_SESSION['msgbox_info'] = 1;
+			$_SESSION['text_msgbox_info'] = 'Registro eliminado correctamente.';
+		}
+		else
+		{
+			$_SESSION['msgbox_error'] = 1;
+			$_SESSION['text_msgbox_error'] = 'Error al eliminar datos en tabla.';
+		}
+	}
+	else
+	{
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Error al eliminar datos en tabla.';
+	}
 
 	header ('Location: /modules/groups');
 ?>

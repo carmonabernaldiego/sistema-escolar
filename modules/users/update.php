@@ -55,14 +55,20 @@
 	
 	$sql_update = "UPDATE users SET permissions = '".$_POST['txtusertype']."', image = '".$nombre_img."' WHERE user = '".$_POST['txtuserid']."'";
 
-	mysqli_query($conexion, $sql_update);
+	if(mysqli_query($conexion, $sql_update))
+	{
+		$_SESSION['msgbox_info'] = 1;
+		$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
+	}
+	else
+	{
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
+	}
 
 	if ($_POST['txtuserid'] == $_SESSION['user']) {
 		$_SESSION['image'] = $nombre_img;
 	}
-	
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
 
 	header ('Location: /modules/users');
 ?>

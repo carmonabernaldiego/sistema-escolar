@@ -40,7 +40,6 @@
 	{
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Debe seleccionar minimo un estudiante.';
-		$_SESSION['view_form'] = 'form_default.php';
 
 		header ('Location: /modules/groups');
 		exit();
@@ -55,7 +54,6 @@
 			{
 				$_SESSION['msgbox_error'] = 1;
 				$_SESSION['text_msgbox_error'] = 'El grupo que intenta crear ya éxiste.';
-				$_SESSION['view_form'] = 'form_default.php';
 
 				header ('Location: /modules/groups');
 			}
@@ -78,11 +76,15 @@
 				
 						$i += 1;
 					}
-				}
 
-				$_SESSION['msgbox_info'] = 1;
-				$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
-				$_SESSION['view_form'] = 'form_default.php';
+					$_SESSION['msgbox_info'] = 1;
+					$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+				}
+				else
+				{
+					$_SESSION['msgbox_error'] = 1;
+					$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
+				}
 
 				header ('Location: /modules/groups');
 			}
