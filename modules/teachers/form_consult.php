@@ -47,7 +47,7 @@ echo'
 			</div>
 			<div class="last">
 				<label class="label">Telefono</label>
-                <input class="text" type="text" name="txtphone" value="'.$_SESSION['teacher_phone'][0].'" disabled/>
+                <input class="text" type="number" name="txtphone" value="'.$_SESSION['teacher_phone'][0].'" disabled/>
                 <label class="label">Domicilio</label>
                 <input class="text" type="text" name="txtaddress" value="'.$_SESSION['teacher_address'][0].'" disabled/>
 				<label class="label">Nivel de estudios</label>

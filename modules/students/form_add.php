@@ -30,7 +30,7 @@
 			</div>
 			<div class="last">
 				<label class="label">Telefono</label>
-                <input class="text" type="text" name="txtphone" value="" maxlength="10" inputmode="email" required/>
+                <input class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" inputmode="email" required/>
                 <label class="label">Domicilio</label>
                 <input class="text" type="text" name="txtaddress" value="" maxlength="100" required/>
 				<label class="label">Nivel de estudios</label>
