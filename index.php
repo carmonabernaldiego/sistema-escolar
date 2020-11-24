@@ -40,7 +40,7 @@
             <h1>Sistema Escolar</h1>
         </div>
     </div>
-    <div class="wrap-form-login">
+    <div class="form-login">
         <div class="logo-form-login">
         </div>
         <form name="frm-login" action="#" method="POST">
@@ -175,7 +175,7 @@
 									<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 									<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
 									<input id="checkboxrecordar" type="checkbox" name="remember_session" value="1">
-									<label class="labelrecordar" for="checkboxrecordar">Mantener sesión iniciada</label>
+									<label class="labelrecordar" for="checkboxrecordar">Recuérdame</label>
 									<button class="button" type="submit">Iniciar sesión</button>
 								';
 						}
@@ -188,7 +188,7 @@
 						<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 						<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
 						<input id="checkboxrecordar" type="checkbox" name="remember_session" value="1">
-						<label class="labelrecordar" for="checkboxrecordar">Mantener sesión iniciada</label>
+						<label class="labelrecordar" for="checkboxrecordar">Recuérdame</label>
 						<button class="button" type="submit">Iniciar sesión</button>
 					';
 				}

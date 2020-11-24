@@ -2,8 +2,9 @@
 
 /*-------------------------------------------
   style.css
-  Design by Diego Carmona Bernal - www.diegocarmonabernal.com
-  Updated: November 11, 2020.
+  Design by Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  Updated: November 24, 2020.
   
 -------------------------------------------*/
 
@@ -46,7 +47,7 @@ body {
 
 body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #f8f4f4 url(../images/background_login.jpg) no-repeat center fixed;
+    background: #f8f4f4 url(../images/background_login.jpg) no-repeat bottom center fixed;
     background-size: cover !important;
 }
 
@@ -446,7 +447,7 @@ button:focus {
     color: #eef4ff;
 }
 
-.wrap-form-login {
+.form-login {
     width: 380px;
     height: 340px;
     margin: -55px auto 0;
@@ -460,7 +461,9 @@ button:focus {
     position: absolute;
     width: 140px;
     height: 140px;
-    margin: -55px 0 0 116px;
+    left: 0;
+    right: 0;
+    margin: -55px auto 0;
     background: url(../images/asistencia_icon.png)#eef4ff no-repeat bottom / 125px 125px;
     border: 4px solid #6272a4;
     border-radius: 5em;
@@ -473,7 +476,7 @@ button:focus {
     border-radius: 5em;
 }
 
-.wrap-form-login .label {
+.form-login .label {
     display: block;
     padding: 100px 0 20px 0;
     color: #4a567c;
@@ -481,57 +484,51 @@ button:focus {
     text-align: center;
 }
 
-.wrap-form-login .labelrecordar {
-    float: left;
-    margin: 28px 0 0 10px;
+.form-login .text,
+.textcontrasena {
+    width: 80%;
+    height: 40px;
+    margin: 0 7% 4%;
+    padding: 0 3%;
+    background: #eef4ff;
     color: #4a567c;
-    font-size: 0.8em;
+    border: 2px solid #9fa9c7;
+    border-radius: 0.4em;
+    font-size: .9em;
     font-weight: bold;
 }
 
-.wrap-form-login .text {
-    width: 325px;
-    height: 40px;
-    margin: 0 0 0 22.5px;
-    padding: 0 0 0 10px;
-    border: 1px solid #CECECE;
-    border-radius: 0.4em;
-    font-size: .9em;
+.form-login .labelrecordar {
+    float: left;
+    margin: 2.2% 0 2% 1%;
+    color: #4a567c;
+    font-size: 0.9em;
+    font-weight: bold;
 }
 
-.wrap-form-login .textcontrasena {
-    width: 325px;
-    height: 40px;
-    margin: 15px 0 0 22.5px;
-    padding: 0 0 0 10px;
-    border: 1px solid #CECECE;
-    border-radius: 0.4em;
-    font-size: .9em;
+.form-login #checkboxrecordar {
+    float: left;
+    margin: 3% 2% 2% 7%;
 }
 
-.wrap-form-login .button {
+.form-login .button {
     float: right;
-    width: 120px;
+    width: 32%;
     height: 35px;
-    margin: 20px 22.5px 0 0;
+    margin: .5% 6% 0 0;
     background: #6272a4;
     border: none;
-    border-radius: 0.6em;
+    border-radius: 0.4em;
     color: #eef4ff;
     font-size: .9em;
     font-weight: bold;
     cursor: pointer;
 }
 
-.wrap-form-login .button:hover,
-.wrap-form-login .button:focus {
-    background: #6272a4;
+.form-login .button:hover,
+.form-login .button:focus {
+    background: #4a567c;
     border: none;
-}
-
-.wrap-form-login #checkboxrecordar {
-    float: left;
-    margin: 30px 0 0 22.5px;
 }
 
 
@@ -1291,94 +1288,30 @@ button:focus {
 
 @media only screen and (max-width: 700px) {
     /*-------------------------------------------
-  Formulario Iniciar Sesión
+  Formulario | Iniciar Sesión
 -------------------------------------------*/
     .wrap-title-login {
         height: 200px;
-        background: #383a59;
-        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
     }
     .wrap-title-login .title-login h1 {
-        text-align: center;
-        padding: 25px 0 0 0;
         font-size: 2.2em;
-        color: #eef4ff;
     }
-    .wrap-form-login {
+    .form-login {
         width: 300px;
-        height: 355px;
-        margin: -55px auto 0;
-        background-color: #eef4ff;
-        border-top: 3px solid #6272a4;
-        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-        border-radius: 0.5em;
+        height: 360px;
     }
-    .logo-form-login {
-        position: absolute;
-        width: 140px;
-        height: 140px;
-        margin: -55px 0 0 75px;
-        background: url(../images/asistencia_icon.png)#ffffff no-repeat bottom / 125px 125px;
-        border: 4px solid #6272a4;
-        border-radius: 5em;
+    .form-login .labelrecordar {
+        float: left;
+        margin: 1.2% 0 4% 1%;
     }
-    .logo-form-login img {
-        width: 130px;
-        height: 130px;
-        margin: 5px 0 0 5px;
-        border-radius: 5em;
+    .form-login #checkboxrecordar {
+        float: left;
+        margin: 2% 2% 4% 31%;
     }
-    .wrap-form-login .label {
+    .form-login .button {
+        float: none;
         display: block;
-        padding: 100px 0 20px 0;
-        color: #4a567c;
-        font-size: 1.8em;
-        text-align: center;
-    }
-    .wrap-form-login .labelrecordar {
-        float: left;
-        margin: 21px 0 0 10px;
-        color: #4a567c;
-        font-size: 0.8em;
-        font-weight: bold;
-    }
-    .wrap-form-login .text {
-        width: 245px;
-        height: 40px;
-        margin: 0 0 0 22.5px;
-        padding: 0 0 0 10px;
-        border: 1px solid #CECECE;
-        border-radius: 0.4em;
-        font-size: .9em;
-    }
-    .wrap-form-login .textcontrasena {
-        width: 245px;
-        height: 40px;
-        margin: 15px 0 0 22.5px;
-        padding: 0 0 0 10px;
-        border: 1px solid #CECECE;
-        border-radius: 0.4em;
-        font-size: .9em;
-    }
-    .wrap-form-login .button {
-        width: 253px;
-        height: 35px;
-        margin: 20px 22.5px 0 0;
-        background: #6272a4;
-        border: none;
-        border-radius: 0.6em;
-        color: #eef4ff;
-        font-size: .9em;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .wrap-form-login .button:hover,
-    .wrap-form-login .button:focus {
-        background: #6272a4;
-        border: none;
-    }
-    .wrap-form-login #checkboxrecordar {
-        float: left;
-        margin: 20px 0 0 22.5px;
+        width: 90%;
+        margin: 0 auto;
     }
 }
