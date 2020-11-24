@@ -47,7 +47,7 @@ body {
 
 body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #f8f4f4 url(../images/background_login.jpg) no-repeat bottom center fixed;
+    background: #f8f4f4 url(../images/background_login.jpg) no-repeat top center fixed;
     background-size: cover !important;
 }
 
