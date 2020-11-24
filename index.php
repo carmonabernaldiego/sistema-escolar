@@ -25,9 +25,16 @@
     <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    });
+    </script>
 </head>
 
 <body class="login">
+    <div class="loader"></div>
     <div class="wrap-title-login">
         <div class="title-login">
             <h1>Sistema Escolar</h1>

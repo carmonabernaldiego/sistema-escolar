@@ -49,9 +49,16 @@
     <link rel="stylesheet" href="../../css/style_icons.css" media="screen, projection" type="text/css" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    });
+    </script>
 </head>
 
 <body>
+    <div class="loader"></div>
     <header class="header">
         <?php
 				include_once "../sections/about-section.php";
