@@ -376,7 +376,6 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;
     font-weight: bold;
-    overflow-y: scroll;
 }
 
 .box-notification-ok .button,
@@ -1286,14 +1285,17 @@ button:focus {
     transition: all 350ms;
 }
 
+
+/*-------------------------------------------
+  Responsive Design
+  Formulario | Iniciar Sesión
+-------------------------------------------*/
+
 @media only screen and (max-width: 700px) {
     body.login {
         background: none;
         background-color: #ececec;
     }
-    /*-------------------------------------------
-  Formulario | Iniciar Sesión
--------------------------------------------*/
     .wrap-title-login {
         height: 200px;
     }
@@ -1317,5 +1319,93 @@ button:focus {
         display: block;
         width: 90%;
         margin: 0 auto;
+    }
+}
+
+
+/*-------------------------------------------
+  Responsive Design
+-------------------------------------------*/
+
+@media only screen and (max-width: 1186px) {
+    .nav-home {
+        display: none;
+    }
+    .header {
+        float: none;
+        width: 94%;
+    }
+    .content {
+        float: none;
+        width: 94%;
+    }
+}
+
+@media only screen and (max-width: 963px) {
+    .content-aside {
+        width: 18%;
+    }
+    .form-gridview {
+        width: 80%;
+    }
+    .form-data {
+        width: 80%;
+    }
+    .form-options .options {
+        padding: 5% 14%
+    }
+    .form-options .options .btn {
+        margin: 30% 0;
+    }
+    .form-options .search .text {
+        width: 52%;
+    }
+    .form-options .search .btn-search {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .info-school-period {
+        width: 40%;
+    }
+    .box-notification-ok,
+    .box-notification-error {
+        height: 100px;
+        margin: 0 0 4% 0;
+        background-size: 9%;
+    }
+    .box-notification-ok p,
+    .box-notification-error p {
+        padding: 5% 0 2% 12%;
+    }
+    .content {
+        display: flex;
+        flex-flow: column-reverse;
+        flex-flow: ;
+    }
+    .content-aside {
+        width: 100%;
+    }
+    .form-gridview {
+        width: 100%;
+    }
+    .form-data {
+        width: 100%;
+    }
+    .form-options {
+        margin-bottom: 4%;
+    }
+    .form-options .options {
+        padding: 1% 15%
+    }
+    .form-options .search .text {
+        width: 73%;
+        height: 45px;
+        padding: 0 2%;
+    }
+    .form-options .search .btn-search {
+        width: 10%;
+        height: 45px;
     }
 }
