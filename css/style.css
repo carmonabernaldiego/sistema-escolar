@@ -47,7 +47,7 @@ body {
 
 body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #f8f4f4 url(../images/background_login.jpg) no-repeat top center fixed;
+    background: #ececec url(../images/background_login.jpg) no-repeat top center fixed;
     background-size: cover !important;
 }
 
@@ -224,14 +224,11 @@ button:focus {
 
 .nav-home span.name_system {
     display: block;
-    color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 20px 0;
+    padding: 10% 0;
+    background: url(../images/logo.png) no-repeat center;
+    background-size: 60%;
     border-bottom: 1px solid #282a36;
+    text-indent: -999px;
 }
 
 .nav-home img.image_user {
@@ -1382,7 +1379,6 @@ button:focus {
     .content {
         display: flex;
         flex-flow: column-reverse;
-        flex-flow: ;
     }
     .content-aside {
         width: 100%;
