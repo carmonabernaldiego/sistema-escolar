@@ -39,7 +39,7 @@
         {
             $_SESSION['title_form_section'] = 'Grupos'; 
         }
-        elseif($name_page[1] == 'assists')
+        elseif($name_page[1] == 'attendance')
         {
             $_SESSION['title_form_section'] = 'Asistencias';
         }

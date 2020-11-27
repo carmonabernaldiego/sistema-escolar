@@ -49,7 +49,7 @@
                     class="icon">style</span>Asignaturas</a></li>
         <li><a class="<?php if($output[1] == 'groups'){ echo 'active'; } ?>" href="/modules/groups"><span
                     class="icon">group_work</span>Grupos</a></li>
-        <li><a class="<?php if($output[1] == 'assists'){ echo 'active'; } ?>" href="/modules/assists"><span
+        <li><a class="<?php if($output[1] == 'attendance'){ echo 'active'; } ?>" href="/modules/attendance"><span
                     class="icon">assignment_turned_in</span>Asistencias</a></li>
     </ul>
 </div>
