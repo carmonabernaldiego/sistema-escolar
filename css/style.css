@@ -224,82 +224,100 @@ button:focus {
 
 .nav-home span.name_system {
     display: block;
-    padding: 10% 0;
+    padding: 12% 0;
     background: url(../images/logo.png) no-repeat center;
     background-size: 60%;
-    border-bottom: 1px solid #282a36;
     text-indent: -999px;
 }
 
-.nav-home img.image_user {
+.nav-home .user {
+    border-top: 1px solid #282a36;
+    border-bottom: 1px solid #282a36;
+}
+
+.nav-home .user::after {
     display: block;
-    width: 75px;
-    height: 75px;
+    content: "";
+    clear: both;
+}
+
+.nav-home .user img.image_user {
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: 6% 8%;
     background: #282a36;
     box-shadow: 0px 0px 6px rgba(98, 114, 164, 0.8);
-    margin: 20px auto 13px;
     border: 2px solid #9492c0;
     border-radius: 10em;
     pointer-events: none;
 }
 
-.nav-home span.name_user {
-    display: block;
+.nav-home .user span.name_user {
+    float: left;
+    margin: -2% 0 4% 8%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 1em;
     font-weight: bold;
-    text-align: center;
+    font-size: 1em;
     text-transform: capitalize;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #282a36;
 }
 
-.nav-home span.name_user>ul>li {
-    width: 10%;
-    margin: 0 auto;
+.nav-home .user span.logout_user {
+    float: right;
+    margin: -2.5% 8% 4% 0;
 }
 
-.nav-home span.name_user>ul>li>a {
-    margin: 0 auto;
-    padding: 0;
+.nav-home .user span.logout_user>a {
+    color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 350ms;
 }
 
-.nav-home span.name_user>ul>li>a+ul>li {
+.nav-home .user span.logout_user>a:hover {
+    color: #9492c0;
+    transition: all 350ms;
+}
+
+.nav-home .user span.logout_user>a+ul>li {
     display: none;
     position: absolute;
-    left: 0;
-    right: 0;
-    width: 80%;
-    margin: 0 auto;
+    right: 4%;
+    width: 50%;
+    margin-top: -10%;
     background: #383a59;
-    border: 4px solid #6272a4;
     box-shadow: 0px 1px 4px rgba(142, 136, 192, 0.3);
-    z-index: 1;
+    border: 3px solid #6272a4;
+    text-align: center;
     cursor: pointer;
 }
 
-.nav-home span.name_user>ul>li>a+ul>li>a {
-    margin: 0 0;
-    padding: 2% 0;
-    color: #eef4ff;
-    text-shadow: 2px 2px 6px rgba(59, 64, 80, 0.8);
-    font-size: 0.9em;
-}
-
-.nav-home span.name_user>ul>li:hover>a+ul>li {
+.nav-home .user span.logout_user>a:focus+ul>li {
     display: block;
-    transition: all 350ms;
+    animation: fadeIn 350ms;
 }
 
-.nav-home span.name_user>ul>li>a+ul>li:hover>a {
-    padding: 4% 0;
-    background: #6272a4;
-    color: #c0cee9;
-    transition: all 350ms;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0.99;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav-home .user span.logout_user>a+ul:hover>li {
+    display: block;
 }
 
 .nav-home ul {
+    margin-top: 5%;
     display: flex;
     flex-flow: column wrap;
     list-style: none;
@@ -307,10 +325,9 @@ button:focus {
 
 .nav-home ul li a {
     display: block;
+    padding: 3% 8%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    padding: 3% 30px;
-    margin: 10px 0;
     font-size: 1em;
     font-weight: bold;
     text-decoration: none;
@@ -328,10 +345,11 @@ button:focus {
 }
 
 .nav-home ul li a.active {
+    padding: 3% 6.5%;
     color: #9492c0;
     text-shadow: none;
-    padding: 3% 26px;
     border-left: 4px solid #6272a4;
+    transition: all 350ms;
 }
 
 

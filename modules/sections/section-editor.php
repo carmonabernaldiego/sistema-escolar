@@ -18,20 +18,20 @@
 ?>
 <div class="nav-home">
     <span class="name_system">Control de Asistencias</span>
-    <img class="image_user" src="/images/users/<?php echo $_SESSION['image'];?>" />
-    <span class="name_user">
-        <?php print $_SESSION['name'].' '.$_SESSION['surnames'];?>
-        <ul>
-            <li>
-                <a class="icon" href="#">expand_more</a>
-                <ul>
-                    <li>
-                        <a href="/modules/logout">Cerrar Sesión</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </span>
+    <div class="user">
+        <img class="image_user" src="/images/users/<?php echo $_SESSION['image'];?>" />
+        <span class="name_user">
+            <?php print $_SESSION['name'].' '.$_SESSION['surnames'];?>
+        </span>
+        <span class="logout_user">
+            <a class="icon" href="#">expand_more</a>
+            <ul>
+                <li>
+                    <a href="/modules/logout">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </span>
+    </div>
     <ul>
         <li><a class="<?php if($output[1] == 'home'){ echo 'active'; } ?>" href="/home"><span
                     class="icon">dashboard</span>Dashboard</a></li>
