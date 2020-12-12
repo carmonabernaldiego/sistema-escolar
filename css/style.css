@@ -1389,6 +1389,7 @@ nav ul li a img {
 
 .menu-mobile {
     display: none !important;
+    position: relative;
     width: 94%;
     margin: 0 auto;
     padding: 0;
@@ -1397,6 +1398,17 @@ nav ul li a img {
     display: -ms-grid;
     display: grid;
     place-content: center;
+}
+
+.menu-mobile span.name_system {
+    display: block;
+    width: 315.5px;
+    height: 60px;
+    margin: -58.5px auto 0px;
+    padding: 0;
+    background: url(../images/logo.png) no-repeat center;
+    background-size: 180px;
+    text-indent: -999px;
 }
 
 .menu-mobile header {
@@ -1572,6 +1584,13 @@ nav ul li a img {
     .form-options .search .btn-search {
         width: 10%;
         height: 45px;
+    }
+}
+
+@media only screen and (max-width: 701px) {
+    .form-data .body .first,
+    .form-data .body .last {
+        width: 90%;
     }
 }
 
