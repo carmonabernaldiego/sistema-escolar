@@ -570,7 +570,7 @@ button:focus {
 
 .form-options .search .text {
     float: left;
-    width: 60.5%;
+    width: 58.5%;
     height: 40px;
     margin: 0 0 0 6.5%;
     padding: 0 5%;
@@ -587,9 +587,9 @@ button:focus {
 }
 
 .form-options .search .btn-search {
-    float: right;
+    float: left;
     margin: 0 6.5% 0 0;
-    width: 16%;
+    width: 18.5%;
     height: 40px;
     background: #6272a4;
     box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
@@ -1302,6 +1302,169 @@ button:focus {
 
 
 /*-------------------------------------------
+  Menu Mobile
+-------------------------------------------
+
+.menu-mobile {
+    display: none !important;
+    width: 58px;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    color: white;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+}
+
+.menu-mobile header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.menu-mobile header .activator {
+    padding: 1em;
+    border-radius: 100%;
+    background: #44475a;
+    cursor: pointer;
+}
+
+.menu-mobile header .activator:hover {
+    background: #44475a;
+}
+
+.menu-mobile header img {
+    width: 100%;
+    max-width: 25px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #44475a;
+    border-radius: 0 0 5em 5em;
+    padding: 1em 0;
+    -webkit-clip-path: ellipse(50% 50% at 50% -50%);
+    clip-path: ellipse(50% 50% at 50% -50%);
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+nav ul li a {
+    display: block;
+    padding: .5em;
+    margin: .5em .5em;
+    border-radius: 50%;
+}
+
+nav ul li a:hover {
+    background: #323844;
+}
+
+nav ul li a img {
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+*/
+
+.menu-mobile {
+    display: none !important;
+    width: 94%;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    color: white;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+}
+
+.menu-mobile header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.menu-mobile header .activator {
+    padding: 1em;
+    border-radius: 0.6em;
+    background: #44475a;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    cursor: pointer;
+}
+
+.menu-mobile header .activator:hover {
+    background: #44475a;
+}
+
+.menu-mobile header img {
+    width: 100%;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.menu-mobile header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-mobile header nav {
+    max-height: 57px;
+    background: #44475a;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0 0.6em 0.6em 0;
+    padding: 0 .5em;
+    -webkit-clip-path: ellipse(50% 50% at -50% 50%);
+    clip-path: ellipse(50% 50% at -50% 50%);
+}
+
+.menu-mobile header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.menu-mobile header nav ul li a {
+    display: block;
+    padding: .5em .8em;
+    margin: .2em;
+    border-radius: 0.6em;
+}
+
+.menu-mobile header nav ul li a:hover {
+    background: #323844;
+}
+
+.menu-mobile header nav ul li a img {
+    margin-top: 5px;
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+
+
+/*-------------------------------------------
   Responsive Design
   Formulario | Iniciar Sesión
 -------------------------------------------*/
@@ -1343,12 +1506,18 @@ button:focus {
 -------------------------------------------*/
 
 @media only screen and (max-width: 1186px) {
+    .menu-mobile {
+        display: block!important;
+        margin-top: -174px;
+        margin-bottom: 118px;
+    }
     .nav-home {
         display: none;
     }
     .header {
         float: none;
         width: 94%;
+        margin-top: 120px;
     }
     .content {
         float: none;
@@ -1357,30 +1526,6 @@ button:focus {
 }
 
 @media only screen and (max-width: 963px) {
-    .content-aside {
-        width: 18%;
-    }
-    .form-gridview {
-        width: 80%;
-    }
-    .form-data {
-        width: 80%;
-    }
-    .form-options .options {
-        padding: 5% 14%
-    }
-    .form-options .options .btn {
-        margin: 30% 0;
-    }
-    .form-options .search .text {
-        width: 52%;
-    }
-    .form-options .search .btn-search {
-        width: 25%;
-    }
-}
-
-@media only screen and (max-width: 855px) {
     .info-school-period {
         width: 40%;
     }
@@ -1408,10 +1553,16 @@ button:focus {
         width: 100%;
     }
     .form-options {
-        margin-bottom: 4%;
+        margin-bottom: 3%;
     }
     .form-options .options {
-        padding: 1% 15%
+        padding: 1.5% 15%
+    }
+    .form-options .options {
+        border: none;
+    }
+    .form-options .search {
+        display: none;
     }
     .form-options .search .text {
         width: 73%;
@@ -1421,5 +1572,16 @@ button:focus {
     .form-options .search .btn-search {
         width: 10%;
         height: 45px;
+    }
+}
+
+@media only screen and (max-width: 551px) {
+    .form-gridview table {
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 2% auto;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
