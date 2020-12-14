@@ -178,7 +178,7 @@ button:focus {
     float: right;
     width: 25%;
     height: 100%;
-    border-left: 1px solid #4a567c;
+    border-left: 1px solid #282a3680;
 }
 
 .info-school-period .school_period {
@@ -231,8 +231,8 @@ button:focus {
 }
 
 .nav-home .user {
-    border-top: 1px solid #282a36;
-    border-bottom: 1px solid #282a36;
+    border-top: 2px dotted #282a36;
+    border-bottom: 2px dotted #282a36;
 }
 
 .nav-home .user::after {
@@ -618,7 +618,7 @@ button:focus {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    border-bottom: solid #4a567c 1px;
+    border-bottom: 1px solid #282a3680;
     padding: 5% 10%;
 }
 
@@ -857,8 +857,8 @@ button:focus {
 }
 
 .form-data .head {
-    padding: 2% 0;
-    border-bottom: solid #4a567c 1px;
+    padding: 14px 0;
+    border-bottom: 1px solid #282a3680;
 }
 
 .form-data .head h1 {
@@ -1518,6 +1518,10 @@ button:focus {
     .form-data .body .first,
     .form-data .body .last {
         width: 90%;
+    }
+    .form-data .body .textarea {
+        width: 90%;
+        box-shadow: 0px 1px 3px rgba(142, 136, 192, 0.6);
     }
     .form-options {
         padding: 3px 0;
