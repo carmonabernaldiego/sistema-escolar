@@ -814,7 +814,7 @@ button:focus {
 .form-gridview .pages ul li button {
     float: left;
     margin: 0 10px 0 0;
-    width: 5%;
+    width: 6%;
     height: 23px;
     background: #5b857f;
     box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
@@ -1354,8 +1354,8 @@ button:focus {
 
 .menu-mobile header img {
     width: 100%;
-    max-width: 25px;
-    max-height: 25px;
+    max-width: 20px;
+    max-height: 20px;
 }
 
 .menu-mobile header ul {
@@ -1442,8 +1442,8 @@ button:focus {
 @media only screen and (max-width: 1186px) {
     .menu-mobile {
         display: block!important;
-        margin-top: -174px;
-        margin-bottom: 118px;
+        margin-top: -162px;
+        margin-bottom: 100px;
     }
     .nav-home {
         display: none;
@@ -1451,7 +1451,7 @@ button:focus {
     .header {
         float: none;
         width: 94%;
-        margin-top: 120px;
+        margin-top: 100px;
     }
     .content {
         float: none;
@@ -1462,8 +1462,8 @@ button:focus {
 @media only screen and (max-width: 963px) {
     .menu-mobile {
         display: block!important;
-        margin-top: -174px;
-        margin-bottom: 113px;
+        margin-top: -162px;
+        margin-bottom: 100px;
     }
     .info-school-period {
         width: 40%;
@@ -1492,7 +1492,7 @@ button:focus {
         width: 100%;
     }
     .form-options {
-        margin-bottom: 33px;
+        margin-bottom: 28px;
     }
     .form-options .options {
         padding: 1.5% 15%
@@ -1519,6 +1519,9 @@ button:focus {
     .form-data .body .last {
         width: 90%;
     }
+    .form-options {
+        padding: 3px 0;
+    }
     .form-options .options .btn {
         width: 35px;
         height: 35px;
@@ -1530,7 +1533,7 @@ button:focus {
         display: block;
         max-width: -moz-fit-content;
         max-width: fit-content;
-        margin: 4.5% auto;
+        margin: 7% auto;
         overflow-x: auto;
         white-space: nowrap;
         box-shadow: 0 1.4px 4px rgba(142, 136, 192, 0.2);
@@ -1538,6 +1541,11 @@ button:focus {
 }
 
 @media only screen and (max-width: 436px) {
+    .info-title .title {
+        margin-left: 18px;
+        font-size: 1.2em;
+        margin-top: 12px;
+    }
     .info-school-period .school_period {
         padding: 0 8px;
         margin-top: 7px;
@@ -1545,5 +1553,8 @@ button:focus {
     }
     .info-school-period .school_period a {
         font-size: .95em;
+    }
+    .form-gridview .pages ul li button {
+        width: 10%;
     }
 }
