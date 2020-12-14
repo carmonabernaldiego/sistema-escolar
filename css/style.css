@@ -1004,7 +1004,7 @@ button:focus {
     float: right;
     width: 50px;
     height: 50px;
-    margin: -15px 0 0 0;
+    margin: 0;
     padding: 8px 0 0 8px;
     background: #6272a4;
     box-shadow: -2px -1px 4px rgba(142, 136, 192, 0.4);
@@ -1054,7 +1054,7 @@ button:focus {
 }
 
 .form-data table.consult {
-    margin: -4% auto 9%;
+    margin: -30px auto 65px;
 }
 
 .form-data th {
@@ -1232,7 +1232,7 @@ button:focus {
     color: #eef4ff;
     text-transform: none;
     line-height: 1.6;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
     border: none;

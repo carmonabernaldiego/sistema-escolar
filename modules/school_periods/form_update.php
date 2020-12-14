@@ -81,9 +81,6 @@ echo'
 					}
 				echo '
 				</select>
-				<label style="visibility: hidden;" class="label">Etiqueta</label>
-				<select style="visibility: hidden;" class="select" name="" autofocus>
-				</select>
 			</div>
 </div><button class="btn icon" type="submit">save</button>
         </form>

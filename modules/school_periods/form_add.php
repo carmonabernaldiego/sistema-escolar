@@ -27,9 +27,6 @@
 					<option value="0">No</option>
 					<option value="1">Si</option>
 				</select>
-				<label style="visibility: hidden;" class="label">Etiqueta</label>
-				<select style="visibility: hidden;" class="select" name="" autofocus>
-				</select>
 			</div>
 </div><button class="btn icon" type="submit">save</button>
         </form>

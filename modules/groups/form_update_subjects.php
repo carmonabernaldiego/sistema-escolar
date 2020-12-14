@@ -85,8 +85,7 @@
 						</table>
                     ';
                     ?>
-                <button class="btn-add-students" name="btn" value="form_update_students" type="submit">Asignar
-                    Alumnos</button>
+                <button class="btn-add-students" name="btn" value="form_update_students" type="submit">Alumnos</button>
             </div>
         </form>
     </div>
