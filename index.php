@@ -52,7 +52,7 @@
 					$pass = mysqli_real_escape_string($conexion, $_POST['txtpass']);
 
 					//Buscar Usuario
-					$sql = "SELECT * FROM users WHERE user = '$user' or email = '$user' and pass = '$pass' LIMIT 1";
+					$sql = "SELECT * FROM users WHERE user = '$user' and pass = '$pass' or email = '$user' and pass = '$pass' LIMIT 1";
 
 					if ($result = $conexion -> query($sql))
 					{
