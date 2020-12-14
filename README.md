@@ -3,6 +3,6 @@ Sistema Escolar - Control de Asistencias
 
 http://mysoftup.com
 
-user: admin_41da7
+user: editor
 
-pass: root014738
+pass: editor014738
