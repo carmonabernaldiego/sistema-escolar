@@ -25,6 +25,7 @@
 			while ($row = mysqli_fetch_array($result))
 			{
 				$_SESSION['user_id'][$i] = $row['user'];
+				$_SESSION['user_email'][$i] = $row['email'];
 				$_SESSION['user_type'][$i] = $row['permissions'];
 				$_SESSION['user_image'][$i] = $row['image'];
 
@@ -49,6 +50,7 @@
 			while ($row = mysqli_fetch_array($result))
 			{
 				$_SESSION['user_id'][$i] = $row['user'];
+				$_SESSION['user_email'][$i] = $row['email'];
 				$_SESSION['user_type'][$i] = $row['permissions'];
 				$_SESSION['user_image'][$i] = $row['image'];
 

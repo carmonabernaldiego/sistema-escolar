@@ -5,6 +5,7 @@
 	<table>
 		<tr>
 			<th>Usuario</th>
+			<th>Correo</th>
 			<th>Permisos</th>
 			<th>Imagen</th>
 			<th class="edit center"><a class="icon">edit</a></th>
@@ -16,6 +17,7 @@
 	    	    echo'
 		    		<tr>
 						<td>'.$_SESSION["user_id"][$i].'</td>
+						<td><p>'.$_SESSION["user_email"][$i].'</p></td>
 						<td>'.$_SESSION["user_type"][$i].'</td>
 						<td>'.$_SESSION["user_image"][$i].'</td>
 						<td>

@@ -58,7 +58,7 @@ body.login {
 
 ::-webkit-scrollbar {
     width: 5px;
-    height: 10px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -165,11 +165,11 @@ button:focus {
 
 .info-title .title {
     display: block;
-    margin: 10.5px 0 10.5px 32px;
+    margin: 11px 0 0 32px;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -181,26 +181,26 @@ button:focus {
     border-left: 1px solid #4a567c;
 }
 
-.info-school-period .school_period_user {
+.info-school-period .school_period {
     display: block;
+    margin-top: 15px;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
-    line-height: 3.1;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: bold;
     text-transform: capitalize;
 }
 
-.info-school-period .school_period_user a {
+.info-school-period .school_period a {
     color: #eef4ff;
     font-size: 0.95em;
     font-weight: bold;
     text-decoration: none;
 }
 
-.info-school-period .school_period_user a:hover,
-.info-school-period .school_period_user a:focus {
+.info-school-period .school_period a:hover,
+.info-school-period .school_period a:focus {
     color: #9492c0;
     outline: none;
     transition: all 350ms;
@@ -226,7 +226,7 @@ button:focus {
     display: block;
     padding: 12% 0;
     background: url(../images/logo.png) no-repeat center;
-    background-size: 60%;
+    background-size: 55%;
     text-indent: -999px;
 }
 
@@ -243,9 +243,9 @@ button:focus {
 
 .nav-home .user img.image_user {
     display: block;
-    width: 55px;
-    height: 55px;
-    margin: 6% 8%;
+    width: 50px;
+    height: 50px;
+    margin: 5% 8%;
     background: #282a36;
     box-shadow: 0px 0px 6px rgba(98, 114, 164, 0.8);
     border: 2px solid #9492c0;
@@ -255,24 +255,24 @@ button:focus {
 
 .nav-home .user span.name_user {
     float: left;
-    margin: -2% 0 4% 8%;
+    margin: -2% 0 2% 8%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.95em;
     text-transform: capitalize;
 }
 
 .nav-home .user span.logout_user {
     float: right;
-    margin: -2.5% 8% 4% 0;
+    margin: -2% 7% 2% 0;
 }
 
 .nav-home .user span.logout_user>a {
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     transition: all 350ms;
 }
@@ -293,6 +293,10 @@ button:focus {
     border: 3px solid #6272a4;
     text-align: center;
     cursor: pointer;
+}
+
+.nav-home .user span.logout_user>a+ul>li>a {
+    font-size: 0.9em;
 }
 
 .nav-home .user span.logout_user>a:focus+ul>li {
@@ -317,7 +321,7 @@ button:focus {
 }
 
 .nav-home ul {
-    margin-top: 5%;
+    margin-top: 8%;
     display: flex;
     flex-flow: column wrap;
     list-style: none;
@@ -325,10 +329,10 @@ button:focus {
 
 .nav-home ul li a {
     display: block;
-    padding: 3% 8%;
+    padding: 4% 8%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 1em;
+    font-size: 0.95em;
     font-weight: bold;
     text-decoration: none;
 }
@@ -345,7 +349,7 @@ button:focus {
 }
 
 .nav-home ul li a.active {
-    padding: 3% 6.5%;
+    padding: 4% 6.5%;
     color: #9492c0;
     text-shadow: none;
     border-left: 4px solid #6272a4;
@@ -403,7 +407,7 @@ button:focus {
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     color: #eef4ff;
     font-weight: bold;
-    font-size: 1.5ex;
+    font-size: 1.3ex;
     border: none;
     border-radius: 2em;
     cursor: pointer;
@@ -583,7 +587,7 @@ button:focus {
     border-bottom-right-radius: 0;
     color: #687292;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .form-options .search .btn-search {
@@ -600,7 +604,7 @@ button:focus {
     border-bottom-right-radius: 0.4em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
@@ -625,7 +629,7 @@ button:focus {
     background: #5b857f;
     box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
     color: #eef4ff;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border: none;
     border-radius: 100%;
     cursor: pointer;
@@ -700,7 +704,7 @@ button:focus {
 
 .form-gridview th a {
     color: #eef4ff;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
@@ -713,6 +717,13 @@ button:focus {
     font-size: 0.9em;
     font-weight: bold;
     text-align: left;
+}
+
+.form-gridview td p {
+    width: 130px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .form-gridview td.center {
@@ -892,7 +903,7 @@ button:focus {
     border-radius: 0.4em;
     color: #687292;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .form-data .body .textarea {
@@ -924,7 +935,7 @@ button:focus {
     border-radius: 0.4em;
     color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
@@ -944,7 +955,7 @@ button:focus {
     border-radius: 0.4em;
     color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
@@ -994,14 +1005,14 @@ button:focus {
     width: 50px;
     height: 50px;
     margin: -15px 0 0 0;
-    padding: 10px 0 0 10px;
+    padding: 8px 0 0 8px;
     background: #6272a4;
     box-shadow: -2px -1px 4px rgba(142, 136, 192, 0.4);
     border: none;
     border-top-left-radius: 100%;
     border-bottom-right-radius: 0.6em;
     color: #eef4ff;
-    font-size: 1.2em;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
@@ -1151,12 +1162,6 @@ button:focus {
     border: none;
 }
 
-.form-data th a {
-    color: #eef4ff;
-    font-size: 1.4em;
-    text-decoration: none;
-}
-
 .form-data tr:hover td {
     background: #dde8fc;
 }
@@ -1227,7 +1232,7 @@ button:focus {
     color: #eef4ff;
     text-transform: none;
     line-height: 1.6;
-    font-size: 1.4em;
+    font-size: 1.2em;
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
     border: none;
@@ -1253,7 +1258,7 @@ button:focus {
 
 .form-data .delete h1 {
     color: #eef4ff;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-transform: capitalize;
     font-weight: bold;
 }
@@ -1261,28 +1266,28 @@ button:focus {
 .form-data .delete .btn-si {
     float: left;
     margin: 25px 0 35px 25%;
-    width: 70px;
+    width: 60px;
     height: 40px;
     background: #db4949;
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     border: none;
     border-radius: 0.6em;
     color: #eef4ff;
-    font-size: 1.6em;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
 .form-data .delete .btn-no {
     float: right;
     margin: 25px 25% 35px 0;
-    width: 70px;
+    width: 60px;
     height: 40px;
     background: #3f6992;
     box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
     border: none;
     border-radius: 0.6em;
     color: #eef4ff;
-    font-size: 1.6em;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
@@ -1303,89 +1308,7 @@ button:focus {
 
 /*-------------------------------------------
   Menu Mobile
--------------------------------------------
-
-.menu-mobile {
-    display: none !important;
-    width: 58px;
-    margin: 0 auto;
-    padding: 0;
-    background: transparent;
-    color: white;
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
-}
-
-.menu-mobile header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.menu-mobile header .activator {
-    padding: 1em;
-    border-radius: 100%;
-    background: #44475a;
-    cursor: pointer;
-}
-
-.menu-mobile header .activator:hover {
-    background: #44475a;
-}
-
-.menu-mobile header img {
-    width: 100%;
-    max-width: 25px;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav {
-    background: #44475a;
-    border-radius: 0 0 5em 5em;
-    padding: 1em 0;
-    -webkit-clip-path: ellipse(50% 50% at 50% -50%);
-    clip-path: ellipse(50% 50% at 50% -50%);
-}
-
-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-nav ul li a {
-    display: block;
-    padding: .5em;
-    margin: .5em .5em;
-    border-radius: 50%;
-}
-
-nav ul li a:hover {
-    background: #323844;
-}
-
-nav ul li a img {
-    display: block;
-    margin: 0 auto;
-    opacity: 0;
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-}
-*/
+-------------------------------------------*/
 
 .menu-mobile {
     display: none !important;
@@ -1442,7 +1365,6 @@ nav ul li a img {
 }
 
 .menu-mobile header nav {
-    max-height: 57px;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0 0.6em 0.6em 0;
@@ -1538,6 +1460,11 @@ nav ul li a img {
 }
 
 @media only screen and (max-width: 963px) {
+    .menu-mobile {
+        display: block!important;
+        margin-top: -174px;
+        margin-bottom: 113px;
+    }
     .info-school-period {
         width: 40%;
     }
@@ -1565,7 +1492,7 @@ nav ul li a img {
         width: 100%;
     }
     .form-options {
-        margin-bottom: 3%;
+        margin-bottom: 33px;
     }
     .form-options .options {
         padding: 1.5% 15%
@@ -1592,15 +1519,31 @@ nav ul li a img {
     .form-data .body .last {
         width: 90%;
     }
+    .form-options .options .btn {
+        width: 35px;
+        height: 35px;
+    }
 }
 
-@media only screen and (max-width: 551px) {
+@media only screen and (max-width: 641px) {
     .form-gridview table {
         display: block;
         max-width: -moz-fit-content;
         max-width: fit-content;
-        margin: 2% auto;
+        margin: 4.5% auto;
         overflow-x: auto;
         white-space: nowrap;
+        box-shadow: 0 1.4px 4px rgba(142, 136, 192, 0.2);
+    }
+}
+
+@media only screen and (max-width: 436px) {
+    .info-school-period .school_period {
+        padding: 0 8px;
+        margin-top: 7px;
+        font-size: .85em;
+    }
+    .info-school-period .school_period a {
+        font-size: .95em;
     }
 }
