@@ -53,7 +53,7 @@
 		}
 	}
 	
-	$sql_update = "UPDATE users SET permissions = '".$_POST['txtusertype']."', image = '".$nombre_img."' WHERE user = '".$_POST['txtuserid']."'";
+	$sql_update = "UPDATE users SET email = '".$_POST['txtemail']."', permissions = '".$_POST['txtusertype']."', image = '".$nombre_img."' WHERE user = '".$_POST['txtuserid']."'";
 
 	if(mysqli_query($conexion, $sql_update))
 	{

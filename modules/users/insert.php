@@ -65,7 +65,7 @@
 		$nombre_img = 'user.png';
 	}
 
-	$sql_insert = "INSERT INTO users(user, pass, permissions, image) VALUES('".$_POST['txtuserid']."', '".$_POST['txtuserpass']."', '".$_POST['txtusertype']."', '".$nombre_img."')";
+	$sql_insert = "INSERT INTO users(user, email, pass, permissions, image) VALUES('".$_POST['txtuserid']."', '".$_POST['txtemail']."', '".$_POST['txtuserpass']."', '".$_POST['txtusertype']."', '".$nombre_img."')";
 
 	if(mysqli_query($conexion, $sql_insert))
 	{

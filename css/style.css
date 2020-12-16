@@ -176,7 +176,7 @@ button:focus {
 
 .info-school-period {
     float: right;
-    width: 25%;
+    width: 26.7%;
     height: 100%;
     border-left: 1px solid #282a3680;
 }
@@ -720,7 +720,7 @@ button:focus {
 }
 
 .form-gridview td p {
-    width: 130px;
+    width: 140px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -967,9 +967,13 @@ button:focus {
     opacity: 1;
 }
 
+.form-data .body .last.imageuser {
+    margin-top: 3%;
+}
+
 .form-data .body .user-image {
     display: block;
-    width: 66.5%;
+    width: 80%;
     margin: 0 auto;
     border: solid #282a36 3px;
     border-radius: 0.4em;
@@ -1325,12 +1329,12 @@ button:focus {
 
 .menu-mobile span.name_system {
     display: block;
-    width: 315.5px;
+    width: 300px;
     height: 60px;
-    margin: -58.5px auto 0px;
+    margin: -55.8px auto 0px;
     padding: 0;
     background: url(../images/logo.png) no-repeat center;
-    background-size: 180px;
+    background-size: 150px;
     text-indent: -999px;
 }
 
@@ -1353,7 +1357,7 @@ button:focus {
 }
 
 .menu-mobile header img {
-    width: 100%;
+    width: 20px;
     max-width: 20px;
     max-height: 20px;
 }
@@ -1365,6 +1369,12 @@ button:focus {
 }
 
 .menu-mobile header nav {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 52px;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0 0.6em 0.6em 0;

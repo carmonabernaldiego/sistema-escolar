@@ -2,6 +2,7 @@
 require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 
 $_SESSION['user_id'] = array();
+$_SESSION['email'] = array();
 $_SESSION['user_type'] = array();
 $_SESSION['user_image'] = array();
 
@@ -12,6 +13,7 @@ if ($result = $conexion -> query($sql))
 	if ($row = mysqli_fetch_array($result))
 	{
 		$_SESSION['user_id'][0] = $row['user'];
+		$_SESSION['email'][0] = $row['email'];
 		$_SESSION['user_type'][0] = $row['permissions'];
 		$_SESSION['user_image'][0] = $row['image'];
 	}
@@ -28,6 +30,8 @@ echo'
 					<label class="label">Usuario</label>
 					<input style="display: none;" type="text" name="txtuserid" value="'.$_SESSION['user_id'][0].'"/>
 					<input class="text" type="text" name="txt" value="'.$_SESSION['user_id'][0].'" disabled/>
+					<label class="label">Email</label>
+					<input class="text" type="text" name="txtemail" value="'.$_SESSION['email'][0].'" autofocus/>
 					<label class="label">Contraseña</label>
 					<input class="text" type="password" name="txtuserpass" value="Password1234//*" disabled/>
 					<label class="label">Permisos</label>
@@ -77,7 +81,7 @@ echo'
 					'
 					</select>
 				</div>
-				<div class="last">
+				<div class="last imageuser">
 					<label class="label" style="text-align:center;">Imagen</label>
 					<img id="userimage" class="user-image" src="'.'/images/users/'.$_SESSION['user_image'][0].'" />
 					<label class="file" for="fileimage">Abrir Imagen</label>

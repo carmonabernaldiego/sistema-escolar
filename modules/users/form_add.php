@@ -12,6 +12,8 @@ echo '
 				<div class="first">
 					<label class="label">Usuario</label>
 					<input class="text" type="text" name="txtuserid" value="" autofocus required/>
+					<label class="label">Email</label>
+					<input class="text" type="text" name="txtemail" value=""/>
 					<label class="label">Contraseña</label>
 					<input class="text" type="password" name="txtuserpass" value="" required/>
 					<label class="label">Permisos</label>
@@ -22,7 +24,7 @@ echo '
 						<option value="teacher">Docente</option>
 					</select>
 				</div>
-				<div class="last">
+				<div class="last imageuser">
 					<label class="label" style="text-align:center;">Imagen</label>
 					<img id="userimage" class="user-image" src="../../images/users/user.png" />
 					<label class="file" for="fileimage">Abrir Imagen</label>
