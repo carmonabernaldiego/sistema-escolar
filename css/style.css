@@ -58,7 +58,7 @@ body.login {
 
 ::-webkit-scrollbar {
     width: 5px;
-    height: 5px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -72,7 +72,7 @@ body.login {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #5b6992;
-    cursor: pointer
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:active {
@@ -967,13 +967,9 @@ button:focus {
     opacity: 1;
 }
 
-.form-data .body .last.imageuser {
-    margin-top: 3%;
-}
-
 .form-data .body .user-image {
     display: block;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     border: solid #282a36 3px;
     border-radius: 0.4em;
@@ -1331,7 +1327,7 @@ button:focus {
     display: block;
     width: 300px;
     height: 60px;
-    margin: -55.8px auto 0px;
+    margin: -55px auto 0px;
     padding: 0;
     background: url(../images/logo.png) no-repeat center;
     background-size: 150px;
@@ -1470,10 +1466,28 @@ button:focus {
 }
 
 @media only screen and (max-width: 963px) {
+    .menu-mobile ::-webkit-scrollbar {
+        height: 3px;
+    }
+     ::-webkit-scrollbar-track {
+        background: rgb(98, 114, 164);
+        border-bottom-left-radius: 0.6em;
+        border-bottom-right-radius: 0.6em;
+    }
+     ::-webkit-scrollbar-thumb {
+        background: #eef4ff73;
+        border-radius: 2em;
+    }
+     ::-webkit-scrollbar-thumb:hover {
+        background: #eef4ff52;
+    }
+     ::-webkit-scrollbar-thumb:active {
+        background: #eef4ff3d;
+    }
     .menu-mobile {
         display: block!important;
         margin-top: -162px;
-        margin-bottom: 100px;
+        margin-bottom: 97px;
     }
     .info-school-period {
         width: 40%;
@@ -1502,7 +1516,7 @@ button:focus {
         width: 100%;
     }
     .form-options {
-        margin-bottom: 28px;
+        margin-bottom: 27px;
     }
     .form-options .options {
         padding: 1.5% 15%

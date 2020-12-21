@@ -3,7 +3,7 @@
     
 	include_once 'modules/security.php';
 	include_once 'modules/conexion.php';
-    include_once 'modules/functions.php';
+    
 
     $_SESSION['raiz'] = dirname(__FILE__);
 

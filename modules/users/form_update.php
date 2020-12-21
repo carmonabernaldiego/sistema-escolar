@@ -31,7 +31,7 @@ echo'
 					<input style="display: none;" type="text" name="txtuserid" value="'.$_SESSION['user_id'][0].'"/>
 					<input class="text" type="text" name="txt" value="'.$_SESSION['user_id'][0].'" disabled/>
 					<label class="label">Email</label>
-					<input class="text" type="text" name="txtemail" value="'.$_SESSION['email'][0].'" autofocus/>
+					<input class="text" type="email" name="txtemail" value="'.$_SESSION['email'][0].'" autofocus/>
 					<label class="label">Contraseña</label>
 					<input class="text" type="password" name="txtuserpass" value="Password1234//*" disabled/>
 					<label class="label">Permisos</label>

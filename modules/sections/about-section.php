@@ -14,6 +14,10 @@
         if($name_page[1] == 'school_periods')
         {
             $_SESSION['title_form_section'] = 'Periodo Escolar'; 
+        } 
+        elseif($name_page[1] == 'school_period')
+        {
+            $_SESSION['title_form_section'] = 'Periodo Escolar'; 
         }
         elseif($name_page[1] == 'users')
         {
@@ -64,6 +68,6 @@
 <div class="info-school-period">
     <span class="school_period">
         Periodo Escolar /
-        <a href="#"><?php print $_SESSION['school_period']; ?></a>
+        <a href="/modules/school_period"><?php print $_SESSION['school_period']; ?></a>
     </span>
 </div>

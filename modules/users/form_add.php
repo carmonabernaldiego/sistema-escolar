@@ -13,7 +13,7 @@ echo '
 					<label class="label">Usuario</label>
 					<input class="text" type="text" name="txtuserid" value="" autofocus required/>
 					<label class="label">Email</label>
-					<input class="text" type="text" name="txtemail" value=""/>
+					<input class="text" type="email" name="txtemail" value=""/>
 					<label class="label">Contraseña</label>
 					<input class="text" type="password" name="txtuserpass" value="" required/>
 					<label class="label">Permisos</label>

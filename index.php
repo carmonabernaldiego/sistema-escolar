@@ -5,7 +5,7 @@
 	
 	include_once 'modules/conexion.php';
 	include_once 'modules/cookie.php';
-	include_once 'modules/functions.php';
+	
 
 	if (!empty($_SESSION['authenticate']) == 'go-'.!empty($_SESSION['usuario']))
 	{
