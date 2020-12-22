@@ -59,38 +59,38 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/home"><img src="https://s.svgbox.net/materialui.svg?ic=dashboard&fill=eef4ff"></a>
+                    <a href="/home" title="Dashboard"><img src="https://s.svgbox.net/materialui.svg?ic=dashboard&fill=eef4ff" title="Dashboard"></a>
                 </li>
                 <li>
-                    <a href="/modules/school_periods"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=event_note&fill=eef4ff"></a>
+                    <a href="/modules/school_periods" title="Perido Escolar"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=event_note&fill=eef4ff" title="Perido Escolar"></a>
                 </li>
                 <li>
-                    <a href="/modules/users"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=assignment_ind&fill=eef4ff"></a>
+                    <a href="/modules/users" title="Usuarios"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=assignment_ind&fill=eef4ff" title="Usuarios"></a>
                 </li>
                 <li>
-                    <a href="/modules/administratives"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=supervisor_account&fill=eef4ff"></a>
+                    <a href="/modules/administratives" title="Administrativos"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=supervisor_account&fill=eef4ff" title="Administrativos"></a>
                 </li>
                 <li>
-                    <a href="/modules/teachers"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=person_pin&fill=eef4ff"></a>
+                    <a href="/modules/teachers" title="Docentes"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=person_pin&fill=eef4ff" title="Docentes"></a>
                 </li>
                 <li>
-                    <a href="/modules/students"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=recent_actors&fill=eef4ff"></a>
+                    <a href="/modules/students" title="Alumnos"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=recent_actors&fill=eef4ff" title="Alumnos"></a>
                 </li>
                 <li>
-                    <a href="/modules/subjects"><img src="https://s.svgbox.net/materialui.svg?ic=style&fill=eef4ff"></a>
+                    <a href="/modules/subjects" title="Asignaturas"><img src="https://s.svgbox.net/materialui.svg?ic=style&fill=eef4ff" title="Asignaturas"></a>
                 </li>
                 <li>
-                    <a href="/modules/groups"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=group_work&fill=eef4ff"></a>
+                    <a href="/modules/groups" title="Grupos"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=group_work&fill=eef4ff" title="Grupos"></a>
                 </li>
                 <li>
-                    <a href="/modules/attendance"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=assignment_turned_in&fill=eef4ff"></a>
+                    <a href="/modules/attendance" title="Asistencias"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=assignment_turned_in&fill=eef4ff" title="Asistencias"></a>
                 </li>
             </ul>
         </nav>

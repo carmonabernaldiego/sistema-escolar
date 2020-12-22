@@ -68,6 +68,6 @@
 <div class="info-school-period">
     <span class="school_period">
         Periodo Escolar /
-        <a href="/modules/school_period"><?php print $_SESSION['school_period']; ?></a>
+        <a id="schoolPeriod" href="/modules/school_period"><?php print $_SESSION['school_period']; ?></a>
     </span>
 </div>

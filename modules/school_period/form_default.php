@@ -1,7 +1,24 @@
 <?php
 	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
-    //Cargamos datos de las Asignaturas
+	if (isset($_POST['btn-school-period']) && $_POST['btn-school-period'] = 'true')
+	{
+		$i=0;
+
+		if(isset($_SESSION['school_periods_id']))
+		{
+			foreach($_SESSION['school_periods_id'] as $row)
+			{
+				if(isset($_POST['check-school-period'.$i]))
+				{
+					$_SESSION['school_period'] = $_POST['check-school-period'.$i];
+				}
+				$i += 1;
+			}
+		}
+	}
+
+    //Cargamos Periodos Activos
 	if(isset($_SESSION['school_period']) != '')
 	{
 		$_SESSION['school_periods_id'] = array();
@@ -48,7 +65,7 @@
 									{ 
 										echo'
 											<tr>
-												<td style="width: 40px;"><input class="cbox-subject" id="cbox-subject'.$i.'" type="checkbox" name="check-subject-group'.$i.'" value="'.$_SESSION['school_periods_id'][$i].'"'.'></td>
+												<td style="width: 40px;"><input class="cbox-subject" id="cbox-subject'.$i.'" type="checkbox" name="check-school-period'.$i.'" value="'.$_SESSION['school_periods_id'][$i].'"></td>
 												<td><label for="cbox-subject'.$i.'">'.$_SESSION['school_periods_id'][$i].'</label></td>
 												<td class="center"><label for="cbox-subject'.$i.'">'.$_SESSION['school_periods_start_date'][$i].'</label></td>
 												<td class="center"><label for="cbox-subject'.$i.'">'.$_SESSION['school_periods_end_date'][$i].'</label></td>
@@ -69,13 +86,26 @@
 						</table>
                     ';
                     ?>
-				<button class="btn-save icon" name="btn" value="form_update_students" type="submit">save</button>
+                <button class="btn-save icon" name="btn-school-period" value="true" type="submit">save</button>
             </div>
         </form>
     </div>
 </div>
 <div class="content-aside">
-<?php
+    <?php
 	include_once "../sections/options-disabled.php";
 ?>
 </div>
+<script>
+let Checked = null;
+//The class name can vary
+for (let CheckBox of document.getElementsByClassName('cbox-subject')) {
+    CheckBox.onclick = function() {
+        if (Checked != null) {
+            Checked.checked = false;
+            Checked = CheckBox;
+        }
+        Checked = CheckBox;
+    }
+}
+</script>
