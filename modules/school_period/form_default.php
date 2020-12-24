@@ -1,23 +1,6 @@
 <?php
 	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
-	if (isset($_POST['btn-school-period']) && $_POST['btn-school-period'] = 'true')
-	{
-		$i=0;
-
-		if(isset($_SESSION['school_periods_id']))
-		{
-			foreach($_SESSION['school_periods_id'] as $row)
-			{
-				if(isset($_POST['check-school-period'.$i]))
-				{
-					$_SESSION['school_period'] = $_POST['check-school-period'.$i];
-				}
-				$i += 1;
-			}
-		}
-	}
-
     //Cargamos Periodos Activos
 	if(isset($_SESSION['school_period']) != '')
 	{
@@ -47,7 +30,7 @@
         <h1 class="titulo">Seleccioné</h1>
     </div>
     <div class="body">
-        <form name="form-add-groups-subjects" action="#" method="POST">
+        <form name="form-add-groups-subjects" action="process.php" method="POST">
             <div class="wrap">
                 <?php
             echo

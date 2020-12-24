@@ -1,7 +1,6 @@
 <?php
 	include_once '../security.php';
 	include_once '../conexion.php';
-	
 	include_once '../close_notif_info.php';
 
 	header('Content-Type: text/html; charset=UTF-8');
