@@ -45,3 +45,74 @@
                     class="icon">group_work</span>Grupos</a></li>
     </ul>
 </div>
+<div class="menu-mobile">
+    <header>
+        <img class="activator" id="activator" src="https://s.svgbox.net/hero-outline.svg?ic=menu&fill=eef4ff">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/home" title="Dashboard"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=dashboard&fill=eef4ff" title="Dashboard"></a>
+                </li>
+                <li>
+                    <a href="/modules/teachers" title="Docentes"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=person_pin&fill=eef4ff" title="Docentes"></a>
+                </li>
+                <li>
+                    <a href="/modules/students" title="Alumnos"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=recent_actors&fill=eef4ff" title="Alumnos"></a>
+                </li>
+                <li>
+                    <a href="/modules/subjects" title="Asignaturas"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=style&fill=eef4ff" title="Asignaturas"></a>
+                </li>
+                <li>
+                    <a href="/modules/groups" title="Grupos"><img
+                            src="https://s.svgbox.net/materialui.svg?ic=group_work&fill=eef4ff" title="Grupos"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <span class="name_system">Control de Asistencias</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"
+    integrity="sha512-6MT8e40N5u36Um5SXKtwZmoKcCSg1XaKtexnXZPpQ4iJDHrBEHXKz37fnDovXezsaCd4oKCH5Y+vrcl7qpLPoA=="
+    crossorigin="anonymous"></script>
+
+<script>
+var card = document.getElementById('activator');
+
+var tl = gsap.timeline({
+    defaults: {
+        ease: "power2.inOut"
+    }
+})
+
+var toggle = false;
+
+tl.to('.activator', {
+    background: '#6272a4',
+    'borderRadius': '0.6em 0 0 0.6em'
+});
+
+tl.to('nav', {
+    'clipPath': 'ellipse(100% 100% at 50% 50%)'
+}, "-=.5")
+
+tl.to('nav img', {
+    opacity: 1,
+    transform: 'translateX(0)',
+    stagger: .05
+}, "-=.5")
+
+tl.pause();
+
+card.addEventListener('click', () => {
+    toggle = !toggle;
+    if (toggle ? tl.play() : tl.reverse());
+})
+</script>
