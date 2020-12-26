@@ -20,7 +20,7 @@
 
 		$i = 0;
 
-		$sql = "SELECT * FROM groups WHERE id_group = '".$_POST['search']."' AND school_period = '".$_SESSION['school_period']."' OR name = '".$_POST['search']."' AND school_period = '".$_SESSION['school_period']."'";
+		$sql = "SELECT * FROM groups WHERE id_group LIKE '%".$_POST['search']."%' AND school_period = '".$_SESSION['school_period']."' OR name LIKE '%".$_POST['search']."%' AND school_period = '".$_SESSION['school_period']."' ORDER BY name";
 
 		if ($result = $conexion -> query($sql))
 		{

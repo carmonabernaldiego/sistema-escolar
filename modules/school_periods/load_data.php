@@ -21,7 +21,7 @@
 
 		$i = 0;
 
-		$sql = "SELECT * FROM school_periods WHERE school_period = '".$_POST['search']."'";
+		$sql = "SELECT * FROM school_periods WHERE school_period LIKE '%".$_POST['search']."%' ORDER BY school_period";
 
 		if ($result = $conexion -> query($sql))
 		{

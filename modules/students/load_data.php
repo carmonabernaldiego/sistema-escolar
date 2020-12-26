@@ -19,7 +19,7 @@
 
 		$i = 0;
 
-		$sql = "SELECT * FROM students WHERE user = '".$_POST['search']."' OR name = '".$_POST['search']."' OR curp = '".$_POST['search']."'";
+		$sql = "SELECT * FROM students WHERE user LIKE '%".$_POST['search']."%' OR name LIKE '%".$_POST['search']."%' OR curp LIKE '%".$_POST['search']."%' ORDER BY name";
 
 		if ($result = $conexion -> query($sql))
 		{

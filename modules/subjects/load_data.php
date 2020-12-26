@@ -19,7 +19,7 @@
 
 		$i = 0;
 
-		$sql = "SELECT * FROM subjects WHERE subject = '".$_POST['search']."' AND school_period = '".$_SESSION['school_period']."' OR name = '".$_POST['search']."'";
+		$sql = "SELECT * FROM subjects WHERE subject LIKE '%".$_POST['search']."%' AND school_period = '".$_SESSION['school_period']."' OR name LIKE '%".$_POST['search']."%' ORDER BY semester";
 
 		if ($result = $conexion -> query($sql))
 		{
