@@ -1,7 +1,7 @@
 <?php
 	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
 
-	$sql = "SELECT COUNT(subject) AS total FROM subjects";
+	$sql = "SELECT COUNT(subject) AS total FROM subjects WHERE school_period = '".$_SESSION['school_period']."'";
 
 	if ($result = $conexion -> query($sql))
 	{

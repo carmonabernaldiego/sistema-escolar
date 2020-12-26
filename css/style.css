@@ -1261,7 +1261,7 @@ button:focus {
 
 .form-data .delete .btn-si {
     float: left;
-    margin: 25px 0 35px 28%;
+    margin: 25px 0 35px 25%;
     width: 75px;
     height: 40px;
     background: #db4949;
@@ -1275,7 +1275,7 @@ button:focus {
 
 .form-data .delete .btn-no {
     float: right;
-    margin: 25px 28% 35px 0;
+    margin: 25px 25% 35px 0;
     width: 75px;
     height: 40px;
     background: #3f6992;
