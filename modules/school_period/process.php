@@ -19,6 +19,6 @@
 				$i += 1;
 			}
 		}
-		header ('Location: /modules/school_period');
+		header ('Location: /');
 	}
 ?>

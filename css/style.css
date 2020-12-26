@@ -364,9 +364,7 @@ button:focus {
 .box-notification-ok {
     width: 100%;
     margin: 0 0 8% 0;
-    background: url(../images/notif_ok.png) #44475a no-repeat left center;
-    background-size: cover;
-    background-size: 17%;
+    background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
 }
@@ -374,9 +372,7 @@ button:focus {
 .box-notification-error {
     width: 100%;
     margin: 0 0 8% 0;
-    background: url(../images/notif_error.png) #44475a no-repeat left center;
-    background-size: cover;
-    background-size: 17%;
+    background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
 }
@@ -390,7 +386,7 @@ button:focus {
 
 .box-notification-ok p,
 .box-notification-error p {
-    padding: 10% 0 10% 18%;
+    padding: 10% 8%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;
@@ -401,13 +397,13 @@ button:focus {
 .box-notification-error .button {
     float: right;
     margin: 3% 3% 0 0;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background: #db4949;
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     color: #eef4ff;
     font-weight: bold;
-    font-size: 1.3ex;
+    font-size: 0.6em;
     border: none;
     border-radius: 2em;
     cursor: pointer;
@@ -1265,8 +1261,8 @@ button:focus {
 
 .form-data .delete .btn-si {
     float: left;
-    margin: 25px 0 35px 25%;
-    width: 60px;
+    margin: 25px 0 35px 28%;
+    width: 75px;
     height: 40px;
     background: #db4949;
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
@@ -1279,8 +1275,8 @@ button:focus {
 
 .form-data .delete .btn-no {
     float: right;
-    margin: 25px 25% 35px 0;
-    width: 60px;
+    margin: 25px 28% 35px 0;
+    width: 75px;
     height: 40px;
     background: #3f6992;
     box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
@@ -1494,13 +1490,11 @@ button:focus {
     }
     .box-notification-ok,
     .box-notification-error {
-        height: 100px;
-        margin: 0 0 4% 0;
-        background-size: 9%;
+        margin: 0 0 27px 0;
     }
     .box-notification-ok p,
     .box-notification-error p {
-        padding: 5% 0 2% 12%;
+        padding: 2.5% 5%;
     }
     .content {
         display: flex;

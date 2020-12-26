@@ -42,7 +42,7 @@
 
 		$i = 0;
 
-		$sql = "SELECT * FROM subjects WHERE school_period = '".$_SESSION['school_period']."' ORDER BY name LIMIT $inicio, $max";
+		$sql = "SELECT * FROM subjects WHERE school_period = '".$_SESSION['school_period']."' ORDER BY semester, name LIMIT $inicio, $max";
 
 		if ($result = $conexion -> query($sql))
 		{
