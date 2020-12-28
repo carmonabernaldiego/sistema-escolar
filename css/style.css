@@ -645,6 +645,12 @@ button:focus {
     transition: all 350ms;
 }
 
+.form-options .options .btn.disabled {
+    background: #6a7186;
+    color: #eef4ff;
+    cursor: initial;
+}
+
 .form-options .options .btnexit {
     background: #db4949;
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
@@ -657,10 +663,21 @@ button:focus {
     transition: all 350ms;
 }
 
-.form-options .options .btn.disabled {
-    background: #6a7186;
-    color: #eef4ff;
-    cursor: initial;
+.form-options .options .search-mobile {
+    display: none;
+}
+
+.form-options .options .search-mobile.btnsearch {
+    display: none;
+    background: #6272a4;
+    box-shadow: 2px 2px 4px rgba(73, 100, 219, 0.3);
+}
+
+.form-options .options .btnsearch:hover,
+.form-options .options .btnsearch:focus {
+    background: #4a567c;
+    border: none;
+    transition: all 350ms;
 }
 
 
@@ -1536,6 +1553,10 @@ button:focus {
     .form-options .search .btn-search {
         width: 10%;
         height: 45px;
+    }
+    .form-options .options .search-mobile,
+    .form-options .options .search-mobile.btnsearch {
+        display: block;
     }
 }
 

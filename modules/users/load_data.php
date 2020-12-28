@@ -18,7 +18,7 @@
 
 		$i = 0;
 
-		$sql = "SELECT * FROM users WHERE user LIKE '%".$_POST['search']."%' OR email LIKE '%".$_POST['search']."%' ORDER BY name";
+		$sql = "SELECT * FROM users WHERE user LIKE '%".$_POST['search']."%' OR email LIKE '%".$_POST['search']."%' ORDER BY user";
 
 		if ($result = $conexion -> query($sql))
 		{

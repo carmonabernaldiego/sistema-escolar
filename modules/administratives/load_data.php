@@ -19,7 +19,7 @@
 
 		$i = 0;
 
-		$sql = "SELECT * FROM administratives WHERE user LIKE '%".$_POST['search']."%' OR name LIKE '%".$_POST['search']."%' OR curp LIKE '%".$_POST['search']."%' ORDER BY name";
+		$sql = "SELECT * FROM administratives WHERE user LIKE '%".$_POST['search']."%' OR name LIKE '%".$_POST['search']."%' OR surnames LIKE '%".$_POST['search']."%' OR curp LIKE '%".$_POST['search']."%' ORDER BY name";
 
 		if ($result = $conexion -> query($sql))
 		{
