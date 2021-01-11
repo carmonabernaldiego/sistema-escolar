@@ -12,7 +12,7 @@
         <form action="#" method="POST">
             <button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
         </form>
-        <button id="searchMobile" class="btn search-mobile btnsearch icon">search</button>
+        <button id="btnSearchMobile" class="btn search-mobile btnsearch icon">search</button>
         <form action="/">
             <button class="btn btnexit icon" type="submit">exit_to_app</button>
         </form>
@@ -27,25 +27,16 @@
     </div>
 </div>
 <script>
-var btnSearchMobile = document.getElementById('searchMobile');
+$(function() {
+    var botonMostrar = $("#btnSearchMobile"),
+        formSearch = $(".search");
 
-var tl2 = gsap.timeline({
-    defaults: {
-        ease: "power2.inOut"
-    }
-})
-
-var toggle2 = false;
-
-tl2.to('.search', {
-	opacity: 1,
-	display: 'block'
+    botonMostrar.on("click", function() {
+        if (formSearch.is(':hidden')) {
+            formSearch.show('slow');
+        } else {
+            formSearch.hide('slow');
+        }
+    });
 });
-
-tl2.pause();
-
-btnSearchMobile.addEventListener('click', () => {
-    toggle2 = !toggle2;
-    if (toggle2 ? tl2.play() : tl2.reverse());
-})
 </script>

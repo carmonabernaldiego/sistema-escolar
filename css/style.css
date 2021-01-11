@@ -1537,22 +1537,22 @@ button:focus {
         margin-bottom: 27px;
     }
     .form-options .options {
-        padding: 1.5% 15%
-    }
-    .form-options .options {
+        padding: 1.5% 15%;
         border: none;
     }
     .form-options .search {
         display: none;
+        margin: 0;
+        padding: 2px 0 12px;
     }
     .form-options .search .text {
         width: 73%;
-        height: 45px;
+        height: 42px;
         padding: 0 2%;
     }
     .form-options .search .btn-search {
         width: 10%;
-        height: 45px;
+        height: 42px;
     }
     .form-options .options .search-mobile,
     .form-options .options .search-mobile.btnsearch {
@@ -1575,6 +1575,20 @@ button:focus {
     .form-options .options .btn {
         width: 35px;
         height: 35px;
+    }
+    .form-options .search {
+        display: none;
+        margin: 0;
+        padding: 8px 0 8px;
+    }
+    .form-options .search .text {
+        width: 73%;
+        height: 38px;
+        padding: 0 2%;
+    }
+    .form-options .search .btn-search {
+        width: 10%;
+        height: 38px;
     }
 }
 
