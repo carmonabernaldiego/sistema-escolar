@@ -1621,4 +1621,17 @@ button:focus {
     .form-gridview .pages ul li button {
         width: 10%;
     }
+    .form-options .options {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .form-options .search .text {
+        width: 67%;
+        height: 38px;
+        padding: 0 3%;
+    }
+    .form-options .search .btn-search {
+        width: 14%;
+        height: 38px;
+    }
 }
