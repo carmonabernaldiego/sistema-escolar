@@ -32,7 +32,7 @@
 
 		// Comprobamos el tamaño del archivo
 		if($filesize > $max_file_size){
-			$errores[] = "La imagen debe de tener un tamaño inferior a 1 mb";
+			$errores[] = "La imagen debe de tener un tamaño inferior a 20 mb";
 		}
 
 		// Comprobamos y renombramos el nombre del archivo
@@ -68,6 +68,7 @@
 
 	if ($_POST['txtuserid'] == $_SESSION['user']) {
 		$_SESSION['image'] = $nombre_img;
+		setcookie('image', $nombre_img, time() + 365 * 24 * 60 * 60, "/");
 	}
 
 	header ('Location: /modules/users');
