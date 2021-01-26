@@ -15,6 +15,7 @@
 				if(isset($_POST['check-school-period'.$i]))
 				{
 					$_SESSION['school_period'] = $_POST['check-school-period'.$i];
+					setcookie('school_period', $_POST['check-school-period'.$i], time() + 365 * 24 * 60 * 60, "/");
 				}
 				$i += 1;
 			}
