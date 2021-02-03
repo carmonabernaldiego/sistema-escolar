@@ -166,14 +166,16 @@ var tlU = gsap.timeline({
 
 var toggleU = false;
 
-tlU.to('.activator-user', {
+tlU.to('.user-mobile .activator-user', {
+    'borderRadius': '0 5em 5em 0',
     background: '#6272a4',
-    'borderRadius': '0 5em 5em 0'
-}, "-=.6")
+    duration: 0.6
+})
 
 tlU.to('.user-mobile nav', {
-    'clipPath': 'ellipse(100% 100% at 100% 50%)'
-}, "-=.5")
+    'clipPath': 'ellipse(100% 100% at 100% 50%)',
+    duration: 0.3
+})
 
 tlU.to('.user-mobile nav img', {
     opacity: 1,
