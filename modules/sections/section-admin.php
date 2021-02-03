@@ -103,6 +103,18 @@
     </header>
     <span class="name_system">Control de Asistencias</span>
 </div>
+<div class="user-mobile">
+    <header>
+        <img class="activator-user" id="activator-user" src="../../images/users/user.png">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/modules/logout"><img src="https://s.svgbox.net/materialui.svg?ic=logout&fill=eef4ff"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
     integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
@@ -127,11 +139,11 @@ tl.to('.activator', {
     'borderRadius': '0.6em 0 0 0.6em'
 });
 
-tl.to('nav', {
+tl.to('.menu-mobile nav', {
     'clipPath': 'ellipse(100% 100% at 50% 50%)'
 }, "-=.5")
 
-tl.to('nav img', {
+tl.to('.menu-mobile nav img', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05
@@ -142,5 +154,37 @@ tl.pause();
 card.addEventListener('click', () => {
     toggle = !toggle;
     if (toggle ? tl.play() : tl.reverse());
+})
+
+var cardU = document.getElementById('activator-user');
+
+var tlU = gsap.timeline({
+    defaults: {
+        ease: "power2.inOut"
+    }
+})
+
+var toggleU = false;
+
+tlU.to('.activator-user', {
+    background: '#6272a4',
+    'borderRadius': '0 5em 5em 0'
+}, "-=.6")
+
+tlU.to('.user-mobile nav', {
+    'clipPath': 'ellipse(100% 100% at 100% 50%)'
+}, "-=.5")
+
+tlU.to('.user-mobile nav img', {
+    opacity: 1,
+    transform: 'translateX(0)',
+    stagger: .05,
+}, "-=.5")
+
+tlU.pause();
+
+cardU.addEventListener('click', () => {
+    toggleU = !toggleU;
+    if (toggleU ? tlU.play() : tlU.reverse());
 })
 </script>
