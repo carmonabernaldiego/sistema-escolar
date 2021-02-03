@@ -105,7 +105,7 @@
 </div>
 <div class="user-mobile">
     <header>
-        <img class="activator-user" id="activator-user" src="../../images/users/user.png">
+        <img class="activator-user" id="activator-user" src="/images/users/<?php echo $_SESSION['image'];?>">
         <nav>
             <ul>
                 <li>
@@ -167,14 +167,14 @@ var tlU = gsap.timeline({
 var toggleU = false;
 
 tlU.to('.user-mobile .activator-user', {
-    'borderRadius': '0 5em 5em 0',
+    borderRadius: '0 5em 5em 0',
     background: '#6272a4',
     duration: 0.6
 })
 
 tlU.to('.user-mobile nav', {
-    'clipPath': 'ellipse(100% 100% at 100% 50%)',
-    duration: 0.3
+    clipPath: 'ellipse(100% 100% at 100% 50%)',
+    duration: 0.5
 })
 
 tlU.to('.user-mobile nav img', {
