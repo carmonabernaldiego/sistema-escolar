@@ -23,6 +23,7 @@
 
 	if($_SESSION['subjects_count'] == 0)
 	{
+		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Debe seleccionar minimo una asignatura.';
 

@@ -76,7 +76,8 @@
 								}
 								else
 								{
-									$_SESSION['msgbox_error'] = 1;
+									$_SESSION['msgbox_info'] = 0;
+		$_SESSION['msgbox_error'] = 1;
 									$_SESSION['text_msgbox_error'] = 'No se encontraron Asignaturas para el semestre seleccionado.';
 
 									header ('Location: /modules/groups');

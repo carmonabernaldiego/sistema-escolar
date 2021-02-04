@@ -38,6 +38,7 @@
 
 	if($_SESSION['students_count'] == 0)
 	{
+		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Debe seleccionar minimo un estudiante.';
 
@@ -52,7 +53,8 @@
 		{
 			if ($row = mysqli_fetch_array($result))
 			{
-				$_SESSION['msgbox_error'] = 1;
+				$_SESSION['msgbox_info'] = 0;
+		$_SESSION['msgbox_error'] = 1;
 				$_SESSION['text_msgbox_error'] = 'El grupo que intenta crear ya éxiste.';
 
 				header ('Location: /modules/groups');
@@ -77,12 +79,14 @@
 						$i += 1;
 					}
 
-					$_SESSION['msgbox_info'] = 1;
+					$_SESSION['msgbox_error'] = 0;
+		$_SESSION['msgbox_info'] = 1;
 					$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
 				}
 				else
 				{
-					$_SESSION['msgbox_error'] = 1;
+					$_SESSION['msgbox_info'] = 0;
+		$_SESSION['msgbox_error'] = 1;
 					$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
 				}
 

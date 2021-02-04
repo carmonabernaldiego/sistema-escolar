@@ -60,7 +60,8 @@
 								}
 								else
 								{
-									$_SESSION['msgbox_error'] = 1;
+									$_SESSION['msgbox_info'] = 0;
+		$_SESSION['msgbox_error'] = 1;
 									$_SESSION['text_msgbox_error'] = 'No se encontraron Periodos Activos.';
 
 									print "<script>window.setTimeout(function() { window.location = '/modules/groups' }, 0000);</script>";

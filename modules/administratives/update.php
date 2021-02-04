@@ -15,11 +15,13 @@
 
 	if(mysqli_query($conexion, $sql_update))
 	{
+		$_SESSION['msgbox_error'] = 0;
 		$_SESSION['msgbox_info'] = 1;
 		$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
 	}
 	else
 	{
+		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
 	}

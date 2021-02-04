@@ -15,11 +15,13 @@
 
 	if(mysqli_query($conexion, $sql_insert))
 	{
+		$_SESSION['msgbox_error'] = 0;
 		$_SESSION['msgbox_info'] = 1;
 		$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
 	}
 	else
 	{
+		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
 		$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
 	}
