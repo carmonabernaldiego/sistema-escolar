@@ -55,47 +55,47 @@
 </div>
 <div class="menu-mobile">
     <header>
-        <img class="activator" id="activator" src="https://s.svgbox.net/hero-outline.svg?ic=menu&fill=eef4ff">
+        <img class="activator" id="activator" src="/images/menu_mobile/hero-outline.svg">
         <nav>
             <ul>
                 <li>
                     <a href="/home" title="Dashboard"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=dashboard&fill=eef4ff" title="Dashboard"></a>
+                            src="/images/menu_mobile/dashboard.svg" title="Dashboard"></a>
                 </li>
                 <li>
                     <a href="/modules/school_periods" title="Perido Escolar"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=event_note&fill=eef4ff"
+                            src="/images/menu_mobile/event_note.svg"
                             title="Perido Escolar"></a>
                 </li>
                 <li>
                     <a href="/modules/users" title="Usuarios"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=assignment_ind&fill=eef4ff"
+                            src="/images/menu_mobile/assignment_ind.svg"
                             title="Usuarios"></a>
                 </li>
                 <li>
                     <a href="/modules/administratives" title="Administrativos"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=supervisor_account&fill=eef4ff"
+                            src="/images/menu_mobile/supervisor_account.svg"
                             title="Administrativos"></a>
                 </li>
                 <li>
                     <a href="/modules/teachers" title="Docentes"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=person_pin&fill=eef4ff" title="Docentes"></a>
+                            src="/images/menu_mobile/person_pin.svg" title="Docentes"></a>
                 </li>
                 <li>
                     <a href="/modules/students" title="Alumnos"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=recent_actors&fill=eef4ff" title="Alumnos"></a>
+                            src="/images/menu_mobile/recent_actors.svg" title="Alumnos"></a>
                 </li>
                 <li>
                     <a href="/modules/subjects" title="Asignaturas"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=style&fill=eef4ff" title="Asignaturas"></a>
+                            src="/images/menu_mobile/style.svg" title="Asignaturas"></a>
                 </li>
                 <li>
                     <a href="/modules/groups" title="Grupos"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=group_work&fill=eef4ff" title="Grupos"></a>
+                            src="/images/menu_mobile/group_work.svg" title="Grupos"></a>
                 </li>
                 <li>
                     <a href="/modules/attendance" title="Asistencias"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=assignment_turned_in&fill=eef4ff"
+                            src="/images/menu_mobile/assignment_turned_in.svg"
                             title="Asistencias"></a>
                 </li>
             </ul>
@@ -109,17 +109,17 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/modules/logout"><img src="https://s.svgbox.net/materialui.svg?ic=logout&fill=eef4ff" title="Cerrar Sesión"></a>
+                    <a href="/modules/logout"><img src="/images/menu_mobile/logout.svg" title="Cerrar Sesión"></a>
                 </li>
             </ul>
         </nav>
     </header>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+<script src="/js/gsap.min.js"
     integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"
+<script src="/js/CSSRulePlugin.min.js"
     integrity="sha512-6MT8e40N5u36Um5SXKtwZmoKcCSg1XaKtexnXZPpQ4iJDHrBEHXKz37fnDovXezsaCd4oKCH5Y+vrcl7qpLPoA=="
     crossorigin="anonymous"></script>
 

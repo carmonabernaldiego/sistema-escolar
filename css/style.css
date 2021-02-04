@@ -1334,8 +1334,6 @@ button:focus {
     display: none !important;
     float: right;
     margin: 0 auto;
-    margin-top: -154px;
-    margin-bottom: 100px;
     margin-right: 3%;
     position: relative;
     background: transparent;
@@ -1402,7 +1400,7 @@ button:focus {
     display: block;
     margin: 0 auto;
     margin-right: 11px;
-    margin-top: 6.5px;
+    margin-top: 6px;
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -1416,7 +1414,7 @@ button:focus {
 
 .user-mobile nav ul li a img {
     margin-left: 11px;
-    margin-top: 10px;
+    margin-top: 9px;
     width: 20px;
     opacity: 0;
     -webkit-transform: translateX(10px);
@@ -1430,8 +1428,6 @@ button:focus {
 
 .menu-mobile {
     display: none !important;
-    margin-top: -162px;
-    margin-bottom: 100px;
     position: relative;
     width: 94%;
     margin: 0 auto;
@@ -1572,6 +1568,14 @@ button:focus {
     .user-mobile {
         display: block!important;
     }
+    .menu-mobile {
+        margin-top: -162px;
+        margin-bottom: 97px;
+    }
+    .user-mobile {
+        margin-top: -154px;
+        margin-bottom: 100px;
+    }
     .nav-home {
         display: none;
     }
@@ -1606,9 +1610,12 @@ button:focus {
         background: #eef4ff3d;
     }
     .menu-mobile {
-        display: block!important;
         margin-top: -162px;
         margin-bottom: 97px;
+    }
+    .user-mobile {
+        margin-top: -154px;
+        margin-bottom: 100px;
     }
     .info-school-period {
         width: 40%;
