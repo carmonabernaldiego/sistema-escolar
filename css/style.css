@@ -372,8 +372,8 @@ button:focus {
 .box-notification-error {
     width: 100%;
     margin: 0 0 8% 0;
-    background: #569188;
-    box-shadow: 2px 3px 2px rgba(98, 164, 139, 0.4);
+    background: #c0605d;
+    box-shadow: 2px 3px 2px rgba(164, 98, 98, 0.4);
     border-radius: 0.6em;
 }
 
@@ -1331,6 +1331,7 @@ button:focus {
 -------------------------------------------*/
 
 .user-mobile {
+    display: none !important;
     float: right;
     margin: 0 auto;
     margin-top: -154px;
@@ -1365,6 +1366,7 @@ button:focus {
     background: #44475a;
     box-shadow: -1px 3px 2px rgba(73, 80, 104, 0.4);
     cursor: pointer;
+    transition: all 600ms;
 }
 
 .user-mobile header .activator-user:hover {
@@ -1404,6 +1406,8 @@ button:focus {
     width: 40px;
     height: 40px;
     border-radius: 100%;
+    background: #6272a4;
+    transition: all 300ms;
 }
 
 .user-mobile nav ul li a:hover {
@@ -1411,9 +1415,9 @@ button:focus {
 }
 
 .user-mobile nav ul li a img {
-    margin-left: 9px;
-    margin-top: 7px;
-    width: 25px;
+    margin-left: 11px;
+    margin-top: 10px;
+    width: 20px;
     opacity: 0;
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
@@ -1426,6 +1430,8 @@ button:focus {
 
 .menu-mobile {
     display: none !important;
+    margin-top: -162px;
+    margin-bottom: 100px;
     position: relative;
     width: 94%;
     margin: 0 auto;
@@ -1557,13 +1563,13 @@ button:focus {
 
 /*-------------------------------------------
   Responsive Design
+  All
 -------------------------------------------*/
 
 @media only screen and (max-width: 1186px) {
-    .menu-mobile {
+    .menu-mobile,
+    .user-mobile {
         display: block!important;
-        margin-top: -162px;
-        margin-bottom: 100px;
     }
     .nav-home {
         display: none;
@@ -1608,7 +1614,7 @@ button:focus {
     }
     .box-notification-ok,
     .box-notification-error {
-        margin: 0 0 27px 0;
+        margin: -77px 0 27px 0;
     }
     .box-notification-ok p,
     .box-notification-error p {

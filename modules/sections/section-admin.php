@@ -109,7 +109,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/modules/logout"><img src="https://s.svgbox.net/materialui.svg?ic=logout&fill=eef4ff"></a>
+                    <a href="/modules/logout"><img src="https://s.svgbox.net/materialui.svg?ic=logout&fill=eef4ff" title="Cerrar Sesión"></a>
                 </li>
             </ul>
         </nav>
@@ -169,12 +169,13 @@ var toggleU = false;
 tlU.to('.user-mobile .activator-user', {
     borderRadius: '0 5em 5em 0',
     background: '#6272a4',
-    duration: 0.6
+    transition: 'all 400ms',
+    duration: 0.4
 })
 
 tlU.to('.user-mobile nav', {
     clipPath: 'ellipse(100% 100% at 100% 50%)',
-    duration: 0.5
+    duration: 0.3
 })
 
 tlU.to('.user-mobile nav img', {
