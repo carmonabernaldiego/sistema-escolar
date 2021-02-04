@@ -1,7 +1,7 @@
 <?php
 	include_once 'security.php';
 
-	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 
 	$url_actual = $_SERVER["REQUEST_URI"];
 

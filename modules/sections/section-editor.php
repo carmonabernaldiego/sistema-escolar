@@ -47,39 +47,51 @@
 </div>
 <div class="menu-mobile">
     <header>
-        <img class="activator" id="activator" src="https://s.svgbox.net/hero-outline.svg?ic=menu&fill=eef4ff">
+        <img class="activator" id="activator" src="/images/menu_mobile/hero-outline.svg">
         <nav>
             <ul>
                 <li>
-                    <a href="/home" title="Dashboard"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=dashboard&fill=eef4ff" title="Dashboard"></a>
+                    <a href="/home" title="Dashboard"><img src="/images/menu_mobile/dashboard.svg"
+                            title="Dashboard"></a>
                 </li>
                 <li>
-                    <a href="/modules/teachers" title="Docentes"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=person_pin&fill=eef4ff" title="Docentes"></a>
+                    <a href="/modules/teachers" title="Docentes"><img src="/images/menu_mobile/person_pin.svg"
+                            title="Docentes"></a>
                 </li>
                 <li>
-                    <a href="/modules/students" title="Alumnos"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=recent_actors&fill=eef4ff" title="Alumnos"></a>
+                    <a href="/modules/students" title="Alumnos"><img src="/images/menu_mobile/recent_actors.svg"
+                            title="Alumnos"></a>
                 </li>
                 <li>
-                    <a href="/modules/subjects" title="Asignaturas"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=style&fill=eef4ff" title="Asignaturas"></a>
+                    <a href="/modules/subjects" title="Asignaturas"><img src="/images/menu_mobile/style.svg"
+                            title="Asignaturas"></a>
                 </li>
                 <li>
-                    <a href="/modules/groups" title="Grupos"><img
-                            src="https://s.svgbox.net/materialui.svg?ic=group_work&fill=eef4ff" title="Grupos"></a>
+                    <a href="/modules/groups" title="Grupos"><img src="/images/menu_mobile/group_work.svg"
+                            title="Grupos"></a>
                 </li>
             </ul>
         </nav>
     </header>
     <span class="name_system">Control de Asistencias</span>
 </div>
+<div class="user-mobile">
+    <header>
+        <img class="activator-user" id="activator-user" src="/images/users/<?php echo $_SESSION['image'];?>">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/modules/logout"><img src="/images/menu_mobile/logout.svg" title="Cerrar Sesión"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+<script src="/js/gsap.min.js"
     integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"
+<script src="/js/CSSRulePlugin.min.js"
     integrity="sha512-6MT8e40N5u36Um5SXKtwZmoKcCSg1XaKtexnXZPpQ4iJDHrBEHXKz37fnDovXezsaCd4oKCH5Y+vrcl7qpLPoA=="
     crossorigin="anonymous"></script>
 
@@ -99,11 +111,11 @@ tl.to('.activator', {
     'borderRadius': '0.6em 0 0 0.6em'
 });
 
-tl.to('nav', {
+tl.to('.menu-mobile nav', {
     'clipPath': 'ellipse(100% 100% at 50% 50%)'
 }, "-=.5")
 
-tl.to('nav img', {
+tl.to('.menu-mobile nav img', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05
@@ -114,5 +126,40 @@ tl.pause();
 card.addEventListener('click', () => {
     toggle = !toggle;
     if (toggle ? tl.play() : tl.reverse());
+})
+
+var cardU = document.getElementById('activator-user');
+
+var tlU = gsap.timeline({
+    defaults: {
+        ease: "power2.inOut"
+    }
+})
+
+var toggleU = false;
+
+tlU.to('.user-mobile .activator-user', {
+    borderRadius: '0 5em 5em 0',
+    background: '#6272a4',
+    transition: 'all 400ms',
+    duration: 0.4
+})
+
+tlU.to('.user-mobile nav', {
+    clipPath: 'ellipse(100% 100% at 100% 50%)',
+    duration: 0.3
+})
+
+tlU.to('.user-mobile nav img', {
+    opacity: 1,
+    transform: 'translateX(0)',
+    stagger: .05,
+}, "-=.5")
+
+tlU.pause();
+
+cardU.addEventListener('click', () => {
+    toggleU = !toggleU;
+    if (toggleU ? tlU.play() : tlU.reverse());
 })
 </script>
