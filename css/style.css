@@ -1485,6 +1485,7 @@ button:focus {
 }
 
 .menu-mobile header nav {
+    z-index: 99;
     max-width: -moz-fit-content;
     max-width: fit-content;
     overflow-x: auto;
