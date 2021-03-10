@@ -1412,9 +1412,7 @@ button:focus {
 }
 
 .user-mobile header img {
-    width: 45px;
     max-width: 45px;
-    height: 45px;
     max-height: 45px;
 }
 
