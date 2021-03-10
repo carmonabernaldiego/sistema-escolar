@@ -1,7 +1,8 @@
 <?php
-    require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
+    require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 ?>
 <div class="form-gridview">
+<!--
 	<table>
 		<tr>
 			<th>Grupo</th>
@@ -72,7 +73,7 @@
 				}
 			?>
 	    </ul>
-	</div>
+	</div>-->
 </div>
 <div class="content-aside">
 <?php

@@ -48,6 +48,16 @@
             $_SESSION['title_form_section'] = 'Asistencias';
         }
 	}
+    elseif(strpos($url_actual, 'attendance'))
+    {
+        $name_page[1] = 'attendance';
+
+        if($name_page[1] == 'attendance')
+        {
+            $_SESSION['title_form_section'] = 'Asistencia'; 
+        }
+
+    }
 	else
 	{
         $name_page[1] = 'home';

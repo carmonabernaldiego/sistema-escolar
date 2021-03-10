@@ -7,7 +7,7 @@
 	header('Content-Type: text/html; charset=UTF-8');
 
 	//Permisos de administrador
-	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 
 	// Formulario actual
 	if (!empty($_POST['btn']))
@@ -17,23 +17,6 @@
 	else
 	{
 		$view_form = 'form_default.php';
-	}
-
-	if($view_form == 'form_default.php')
-	{
-		unset($_SESSION['id_group']);
-		unset($_SESSION['school_period_group']);
-		unset($_SESSION['name_group']);
-		unset($_SESSION['semester_group']);
-		unset($_SESSION['subjects']);
-		unset($_SESSION['subjects_group']);
-		unset($_SESSION['subject_name_group']);
-		unset($_SESSION['checked_subject']);
-		unset($_SESSION['students']);
-		unset($_SESSION['students_count']);
-		unset($_SESSION['user_student_group']);
-		unset($_SESSION['name_student_group']);
-		unset($_SESSION['checked_student']);
 	}
 
 	// Pagina actual
@@ -58,7 +41,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-	<title>Grupos | Sistema de Control Escolar</title>
+	<title>Asistencias | Sistema de Control Escolar</title>
 	<link rel="icon" type="image/png" href="../../images/asistencia_icon.png" />
 	<link rel="stylesheet" href="../../css/style.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="../../css/style_icons.css" media="screen, projection" type="text/css" />
@@ -84,10 +67,6 @@
 				if (!empty($_SESSION['section-admin']) == 'go-'.$_SESSION['user'])
 				{
 					include_once '../sections/section-admin.php';
-				}
-				elseif (!empty($_SESSION['section-editor']) == 'go-'.$_SESSION['user'])
-				{
-					include_once '../sections/section-editor.php';
 				}
 			?>
 		</aside>

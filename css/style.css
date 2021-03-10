@@ -265,7 +265,7 @@ button:focus {
 
 .nav-home .user span.logout_user {
     float: right;
-    margin: -2% 7% 2% 0;
+    margin: -2.5% 7% 2% 0;
 }
 
 .nav-home .user span.logout_user>a {
@@ -817,21 +817,21 @@ button:focus {
     background: #dde8fc;
 }
 
-.form-gridview .pages {
+.pages {
     margin: 0 0 2.5% 3.9%;
 }
 
-.form-gridview .pages:after {
+.pages:after {
     display: block;
     content: "";
     clear: both;
 }
 
-.form-gridview .pages ul li {
+.pages ul li {
     list-style: none;
 }
 
-.form-gridview .pages ul li button {
+.pages ul li button {
     float: left;
     margin: 0 10px 0 0;
     width: 6%;
@@ -845,19 +845,19 @@ button:focus {
     font-weight: bold;
 }
 
-.form-gridview .pages ul li button:hover,
-.form-gridview .pages ul li button:focus {
+.pages ul li button:hover,
+.pages ul li button:focus {
     background: #4c597e;
     cursor: pointer;
     transition: all 350ms;
 }
 
-.form-gridview .pages ul li.active button {
+.pages ul li.active button {
     background: #6272a4;
 }
 
-.form-gridview .pages ul li.active button:hover,
-.form-gridview .pages ul li.active button:focus {
+.pages ul li.active button:hover,
+.pages ul li.active button:focus {
     background: #6272a4;
     cursor: pointer;
 }
@@ -1058,6 +1058,65 @@ button:focus {
 
 
 /*-------------------------------------------
+  Formulario | Delete
+-------------------------------------------*/
+
+.form-data .delete {
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+.form-data .delete h1 {
+    color: #eef4ff;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.form-data .delete .btn-si {
+    float: left;
+    margin: 25px 0 35px 25%;
+    width: 75px;
+    height: 40px;
+    background: #db4949;
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    border: none;
+    border-radius: 0.6em;
+    color: #eef4ff;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.form-data .delete .btn-no {
+    float: right;
+    margin: 25px 25% 35px 0;
+    width: 75px;
+    height: 40px;
+    background: #3f6992;
+    box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
+    border: none;
+    border-radius: 0.6em;
+    color: #eef4ff;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.form-data .delete .btn-si:hover,
+.form-data .delete .btn-si:focus {
+    background: #aa3535;
+    border: none;
+    transition: all 350ms;
+}
+
+.form-data .delete .btn-no:hover,
+.form-data .delete .btn-no:focus {
+    background: #2a4866;
+    border: none;
+    transition: all 350ms;
+}
+
+
+/*-------------------------------------------
   Formulario | Groups
 -------------------------------------------*/
 
@@ -1140,7 +1199,7 @@ button:focus {
 
 .form-data td button.btnview:hover,
 .form-data td button.btnview:focus {
-    background: #6272a4;
+    background: #456661;
     border: none;
 }
 
@@ -1268,61 +1327,60 @@ button:focus {
 
 
 /*-------------------------------------------
-  Formulario | Delete
+  Formulario | Attendance
 -------------------------------------------*/
 
-.form-data .delete {
-    margin: 30px 0 0 0;
-    text-align: center;
-}
-
-.form-data .delete h1 {
-    color: #eef4ff;
-    font-size: 1.2em;
-    text-transform: capitalize;
-    font-weight: bold;
-}
-
-.form-data .delete .btn-si {
-    float: left;
-    margin: 25px 0 35px 25%;
-    width: 75px;
-    height: 40px;
-    background: #db4949;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
-    border: none;
+.formAttendance {
+    float: none;
+    margin: 0 0 35px 0;
+    width: 100%;
+    height: 450px;
+    background: #44475a;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
-    color: #eef4ff;
-    font-size: 1.1em;
-    cursor: pointer;
 }
 
-.form-data .delete .btn-no {
+.formAttendanceAdd {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 30px 20px 10px;
+}
+
+.formAttendanceAdd table.attendanceGroups {
+    width: 47%;
+    box-shadow: none;
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.formAttendanceAdd table.attendanceGroups th {
+    font-size: 0.8em;
+    padding: 10px 0;
+}
+
+.formAttendanceAdd table.attendanceGroups th.nameGroup {
+    background: #282a36;
+    text-transform: none;
+}
+
+.formAttendanceAdd table.attendanceGroups td {
+    font-size: 0.78em;
+    padding: 7px 0;
+}
+
+.formAttendanceAdd table.attendanceGroups td.left {
+    padding-left: 15px;
+}
+
+.formAttendanceAdd table.attendanceGroups td.right {
+    padding-right: 15px;
+}
+
+.formAttendanceAdd table.attendanceGroups td.right .btnview {
+    display: block;
     float: right;
-    margin: 25px 25% 35px 0;
-    width: 75px;
-    height: 40px;
-    background: #3f6992;
-    box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
-    border: none;
-    border-radius: 0.6em;
-    color: #eef4ff;
-    font-size: 1.1em;
-    cursor: pointer;
-}
-
-.form-data .delete .btn-si:hover,
-.form-data .delete .btn-si:focus {
-    background: #aa3535;
-    border: none;
-    transition: all 350ms;
-}
-
-.form-data .delete .btn-no:hover,
-.form-data .delete .btn-no:focus {
-    background: #2a4866;
-    border: none;
-    transition: all 350ms;
 }
 
 
@@ -1354,7 +1412,9 @@ button:focus {
 }
 
 .user-mobile header img {
+    width: 45px;
     max-width: 45px;
+    height: 45px;
     max-height: 45px;
 }
 
@@ -1509,7 +1569,8 @@ button:focus {
     border-radius: 0.6em;
 }
 
-.menu-mobile header nav ul li a:hover {
+.menu-mobile header nav ul li a:hover,
+.menu-mobile header nav ul li a.active {
     background: #323844;
 }
 

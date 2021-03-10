@@ -50,7 +50,7 @@
 	$max = 20;
 	$inicio = ($page - 1) * $max;
 
-	// Cargar datos de usuarios
+	// Cargar datos de Grupos
 	include_once 'load_data.php';
 ?>
 <!DOCTYPE html>

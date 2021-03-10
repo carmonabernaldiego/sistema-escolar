@@ -1,44 +1,108 @@
 <?php
-	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
+	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 ?>
 <div class="form-data">
     <div class="head">
-        <h1 class="titulo">Agregar</h1>
+        <h1 class="titulo">Grupos</h1>
     </div>
     <div class="body">
-        <form name="form-add-groups" action="#" method="POST">
-            <div class="wrap">
-                <div class="first">
-                    <label class="label">Grupo</label>
-                    <input class="text" type="text" name="txtgroup" value="" maxlength="20" autofocus required />
-                    <label class="label">Nombre</label>
-                    <input class="text" type="text" name="txtgroupname" value="" maxlength="100" required />
-                </div>
-                <div class="last">
-                    <label class="label">Semestre</label>
-                    <input class="text" type="number" name="txtgroupsemester" value="" maxlength="2" min="1" max="12"
-                        list="defaultsemestres" required />
-                    <datalist id="defaultsemestres">
-                        <?php
-						for($i = 1; $i <= 12; $i ++)
-						{
-							echo
-							'
-								<option value="'.$i.'">
-							';
-						}
-					?>
-                    </datalist>
-                    <label class="label">Asignar</label>
-                    <button class="btn-add-subjects" name="btn" value="form_add_subjects"
-                        type="submit">Asignaturas</button>
-                </div>
-            </div>
-        </form>
+        <div class="formAttendanceAdd">
+            <?php
+                $_SESSION['group'] = array();
+                $_SESSION['group_name'] = array();
+    
+                $i = 0;
+    
+                $sql = "SELECT * FROM groups WHERE school_period = '".$_SESSION['school_period']."' ORDER BY name";
+    
+                if ($result = $conexion -> query($sql))
+                {
+                    while ($row = mysqli_fetch_array($result))
+                    {
+                        $_SESSION['group'][$i] = $row['id_group'];
+                        $_SESSION['group_name'][$i] = $row['name'];
+    
+                        $i += 1;
+                    }
+                }
+                $_SESSION['total_groups'] = count($_SESSION['group']);
+
+                for ($i = 0; $i < $_SESSION['total_groups']; $i++)
+			    {
+                    $sql = "SELECT * FROM groups WHERE id_group = '".$_SESSION["group"][$i]."' AND school_period = '".$_SESSION['school_period']."'";
+
+                    if($result = $conexion -> query($sql))
+                    {
+                        while ($row = mysqli_fetch_array($result))
+                        {
+                            $_SESSION['group_subjects'] = $row['subjects'];
+                        }
+                    }
+
+                    $array_subjects = array();
+                    $_SESSION['subject_group'] = array();
+		            $_SESSION['subject_name_group'] = array();
+		            
+                    $_SESSION['group_subjects'] = trim($_SESSION['group_subjects'], ',');
+	            	$array_subjects = explode( ',', $_SESSION['group_subjects']);
+
+                    $j = 0;
+
+		            foreach($array_subjects as $row)
+		            {
+			            if($array_subjects[$j] != '')
+			            {
+			            	$sql = "SELECT * FROM subjects WHERE subject = '".$array_subjects[$j]."' AND school_period = '".$_SESSION['school_period']."'";
+			
+				            if($result = $conexion -> query($sql))
+				            {
+					            while ($row = mysqli_fetch_array($result))
+				            	{
+						            $_SESSION['subject_group'][$j] = $row['subject'];
+		            				$_SESSION['subject_name_group'][$j] = $row['name'];
+				               	}
+			            	}
+		            	}   
+	            		$j += 1;
+		            }
+	            
+	    	        echo'
+                        <table class="attendanceGroups">
+                            <tr>
+                                <th class="center nameGroup" colspan="2">'.$_SESSION["group_name"][$i].' ('.$_SESSION["group"][$i].')</th>
+                            </tr>';
+
+                            $h = 0;
+
+                            foreach($_SESSION['subject_name_group'] as $row)
+		                    {
+                                if($_SESSION['subject_name_group'][$h] != '')
+			                    {
+                                    echo'
+                                        <tr>
+                                            <td class="left">'.$_SESSION["subject_name_group"][$h].'</td>
+                                            <td class="right">
+							                    <form action="/attendance" method="POST">
+								                    <input style="display:none;" type="text" name="txtgroup" value="'.$_SESSION["group"][$i].'"/>
+							               	        <input style="display:none;" type="text" name="txtgroupsubject" value="'.$_SESSION["subject_group"][$h].'"/>
+							             	        <button class="btnview" name="btnAddAttendance" value="" type="submit"></button>
+							                    </form>
+				        		            </td>
+                                        </tr>
+                                    ';
+                                }
+                                $h+=1;
+                            }
+                            echo'
+                        </table>
+                    ';
+                }
+            ?>
+        </div>
     </div>
 </div>
 <div class="content-aside">
-<?php
+    <?php
 	include_once "../sections/options-disabled.php";
 ?>
 </div>

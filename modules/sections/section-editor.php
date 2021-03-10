@@ -51,23 +51,23 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/home" title="Dashboard"><img src="/images/menu_mobile/dashboard.svg"
+                    <a class="<?php if($output[1] == 'home'){ echo 'active'; } ?>" href="/home" title="Dashboard"><img src="/images/menu_mobile/dashboard.svg"
                             title="Dashboard"></a>
                 </li>
                 <li>
-                    <a href="/modules/teachers" title="Docentes"><img src="/images/menu_mobile/person_pin.svg"
+                    <a class="<?php if($output[1] == 'teachers'){ echo 'active'; } ?>" href="/modules/teachers" title="Docentes"><img src="/images/menu_mobile/person_pin.svg"
                             title="Docentes"></a>
                 </li>
                 <li>
-                    <a href="/modules/students" title="Alumnos"><img src="/images/menu_mobile/recent_actors.svg"
+                    <a class="<?php if($output[1] == 'students'){ echo 'active'; } ?>" href="/modules/students" title="Alumnos"><img src="/images/menu_mobile/recent_actors.svg"
                             title="Alumnos"></a>
                 </li>
                 <li>
-                    <a href="/modules/subjects" title="Asignaturas"><img src="/images/menu_mobile/style.svg"
+                    <a class="<?php if($output[1] == 'subjects'){ echo 'active'; } ?>" href="/modules/subjects" title="Asignaturas"><img src="/images/menu_mobile/style.svg"
                             title="Asignaturas"></a>
                 </li>
                 <li>
-                    <a href="/modules/groups" title="Grupos"><img src="/images/menu_mobile/group_work.svg"
+                    <a class="<?php if($output[1] == 'groups'){ echo 'active'; } ?>" href="/modules/groups" title="Grupos"><img src="/images/menu_mobile/group_work.svg"
                             title="Grupos"></a>
                 </li>
             </ul>

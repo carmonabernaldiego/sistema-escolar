@@ -33,7 +33,7 @@
 	$max = 10;
 	$inicio = ($page - 1) * $max;
 
-	// Cargar datos de usuarios
+	// Cargar datos de Periodos Escolares
 	include_once 'load_data.php';
 ?>
 <!DOCTYPE html>

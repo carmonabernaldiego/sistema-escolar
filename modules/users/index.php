@@ -33,7 +33,7 @@
 	$max = 50;
 	$inicio = ($page - 1) * $max;
 
-	// Cargar datos de usuarios
+	// Cargar datos de Usuarios
 	include_once 'load_data.php';
 ?>
 <!DOCTYPE html>

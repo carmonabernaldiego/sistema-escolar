@@ -11,6 +11,12 @@
 		preg_match('~modules/(.*?)/~', $input, $output);
 		$output[1];
 	}
+    elseif(strpos($url_actual, 'attendance'))
+	{
+		$input = $url_actual;
+		preg_match('~/(.*?)/~', $input, $output);
+		$output[1];
+	}
 	else
 	{
 		$output[1] = 'home';
@@ -59,42 +65,42 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/home" title="Dashboard"><img
+                    <a class="<?php if($output[1] == 'home'){ echo 'active'; } ?>" href="/home" title="Dashboard"><img
                             src="/images/menu_mobile/dashboard.svg" title="Dashboard"></a>
                 </li>
                 <li>
-                    <a href="/modules/school_periods" title="Perido Escolar"><img
+                    <a class="<?php if($output[1] == 'school_periods'){ echo 'active'; } ?>" href="/modules/school_periods" title="Perido Escolar"><img
                             src="/images/menu_mobile/event_note.svg"
                             title="Perido Escolar"></a>
                 </li>
                 <li>
-                    <a href="/modules/users" title="Usuarios"><img
+                    <a class="<?php if($output[1] == 'users'){ echo 'active'; } ?>" href="/modules/users" title="Usuarios"><img
                             src="/images/menu_mobile/assignment_ind.svg"
                             title="Usuarios"></a>
                 </li>
                 <li>
-                    <a href="/modules/administratives" title="Administrativos"><img
+                    <a class="<?php if($output[1] == 'administratives'){ echo 'active'; } ?>" href="/modules/administratives" title="Administrativos"><img
                             src="/images/menu_mobile/supervisor_account.svg"
                             title="Administrativos"></a>
                 </li>
                 <li>
-                    <a href="/modules/teachers" title="Docentes"><img
+                    <a class="<?php if($output[1] == 'teachers'){ echo 'active'; } ?>" href="/modules/teachers" title="Docentes"><img
                             src="/images/menu_mobile/person_pin.svg" title="Docentes"></a>
                 </li>
                 <li>
-                    <a href="/modules/students" title="Alumnos"><img
+                    <a class="<?php if($output[1] == 'students'){ echo 'active'; } ?>" href="/modules/students" title="Alumnos"><img
                             src="/images/menu_mobile/recent_actors.svg" title="Alumnos"></a>
                 </li>
                 <li>
-                    <a href="/modules/subjects" title="Asignaturas"><img
+                    <a class="<?php if($output[1] == 'subjects'){ echo 'active'; } ?>" href="/modules/subjects" title="Asignaturas"><img
                             src="/images/menu_mobile/style.svg" title="Asignaturas"></a>
                 </li>
                 <li>
-                    <a href="/modules/groups" title="Grupos"><img
+                    <a class="<?php if($output[1] == 'groups'){ echo 'active'; } ?>" href="/modules/groups" title="Grupos"><img
                             src="/images/menu_mobile/group_work.svg" title="Grupos"></a>
                 </li>
                 <li>
-                    <a href="/modules/attendance" title="Asistencias"><img
+                    <a class="<?php if($output[1] == 'attendance'){ echo 'active'; } ?>" href="/modules/attendance" title="Asistencias"><img
                             src="/images/menu_mobile/assignment_turned_in.svg"
                             title="Asistencias"></a>
                 </li>
