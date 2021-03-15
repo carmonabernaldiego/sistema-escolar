@@ -25,6 +25,7 @@
 		}
 		else
 		{
+			$_POST['txtsubjectdescription'] = mysqli_real_escape_string($conexion, $_POST['txtsubjectdescription']);
 			$sql_insert = "INSERT INTO subjects(subject, school_period, name, description, semester, user_teacher) VALUES('".$_POST['txtsubject']."', '".$_SESSION['school_period']."', '".$_POST['txtsubjectname']."', '".$_POST['txtsubjectdescription']."', '".$_POST['txtsubjectsemester']."', '".$_POST['selectuserteacher']."')";
 
 			if(mysqli_query($conexion, $sql_insert))
