@@ -5,13 +5,13 @@
 
 	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 	
-	if (empty($_POST['txtuserid']))
+	if (empty($_POST['txtuseridAdd']))
 	{
 		header('Location: /');
 		exit();
 	}
 	
-	if ($_POST['txtuserid'] == ' ')
+	if ($_POST['txtuseridAdd'] == ' ')
 	{
 		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
@@ -47,7 +47,7 @@
 		// Comprobamos y renombramos el nombre del archivo
 		$nombreArchivo = $arrayArchivo['filename'];
 		$nombreArchivo = preg_replace("/[^A-Z0-9._-]/i", "_", $nombreArchivo);
-		$nombreArchivo = $_POST['txtuserid'] . rand(1, 1000);
+		$nombreArchivo = $_POST['txtuseridAdd'] . rand(1, 1000);
 
 		// Desplazamos el archivo si no hay errores
 		if(empty($errores))
@@ -66,7 +66,7 @@
 		$nombre_img = 'user.png';
 	}
 
-	$sql_insert = "INSERT INTO users(user, email, pass, permissions, image) VALUES('".$_POST['txtuserid']."', '".$_POST['txtemail']."', '".$_POST['txtuserpass']."', '".$_POST['txtusertype']."', '".$nombre_img."')";
+	$sql_insert = "INSERT INTO users(user, email, pass, permissions, image) VALUES('".$_POST['txtuseridAdd']."', '".$_POST['txtemailAdd']."', '".$_POST['txtuserpassAdd']."', '".$_POST['txtusertype']."', '".$nombre_img."')";
 
 	if(mysqli_query($conexion, $sql_insert))
 	{

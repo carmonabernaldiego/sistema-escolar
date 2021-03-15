@@ -5,7 +5,7 @@
 	
 	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
 	
-	if (empty($_POST['txtuserid']))
+	if (empty($_POST['txtuseridUpdate']))
 	{
 		header('Location: /');
 		exit();
@@ -38,7 +38,7 @@
 		// Comprobamos y renombramos el nombre del archivo
 		$nombreArchivo = $arrayArchivo['filename'];
 		$nombreArchivo = preg_replace("/[^A-Z0-9._-]/i", "_", $nombreArchivo);
-		$nombreArchivo = $_POST['txtuserid'] . rand(1, 1000);
+		$nombreArchivo = $_POST['txtuseridUpdate'] . rand(1, 1000);
 
 		// Desplazamos el archivo si no hay errores
 		if(empty($errores))
@@ -53,7 +53,7 @@
 		}
 	}
 	
-	$sql_update = "UPDATE users SET email = '".$_POST['txtemail']."', permissions = '".$_POST['txtusertype']."', image = '".$nombre_img."' WHERE user = '".$_POST['txtuserid']."'";
+	$sql_update = "UPDATE users SET email = '".$_POST['txtemailUpdate']."', permissions = '".$_POST['txtusertype']."', image = '".$nombre_img."' WHERE user = '".$_POST['txtuseridUpdate']."'";
 
 	if(mysqli_query($conexion, $sql_update))
 	{
@@ -68,7 +68,7 @@
 		$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
 	}
 
-	if ($_POST['txtuserid'] == $_SESSION['user']) {
+	if ($_POST['txtuseridUpdate'] == $_SESSION['user']) {
 		$_SESSION['image'] = $nombre_img;
 		setcookie('image', $nombre_img, time() + 365 * 24 * 60 * 60, "/");
 	}
