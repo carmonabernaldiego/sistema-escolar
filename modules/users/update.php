@@ -49,7 +49,7 @@
 		}
 		else
 		{
-			$nombre_img = $_SESSION['user_image'][0];
+			$nombre_img = "user.png";
 		}
 	}
 	
