@@ -1450,19 +1450,26 @@ button:focus {
     display: flex;
 }
 
+.user-mobile nav ul {
+    width: 107px;
+}
+
+.user-mobile nav ul li.first {
+    margin-left: 9px;
+    margin-right: 7px;
+}
+
 .user-mobile nav ul li {
-    width: 65px;
+    margin-right: 9px;
 }
 
 .user-mobile nav ul li a {
     display: block;
     margin: 0 auto;
-    margin-right: 11px;
     margin-top: 6px;
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background: #6272a4;
     transition: all 300ms;
 }
 
@@ -1471,7 +1478,7 @@ button:focus {
 }
 
 .user-mobile nav ul li a img {
-    margin-left: 11px;
+    margin-left: 10.5px;
     margin-top: 9px;
     width: 20px;
     opacity: 0;

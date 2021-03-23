@@ -1,9 +1,7 @@
 <?php
-	session_start();
+session_start();
 
-	if ($_SESSION['authenticate'] != 'go-'.$_SESSION['user'])
-	{
-		header('Location: /');
-		exit();
-	}
-?>
+if ($_SESSION['authenticate'] != 'go-' . $_SESSION['user']) {
+	header('Location: /');
+	exit();
+}

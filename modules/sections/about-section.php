@@ -58,6 +58,16 @@
         }
 
     }
+    elseif(strpos($url_actual, 'user'))
+    {
+        $name_page[1] = 'user';
+
+        if($name_page[1] == 'user')
+        {
+            $_SESSION['title_form_section'] = 'Configuración'; 
+        }
+
+    }
 	else
 	{
         $name_page[1] = 'home';

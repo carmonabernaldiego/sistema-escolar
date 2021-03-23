@@ -1,176 +1,145 @@
 <?php
-	session_start();
+session_start();
 
-	header('Content-Type: text/html; charset=UTF-8');
-	
-	include_once 'modules/conexion.php';
-	include_once 'modules/cookie.php';
-	
+header('Content-Type: text/html; charset=UTF-8');
 
-	if (!empty($_SESSION['authenticate']) == 'go-'.!empty($_SESSION['usuario']))
-	{
-		header('Location: home');
-		exit();
-	}
+include_once 'modules/conexion.php';
+include_once 'modules/cookie.php';
+
+
+if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
+	header('Location: home');
+	exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <title>Sistema Escolar</title>
-    <link rel="icon" type="image/png" href="images/icon.png" />
-    <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <script src="/js/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $(".loader").fadeOut("slow");
-    });
-    </script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	<title>Sistema Escolar</title>
+	<link rel="icon" type="image/png" href="images/icon.png" />
+	<link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<script src="/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$(".loader").fadeOut("slow");
+		});
+	</script>
 </head>
 
 <body class="login">
-    <div class="loader"></div>
-    <div class="wrap-title-login">
-        <div class="title-login">
-            <h1>Sistema Escolar</h1>
-        </div>
-    </div>
-    <div class="form-login">
-        <div class="logo-form-login">
-        </div>
-        <form name="frm-login" action="#" method="POST">
-            <?php
-				if (!empty($_POST['txtuser']) and !empty($_POST['txtpass']))
-				{
-					//Limpiar String
-					$user = mysqli_real_escape_string($conexion, $_POST['txtuser']);
-					$pass = mysqli_real_escape_string($conexion, $_POST['txtpass']);
+	<div class="loader"></div>
+	<div class="wrap-title-login">
+		<div class="title-login">
+			<h1>Sistema Escolar</h1>
+		</div>
+	</div>
+	<div class="form-login">
+		<div class="logo-form-login">
+		</div>
+		<form name="frm-login" action="#" method="POST">
+			<?php
+			if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
+				//Limpiar String
+				$user = mysqli_real_escape_string($conexion, $_POST['txtuser']);
+				$pass = mysqli_real_escape_string($conexion, $_POST['txtpass']);
 
-					//Buscar Usuario
-					$sql = "SELECT * FROM users WHERE BINARY user = '$user' and BINARY pass = '$pass' or BINARY email = '$user' and BINARY pass = '$pass' LIMIT 1";
+				//Buscar Usuario
+				$sql = "SELECT * FROM users WHERE BINARY user = '$user' and BINARY pass = '$pass' or BINARY email = '$user' and BINARY pass = '$pass' LIMIT 1";
 
-					if ($result = $conexion -> query($sql))
-					{
-						if (/*$row = $result -> fetch_row()*/$row = mysqli_fetch_array($result))
-						{
-							//Cargar Usuario
-							if ($row['permissions'] == 'admin')
-							{
-								$user = $row['user'];
-								$image = $row['image'];
-								$permissions = $row['permissions'];
+				if ($result = $conexion->query($sql)) {
+					if (/*$row = $result -> fetch_row()*/$row = mysqli_fetch_array($result)) {
+						//Cargar Usuario
+						if ($row['permissions'] == 'admin') {
+							$user = $row['user'];
+							$image = $row['image'];
+							$permissions = $row['permissions'];
 
-								$sql = "SELECT * FROM administratives WHERE user = '$user' LIMIT 1";
-								
-								if ($result = $conexion -> query($sql))
-								{
-									if($row = mysqli_fetch_array($result))
-									{
-										$name = $row['name'];
-										$surnames = $row['surnames'];
-										
-										$sql = "SELECT * FROM school_periods WHERE active = 1 AND current = 1 LIMIT 1";
+							$sql = "SELECT * FROM administratives WHERE user = '$user' LIMIT 1";
 
-										if ($result = $conexion -> query($sql))
-										{
-											if($row = mysqli_fetch_array($result))
-											{
-												$school_period = $row['school_period'];
-											}
+							if ($result = $conexion->query($sql)) {
+								if ($row = mysqli_fetch_array($result)) {
+									$name = $row['name'];
+									$surnames = $row['surnames'];
+
+									$sql = "SELECT * FROM school_periods WHERE active = 1 AND current = 1 LIMIT 1";
+
+									if ($result = $conexion->query($sql)) {
+										if ($row = mysqli_fetch_array($result)) {
+											$school_period = $row['school_period'];
 										}
 									}
-									else
-									{
-										goto error_user;
-									}
+								} else {
+									goto error_user;
+								}
 
-									if (!empty($_POST['remember_session']))
-									{
-										$_SESSION['section-admin'] = setcookie('section-admin', 'section-admin-'.$user, time() + 365 * 24 * 60 * 60);
-									}
-									else
-									{
-										$_SESSION['section-admin'] = 'section-admin-'.$user;
-									}
+								if (!empty($_POST['remember_session'])) {
+									$_SESSION['section-admin'] = setcookie('section-admin', 'section-admin-' . $user, time() + 365 * 24 * 60 * 60);
+								} else {
+									$_SESSION['section-admin'] = 'section-admin-' . $user;
 								}
 							}
-							elseif ($row['permissions'] == 'editor')
-							{
-								$user = $row['user'];
-								$image = $row['image'];
-								$permissions = $row['permissions'];
+						} elseif ($row['permissions'] == 'editor') {
+							$user = $row['user'];
+							$image = $row['image'];
+							$permissions = $row['permissions'];
 
-								$sql = "SELECT * FROM administratives WHERE user = '$user' LIMIT 1";
-								
-								if ($result = $conexion -> query($sql))
-								{
-									if($row = mysqli_fetch_array($result))
-									{
-										$name = $row['name'];
-										$surnames = $row['surnames'];
-										
-										$sql = "SELECT * FROM school_periods WHERE active = 1 AND current = 1 LIMIT 1";
+							$sql = "SELECT * FROM administratives WHERE user = '$user' LIMIT 1";
 
-										if ($result = $conexion -> query($sql))
-										{
-											if($row = mysqli_fetch_array($result))
-											{
-												$school_period = $row['school_period'];
-											}
+							if ($result = $conexion->query($sql)) {
+								if ($row = mysqli_fetch_array($result)) {
+									$name = $row['name'];
+									$surnames = $row['surnames'];
+
+									$sql = "SELECT * FROM school_periods WHERE active = 1 AND current = 1 LIMIT 1";
+
+									if ($result = $conexion->query($sql)) {
+										if ($row = mysqli_fetch_array($result)) {
+											$school_period = $row['school_period'];
 										}
 									}
-									else
-									{
-										goto error_user;
-									}
-
-									if (!empty($_POST['remember_session']))
-									{
-										$_SESSION['section-editor'] = setcookie('section-editor', 'section-editor-'.$user, time() + 365 * 24 * 60 * 60);
-									}
-									else
-									{
-										$_SESSION['section-editor'] = 'section-editor-'.$user;
-									}
+								} else {
+									goto error_user;
 								}
-							}
 
-							//Cargar datos sesión usuario
-							if (!empty($_POST['remember_session']))
-							{
-								setcookie('remember', 'si', time() + 15 * 24 * 60 * 60);
-								setcookie('user', $user, time() + 15 * 24 * 60 * 60);
-								setcookie('name', $name, time() + 15 * 24 * 60 * 60);
-								setcookie('surnames', $surnames, time() + 15 * 24 * 60 * 60);
-								setcookie('image', $image, time() + 15 * 24 * 60 * 60);
-								setcookie('permissions', $permissions, time() + 15 * 24 * 60 * 60);
-								setcookie('school_period', $school_period, time() + 15 * 24 * 60 * 60);
-								setcookie('authenticate', 'go-'.$user, time() + 15 * 24 * 60 * 60);
-
-								header('Location: home');
-							}
-							else
-							{
-								$_SESSION['user'] = $user;
-								$_SESSION['name'] = $name;
-								$_SESSION['surnames'] = $surnames;
-								$_SESSION['image'] = $image;
-								$_SESSION['permissions'] = $permissions;
-								$_SESSION['school_period'] = $school_period;
-								$_SESSION['authenticate'] = 'go-'.$user;
-
-								header('Location: home');
+								if (!empty($_POST['remember_session'])) {
+									$_SESSION['section-editor'] = setcookie('section-editor', 'section-editor-' . $user, time() + 365 * 24 * 60 * 60);
+								} else {
+									$_SESSION['section-editor'] = 'section-editor-' . $user;
+								}
 							}
 						}
-						else
-						{
-							error_user:
-							echo '
+
+						//Cargar datos sesión usuario
+						if (!empty($_POST['remember_session'])) {
+							setcookie('remember', 'si', time() + 15 * 24 * 60 * 60);
+							setcookie('user', $user, time() + 15 * 24 * 60 * 60);
+							setcookie('name', $name, time() + 15 * 24 * 60 * 60);
+							setcookie('surnames', $surnames, time() + 15 * 24 * 60 * 60);
+							setcookie('image', $image, time() + 15 * 24 * 60 * 60);
+							setcookie('permissions', $permissions, time() + 15 * 24 * 60 * 60);
+							setcookie('school_period', $school_period, time() + 15 * 24 * 60 * 60);
+							setcookie('authenticate', 'go-' . $user, time() + 15 * 24 * 60 * 60);
+
+							header('Location: home');
+						} else {
+							$_SESSION['user'] = $user;
+							$_SESSION['name'] = $name;
+							$_SESSION['surnames'] = $surnames;
+							$_SESSION['image'] = $image;
+							$_SESSION['permissions'] = $permissions;
+							$_SESSION['school_period'] = $school_period;
+							$_SESSION['authenticate'] = 'go-' . $user;
+
+							header('Location: home');
+						}
+					} else {
+						error_user:
+						echo '
 									<label class="label" style="margin: 9px 0 0 0; color: #c93f3f; font-size: 1.2em; font-weight: bold;">usuario/contraseña - ¡incorrecto!</label>
 									<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 									<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
@@ -178,12 +147,10 @@
 									<label class="labelrecordar" for="checkboxrecordar">Recuérdame</label>
 									<button class="button" type="submit">Iniciar sesión</button>
 								';
-						}
 					}
 				}
-				else
-				{
-					echo '
+			} else {
+				echo '
 						<label class="label">Iniciar sesión</label>
 						<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 						<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
@@ -191,10 +158,10 @@
 						<label class="labelrecordar" for="checkboxrecordar">Recuérdame</label>
 						<button class="button" type="submit">Iniciar sesión</button>
 					';
-				}
+			}
 			?>
-        </form>
-    </div>
+		</form>
+	</div>
 </body>
 
 </html>
