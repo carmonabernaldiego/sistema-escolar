@@ -1,7 +1,5 @@
 <?php
-	if ($_SESSION['authenticate'] != 'go-'.$_SESSION['user'])
-	{
-		header('Location: /');
-		exit();
-	}
-?>
+if ($_SESSION['authenticate'] != 'go-' . $_SESSION['user']) {
+	header('Location: /');
+	exit();
+}

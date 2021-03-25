@@ -1,7 +1,7 @@
 <?php
-    require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
-    
-    echo'
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
+
+echo '
         <div class="form-data">
             <div class="head">
                 <h1 class="titulo">Atención</h1>
@@ -9,7 +9,7 @@
             <div class="delete">
                 <h1>¿Eliminar registro?</h1>
                 <form name="form-delete-teachers" action="delete.php" method="POST">
-                    <input style="display: none;" type="text" name="txtuserid" value="'.$_POST['txtuserid'].'" />
+                    <input style="display: none;" type="text" name="txtuserid" value="' . $_POST['txtuserid'] . '" />
                     <button class="btn-si icon" type="submit">check</button>
                 </form>
                 <form action="#" method="POST">
@@ -19,6 +19,5 @@
         </div>
         ';
 echo '<div class="content-aside">';
-	include_once "../sections/options-disabled.php";
+include_once "../sections/options-disabled.php";
 echo '</div>';
-?>

@@ -30,7 +30,7 @@
 				$_SESSION['user_image'][$i] = $row['image'];
 
 				$i += 1;
-			}
+		}
 		}
 		$_SESSION['total_users'] = count($_SESSION['user_id']);
 	}
@@ -59,4 +59,3 @@
 		}
 		$_SESSION['total_users'] = count($_SESSION['user_id']);
 	}
-?>

@@ -1,5 +1,5 @@
 <?php
-	include_once 'security.php';
+include_once 'security.php';
 ?>
 <div class="form-options">
     <div class="options">
@@ -27,17 +27,17 @@
     </div>
 </div>
 <script>
-$(function() {
-    var botonMostrar = $("#btnSearchMobile"),
-        formSearch = $(".search");
+    $(function() {
+        var botonMostrar = $("#btnSearchMobile"),
+            formSearch = $(".search");
 
-    botonMostrar.on("click", function() {
-        if (formSearch.is(':hidden')) {
-            formSearch.show('slow');
-            document.getElementById("txtSearch").focus();
-        } else {
-            formSearch.hide('slow');
-        }
+        botonMostrar.on("click", function() {
+            if (formSearch.is(':hidden')) {
+                formSearch.show('slow');
+                document.getElementById("txtSearch").focus();
+            } else {
+                formSearch.hide('slow');
+            }
+        });
     });
-});
 </script>

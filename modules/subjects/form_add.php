@@ -1,5 +1,5 @@
 <?php
-    require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 ?>
 <div class="form-data">
     <div class="head">
@@ -21,62 +21,54 @@
                     <label class="label">Docente</label>
                     <select class="select" name="selectuserteacher">
                         <?php
-						$_SESSION['user_teacher'] = array();
-						$_SESSION['name_teacher'] = array();
+                        $_SESSION['user_teacher'] = array();
+                        $_SESSION['name_teacher'] = array();
 
-						$i = 0;
+                        $i = 0;
 
-						$sql = "SELECT * FROM teachers ORDER BY name";
+                        $sql = "SELECT * FROM teachers ORDER BY name";
 
-						if ($result = $conexion -> query($sql))
-						{
-							while ($row = mysqli_fetch_array($result))
-							{
-								$_SESSION['user_teacher'][$i] = $row['user'];
-								$_SESSION['name_teacher'][$i] = $row['name'].' '.$row['surnames'];
+                        if ($result = $conexion->query($sql)) {
+                            while ($row = mysqli_fetch_array($result)) {
+                                $_SESSION['user_teacher'][$i] = $row['user'];
+                                $_SESSION['name_teacher'][$i] = $row['name'] . ' ' . $row['surnames'];
 
-								$i += 1;
-							}
-						}
+                                $i += 1;
+                            }
+                        }
 
-						$i = 0;
+                        $i = 0;
 
-						foreach($_SESSION['user_teacher'] as $row)
-						{
-							echo
-							'
-								<option value="'.$_SESSION['user_teacher'][$i].'">'.$_SESSION['name_teacher'][$i].'</option>
+                        foreach ($_SESSION['user_teacher'] as $row) {
+                            echo
+                            '
+								<option value="' . $_SESSION['user_teacher'][$i] . '">' . $_SESSION['name_teacher'][$i] . '</option>
 							';
 
-							$i += 1;
-						}
-					?>
+                            $i += 1;
+                        }
+                        ?>
                     </select>
                     <label class="label">Semestre</label>
-
-                    <input class="text" type="number" name="txtsubjectsemester" value="" maxlength="2" min="1" max="12"
-                        list="defaultsemestres" required />
+                    <input class="text" type="number" name="txtsubjectsemester" value="" maxlength="2" min="1" max="12" list="defaultsemestres" required />
                     <datalist id="defaultsemestres">
                         <?php
-	for($i = 1; $i <= 12; $i ++)
-	{
-		echo
-		'
-			<option value="'.$i.'">
+                        for ($i = 1; $i <= 12; $i++) {
+                            echo
+                            '
+			<option value="' . $i . '">
 		';
-	}
-?>
+                        }
+                        ?>
                     </datalist>
-
                 </div>
             </div>
             <button class="btn icon" type="submit">save</button>
+        </form>
     </div>
-    </form>
-</div>
 </div>
 <div class="content-aside">
-<?php
-	include_once "../sections/options-disabled.php";
-?>
+    <?php
+    include_once "../sections/options-disabled.php";
+    ?>
 </div>

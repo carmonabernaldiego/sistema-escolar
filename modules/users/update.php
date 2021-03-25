@@ -74,4 +74,3 @@
 	}
 
 	header ('Location: /modules/users');
-?>

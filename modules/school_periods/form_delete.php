@@ -1,9 +1,9 @@
 <?php
-    require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
-    
-    $sp_id = $_POST['txtspid'];
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
-    echo'
+$sp_id = $_POST['txtspid'];
+
+echo '
         <div class="form-data">
             <div class="head">
                 <h1>Atención</h1>
@@ -11,7 +11,7 @@
             <div class="delete">
                 <h1>¿Eliminar registro?</h1>
                 <form name="form-delete-school-periods" action="delete.php" method="POST">
-                    <input style="display: none;" type="text" name="txtspid" value="'.$sp_id.'" />
+                    <input style="display: none;" type="text" name="txtspid" value="' . $sp_id . '" />
                     <button class="btn-si icon" type="submit">check</button>
                 </form>
                 <form action="#" method="POST">
@@ -21,6 +21,5 @@
         </div>
         ';
 echo '<div class="content-aside">';
-	include_once "../sections/options-disabled.php";
+include_once "../sections/options-disabled.php";
 echo '</div>';
-?>

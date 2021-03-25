@@ -13,7 +13,7 @@
                 <h1>¿Eliminar registro?</h1>
                 <form name="form-delete-users" action="delete.php" method="POST">
                     <input style="display: none;" type="text" name="txtuserid" value="'.$id.'" />
-                    <input style="display: none;" type="text" name="txtuserimage" value="'.$userimage.'" />
+                    <input style="display: none;" type="text" name="txtuserimage" value="'.$userimage. '" />
                     <button class="btn-si icon" type="submit">check</button>
                 </form>
                 <form action="#" method="POST">
@@ -25,4 +25,3 @@
 echo '<div class="content-aside">';
 	include_once "../sections/options-disabled.php";
 echo '</div>';
-?>

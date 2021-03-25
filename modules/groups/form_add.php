@@ -1,5 +1,5 @@
 <?php
-	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin-editor.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 ?>
 <div class="form-data">
     <div class="head">
@@ -16,29 +16,26 @@
                 </div>
                 <div class="last">
                     <label class="label">Semestre</label>
-                    <input class="text" type="number" name="txtgroupsemester" value="" maxlength="2" min="1" max="12"
-                        list="defaultsemestres" required />
+                    <input class="text" type="number" name="txtgroupsemester" value="" maxlength="2" min="1" max="12" list="defaultsemestres" required />
                     <datalist id="defaultsemestres">
                         <?php
-						for($i = 1; $i <= 12; $i ++)
-						{
-							echo
-							'
-								<option value="'.$i.'">
+                        for ($i = 1; $i <= 12; $i++) {
+                            echo
+                            '
+								<option value="' . $i . '">
 							';
-						}
-					?>
+                        }
+                        ?>
                     </datalist>
                     <label class="label">Asignar</label>
-                    <button class="btn-add-subjects" name="btn" value="form_add_subjects"
-                        type="submit">Asignaturas</button>
+                    <button class="btn-add-subjects" name="btn" value="form_add_subjects" type="submit">Asignaturas</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
 <div class="content-aside">
-<?php
-	include_once "../sections/options-disabled.php";
-?>
+    <?php
+    include_once "../sections/options-disabled.php";
+    ?>
 </div>

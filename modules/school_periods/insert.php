@@ -1,39 +1,33 @@
 <?php
-	include_once '../security.php';
-	include_once '../conexion.php';
-	
+include_once '../security.php';
+include_once '../conexion.php';
 
-	require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
-	
-	if (empty($_POST['txtspid']))
-	{
-		header('Location: /');
-		exit();
-	}
 
-	if($_POST['selectcurrent'] == '1')
-	{
-		$_SESSION['school_period'] = $_POST['txtspid'];
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
-		$sql_update = "UPDATE school_periods SET current = '0' WHERE school_period != '".$_POST['txtspid']."'";
+if (empty($_POST['txtspid'])) {
+	header('Location: /');
+	exit();
+}
 
-		mysqli_query($conexion, $sql_update);
-	}
+if ($_POST['selectcurrent'] == '1') {
+	$_SESSION['school_period'] = $_POST['txtspid'];
 
-	$sql_insert = "INSERT INTO school_periods(school_period, start_date, end_date, active, current) VALUES('".$_POST['txtspid']."', '".$_POST['datespstart']."', '".$_POST['datespend']."', '".$_POST['selectactive']."', '".$_POST['selectcurrent']."')";
+	$sql_update = "UPDATE school_periods SET current = '0' WHERE school_period != '" . $_POST['txtspid'] . "'";
 
-	if(mysqli_query($conexion, $sql_insert))
-	{
-		$_SESSION['msgbox_error'] = 0;
-		$_SESSION['msgbox_info'] = 1;
-		$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
-	}
-	else
-	{
-		$_SESSION['msgbox_info'] = 0;
-		$_SESSION['msgbox_error'] = 1;
-		$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
-	}
+	mysqli_query($conexion, $sql_update);
+}
 
-	header ('Location: /modules/school_periods');
-?>
+$sql_insert = "INSERT INTO school_periods(school_period, start_date, end_date, active, current) VALUES('" . $_POST['txtspid'] . "', '" . $_POST['datespstart'] . "', '" . $_POST['datespend'] . "', '" . $_POST['selectactive'] . "', '" . $_POST['selectcurrent'] . "')";
+
+if (mysqli_query($conexion, $sql_insert)) {
+	$_SESSION['msgbox_error'] = 0;
+	$_SESSION['msgbox_info'] = 1;
+	$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+} else {
+	$_SESSION['msgbox_info'] = 0;
+	$_SESSION['msgbox_error'] = 1;
+	$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
+}
+
+header('Location: /modules/school_periods');

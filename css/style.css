@@ -913,10 +913,10 @@ button:focus {
 }
 
 .form-data .body .text {
-    width: 90%;
+    width: 94%;
     height: 40px;
     margin: 0 0 10% 0;
-    padding: 0 5%;
+    padding: 0 3%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
@@ -948,7 +948,7 @@ button:focus {
     width: 100%;
     height: 40px;
     margin: 0 0 10% 0;
-    padding: 0 4%;
+    padding: 0 2%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
@@ -965,10 +965,10 @@ button:focus {
 }
 
 .form-data .body .date {
-    width: 92.2%;
+    width: 94.2%;
     height: 40px;
     margin: 0 0 10% 0;
-    padding: 0 4%;
+    padding: 0 3%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
@@ -989,7 +989,7 @@ button:focus {
 
 .form-data .body .user-image {
     display: block;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     border: solid #282a36 3px;
     border-radius: 0.4em;
@@ -1346,9 +1346,8 @@ button:focus {
     clear: both;
 }
 
-.formConfigUser .body .user-image {
-    display: block;
-    width: 100%;
+.formConfigUser .body .label {
+    text-transform: none;
 }
 
 

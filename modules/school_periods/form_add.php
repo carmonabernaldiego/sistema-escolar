@@ -1,5 +1,5 @@
 <?php
-    require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 ?>
 <div class="form-data">
     <div class="head">
@@ -12,8 +12,7 @@
                     <label class="label">Periodo escolar</label>
                     <input class="text" type="text" name="txtspid" value="" maxlength="30" required autofocus />
                     <label class="label">Inicia</label>
-                    <input class="date" type="date" name="datespstart" value="'.$_SESSION['sp_start'][0].'" required
-                        autofocus />
+                    <input class="date" type="date" name="datespstart" value="'.$_SESSION['sp_start'][0].'" required autofocus />
                     <label class="label">Termina</label>
                     <input class="date" type="date" name="datespend" value="'.$_SESSION['sp_end'][0].'" required />
                 </div>
@@ -29,12 +28,13 @@
                         <option value="1">Si</option>
                     </select>
                 </div>
-            </div><button class="btn icon" type="submit">save</button>
+            </div>
+            <button class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>
 <div class="content-aside">
     <?php
-	include_once "../sections/options-disabled.php";
-?>
+    include_once "../sections/options-disabled.php";
+    ?>
 </div>

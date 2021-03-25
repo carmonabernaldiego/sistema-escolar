@@ -30,12 +30,8 @@ echo '
 					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
 					<label class="label">Email</label>
 					<input class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" required autofocus/>
-				</div>
-				<div class="last">
-					<label class="label">Contraseña</label>
-					<input class="text" type="password" name="txtuserpassUpdate" placeholder="• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •"/>
 					<label class="label">Permisos</label>
-					<select class="select" name="txtusertype">
+					<select class="select" name="txtusertype" disabled>
 				';
 if ($_SESSION['user_type'][0] == 'admin') {
 	echo
@@ -74,6 +70,14 @@ echo
 '
 					</select>
 				</div>
+				<div class="last">
+					<label class="label">Cambiar contraseña</label>
+					<input class="text" type="password" name="txtuserpassOldUpdate" placeholder="Contraseña actual"/>
+					<label class="label" style="visibility: hidden;">Label</label>
+					<input class="text" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña"/>
+					<label class="label" style="visibility: hidden;">Label</label>
+					<input class="text" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña"/>
+				</div>
 				<div class="last imageuser">
 					<label class="label" style="text-align:center;">Imagen</label>
 					<img id="userimage" class="user-image" src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
@@ -82,7 +86,6 @@ echo
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
-</div>
         </form>
     </div>
 </div>

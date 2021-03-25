@@ -1,5 +1,5 @@
 <?php
-	include_once 'security.php';
+include_once 'security.php';
 ?>
 <div class="form-options">
 	<div class="options">
@@ -7,7 +7,8 @@
 			<button class="btn disabled icon" name="btn" value="form_add" type="submit" disabled>add</button>
 		</form>
 		<form action="#" method="POST">
-			<button class="btn disabled icon" name="btn" value="form_coding" type="submit" disabled>code</button>		</form>
+			<button class="btn disabled icon" name="btn" value="form_coding" type="submit" disabled>code</button>
+		</form>
 		<form action="#" method="POST">
 			<button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
 		</form>
@@ -18,8 +19,8 @@
 	<div class="search">
 		<form name="form-search" action="#" method="POST">
 			<p>
-				<input type="text" class="text" name="search" placeholder="Buscar..." maxlength="50">
-				<button class="btn-search icon" type="submit">search</button>
+				<input type="text" class="text" name="search" placeholder="Buscar..." maxlength="50" disabled>
+				<button class="btn-search icon" type="submit" style="background: #6a7186; cursor: initial;" disabled>search</button>
 			</p>
 		</form>
 	</div>

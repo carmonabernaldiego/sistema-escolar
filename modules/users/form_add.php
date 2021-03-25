@@ -1,5 +1,5 @@
 <?php
-require_once($_SESSION['raiz'].'/modules/sections/role-access-admin.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
 echo '
 <div class="form-data">
@@ -14,6 +14,8 @@ echo '
 					<input class="text" type="text" name="txtuseridAdd" value="" autofocus required/>
 					<label class="label">Email</label>
 					<input class="text" type="email" name="txtemailAdd" value=""/>
+				</div>
+				<div class="last">
 					<label class="label">Contraseña</label>
 					<input class="text" type="password" name="txtuserpassAdd" value="" required/>
 					<label class="label">Permisos</label>
@@ -32,28 +34,27 @@ echo '
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
-</div>
         </form>
     </div>
 </div>
 ';
 echo '<div class="content-aside">';
-	include_once "../sections/options-disabled.php";
+include_once "../sections/options-disabled.php";
 echo '</div>';
 ?>
 <script>
-document.getElementById("fileimage").onchange = function(e) {
-    // Creamos el objeto de la clase FileReader
-    let reader = new FileReader();
+	document.getElementById("fileimage").onchange = function(e) {
+		// Creamos el objeto de la clase FileReader
+		let reader = new FileReader();
 
-    // Leemos el archivo subido y se lo pasamos a nuestro fileReader
-    reader.readAsDataURL(e.target.files[0]);
+		// Leemos el archivo subido y se lo pasamos a nuestro fileReader
+		reader.readAsDataURL(e.target.files[0]);
 
-    // Le decimos que cuando este listo ejecute el código interno
-    reader.onload = function() {
-        image = document.getElementById('userimage');
+		// Le decimos que cuando este listo ejecute el código interno
+		reader.onload = function() {
+			image = document.getElementById('userimage');
 
-        image.src = reader.result;
-    };
-}
+			image.src = reader.result;
+		};
+	}
 </script>
