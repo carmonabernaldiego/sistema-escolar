@@ -48,6 +48,9 @@ if (!empty($_POST['btn'])) {
 		<?php
 		if (!empty($_SESSION['section-admin']) == 'go-' . $_SESSION['user']) {
 			include_once '../modules/sections/section-admin.php';
+		}elseif (!empty($_SESSION['section-editor']) == 'go-'.$_SESSION['user'])
+		{
+			include_once '../sections/section-editor.php';
 		}
 		?>
 	</aside>
