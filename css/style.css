@@ -1327,6 +1327,32 @@ button:focus {
 
 
 /*-------------------------------------------
+  Formulario | Configuration User
+-------------------------------------------*/
+
+.formConfigUser {
+    float: none;
+    margin: 0 0 35px 0;
+    width: 100%;
+    height: 100%;
+    background: #44475a;
+    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.6em;
+}
+
+.formConfigUser:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.formConfigUser .body .user-image {
+    display: block;
+    width: 72.5%;
+}
+
+
+/*-------------------------------------------
   Formulario | Attendance
 -------------------------------------------*/
 
