@@ -50,7 +50,7 @@ if (!empty($_POST['btn'])) {
 			include_once '../modules/sections/section-admin.php';
 		}elseif (!empty($_SESSION['section-editor']) == 'go-'.$_SESSION['user'])
 		{
-			include_once '../sections/section-editor.php';
+			include_once '../modules/sections/section-editor.php';
 		}
 		?>
 	</aside>
