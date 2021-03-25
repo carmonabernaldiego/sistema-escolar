@@ -29,44 +29,46 @@ echo '
 					<input style="display: none;" type="text" name="txtuseridUpdate" value="' . $_SESSION['user_id'][0] . '"/>
 					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
 					<label class="label">Email</label>
-					<input class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" autofocus/>
+					<input class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" required autofocus/>
+				</div>
+				<div class="last">
 					<label class="label">Contraseña</label>
-					<input class="text" type="password" name="txtuserpassUpdate" value="Password1234//*" disabled/>
+					<input class="text" type="password" name="txtuserpassUpdate" placeholder="• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •"/>
 					<label class="label">Permisos</label>
 					<select class="select" name="txtusertype">
-					';
+				';
 if ($_SESSION['user_type'][0] == 'admin') {
 	echo
 	'
-								<option value="admin">Administrador</option>
-								<option value="student">Alumno</option>
-								<option value="teacher">Docente</option>
-								<option value="editor">Editor</option>	
-							';
+							<option value="admin">Administrador</option>
+							<option value="student">Alumno</option>
+							<option value="teacher">Docente</option>
+							<option value="editor">Editor</option>	
+						';
 } elseif ($_SESSION['user_type'][0] == 'alumno') {
 	echo
 	'
-								<option value="student">Alumno</option>
-								<option value="admin">Administrador</option>
-								<option value="teacher">Docente</option>
-								<option value="editor">Editor</option>	
-							';
+							<option value="student">Alumno</option>
+							<option value="admin">Administrador</option>
+							<option value="teacher">Docente</option>
+							<option value="editor">Editor</option>	
+						';
 } elseif ($_SESSION['user_type'][0] == 'docente') {
 	echo
 	'
-								<option value="teacher">Docente</option>
-								<option value="admin">Administrador</option>
-								<option value="student">Alumno</option>
-								<option value="editor">Editor</option>	
-							';
+							<option value="teacher">Docente</option>
+							<option value="admin">Administrador</option>
+							<option value="student">Alumno</option>
+							<option value="editor">Editor</option>	
+						';
 } elseif ($_SESSION['user_type'][0] == 'editor') {
 	echo
 	'
-								<option value="editor">Editor</option>
-								<option value="admin">Administrador</option>
-								<option value="student">Alumno</option>
-								<option value="teacher">Docente</option>
-							';
+							<option value="editor">Editor</option>
+							<option value="admin">Administrador</option>
+							<option value="student">Alumno</option>
+							<option value="teacher">Docente</option>
+						';
 }
 echo
 '
