@@ -96,11 +96,11 @@ if (strpos($url_actual, 'modules')) {
         <img class="activator-user" id="activator-user" src="/images/users/<?php echo $_SESSION['image']; ?>">
         <nav>
             <ul>
-                <li>
-                    <a href="/user"><img src="/images/menu_mobile/settings.svg" title="Configuración"></a>
+                <li class="first">
+                    <a href="/modules/logout"><img src="/images/menu_mobile/logout.svg" title="Cerrar Sesión"></a>
                 </li>
                 <li>
-                    <a href="/modules/logout"><img src="/images/menu_mobile/logout.svg" title="Cerrar Sesión"></a>
+                    <a href="/user"><img src="/images/menu_mobile/settings.svg" title="Configuración"></a>
                 </li>
             </ul>
         </nav>

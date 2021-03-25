@@ -8,6 +8,13 @@ header('Content-Type: text/html; charset=UTF-8');
 
 //Permisos de administrador
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
+
+// Formulario actual
+if (!empty($_POST['btn'])) {
+	$view_form = $_POST['btn'] . '.php';
+} else {
+	$view_form = 'form_default.php';
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">

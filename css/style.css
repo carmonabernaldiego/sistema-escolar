@@ -1504,8 +1504,8 @@ button:focus {
 }
 
 .user-mobile nav ul li a img {
-    margin-left: 10.5px;
-    margin-top: 9px;
+    margin-left: 10px;
+    margin-top: 10px;
     width: 20px;
     opacity: 0;
     -webkit-transform: translateX(10px);
@@ -1595,8 +1595,8 @@ button:focus {
 
 .menu-mobile header nav ul li a {
     display: block;
-    padding: .5em .8em;
-    margin: .2em;
+    padding: .4em .8em;
+    margin: 4.5px;
     border-radius: 0.6em;
 }
 
