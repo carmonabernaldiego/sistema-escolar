@@ -8,8 +8,8 @@ if (empty($_POST['txtuseridUpdate'])) {
 	header('Location: /');
 	exit();
 }
-/*
-$directorioSubida = "../../images/users/";
+
+$directorioSubida = "../images/users/";
 $max_file_size = "20480000";
 $extensionesValidas = array("jpg", "png", "jpeg");
 
@@ -43,11 +43,11 @@ if (isset($_FILES['fileimage'])) {
 		$nombre_img = $nombreArchivo . "." . $extension;
 		move_uploaded_file($directorioTemp, $nombreCompleto);
 	} else {
-		$nombre_img = "user.png";
+		$nombre_img = $_SESSION['image'];
 	}
 }
 
-$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', permissions = '" . $_POST['txtusertype'] . "', image = '" . $nombre_img . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', image = '" . $nombre_img . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
 
 if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['msgbox_error'] = 0;
@@ -62,6 +62,6 @@ if (mysqli_query($conexion, $sql_update)) {
 if ($_POST['txtuseridUpdate'] == $_SESSION['user']) {
 	$_SESSION['image'] = $nombre_img;
 	setcookie('image', $nombre_img, time() + 365 * 24 * 60 * 60, "/");
-}*/
+}
 
-header('Location: /modules/users');
+header('Location: /user');

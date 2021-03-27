@@ -82,7 +82,7 @@ echo
 					<label class="label" style="text-align:center;">Imagen</label>
 					<img id="userimage" class="user-image" src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
 					<label class="file" for="fileimage">Abrir Imagen</label>
-					<input id="fileimage" style="display: none;" type="file" name="fileimageUpdate" accept=".jpg, .jpeg, .png" />
+					<input id="fileimage" style="display: none;" type="file" name="fileimage" accept=".jpg, .jpeg, .png" />
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
