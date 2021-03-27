@@ -58,9 +58,12 @@ if (strpos($url_actual, 'modules')) {
         <li><a class="<?php if ($output[1] == 'students') {
                             echo 'active';
                         } ?>" href="/modules/students"><span class="icon">recent_actors</span>Alumnos</a></li>
+        <li><a class="<?php if ($output[1] == 'careers') {
+                            echo 'active';
+                        } ?>" href="/modules/careers"><span class="icon">style</span>Carreras</a></li>
         <li><a class="<?php if ($output[1] == 'subjects') {
                             echo 'active';
-                        } ?>" href="/modules/subjects"><span class="icon">style</span>Asignaturas</a></li>
+                        } ?>" href="/modules/subjects"><span class="icon">import_contacts</span>Asignaturas</a></li>
         <li><a class="<?php if ($output[1] == 'groups') {
                             echo 'active';
                         } ?>" href="/modules/groups"><span class="icon">group_work</span>Grupos</a></li>
@@ -106,9 +109,14 @@ if (strpos($url_actual, 'modules')) {
                                 } ?>" href="/modules/students" title="Alumnos"><img src="/images/menu_mobile/recent_actors.svg" title="Alumnos"></a>
                 </li>
                 <li>
+                    <a class="<?php if ($output[1] == 'careers') {
+                                    echo 'active';
+                                } ?>" href="/modules/careers" title="Carreras"><img src="/images/menu_mobile/style.svg" title="Carreras"></a>
+                </li>
+                <li>
                     <a class="<?php if ($output[1] == 'subjects') {
                                     echo 'active';
-                                } ?>" href="/modules/subjects" title="Asignaturas"><img src="/images/menu_mobile/style.svg" title="Asignaturas"></a>
+                                } ?>" href="/modules/subjects" title="Asignaturas"><img src="/images/menu_mobile/auto_stories.svg" title="Asignaturas"></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'groups') {

@@ -22,7 +22,7 @@ echo '
 		<h1 class="titulo">Actualizar</h1>
     </div>
    <div class="body">
-		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST">
+		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return confirmPass()">
 			<div class="wrap">
 				<div class="first">
 					<label class="label">Usuario</label>
@@ -31,7 +31,7 @@ echo '
 					<label class="label">Email</label>
 					<input class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" required autofocus/>
 					<label class="label">Permisos</label>
-					<select class="select" name="txtusertype" disabled>
+					<select class="select" name="txt" disabled>
 				';
 if ($_SESSION['user_type'][0] == 'admin') {
 	echo
@@ -71,18 +71,18 @@ echo
 					</select>
 				</div>
 				<div class="last">
+					<label class="label">Confirmar contraseña</label>
+					<input class="text" type="password" name="txtuserpassOldUpdate" placeholder="Contraseña actual" required/>
 					<label class="label">Cambiar contraseña</label>
-					<input class="text" type="password" name="txtuserpassOldUpdate" placeholder="Contraseña actual"/>
-					<label class="label" style="visibility: hidden;">Label</label>
-					<input class="text" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña"/>
-					<label class="label" style="visibility: hidden;">Label</label>
-					<input class="text" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña"/>
+					<input class="text" id="pass1" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña"/>
+					<label id="labelError" class="label labelError">Las contraseñas no coinciden.</label>
+					<input class="text" id="pass2" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña"/>
 				</div>
 				<div class="last imageuser">
 					<label class="label" style="text-align:center;">Imagen</label>
 					<img id="userimage" class="user-image" src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
 					<label class="file" for="fileimage">Abrir Imagen</label>
-					<input id="fileimage" style="display: none;" type="file" name="fileimage" accept=".jpg, .jpeg, .png" />
+					<input id="fileimage" style="display: none;" type="file" name="fileimageUpdate" accept=".jpg, .jpeg, .png" />
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
@@ -106,4 +106,32 @@ echo
 			image.src = reader.result;
 		};
 	}
+
+	function confirmPass() {
+		pass1 = document.getElementById('pass1');
+		pass2 = document.getElementById('pass2');
+
+		if (pass1.value != pass2.value) {
+			document.getElementById("labelError").classList.add("mostrar");
+
+			return false;
+		} else {
+			document.getElementById("labelError").classList.remove("mostrar");
+
+			/*setTimeout(function() {
+				location.reload();
+			}, 3000);*/
+
+			return true;
+		}
+	}
+
+	//Desactivamos Enter para no ejecutar un Submit al Formulario
+	/*document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('input[type=email]').forEach(node => node.addEventListener('keypress', e => {
+			if (e.keyCode == 13) {
+				e.preventDefault();
+			}
+		}))
+	});*/
 </script>

@@ -2,14 +2,13 @@
 include_once '../modules/security.php';
 include_once '../modules/conexion.php';
 
-
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
 if (empty($_POST['txtuseridUpdate'])) {
 	header('Location: /');
 	exit();
 }
-
+/*
 $directorioSubida = "../../images/users/";
 $max_file_size = "20480000";
 $extensionesValidas = array("jpg", "png", "jpeg");
@@ -63,6 +62,6 @@ if (mysqli_query($conexion, $sql_update)) {
 if ($_POST['txtuseridUpdate'] == $_SESSION['user']) {
 	$_SESSION['image'] = $nombre_img;
 	setcookie('image', $nombre_img, time() + 365 * 24 * 60 * 60, "/");
-}
+}*/
 
 header('Location: /modules/users');

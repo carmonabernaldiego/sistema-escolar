@@ -24,6 +24,8 @@ if (strpos($url_actual, 'modules')) {
         $_SESSION['title_form_section'] = 'Alumnos';
     } elseif ($name_page[1] == 'subjects') {
         $_SESSION['title_form_section'] = 'Asignaturas';
+    } elseif ($name_page[1] == 'careers') {
+        $_SESSION['title_form_section'] = 'Carreras';
     } elseif ($name_page[1] == 'groups') {
         $_SESSION['title_form_section'] = 'Grupos';
     } elseif ($name_page[1] == 'attendance') {

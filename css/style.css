@@ -321,7 +321,7 @@ button:focus {
 }
 
 .nav-home ul {
-    margin-top: 8%;
+    margin-top: 6%;
     display: flex;
     flex-flow: column wrap;
     list-style: none;
@@ -1348,6 +1348,21 @@ button:focus {
 
 .formConfigUser .body .label {
     text-transform: none;
+}
+
+.formConfigUser .body .labelError {
+    visibility: hidden;
+    display: block;
+    margin-top: -10px;
+    padding: 5px 0;
+    border-radius: 0.4em;
+    text-align: center;
+    background-color: #db5f5f;
+    box-shadow: 2px 2px 4px rgb(219 73 73 / 30%);
+}
+
+.mostrar {
+    visibility: visible!important;
 }
 
 
