@@ -52,7 +52,11 @@ if (empty($_POST['txtuseridUpdate'])) {
 				}
 			}
 
-			$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', image = '" . $nombre_img . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+			if ($_POST['txtuserpassNewUpdate'] == $_POST['txtuserpassConfirmUpdate']) {
+				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', image = '" . $nombre_img . "', pass = '" . $_POST['txtuserpassconfirmUpdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+			} else {
+				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', image = '" . $nombre_img . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+			}
 
 			if (mysqli_query($conexion, $sql_update)) {
 				$_SESSION['msgbox_error'] = 0;
