@@ -10,7 +10,7 @@
 
 	.box-notification-ok p,
 	.box-notification-error p {
-		padding: 17px 5%;
+		padding: 17px 35px;
 	}
 
 	@media only screen and (max-width: 1186px) {
@@ -31,6 +31,11 @@
 			position: initial;
 			width: 100%;
 			margin: -77px 0 27px 0;
+		}
+
+		.box-notification-ok p,
+		.box-notification-error p {
+			padding: 17px 5%;
 		}
 	}
 </style>
