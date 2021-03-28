@@ -1361,7 +1361,7 @@ button:focus {
     box-shadow: 2px 2px 4px rgb(219 73 73 / 30%);
 }
 
-.mostrar {
+.formConfigUser .body .labelError.show {
     visibility: visible!important;
 }
 

@@ -1,3 +1,39 @@
+<style type="text/css">
+	.box-notification-ok,
+	.box-notification-error {
+		position: absolute;
+		top: 0;
+		width: 72%;
+		height: 50px;
+		margin: 35px 0 0 0;
+	}
+
+	.box-notification-ok p,
+	.box-notification-error p {
+		padding: 17px 5%;
+	}
+
+	@media only screen and (max-width: 1186px) {
+
+		.box-notification-ok,
+		.box-notification-error {
+			position: absolute;
+			top: 0;
+			width: 94%;
+			margin: 100px 0 0 0;
+		}
+	}
+
+	@media only screen and (max-width: 963px) {
+
+		.box-notification-ok,
+		.box-notification-error {
+			position: initial;
+			width: 100%;
+			margin: -77px 0 27px 0;
+		}
+	}
+</style>
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
@@ -90,6 +126,7 @@ echo
     </div>
 </div>
 ';
+include_once '../modules/notif_info.php';
 ?>
 <script>
 	document.getElementById("fileimage").onchange = function(e) {
@@ -112,11 +149,11 @@ echo
 		pass2 = document.getElementById('pass2');
 
 		if (pass1.value != pass2.value) {
-			document.getElementById("labelError").classList.add("mostrar");
+			document.getElementById("labelError").classList.add("show");
 
 			return false;
 		} else {
-			document.getElementById("labelError").classList.remove("mostrar");
+			document.getElementById("labelError").classList.remove("show");
 
 			/*setTimeout(function() {
 				location.reload();
