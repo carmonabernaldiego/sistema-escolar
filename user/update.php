@@ -2,7 +2,7 @@
 include_once '../modules/security.php';
 include_once '../modules/conexion.php';
 
-require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
 if (empty($_POST['txtuseridUpdate'])) {
 	header('Location: /');
