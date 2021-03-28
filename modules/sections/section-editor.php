@@ -53,7 +53,7 @@ if (strpos($url_actual, 'modules')) {
                         } ?>" href="/modules/careers"><span class="icon">style</span>Carreras</a></li>
         <li><a class="<?php if ($output[1] == 'subjects') {
                             echo 'active';
-                        } ?>" href="/modules/subjects"><span class="icon">auto_stories</span>Asignaturas</a></li>
+                        } ?>" href="/modules/subjects"><span class="icon">import_contacts</span>Asignaturas</a></li>
         <li><a class="<?php if ($output[1] == 'groups') {
                             echo 'active';
                         } ?>" href="/modules/groups"><span class="icon">group_work</span>Grupos</a></li>
