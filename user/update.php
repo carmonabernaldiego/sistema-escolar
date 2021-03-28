@@ -52,7 +52,7 @@ if (empty($_POST['txtuseridUpdate'])) {
 				}
 			}
 
-			if ($_POST['txtuserpassNewUpdate'] == $_POST['txtuserpassConfirmUpdate']) {
+			if ($_POST['txtuserpassNewUpdate'] == $_POST['txtuserpassConfirmUpdate'] and $_POST['txtuserpassNewUpdate'] != "" and $_POST['txtuserpassConfirmUpdate'] != "") {
 				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', image = '" . $nombre_img . "', pass = '" . $_POST['txtuserpassconfirmUpdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
 			} else {
 				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', image = '" . $nombre_img . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
