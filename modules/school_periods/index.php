@@ -24,7 +24,7 @@ if (!empty($_POST['page'])) {
 }
 
 // Numero de registros a visualizar
-$max = 10;
+$max = 15;
 $inicio = ($page - 1) * $max;
 
 // Cargar datos de Periodos Escolares
