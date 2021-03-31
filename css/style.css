@@ -902,6 +902,17 @@ button:focus {
     width: 45%;
 }
 
+.form-data .body .description {
+    width: 93.3%;
+}
+
+.form-data .body .description .textarea {
+    width: 96%;
+    height: 60%;
+    margin: 0 0 15% 0;
+    padding: 12px 2% 12px;
+}
+
 .form-data .body .label {
     display: block;
     margin: 0 0 2% 0;

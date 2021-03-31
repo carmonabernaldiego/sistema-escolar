@@ -6,7 +6,6 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 		<tr>
 			<th>Carrera</th>
 			<th>Nombre</th>
-			<th class="center">Semestre</th>
 			<th class="view center"><a class="icon">visibility</a></th>
 			<th class="edit center"><a class="icon">edit</a></th>
 			<?php
@@ -16,21 +15,20 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 			?>
 		</tr>
 		<?php
-		for ($i = 0; $i < $_SESSION['total_subjects']; $i++) {
+		for ($i = 0; $i < $_SESSION['total_careers']; $i++) {
 			echo '
 		    		<tr>
-		    			<td>' . $_SESSION["subject"][$i] . '</td>
-						<td>' . $_SESSION["subject_name"][$i] . '</td>
-						<td class="center">' . $_SESSION["subject_semester"][$i] . '</td>
+		    			<td>' . $_SESSION["career"][$i] . '</td>
+						<td>' . $_SESSION["career_name"][$i] . '</td>
 						<td>
 							<form action="#" method="POST">
-								<input style="display:none;" type="text" name="txtsubject" value="' . $_SESSION["subject"][$i] . '"/>
+								<input style="display:none;" type="text" name="txtcareer" value="' . $_SESSION["career"][$i] . '"/>
 								<button class="btnview" name="btn" value="form_consult" type="submit"></button>
 							</form>
 						</td>
 						<td>
 							<form action="#" method="POST">
-								<input style="display:none;" type="text" name="txtsubject" value="' . $_SESSION["subject"][$i] . '"/>
+								<input style="display:none;" type="text" name="txtcareer" value="' . $_SESSION["career"][$i] . '"/>
 								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
 						</td>';
@@ -38,7 +36,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 				echo '
 								<td>
 									<form action="#" method="POST">
-										<input style="display:none;" type="text" name="txtsubject" value="' . $_SESSION["subject"][$i] . '"/>
+										<input style="display:none;" type="text" name="txtcareer" value="' . $_SESSION["career"][$i] . '"/>
 										<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
 									</form>
 								</td>

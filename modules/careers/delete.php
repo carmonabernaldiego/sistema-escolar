@@ -5,12 +5,12 @@ include_once '../conexion.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
-if (empty($_POST['txtsubject'])) {
+if (empty($_POST['txtcareer'])) {
 	header('Location: /');
 	exit();
 }
 
-$sql_delete = "DELETE FROM subjects WHERE subject = '" . $_POST['txtsubject'] . "'";
+$sql_delete = "DELETE FROM careers WHERE career = '" . $_POST['txtcareer'] . "'";
 
 if (mysqli_query($conexion, $sql_delete)) {
 	$_SESSION['msgbox_error'] = 0;
@@ -23,4 +23,4 @@ if (mysqli_query($conexion, $sql_delete)) {
 }
 
 
-header('Location: /modules/subjects');
+header('Location: /modules/careers');

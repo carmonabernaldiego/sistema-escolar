@@ -70,7 +70,7 @@ echo '
 					<input style="display: none;" type="text" name="txtuseridUpdate" value="' . $_SESSION['user_id'][0] . '"/>
 					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
 					<label class="label">Email</label>
-					<input class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" required autofocus/>
+					<input class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" required autofocus/>
 					<label class="label">Permisos</label>
 					<select class="select" name="txt" disabled>
 				';
@@ -113,11 +113,11 @@ echo
 				</div>
 				<div class="last">
 					<label class="label">Confirmar contraseña</label>
-					<input class="text" type="password" name="txtuserpassOldUpdate" placeholder="Contraseña actual" required/>
+					<input class="text" type="password" name="txtuserpassOldUpdate" placeholder="Contraseña actual" maxlength="50" required/>
 					<label class="label">Cambiar contraseña</label>
-					<input class="text" id="pass1" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña"/>
+					<input class="text" id="pass1" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña" maxlength="50"/>
 					<label id="labelError" class="label labelError">Las contraseñas no coinciden.</label>
-					<input class="text" id="pass2" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña"/>
+					<input class="text" id="pass2" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña" maxlength="50"/>
 				</div>
 				<div class="last imageuser">
 					<label class="label" style="text-align:center;">Imagen</label>

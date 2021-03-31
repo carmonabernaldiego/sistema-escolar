@@ -11,13 +11,13 @@ echo '
 			<div class="wrap">
 				<div class="first">
 					<label class="label">Usuario</label>
-					<input class="text" type="text" name="txtuseridAdd" value="" autofocus required/>
+					<input class="text" type="text" name="txtuseridAdd" value="" maxlength="50" autofocus required/>
 					<label class="label">Email</label>
-					<input class="text" type="email" name="txtemailAdd" value=""/>
+					<input class="text" type="email" name="txtemailAdd" value="" maxlength="200"/>
 				</div>
 				<div class="last">
 					<label class="label">Contraseña</label>
-					<input class="text" type="password" name="txtuserpassAdd" value="" required/>
+					<input class="text" type="password" name="txtuserpassAdd" value="" maxlength="50" required/>
 					<label class="label">Permisos</label>
 					<select class="select" name="txtusertype">
 						<option value="editor">Editor</option>
