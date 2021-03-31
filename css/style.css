@@ -493,8 +493,6 @@ button:focus {
 .logo-form-login img {
     width: 130px;
     height: 130px;
-    margin: 5px 0 0 5px;
-    border-radius: 5em;
 }
 
 .form-login .label {
@@ -507,10 +505,10 @@ button:focus {
 
 .form-login .text,
 .textcontrasena {
-    width: 80%;
+    width: 85%;
     height: 40px;
-    margin: 0 7% 4%;
-    padding: 0 3%;
+    margin: 0 5% 18px;
+    padding: 0 2.3%;
     background: #eef4ff;
     color: #4a567c;
     border: 2px solid #9fa9c7;
@@ -529,14 +527,14 @@ button:focus {
 
 .form-login #checkboxrecordar {
     float: left;
-    margin: 3% 2% 2% 7%;
+    margin: 3% 2% 2% 5.1%;
 }
 
 .form-login .button {
     float: right;
     width: 32%;
     height: 35px;
-    margin: .5% 6% 0 0;
+    margin-right: 4.3%;
     background: #6272a4;
     border: none;
     border-radius: 0.4em;
@@ -1656,15 +1654,19 @@ button:focus {
     }
     .form-login {
         width: 300px;
-        height: 360px;
+        height: 370px;
     }
     .form-login .labelrecordar {
         float: left;
-        margin: 1.2% 0 4% 1%;
+        margin: -0.9% 0 4% 1%;
+    }
+    .form-login .text,
+    .textcontrasena {
+        width: 84.3%;
     }
     .form-login #checkboxrecordar {
         float: left;
-        margin: 2% 2% 4% 31%;
+        margin: 0 2% 4% 32%;
     }
     .form-login .button {
         float: none;
