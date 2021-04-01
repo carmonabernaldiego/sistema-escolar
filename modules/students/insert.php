@@ -10,7 +10,7 @@ if (empty($_POST['txtuserid'])) {
 	exit();
 }
 
-$sql_insert = "INSERT INTO students(user, school_period, name, surnames, curp, rfc, address, phone, career, documentation, observations) VALUES('" . $_POST['txtuserid'] . "', '" . $_SESSION['school_period'] . "', '" . $_POST['txtname'] . "', '" . $_POST['txtsurnames'] . "', '" . $_POST['txtcurp'] . "', '" . $_POST['txtrfc'] . "', '" . $_POST['txtaddress'] . "', '" . $_POST['txtphone'] . "', '" . $_POST['selectcareer'] . "', '" . $_POST['selectdocumentation'] . "', '" . $_POST['txtobservation'] . "')";
+$sql_insert = "INSERT INTO students(user, school_period, name, surnames, curp, rfc, address, phone, career, documentation, admission_date) VALUES('" . $_POST['txtuserid'] . "', '" . $_SESSION['school_period'] . "', '" . $_POST['txtname'] . "', '" . $_POST['txtsurnames'] . "', '" . $_POST['txtcurp'] . "', '" . $_POST['txtrfc'] . "', '" . $_POST['txtaddress'] . "', '" . $_POST['txtphone'] . "', '" . $_POST['selectcareer'] . "', '" . $_POST['selectdocumentation'] . "', '" . $_POST['dateadmission'] . "')";
 
 if (mysqli_query($conexion, $sql_insert)) {
 	$_SESSION['msgbox_error'] = 0;
