@@ -16,9 +16,9 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['student_rfc'][0] = $row['rfc'];
 		$_SESSION['student_address'][0] = $row['address'];
 		$_SESSION['student_phone'][0] = $row['phone'];
-		$_SESSION['student_level_studies'][0] = $row['level_studies'];
+		$_SESSION['student_career'][0] = $row['career'];
 		$_SESSION['student_documentation'][0] = $row['documentation'];
-		$_SESSION['student_observations'][0] = $row['observations'];
+		$_SESSION['student_admission_date'][0] = $row['admission_date'];
 	}
 }
 
@@ -48,41 +48,28 @@ echo '
 					<input class="text" type="number" name="txtphone" value="' . $_SESSION['student_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
 					<label class="label">Domicilio</label>
 					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['student_address'][0] . '" maxlength="100" required/>
-					<label class="label">Nivel de estudios</label>
-					<select class="select" name="selectlevelstudies">
+					<label class="label">Carrera</label>
+					<select class="select" name="selectcareer">
+						<option value="' . $_SESSION['student_career'][0] . '">' . $_SESSION['student_career'][0] . '</option>
 				';
-if ($_SESSION['student_level_studies'][0] == 'Licenciatura') {
-	echo
-	'
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Maestria">Maestria</option>
-							<option value="Doctorado">Doctorado</option>
-						';
-} elseif ($_SESSION['student_level_studies'][0] == 'Ingenieria') {
-	echo
-	'
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Maestria">Maestria</option>
-							<option value="Doctorado">Doctorado</option>
-						';
-} elseif ($_SESSION['student_level_studies'][0] == 'Maestria') {
-	echo
-	'
-							<option value="Maestria">Maestria</option>
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Doctorado">Doctorado</option>
-						';
-} elseif ($_SESSION['student_level_studies'][0] == 'Doctorado') {
-	echo
-	'
-							<option value="Doctorado">Doctorado</option>
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Maestria">Maestria</option>
-						';
+$i = 0;
+
+$sql = "SELECT * FROM careers ORDER BY name";
+
+if ($result = $conexion->query($sql)) {
+	while ($row = mysqli_fetch_array($result)) {
+		if ($_SESSION['student_career'][0] != $row['name']) {
+			echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+		}
+
+		$i += 1;
+	}
+} else {
+	$_SESSION['msgbox_info'] = 0;
+	$_SESSION['msgbox_error'] = 1;
+	$_SESSION['text_msgbox_error'] = 'No existen registros en el modulo de carreras.';
+
+	header('Location: /modules/students');
 }
 echo '
 					</select>
@@ -104,8 +91,8 @@ if ($_SESSION['student_documentation'][0] == 1) {
 }
 echo '
 					</select>
-					<label class="label">Observación</label>
-					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['student_observations'][0] . '" maxlength="200"/>
+					<label class="label">Fecha de admisión</label>
+					<input class="date" type="date" name="dateadmission" value="' . $_SESSION['student_admission_date'][0] . '" required/>
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>

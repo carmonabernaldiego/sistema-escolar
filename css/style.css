@@ -918,7 +918,7 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .form-data .body .text {

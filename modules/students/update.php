@@ -10,7 +10,7 @@ if (empty($_POST['txtuserid'])) {
 	exit();
 }
 
-$sql_update = "UPDATE students SET name = '" . $_POST['txtname'] . "', surnames = '" . $_POST['txtsurnames'] . "', curp = '" . $_POST['txtcurp'] . "', rfc = '" . $_POST['txtrfc'] . "', address = '" . $_POST['txtaddress'] . "', phone = '" . $_POST['txtphone'] . "', level_studies = '" . $_POST['selectlevelstudies'] . "', documentation = '" . $_POST['selectdocumentation'] . "', observations = '" . $_POST['txtobservation'] . "' WHERE user = '" . $_POST['txtuserid'] . "'";
+$sql_update = "UPDATE students SET name = '" . $_POST['txtname'] . "', surnames = '" . $_POST['txtsurnames'] . "', curp = '" . $_POST['txtcurp'] . "', rfc = '" . $_POST['txtrfc'] . "', address = '" . $_POST['txtaddress'] . "', phone = '" . $_POST['txtphone'] . "', career = '" . $_POST['selectcareer'] . "', documentation = '" . $_POST['selectdocumentation'] . "', admission_date = '" . $_POST['dateadmission'] . "' WHERE user = '" . $_POST['txtuserid'] . "'";
 
 if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['msgbox_error'] = 0;

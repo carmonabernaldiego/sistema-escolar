@@ -30,7 +30,7 @@ echo '
 				</div>
 				<div class="last">
 					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtcareername" value="' . $_SESSION['career_name'][0] . '" maxlength="150" required autofocus/>
+					<input class="text" type="text" name="txtcareername" value="' . $_SESSION['career_name'][0] . '" maxlength="100" required autofocus/>
 				</div>
 				<div class="description">
 					<label class="label">Descripción</label>

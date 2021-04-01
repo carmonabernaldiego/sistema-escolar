@@ -14,7 +14,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                 </div>
                 <div class="last">
                     <label class="label">Nombre</label>
-                    <input class="text" type="text" name="txtcareername" value="" maxlength="150" required />
+                    <input class="text" type="text" name="txtcareername" value="" maxlength="100" required />
                 </div>
                 <div class="description">
                     <label class="label">Descripción</label>

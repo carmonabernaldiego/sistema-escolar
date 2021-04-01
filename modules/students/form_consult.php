@@ -16,9 +16,9 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['student_rfc'][0] = $row['rfc'];
 		$_SESSION['student_address'][0] = $row['address'];
 		$_SESSION['student_phone'][0] = $row['phone'];
-		$_SESSION['student_level_studies'][0] = $row['level_studies'];
+		$_SESSION['student_career'][0] = $row['career'];
 		$_SESSION['student_documentation'][0] = $row['documentation'];
-		$_SESSION['student_observation'][0] = $row['observations'];
+		$_SESSION['student_admission_date'][0] = $row['admission_date'];
 	}
 }
 
@@ -48,43 +48,9 @@ echo '
 					<input class="text" type="number" name="txtphone" value="' . $_SESSION['student_phone'][0] . '" disabled/>
 					<label class="label">Domicilio</label>
 					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['student_address'][0] . '" disabled/>
-					<label class="label">Nivel de estudios</label>
-					<select class="select" name="selectnivelestudios" disabled>
-				';
-if ($_SESSION['student_level_studies'][0] == 'Licenciatura') {
-	echo
-	'
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Maestria">Maestria</option>
-							<option value="Doctorado">Doctorado</option>
-						';
-} elseif ($_SESSION['student_level_studies'][0] == 'Ingenieria') {
-	echo
-	'
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Maestria">Maestria</option>
-							<option value="Doctorado">Doctorado</option>
-						';
-} elseif ($_SESSION['student_level_studies'][0] == 'Maestria') {
-	echo
-	'
-							<option value="Maestria">Maestria</option>
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Doctorado">Doctorado</option>
-						';
-} elseif ($_SESSION['student_level_studies'][0] == 'Doctorado') {
-	echo
-	'
-							<option value="Doctorado">Doctorado</option>
-							<option value="Licenciatura">Licenciatura</option>
-							<option value="Ingenieria">Ingenieria</option>
-							<option value="Maestria">Maestria</option>
-						';
-}
-echo '
+					<label class="label">Carrera</label>
+					<select class="select" name="selectcareer" disabled>
+						<option value="' . $_SESSION['student_career'][0] . '">' . $_SESSION['student_career'][0] . '</option>
 					</select>
 					<label class="label">Documentación</label>
 					<select class="select" name="selectdocumentation" disabled>
@@ -104,8 +70,8 @@ if ($_SESSION['student_documentation'][0] == 1) {
 }
 echo '
 					</select>
-					<label class="label">Observación</label>
-					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['student_observation'][0] . '" disabled/>
+					<label class="label">Fecha de admisión</label>
+					<input class="date" type="date" name="dateadmission" value="' . $_SESSION['student_admission_date'][0] . '" disabled/>
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
