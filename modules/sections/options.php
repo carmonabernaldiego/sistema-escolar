@@ -20,7 +20,7 @@ include_once 'security.php';
     <div class="search">
         <form name="form-search" action="#" method="POST">
             <p>
-                <input type="text" class="text" id="txtSearch" name="search" placeholder="Buscar...">
+                <input type="text" class="text" id="txtSearch" name="search" placeholder="Buscar..." autofocus>
                 <button class="btn-search icon" type="submit">search</button>
             </p>
         </form>

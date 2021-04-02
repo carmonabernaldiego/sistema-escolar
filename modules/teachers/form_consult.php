@@ -18,7 +18,7 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['teacher_phone'][0] = $row['phone'];
 		$_SESSION['teacher_level_studies'][0] = $row['level_studies'];
 		$_SESSION['teacher_documentation'][0] = $row['documentation'];
-		$_SESSION['teacher_observation'][0] = $row['observations'];
+		$_SESSION['teacher_career'][0] = $row['career'];
 	}
 }
 
@@ -48,6 +48,10 @@ echo '
 					<input class="text" type="number" name="txtphone" value="' . $_SESSION['teacher_phone'][0] . '" disabled/>
 					<label class="label">Domicilio</label>
 					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['teacher_address'][0] . '" disabled/>
+					<label class="label">Facultad</label>
+					<select class="select" name="selectcareer" disabled>
+						<option value="' . $_SESSION['teacher_career'][0] . '">' . $_SESSION['teacher_career'][0] . '</option>
+					</select>
 					<label class="label">Nivel de estudios</label>
 					<select class="select" name="selectnivelestudios" disabled>
 				';
@@ -104,8 +108,6 @@ if ($_SESSION['teacher_documentation'][0] == 1) {
 }
 echo '
 					</select>
-					<label class="label">Observación</label>
-					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['teacher_observation'][0] . '" disabled/>
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>

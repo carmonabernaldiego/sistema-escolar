@@ -1,7 +1,7 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
-$sql = "SELECT COUNT(user) AS total FROM students WHERE school_period = '" . $_SESSION['school_period'] . "'";
+$sql = "SELECT COUNT(user) AS total FROM students";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
@@ -16,7 +16,7 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM students WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR curp LIKE '%" . $_POST['search'] . "%' ORDER BY name";
+	$sql = "SELECT * FROM students WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR curp LIKE '%" . $_POST['search'] . "%' OR career LIKE '%" . $_POST['search'] . "%' OR admission_date LIKE '%" . $_POST['search'] . "%' ORDER BY admission_date DESC, career, name";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
@@ -35,7 +35,7 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM students WHERE school_period = '" . $_SESSION['school_period'] . "' ORDER BY name LIMIT $inicio, $max";
+	$sql = "SELECT * FROM students ORDER BY admission_date DESC, career, name LIMIT $inicio, $max";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {

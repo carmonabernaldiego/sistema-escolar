@@ -906,8 +906,8 @@ button:focus {
 
 .form-data .body .description .textarea {
     width: 96%;
-    height: 60%;
-    margin: 0 0 15% 0;
+    height: 150px;
+    margin: 0 0 5% 0;
     padding: 12px 2% 12px;
 }
 

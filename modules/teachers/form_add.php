@@ -33,6 +33,28 @@ $id_generate = 'teacher_' . unique_id(5);
 					<input class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" inputmode="email" required />
 					<label class="label">Domicilio</label>
 					<input class="text" type="text" name="txtaddress" value="" maxlength="100" required />
+					<label class="label">Facultad</label>
+					<select class="select" name="selectcareer">
+						<?php
+						$i = 0;
+
+						$sql = "SELECT * FROM careers ORDER BY name";
+
+						if ($result = $conexion->query($sql)) {
+							while ($row = mysqli_fetch_array($result)) {
+								echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+
+								$i += 1;
+							}
+						} else {
+							$_SESSION['msgbox_info'] = 0;
+							$_SESSION['msgbox_error'] = 1;
+							$_SESSION['text_msgbox_error'] = 'No existen registros en el modulo de carreras.';
+
+							header('Location: /modules/students');
+						}
+						?>
+					</select>
 					<label class="label">Nivel de estudios</label>
 					<select class="select" name="selectlevelstudies">
 						<option value="Licenciatura">Licenciatura</option>
@@ -45,8 +67,6 @@ $id_generate = 'teacher_' . unique_id(5);
 						<option value="1">Si</option>
 						<option value="0">No</option>
 					</select>
-					<label class="label">Observación</label>
-					<input class="text" type="text" name="txtobservation" value="" maxlength="200" />
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
