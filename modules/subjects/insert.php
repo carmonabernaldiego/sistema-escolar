@@ -10,7 +10,7 @@ if (empty($_POST['txtsubject'])) {
 	exit();
 }
 
-$sql = "SELECT * FROM subjects WHERE subject = '" . $_POST['txtsubject'] . "' AND school_period = '" . $_SESSION['school_period'] . "'";
+$sql = "SELECT * FROM subjects WHERE subject = '" . $_POST['txtsubject'] . "'";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
