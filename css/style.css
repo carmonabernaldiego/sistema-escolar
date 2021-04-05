@@ -1413,6 +1413,12 @@ button:focus {
     transition: all -1ms;
 }
 
+input[type="range"]:focus,
+input[type="range"]:hover,
+input[type="range"]:active {
+    background: transparent !important;
+}
+
 
 /*-------------------------------------------
   Formulario | Attendance
