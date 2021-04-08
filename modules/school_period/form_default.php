@@ -34,7 +34,7 @@ if (isset($_SESSION['school_period']) != '') {
 				'
 						<table>
 							<tr>
-								<th class="center" colspan="4">Periodos Activos</th>
+								<th class="center" colspan="4">Periodos</th>
 							</tr>
 							';
 				$i = 0;
@@ -63,8 +63,8 @@ if (isset($_SESSION['school_period']) != '') {
 						</table>
                     ';
 				?>
-				<button class="btn-save icon" name="btn-school-period" value="true" type="submit">save</button>
 			</div>
+			<button class="btn-save icon" name="btn-school-period" value="true" type="submit">save</button>
 		</form>
 	</div>
 </div>
@@ -87,8 +87,8 @@ if (isset($_SESSION['school_period']) != '') {
 		<div class="search">
 			<form name="form-search" action="#" method="POST">
 				<p>
-					<input type="text" class="text" name="search" placeholder="Buscar...">
-					<button class="btn-search icon" type="submit">search</button>
+					<input type="text" class="text" name="search" placeholder="Buscar..." disabled>
+					<button class="btn-search disabled icon" type="submit" disabled>search</button>
 				</p>
 			</form>
 		</div>

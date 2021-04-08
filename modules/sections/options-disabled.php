@@ -20,7 +20,7 @@ include_once 'security.php';
 		<form name="form-search" action="#" method="POST">
 			<p>
 				<input type="text" class="text" name="search" placeholder="Buscar..." maxlength="50" disabled>
-				<button class="btn-search icon" type="submit" style="background: #6a7186; cursor: initial;" disabled>search</button>
+				<button class="btn-search disabled icon" type="submit" disabled>search</button>
 			</p>
 		</form>
 	</div>

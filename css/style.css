@@ -47,7 +47,7 @@ body {
 
 body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #ececec url(../images/background_login.jpg) no-repeat top center fixed;
+    background: #ececec url(../images/bg-purple.jpg) no-repeat top center fixed;
     background-size: cover !important;
 }
 
@@ -161,16 +161,17 @@ button:focus {
 
 .info-title {
     float: left;
+    width: 73.1%;
+    height: 100%;
 }
 
 .info-title .title {
     display: block;
-    margin: 11px 0 0 32px;
+    margin: 11.5px 0 0 3%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    text-align: center;
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1.25em;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
@@ -188,13 +189,13 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
 .info-school-period .school_period a {
     color: #eef4ff;
-    font-size: 0.95em;
+    font-size: 0.92em;
     font-weight: bold;
     text-decoration: none;
 }
@@ -258,8 +259,8 @@ button:focus {
     margin: -2% 0 2% 8%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-weight: bold;
-    font-size: 0.95em;
+    font-weight: 500;
+    font-size: 0.97em;
     text-transform: capitalize;
 }
 
@@ -273,7 +274,7 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-decoration: none;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 500;
     transition: all 350ms;
 }
 
@@ -286,7 +287,7 @@ button:focus {
     display: none;
     position: absolute;
     right: 4%;
-    width: 50%;
+    width: 40%;
     margin-top: -10%;
     background: #383a59;
     box-shadow: 0px 1px 4px rgba(142, 136, 192, 0.3);
@@ -296,7 +297,7 @@ button:focus {
 }
 
 .nav-home .user span.logout_user>a+ul>li>a {
-    font-size: 0.9em;
+    font-size: 0.875em;
 }
 
 .nav-home .user span.logout_user>a:focus+ul>li {
@@ -321,7 +322,7 @@ button:focus {
 }
 
 .nav-home ul {
-    margin-top: 6%;
+    margin-top: 5%;
     display: flex;
     flex-flow: column wrap;
     list-style: none;
@@ -332,8 +333,8 @@ button:focus {
     padding: 4% 8%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    font-size: 0.95em;
-    font-weight: bold;
+    font-size: 0.97em;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -385,19 +386,19 @@ button:focus {
 }
 
 .box-notification-ok p {
-    padding: 10% 8%;
+    padding: 8% 6%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(136, 184, 165, 0.7);
-    font-size: 0.8em;
-    font-weight: bold;
+    font-size: 0.875em;
+    font-weight: 500;
 }
 
 .box-notification-error p {
-    padding: 10% 8%;
+    padding: 8% 6%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(154, 185, 173, 0.7);
-    font-size: 0.8em;
-    font-weight: bold;
+    font-size: 0.875em;
+    font-weight: 500;
 }
 
 .box-notification-ok .button,
@@ -410,6 +411,7 @@ button:focus {
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     color: #eef4ff;
     font-weight: bold;
+    line-height: 2.2;
     font-size: 0.6em;
     border: none;
     border-radius: 2em;
@@ -421,6 +423,7 @@ button:focus {
 .box-notification-error .button:hover,
 .box-notification-error .button:focus {
     background: #aa3535;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
 }
@@ -457,8 +460,10 @@ button:focus {
 
 .wrap-title-login {
     height: 230px;
-    background: #383a59;
+    background: #383a59c5;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .wrap-title-login .title-login h1 {
@@ -472,10 +477,12 @@ button:focus {
     width: 380px;
     height: 340px;
     margin: -55px auto 0;
-    background-color: #eef4ff;
+    background-color: #eef4ff80;
     border-top: 3px solid #6272a4;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .logo-form-login {
@@ -485,9 +492,11 @@ button:focus {
     left: 0;
     right: 0;
     margin: -55px auto 0;
-    background: url(../images/asistencia_icon.png)#eef4ff no-repeat bottom / 120px 120px;
+    background: url(../images/user_icon.png)#b9c3d6f6 no-repeat bottom / 120px 120px;
     border: 4px solid #6272a4;
     border-radius: 5em;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 }
 
 .logo-form-login img {
@@ -509,12 +518,20 @@ button:focus {
     height: 40px;
     margin: 0 5% 18px;
     padding: 0 2.3%;
-    background: #eef4ff;
+    background: transparent;
     color: #4a567c;
     border: 2px solid #9fa9c7;
     border-radius: 0.4em;
     font-size: .9em;
     font-weight: bold;
+}
+
+.form-login .text:hover,
+.form-login .text:focus,
+.textcontrasena :hover,
+.textcontrasena :focus,
+input[type="password"] {
+    background: transparent!important;
 }
 
 .form-login .labelrecordar {
@@ -535,18 +552,23 @@ button:focus {
     width: 32%;
     height: 35px;
     margin-right: 4.3%;
-    background: #6272a4;
+    background: #4a567cc5;
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
     font-size: .9em;
     font-weight: bold;
     cursor: pointer;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 350ms;
 }
 
 .form-login .button:hover,
 .form-login .button:focus {
-    background: #4a567c;
+    background: #383a59c5;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: none;
 }
 
@@ -575,10 +597,10 @@ button:focus {
 
 .form-options .search .text {
     float: left;
-    width: 58.5%;
-    height: 40px;
+    width: 62.5%;
+    height: 36px;
     margin: 0 0 0 6.5%;
-    padding: 0 5%;
+    padding: 0 3%;
     background: #eef4ff;
     box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
     border: none;
@@ -587,7 +609,7 @@ button:focus {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     color: #687292;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 0.9em;
 }
 
@@ -595,7 +617,7 @@ button:focus {
     float: left;
     margin: 0 6.5% 0 0;
     width: 18.5%;
-    height: 40px;
+    height: 36px;
     background: #6272a4;
     box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
     border: none;
@@ -605,13 +627,14 @@ button:focus {
     border-bottom-right-radius: 0.4em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    font-size: 1.1em;
+    font-size: 1.02em;
     cursor: pointer;
 }
 
 .form-options .search .btn-search:hover,
 .form-options .search .btn-search:focus {
     background: #4a567c;
+    color: #eef4ff98;
     transition: all 350ms;
 }
 
@@ -630,7 +653,7 @@ button:focus {
     background: #569188;
     box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
     color: #eef4ff;
-    font-size: 1.1em;
+    font-size: 1em;
     border: none;
     border-radius: 100%;
     cursor: pointer;
@@ -639,13 +662,15 @@ button:focus {
 .form-options .options .btn:hover,
 .form-options .options .btn:focus {
     background: #456661;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
 }
 
-.form-options .options .btn.disabled {
+.form-options .options .btn.disabled,
+.form-options .search .btn-search.disabled {
     background: #6a7186;
-    color: #eef4ff;
+    color: #eef4ff98;
     cursor: initial;
 }
 
@@ -657,6 +682,7 @@ button:focus {
 .form-options .options .btnexit:hover,
 .form-options .options .btnexit:focus {
     background: #aa3535;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
 }
@@ -674,6 +700,7 @@ button:focus {
 .form-options .options .btnsearch:hover,
 .form-options .options .btnsearch:focus {
     background: #4a567c;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
 }
@@ -693,7 +720,7 @@ button:focus {
 }
 
 .form-gridview table {
-    width: 92%;
+    width: 94%;
     margin: 4.5% auto;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
@@ -712,7 +739,7 @@ button:focus {
     border: none;
     text-align: left;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
@@ -733,7 +760,7 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.2);
     border-bottom: solid #6273a495 1px;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
     text-align: left;
 }
 
@@ -816,7 +843,7 @@ button:focus {
 }
 
 .pages {
-    margin: 0 0 2.5% 3.9%;
+    margin: 0 0 2.5% 3.1%;
 }
 
 .pages:after {
@@ -832,14 +859,14 @@ button:focus {
 .pages ul li button {
     float: left;
     margin: 0 10px 0 0;
-    width: 6%;
+    width: 5%;
     height: 23px;
     background: #7e8aac;
     box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
     border: none;
     border-radius: 1em;
     color: #eef4ff;
-    font-size: 0.8em;
+    font-size: 0.725em;
     font-weight: bold;
 }
 
@@ -884,7 +911,7 @@ button:focus {
     font-size: 1em;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
@@ -892,100 +919,89 @@ button:focus {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 5% 0 2% 0;
+    padding: 4% 0 2% 0;
 }
 
 .form-data .body .first,
 .form-data .body .last {
-    width: 45%;
-}
-
-.form-data .body .description {
-    width: 93.3%;
-}
-
-.form-data .body .description .textarea {
-    width: 96%;
-    height: 150px;
-    margin: 0 0 5% 0;
-    padding: 12px 2% 12px;
+    width: 46%;
 }
 
 .form-data .body .label {
     display: block;
-    margin: 0 0 2% 0;
+    margin: 0 0 12px 0;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: none;
 }
 
 .form-data .body .text {
-    width: 94%;
-    height: 40px;
-    margin: 0 0 10% 0;
-    padding: 0 3%;
+    width: 96%;
+    height: 36px;
+    margin: 0 0 25px 0;
+    padding: 0 2%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.4em;
+    border-radius: 0.25em;
     color: #687292;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 0.9em;
 }
 
 .form-data .body .textarea {
-    width: 197.5%;
-    height: 30%;
-    margin: 0 0 30% 0;
-    padding: 12px 5% 12px;
+    width: 201.7%;
+    height: 120px;
+    margin: 0 0 25px 0;
+    padding: 12px 2% 12px;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.4em;
+    border-radius: 0.25em;
     color: #687292;
     line-height: 1.7;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
     text-align: justify;
     resize: none;
 }
 
 .form-data .body .select {
     width: 100%;
-    height: 40px;
-    margin: 0 0 10% 0;
-    padding: 0 2%;
+    height: 36px;
+    margin: 0 0 25px 0;
+    padding: 0 1%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.4em;
+    border-radius: 0.25em;
     color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .form-data .body .select option {
     color: #687292;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .form-data .body .date {
-    width: 94.2%;
-    height: 40px;
-    margin: 0 0 10% 0;
-    padding: 0 3%;
+    width: 96%;
+    height: 36px;
+    margin: 0 0 25px 0;
+    padding: 0 2%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.4em;
+    border-radius: 0.25em;
     color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .form-data .body [type="date"]::-webkit-inner-spin-button {
@@ -1036,11 +1052,11 @@ button:focus {
     margin: 0;
     padding: 8px 0 0 8px;
     background: #6272a4;
-    box-shadow: -2px -1px 4px rgba(142, 136, 192, 0.4);
     border: none;
     border-top-left-radius: 100%;
     border-bottom-right-radius: 0.6em;
     color: #eef4ff;
+    text-shadow: none;
     font-size: 1.1em;
     cursor: pointer;
 }
@@ -1048,6 +1064,7 @@ button:focus {
 .form-data .body .btn:hover,
 .form-data .body .btn:focus {
     background: #4a567c;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
 }
@@ -1126,11 +1143,11 @@ button:focus {
 
 
 /*-------------------------------------------
-  Formulario | Groups
+  Formulario | Groups - School Period
 -------------------------------------------*/
 
 .form-data table {
-    width: 93.5%;
+    width: 94%;
     margin: 0 auto 3%;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
@@ -1146,31 +1163,19 @@ button:focus {
 }
 
 .form-data th {
-    padding: 7px 15px;
+    padding: 10px 15px;
     background: #282a36;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     border: none;
     text-align: left;
     font-size: 0.9em;
-    font-weight: bold;
-    text-transform: capitalize;
+    font-weight: 500;
+    text-transform: none;
 }
 
 .form-data th.center {
     text-align: center;
-}
-
-.form-data th.view {
-    background: #569188;
-}
-
-.form-data th.edit {
-    background: #3f6992;
-}
-
-.form-data th.delete {
-    background: #db4949;
 }
 
 .form-data td {
@@ -1180,7 +1185,7 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.2);
     border-bottom: solid #6273a495 1px;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 500;
     text-align: left;
 }
 
@@ -1188,70 +1193,13 @@ button:focus {
     text-align: center;
 }
 
-.form-data td label {
-    display: block;
-    padding: 10px 0;
-}
-
-.form-data td button.btnview {
-    margin: 0 auto;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: #569188;
-    border: none;
-    border-radius: 2em;
-    color: #eef4ff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.form-data td button.btnview:hover,
-.form-data td button.btnview:focus {
-    background: #456661;
-    border: none;
-}
-
-.form-data td button.btnedit {
-    margin: 0 auto;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: #3f6992;
-    border: none;
-    border-radius: 2em;
-    color: #eef4ff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.form-data td button.btnedit:hover,
-.form-data td button.btnedit:focus {
-    background: #2a4866;
-    border: none;
-}
-
-.form-data td button.btndelete {
-    margin: 0 auto;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: #db4949;
-    border: none;
-    border-radius: 2em;
-    color: #eef4ff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.form-data td button.btndelete:hover,
-.form-data td button.btndelete:focus {
-    background: #aa3535;
-    border: none;
-}
-
 .form-data tr:hover td {
     background: #dde8fc;
+}
+
+.form-data td label {
+    display: block;
+    padding: 8px 0;
 }
 
 .form-data td .cbox-subject,
@@ -1267,7 +1215,6 @@ button:focus {
     height: 40px;
     margin: 0 0 10% 0;
     background: #6272a4;
-    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.4);
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 1);
     text-transform: capitalize;
@@ -1282,6 +1229,7 @@ button:focus {
 .form-data button.btn-add-subjects:hover,
 .form-data button.btn-add-subjects:focus {
     background: #4a567c;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
 }
@@ -1291,7 +1239,6 @@ button:focus {
     height: 40px;
     margin: 2% auto -2%;
     background: #6272a4;
-    box-shadow: 0 -1px 3px rgba(142, 136, 192, 0.3);
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 1);
     text-transform: capitalize;
@@ -1307,22 +1254,24 @@ button:focus {
 .form-data button.btn-add-students:hover,
 .form-data button.btn-add-students:focus {
     background: #4a567c;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
 }
 
 .form-data button.btn-save {
-    width: 20%;
-    height: 40px;
-    margin: 2% auto -2%;
+    display: block;
+    float: right;
+    width: 50px;
+    height: 50px;
+    padding: 8px 0 0 8px;
     background: #6272a4;
-    box-shadow: 0 -1px 3px rgba(142, 136, 192, 0.3);
     color: #eef4ff;
     text-transform: none;
     line-height: 1.6;
     font-size: 1.1em;
-    border-top-left-radius: 0.8em;
-    border-top-right-radius: 0.8em;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 0.6em;
     border: none;
     cursor: pointer;
 }
@@ -1330,8 +1279,25 @@ button:focus {
 .form-data button.btn-save:hover,
 .form-data button.btn-save:focus {
     background: #4a567c;
+    color: #eef4ff98;
     border: none;
     transition: all 350ms;
+}
+
+
+/*-------------------------------------------
+  Formulario | Careers
+-------------------------------------------*/
+
+.form-data .body .description {
+    width: 95%;
+}
+
+.form-data .body .description .textarea {
+    width: 97.4%;
+    height: 120px;
+    margin: 0 0 25px 0;
+    padding: 12px 1.2% 12px;
 }
 
 
@@ -1341,9 +1307,7 @@ button:focus {
 
 .formConfigUser {
     float: none;
-    margin: 0 0 35px 0;
     width: 100%;
-    height: 100%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.6em;
@@ -1375,16 +1339,17 @@ button:focus {
 }
 
 .formConfigUser .body .imageuser {
-    width: 90%;
-    margin-bottom: 3%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -0.5%;
+    margin-bottom: 2%;
 }
 
-.formConfigUser .body .imageuser .user-image {
+.formConfigUser .body .imageuser img.user-image {
     display: block;
     width: 270px;
     height: 270px;
     margin: 0 auto;
-    margin-top: -2%;
     border: solid #eef4ff 4px;
     border-radius: 100%;
     pointer-events: none;
@@ -1394,15 +1359,14 @@ button:focus {
 .formConfigUser .body .imageuser .file {
     display: block;
     position: relative;
-    float: right;
     width: 65px;
     height: 65px;
-    margin-top: -10%;
-    margin-right: 25%;
+    margin: 0 auto;
+    margin-top: -35px;
     padding: 0;
     background: #6272a4;
     background: url(../images/menu_mobile/camera.svg)#6272a4 no-repeat center / 35px 35px;
-    box-shadow: 0px 1px 4px rgba(98, 114, 164, 0.7);
+    box-shadow: none;
     border-radius: 100%;
     color: #eef4ff;
     cursor: pointer;
@@ -1511,6 +1475,8 @@ input[type="range"]:active {
 }
 
 .user-mobile header .activator-user {
+    width: 45px;
+    height: 45px;
     padding: 0.22em;
     border-radius: 100%;
     background: #44475a;
@@ -1688,8 +1654,7 @@ input[type="range"]:active {
 
 @media only screen and (max-width: 700px) {
     body.login {
-        background: none;
-        background-color: #ececec;
+        background: #ececec url(../images/bg-purple-reverse.jpg) no-repeat top center fixed;
     }
     .wrap-title-login {
         height: 200px;
@@ -1781,6 +1746,12 @@ input[type="range"]:active {
         margin-top: -154px;
         margin-bottom: 100px;
     }
+    .info-title {
+        width: 59.8%;
+    }
+    .info-title .title {
+        margin: 11.5px 0 0 5.5%;
+    }
     .info-school-period {
         width: 40%;
     }
@@ -1809,7 +1780,7 @@ input[type="range"]:active {
         margin-bottom: 27px;
     }
     .form-options .options {
-        padding: 1.5% 15%;
+        padding: 1.5% 10%;
         border: none;
     }
     .form-options .search {
@@ -1833,13 +1804,19 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 701px) {
+    .info-title {
+        width: 58.6%;
+    }
     .form-data .body .first,
-    .form-data .body .last {
-        width: 90%;
+    .form-data .body .last,
+    .form-data .body .description {
+        width: 93%;
     }
     .form-data .body .textarea {
-        width: 90%;
-        box-shadow: 0px 1px 3px rgba(142, 136, 192, 0.6);
+        width: 96%;
+    }
+    .form-data .body .description .textarea {
+        width: 97.6%;
     }
     .form-options {
         padding: 3px 0;
@@ -1862,6 +1839,9 @@ input[type="range"]:active {
         width: 10%;
         height: 38px;
     }
+    .form-gridview .pages ul li button {
+        width: 6%;
+    }
 }
 
 @media only screen and (max-width: 641px) {
@@ -1877,6 +1857,9 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 436px) {
+    .info-title {
+        width: 59.5%;
+    }
     .info-title .title {
         margin-left: 18px;
         font-size: 1.2em;
@@ -1891,7 +1874,7 @@ input[type="range"]:active {
         font-size: .95em;
     }
     .form-gridview .pages ul li button {
-        width: 10%;
+        width: 8%;
     }
     .form-options .options {
         padding-left: 35px;
