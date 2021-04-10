@@ -204,6 +204,9 @@ include_once '../modules/notif_info.php';
 					},
 				});
 			})
+			setTimeout(function() {
+				window.location.href = "/user";
+			}, -10);
 		});
 
 	});
