@@ -60,13 +60,16 @@ if ($result = $conexion->query($sql)) {
 echo '
 <div class="form-data formConfigUser">
    <div class="body">
+		<div id="section-croppie-image">
+			<div id="image_crop"></div>
+			<button class="crop_btn"></button>
+		</div>
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return confirmPass()">
 			<div class="wrap">
-			<div id="uploaded_image"></div>
-				<div class="imageuser">
-					<img id="userimage" class="user-image" src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
-					<label class="file" for="upload_image"></label>
-					<input id="upload_image" style="display: none;" type="file" name="upload_image" accept=".jpg, .jpeg, .png" />
+				<div id="section-user-image">
+					<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
+					<label class="file" for="file_upload_image"></label>
+					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
 				</div>
 				<div class="first">
 					<label class="label">Usuario</label>
@@ -131,20 +134,7 @@ echo
 include_once '../modules/notif_info.php';
 ?>
 <script>
-	document.getElementById("upload_image").onchange = function(e) {
-		// Creamos el objeto de la clase FileReader
-		let reader = new FileReader();
-
-		// Leemos el archivo subido y se lo pasamos a nuestro fileReader
-		reader.readAsDataURL(e.target.files[0]);
-
-		// Le decimos que cuando este listo ejecute el código interno
-		reader.onload = function() {
-			image = document.getElementById('userimage');
-
-			image.src = reader.result;
-		};
-	}
+	$('#section-croppie-image').hide();
 
 	function confirmPass() {
 		pass1 = document.getElementById('pass1');
@@ -173,4 +163,53 @@ include_once '../modules/notif_info.php';
 			}
 		}))
 	});*/
+
+	$(document).ready(function() {
+
+		$image_crop = $('#image_crop').croppie({
+			enableExif: true,
+			viewport: {
+				width: 250,
+				height: 250,
+				type: 'square' //circle
+			},
+			boundary: {
+				width: 350,
+				height: 350
+			}
+		});
+
+		$('#file_upload_image').on('change', function() {
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				$image_crop.croppie('bind', {
+					url: event.target.result
+				}).then(function() {
+					console.log('jQuery bind complete');
+				});
+			}
+			reader.readAsDataURL(this.files[0]);
+			$('#section-user-image').hide();
+			$('#section-croppie-image').show();
+		});
+
+		$('.crop_btn').click(function(event) {
+			$image_crop.croppie('result', {
+				type: 'canvas',
+				size: 'viewport'
+			}).then(function(response) {
+				$.ajax({
+					url: "upload.php",
+					type: "POST",
+					data: {
+						"image": response
+					},
+					success: function(data) {
+						$('#uploaded_image_result').html(data);
+					}
+				});
+			})
+		});
+
+	});
 </script>
