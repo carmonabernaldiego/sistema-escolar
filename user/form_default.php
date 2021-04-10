@@ -165,13 +165,13 @@ include_once '../modules/notif_info.php';
 		$image_crop = $('#image_crop').croppie({
 			enableExif: true,
 			viewport: {
-				width: 220,
-				height: 220,
+				width: 190,
+				height: 190,
 				type: 'circle' //square
 			},
 			boundary: {
-				width: 320,
-				height: 320
+				width: 270,
+				height: 270
 			}
 		});
 

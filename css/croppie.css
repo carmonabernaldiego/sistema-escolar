@@ -20,6 +20,9 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+    box-shadow: 0px 0 8px rgb(182 193 224 / 80%);
+    border: solid #eef4ff 4px;
+    border-radius: 100%;
 }
 
 .croppie-container .cr-viewport,
@@ -36,15 +39,15 @@
 }
 
 .croppie-container .cr-resizer {
-  z-index: 2;
-  box-shadow: none;
-  pointer-events: none;
+    z-index: 2;
+    box-shadow: none;
+    pointer-events: none;
 }
 
 .croppie-container .cr-resizer-vertical,
 .croppie-container .cr-resizer-horisontal {
-  position: absolute;
-  pointer-events: all;
+    position: absolute;
+    pointer-events: all;
 }
 
 .croppie-container .cr-resizer-vertical::after,
@@ -60,10 +63,10 @@
 }
 
 .croppie-container .cr-resizer-vertical {
-  bottom: -5px;
-  cursor: row-resize;
-  width: 100%;
-  height: 10px;
+    bottom: -5px;
+    cursor: row-resize;
+    width: 100%;
+    height: 10px;
 }
 
 .croppie-container .cr-resizer-vertical::after {
@@ -72,10 +75,10 @@
 }
 
 .croppie-container .cr-resizer-horisontal {
-  right: -5px;
-  cursor: col-resize;
-  width: 10px;
-  height: 100%;
+    right: -5px;
+    cursor: col-resize;
+    width: 10px;
+    height: 100%;
 }
 
 .croppie-container .cr-resizer-horisontal::after {
@@ -122,45 +125,66 @@
     transform: translateZ(0);
 }
 
+
 /*************************************/
+
+
 /***** STYLING RANGE INPUT ***********/
+
+
 /*************************************/
+
+
 /*http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html */
+
+
 /*************************************/
 
 .cr-slider {
     -webkit-appearance: none;
-/*removes default webkit styles*/
-	/*border: 1px solid white; *//*fix for FF unable to apply focus style bug */
-    width: 300px;
-/*required for proper track sizing in FF*/
+    /*removes default webkit styles*/
+    /*border: 1px solid white; */
+    /*fix for FF unable to apply focus style bug */
+    width: 200px;
+    /*required for proper track sizing in FF*/
     max-width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
     background-color: transparent;
+    position: absolute;
+    top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 .cr-slider::-webkit-slider-runnable-track {
     width: 100%;
-    height: 3px;
-    background: rgba(0, 0, 0, 0.5);
+    height: 5px;
+    background: #eef4ff;
+    box-shadow: 0px 0 8px rgba(182, 193, 224, 0.8);
     border: 0;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .cr-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
     border-radius: 50%;
-    background: #ddd;
+    background: #6272a4;
+    box-shadow: 0px 0 8px rgba(73, 100, 219, 0.3);
     margin-top: -6px;
 }
 
 .cr-slider:focus {
     outline: none;
 }
+
+
 /*
 .cr-slider:focus::-webkit-slider-runnable-track {
 background: #ccc;
@@ -184,7 +208,9 @@ background: #ccc;
     margin-top: -6px;
 }
 
+
 /*hide the outline behind the border*/
+
 .cr-slider:-moz-focusring {
     outline: 1px solid white;
     outline-offset: -1px;
@@ -194,57 +220,76 @@ background: #ccc;
     width: 100%;
     height: 5px;
     background: transparent;
-/*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
-	border-color: transparent;/*leave room for the larger thumb to overflow with a transparent border */
-	border-width: 6px 0;
-	color: transparent;/*remove default tick marks*/
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    border-color: transparent;
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-width: 6px 0;
+    color: transparent;
+    /*remove default tick marks*/
 }
+
 .cr-slider::-ms-fill-lower {
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
+
 .cr-slider::-ms-fill-upper {
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
+
 .cr-slider::-ms-thumb {
-	border: none;
-	height: 16px;
-	width: 16px;
-	border-radius: 50%;
-	background: #ddd;
-	margin-top:1px;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ddd;
+    margin-top: 1px;
 }
+
 .cr-slider:focus::-ms-fill-lower {
-	background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
+
 .cr-slider:focus::-ms-fill-upper {
-	background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
+
+
 /*******************************************/
 
+
 /***********************************/
+
+
 /* Rotation Tools */
+
+
 /***********************************/
+
 .cr-rotate-controls {
-	position: absolute;
-	bottom: 5px;
-	left: 5px;
-	z-index: 1;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 1;
 }
+
 .cr-rotate-controls button {
-	border: 0;
-	background: none;
+    border: 0;
+    background: none;
 }
+
 .cr-rotate-controls i:before {
-	display: inline-block;
-	font-style: normal;
-	font-weight: 900;
-	font-size: 22px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
 }
+
 .cr-rotate-l i:before {
-	content: '↺';
+    content: '↺';
 }
+
 .cr-rotate-r i:before {
-	content: '↻';
+    content: '↻';
 }

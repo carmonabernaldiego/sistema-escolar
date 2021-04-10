@@ -1327,35 +1327,6 @@ button:focus {
     visibility: visible!important;
 }
 
-.formConfigUser .body #section-croppie-image {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 28px;
-    padding-bottom: 18px;
-}
-
-.formConfigUser .body #section-croppie-image .crop_btn {
-    display: block;
-    position: relative;
-    width: 65px;
-    height: 65px;
-    margin: 0 auto;
-    margin-top: 8px;
-    padding: 0;
-    background: #6272a4;
-    background: url(../images/crop.svg)#6272a4 no-repeat center / 35px 35px;
-    box-shadow: none;
-    border: none;
-    border-radius: 100%;
-    color: #eef4ff;
-    cursor: pointer;
-}
-
-.formConfigUser .body #section-croppie-image .crop_btn:hover {
-    background: url(../images/crop_hover.svg)#4a567c no-repeat center / 35px 35px;
-    transition: all -1ms;
-}
-
 .formConfigUser .body #section-user-image {
     width: 100%;
     margin: 0 auto;
@@ -1392,6 +1363,37 @@ button:focus {
 
 .formConfigUser .body #section-user-image .file:hover {
     background: url(../images/menu_mobile/camera_hover.svg)#4a567c no-repeat center / 35px 35px;
+    transition: all -1ms;
+}
+
+.formConfigUser .body #section-croppie-image {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 18px;
+}
+
+.formConfigUser .body #section-croppie-image .crop_btn {
+    display: block;
+    position: relative;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    margin-top: -35px;
+    padding: 0;
+    background: #6272a4;
+    background: url(../images/crop.svg)#6272a4 no-repeat center / 35px 35px;
+    box-shadow: none;
+    border: none;
+    border-radius: 100%;
+    color: #eef4ff;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.formConfigUser .body #section-croppie-image .crop_btn:hover {
+    background: url(../images/crop_hover.svg)#4a567c no-repeat center / 35px 35px;
     transition: all -1ms;
 }
 
