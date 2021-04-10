@@ -1301,6 +1301,13 @@ button:focus {
     clear: both;
 }
 
+.formConfigUser .body .wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0 0 2% 0;
+}
+
 .formConfigUser .body .label {
     text-transform: none;
 }
@@ -1320,18 +1327,11 @@ button:focus {
     visibility: visible!important;
 }
 
-.formConfigUser .body #section-user-image {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: -0.5%;
-    margin-bottom: 2%;
-}
-
 .formConfigUser .body #section-croppie-image {
     width: 100%;
     margin: 0 auto;
-    padding-top: 35px;
-    margin-bottom: -20px;
+    padding-top: 28px;
+    padding-bottom: 18px;
 }
 
 .formConfigUser .body #section-croppie-image .crop_btn {
@@ -1340,7 +1340,7 @@ button:focus {
     width: 65px;
     height: 65px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 8px;
     padding: 0;
     background: #6272a4;
     background: url(../images/crop.svg)#6272a4 no-repeat center / 35px 35px;
@@ -1354,6 +1354,13 @@ button:focus {
 .formConfigUser .body #section-croppie-image .crop_btn:hover {
     background: url(../images/crop_hover.svg)#4a567c no-repeat center / 35px 35px;
     transition: all -1ms;
+}
+
+.formConfigUser .body #section-user-image {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 28px;
+    margin-bottom: 18px;
 }
 
 .formConfigUser .body #section-user-image img {

@@ -147,10 +147,6 @@ include_once '../modules/notif_info.php';
 		} else {
 			document.getElementById("labelError").classList.remove("show");
 
-			/*setTimeout(function() {
-				location.reload();
-			}, 3000);*/
-
 			return true;
 		}
 	}
@@ -169,13 +165,13 @@ include_once '../modules/notif_info.php';
 		$image_crop = $('#image_crop').croppie({
 			enableExif: true,
 			viewport: {
-				width: 250,
-				height: 250,
-				type: 'square' //circle
+				width: 220,
+				height: 220,
+				type: 'circle' //square
 			},
 			boundary: {
-				width: 350,
-				height: 350
+				width: 320,
+				height: 320
 			}
 		});
 
@@ -196,7 +192,9 @@ include_once '../modules/notif_info.php';
 		$('.crop_btn').click(function(event) {
 			$image_crop.croppie('result', {
 				type: 'canvas',
-				size: 'viewport'
+				size: 'original',
+				quality: 1,
+				circle: false
 			}).then(function(response) {
 				$.ajax({
 					url: "upload.php",
@@ -204,9 +202,6 @@ include_once '../modules/notif_info.php';
 					data: {
 						"image": response
 					},
-					success: function(data) {
-						$('#uploaded_image_result').html(data);
-					}
 				});
 			})
 		});
