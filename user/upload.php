@@ -22,7 +22,7 @@ if (isset($_POST["image"])) {
 
 	$imageName = $_SESSION['user_id'][0] . rand(1, 1000) . '.png';
 
-	file_put_contents($directorioSubida . $imageName, $data);
+	move_uploaded_file($data, $directorioSubida . $imageName);
 
 	$sql_update = "UPDATE users SET image = '" . $imageName . "' WHERE user = '" . $_SESSION['user_id'][0] . "'";
 

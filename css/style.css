@@ -1383,7 +1383,7 @@ button:focus {
     margin-top: -35px;
     padding: 0;
     background: #6272a4;
-    background: url(../images/crop.svg)#6272a4 no-repeat center / 35px 35px;
+    background: url(../images/menu_mobile/crop.svg)#6272a4 no-repeat center / 35px 35px;
     box-shadow: none;
     border: none;
     border-radius: 100%;
@@ -1393,7 +1393,7 @@ button:focus {
 }
 
 .formConfigUser .body #section-croppie-image .crop_btn:hover {
-    background: url(../images/crop_hover.svg)#4a567c no-repeat center / 35px 35px;
+    background: url(../images/menu_mobile/crop_hover.svg)#4a567c no-repeat center / 35px 35px;
     transition: all -1ms;
 }
 
