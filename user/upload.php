@@ -29,6 +29,12 @@ if (isset($_POST["image"])) {
 	$sql_update = "UPDATE users SET image = '" . $imageName . "' WHERE user = '" . $_SESSION['user_id'][0] . "'";
 
 	if (mysqli_query($conexion, $sql_update)) {
+		if ($_SESSION['image'] != "user.png") {
+			if (copy($directorioSubida . $_SESSION['image'], $directorioSubida . "/old/" . $_SESSION['image'])) {
+				unlink($directorioSubida . $_SESSION['image']);
+			}
+		}
+
 		$_SESSION['msgbox_error'] = 0;
 		$_SESSION['msgbox_info'] = 1;
 		$_SESSION['text_msgbox_info'] = 'La imagen se cargo correctamente en el servidor.';
