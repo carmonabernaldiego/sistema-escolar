@@ -20,7 +20,7 @@ $_SESSION['text_msgbox_error'] = '';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     <title>Sistema Escolar</title>
-    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="icon" type="image/png" href="/images/icon.png" />
     <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
     <link rel="stylesheet" href="css/style_icons.css" media="screen, projection" type="text/css" />
     <meta name="description" content="" />
