@@ -632,8 +632,7 @@ button:focus {
     transition: all 350ms ease-out;
 }
 
-.form-options .search .btn-search:hover,
-.form-options .search .btn-search:focus {
+.form-options .search .btn-search:hover {
     background: #4a567c;
     color: #eef4ff98;
     transition: all 350ms ease-in;
