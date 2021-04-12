@@ -1345,7 +1345,7 @@ button:focus {
 }
 
 .formConfigUser .body .wrap,
-.form-data .body .wrap {
+.form-users .body .wrap {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;

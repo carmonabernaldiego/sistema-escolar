@@ -17,7 +17,7 @@ if ($result = $conexion->query($sql)) {
 	}
 }
 echo '
-<div class="form-data">
+<div class="form-data form-users">
 	<div class="loader-image-upload">
 	</div>
 	<div class="body">
