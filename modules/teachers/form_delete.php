@@ -10,7 +10,7 @@ echo '
                 <h1>¿Eliminar registro?</h1>
                 <form name="form-delete-teachers" action="delete.php" method="POST">
                     <input style="display: none;" type="text" name="txtuserid" value="' . $_POST['txtuserid'] . '" />
-                    <button class="btn-si icon" type="submit">check</button>
+                    <button class="btn-si icon" type="submit" autofocus>check</button>
                 </form>
                 <form action="#" method="POST">
                     <button class="btn-no icon" name="btn" value="form_default" type="submit">close</button>

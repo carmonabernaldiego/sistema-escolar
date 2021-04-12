@@ -1397,17 +1397,21 @@ button:focus {
     margin: 0 auto;
     margin-top: -35px;
     padding: 0;
-    background: url(../images/menu_mobile/camera.svg)#6272a4 no-repeat center / 35px 35px;
+    background: url(../images/menu_mobile/camera.svg)#6272a4 no-repeat center;
+    background-size: cover !important;
     box-shadow: none;
     border-radius: 100%;
     color: #eef4ff;
     cursor: pointer;
     transition: none;
+    transition: all 350ms ease-out;
 }
 
 .formConfigUser .body #section-user-image .file:hover {
-    background: url(../images/menu_mobile/camera_hover.svg)#4a567c no-repeat center / 35px 35px;
+    background: url(../images/menu_mobile/camera_hover.svg)#4a567c no-repeat center;
+    background-size: cover !important;
     transition: all -1ms;
+    transition: all 350ms ease-in;
 }
 
 .formConfigUser .body #section-croppie-image {

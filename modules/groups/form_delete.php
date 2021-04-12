@@ -11,7 +11,7 @@ echo '
                     <input style="display: none;" type="text" name="txtgroup" value="' . $_POST['txtgroup'] . '" />
                     <input style="display: none;" type="text" name="txtgroupschoolperiod" value="' . $_POST['txtgroupschoolperiod'] . '" />
                     <h1>¿Eliminar registro?</h1>
-                    <button class="btn-si icon" type="submit">check</button>
+                    <button class="btn-si icon" type="submit" autofocus>check</button>
                 </form>
                 <form action="#" method="POST">
                     <button class="btn-no icon" name="btn" value="form_default" type="submit">close</button>
