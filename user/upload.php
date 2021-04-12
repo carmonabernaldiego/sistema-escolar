@@ -21,8 +21,9 @@ if (isset($_POST["image"])) {
 	$data = base64_decode($image_array_2[1]);
 
 	$imageName = $_SESSION['user_id'][0] . rand(1, 1000) . '.png';
+	$nameFile = $directorioSubida . $imageName;
 
-	move_uploaded_file($data, $directorioSubida . $imageName);
+	file_put_contents($nameFile, $data);
 
 	$sql_update = "UPDATE users SET image = '" . $imageName . "' WHERE user = '" . $_SESSION['user_id'][0] . "'";
 
@@ -36,7 +37,7 @@ if (isset($_POST["image"])) {
 		$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
 	}
 
-	if ($_SESSION['user_id'][0] == $_SESSION['user']) {
+	if ($_SESSION['user'] == $_SESSION['user']) {
 		$_SESSION['image'] = $imageName;
 		setcookie('image', $imageName, time() + 365 * 24 * 60 * 60, "/");
 	}

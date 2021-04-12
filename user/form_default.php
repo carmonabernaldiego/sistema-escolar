@@ -202,11 +202,12 @@ include_once '../modules/notif_info.php';
 					data: {
 						"image": response
 					},
+					success: function(res) {
+						location.href = location.href;
+					}
 				});
 			})
-			setTimeout(function() {
-				window.location.href = "/user";
-			}, -10);
+
 		});
 
 	});
