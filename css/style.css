@@ -144,6 +144,20 @@ button:focus {
     opacity: 1;
 }
 
+.loader-image-upload {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 350px;
+    z-index: 9999;
+    background: url(../images/user_upload_loader.gif) 50% 50% no-repeat #44475a;
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+    opacity: 1;
+}
+
 
 /*-------------------------------------------
   Home | Header
@@ -1288,6 +1302,7 @@ button:focus {
 -------------------------------------------*/
 
 .formConfigUser {
+    position: relative;
     float: none;
     width: 100%;
     background: #44475a;

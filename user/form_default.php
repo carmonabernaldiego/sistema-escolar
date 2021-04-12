@@ -59,7 +59,9 @@ if ($result = $conexion->query($sql)) {
 }
 echo '
 <div class="form-data formConfigUser">
-   <div class="body">
+	<div class="loader-image-upload">
+	</div>
+	<div class="body">
 		<div id="section-croppie-image">
 			<div id="image_crop"></div>
 			<button class="crop_btn"></button>
@@ -135,6 +137,7 @@ include_once '../modules/notif_info.php';
 ?>
 <script>
 	$('#section-croppie-image').hide();
+	$('.loader-image-upload').hide();
 
 	function confirmPass() {
 		pass1 = document.getElementById('pass1');
@@ -190,9 +193,12 @@ include_once '../modules/notif_info.php';
 		});
 
 		$('.crop_btn').click(function(event) {
+			$('.loader-image-upload').css("visibility", "visible");
+			$('.loader-image-upload').show();
+		
 			$image_crop.croppie('result', {
 				type: 'canvas',
-				size: 'original',
+				size: 'viewport',
 				quality: 1,
 				circle: false
 			}).then(function(response) {
