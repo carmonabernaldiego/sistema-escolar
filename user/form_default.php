@@ -64,13 +64,13 @@ echo '
 	<div class="body">
 		<div id="section-croppie-image">
 			<div id="image_crop"></div>
-			<button class="crop_btn"></button>
+			<button class="crop_btn"><span class="icon">crop</span></button>
 		</div>
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return confirmPass()">
 			<div class="wrap">
 				<div id="section-user-image">
 					<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
-					<label class="file" for="file_upload_image"></label>
+					<label class="file" for="file_upload_image"><span class="icon">add_a_photo</span></label>
 					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
 				</div>
 				<div class="first">

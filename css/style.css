@@ -1393,22 +1393,22 @@ button:focus {
     width: 65px;
     height: 65px;
     margin: 0 auto;
-    margin-top: -35px;
+    margin-top: -36px;
     padding: 0;
-    background: url(../images/menu_mobile/camera.svg)#6272a4 no-repeat center;
-    background-size: cover !important;
+    background: #6272a4;
     box-shadow: none;
     border-radius: 100%;
     color: #eef4ff;
+    line-height: 2.5em;
+    font-size: 1.8em;
+    font-weight: 100;
     cursor: pointer;
-    transition: none;
     transition: all 350ms ease-out;
 }
 
 .formConfigUser .body #section-user-image .file:hover {
-    background: url(../images/menu_mobile/camera_hover.svg)#4a567c no-repeat center;
-    background-size: cover !important;
-    transition: all -1ms;
+    background: #4a567c;
+    color: #AEBBD3;
     transition: all 350ms ease-in;
 }
 
@@ -1426,21 +1426,25 @@ button:focus {
     width: 65px;
     height: 65px;
     margin: 0 auto;
-    margin-top: -35px;
+    margin-top: -52px;
     padding: 0;
-    background: url(../images/menu_mobile/crop.svg)#6272a4 no-repeat center / 35px 35px;
+    background: #6272a4;
     box-shadow: none;
     border: none;
     border-radius: 100%;
     color: #eef4ff;
+    line-height: 2.55em;
+    font-size: 1.8em;
+    font-weight: 100;
     cursor: pointer;
     z-index: 999;
-    transition: none;
+    transition: all 350ms ease-out;
 }
 
 .formConfigUser .body #section-croppie-image .crop_btn:hover {
-    background: url(../images/menu_mobile/crop_hover.svg)#4a567c no-repeat center / 35px 35px;
-    transition: all -1ms;
+    background: #4a567c;
+    color: #AEBBD3;
+    transition: all 350ms ease-in;
 }
 
 input[type="range"]:focus,
