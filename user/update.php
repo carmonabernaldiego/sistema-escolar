@@ -14,49 +14,11 @@ if (empty($_POST['txtuseridUpdate'])) {
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {
-			$directorioSubida = "../images/users/";
-			$max_file_size = "20480000";
-			$extensionesValidas = array("jpg", "png", "jpeg");
-
-			if (isset($_FILES['fileimage'])) {
-				$errores = array();
-				$nombreArchivo = $_FILES['fileimage']['name'];
-				$filesize = $_FILES['fileimage']['size'];
-				$directorioTemp = $_FILES['fileimage']['tmp_name'];
-				$tipoArchivo = $_FILES['fileimage']['type'];
-				$arrayArchivo = pathinfo($nombreArchivo);
-				$extension = $arrayArchivo['extension'];
-
-				// Comprobamos la extensión del archivo
-				if (!in_array($extension, $extensionesValidas)) {
-					$errores[] = "La extensión del archivo no es válida o no se ha subido ningún archivo";
-				}
-
-				// Comprobamos el tamaño del archivo
-				if ($filesize > $max_file_size) {
-					$errores[] = "La imagen debe de tener un tamaño inferior a 20 mb";
-				}
-
-				// Comprobamos y renombramos el nombre del archivo
-				$nombreArchivo = $arrayArchivo['filename'];
-				$nombreArchivo = preg_replace("/[^A-Z0-9._-]/i", "_", $nombreArchivo);
-				$nombreArchivo = $_POST['txtuseridUpdate'] . rand(1, 1000);
-
-				// Desplazamos el archivo si no hay errores
-				if (empty($errores)) {
-					$nombreCompleto = $directorioSubida . $nombreArchivo . "." . $extension;
-					$nombre_img = $nombreArchivo . "." . $extension;
-					move_uploaded_file($directorioTemp, $nombreCompleto);
-				} else {
-					$nombre_img = $_SESSION['image'];
-				}
-			}
-
 			if ($_POST['txtuserpassNewUpdate'] == $_POST['txtuserpassConfirmUpdate'] and $_POST['txtuserpassNewUpdate'] != "" and $_POST['txtuserpassConfirmUpdate'] != "") {
 
-				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', pass = '" . $_POST['txtuserpassNewUpdate'] . "', image = '" . $nombre_img . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', pass = '" . $_POST['txtuserpassNewUpdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
 			} else {
-				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', image = '" . $nombre_img . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+				$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
 			}
 
 			if (mysqli_query($conexion, $sql_update)) {
