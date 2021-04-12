@@ -2,7 +2,7 @@
 include_once '../modules/security.php';
 include_once '../modules/conexion.php';
 
-//upload.php
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
 if (isset($_POST["image"])) {
 	$data = $_POST["image"];
@@ -21,6 +21,7 @@ if (isset($_POST["image"])) {
 	$data = base64_decode($image_array_2[1]);
 
 	$imageName = $_SESSION['user_id'][0] . rand(1, 1000) . '.png';
+
 	$nameFile = $directorioSubida . $imageName;
 
 	file_put_contents($nameFile, $data);
@@ -30,18 +31,19 @@ if (isset($_POST["image"])) {
 	if (mysqli_query($conexion, $sql_update)) {
 		$_SESSION['msgbox_error'] = 0;
 		$_SESSION['msgbox_info'] = 1;
-		$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
+		$_SESSION['text_msgbox_info'] = 'La imagen se cargo correctamente en el servidor.';
 	} else {
 		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
-		$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
+		$_SESSION['text_msgbox_error'] = 'Existe un problema al cargar su imagen.';
 	}
 
 	if ($_SESSION['user'] == $_SESSION['user']) {
 		$_SESSION['image'] = $imageName;
 		setcookie('image', $imageName, time() + 365 * 24 * 60 * 60, "/");
 	}
-
-	header('Location: /user');
-	exit();
+} else {
+	$_SESSION['msgbox_info'] = 0;
+	$_SESSION['msgbox_error'] = 1;
+	$_SESSION['text_msgbox_error'] = 'Existe un problema al cargar su imagen.';
 }

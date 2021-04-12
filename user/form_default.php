@@ -137,7 +137,6 @@ include_once '../modules/notif_info.php';
 ?>
 <script>
 	$('#section-croppie-image').hide();
-	$('.loader-image-upload').hide();
 
 	function confirmPass() {
 		pass1 = document.getElementById('pass1');
@@ -193,15 +192,15 @@ include_once '../modules/notif_info.php';
 		});
 
 		$('.crop_btn').click(function(event) {
-			$('.loader-image-upload').css("visibility", "visible");
-			$('.loader-image-upload').show();
-		
 			$image_crop.croppie('result', {
 				type: 'canvas',
-				size: 'viewport',
+				size: 'original',
 				quality: 1,
 				circle: false
 			}).then(function(response) {
+				$('.loader-image-upload').css("visibility", "visible");
+				$('#section-user-image').show();
+				$('#section-croppie-image').hide();
 				$.ajax({
 					url: "upload.php",
 					type: "POST",
@@ -210,6 +209,7 @@ include_once '../modules/notif_info.php';
 					},
 					success: function(res) {
 						location.href = location.href;
+						window.location.href = "/user"
 					}
 				});
 			})

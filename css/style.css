@@ -150,7 +150,7 @@ button:focus {
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 350px;
+    height: 380px;
     z-index: 9999;
     background: url(../images/user_upload_loader.gif) 50% 50% no-repeat #44475a;
     border-top-left-radius: 0.6em;
@@ -212,13 +212,14 @@ button:focus {
     font-size: 0.92em;
     font-weight: bold;
     text-decoration: none;
+    transition: all 350ms ease-out;
 }
 
 .info-school-period .school_period a:hover,
 .info-school-period .school_period a:focus {
     color: #9492c0;
     outline: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 
@@ -261,7 +262,7 @@ button:focus {
     width: 50px;
     height: 50px;
     margin: 5% 8%;
-    background: #282a36;
+    background: url(../images/users/user.png) no-repeat center / 100% 100%;
     box-shadow: 0px 0px 6px rgba(98, 114, 164, 0.8);
     border: 2px solid #9492c0;
     border-radius: 10em;
@@ -289,12 +290,12 @@ button:focus {
     text-decoration: none;
     font-size: 1em;
     font-weight: 500;
-    transition: all 350ms;
+    transition: all 350ms ease-out;
 }
 
 .nav-home .user span.logout_user>a:hover {
     color: #9492c0;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .nav-home .user span.logout_user>a+ul>li {
@@ -350,6 +351,7 @@ button:focus {
     font-size: 0.97em;
     font-weight: 500;
     text-decoration: none;
+    transition: all 350ms ease-out;
 }
 
 .nav-home ul li a .icon {
@@ -360,7 +362,7 @@ button:focus {
 
 .nav-home ul a:hover {
     color: #9492c0;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .nav-home ul li a.active {
@@ -368,7 +370,7 @@ button:focus {
     color: #9492c0;
     text-shadow: none;
     border-left: 4px solid #6272a4;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 
@@ -430,6 +432,7 @@ button:focus {
     border: none;
     border-radius: 2em;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .box-notification-ok .button:hover,
@@ -439,7 +442,7 @@ button:focus {
     background: #aa3535;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 
@@ -607,6 +610,7 @@ button:focus {
     color: #687292;
     font-weight: 500;
     font-size: 0.9em;
+    transition: all 350ms ease-out;
 }
 
 .form-options .search .btn-search {
@@ -625,13 +629,14 @@ button:focus {
     border-bottom-left-radius: 0;
     font-size: 1.02em;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-options .search .btn-search:hover,
 .form-options .search .btn-search:focus {
     background: #4a567c;
     color: #eef4ff98;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-options .options {
@@ -653,6 +658,7 @@ button:focus {
     border: none;
     border-radius: 100%;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-options .options .btn:hover,
@@ -660,7 +666,7 @@ button:focus {
     background: #456661;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-options .options .btn.disabled,
@@ -673,6 +679,7 @@ button:focus {
 .form-options .options .btnexit {
     background: #db4949;
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    transition: all 350ms ease-out;
 }
 
 .form-options .options .btnexit:hover,
@@ -680,7 +687,7 @@ button:focus {
     background: #aa3535;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-options .options .search-mobile {
@@ -691,6 +698,7 @@ button:focus {
     display: none;
     background: #6272a4;
     box-shadow: 2px 2px 4px rgba(73, 100, 219, 0.3);
+    transition: all 350ms ease-out;
 }
 
 .form-options .options .btnsearch:hover,
@@ -698,7 +706,7 @@ button:focus {
     background: #4a567c;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 
@@ -758,6 +766,7 @@ button:focus {
     font-size: 0.9em;
     font-weight: 500;
     text-align: left;
+    transition: all 350ms ease-out;
 }
 
 .form-gridview td p {
@@ -783,13 +792,14 @@ button:focus {
     color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-gridview td button.btnview:hover,
 .form-gridview td button.btnview:focus {
     background: #456661;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-gridview td button.btnedit {
@@ -804,13 +814,14 @@ button:focus {
     color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-gridview td button.btnedit:hover,
 .form-gridview td button.btnedit:focus {
     background: #2a4866;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-gridview td button.btndelete {
@@ -825,17 +836,19 @@ button:focus {
     color: #eef4ff;
     text-decoration: none;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-gridview td button.btndelete:hover,
 .form-gridview td button.btndelete:focus {
     background: #aa3535;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-gridview tr:hover td {
     background: #dde8fc;
+    transition: all 350ms ease-in;
 }
 
 .pages {
@@ -864,13 +877,14 @@ button:focus {
     color: #eef4ff;
     font-size: 0.725em;
     font-weight: bold;
+    transition: all 350ms ease-out;
 }
 
 .pages ul li button:hover,
 .pages ul li button:focus {
     background: #4c597e;
     cursor: pointer;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .pages ul li.active button {
@@ -881,6 +895,7 @@ button:focus {
 .pages ul li.active button:focus {
     background: #6272a4;
     cursor: pointer;
+    transition: all 350ms ease-in;
 }
 
 
@@ -945,6 +960,7 @@ button:focus {
     color: #687292;
     font-weight: 500;
     font-size: 0.9em;
+    transition: all 350ms ease-out;
 }
 
 .form-data .body .textarea {
@@ -963,6 +979,7 @@ button:focus {
     font-weight: 500;
     text-align: justify;
     resize: none;
+    transition: all 350ms ease-out;
 }
 
 .form-data .body .select {
@@ -978,6 +995,7 @@ button:focus {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 500;
+    transition: all 350ms ease-out;
 }
 
 .form-data .body .select option {
@@ -998,6 +1016,7 @@ button:focus {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 500;
+    transition: all 350ms ease-out;
 }
 
 .form-data .body [type="date"]::-webkit-inner-spin-button {
@@ -1033,11 +1052,12 @@ button:focus {
     font-weight: bold;
     text-transform: capitalize;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-data .body .file:hover {
     background: #4a567c;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-data .body .btn {
@@ -1055,6 +1075,7 @@ button:focus {
     text-shadow: none;
     font-size: 1.1em;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-data .body .btn:hover,
@@ -1062,7 +1083,7 @@ button:focus {
     background: #4a567c;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .text:focus,
@@ -1076,6 +1097,7 @@ button:focus {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     color: #4a567c !important;
+    transition: all 350ms ease-in;
 }
 
 
@@ -1107,6 +1129,7 @@ button:focus {
     color: #eef4ff;
     font-size: 1.1em;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-data .delete .btn-no {
@@ -1121,20 +1144,21 @@ button:focus {
     color: #eef4ff;
     font-size: 1.1em;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-data .delete .btn-si:hover,
 .form-data .delete .btn-si:focus {
     background: #aa3535;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-data .delete .btn-no:hover,
 .form-data .delete .btn-no:focus {
     background: #2a4866;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 
@@ -1183,6 +1207,7 @@ button:focus {
     font-size: 0.9em;
     font-weight: 500;
     text-align: left;
+    transition: all 350ms ease-out;
 }
 
 .form-data td.center {
@@ -1191,6 +1216,7 @@ button:focus {
 
 .form-data tr:hover td {
     background: #dde8fc;
+    transition: all 350ms ease-in;
 }
 
 .form-data td label {
@@ -1220,6 +1246,7 @@ button:focus {
     border-radius: 0.4em;
     border: none;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-data button.btn-add-subjects:hover,
@@ -1227,7 +1254,7 @@ button:focus {
     background: #4a567c;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-data button.btn-add-students {
@@ -1245,6 +1272,7 @@ button:focus {
     border-top-right-radius: 0.8em;
     border: none;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-data button.btn-add-students:hover,
@@ -1252,7 +1280,7 @@ button:focus {
     background: #4a567c;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 .form-data button.btn-save {
@@ -1270,6 +1298,7 @@ button:focus {
     border-bottom-right-radius: 0.6em;
     border: none;
     cursor: pointer;
+    transition: all 350ms ease-out;
 }
 
 .form-data button.btn-save:hover,
@@ -1277,7 +1306,7 @@ button:focus {
     background: #4a567c;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms;
+    transition: all 350ms ease-in;
 }
 
 
@@ -1354,6 +1383,7 @@ button:focus {
     width: 270px;
     height: 270px;
     margin: 0 auto;
+    background: url(../images/users/user.png) no-repeat center / 100% 100%;
     border: solid #eef4ff 4px;
     border-radius: 100%;
     pointer-events: none;
@@ -1368,12 +1398,12 @@ button:focus {
     margin: 0 auto;
     margin-top: -35px;
     padding: 0;
-    background: #6272a4;
     background: url(../images/menu_mobile/camera.svg)#6272a4 no-repeat center / 35px 35px;
     box-shadow: none;
     border-radius: 100%;
     color: #eef4ff;
     cursor: pointer;
+    transition: none;
 }
 
 .formConfigUser .body #section-user-image .file:hover {
@@ -1397,7 +1427,6 @@ button:focus {
     margin: 0 auto;
     margin-top: -35px;
     padding: 0;
-    background: #6272a4;
     background: url(../images/menu_mobile/crop.svg)#6272a4 no-repeat center / 35px 35px;
     box-shadow: none;
     border: none;
@@ -1405,6 +1434,7 @@ button:focus {
     color: #eef4ff;
     cursor: pointer;
     z-index: 999;
+    transition: none;
 }
 
 .formConfigUser .body #section-croppie-image .crop_btn:hover {
@@ -1566,10 +1596,12 @@ input[type="range"]:active {
     height: 40px;
     border-radius: 100%;
     transition: all 300ms;
+    transition: all 350ms ease-out;
 }
 
 .user-mobile nav ul li a:hover {
     background: #323844;
+    transition: all 350ms ease-in;
 }
 
 .user-mobile nav ul li a img {
@@ -1667,11 +1699,13 @@ input[type="range"]:active {
     padding: .4em .8em;
     margin: 4.5px;
     border-radius: 0.6em;
+    transition: all 350ms ease-out;
 }
 
 .menu-mobile header nav ul li a:hover,
 .menu-mobile header nav ul li a.active {
     background: #323844;
+    transition: all 350ms ease-in;
 }
 
 .menu-mobile header nav ul li a img {
