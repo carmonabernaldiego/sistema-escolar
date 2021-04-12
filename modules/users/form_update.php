@@ -18,12 +18,20 @@ if ($result = $conexion->query($sql)) {
 }
 echo '
 <div class="form-data">
-	<div class="head">
-		<h1 class="titulo">Actualizar</h1>
-    </div>
-   <div class="body">
+	<div class="loader-image-upload">
+	</div>
+	<div class="body">
+		<div id="section-croppie-image">
+			<div id="image_crop"></div>
+			<button class="crop_btn"><span class="icon">crop</span></button>
+		</div>
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST">
 			<div class="wrap">
+				<div id="section-user-image">
+					<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
+					<label class="file" for="file_upload_image"><span class="icon">add_a_photo</span></label>
+					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
+				</div>
 				<div class="first">
 					<label class="label">Usuario</label>
 					<input style="display: none;" type="text" name="txtuseridUpdate" value="' . $_SESSION['user_id'][0] . '"/>
@@ -74,12 +82,6 @@ echo
 '
 					</select>
 				</div>
-				<div class="last imageuser">
-					<label class="label" style="text-align:center;">Imagen</label>
-					<img id="userimage" class="user-image" src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
-					<label class="file" for="fileimage">Abrir Imagen</label>
-					<input id="fileimage" style="display: none;" type="file" name="fileimage" accept=".jpg, .jpeg, .png" />
-				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
         </form>
@@ -91,18 +93,61 @@ include_once "../sections/options-disabled.php";
 echo '</div>';
 ?>
 <script>
-	document.getElementById("fileimage").onchange = function(e) {
-		// Creamos el objeto de la clase FileReader
-		let reader = new FileReader();
+	$('#section-croppie-image').hide();
 
-		// Leemos el archivo subido y se lo pasamos a nuestro fileReader
-		reader.readAsDataURL(e.target.files[0]);
+	$(document).ready(function() {
 
-		// Le decimos que cuando este listo ejecute el código interno
-		reader.onload = function() {
-			image = document.getElementById('userimage');
+		$image_crop = $('#image_crop').croppie({
+			enableExif: true,
+			viewport: {
+				width: 190,
+				height: 190,
+				type: 'circle' //square
+			},
+			boundary: {
+				width: 270,
+				height: 270
+			}
+		});
 
-			image.src = reader.result;
-		};
-	}
+		$('#file_upload_image').on('change', function() {
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				$image_crop.croppie('bind', {
+					url: event.target.result
+				}).then(function() {
+					console.log('jQuery bind complete');
+				});
+			}
+			reader.readAsDataURL(this.files[0]);
+			$('#section-user-image').hide();
+			$('#section-croppie-image').show();
+		});
+
+		$('.crop_btn').click(function(event) {
+			$image_crop.croppie('result', {
+				type: 'canvas',
+				size: 'original',
+				quality: 1,
+				circle: false
+			}).then(function(response) {
+				$('.loader-image-upload').css("visibility", "visible");
+				$('#section-user-image').show();
+				$('#section-croppie-image').hide();
+				$.ajax({
+					url: "upload.php",
+					type: "POST",
+					data: {
+						"image": response
+					},
+					success: function(res) {
+						location.href = location.href;
+						window.location.href = "/user"
+					}
+				});
+			})
+
+		});
+
+	});
 </script>

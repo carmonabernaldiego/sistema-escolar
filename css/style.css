@@ -902,6 +902,7 @@ button:focus {
 -------------------------------------------*/
 
 .form-data {
+    position: relative;
     float: left;
     margin: 0 0 35px 0;
     width: 71%;
@@ -1343,7 +1344,8 @@ button:focus {
     clear: both;
 }
 
-.formConfigUser .body .wrap {
+.formConfigUser .body .wrap,
+.form-data .body .wrap {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -1369,14 +1371,16 @@ button:focus {
     visibility: visible!important;
 }
 
-.formConfigUser .body #section-user-image {
+.formConfigUser .body #section-user-image,
+.form-data .body #section-user-image {
     width: 100%;
     margin: 0 auto;
     margin-top: 28px;
     margin-bottom: 18px;
 }
 
-.formConfigUser .body #section-user-image img {
+.formConfigUser .body #section-user-image img,
+.form-data .body #section-user-image img {
     display: block;
     width: 270px;
     height: 270px;
@@ -1387,7 +1391,8 @@ button:focus {
     box-shadow: 0px 0 8px rgba(182, 193, 224, 0.8);
 }
 
-.formConfigUser .body #section-user-image .file {
+.formConfigUser .body #section-user-image .file,
+.form-data .body #section-user-image .file {
     display: block;
     position: relative;
     width: 65px;
@@ -1406,13 +1411,15 @@ button:focus {
     transition: all 350ms ease-out;
 }
 
-.formConfigUser .body #section-user-image .file:hover {
+.formConfigUser .body #section-user-image .file:hover,
+.form-data .body #section-user-image .file:hover {
     background: #4a567c;
     color: #AEBBD3;
     transition: all 350ms ease-in;
 }
 
-.formConfigUser .body #section-croppie-image {
+.formConfigUser .body #section-croppie-image,
+.form-data .body #section-croppie-image {
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -1420,7 +1427,8 @@ button:focus {
     padding-bottom: 18px;
 }
 
-.formConfigUser .body #section-croppie-image .crop_btn {
+.formConfigUser .body #section-croppie-image .crop_btn,
+.form-data .body #section-croppie-image .crop_btn {
     display: block;
     position: relative;
     width: 65px;
@@ -1441,7 +1449,8 @@ button:focus {
     transition: all 350ms ease-out;
 }
 
-.formConfigUser .body #section-croppie-image .crop_btn:hover {
+.formConfigUser .body #section-croppie-image .crop_btn:hover,
+.form-data .body #section-croppie-image .crop_btn:hover {
     background: #4a567c;
     color: #AEBBD3;
     transition: all 350ms ease-in;
