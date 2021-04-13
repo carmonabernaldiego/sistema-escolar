@@ -31,11 +31,6 @@ if (empty($_POST['txtuseridUpdate'])) {
 				$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
 			}
 
-			if ($_POST['txtuseridUpdate'] == $_SESSION['user']) {
-				$_SESSION['image'] = $nombre_img;
-				setcookie('image', $nombre_img, time() + 365 * 24 * 60 * 60, "/");
-			}
-
 			header('Location: /user');
 			exit();
 		} else {

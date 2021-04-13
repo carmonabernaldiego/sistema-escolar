@@ -1,0 +1,36 @@
+.box-notification-ok,
+.box-notification-error {
+    position: absolute;
+    top: 0;
+    width: 72%;
+    height: 50px;
+    margin: 35px 0 0 0;
+}
+
+.box-notification-ok p,
+.box-notification-error p {
+    padding: 17px 35px;
+}
+
+@media only screen and (max-width: 1186px) {
+    .box-notification-ok,
+    .box-notification-error {
+        position: absolute;
+        top: 0;
+        width: 94%;
+        margin: 100px 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 963px) {
+    .box-notification-ok,
+    .box-notification-error {
+        position: initial;
+        width: 100%;
+        margin: -77px 0 27px 0;
+    }
+    .box-notification-ok p,
+    .box-notification-error p {
+        padding: 17px 5%;
+    }
+}

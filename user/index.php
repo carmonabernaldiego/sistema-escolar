@@ -24,6 +24,7 @@ if (!empty($_POST['btn'])) {
 	<title>Usuarios | Sistema Escolar</title>
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="/css/styleconfiguser.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -59,5 +60,6 @@ if (!empty($_POST['btn'])) {
 		?>
 	</section>
 </body>
+<script src="/js/uploadimageuser.js?v=<?php echo (rand()); ?>"></script>
 
 </html>
