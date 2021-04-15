@@ -56,7 +56,7 @@ $(document).ready(function() {
     $('.crop_btn').click(function(event) {
         $image_crop.croppie('result', {
             type: 'canvas',
-            size: 'viewport',
+            size: 'original',
             quality: 1,
             circle: false
         }).then(function(response) {

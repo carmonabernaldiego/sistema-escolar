@@ -4,6 +4,10 @@ include_once '../conexion.php';
 include_once '../close_notif_info.php';
 
 header('Content-Type: text/html; charset=UTF-8');
+header('Last-Modified:' . gmdate('D, d M Y H:i:s') . 'GMT');
+header('Cache-Control: no-cache, must-revalidate, max-age=0');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
