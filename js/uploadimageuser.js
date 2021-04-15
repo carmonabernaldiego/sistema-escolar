@@ -71,7 +71,7 @@ $(document).ready(function() {
                 },
                 success: function(res) {
                     location.href = location.href;
-                    window.location.href = "/user"
+                    window.location.href = "/user";
                 }
             });
         })
