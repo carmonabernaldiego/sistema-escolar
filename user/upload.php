@@ -44,7 +44,7 @@ if (isset($_POST["image"])) {
 		$_SESSION['text_msgbox_error'] = 'Existe un problema al cargar imagen.';
 	}
 
-	if ($_SESSION['user'] == $_SESSION['user']) {
+	if ($_SESSION['user'] == $_SESSION['user_id'][0]) {
 		$_SESSION['image'] = $imageName;
 		setcookie('image', $imageName, time() + 365 * 24 * 60 * 60, "/");
 	}

@@ -53,7 +53,7 @@ if ($_SESSION['user_type'][0] == 'admin') {
 								<option value="teacher">Docente</option>
 								<option value="editor">Editor</option>	
 							';
-} elseif ($_SESSION['user_type'][0] == 'alumno') {
+} elseif ($_SESSION['user_type'][0] == 'student') {
 	echo
 	'
 								<option value="student">Alumno</option>
@@ -61,7 +61,7 @@ if ($_SESSION['user_type'][0] == 'admin') {
 								<option value="teacher">Docente</option>
 								<option value="editor">Editor</option>	
 							';
-} elseif ($_SESSION['user_type'][0] == 'docente') {
+} elseif ($_SESSION['user_type'][0] == 'teacher') {
 	echo
 	'
 								<option value="teacher">Docente</option>

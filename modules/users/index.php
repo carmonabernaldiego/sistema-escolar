@@ -76,6 +76,6 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
-<script src="/js/uploadimageuser.js?v=<?php echo (rand()); ?>"></script>
+<script src="/js/uploadimageusers.js?v=<?php echo (rand()); ?>"></script>
 
 </html>
