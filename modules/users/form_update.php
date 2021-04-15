@@ -1,12 +1,16 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
+if (isset($_POST['id'])) {
+	$_SESSION['POST_id'] = $_POST['id'];
+}
+
 $_SESSION['user_id'] = array();
 $_SESSION['email'] = array();
 $_SESSION['user_type'] = array();
 $_SESSION['user_image'] = array();
 
-$sql = "SELECT * FROM users WHERE user = '" . $_POST['id'] . "'";
+$sql = "SELECT * FROM users WHERE user = '" . $_SESSION['POST_id'] . "'";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
@@ -91,4 +95,3 @@ echo
 echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
 echo '</div>';
-?>

@@ -16,8 +16,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 // Formulario actual
 if (!empty($_POST['btn'])) {
 	$view_form = $_POST['btn'] . '.php';
-} elseif ($_SESSION['form_update'] == 1) {
+} elseif (isset($_SESSION['form_update']) == 1) {
 	$view_form = 'form_update.php';
+	unset($_SESSION['form_update']);
 } else {
 	$view_form = 'form_default.php';
 }
