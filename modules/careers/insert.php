@@ -10,6 +10,16 @@ if (empty($_POST['txtcareer'])) {
 	exit();
 }
 
+$_POST['txtcareer'] = trim($_POST['txtcareer']);
+
+if ($_POST['txtcareer'] == '') {
+	$_SESSION['msgbox_info'] = 0;
+	$_SESSION['msgbox_error'] = 1;
+	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto.';
+	header('Location: /modules/careers');
+	exit();
+}
+
 $sql = "SELECT * FROM careers WHERE career = '" . $_POST['txtcareer'] . "'";
 
 if ($result = $conexion->query($sql)) {

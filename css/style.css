@@ -1026,39 +1026,6 @@ button:focus {
     opacity: 1;
 }
 
-.form-data .body .user-image {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    border: solid #282a36 3px;
-    border-radius: 0.4em;
-    pointer-events: none;
-    box-shadow: 0px 0px 4px rgba(98, 114, 164, 0.7);
-}
-
-.form-data .body .file {
-    display: block;
-    margin: 0 auto 0;
-    padding: 1% 0 1.5%;
-    width: 40%;
-    background: #282a36;
-    box-shadow: 0px 1px 4px rgba(98, 114, 164, 0.7);
-    border-bottom-left-radius: 0.4em;
-    border-bottom-right-radius: 0.4em;
-    color: #eef4ff;
-    text-align: center;
-    font-size: 0.8em;
-    font-weight: bold;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: all 350ms ease-out;
-}
-
-.form-data .body .file:hover {
-    background: #4a567c;
-    transition: all 350ms ease-in;
-}
-
 .form-data .body .btn {
     display: block;
     float: right;
@@ -1391,7 +1358,7 @@ button:focus {
     box-shadow: 0px 0 8px rgba(182, 193, 224, 0.8);
 }
 
-.formConfigUser .body #section-user-image .file,
+.ConfigUser .body #section-user-image .file,
 .form-data .body #section-user-image .file {
     display: block;
     position: relative;
@@ -1407,6 +1374,7 @@ button:focus {
     line-height: 2.5em;
     font-size: 1.8em;
     font-weight: 100;
+    text-align: center;
     cursor: pointer;
     transition: all 350ms ease-out;
 }

@@ -10,6 +10,16 @@ if (empty($_POST['txtspid'])) {
 	exit();
 }
 
+$_POST['txtspid'] = trim($_POST['txtspid']);
+
+if ($_POST['txtspid'] == '') {
+	$_SESSION['msgbox_info'] = 0;
+	$_SESSION['msgbox_error'] = 1;
+	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto.';
+	header('Location: /modules/school_periods');
+	exit();
+}
+
 if ($_POST['selectcurrent'] == '1') {
 	$_SESSION['school_period'] = $_POST['txtspid'];
 
