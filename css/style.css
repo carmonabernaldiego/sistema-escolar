@@ -4,8 +4,7 @@
   style.css
   Design by Diego Carmona Bernal
   www.diegocarmonabernal.com
-  Updated: November 24, 2020.
-  
+  www.mysoftup.com
 -------------------------------------------*/
 
 
@@ -851,7 +850,7 @@ button:focus {
 }
 
 .pages {
-    margin: 2.5% 0 2.5% 2.89%;
+    margin: 2.8% 0 2.8% 2.89%;
 }
 
 .pages:after {
@@ -867,7 +866,7 @@ button:focus {
 .pages ul li button {
     float: left;
     margin: 0 10px 0 0;
-    width: 4%;
+    width: 5%;
     height: 22px;
     background: #7e8aac;
     box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
@@ -1904,7 +1903,7 @@ input[type="range"]:active {
         height: 38px;
     }
     .form-gridview .pages ul li button {
-        width: 6%;
+        width: 5%;
     }
 }
 
@@ -1913,10 +1912,19 @@ input[type="range"]:active {
         display: block;
         max-width: -moz-fit-content;
         max-width: fit-content;
-        margin: 7% auto;
+        margin: 6% auto 0;
         overflow-x: auto;
         white-space: nowrap;
         box-shadow: 0 1.4px 4px rgba(142, 136, 192, 0.2);
+    }
+    .form-gridview .pages {
+        margin: 3.2% 0 3.2% 2.89%;
+    }
+    .form-data .delete .btn-si {
+        margin: 22px 0 25px 20%;
+    }
+    .form-data .delete .btn-no {
+        margin: 22px 20% 25px 0;
     }
 }
 
@@ -1952,5 +1960,11 @@ input[type="range"]:active {
     .form-options .search .btn-search {
         width: 14%;
         height: 38px;
+    }
+    .form-data .delete .btn-si {
+        margin: 22px 0 25px 6%;
+    }
+    .form-data .delete .btn-no {
+        margin: 22px 6% 25px 0;
     }
 }
