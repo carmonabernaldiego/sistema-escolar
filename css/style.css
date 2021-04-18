@@ -715,7 +715,7 @@ button:focus {
 
 .form-gridview {
     float: left;
-    margin: 0 0 35px 0;
+    margin: 0;
     width: 71%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
@@ -724,7 +724,7 @@ button:focus {
 
 .form-gridview table {
     width: 94%;
-    margin: 4.5% auto;
+    margin: 4.5% auto 0;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
     border-top-left-radius: 0.25em;
@@ -851,7 +851,7 @@ button:focus {
 }
 
 .pages {
-    margin: 0 0 2.5% 2.9%;
+    margin: 2.5% 0 2.5% 2.95%;
 }
 
 .pages:after {
@@ -867,15 +867,16 @@ button:focus {
 .pages ul li button {
     float: left;
     margin: 0 10px 0 0;
-    width: 5%;
-    height: 23px;
+    width: 4%;
+    height: 22px;
     background: #7e8aac;
     box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
     border: none;
     border-radius: 0.25em;
     color: #eef4ff;
-    font-size: 0.725em;
-    font-weight: bold;
+    line-height: 23px;
+    font-size: 0.625em;
+    font-weight: 600;
     transition: all 350ms ease-out;
 }
 
@@ -892,7 +893,7 @@ button:focus {
 
 .pages ul li.active button:hover,
 .pages ul li.active button:focus {
-    background: #6272a4;
+    background: #7e8aac;
     cursor: pointer;
     transition: all 350ms ease-in;
 }
