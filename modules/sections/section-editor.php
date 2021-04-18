@@ -3,6 +3,19 @@ include_once 'security.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
+$name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['image'] . '';
+
+if (file_exists($name_image_user)) {
+} else {
+    $sql = "SELECT image FROM users WHERE user = '" . $_SESSION['user'] . "'";
+
+    if ($result = $conexion->query($sql)) {
+        if ($row = mysqli_fetch_array($result)) {
+            $_SESSION['image'] = $row['image'];
+        }
+    }
+}
+
 $url_actual = $_SERVER["REQUEST_URI"];
 
 if (strpos($url_actual, 'modules')) {
