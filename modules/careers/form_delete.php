@@ -7,9 +7,10 @@ echo '
                 <h1>Atención</h1>
             </div>
             <div class="delete">
+                <h1>¿Estas seguro?</h1>
+                <h2>¡Se borrará de forma permanente!</h2>
                 <form name="form-delete-careers" action="delete.php" method="POST">
                     <input style="display: none;" type="text" name="txtcareer" value="' . $_POST['txtcareer'] . '" />
-                    <h1>¿Eliminar registro?</h1>
                     <button class="btn-si icon" type="submit" autofocus>check</button>
                 </form>
                 <form action="#" method="POST">

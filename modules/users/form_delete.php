@@ -10,7 +10,8 @@
                 <h1>Atención</h1>
             </div>
             <div class="delete">
-                <h1>¿Eliminar registro?</h1>
+                <h1>¿Estas seguro?</h1>
+                <h2>¡Se borrará de forma permanente!</h2>
                 <form name="form-delete-users" action="delete.php" method="POST">
                     <input style="display: none;" type="text" name="txtuserid" value="'.$id.'" />
                     <input style="display: none;" type="text" name="txtuserimage" value="'.$userimage. '" />

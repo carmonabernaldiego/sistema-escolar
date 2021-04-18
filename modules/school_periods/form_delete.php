@@ -9,7 +9,8 @@ echo '
                 <h1>Atención</h1>
             </div>
             <div class="delete">
-                <h1>¿Eliminar registro?</h1>
+                <h1>¿Estas seguro?</h1>
+                <h2>¡Se borrará de forma permanente!</h2>
                 <form name="form-delete-school-periods" action="delete.php" method="POST">
                     <input style="display: none;" type="text" name="txtspid" value="' . $sp_id . '" />
                     <button class="btn-si icon" type="submit" autofocus>check</button>

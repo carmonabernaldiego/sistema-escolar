@@ -7,10 +7,11 @@ echo '
                 <h1>Atención</h1>
             </div>
             <div class="delete">
+                <h1>¿Estas seguro?</h1>
+                <h2>¡Se borrará de forma permanente!</h2>
                 <form name="form-delete-subjects" action="delete.php" method="POST">
                     <input style="display: none;" type="text" name="txtgroup" value="' . $_POST['txtgroup'] . '" />
                     <input style="display: none;" type="text" name="txtgroupschoolperiod" value="' . $_POST['txtgroupschoolperiod'] . '" />
-                    <h1>¿Eliminar registro?</h1>
                     <button class="btn-si icon" type="submit" autofocus>check</button>
                 </form>
                 <form action="#" method="POST">

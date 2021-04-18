@@ -1085,22 +1085,7 @@ button:focus {
 
 .form-data .delete .btn-si {
     float: left;
-    margin: 25px 0 35px 25%;
-    width: 75px;
-    height: 40px;
-    background: #db4949;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
-    border: none;
-    border-radius: 0.6em;
-    color: #eef4ff;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: all 350ms ease-out;
-}
-
-.form-data .delete .btn-no {
-    float: right;
-    margin: 25px 25% 35px 0;
+    margin: 25px 0 35px 30%;
     width: 75px;
     height: 40px;
     background: #3f6992;
@@ -1113,16 +1098,31 @@ button:focus {
     transition: all 350ms ease-out;
 }
 
+.form-data .delete .btn-no {
+    float: right;
+    margin: 25px 30% 35px 0;
+    width: 75px;
+    height: 40px;
+    background: #db4949;
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    border: none;
+    border-radius: 0.6em;
+    color: #eef4ff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 350ms ease-out;
+}
+
 .form-data .delete .btn-si:hover,
 .form-data .delete .btn-si:focus {
-    background: #aa3535;
+    background: #2a4866;
     border: none;
     transition: all 350ms ease-in;
 }
 
 .form-data .delete .btn-no:hover,
 .form-data .delete .btn-no:focus {
-    background: #2a4866;
+    background: #aa3535;
     border: none;
     transition: all 350ms ease-in;
 }
