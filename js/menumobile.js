@@ -10,7 +10,7 @@ var toggle = false;
 
 tl.to('.activator', {
     background: '#6272a4',
-    'borderRadius': '0.6em 0 0 0.6em'
+    'borderRadius': '0.25em 0 0 0.25em'
 });
 
 tl.to('.menu-mobile nav', {

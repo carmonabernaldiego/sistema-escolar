@@ -153,8 +153,8 @@ button:focus {
     height: 380px;
     z-index: 9999;
     background: url(../images/user_upload_loader.gif) 50% 50% no-repeat #44475a;
-    border-top-left-radius: 0.6em;
-    border-top-right-radius: 0.6em;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
     opacity: 1;
 }
 
@@ -170,7 +170,7 @@ button:focus {
     margin: 35px 3%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .info-title {
@@ -382,7 +382,7 @@ button:focus {
     margin: 0 0 8% 0;
     background: #569188;
     box-shadow: 2px 3px 2px rgba(98, 164, 139, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .box-notification-error {
@@ -390,7 +390,7 @@ button:focus {
     margin: 0 0 8% 0;
     background: #c0605d;
     box-shadow: 2px 3px 2px rgba(164, 98, 98, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .box-notification-error:after,
@@ -579,7 +579,7 @@ button:focus {
     width: 100%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .form-options .search {
@@ -602,8 +602,8 @@ button:focus {
     background: #eef4ff;
     box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
     border: none;
-    border-top-left-radius: 0.4em;
-    border-bottom-left-radius: 0.4em;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     color: #687292;
@@ -622,8 +622,8 @@ button:focus {
     border: none;
     color: #eef4ff;
     cursor: initial;
-    border-top-right-radius: 0.4em;
-    border-bottom-right-radius: 0.4em;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     font-size: 1.02em;
@@ -718,7 +718,7 @@ button:focus {
     width: 71%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .form-gridview table {
@@ -726,10 +726,10 @@ button:focus {
     margin: 4.5% auto;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
-    border-top-left-radius: 0.6em;
-    border-top-right-radius: 0.6em;
-    border-bottom-left-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
     overflow: hidden;
 }
 
@@ -850,7 +850,7 @@ button:focus {
 }
 
 .pages {
-    margin: 0 0 2.5% 3.1%;
+    margin: 0 0 2.5% 2.9%;
 }
 
 .pages:after {
@@ -871,7 +871,7 @@ button:focus {
     background: #7e8aac;
     box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
     border: none;
-    border-radius: 1em;
+    border-radius: 0.25em;
     color: #eef4ff;
     font-size: 0.725em;
     font-weight: bold;
@@ -908,7 +908,7 @@ button:focus {
     width: 71%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .form-data .head {
@@ -929,7 +929,7 @@ button:focus {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 4% 0 2% 0;
+    padding: 4% 0 0 0;
 }
 
 .form-data .body .first,
@@ -1036,7 +1036,7 @@ button:focus {
     background: #6272a4;
     border: none;
     border-top-left-radius: 100%;
-    border-bottom-right-radius: 0.6em;
+    border-bottom-right-radius: 0.25em;
     color: #eef4ff;
     text-shadow: none;
     font-size: 1.1em;
@@ -1072,49 +1072,58 @@ button:focus {
 -------------------------------------------*/
 
 .form-data .delete {
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
     text-align: center;
 }
 
 .form-data .delete h1 {
     color: #eef4ff;
-    font-size: 1.2em;
-    text-transform: capitalize;
-    font-weight: bold;
+    font-size: 1.3em;
+    text-transform: initial;
+    font-weight: 600;
+}
+
+.form-data .delete h2 {
+    margin-top: 8px;
+    color: #eef4ff;
+    font-size: 1em;
+    text-transform: initial;
+    font-weight: 500;
 }
 
 .form-data .delete .btn-si {
     float: left;
-    margin: 25px 0 35px 30%;
-    width: 75px;
-    height: 40px;
+    margin: 22px 0 25px 29%;
+    width: 120px;
+    height: 38px;
     background: #3f6992;
-    box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
+    box-shadow: 0 0 4px rgba(63, 105, 146, 0.3);
     border: none;
-    border-radius: 0.6em;
+    border-radius: 0.25em;
     color: #eef4ff;
-    font-size: 1.1em;
+    font-size: 0.9em;
     cursor: pointer;
     transition: all 350ms ease-out;
 }
 
 .form-data .delete .btn-no {
     float: right;
-    margin: 25px 30% 35px 0;
-    width: 75px;
-    height: 40px;
+    margin: 22px 29% 25px 0;
+    width: 120px;
+    height: 38px;
     background: #db4949;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    box-shadow: 0 0 4px rgba(219, 73, 73, 0.3);
     border: none;
-    border-radius: 0.6em;
+    border-radius: 0.25em;
     color: #eef4ff;
-    font-size: 1.1em;
+    font-size: 0.9em;
     cursor: pointer;
     transition: all 350ms ease-out;
 }
 
 .form-data .delete .btn-si:hover,
 .form-data .delete .btn-si:focus {
+    color: #eef4ff98;
     background: #2a4866;
     border: none;
     transition: all 350ms ease-in;
@@ -1122,6 +1131,7 @@ button:focus {
 
 .form-data .delete .btn-no:hover,
 .form-data .delete .btn-no:focus {
+    color: #eef4ff98;
     background: #aa3535;
     border: none;
     transition: all 350ms ease-in;
@@ -1209,7 +1219,7 @@ button:focus {
     line-height: 2.9;
     font-size: 0.9em;
     font-weight: bold;
-    border-radius: 0.4em;
+    border-radius: 0.25em;
     border: none;
     cursor: pointer;
     transition: all 350ms ease-out;
@@ -1302,7 +1312,7 @@ button:focus {
     width: 100%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .formConfigUser:after {
@@ -1328,7 +1338,7 @@ button:focus {
     display: block;
     margin-top: -10px;
     padding: 5px 0;
-    border-radius: 0.4em;
+    border-radius: 0.25em;
     text-align: center;
     background-color: #db5f5f;
     box-shadow: 2px 2px 4px rgb(219 73 73 / 30%);
@@ -1442,7 +1452,7 @@ input[type="range"]:active {
     height: 450px;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.6em;
+    border-radius: 0.25em;
 }
 
 .formAttendanceAdd {
@@ -1456,7 +1466,7 @@ input[type="range"]:active {
     width: 47%;
     box-shadow: none;
     border-collapse: collapse;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
     overflow: hidden;
 }
 
@@ -1632,7 +1642,7 @@ input[type="range"]:active {
 
 .menu-mobile header .activator {
     padding: 1em;
-    border-radius: 0.6em;
+    border-radius: 0.25em;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     cursor: pointer;
@@ -1664,7 +1674,7 @@ input[type="range"]:active {
     height: 52px;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0 0.6em 0.6em 0;
+    border-radius: 0 0.25em 0.25em 0;
     padding: 0 .5em;
     -webkit-clip-path: ellipse(50% 50% at -50% 50%);
     clip-path: ellipse(50% 50% at -50% 50%);
@@ -1680,7 +1690,7 @@ input[type="range"]:active {
     display: block;
     padding: .4em .8em;
     margin: 4.5px;
-    border-radius: 0.6em;
+    border-radius: 0.25em;
     transition: all 350ms ease-out;
 }
 
