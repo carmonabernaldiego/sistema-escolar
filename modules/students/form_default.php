@@ -2,11 +2,12 @@
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 ?>
 <div class="form-gridview">
-	<table>
+	<table class="full">
 		<tr>
 			<th>Usuario</th>
 			<th>Nombre</th>
 			<th>CURP</th>
+			<th>Fecha de Ingreso</th>
 			<th class="view center"><a class="icon">visibility</a></th>
 			<th class="edit center"><a class="icon">edit</a></th>
 			<?php
@@ -22,6 +23,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 		    			<td>' . $_SESSION["user_id"][$i] . '</td>
 						<td>' . $_SESSION["student_name"][$i] . '</td>
 						<td>' . $_SESSION["student_curp"][$i] . '</td>
+						<td>' . $_SESSION["student_date"][$i] . '</td>
 						<td>
 							<form action="#" method="POST">
 								<input style="display:none;" type="text" name="txtuserid" value="' . $_SESSION["user_id"][$i] . '"/>

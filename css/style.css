@@ -61,21 +61,23 @@ body.login {
 }
 
 ::-webkit-scrollbar-track {
-    background: #44475a;
+    background: rgb(98, 114, 164);
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #515d81;
-    border-radius: 0
+    background: #eef4ff73;
+    border-radius: 2em;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #5b6992;
+    background: #eef4ff52;
     cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #6272a4;
+    background: #eef4ff3d;
 }
 
 input::-webkit-datetime-edit-day-field:focus,
@@ -246,8 +248,8 @@ button:focus {
 }
 
 .nav-home .user {
-    border-top: 2px dotted #282a36;
-    border-bottom: 2px dotted #282a36;
+    border-top: 1px solid #282a36;
+    border-bottom: 1px solid #282a36;
 }
 
 .nav-home .user::after {
@@ -714,7 +716,7 @@ button:focus {
 
 .form-gridview {
     float: left;
-    margin: 0;
+    margin: 0 0 35px 0;
     width: 71%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
@@ -733,6 +735,15 @@ button:focus {
     overflow: hidden;
 }
 
+.form-gridview table.full {
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 1.4px 4px rgba(142, 136, 192, 0.2);
+}
+
 .form-gridview th {
     padding: 7px 15px;
     background: #282a36;
@@ -742,7 +753,7 @@ button:focus {
     text-align: left;
     font-size: 0.9em;
     font-weight: 500;
-    text-transform: capitalize;
+    text-transform: normal;
 }
 
 .form-gridview th.center {
@@ -1073,7 +1084,7 @@ button:focus {
 -------------------------------------------*/
 
 .form-data .delete {
-    margin: 20px 0 0 0;
+    margin: 20px 0 35px 0;
     text-align: center;
 }
 
@@ -1150,8 +1161,8 @@ button:focus {
     border-collapse: collapse;
     border-top-left-radius: 0.6em;
     border-top-right-radius: 0.6em;
-    border-bottom-left-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
     overflow: hidden;
 }
 
@@ -1785,21 +1796,6 @@ input[type="range"]:active {
 @media only screen and (max-width: 963px) {
     .menu-mobile ::-webkit-scrollbar {
         height: 3px;
-    }
-     ::-webkit-scrollbar-track {
-        background: rgb(98, 114, 164);
-        border-bottom-left-radius: 0.6em;
-        border-bottom-right-radius: 0.6em;
-    }
-     ::-webkit-scrollbar-thumb {
-        background: #eef4ff73;
-        border-radius: 2em;
-    }
-     ::-webkit-scrollbar-thumb:hover {
-        background: #eef4ff52;
-    }
-     ::-webkit-scrollbar-thumb:active {
-        background: #eef4ff3d;
     }
     .menu-mobile {
         margin-top: -162px;

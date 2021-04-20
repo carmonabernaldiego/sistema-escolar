@@ -13,6 +13,7 @@ if (!empty($_POST['search'])) {
 	$_SESSION['user_id'] = array();
 	$_SESSION['student_name'] = array();
 	$_SESSION['student_curp'] = array();
+	$_SESSION['student_date'] = array();
 
 	$i = 0;
 
@@ -23,6 +24,7 @@ if (!empty($_POST['search'])) {
 			$_SESSION['user_id'][$i] = $row['user'];
 			$_SESSION['student_curp'][$i] = $row['curp'];
 			$_SESSION['student_name'][$i] = $row['name'] . ' ' . $row['surnames'];
+			$_SESSION['student_date'][$i] = $row['admission_date'];
 
 			$i += 1;
 		}
@@ -32,6 +34,7 @@ if (!empty($_POST['search'])) {
 	$_SESSION['user_id'] = array();
 	$_SESSION['student_name'] = array();
 	$_SESSION['student_curp'] = array();
+	$_SESSION['student_date'] = array();
 
 	$i = 0;
 
@@ -42,6 +45,7 @@ if (!empty($_POST['search'])) {
 			$_SESSION['user_id'][$i] = $row['user'];
 			$_SESSION['student_curp'][$i] = $row['curp'];
 			$_SESSION['student_name'][$i] = $row['name'] . ' ' . $row['surnames'];
+			$_SESSION['student_date'][$i] = $row['admission_date'];
 
 			$i += 1;
 		}

@@ -6,8 +6,8 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 		<tr>
 			<th>Usuario</th>
 			<th>Correo</th>
-			<th>Permisos</th>
 			<th>Imagen</th>
+			<th>Permisos</th>
 			<th class="edit center"><a class="icon">edit</a></th>
 			<th class="delete center"><a class="icon">delete</a></th>
 		</tr>
@@ -17,8 +17,8 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 		    		<tr>
 						<td>' . $_SESSION["user_id"][$i] . '</td>
 						<td><p>' . $_SESSION["user_email"][$i] . '</p></td>
-						<td>' . $_SESSION["user_type"][$i] . '</td>
 						<td>' . $_SESSION["user_image"][$i] . '</td>
+						<td>' . $_SESSION["user_type"][$i] . '</td>
 						<td>
 							<form action="#" method="POST">
 								<input style="display:none;" type="text" name="id" value="' . $_SESSION["user_id"][$i] . '"/>
