@@ -6,7 +6,7 @@ function unique_id($l = 10)
 	return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 }
 
-$id_generate = 'teacher_' . unique_id(5);
+$id_generate = 'TCHR-' . strtoupper(unique_id(6));
 ?>
 <div class="form-data">
 	<div class="head">
@@ -62,11 +62,8 @@ $id_generate = 'teacher_' . unique_id(5);
 						<option value="Maestria">Maestria</option>
 						<option value="Doctorado">Doctorado</option>
 					</select>
-					<label class="label">Documentación</label>
-					<select class="select" name="selectdocumentation">
-						<option value="1">Si</option>
-						<option value="0">No</option>
-					</select>
+					<label class="label">Especialidad</label>
+					<input class="text" type="text" name="txtspecialty" value="" maxlength="100" required />
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>

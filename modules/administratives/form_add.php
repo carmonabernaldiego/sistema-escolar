@@ -6,7 +6,7 @@ function unique_id($l = 10)
     return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 }
 
-$id_generate = 'admin_' . unique_id(5);
+$id_generate = 'ADMIN-' . strtoupper(unique_id(5));
 ?>
 <div class="form-data">
     <div class="head">
@@ -40,11 +40,8 @@ $id_generate = 'admin_' . unique_id(5);
                         <option value="Maestria">Maestria</option>
                         <option value="Doctorado">Doctorado</option>
                     </select>
-                    <label class="label">Documentación</label>
-                    <select class="select" name="selectdocumentation">
-                        <option value="1">Si</option>
-                        <option value="0">No</option>
-                    </select>
+					<label class="label">Cargo</label>
+					<input class="text" type="text" name="txtemployment" value="" maxlength="100" required/>
                     <label class="label">Observación</label>
                     <input class="text" type="text" name="txtobservation" value="" maxlength="200" />
                 </div>

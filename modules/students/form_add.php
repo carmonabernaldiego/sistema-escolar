@@ -6,7 +6,7 @@ function unique_id($l = 10)
 	return substr(md5(uniqid(mt_rand(), true)), 0, $l);
 }
 
-$id_generate = 'student_' . unique_id(5);
+$id_generate = 'STDT-' . strtoupper(unique_id(6));
 ?>
 <div class="form-data">
 	<div class="head">
@@ -61,7 +61,7 @@ $id_generate = 'student_' . unique_id(5);
 						<option value="0">No</option>
 					</select>
 					<label class="label">Fecha de admisión</label>
-					<input class="date" type="date" name="dateadmission" value="" required/>
+					<input class="date" type="date" name="dateadmission" value="" required />
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>

@@ -17,7 +17,7 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['administrative_address'][0] = $row['address'];
 		$_SESSION['administrative_phone'][0] = $row['phone'];
 		$_SESSION['administrative_level_studies'][0] = $row['level_studies'];
-		$_SESSION['administrative_documentation'][0] = $row['documentation'];
+		$_SESSION['administrative_employment'][0] = $row['employment'];
 		$_SESSION['administrative_observation'][0] = $row['observations'];
 	}
 }
@@ -86,24 +86,8 @@ if ($_SESSION['administrative_level_studies'][0] == 'Licenciatura') {
 }
 echo '
 					</select>
-					<label class="label">Documentación</label>
-					<select class="select" name="selectdocumentation" disabled>
-				';
-if ($_SESSION['administrative_documentation'][0] == 1) {
-	echo
-	'
-							<option value="1">Si</option>
-							<option value="0">No</option>
-						';
-} elseif ($_SESSION['administrative_documentation'][0] == 0) {
-	echo
-	'
-							<option value="0">No</option>
-							<option value="1">Si</option>
-						';
-}
-echo '
-					</select>
+					<label class="label">Cargo</label>
+					<input class="text" type="text" name="txtemployment" value="' . $_SESSION['administrative_employment'][0] . '" disabled/>
 					<label class="label">Observación</label>
 					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['administrative_observation'][0] . '" disabled/>
 				</div>

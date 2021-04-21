@@ -17,7 +17,7 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['teacher_address'][0] = $row['address'];
 		$_SESSION['teacher_phone'][0] = $row['phone'];
 		$_SESSION['teacher_level_studies'][0] = $row['level_studies'];
-		$_SESSION['teacher_documentation'][0] = $row['documentation'];
+		$_SESSION['teacher_specialty'][0] = $row['specialty'];
 		$_SESSION['teacher_career'][0] = $row['career'];
 	}
 }
@@ -111,24 +111,8 @@ if ($_SESSION['teacher_level_studies'][0] == 'Licenciatura') {
 }
 echo '
 					</select>
-					<label class="label">Documentación</label>
-					<select class="select" name="selectdocumentation">
-				';
-if ($_SESSION['teacher_documentation'][0] == 1) {
-	echo
-	'
-							<option value="1">Si</option>
-							<option value="0">No</option>
-						';
-} elseif ($_SESSION['teacher_documentation'][0] == 0) {
-	echo
-	'
-							<option value="0">No</option>
-							<option value="1">Si</option>
-						';
-}
-echo '
-					</select>
+					<label class="label">Especialidad</label>
+					<input class="text" type="text" name="txtspecialty" value="' . $_SESSION['teacher_specialty'][0] . '" maxlength="100" required/>
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
