@@ -10,7 +10,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
             <div class="wrap">
                 <div class="first">
                     <label class="label">Carrera</label>
-                    <input class="text" type="text" name="txtcareer" value="" maxlength="20" autofocus required />
+                    <input class="text" type="text" name="txtcareer" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" autofocus required />
                 </div>
                 <div class="last">
                     <label class="label">Nombre</label>

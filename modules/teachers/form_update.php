@@ -18,7 +18,15 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['teacher_phone'][0] = $row['phone'];
 		$_SESSION['teacher_level_studies'][0] = $row['level_studies'];
 		$_SESSION['teacher_specialty'][0] = $row['specialty'];
-		$_SESSION['teacher_career'][0] = $row['career'];
+
+		$sql = "SELECT * FROM careers WHERE career = '" . $row['career'] . "' ORDER BY name";
+
+		if ($result = $conexion->query($sql)) {
+			while ($row = mysqli_fetch_array($result)) {
+				$_SESSION['teacher_career'][0] = $row['career'];
+				$_SESSION['teacher_career_name'][0] = $row['name'];
+			}
+		}
 	}
 }
 
@@ -50,7 +58,7 @@ echo '
 					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['teacher_address'][0] . '" maxlength="100" required/>
 					<label class="label">Facultad</label>
 					<select class="select" name="selectcareer">
-						<option value="' . $_SESSION['teacher_career'][0] . '">' . $_SESSION['teacher_career'][0] . '</option>
+						<option value="' . $_SESSION['teacher_career'][0] . '">' . $_SESSION['teacher_career_name'][0] . '</option>
 				';
 $i = 0;
 
@@ -58,8 +66,8 @@ $sql = "SELECT * FROM careers ORDER BY name";
 
 if ($result = $conexion->query($sql)) {
 	while ($row = mysqli_fetch_array($result)) {
-		if ($_SESSION['teacher_career'][0] != $row['name']) {
-			echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+		if ($_SESSION['teacher_career'][0] != $row['career']) {
+			echo "<option value='" . $row['career'] . "'>" . $row['name'] . "</option>";
 		}
 
 		$i += 1;

@@ -10,7 +10,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
             <div class="wrap">
                 <div class="first">
                     <label class="label">Periodo escolar</label>
-                    <input class="text" type="text" name="txtspid" value="" maxlength="20" required autofocus />
+                    <input class="text" type="text" name="txtspid" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" required autofocus />
                     <label class="label">Inicia</label>
                     <input class="date" type="date" name="datespstart" value="'.$_SESSION['sp_start'][0].'" required autofocus />
                     <label class="label">Termina</label>

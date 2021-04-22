@@ -42,7 +42,7 @@ $id_generate = 'TCHR-' . strtoupper(unique_id(6));
 
 						if ($result = $conexion->query($sql)) {
 							while ($row = mysqli_fetch_array($result)) {
-								echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+								echo "<option value='" . $row['career'] . "'>" . $row['name'] . "</option>";
 
 								$i += 1;
 							}
