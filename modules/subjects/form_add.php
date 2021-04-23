@@ -10,47 +10,48 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
             <div class="wrap">
                 <div class="first">
                     <label class="label">Asignatura</label>
-                    <input class="text" type="text" name="txtsubject" value="" maxlength="20" autofocus required />
+                    <input class="text" type="text" id="txtsubject" name="txtsubject" value="<?php if (isset($_SESSION['temp_subject'])) {
+                                                                                                    echo $_SESSION['temp_subject'];
+                                                                                                } ?>" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" autofocus required />
                     <label class="label">Nombre</label>
-                    <input class="text" type="text" name="txtsubjectname" value="" maxlength="100" required />
+                    <input class="text" type="text" id="txtsubjectname" name="txtsubjectname" value="<?php if (isset($_SESSION['temp_subject_name'])) {
+                                                                                                            echo $_SESSION['temp_subject_name'];
+                                                                                                        } ?>" maxlength="100" required />
+                    <div class="resultado"></div>
                     <label class="label">Descripción</label>
-                    <textarea class="textarea" name="txtsubjectdescription"></textarea>
-
+                    <textarea class="textarea" id="txtsubjectdescription" name="txtsubjectdescription"><?php if (isset($_SESSION['temp_subject_description'])) {
+                                                                                                            echo $_SESSION['temp_subject_description'];
+                                                                                                        } ?></textarea>
                 </div>
                 <div class="last">
-                    <label class="label">Docente</label>
-                    <select class="select" name="selectuserteacher">
+                    <label class="label">Carrera</label>
+                    <select id="selectsubjectcareer" class="select" name="selectcareer">
                         <?php
-                        $_SESSION['user_teacher'] = array();
-                        $_SESSION['name_teacher'] = array();
-
+                        if (isset($_SESSION['temp_subject_career_id'])) {
+                            echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
+                        } else {
+                            echo '<option value="">Seleccioné</option>';
+                        }
+                        ?>
+                        <?php
                         $i = 0;
 
-                        $sql = "SELECT * FROM teachers ORDER BY name";
+                        $sql = "SELECT * FROM careers ORDER BY name";
 
                         if ($result = $conexion->query($sql)) {
                             while ($row = mysqli_fetch_array($result)) {
-                                $_SESSION['user_teacher'][$i] = $row['user'];
-                                $_SESSION['name_teacher'][$i] = $row['name'] . ' ' . $row['surnames'];
-
+                                if ($row['career'] != $_SESSION['temp_subject_career_id']) {
+                                    echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
+                                }
                                 $i += 1;
                             }
-                        }
-
-                        $i = 0;
-
-                        foreach ($_SESSION['user_teacher'] as $row) {
-                            echo
-                            '
-								<option value="' . $_SESSION['user_teacher'][$i] . '">' . $_SESSION['name_teacher'][$i] . '</option>
-							';
-
-                            $i += 1;
                         }
                         ?>
                     </select>
                     <label class="label">Semestre</label>
-                    <input class="text" type="number" name="txtsubjectsemester" value="" maxlength="2" min="1" max="12" list="defaultsemestres" required />
+                    <input class="text" type="number" id="txtsubjectsemester" name="txtsubjectsemester" value="<?php if (isset($_SESSION['temp_subject_semester'])) {
+                                                                                                                    echo $_SESSION['temp_subject_semester'];
+                                                                                                                } ?>" maxlength="2" min="1" max="12" list="defaultsemestres" required />
                     <datalist id="defaultsemestres">
                         <?php
                         for ($i = 1; $i <= 12; $i++) {
@@ -62,6 +63,23 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                         ?>
                     </datalist>
                 </div>
+                <div class="content-full">
+                    <label class="label">Docente(s)</label>
+                    <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple">
+                        <?php
+                        $i = 0;
+
+                        foreach ($_SESSION['career_teacher_user'] as $row) {
+                            echo
+                            '
+								<option value="' . $_SESSION['career_teacher_user'][$i] . '">' . $_SESSION['career_teacher_name'][$i] . '</option>
+							';
+
+                            $i += 1;
+                        }
+                        ?>
+                    </select>
+                </div>
             </div>
             <button class="btn icon" type="submit">save</button>
         </form>
@@ -72,3 +90,58 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     include_once "../sections/options-disabled.php";
     ?>
 </div>
+<script>
+    var txtSubject = '';
+    var txtSubjectName = '';
+    var txtSubjectSemester = '';
+    var txtSubjectDescription = '';
+    var selectSubjecCareer = '';
+    var selectSubjectCareerId = '';
+    var selectSubjectCareerName = '';
+
+    selectSubjecCareer = document.getElementById('selectsubjectcareer');
+    selectSubjecCareer.addEventListener('change',
+        function() {
+            var selectedOption = this.options[selectSubjecCareer.selectedIndex];
+            selectSubjectCareerId = selectedOption.value;
+            selectSubjectCareerName = selectedOption.text;
+        });
+
+    var selectCareer = document.querySelector('#selectsubjectcareer');
+    selectCareer.addEventListener('change', (event) => {
+        var optionSelect = event.target.value;
+
+        txtSubject = $('#txtsubject').val();
+        txtSubjectName = $('#txtsubjectname').val();
+        txtSubjectSemester = $('#txtsubjectsemester').val();
+        txtSubjectDescription = $('#txtsubjectdescription').val();
+
+        $.ajax({
+            type: 'POST',
+            url: 'search_teachers.php',
+            data: {
+                selectcareersub: optionSelect,
+                txtsubject: txtSubject,
+                txtsubjectname: txtSubjectName,
+                txtsubjectsemester: txtSubjectSemester,
+                txtsubjectdescription: txtSubjectDescription,
+                selectsubjectcareerid: selectSubjectCareerId,
+                selectsubjectcareername: selectSubjectCareerName
+            },
+            success: function() {
+                location.reload();
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('.select-careers-teachers').select2();
+    });
+
+    var valorselect;
+
+    $('.select-careers-teachers').on("select2:select", function(e) {
+        valorselect = e.params.data.id;
+        console.log("ID seleccionado: " + valorselect);
+    });
+</script>

@@ -13,6 +13,13 @@ if (file_exists($name_image_user)) {
         if ($row = mysqli_fetch_array($result)) {
             $_SESSION['image'] = $row['image'];
         }
+
+        $name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['image'] . '';
+
+        if (file_exists($name_image_user)) {
+        } else {
+            $_SESSION['image'] = 'user.png';
+        }
     }
 }
 

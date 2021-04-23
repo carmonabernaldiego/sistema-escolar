@@ -92,6 +92,7 @@ input:focus,
 select:focus,
 textarea:focus {
     background: #dde8fc !important;
+    transition: all 350ms ease-in;
 }
 
 select[disabled],
@@ -949,6 +950,11 @@ button:focus {
     width: 46%;
 }
 
+.form-data .body .content-full {
+    width: 94.7%;
+    margin-bottom: 35px;
+}
+
 .form-data .body .label {
     display: block;
     margin: 0 0 12px 0;
@@ -977,7 +983,7 @@ button:focus {
 .form-data .body .textarea {
     width: 201.7%;
     height: 120px;
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
     padding: 12px 2% 12px;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
@@ -1007,6 +1013,10 @@ button:focus {
     font-size: 0.9em;
     font-weight: 500;
     transition: all 350ms ease-out;
+}
+
+.select2 {
+    width: 100%!important;
 }
 
 .form-data .body .select option {

@@ -44,7 +44,7 @@ $(document).ready(function() {
                 data: {
                     "image": response
                 },
-                success: function(res) {
+                success: function() {
                     location.href = location.href;
                     window.location.href = "/modules/users/";
                 }
