@@ -6,7 +6,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
         <h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-subjects" action="insert.php" method="POST">
+        <form name="form-add-subjects" action="insert.php" enctype="multipart/form-data" method="POST" onsubmit="return sendTeachers()">
             <div class="wrap">
                 <div class="first">
                     <label class="label">Asignatura</label>
@@ -19,9 +19,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                                                                                                         } ?>" maxlength="100" required />
                     <div class="resultado"></div>
                     <label class="label">Descripción</label>
-                    <textarea class="textarea" id="txtsubjectdescription" name="txtsubjectdescription"><?php if (isset($_SESSION['temp_subject_description'])) {
-                                                                                                            echo $_SESSION['temp_subject_description'];
-                                                                                                        } ?></textarea>
+                    <textarea maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription"><?php if (isset($_SESSION['temp_subject_description'])) {
+                                                                                                                            echo $_SESSION['temp_subject_description'];
+                                                                                                                        } ?></textarea>
                 </div>
                 <div class="last">
                     <label class="label">Carrera</label>
@@ -91,26 +91,28 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     ?>
 </div>
 <script>
-    var txtSubject = '';
-    var txtSubjectName = '';
-    var txtSubjectSemester = '';
-    var txtSubjectDescription = '';
-    var selectSubjecCareer = '';
-    var selectSubjectCareerId = '';
-    var selectSubjectCareerName = '';
+    $(document).ready(function() {
+        $('.select-careers-teachers').select2();
+    });
 
-    selectSubjecCareer = document.getElementById('selectsubjectcareer');
-    selectSubjecCareer.addEventListener('change',
+    let txtSubject = '',
+        txtSubjectName = '',
+        txtSubjectSemester = '',
+        txtSubjectDescription = '',
+        selectSubjectCareer = '',
+        selectSubjectCareerId = '',
+        selectSubjectCareerName = '';
+
+    selectSubjectCareer = document.getElementById('selectsubjectcareer');
+    selectSubjectCareer.addEventListener('change',
         function() {
-            var selectedOption = this.options[selectSubjecCareer.selectedIndex];
-            selectSubjectCareerId = selectedOption.value;
-            selectSubjectCareerName = selectedOption.text;
+            let optionSelect = this.options[selectSubjectCareer.selectedIndex];
+            selectSubjectCareerId = optionSelect.value;
+            selectSubjectCareerName = optionSelect.text;
         });
 
-    var selectCareer = document.querySelector('#selectsubjectcareer');
-    selectCareer.addEventListener('change', (event) => {
-        var optionSelect = event.target.value;
-
+    let selectCareer = document.querySelector('#selectsubjectcareer');
+    selectCareer.addEventListener('change', () => {
         txtSubject = $('#txtsubject').val();
         txtSubjectName = $('#txtsubjectname').val();
         txtSubjectSemester = $('#txtsubjectsemester').val();
@@ -120,7 +122,6 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
             type: 'POST',
             url: 'search_teachers.php',
             data: {
-                selectcareersub: optionSelect,
                 txtsubject: txtSubject,
                 txtsubjectname: txtSubjectName,
                 txtsubjectsemester: txtSubjectSemester,
@@ -134,14 +135,36 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
         });
     });
 
-    $(document).ready(function() {
-        $('.select-careers-teachers').select2();
+    let selectTeachers = ',',
+        valueSelectTeacher = '',
+        valueUnselectTeacher = '',
+        tempSelectTeachers = '',
+        findTeacher = '';
+
+    $('.select-careers-teachers').on('select2:select', function(e) {
+        valueSelectTeacher = e.params.data.id;
+        selectTeachers += valueSelectTeacher + ',';
     });
 
-    var valorselect;
+    $('.select-careers-teachers').on('select2:unselect', function(e) {
+        valueUnselectTeacher = e.params.data.id;
+        tempSelectTeachers = selectTeachers;
 
-    $('.select-careers-teachers').on("select2:select", function(e) {
-        valorselect = e.params.data.id;
-        console.log("ID seleccionado: " + valorselect);
+        findTeacher = tempSelectTeachers.replace(valueUnselectTeacher, '');
+        findTeacher = findTeacher.replace(',,', ',');
+        selectTeachers = findTeacher;
     });
+
+    function sendTeachers() {
+        $.ajax({
+            type: 'POST',
+            url: 'send_teachers.php',
+            data: {
+                txtselectteachers: selectTeachers
+            },
+            success: function() {
+                return true;
+            }
+        });
+    }
 </script>

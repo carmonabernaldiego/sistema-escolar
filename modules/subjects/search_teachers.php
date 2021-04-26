@@ -4,19 +4,19 @@ include_once $_SESSION['raiz'] . '/modules/conexion.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
-unset($_SESSION["temp_subject"]);
-unset($_SESSION["temp_subject_name"]);
-unset($_SESSION["temp_subject_semester"]);
-unset($_SESSION["temp_subject_description"]);
-unset($_SESSION["temp_subject_career_id"]);
-unset($_SESSION["temp_subject_career_name"]);
+unset($_SESSION['temp_subject']);
+unset($_SESSION['temp_subject_name']);
+unset($_SESSION['temp_subject_semester']);
+unset($_SESSION['temp_subject_description']);
+unset($_SESSION['temp_subject_career_id']);
+unset($_SESSION['temp_subject_career_name']);
 
-$_SESSION["temp_subject"] = $_POST["txtsubject"];
-$_SESSION["temp_subject_name"] = $_POST["txtsubjectname"];
-$_SESSION["temp_subject_semester"] = $_POST["txtsubjectsemester"];
-$_SESSION["temp_subject_description"] = $_POST["txtsubjectdescription"];
-$_SESSION["temp_subject_career_id"] = $_POST["selectsubjectcareerid"];
-$_SESSION["temp_subject_career_name"] = $_POST["selectsubjectcareername"];
+$_SESSION['temp_subject'] = $_POST['txtsubject'];
+$_SESSION['temp_subject_name'] = $_POST['txtsubjectname'];
+$_SESSION['temp_subject_semester'] = $_POST['txtsubjectsemester'];
+$_SESSION['temp_subject_description'] = $_POST['txtsubjectdescription'];
+$_SESSION['temp_subject_career_id'] = $_POST['selectsubjectcareerid'];
+$_SESSION['temp_subject_career_name'] = $_POST['selectsubjectcareername'];
 
 unset($_SESSION['career_teacher_user']);
 unset($_SESSION['career_teacher_name']);
@@ -24,8 +24,8 @@ unset($_SESSION['career_teacher_name']);
 $_SESSION['career_teacher_user'] = array();
 $_SESSION['career_teacher_name'] = array();
 
-if (isset($_POST["selectcareersub"])) {
-    $sql = "SELECT * FROM teachers WHERE career = '" . $_POST['selectcareersub'] . "' ORDER BY name";
+if (isset($_SESSION['temp_subject_career_id'])) {
+    $sql = "SELECT * FROM teachers WHERE career = '" . $_SESSION['temp_subject_career_id'] . "' ORDER BY name";
 
     $i = 0;
 
@@ -37,4 +37,7 @@ if (isset($_POST["selectcareersub"])) {
             $i += 1;
         }
     }
+} else {
+    header('Location: /');
+    exit();
 }
