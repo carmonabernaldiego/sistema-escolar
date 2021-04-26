@@ -22,13 +22,13 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 						<td class="center">' . $_SESSION["sp_active"][$i] . '</td>
 						<td class="center">' . $_SESSION["sp_current"][$i] . '</td>
 						<td>
-							<form action="#" method="POST">
+							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtspid" value="' . $_SESSION["sp_id"][$i] . '"/>
 								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
 						</td>
 						<td>
-							<form action="#" method="POST">
+							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtspid" value="' . $_SESSION["sp_id"][$i] . '"/>
 								<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
 							</form>
@@ -43,9 +43,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 			<?php
 			for ($n = 1; $n <= $tpages; $n++) {
 				if ($page == $n) {
-					echo '<li class="active"><form name="form-pages" action="#" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
+					echo '<li class="active"><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
 				} else {
-					echo '<li><form name="form-pages" action="#" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
+					echo '<li><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
 				}
 			}
 			?>

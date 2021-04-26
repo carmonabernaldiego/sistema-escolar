@@ -11,7 +11,7 @@ echo '
 				</div>
 				<div class="first">
 					<label class="label">Usuario</label>
-					<input class="text" type="text" name="txtuseridAdd" value="" maxlength="50" onkeyup="this.value = this.value.toUpperCase()" autofocus autocomplete="off" required/>
+					<input class="text" type="text" name="txtuseridAdd" value="" maxlength="50" autofocus autocomplete="off" required/>
 					<label class="label">Email</label>
 					<input class="text" type="email" name="txtemailAdd" value="" maxlength="200" autocomplete="new-text"/>
 				</div>

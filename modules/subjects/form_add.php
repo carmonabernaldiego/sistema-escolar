@@ -19,9 +19,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                                                                                                         } ?>" maxlength="100" required />
                     <div class="resultado"></div>
                     <label class="label">Descripción</label>
-                    <textarea maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription"><?php if (isset($_SESSION['temp_subject_description'])) {
-                                                                                                                            echo $_SESSION['temp_subject_description'];
-                                                                                                                        } ?></textarea>
+                    <textarea maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription" data-expandable><?php if (isset($_SESSION['temp_subject_description'])) {
+                                                                                                                                            echo $_SESSION['temp_subject_description'];
+                                                                                                                                        } ?></textarea>
                 </div>
                 <div class="last">
                     <label class="label">Carrera</label>
@@ -167,4 +167,14 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
             }
         });
     }
+
+    $('body').on('keydown input', 'textarea[data-expandable]', function() {
+        //Auto-expanding textarea
+        this.style.removeProperty('height');
+        this.style.height = (this.scrollHeight + 1) + 'px';
+    }).on('mousedown focus', 'textarea[data-expandable]', function() {
+        //Do this on focus, to allow textarea to animate to height...
+        this.style.removeProperty('height');
+        this.style.height = (this.scrollHeight + 1) + 'px';
+    });
 </script>

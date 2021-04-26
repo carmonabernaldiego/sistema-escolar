@@ -13,7 +13,7 @@ echo '
                     <input style="display: none;" type="text" name="txtuserid" value="' . $_POST['txtuserid'] . '" />
                     <button class="btn-si" type="submit" autofocus>¡Si, bórralo!</button>
                 </form>
-                <form action="#" method="POST">
+                <form action="" method="POST">
                     <button class="btn-no" name="btn" value="form_default" type="submit">Cancelar</button>
                 </form>
             </div>

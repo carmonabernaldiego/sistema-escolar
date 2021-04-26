@@ -24,14 +24,14 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 						<td>' . $_SESSION["group_name"][$i] . '</td>
 						<td class="center">' . $_SESSION["group_semester"][$i] . '</td>
 						<td>
-							<form action="#" method="POST">
+							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtgroup" value="' . $_SESSION["group"][$i] . '"/>
 								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="' . $_SESSION['group_school_period'][$i] . '"/>
 								<button class="btnview" name="btn" value="form_consult" type="submit"></button>
 							</form>
 						</td>
 						<td>
-							<form action="#" method="POST">
+							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtgroup" value="' . $_SESSION["group"][$i] . '"/>
 								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="' . $_SESSION['group_school_period'][$i] . '"/>
 								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
@@ -40,7 +40,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 			if ($_SESSION['permissions'] != 'editor') {
 				echo '
 								<td>
-									<form action="#" method="POST">
+									<form action="" method="POST">
 										<input style="display:none;" type="text" name="txtgroup" value="' . $_SESSION["group"][$i] . '"/>
 										<input style="display:none;" type="text" name="txtgroupschoolperiod" value="' . $_SESSION['group_school_period'][$i] . '"/>
 										<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
@@ -59,9 +59,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 			<?php
 			for ($n = 1; $n <= $tpages; $n++) {
 				if ($page == $n) {
-					echo '<li class="active"><form name="form-pages" action="#" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
+					echo '<li class="active"><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
 				} else {
-					echo '<li><form name="form-pages" action="#" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
+					echo '<li><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
 				}
 			}
 			?>

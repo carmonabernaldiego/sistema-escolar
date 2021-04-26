@@ -6,7 +6,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
         <h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-groups" action="#" method="POST">
+        <form name="form-add-groups" action="" method="POST">
             <div class="wrap">
                 <div class="first">
                     <label class="label">Grupo</label>

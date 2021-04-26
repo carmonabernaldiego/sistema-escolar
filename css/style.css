@@ -982,9 +982,10 @@ button:focus {
 
 .form-data .body .textarea {
     width: 201.7%;
-    height: 120px;
+    min-height: 20px;
+    max-height: 120px;
     margin: 0 0 20px 0;
-    padding: 12px 2% 12px;
+    padding: 3px 2% 3px;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;

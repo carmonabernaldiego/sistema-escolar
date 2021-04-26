@@ -16,9 +16,9 @@ if (mysqli_query($conexion, $sql_delete)) {
 	$sql_delete = "DELETE FROM groups_students WHERE id_group = '" . $_POST['txtgroup'] . "' AND school_period = '" . $_POST['txtgroupschoolperiod'] . "'";
 
 	if (mysqli_query($conexion, $sql_delete)) {
-		$_SESSION['msgbox_error'] = 0;
-		$_SESSION['msgbox_info'] = 1;
-		$_SESSION['text_msgbox_info'] = 'Registro eliminado correctamente.';
+		$_SESSION['msgbox_info'] = 0;
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'El registro fue eliminado.';
 	} else {
 		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;

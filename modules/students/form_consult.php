@@ -28,7 +28,7 @@ echo '
 		<h1 class="titulo">Consultar</h1>
     </div>
     <div class="body">
-        <form name="form-consult-students" action="#" method="POST">
+        <form name="form-consult-students" action="" method="POST">
 			<div class="wrap">
 				<div class="first">
 					<label class="label">Usuario</label>
