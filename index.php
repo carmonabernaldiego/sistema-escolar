@@ -41,7 +41,7 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 	<div class="form-login">
 		<div class="logo-form-login">
 		</div>
-		<form name="frm-login" action="#" method="POST">
+		<form name="frm-login" action="" method="POST">
 			<?php
 			if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
 				//Limpiar String
@@ -135,7 +135,7 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 							$_SESSION['school_period'] = $school_period;
 							$_SESSION['authenticate'] = 'go-' . $user;
 
-							header('Location: home');
+							header('Location: /home');
 						}
 					} else {
 						error_user:
