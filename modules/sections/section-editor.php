@@ -135,5 +135,4 @@ if (strpos($url_actual, 'modules')) {
     </header>
 </div>
 <script src="/js/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
-<script src="/js/CSSRulePlugin.min.js" integrity="sha512-6MT8e40N5u36Um5SXKtwZmoKcCSg1XaKtexnXZPpQ4iJDHrBEHXKz37fnDovXezsaCd4oKCH5Y+vrcl7qpLPoA==" crossorigin="anonymous"></script>
 <script src="/js/menumobile.js"></script>
