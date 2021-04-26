@@ -34,7 +34,7 @@ echo '
 				</div>
 				<div class="description">
 					<label class="label">Descripción</label>
-					<textarea disabled class="textarea" name="txtcareerdescription">' . $_SESSION['career_description'][0] . '</textarea>				
+					<textarea disabled class="textarea" name="txtcareerdescription" data-expandable>' . $_SESSION['career_description'][0] . '</textarea>				
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
@@ -44,4 +44,7 @@ echo '
 ';
 echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
-echo '</div>';
+echo '
+</div>
+<script src="/js/dataexpandable.js"></script>
+';

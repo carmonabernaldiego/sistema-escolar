@@ -1319,9 +1319,12 @@ button:focus {
 
 .form-data .body .description .textarea {
     width: 97.4%;
-    height: 120px;
+    min-height: 20px;
+    max-height: 120px;
     margin: 0 0 25px 0;
-    padding: 12px 1.2% 12px;
+    padding: 3px 1.2% 3px;
+    resize: vertical;
+    transition: all 350ms ease-out;
 }
 
 

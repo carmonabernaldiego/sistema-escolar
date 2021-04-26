@@ -18,7 +18,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                 </div>
                 <div class="description">
                     <label class="label">Descripción</label>
-                    <textarea maxlength="2000" class="textarea" name="txtcareerdescription"></textarea>
+                    <textarea maxlength="2000" class="textarea" name="txtcareerdescription" data-expandable></textarea>
                 </div>
             </div>
             <button class="btn icon" type="submit">save</button>
@@ -30,3 +30,4 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     include_once "../sections/options-disabled.php";
     ?>
 </div>
+<script src="/js/dataexpandable.js"></script>
