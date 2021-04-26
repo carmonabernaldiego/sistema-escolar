@@ -996,7 +996,7 @@ button:focus {
     font-size: 0.9em;
     font-weight: 500;
     text-align: justify;
-    resize: none;
+    resize: vertical;
     transition: all 350ms ease-out;
 }
 
