@@ -6,6 +6,9 @@ $_SESSION['subject_career'] = array();
 $_SESSION['subject_name'] = array();
 $_SESSION['subject_semester'] = array();
 $_SESSION['subject_description'] = array();
+$_SESSION['subject_teachers'] = null;
+$_SESSION['subject_teachers_user'] = null;
+$_SESSION['subject_teachers_name'] = null;
 
 $sql = "SELECT * FROM subjects WHERE subject = '" . $_POST['txtsubject'] . "'";
 
@@ -16,6 +19,7 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['subject_name'][0] = $row['name'];
 		$_SESSION['subject_semester'][0] = $row['semester'];
 		$_SESSION['subject_description'][0] = $row['description'];
+		$_SESSION['subject_teachers'] = $row['user_teachers'];
 	}
 }
 
@@ -35,7 +39,7 @@ echo '
 					<input class="text" type="text" name="txtsubjectname" value="' . $_SESSION['subject_name'][0] . '" maxlength="100" required disabled/>
 					
 					<label class="label">Descripción</label>
-					<textarea disabled class="textarea" name="txtsubjectdescription">' . $_SESSION['subject_description'][0] . '</textarea>
+					<textarea disabled class="textarea" name="txtsubjectdescription" data-expandable>' . $_SESSION['subject_description'][0] . '</textarea>
 				</div>
 				<div class="last">
 					<label class="label">Carrera</label>
@@ -63,6 +67,31 @@ echo
 					<label class="label">Semestre</label>
 					<input class="text" type="number" name="txtsubjectsemester" value="' . $_SESSION['subject_semester'][0] . '" maxlength="2" min="1" max="12" disabled/>
 				</div>
+				<div class="content-full">
+                    <label class="label">Docente(s)</label>
+                    <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" disabled>
+';
+$_SESSION['subject_teachers'] = trim($_SESSION['subject_teachers'], ',');
+$arraySubjectTeachers = explode(',', $_SESSION['subject_teachers']);
+
+foreach ($arraySubjectTeachers as $key) {
+	$sql = "SELECT user, name, surnames FROM teachers where user = '" . $key . "'";
+
+	if ($result = $conexion->query($sql)) {
+		while ($row = mysqli_fetch_array($result)) {
+			$_SESSION['subject_teachers_user'] = $row['user'];
+			$_SESSION['subject_teachers_name'] = $row['name'] . ' ' . $row['surnames'];
+		}
+		echo
+		'
+						<option value="' . $_SESSION['subject_teachers_user'] . '" selected>' . $_SESSION['subject_teachers_name'] . '</option>
+		';
+	}
+}
+echo
+'
+                    </select>
+                </div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
         </form>
@@ -71,4 +100,8 @@ echo
 ';
 echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
-echo '</div>';
+echo '
+</div>
+<script src="/js/dataexpandable.js"></script>
+<script src="/js/consultcareer.js"></script>
+';

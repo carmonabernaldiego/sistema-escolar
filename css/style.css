@@ -249,8 +249,8 @@ button:focus {
 }
 
 .nav-home .user {
-    border-top: 1px solid #282a36;
-    border-bottom: 1px solid #282a36;
+    border-top: 1px solid #282a3680;
+    border-bottom: 1px solid #282a3680;
 }
 
 .nav-home .user::after {
@@ -982,7 +982,7 @@ button:focus {
 
 .form-data .body .textarea {
     width: 201.7%;
-    min-height: 20px;
+    min-height: 50px;
     max-height: 120px;
     margin: 0 0 20px 0;
     padding: 3px 2% 3px;
@@ -1319,7 +1319,7 @@ button:focus {
 
 .form-data .body .description .textarea {
     width: 97.4%;
-    min-height: 20px;
+    min-height: 50px;
     max-height: 120px;
     margin: 0 0 25px 0;
     padding: 3px 1.2% 3px;
