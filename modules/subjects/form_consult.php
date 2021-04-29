@@ -69,7 +69,7 @@ echo
 				</div>
 				<div class="content-full">
                     <label class="label">Docente(s)</label>
-                    <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" disabled>
+                    <select class="select-careers-teachers disabled" name="selectCareersTeachers[]" multiple="multiple" disabled>
 ';
 $_SESSION['subject_teachers'] = trim($_SESSION['subject_teachers'], ',');
 $arraySubjectTeachers = explode(',', $_SESSION['subject_teachers']);

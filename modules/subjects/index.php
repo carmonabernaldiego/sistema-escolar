@@ -17,11 +17,11 @@ if (!empty($_POST['btn'])) {
 	$view_form = $_POST['btn'] . '.php';
 
 	if ($view_form == 'form_default.php') {
-		include_once 'unset_form_add.php';
+		include_once 'unset.php';
 	}
 } else {
 	$view_form = 'form_default.php';
-	include_once 'unset_form_add.php';
+	include_once 'unset.php';
 }
 
 // Pagina actual

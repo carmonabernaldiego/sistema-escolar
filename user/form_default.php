@@ -16,6 +16,26 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['user_image'][0] = $row['image'];
 	}
 }
+
+$name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'][0] . '';
+
+if (file_exists($name_image_user)) {
+} else {
+	$sql = "SELECT image FROM users WHERE user = '" . $_SESSION['user_id'][0] . "'";
+
+	if ($result = $conexion->query($sql)) {
+		if ($row = mysqli_fetch_array($result)) {
+			$_SESSION['user_image'][0] = $row['image'];
+		}
+
+		$name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'][0] . '';
+
+		if (file_exists($name_image_user)) {
+		} else {
+			$_SESSION['user_image'][0] = 'user.png';
+		}
+	}
+}
 echo '
 <div class="form-data formConfigUser">
 	<div class="loader-image-upload">
@@ -93,4 +113,3 @@ echo
 </div>
 ';
 include_once '../modules/notif_info.php';
-?>

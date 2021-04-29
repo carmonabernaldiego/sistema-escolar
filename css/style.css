@@ -195,7 +195,7 @@ button:focus {
     float: right;
     width: 26.7%;
     height: 100%;
-    border-left: 1px solid #282a3680;
+    border-left: 1px solid #282a3660;
 }
 
 .info-school-period .school_period {
@@ -644,7 +644,7 @@ button:focus {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    border-bottom: 1px solid #282a3680;
+    border-bottom: 1px solid #282a3660;
     padding: 5% 10%;
 }
 
@@ -926,7 +926,7 @@ button:focus {
 
 .form-data .head {
     padding: 14px 0;
-    border-bottom: 1px solid #282a3680;
+    border-bottom: 1px solid #282a3660;
 }
 
 .form-data .head h1 {
@@ -957,7 +957,7 @@ button:focus {
 
 .form-data .body .label {
     display: block;
-    margin: 0 0 12px 0;
+    margin: 0 0 6px 0;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.9em;

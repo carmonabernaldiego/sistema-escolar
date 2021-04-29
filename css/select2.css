@@ -229,7 +229,7 @@
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--single {
-    background-color: #eee;
+    background-color: #eef4ff;
     cursor: default;
 }
 
@@ -359,13 +359,13 @@
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
-    background: #dde8fc !important;
+    background: #dde8fc;
     outline: 0;
     transition: all 350ms ease-in;
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--multiple {
-    background-color: #eee;
+    background-color: #eef4ff;
     cursor: default;
 }
 
