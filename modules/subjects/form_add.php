@@ -65,7 +65,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                 </div>
                 <div class="content-full">
                     <label class="label">Docente(s)</label>
-                    <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple">
+                    <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" required>
                         <?php
                         $i = 0;
 
@@ -90,91 +90,5 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     include_once "../sections/options-disabled.php";
     ?>
 </div>
-<script>
-    $(document).ready(function() {
-        $('.select-careers-teachers').select2();
-    });
-
-    let txtSubject = '',
-        txtSubjectName = '',
-        txtSubjectSemester = '',
-        txtSubjectDescription = '',
-        selectSubjectCareer = '',
-        selectSubjectCareerId = '',
-        selectSubjectCareerName = '';
-
-    selectSubjectCareer = document.getElementById('selectsubjectcareer');
-    selectSubjectCareer.addEventListener('change',
-        function() {
-            let optionSelect = this.options[selectSubjectCareer.selectedIndex];
-            selectSubjectCareerId = optionSelect.value;
-            selectSubjectCareerName = optionSelect.text;
-        });
-
-    let selectCareer = document.querySelector('#selectsubjectcareer');
-    selectCareer.addEventListener('change', () => {
-        txtSubject = $('#txtsubject').val();
-        txtSubjectName = $('#txtsubjectname').val();
-        txtSubjectSemester = $('#txtsubjectsemester').val();
-        txtSubjectDescription = $('#txtsubjectdescription').val();
-
-        $.ajax({
-            type: 'POST',
-            url: 'search_teachers.php',
-            data: {
-                txtsubject: txtSubject,
-                txtsubjectname: txtSubjectName,
-                txtsubjectsemester: txtSubjectSemester,
-                txtsubjectdescription: txtSubjectDescription,
-                selectsubjectcareerid: selectSubjectCareerId,
-                selectsubjectcareername: selectSubjectCareerName
-            },
-            success: function() {
-                location.reload();
-            }
-        });
-    });
-
-    let selectTeachers = ',',
-        valueSelectTeacher = '',
-        valueUnselectTeacher = '',
-        tempSelectTeachers = '',
-        findTeacher = '';
-
-    $('.select-careers-teachers').on('select2:select', function(e) {
-        valueSelectTeacher = e.params.data.id;
-        selectTeachers += valueSelectTeacher + ',';
-    });
-
-    $('.select-careers-teachers').on('select2:unselect', function(e) {
-        valueUnselectTeacher = e.params.data.id;
-        tempSelectTeachers = selectTeachers;
-
-        findTeacher = tempSelectTeachers.replace(valueUnselectTeacher, '');
-        findTeacher = findTeacher.replace(',,', ',');
-        selectTeachers = findTeacher;
-    });
-
-    function sendTeachers() {
-        $.ajax({
-            type: 'POST',
-            url: 'send_teachers.php',
-            data: {
-                txtselectteachers: selectTeachers
-            },
-            success: function() {
-                return true;
-            }
-        });
-    }
-
-    $('body').on('keydown input', 'textarea[data-expandable]', function() {
-        //Auto-expanding textarea
-        this.style.removeProperty('height');
-        this.style.height = (this.scrollHeight + 1) + 'px';
-    }).on('mousedown focus', 'textarea[data-expandable]', function() {
-        //Do this on focus, to allow textarea to animate to height...
-        this.style.removeProperty('height');
-        this.style.height = (this.scrollHeight + 1) + 'px';
-    });
-</script>
+<script src="/js/dataexpandable.js"></script>
+<script src="/js/addcareer.js"></script>
