@@ -32,8 +32,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                         } else {
                             echo '<option value="">Seleccioné</option>';
                         }
-                        ?>
-                        <?php
+
                         $i = 0;
 
                         $sql = "SELECT * FROM careers ORDER BY name";

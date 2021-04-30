@@ -37,7 +37,6 @@ echo '
 					<input class="text" type="text" name="txtsubject" value="' . $_SESSION['subject'][0] . '" disabled/>
 					<label class="label">Nombre</label>
 					<input class="text" type="text" name="txtsubjectname" value="' . $_SESSION['subject_name'][0] . '" maxlength="100" required disabled/>
-					
 					<label class="label">Descripción</label>
 					<textarea disabled class="textarea" name="txtsubjectdescription" data-expandable>' . $_SESSION['subject_description'][0] . '</textarea>
 				</div>
