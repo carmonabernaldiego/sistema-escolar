@@ -68,10 +68,10 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                         <?php
                         $i = 0;
 
-                        foreach ($_SESSION['subject_teacher_user'] as $row) {
+                        foreach ($_SESSION['subject_teachers_user'] as $row) {
                             echo
                             '
-								<option value="' . $_SESSION['subject_teacher_user'][$i] . '">' . $_SESSION['subject_teacher_name'][$i] . '</option>
+								<option value="' . $_SESSION['subject_teachers_user'][$i] . '">' . $_SESSION['subject_teachers_name'][$i] . '</option>
 							';
 
                             $i += 1;

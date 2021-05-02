@@ -23,11 +23,11 @@ if ($result = $conexion->query($sql)) {
 	}
 }
 
-unset($_SESSION['career_teacher_user']);
-unset($_SESSION['subject_teacher_name']);
+unset($_SESSION['subject_teachers_user']);
+unset($_SESSION['subject_teachers_name']);
 
-$_SESSION['career_teacher_user'] = array();
-$_SESSION['subject_teacher_name'] = array();
+$_SESSION['subject_teachers_user'] = array();
+$_SESSION['subject_teachers_name'] = array();
 
 if (isset($_SESSION['subject_career'][0])) {
 	$sql = "SELECT * FROM teachers WHERE career = '" . $_SESSION['subject_career'][0] . "' ORDER BY name";
@@ -35,8 +35,8 @@ if (isset($_SESSION['subject_career'][0])) {
 	$i = 0;
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
-			$_SESSION['career_teacher_user'][$i] = $row['user'];
-			$_SESSION['subject_teacher_name'][$i] = $row['name'] . ' ' . $row['surnames'];
+			$_SESSION['subject_teachers_user'][$i] = $row['user'];
+			$_SESSION['subject_teachers_name'][$i] = $row['name'] . ' ' . $row['surnames'];
 
 			$i += 1;
 		}
@@ -111,10 +111,10 @@ echo '
 ';
 $i = 0;
 
-foreach ($_SESSION['career_teacher_user'] as $row) {
+foreach ($_SESSION['subject_teachers_user'] as $row) {
 	echo
 	'
-								<option value="' . $_SESSION['career_teacher_user'][$i] . '">' . $_SESSION['subject_teacher_name'][$i] . '</option>
+								<option value="' . $_SESSION['subject_teachers_user'][$i] . '">' . $_SESSION['subject_teachers_name'][$i] . '</option>
 							';
 
 	$i += 1;

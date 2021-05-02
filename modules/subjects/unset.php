@@ -11,8 +11,8 @@ unset($_SESSION['temp_subject_semester']);
 unset($_SESSION['temp_subject_description']);
 unset($_SESSION['temp_subject_career_id']);
 unset($_SESSION['temp_subject_career_name']);
-unset($_SESSION['subject_teacher_user']);
-unset($_SESSION['subject_teacher_name']);
+unset($_SESSION['subject_teachers_user']);
+unset($_SESSION['subject_teachers_name']);
 unset($_SESSION['temp_select_teachers']);
 
 //  form_consult
