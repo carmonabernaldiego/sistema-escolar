@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('.select-careers-teachers').select2();
-    $('.select-careers-teachers').val(["CA", "AL"]).trigger("change");
+    $('.select-careers-teachers').val(["teacher_5c1ca", "teacher_617af"]).trigger("change");
 });
 
 let txtSubject = '',
