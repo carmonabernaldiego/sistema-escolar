@@ -22,7 +22,6 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['subject_teachers'] = $row['user_teachers'];
 	}
 }
-
 echo '
 <div class="form-data">
 	<div class="head">
@@ -55,7 +54,6 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['subject_career_name'][0] = $row['name'];
 	}
 }
-
 echo
 '
 							<option value="' . $_SESSION['subject_career_id'][0] . '">' . $_SESSION['subject_career_name'][0] . '</option>

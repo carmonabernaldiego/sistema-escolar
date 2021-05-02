@@ -20,7 +20,7 @@ selectSubjectCareer.addEventListener('change',
         selectSubjectCareerName = optionSelect.text;
     });
 
-selectCareer = document.querySelector('#selectsubjectcareer');
+selectCareer = document.getElementById('selectsubjectcareer');
 selectCareer.addEventListener('change', () => {
     txtSubject = $('#txtsubject').val();
     txtSubjectName = $('#txtsubjectname').val();

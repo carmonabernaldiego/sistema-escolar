@@ -23,6 +23,28 @@ if ($result = $conexion->query($sql)) {
 	}
 }
 
+unset($_SESSION['career_teacher_user']);
+unset($_SESSION['career_teacher_name']);
+
+$_SESSION['career_teacher_user'] = array();
+$_SESSION['career_teacher_name'] = array();
+
+if (isset($_SESSION['subject_career'][0])) {
+	$sql = "SELECT * FROM teachers WHERE career = '" . $_SESSION['subject_career'][0] . "' ORDER BY name";
+
+	$i = 0;
+	if ($result = $conexion->query($sql)) {
+		while ($row = mysqli_fetch_array($result)) {
+			$_SESSION['career_teacher_user'][$i] = $row['user'];
+			$_SESSION['career_teacher_name'][$i] = $row['name'] . ' ' . $row['surnames'];
+
+			$i += 1;
+		}
+	}
+} else {
+	print "<script>window.setTimeout(function() { window.location = '/modules/subjects' }, 0000);</script>";
+	exit();
+}
 echo '
 <div class="form-data">
 	<div class="head">

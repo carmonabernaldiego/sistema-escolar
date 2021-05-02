@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('.select-careers-teachers').select2();
+    $('.select-careers-teachers').val(["CA", "AL"]).trigger("change");
 });
 
 let txtSubject = '',
@@ -20,7 +21,7 @@ selectSubjectCareer.addEventListener('change',
         selectSubjectCareerName = optionSelect.text;
     });
 
-selectCareer = document.querySelector('#selectsubjectcareer');
+selectCareer = document.getElementById('selectsubjectcareer');
 selectCareer.addEventListener('change', () => {
     txtSubject = $('#txtsubject').val();
     txtSubjectName = $('#txtsubjectname').val();
