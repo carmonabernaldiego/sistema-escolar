@@ -6,19 +6,21 @@ let txtSubject = '',
     txtSubjectName = '',
     txtSubjectSemester = '',
     txtSubjectDescription = '',
+    selectCareer = '',
     selectSubjectCareer = '',
     selectSubjectCareerId = '',
-    selectSubjectCareerName = '';
+    selectSubjectCareerName = '',
+    optionSelect = '';
 
 selectSubjectCareer = document.getElementById('selectsubjectcareer');
 selectSubjectCareer.addEventListener('change',
     function() {
-        let optionSelect = this.options[selectSubjectCareer.selectedIndex];
+        optionSelect = this.options[selectSubjectCareer.selectedIndex];
         selectSubjectCareerId = optionSelect.value;
         selectSubjectCareerName = optionSelect.text;
     });
 
-let selectCareer = document.querySelector('#selectsubjectcareer');
+selectCareer = document.querySelector('#selectsubjectcareer');
 selectCareer.addEventListener('change', () => {
     txtSubject = $('#txtsubject').val();
     txtSubjectName = $('#txtsubjectname').val();
