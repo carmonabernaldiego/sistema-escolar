@@ -106,6 +106,7 @@ echo '
                     </datalist>
 				</div>
 				<div class="content-full">
+					<input style="display: none;" type="text" id="txtsubjectteachers" name="txtsubjectteachers" value="' . $_SESSION['subject_teachers'] . '"/>
                     <label class="label">Docente(s)</label>
                     <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" required>
 ';

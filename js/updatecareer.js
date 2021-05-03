@@ -1,6 +1,18 @@
 $(document).ready(function() {
     $('.select-careers-teachers').select2();
-    $('.select-careers-teachers').val(["teacher_5c1ca", "teacher_617af"]).trigger("change");
+
+    let txtSubjectTeachers = '',
+        arraySubjectTeachers;
+
+    txtSubjectTeachers = $('#txtsubjectteachers').val();
+    arraySubjectTeachers = txtSubjectTeachers.split(',');
+
+    let prueba = ["teacher_5c1ca", "teacher_617af"];
+
+    console.log(prueba);
+    console.log(arraySubjectTeachers);
+    console.log(txtSubjectTeachers);
+    $('.select-careers-teachers').val(prueba).trigger("change");
 });
 
 let txtSubject = '',
