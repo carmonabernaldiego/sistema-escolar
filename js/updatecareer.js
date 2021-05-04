@@ -1,20 +1,24 @@
+let selectTeachers = '';
+
 $(document).ready(function() {
     $('.select-careers-teachers').select2();
 
+    //Obtener docentes seleccionados
     let txtSubjectTeachers = '',
         arraySubjectTeachers;
 
     txtSubjectTeachers = $('#txtsubjectteachers').val();
+    selectTeachers = txtSubjectTeachers;
+    console.log(selectTeachers);
+
     arraySubjectTeachers = txtSubjectTeachers.split(',');
+    arraySubjectTeachers = arraySubjectTeachers.filter(me => me != '');
 
-    let prueba = ["teacher_5c1ca", "teacher_617af"];
-
-    console.log(prueba);
+    $('.select-careers-teachers').val(arraySubjectTeachers).trigger("change");
     console.log(arraySubjectTeachers);
-    console.log(txtSubjectTeachers);
-    $('.select-careers-teachers').val(prueba).trigger("change");
 });
 
+//Obtener datos del formulario, seleccionar carrera, buscar los docentes y rellenar el select-docentes
 let txtSubject = '',
     txtSubjectName = '',
     txtSubjectSemester = '',
@@ -57,8 +61,8 @@ selectCareer.addEventListener('change', () => {
     });
 });
 
-let selectTeachers = ',',
-    valueSelectTeacher = '',
+//Capturar seleccionados y deseleccionados
+let valueSelectTeacher = '',
     valueUnselectTeacher = '',
     tempSelectTeachers = '',
     findTeacher = '';
@@ -66,17 +70,20 @@ let selectTeachers = ',',
 $('.select-careers-teachers').on('select2:select', function(e) {
     valueSelectTeacher = e.params.data.id;
     selectTeachers += valueSelectTeacher + ',';
+    console.log(selectTeachers);
 });
 
 $('.select-careers-teachers').on('select2:unselect', function(e) {
-    valueUnselectTeacher = e.params.data.id;
     tempSelectTeachers = selectTeachers;
+    valueUnselectTeacher = e.params.data.id;
 
     findTeacher = tempSelectTeachers.replace(valueUnselectTeacher, '');
     findTeacher = findTeacher.replace(',,', ',');
     selectTeachers = findTeacher;
+    console.log(selectTeachers);
 });
 
+//Enviar datos
 function sendTeachers() {
     $.ajax({
         type: 'POST',

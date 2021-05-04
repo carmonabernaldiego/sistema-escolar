@@ -56,8 +56,8 @@ $('.select-careers-teachers').on('select2:select', function(e) {
 });
 
 $('.select-careers-teachers').on('select2:unselect', function(e) {
-    valueUnselectTeacher = e.params.data.id;
     tempSelectTeachers = selectTeachers;
+    valueUnselectTeacher = e.params.data.id;
 
     findTeacher = tempSelectTeachers.replace(valueUnselectTeacher, '');
     findTeacher = findTeacher.replace(',,', ',');
