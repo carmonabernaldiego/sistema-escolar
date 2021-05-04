@@ -88,21 +88,44 @@ echo '</textarea>
 					<label class="label">Carrera</label>
 					<select id="selectsubjectcareer" class="select" name="selectcareer" required>';
 if (isset($_SESSION['temp_subject_career_id'])) {
-	echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
+	if (isset($_SESSION['temp_subject_career_id'])) {
+		echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
+	} else {
+		echo '<option value="">Seleccioné</option>';
+	}
+
+	$i = 0;
+
+	$sql = "SELECT * FROM careers ORDER BY name";
+
+	if ($result = $conexion->query($sql)) {
+		while ($row = mysqli_fetch_array($result)) {
+			if ($row['career'] != $_SESSION['temp_subject_career_id']) {
+				echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
+			}
+			$i += 1;
+		}
+	}
 } else {
-	echo '<option value="">Seleccioné</option>';
-}
+	$sql = "SELECT career, name FROM careers WHERE career = '" . $_SESSION['subject_career'][0] . "' ORDER BY name";
 
-$i = 0;
-
-$sql = "SELECT * FROM careers ORDER BY name";
-
-if ($result = $conexion->query($sql)) {
-	while ($row = mysqli_fetch_array($result)) {
-		if ($row['career'] != $_SESSION['temp_subject_career_id']) {
+	if ($result = $conexion->query($sql)) {
+		if ($row = mysqli_fetch_array($result)) {
 			echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
 		}
-		$i += 1;
+	}
+
+	$i = 0;
+
+	$sql = "SELECT career, name FROM careers ORDER BY name";
+
+	if ($result = $conexion->query($sql)) {
+		while ($row = mysqli_fetch_array($result)) {
+			if ($row['career'] != $_SESSION['subject_career'][0]) {
+				echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
+			}
+			$i += 1;
+		}
 	}
 }
 echo '
