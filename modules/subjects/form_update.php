@@ -51,10 +51,6 @@ if (isset($_SESSION['subject_career'][0])) {
 			$i += 1;
 		}
 	}
-
-	if (isset($_SESSION['temp_subject_career_id'])) {
-		$_SESSION['temp_subject_career_id'] = $_SESSION['subject_career'][0];
-	}
 } else {
 	print "<script>window.setTimeout(function() { window.location = '/modules/subjects' }, 0000);</script>";
 	exit();
