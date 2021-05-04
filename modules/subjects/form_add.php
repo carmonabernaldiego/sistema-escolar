@@ -17,7 +17,6 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                     <input class="text" type="text" id="txtsubjectname" name="txtsubjectname" value="<?php if (isset($_SESSION['temp_subject_name'])) {
                                                                                                             echo $_SESSION['temp_subject_name'];
                                                                                                         } ?>" maxlength="100" required />
-                    <div class="resultado"></div>
                     <label class="label">Descripción</label>
                     <textarea maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription" data-expandable><?php if (isset($_SESSION['temp_subject_description'])) {
                                                                                                                                             echo $_SESSION['temp_subject_description'];

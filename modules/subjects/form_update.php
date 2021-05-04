@@ -23,6 +23,16 @@ if ($result = $conexion->query($sql)) {
 	}
 }
 
+if (!isset($_SESSION['temp_subject_name'])) {
+	$_SESSION['temp_subject_name'] = $_SESSION['subject_name'][0];
+}
+if (!isset($_SESSION['temp_subject_semester'])) {
+	$_SESSION['temp_subject_semester'] = $_SESSION['subject_semester'][0];
+}
+if (!isset($_SESSION['temp_subject_description'])) {
+	$_SESSION['temp_subject_description'] = $_SESSION['subject_description'][0];
+}
+
 unset($_SESSION['subject_teachers_user']);
 unset($_SESSION['subject_teachers_name']);
 
@@ -41,6 +51,10 @@ if (isset($_SESSION['subject_career'][0])) {
 			$i += 1;
 		}
 	}
+
+	if (isset($_SESSION['temp_subject_career_id'])) {
+		$_SESSION['temp_subject_career_id'] = $_SESSION['subject_career'][0];
+	}
 } else {
 	print "<script>window.setTimeout(function() { window.location = '/modules/subjects' }, 0000);</script>";
 	exit();
@@ -51,31 +65,30 @@ echo '
 		<h1 class="titulo">Actualizar</h1>
     </div>
 	<div class="body">
-		<form name="form-update-subjects" action="update.php" method="POST">
+		<form name="form-update-subjects" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return sendTeachers()">
 			<div class="wrap">
 				<div class="first">
 					<label class="label">Asignatura</label>
 					<input style="display: none;" type="text" name="txtsubject" value="' . $_SESSION['subject'][0] . '"/>
-					<input class="text" type="text" name="txtsubject" value="' . $_SESSION['subject'][0] . '" disabled/>
+					<input class="text" type="text" id="txtsubject" name="txtsubject" value="' . $_SESSION['subject'][0] . '" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" disabled/>
 					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtsubjectname" value="' . $_SESSION['subject_name'][0] . '" maxlength="100" required autofocus/>
+                    <input class="text" type="text" id="txtsubjectname" name="txtsubjectname" value="';
+if (isset($_SESSION['temp_subject_name'])) {
+	echo $_SESSION['temp_subject_name'];
+}
+echo '" maxlength="100" required autofocus/>
 					<label class="label">Descripción</label>
-					<textarea class="textarea" name="txtsubjectdescription" data-expandable>' . $_SESSION['subject_description'][0] . '</textarea>	
+					<textarea maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription" data-expandable>';
+if (isset($_SESSION['temp_subject_description'])) {
+	echo $_SESSION['temp_subject_description'];
+}
+echo '</textarea>
 				</div>
 				<div class="last">
 					<label class="label">Carrera</label>
-					<select id="selectsubjectcareer" class="select" name="selectcareer" required>
-				';
-if (isset($_SESSION['subject_career'][0])) {
-	$sql = "SELECT * FROM careers WHERE career = '" . $_SESSION['subject_career'][0] . "' ORDER BY name";
-
-	if ($result = $conexion->query($sql)) {
-		if ($row = mysqli_fetch_array($result)) {
-			if ($row['career'] == $_SESSION['subject_career'][0]) {
-				echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
-			}
-		}
-	}
+					<select id="selectsubjectcareer" class="select" name="selectcareer" required>';
+if (isset($_SESSION['temp_subject_career_id'])) {
+	echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
 } else {
 	echo '<option value="">Seleccioné</option>';
 }
@@ -86,23 +99,26 @@ $sql = "SELECT * FROM careers ORDER BY name";
 
 if ($result = $conexion->query($sql)) {
 	while ($row = mysqli_fetch_array($result)) {
-		if ($row['career'] != $_SESSION['subject_career'][0]) {
+		if ($row['career'] != $_SESSION['temp_subject_career_id']) {
 			echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
 		}
 		$i += 1;
 	}
 }
-echo
-'
+echo '
 					</select>
 					<label class="label">Semestre</label>
-					<input class="text" type="number" name="txtsubjectsemester" value="' . $_SESSION['subject_semester'][0] . '" maxlength="2" min="1" max="12" list="defaultsemestres" required/>
+                    <input class="text" type="number" id="txtsubjectsemester" name="txtsubjectsemester" value="';
+if (isset($_SESSION['temp_subject_semester'])) {
+	echo $_SESSION['temp_subject_semester'];
+}
+echo '" maxlength="2" min="1" max="12" list="defaultsemestres" required/>
 					<datalist id="defaultsemestres">
 ';
 for ($i = 1; $i <= 12; $i++) {
 	echo '<option value="' . $i . '">';
 }
-echo '                        
+echo '
                     </datalist>
 				</div>
 				<div class="content-full">
