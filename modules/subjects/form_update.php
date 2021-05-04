@@ -145,15 +145,28 @@ echo '
                     <label class="label">Docente(s)</label>
                     <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" required>
 ';
-$i = 0;
+if (isset($_SESSION['temp_subject_teachers_user'])) {
+	$i = 0;
 
-foreach ($_SESSION['subject_teachers_user'] as $row) {
-	echo
-	'
-								<option value="' . $_SESSION['subject_teachers_user'][$i] . '">' . $_SESSION['subject_teachers_name'][$i] . '</option>
-							';
+	foreach ($_SESSION['temp_subject_teachers_user'] as $row) {
+		echo
+		'
+								<option value="' . $_SESSION['temp_subject_teachers_user'][$i] . '">' . $_SESSION['temp_subject_teachers_name'][$i] . '</option>
+		';
 
-	$i += 1;
+		$i += 1;
+	}
+} else {
+	$i = 0;
+
+	foreach ($_SESSION['subject_teachers_user'] as $row) {
+		echo
+		'
+									<option value="' . $_SESSION['subject_teachers_user'][$i] . '">' . $_SESSION['subject_teachers_name'][$i] . '</option>
+			';
+
+		$i += 1;
+	}
 }
 echo '
                     </select>
