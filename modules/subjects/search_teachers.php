@@ -18,11 +18,17 @@ $_SESSION['temp_subject_description'] = $_POST['txtsubjectdescription'];
 $_SESSION['temp_subject_career_id'] = $_POST['selectsubjectcareerid'];
 $_SESSION['temp_subject_career_name'] = $_POST['selectsubjectcareername'];
 
-unset($_SESSION['subject_teachers_names_user']);
+unset($_SESSION['subject_teachers_name_user']);
 unset($_SESSION['subject_teachers_name']);
 
 $_SESSION['subject_teachers_user'] = array();
 $_SESSION['subject_teachers_name'] = array();
+
+unset($_SESSION['temp_subject_teachers_name_user']);
+unset($_SESSION['temp_subject_teachers_name']);
+
+$_SESSION['temp_subject_teachers_user'] = array();
+$_SESSION['temp_subject_teachers_name'] = array();
 
 if (isset($_SESSION['temp_subject_career_id'])) {
     $sql = "SELECT * FROM teachers WHERE career = '" . $_SESSION['temp_subject_career_id'] . "' ORDER BY name";
@@ -33,6 +39,9 @@ if (isset($_SESSION['temp_subject_career_id'])) {
         while ($row = mysqli_fetch_array($result)) {
             $_SESSION['subject_teachers_user'][$i] = $row['user'];
             $_SESSION['subject_teachers_name'][$i] = $row['name'] . ' ' . $row['surnames'];
+
+            $_SESSION['temp_subject_teachers_user'][$i] = $row['user'];
+            $_SESSION['temp_subject_teachers_name'][$i] = $row['name'] . ' ' . $row['surnames'];
 
             $i += 1;
         }

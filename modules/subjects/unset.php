@@ -24,3 +24,7 @@ unset($_SESSION['subject_description']);
 unset($_SESSION['subject_teachers']);
 unset($_SESSION['subject_teachers_user']);
 unset($_SESSION['subject_teachers_name']);
+
+//  form_update
+unset($_SESSION['temp_subject_teachers_user']);
+unset($_SESSION['temp_subject_teachers_name']);
