@@ -1,4 +1,4 @@
-let selectTeachers = '';
+let selectTeachers = ',';
 
 $(document).ready(function() {
     $('.select-careers-teachers').select2();
@@ -11,20 +11,16 @@ $(document).ready(function() {
     //Obtener carrera
     txtSubjectCareer = $('#txtsubjectcareer').val();
     tempSubjectCareer = $('#tempsubjectcareer').val();
-    console.log(txtSubjectCareer);
-    console.log(tempSubjectCareer);
 
-    if (txtSubjectCareer == tempSubjectCareer) {
+    if (txtSubjectCareer == tempSubjectCareer || tempSubjectCareer == '') {
         //Obtener docentes seleccionados
         txtSubjectTeachers = $('#txtsubjectteachers').val();
         selectTeachers = txtSubjectTeachers;
-        console.log(selectTeachers);
 
         arraySubjectTeachers = txtSubjectTeachers.split(',');
         arraySubjectTeachers = arraySubjectTeachers.filter(me => me != '');
 
         $('.select-careers-teachers').val(arraySubjectTeachers).trigger("change");
-        console.log(arraySubjectTeachers);
     }
 });
 
@@ -80,7 +76,6 @@ let valueSelectTeacher = '',
 $('.select-careers-teachers').on('select2:select', function(e) {
     valueSelectTeacher = e.params.data.id;
     selectTeachers += valueSelectTeacher + ',';
-    console.log(selectTeachers);
 });
 
 $('.select-careers-teachers').on('select2:unselect', function(e) {
@@ -90,7 +85,6 @@ $('.select-careers-teachers').on('select2:unselect', function(e) {
     findTeacher = tempSelectTeachers.replace(valueUnselectTeacher, '');
     findTeacher = findTeacher.replace(',,', ',');
     selectTeachers = findTeacher;
-    console.log(selectTeachers);
 });
 
 //Enviar datos
