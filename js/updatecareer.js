@@ -3,19 +3,29 @@ let selectTeachers = '';
 $(document).ready(function() {
     $('.select-careers-teachers').select2();
 
-    //Obtener docentes seleccionados
-    let txtSubjectTeachers = '',
+    let txtSubjectCareer = '',
+        tempSubjectCareer = '',
+        txtSubjectTeachers = '',
         arraySubjectTeachers;
 
-    txtSubjectTeachers = $('#txtsubjectteachers').val();
-    selectTeachers = txtSubjectTeachers;
-    console.log(selectTeachers);
+    //Obtener carrera
+    txtSubjectCareer = $('#txtsubjectcareer').val();
+    tempSubjectCareer = $('#tempsubjectcareer').val();
+    console.log(txtSubjectCareer);
+    console.log(tempSubjectCareer);
 
-    arraySubjectTeachers = txtSubjectTeachers.split(',');
-    arraySubjectTeachers = arraySubjectTeachers.filter(me => me != '');
+    if (txtSubjectCareer == tempSubjectCareer) {
+        //Obtener docentes seleccionados
+        txtSubjectTeachers = $('#txtsubjectteachers').val();
+        selectTeachers = txtSubjectTeachers;
+        console.log(selectTeachers);
 
-    $('.select-careers-teachers').val(arraySubjectTeachers).trigger("change");
-    console.log(arraySubjectTeachers);
+        arraySubjectTeachers = txtSubjectTeachers.split(',');
+        arraySubjectTeachers = arraySubjectTeachers.filter(me => me != '');
+
+        $('.select-careers-teachers').val(arraySubjectTeachers).trigger("change");
+        console.log(arraySubjectTeachers);
+    }
 });
 
 //Obtener datos del formulario, seleccionar carrera, buscar los docentes y rellenar el select-docentes
