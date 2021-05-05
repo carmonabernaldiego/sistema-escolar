@@ -10,7 +10,9 @@ if (empty($_POST['txtsubject'])) {
 	exit();
 }
 
-$sql_update = "UPDATE subjects SET name = '" . $_POST['txtsubjectname'] . "', description = '" . $_POST['txtsubjectdescription'] . "', semester = '" . $_POST['txtsubjectsemester'] . "', user_teacher = '" . $_POST['selectteacheruser'] . "' WHERE subject = '" . $_POST['txtsubject'] . "'";
+$_POST['txtsubjectdescription'] = mysqli_real_escape_string($conexion, $_POST['txtsubjectdescription']);
+
+$sql_update = "UPDATE subjects SET career = '" . $_SESSION['temp_subject_career_id'] . "', name = '" . $_POST['txtsubjectname'] . "', semester = '" . $_POST['txtsubjectsemester'] . "', description = '" . $_POST['txtsubjectdescription'] . "', user_teachers = '" . $_SESSION['temp_select_teachers'] . "' WHERE subject = '" . $_POST['txtsubject'] . "'";
 
 if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['msgbox_error'] = 0;
