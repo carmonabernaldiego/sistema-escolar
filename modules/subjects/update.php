@@ -24,3 +24,4 @@ if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
 }
 
+header('Location: /modules/subjects');
