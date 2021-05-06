@@ -12,7 +12,7 @@ $(document).ready(function() {
     txtSubjectCareer = $('#txtsubjectcareer').val();
     tempSubjectCareer = $('#tempsubjectcareer').val();
 
-    if (txtSubjectCareer == tempSubjectCareer || tempSubjectCareer == '') {
+    if (txtSubjectCareer == tempSubjectCareer) {
         //Obtener docentes seleccionados
         txtSubjectTeachers = $('#txtsubjectteachers').val();
         selectTeachers = txtSubjectTeachers;

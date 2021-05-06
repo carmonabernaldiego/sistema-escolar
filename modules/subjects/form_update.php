@@ -140,7 +140,11 @@ for ($i = 1; $i <= 12; $i++) {
 echo '
                     </datalist>
 				</div>
-				<div class="content-full">
+				<div class="content-full">';
+if (isset($_SESSION['temp_subject_career_id']) == '') {
+	$_SESSION['temp_subject_career_id'] = $_SESSION['subject_career'][0];
+}
+echo '
 					<input style="display: none;" type="text" id="txtsubjectcareer" name="txtsubjectcareer" value="' . $_SESSION['subject_career'][0] . '"/>
 					<input style="display: none;" type="text" id="tempsubjectcareer" name="tempsubjectcareer" value="' . $_SESSION['temp_subject_career_id'] . '"/>
 					<input style="display: none;" type="text" id="txtsubjectteachers" name="txtsubjectteachers" value="' . $_SESSION['subject_teachers'] . '"/>
