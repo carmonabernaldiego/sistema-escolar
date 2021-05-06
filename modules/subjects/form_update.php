@@ -143,6 +143,7 @@ echo '
 				<div class="content-full">';
 if (isset($_SESSION['temp_subject_career_id']) == '') {
 	$_SESSION['temp_subject_career_id'] = $_SESSION['subject_career'][0];
+	$_SESSION['temp_select_teachers'] = $_SESSION['subject_teachers'];
 }
 echo '
 					<input style="display: none;" type="text" id="txtsubjectcareer" name="txtsubjectcareer" value="' . $_SESSION['subject_career'][0] . '"/>
