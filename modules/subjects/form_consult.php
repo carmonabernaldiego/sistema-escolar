@@ -79,10 +79,12 @@ foreach ($arraySubjectTeachers as $key) {
 			$_SESSION['subject_teachers_user'] = $row['user'];
 			$_SESSION['subject_teachers_name'] = $row['name'] . ' ' . $row['surnames'];
 		}
-		echo
-		'
-						<option value="' . $_SESSION['subject_teachers_user'] . '" selected>' . $_SESSION['subject_teachers_name'] . '</option>
-		';
+		if ($_SESSION['subject_teachers_user'] != '') {
+			echo
+			'
+							<option value="' . $_SESSION['subject_teachers_user'] . '" selected>' . $_SESSION['subject_teachers_name'] . '</option>
+			';
+		}
 	}
 }
 echo
