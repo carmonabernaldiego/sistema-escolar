@@ -1885,6 +1885,10 @@ input[type="range"]:active {
     .form-data .body .description {
         width: 93%;
     }
+    .form-data .body .content-full {
+        width: 93%;
+        margin-bottom: 35px;
+    }
     .form-data .body .textarea {
         width: 96%;
     }
