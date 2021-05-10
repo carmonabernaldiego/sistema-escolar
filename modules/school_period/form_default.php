@@ -1,6 +1,10 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
+unset($_SESSION['school_periods_id']);
+unset($_SESSION['school_periods_start_date']);
+unset($_SESSION['school_periods_end_date']);
+
 //Cargamos Periodos Activos
 if (isset($_SESSION['school_period']) != '') {
 	$_SESSION['school_periods_id'] = array();
@@ -43,7 +47,7 @@ if (isset($_SESSION['school_period']) != '') {
 					foreach ($_SESSION['school_periods_id'] as $row) {
 						echo '
 											<tr>
-												<td style="width: 40px;"><input class="cbox-subject" id="cbox-subject' . $i . '" type="checkbox" name="check-school-period' . $i . '" value="' . $_SESSION['school_periods_id'][$i] . '"></td>
+												<td style="width: 40px;"><input class="cbox-subject" id="cbox-subject' . $i . '" type="radio" name="check-school-period" value="' . $_SESSION['school_periods_id'][$i] . '"></td>
 												<td><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_id'][$i] . '</label></td>
 												<td class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_start_date'][$i] . '</label></td>
 												<td class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_end_date'][$i] . '</label></td>
@@ -94,16 +98,3 @@ if (isset($_SESSION['school_period']) != '') {
 		</div>
 	</div>
 </div>
-<script>
-	let Checked = null;
-	//The class name can vary
-	for (let CheckBox of document.getElementsByClassName('cbox-subject')) {
-		CheckBox.onclick = function() {
-			if (Checked != null) {
-				Checked.checked = false;
-				Checked = CheckBox;
-			}
-			Checked = CheckBox;
-		}
-	}
-</script>
