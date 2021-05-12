@@ -392,6 +392,8 @@
 .select2-container--default .select2-search--inline .select2-search__field {
     background: transparent;
     border: none;
+    color: #687292 !important;
+    font-weight: 500;
     outline: 0;
     box-shadow: none;
     -webkit-appearance: textfield;

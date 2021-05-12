@@ -1,7 +1,6 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
-include_once '../close_notif_info.php';
 
 header('Content-Type: text/html; charset=UTF-8');
 header('Last-Modified:' . gmdate('D, d M Y H:i:s') . 'GMT');
@@ -35,6 +34,7 @@ if (!empty($_POST['btn'])) {
 			$(".loader").fadeOut("slow");
 		});
 	</script>
+	<script src="/js/unsetnotif.js"></script>
 </head>
 
 <body>

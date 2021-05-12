@@ -3,15 +3,9 @@ header('Content-Type: text/html; charset=UTF-8');
 
 include_once 'modules/security.php';
 include_once 'modules/conexion.php';
-
+include_once 'modules/unset_notif_info.php';
 
 $_SESSION['raiz'] = dirname(__FILE__);
-
-$_SESSION['msgbox_info'] = '';
-$_SESSION['text_msgbox_info'] = '';
-
-$_SESSION['msgbox_error'] = '';
-$_SESSION['text_msgbox_error'] = '';
 ?>
 <!DOCTYPE html>
 <html lang="es">

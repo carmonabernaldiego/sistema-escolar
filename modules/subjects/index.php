@@ -2,8 +2,6 @@
 include_once '../security.php';
 include_once '../conexion.php';
 
-include_once '../close_notif_info.php';
-
 header('Content-Type: text/html; charset=UTF-8');
 header('Last-Modified:' . gmdate('D, d M Y H:i:s') . 'GMT');
 header('Cache-Control: no-cache, must-revalidate, max-age=0');
@@ -57,6 +55,7 @@ include_once 'load_data.php';
 	</script>
 	<link href="/css/select2.css" rel="stylesheet" />
 	<script src="/js/select2.js"></script>
+	<script src="/js/unsetnotif.js"></script>
 </head>
 
 <body>
