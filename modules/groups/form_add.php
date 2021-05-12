@@ -29,10 +29,26 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                         }
                         ?>
                     </datalist>
-                    <!--<label class="label">Asignar</label>
-                    <button class="btn-add-subjects" name="btn" value="form_add_subjects" type="submit">Asignaturas</button>-->
+                </div>
+                <div class="content-full">
+                    <label class="label">Asignatura(s)</label>
+                    <select class="select-subjects" name="selectSubjects[]" multiple="multiple" required>
+                        <?php
+                        $i = 0;
+
+                        foreach ($_SESSION['subject_teachers_user'] as $row) {
+                            echo
+                            '
+								<option value="' . $_SESSION['subject_teachers_user'][$i] . '">' . $_SESSION['subject_teachers_name'][$i] . '</option>
+							';
+
+                            $i += 1;
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
+            <button class="btn icon" name="btn" value="form_add_subjects" type="submit">arrow_forward</button>
         </form>
     </div>
 </div>
@@ -41,3 +57,4 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     include_once "../sections/options-disabled.php";
     ?>
 </div>
+<script src="/js/addgroup.js"></script>

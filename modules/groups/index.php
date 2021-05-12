@@ -64,6 +64,8 @@ include_once 'load_data.php';
 			$(".loader").fadeOut("slow");
 		});
 	</script>
+	<link href="/css/select2.css" rel="stylesheet" />
+	<script src="/js/select2.js"></script>
 	<script src="/js/unsetnotif.js"></script>
 </head>
 
