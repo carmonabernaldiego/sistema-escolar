@@ -1834,7 +1834,7 @@ input[type="range"]:active {
     }
     .box-notification-ok p,
     .box-notification-error p {
-        padding: 15px 5%;
+        padding: 15.3px 5%;
     }
     .content {
         display: flex;
