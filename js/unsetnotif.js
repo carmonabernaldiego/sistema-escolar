@@ -1,6 +1,11 @@
 function closeNotif() {
-    $(".box-notification-ok").slideToggle();
-    $(".box-notification-error").slideToggle();
+    if (window.matchMedia("(min-width: 963px)").matches) {
+        $('.box-notification-ok').slideToggle();
+        $('.box-notification-error').slideToggle();
+    } else {
+        $('.box-notification-ok').fadeOut('slow');
+        $('.box-notification-error').fadeOut('slow');
+    }
 
     let close = '1';
 
