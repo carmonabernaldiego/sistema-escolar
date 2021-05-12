@@ -6,7 +6,9 @@ if (!empty($_POST['close_msgbox_info'])) {
 		$_SESSION['msgbox_info'] = '';
 		$_SESSION['text_msgbox_info'] = '';
 	}
-} elseif (!empty($_POST['close_msgbox_error'])) {
+}
+
+if (!empty($_POST['close_msgbox_error'])) {
 	if ($_POST['close_msgbox_error'] == 1) {
 		$_SESSION['msgbox_error'] = '';
 		$_SESSION['text_msgbox_error'] = '';

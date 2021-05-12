@@ -7,7 +7,7 @@ function closeNotif() {
         $('.box-notification-error').fadeOut('slow');
     }
 
-    let close = '1';
+    let close = 1;
 
     $.ajax({
         type: 'POST',
