@@ -4,10 +4,10 @@ $(function() {
 
     botonMostrar.on("click", function() {
         if (formSearch.is(':hidden')) {
-            formSearch.show('slow');
+            formSearch.slideToggle();
             document.getElementById("txtSearch").focus();
         } else {
-            formSearch.hide('slow');
+            formSearch.slideToggle();
         }
     });
 });
