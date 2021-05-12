@@ -53,6 +53,11 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 		}
 		?>
 	</table>
+	<?php
+	if ($i == 0) {
+		echo '<img src="/images/404.svg" class="data-not-found" alt="404">';
+	}
+	?>
 	<div class="pages">
 		<ul>
 			<?php

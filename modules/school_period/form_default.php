@@ -72,6 +72,10 @@ if (isset($_SESSION['school_period']) != '') {
 				echo '
 						</table>
                     ';
+
+				if ($i == 0) {
+					echo '<img src="/images/404.svg" class="data-not-found" alt="404">';
+				}
 				?>
 			</div>
 			<button class="btn-save icon" name="btn-school-period" value="true" type="submit">save</button>

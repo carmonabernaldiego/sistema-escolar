@@ -724,6 +724,13 @@ button:focus {
     border-radius: 0.25em;
 }
 
+.form-gridview img.data-not-found,
+.form-data img.data-not-found {
+    display: block;
+    width: 86%;
+    margin: 30px auto;
+}
+
 .form-gridview table {
     width: 94%;
     margin: 4.5% auto 0;
