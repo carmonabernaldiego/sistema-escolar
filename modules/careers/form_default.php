@@ -3,18 +3,22 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 ?>
 <div class="form-gridview">
 	<table>
-		<tr>
-			<th>Carrera</th>
-			<th>Nombre</th>
-			<th class="view center"><a class="icon">visibility</a></th>
-			<th class="edit center"><a class="icon">edit</a></th>
-			<?php
+		<?php
+		if ($_SESSION['total_careers'] != 0) {
+			echo '
+					<tr>
+						<th>Carrera</th>
+						<th>Nombre</th>
+						<th class="view center"><a class="icon">visibility</a></th>
+						<th class="edit center"><a class="icon">edit</a></th>
+			';
 			if ($_SESSION['permissions'] != 'editor') {
 				echo '<th class="delete center"><a class="icon">delete</a></th>';
 			}
-			?>
-		</tr>
-		<?php
+			echo '	
+					</tr>
+			';
+		}
 		for ($i = 0; $i < $_SESSION['total_careers']; $i++) {
 			echo '
 		    		<tr>
@@ -50,22 +54,28 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 	</table>
 	<?php
 	if ($_SESSION['total_careers'] == 0) {
-		echo '<img src="/images/404.svg" class="data-not-found" alt="404">';
+		echo '
+				<img src="/images/404.svg" class="data-not-found" alt="404">
+		';
+	}
+	if ($_SESSION['total_careers'] != 0) {
+		echo '
+				<div class="pages">
+					<ul>
+		';
+		for ($n = 1; $n <= $tpages; $n++) {
+			if ($page == $n) {
+				echo '<li class="active"><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
+			} else {
+				echo '<li><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
+			}
+		}
+		echo '
+					</ul>
+				</div>
+		';
 	}
 	?>
-	<div class="pages">
-		<ul>
-			<?php
-			for ($n = 1; $n <= $tpages; $n++) {
-				if ($page == $n) {
-					echo '<li class="active"><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
-				} else {
-					echo '<li><form name="form-pages" action="" method="POST"><button type="submit" name="page" value="' . $n . '">' . $n . '</button></form></li>';
-				}
-			}
-			?>
-		</ul>
-	</div>
 </div>
 <div class="content-aside">
 	<?php
