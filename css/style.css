@@ -173,6 +173,10 @@ button:focus {
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.25em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .info-title {
@@ -238,6 +242,10 @@ button:focus {
     box-shadow: 0px 3px 2px rgba(73, 80, 104, 0.4);
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .nav-home span.name_system {
@@ -386,6 +394,10 @@ button:focus {
     background: #569188;
     box-shadow: 2px 3px 2px rgba(98, 164, 139, 0.4);
     border-radius: 0.25em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .box-notification-error {
@@ -394,6 +406,10 @@ button:focus {
     background: #c0605d;
     box-shadow: 2px 3px 2px rgba(164, 98, 98, 0.4);
     border-radius: 0.25em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .box-notification-error:after,
@@ -583,6 +599,10 @@ button:focus {
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.25em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .form-options .search {
@@ -727,8 +747,13 @@ button:focus {
 .form-gridview img.data-not-found,
 .form-data img.data-not-found {
     display: block;
-    width: 86%;
-    margin: 30px auto;
+    width: 80%;
+    margin: -5px auto 30px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .form-gridview table {
@@ -870,6 +895,10 @@ button:focus {
 
 .pages {
     margin: 2.8% 0 2.8% 2.89%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .pages:after {
@@ -929,6 +958,10 @@ button:focus {
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.25em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .form-data .head {
@@ -1547,6 +1580,10 @@ input[type="range"]:active {
     display: -ms-grid;
     display: grid;
     place-content: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .user-mobile header {
@@ -1654,6 +1691,10 @@ input[type="range"]:active {
     display: -ms-grid;
     display: grid;
     place-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .menu-mobile span.name_system {

@@ -3,18 +3,26 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 ?>
 <div class="form-gridview">
 	<table>
-		<tr>
-			<th>Grupo</th>
-			<th>Nombre</th>
-			<th class="center">Semestre</th>
-			<th class="view center"><a class="icon">visibility</a></th>
-			<th class="edit center"><a class="icon">edit</a></th>
-			<?php
+		<?php
+		if ($_SESSION['total_groups'] != 0) {
+			echo '
+					<tr>
+						<th>Grupo</th>
+						<th>Nombre</th>
+						<th class="center">Semestre</th>
+						<th class="view center"><a class="icon">visibility</a></th>
+						<th class="edit center"><a class="icon">edit</a></th>
+			';
 			if ($_SESSION['permissions'] != 'editor') {
-				echo '<th class="delete center"><a class="icon">delete</a></th>';
+				echo '
+						<th class="delete center"><a class="icon">delete</a></th>
+				';
 			}
-			?>
-		</tr>
+			echo '
+					</tr>
+			';
+		}
+		?>
 		<?php
 		for ($i = 0; $i < $_SESSION['total_groups']; $i++) {
 			echo '
@@ -54,7 +62,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 		?>
 	</table>
 	<?php
-	if ($i == 0) {
+	if ($_SESSION['total_groups'] == 0) {
 		echo '<img src="/images/404.svg" class="data-not-found" alt="404">';
 	}
 	?>

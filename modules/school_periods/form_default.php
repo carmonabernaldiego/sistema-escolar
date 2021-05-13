@@ -39,7 +39,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 		?>
 	</table>
 	<?php
-	if ($i == 0) {
+	if ($_SESSION['total_school_periods'] == 0) {
 		echo '<img src="/images/404.svg" class="data-not-found" alt="404">';
 	}
 	?>
