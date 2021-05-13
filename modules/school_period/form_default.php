@@ -54,9 +54,9 @@ if (isset($_SESSION['school_period']) != '') {
 							echo '<td style="width: 40px;"><input class="cbox-subject" id="cbox-subject' . $i . '" type="radio" name="check-school-period" value="' . $_SESSION['school_periods_id'][$i] . '"></td>';
 						}
 						echo '
-								<td><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_id'][$i] . '</label></td>
-								<td class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_start_date'][$i] . '</label></td>
-								<td class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_end_date'][$i] . '</label></td>
+								<td style="padding: 0;" class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_id'][$i] . '</label></td>
+								<td style="padding: 0;" class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_start_date'][$i] . '</label></td>
+								<td style="padding: 0;" class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_end_date'][$i] . '</label></td>
 							</tr>
 										';
 

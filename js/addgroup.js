@@ -6,13 +6,13 @@ let txtSubject = '',
     txtSubjectName = '',
     txtSubjectSemester = '',
     txtSubjectDescription = '',
-    selectCareer = '',
+    txtSemester = '',
     selectSubjectCareer = '',
     selectSubjectCareerId = '',
     selectSubjectCareerName = '',
     optionSelect = '';
 
-selectSubjectCareer = document.getElementById('selectsubjectcareer');
+selectSubjectCareer = document.getElementById('txtgroupsemester');
 selectSubjectCareer.addEventListener('change',
     function() {
         optionSelect = this.options[selectSubjectCareer.selectedIndex];
@@ -20,12 +20,14 @@ selectSubjectCareer.addEventListener('change',
         selectSubjectCareerName = optionSelect.text;
     });
 
-selectCareer = document.getElementById('selectsubjectcareer');
-selectCareer.addEventListener('change', () => {
+txtSemester = document.getElementById('txtgroupsemester');
+txtSemester.addEventListener('change', () => {
     txtSubject = $('#txtsubject').val();
     txtSubjectName = $('#txtsubjectname').val();
     txtSubjectSemester = $('#txtsubjectsemester').val();
     txtSubjectDescription = $('#txtsubjectdescription').val();
+
+    console.log($('#txtsubject').val());
 
     $.ajax({
         type: 'POST',

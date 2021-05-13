@@ -9,21 +9,21 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
         <form name="form-add-school-periods" action="insert.php" method="POST">
             <div class="wrap">
                 <div class="first">
-                    <label class="label">Periodo escolar</label>
-                    <input class="text" type="text" name="txtspid" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" required autofocus />
-                    <label class="label">Inicia</label>
-                    <input class="date" type="date" name="datespstart" value="'.$_SESSION['sp_start'][0].'" required autofocus />
-                    <label class="label">Termina</label>
-                    <input class="date" type="date" name="datespend" value="'.$_SESSION['sp_end'][0].'" required />
+                    <label for="txtspid" class="label">Periodo escolar</label>
+                    <input id="txtspid" class="text" type="text" name="txtspid" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" required autofocus />
+                    <label for="datespstart" class="label">Inicia</label>
+                    <input id="datespstart" class="date" type="date" name="datespstart" value="'.$_SESSION['sp_start'][0].'" required autofocus />
+                    <label for="datespend" class="label">Termina</label>
+                    <input id="datespend" class="date" type="date" name="datespend" value="'.$_SESSION['sp_end'][0].'" required />
                 </div>
                 <div class="last">
-                    <label class="label">Activo</label>
-                    <select class="select" name="selectactive">
+                    <label for="selectactive" class="label">Activo</label>
+                    <select id="selectactive" class="select" name="selectactive">
                         <option value="1">Si</option>
                         <option value="0">No</option>
                     </select>
-                    <label class="label">Actual</label>
-                    <select class="select" name="selectcurrent">
+                    <label for="selectcurrent" class="label">Actual</label>
+                    <select id="selectcurrent" class="select" name="selectcurrent">
                         <option value="0">No</option>
                         <option value="1">Si</option>
                     </select>
