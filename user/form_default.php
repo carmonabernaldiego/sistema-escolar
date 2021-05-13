@@ -101,10 +101,10 @@ echo
 				<div class="last">
 					<label for="txtuserpassoldupdate" class="label">Confirmar contraseña</label>
 					<input id="txtuserpassoldupdate" class="text" type="password" name="txtuserpassOldUpdate" placeholder="Contraseña actual" maxlength="50" required/>
-					<label for="txtuserpassnewupdate" class="label">Cambiar contraseña</label>
-					<input id="txtuserpassnewupdate" class="text" id="pass1" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña" maxlength="50"/>
-					<label for="txtuserpassconfirmupdate" id="labelError" class="label labelError">Las contraseñas no coinciden.</label>
-					<input id="txtuserpassconfirmupdate" class="text" id="pass2" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña" maxlength="50"/>
+					<label for="pass1" class="label">Cambiar contraseña</label>
+					<input class="text" id="pass1" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña" maxlength="50"/>
+					<label for="pass2" id="labelError" class="label labelError">Las contraseñas no coinciden.</label>
+					<input class="text" id="pass2" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña" maxlength="50"/>
 				</div>
 			</div>
 			<button class="btn icon" type="submit">save</button>
