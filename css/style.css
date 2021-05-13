@@ -748,7 +748,7 @@ button:focus {
 .form-data img.data-not-found {
     display: block;
     width: 80%;
-    margin: -5px auto 30px;
+    margin: 2% auto 5%;
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1970,6 +1970,10 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 641px) {
+    .form-gridview img.data-not-found,
+    .form-data img.data-not-found {
+        margin: 1% auto 5%;
+    }
     .form-gridview table {
         display: block;
         max-width: -moz-fit-content;
