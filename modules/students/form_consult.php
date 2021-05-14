@@ -74,7 +74,7 @@ echo '
 					<input class="date" type="date" name="dateadmission" value="' . $_SESSION['student_admission_date'][0] . '" disabled/>
 				</div>
 			</div>
-			<button class="btn icon" type="submit">save</button>
+			<button class="btn icon" type="submit" autofocus>done</button>
         </form>
     </div>
 </div>

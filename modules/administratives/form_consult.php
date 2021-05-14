@@ -92,7 +92,7 @@ echo '
 					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['administrative_observation'][0] . '" disabled/>
 				</div>
 			</div>
-			<button class="btn icon" type="submit">save</button>
+			<button class="btn icon" type="submit" autofocus>done</button>
 		</form>
     </div>
 </div>
