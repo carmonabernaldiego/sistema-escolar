@@ -61,7 +61,6 @@ if (isset($_SESSION['school_period_group']) != '') {
 					$_SESSION['msgbox_error'] = 1;
 					$_SESSION['text_msgbox_error'] = 'No se encontraron Asignaturas para el semestre seleccionado.';
 
-					print "<script>window.setTimeout(function() { window.location = '/modules/groups' }, 0000);</script>";
 				}
 				echo '
 						</table>

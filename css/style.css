@@ -497,6 +497,10 @@ button:focus {
     height: 230px;
     background: #383a59e7;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .wrap-title-login .title-login h1 {
@@ -514,6 +518,10 @@ button:focus {
     border-top: 3px solid #4a567cc5;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .logo-form-login {

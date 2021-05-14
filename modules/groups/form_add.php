@@ -18,11 +18,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                     <label for="selectsubjectcareer" class="label">Carrera</label>
                     <select id="selectsubjectcareer" class="select" name="selectcareer" required>
                         <?php
-                        if (isset($_SESSION['temp_subject_career_id'])) {
-                            echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
-                        } else {
-                            echo '<option value="">Seleccioné</option>';
-                        }
+                        echo '
+                                <option value="">Seleccioné</option>
+                        ';
 
                         $i = 0;
 
@@ -30,9 +28,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 
                         if ($result = $conexion->query($sql)) {
                             while ($row = mysqli_fetch_array($result)) {
-                                if ($row['career'] != $_SESSION['temp_subject_career_id']) {
-                                    echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
-                                }
+                                echo '
+                                    <option value="' . $row['career'] . '">' . $row['name'] . '</option>
+                                ';
                                 $i += 1;
                             }
                         }
@@ -52,7 +50,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                     </datalist>
                 </div>
             </div>
-            <button class="btn icon" name="btn" value="form_add_subjects" type="submit">arrow_forward</button>
+            <button class="btn icon" name="btn" value="form_add_subjects_students" type="submit">arrow_forward</button>
         </form>
     </div>
 </div>
