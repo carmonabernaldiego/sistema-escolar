@@ -16,7 +16,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                 </div>
                 <div class="last">
                     <label class="label">Periodo Escolar</label>
-                    <input class="text" type="text" name="txtspid" value="<?php echo $_SESSION['school_period']; ?>" maxlength="20" disabled />
+                    <input id="txtschoolperiod" class="text" type="text" name="txtspid" value="<?php echo $_SESSION['school_period']; ?>" maxlength="20" disabled />
                     <label class="label">Semestre</label>
                     <input id="txtgroupsemester" class="text" type="number" name="txtgroupsemester" value="" maxlength="2" min="1" max="12" list="defaultsemestres" required />
                     <datalist id="defaultsemestres">

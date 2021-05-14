@@ -1263,7 +1263,15 @@ button:focus {
     padding: 8px 0;
 }
 
-.form-data td .cbox-subject,
+.form-data td .cbox-school-period {
+    display: block;
+    margin: 13% auto 10%;
+    width: 18px;
+    height: 18px;
+    background: #eef4ff;
+    cursor: pointer;
+}
+
 .form-data td .cbox-student {
     margin: 16% 0 0 45%;
     width: 18px;

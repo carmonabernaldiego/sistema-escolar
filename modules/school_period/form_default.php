@@ -49,14 +49,14 @@ if (isset($_SESSION['school_period']) != '') {
 							<tr>
 							';
 						if ($_SESSION['school_period'] == $_SESSION['school_periods_id'][$i]) {
-							echo '<td style="width: 40px;"><input class="cbox-subject" id="cbox-subject' . $i . '" type="radio" name="check-school-period" value="' . $_SESSION['school_periods_id'][$i] . '" checked></td>';
+							echo '<td style="padding: 0;"><input class="cbox-school-period" id="cbox-school-period' . $i . '" type="radio" name="check-school-period" value="' . $_SESSION['school_periods_id'][$i] . '" checked></td>';
 						} else {
-							echo '<td style="width: 40px;"><input class="cbox-subject" id="cbox-subject' . $i . '" type="radio" name="check-school-period" value="' . $_SESSION['school_periods_id'][$i] . '"></td>';
+							echo '<td style="padding: 0;"><input class="cbox-school-period" id="cbox-school-period' . $i . '" type="radio" name="check-school-period" value="' . $_SESSION['school_periods_id'][$i] . '"></td>';
 						}
 						echo '
-								<td style="padding: 0;" class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_id'][$i] . '</label></td>
-								<td style="padding: 0;" class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_start_date'][$i] . '</label></td>
-								<td style="padding: 0;" class="center"><label for="cbox-subject' . $i . '">' . $_SESSION['school_periods_end_date'][$i] . '</label></td>
+								<td style="padding: 0;" class="center"><label style="cursor: pointer;" for="cbox-school-period' . $i . '">' . $_SESSION['school_periods_id'][$i] . '</label></td>
+								<td style="padding: 0;" class="center"><label style="cursor: pointer;" for="cbox-school-period' . $i . '">' . $_SESSION['school_periods_start_date'][$i] . '</label></td>
+								<td style="padding: 0;" class="center"><label style="cursor: pointer;" for="cbox-school-period' . $i . '">' . $_SESSION['school_periods_end_date'][$i] . '</label></td>
 							</tr>
 										';
 

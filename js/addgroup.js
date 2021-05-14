@@ -27,7 +27,8 @@ txtSemester.addEventListener('change', () => {
     txtSubjectSemester = $('#txtsubjectsemester').val();
     txtSubjectDescription = $('#txtsubjectdescription').val();
 
-    console.log($('#txtsubject').val());
+    let n = $('#txtgroupsemester').val();
+    console.log(n);
 
     $.ajax({
         type: 'POST',
