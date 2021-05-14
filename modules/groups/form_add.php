@@ -9,15 +9,36 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
         <form name="form-add-groups" action="" method="POST">
             <div class="wrap">
                 <div class="first">
-                    <label class="label">Grupo</label>
-                    <input class="text" type="text" name="txtgroup" value="" maxlength="20" autofocus required />
-                    <label class="label">Nombre</label>
-                    <input class="text" type="text" name="txtgroupname" value="" maxlength="100" required />
+                    <label for="txtgroupid" class="label">Grupo</label>
+                    <input id="txtgroupid" class="text" type="text" name="txtgroup" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" autofocus required />
+                    <label for="txtgroupname" class="label">Nombre</label>
+                    <input id="txtgroupname" class="text" type="text" name="txtgroupname" value="" maxlength="100" required />
                 </div>
                 <div class="last">
-                    <label class="label">Periodo Escolar</label>
-                    <input id="txtschoolperiod" class="text" type="text" name="txtspid" value="<?php echo $_SESSION['school_period']; ?>" maxlength="20" disabled />
-                    <label class="label">Semestre</label>
+                    <label for="selectsubjectcareer" class="label">Carrera</label>
+                    <select id="selectsubjectcareer" class="select" name="selectcareer" required>
+                        <?php
+                        if (isset($_SESSION['temp_subject_career_id'])) {
+                            echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
+                        } else {
+                            echo '<option value="">Seleccioné</option>';
+                        }
+
+                        $i = 0;
+
+                        $sql = "SELECT * FROM careers ORDER BY name";
+
+                        if ($result = $conexion->query($sql)) {
+                            while ($row = mysqli_fetch_array($result)) {
+                                if ($row['career'] != $_SESSION['temp_subject_career_id']) {
+                                    echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
+                                }
+                                $i += 1;
+                            }
+                        }
+                        ?>
+                    </select>
+                    <label for="txtgroupsemester" class="label">Semestre</label>
                     <input id="txtgroupsemester" class="text" type="number" name="txtgroupsemester" value="" maxlength="2" min="1" max="12" list="defaultsemestres" required />
                     <datalist id="defaultsemestres">
                         <?php
@@ -30,23 +51,6 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                         ?>
                     </datalist>
                 </div>
-                <div class="content-full">
-                    <label class="label">Asignatura(s)</label>
-                    <select class="select-subjects" name="selectSubjects[]" multiple="multiple" required>
-                        <?php
-                        $i = 0;
-
-                        foreach ($_SESSION['groups_id'] as $row) {
-                            echo
-                            '
-								<option value="' . $_SESSION['groups_id'][$i] . '">' . $_SESSION['groups_name'][$i] . '</option>
-							';
-
-                            $i += 1;
-                        }
-                        ?>
-                    </select>
-                </div>
             </div>
             <button class="btn icon" name="btn" value="form_add_subjects" type="submit">arrow_forward</button>
         </form>
@@ -57,4 +61,3 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     include_once "../sections/options-disabled.php";
     ?>
 </div>
-<script src="/js/addgroup.js"></script>
