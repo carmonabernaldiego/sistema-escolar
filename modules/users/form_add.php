@@ -10,16 +10,16 @@ echo '
 					<img src="/images/users/user.png" />
 				</div>
 				<div class="first">
-					<label class="label">Usuario</label>
-					<input class="text" type="text" name="txtuseridAdd" value="" maxlength="50" autofocus autocomplete="off" required/>
-					<label class="label">Email</label>
-					<input class="text" type="email" name="txtemailAdd" value="" maxlength="200" autocomplete="new-text"/>
+					<label for="txtuserid" class="label">Usuario</label>
+					<input id="txtuserid" class="text" type="text" name="txtuseridAdd" value="" maxlength="50" autofocus autocomplete="off" required/>
+					<label for="txtuseremail" class="label">Email</label>
+					<input id="txtuseremail" class="text" type="email" name="txtemailAdd" value="" maxlength="200" autocomplete="new-text"/>
 				</div>
 				<div class="last">
-					<label class="label">Contraseña</label>
-					<input class="text" type="password" name="txtuserpassAdd" value="" maxlength="50" autocomplete="new-password" required/>
-					<label class="label">Permisos</label>
-					<select class="select" name="txtusertype">
+					<label for="txtuserpass" class="label">Contraseña</label>
+					<input id="txtuserpass" class="text" type="password" name="txtuserpassAdd" value="" maxlength="50" autocomplete="new-password" required/>
+					<label for="selectusertype" class="label">Permisos</label>
+					<select id="selectusertype" class="select" name="txtusertype">
 						<option value="editor">Editor</option>
 						<option value="admin">Administrador</option>
 						<option value="student">Alumno</option>

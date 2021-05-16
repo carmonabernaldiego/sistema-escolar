@@ -57,17 +57,17 @@ echo '
 					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
 				</div>
 				<div class="first">
-					<label class="label">Usuario</label>
+					<label for="txtuserid" class="label">Usuario</label>
 					<input style="display: none;" type="text" name="txtuseridUpdate" value="' . $_SESSION['user_id'][0] . '"/>
-					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
-					<label class="label">Email</label>
-					<input class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" autofocus/>
+					<input id="txtuserid" class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
+					<label for="txtuseremail" class="label">Email</label>
+					<input id="txtuseremail" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" autofocus/>
 				</div>
 				<div class="last">
-					<label class="label">Contraseña</label>
-					<input class="text" type="password" name="txtuserpassUpdate" value="Password1234//*" disabled/>
-					<label class="label">Permisos</label>
-					<select class="select" name="txtusertype">
+					<label for="txtuserpass" class="label">Contraseña</label>
+					<input id="txtuserpass" class="text" type="password" name="txtuserpassUpdate" value="Password1234//*" disabled/>
+					<label for="selectusertype" class="label">Permisos</label>
+					<select id="selectusertype" class="select" name="txtusertype">
 					';
 if ($_SESSION['user_type'][0] == 'admin') {
 	echo
