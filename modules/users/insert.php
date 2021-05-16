@@ -15,7 +15,7 @@ $_POST['txtuseridAdd'] = trim($_POST['txtuseridAdd']);
 if ($_POST['txtuseridAdd'] == '') {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Ingrese un ID de usuario correcto.';
+	$_SESSION['text_msgbox_error'] = 'Ingrese un ID de usuario correcto';
 	header('Location: /modules/users');
 	exit();
 }
@@ -25,11 +25,11 @@ $sql_insert = "INSERT INTO users(user, email, pass, permissions, image) VALUES('
 if (mysqli_query($conexion, $sql_insert)) {
 	$_SESSION['msgbox_error'] = 0;
 	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+	$_SESSION['text_msgbox_info'] = 'Usuario agregado';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
+	$_SESSION['text_msgbox_error'] = 'Error al guardar';
 }
 
 header('Location: /modules/users');

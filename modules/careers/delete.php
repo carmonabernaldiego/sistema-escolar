@@ -15,11 +15,11 @@ $sql_delete = "DELETE FROM careers WHERE career = '" . $_POST['txtcareer'] . "'"
 if (mysqli_query($conexion, $sql_delete)) {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'El registro fue eliminado.';
+	$_SESSION['text_msgbox_error'] = 'Carrera eliminada';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al eliminar datos en tabla.';
+	$_SESSION['text_msgbox_error'] = 'Error al eliminar';
 }
 
 

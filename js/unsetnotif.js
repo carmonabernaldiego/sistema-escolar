@@ -20,4 +20,4 @@ function closeNotif() {
     });
 }
 
-setTimeout(closeNotif, 10000);
+setTimeout(closeNotif, 4000);

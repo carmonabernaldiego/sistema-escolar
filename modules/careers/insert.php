@@ -15,7 +15,7 @@ $_POST['txtcareer'] = trim($_POST['txtcareer']);
 if ($_POST['txtcareer'] == '') {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto.';
+	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto';
 	header('Location: /modules/careers');
 	exit();
 }
@@ -26,7 +26,7 @@ if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
 		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
-		$_SESSION['text_msgbox_error'] = 'La asignatura que intenta crear ya éxiste.';
+		$_SESSION['text_msgbox_error'] = 'La carrera que intenta crear ya éxiste';
 
 		header('Location: /modules/careers');
 	} else {
@@ -36,11 +36,11 @@ if ($result = $conexion->query($sql)) {
 		if (mysqli_query($conexion, $sql_insert)) {
 			$_SESSION['msgbox_error'] = 0;
 			$_SESSION['msgbox_info'] = 1;
-			$_SESSION['text_msgbox_info'] = 'Registro cargado correctamente.';
+			$_SESSION['text_msgbox_info'] = 'Carrera agregada';
 		} else {
 			$_SESSION['msgbox_info'] = 0;
 			$_SESSION['msgbox_error'] = 1;
-			$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
+			$_SESSION['text_msgbox_error'] = 'Error al guardar';
 		}
 
 		header('Location: /modules/careers');

@@ -37,11 +37,11 @@ if (isset($_POST["image"])) {
 
 		$_SESSION['msgbox_error'] = 0;
 		$_SESSION['msgbox_info'] = 1;
-		$_SESSION['text_msgbox_info'] = 'La imagen se cargo correctamente.';
+		$_SESSION['text_msgbox_info'] = 'La imagen se cargo correctamente';
 	} else {
 		$_SESSION['msgbox_info'] = 0;
 		$_SESSION['msgbox_error'] = 1;
-		$_SESSION['text_msgbox_error'] = 'Existe un problema al cargar imagen.';
+		$_SESSION['text_msgbox_error'] = 'Existe un problema al cargar la imagen';
 	}
 
 	if ($_SESSION['user'] == $_SESSION['user_id'][0]) {
@@ -51,5 +51,5 @@ if (isset($_POST["image"])) {
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Existe un problema al cargar imagen.';
+	$_SESSION['text_msgbox_error'] = 'Existe un problema al cargar la imagen';
 }

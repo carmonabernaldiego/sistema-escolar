@@ -17,11 +17,11 @@ echo $sql_update = "UPDATE subjects SET career = '" . $_SESSION['temp_subject_ca
 if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['msgbox_error'] = 0;
 	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
+	$_SESSION['text_msgbox_info'] = 'Asignatura actualizada';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
+	$_SESSION['text_msgbox_error'] = 'Error al actualizar';
 }
 
 header('Location: /modules/subjects');

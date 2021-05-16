@@ -24,11 +24,11 @@ if (empty($_POST['txtuseridUpdate'])) {
 			if (mysqli_query($conexion, $sql_update)) {
 				$_SESSION['msgbox_error'] = 0;
 				$_SESSION['msgbox_info'] = 1;
-				$_SESSION['text_msgbox_info'] = 'Registro modificado correctamente.';
+				$_SESSION['text_msgbox_info'] = 'Usuario actualizado';
 			} else {
 				$_SESSION['msgbox_info'] = 0;
 				$_SESSION['msgbox_error'] = 1;
-				$_SESSION['text_msgbox_error'] = 'Error al modificar datos en tabla.';
+				$_SESSION['text_msgbox_error'] = 'Error al actualizar';
 			}
 
 			header('Location: /user');
@@ -36,7 +36,7 @@ if (empty($_POST['txtuseridUpdate'])) {
 		} else {
 			$_SESSION['msgbox_info'] = 0;
 			$_SESSION['msgbox_error'] = 1;
-			$_SESSION['text_msgbox_error'] = 'Contraseña incorrecta.';
+			$_SESSION['text_msgbox_error'] = 'Contraseña incorrecta';
 			header('Location: /user');
 			exit();
 		}
