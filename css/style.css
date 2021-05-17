@@ -1134,6 +1134,7 @@ button:focus {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     color: #4a567c !important;
+    box-shadow: 0 0 0 2pt #6272a4 !important;
     transition: all 350ms ease-in;
 }
 
