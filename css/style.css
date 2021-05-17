@@ -1127,15 +1127,14 @@ button:focus {
 .textarea:focus,
 .textcontrasena:focus,
 .date:focus,
-.select:focus,
-.select2 {
+.select:focus {
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     color: #4a567c !important;
-    box-shadow: 0 0 0 2pt #6272a4 !important;
+    box-shadow: 0 0 0 1.5pt #6272a4 !important;
     transition: all 350ms ease-in;
 }
 

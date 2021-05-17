@@ -361,6 +361,7 @@
 .select2-container--default.select2-container--focus .select2-selection--multiple {
     background: #dde8fc;
     outline: 0;
+    box-shadow: 0 0 0 1.5pt #6272a4 !important;
     transition: all 350ms ease-in;
 }
 
