@@ -48,7 +48,7 @@ echo '
 					<input id="txtuserphone" class="text" type="number" name="txtphone" value="' . $_SESSION['administrative_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
 					<label for="txtuseraddress" class="label">Domicilio</label>
 					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="' . $_SESSION['administrative_address'][0] . '" maxlength="100" required/>
-					<label for"selectlevelstudies" class="label">Nivel de estudios</label>
+					<label for="selectlevelstudies" class="label">Nivel de estudios</label>
 					<select id="selectlevelstudies" class="select" name="selectlevelstudies">
 				';
 if ($_SESSION['administrative_level_studies'][0] == 'Licenciatura') {
