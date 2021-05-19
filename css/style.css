@@ -561,6 +561,17 @@ button:focus {
     border-radius: 0.4em;
     font-size: .9em;
     font-weight: bold;
+    transition: all 350ms ease-out;
+}
+
+.form-login .text:hover,
+.form-login .text:focus,
+.textcontrasena:hover,
+.textcontrasena:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: 0 0 0 1.5pt #9fa9c7 !important;
+    transition: all 350ms ease-in;
 }
 
 .form-login .labelrecordar {
@@ -588,13 +599,15 @@ button:focus {
     font-size: .9em;
     font-weight: bold;
     cursor: pointer;
-    transition: all 350ms;
+    transition: all 350ms ease-out;
 }
 
 .form-login .button:hover,
 .form-login .button:focus {
     background: #383a59c5;
     border: none;
+    box-shadow: 0 0 0 2pt #9fa9c7 !important;
+    transition: all 350ms ease-in;
 }
 
 
@@ -738,6 +751,10 @@ button:focus {
     transition: all 350ms ease-in;
 }
 
+.form-options .options .btnsearch:active {
+    background: #6272a4;
+}
+
 
 /*-------------------------------------------
   Formulario | GridView
@@ -833,8 +850,8 @@ button:focus {
 .form-gridview td button.btnview {
     margin: 0 auto;
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     background: #569188;
     box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
     border: none;
@@ -855,8 +872,8 @@ button:focus {
 .form-gridview td button.btnedit {
     margin: 0 auto;
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     background: #3f6992;
     box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
     border: none;
@@ -877,8 +894,8 @@ button:focus {
 .form-gridview td button.btndelete {
     margin: 0 auto;
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     background: #db4949;
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     border: none;
@@ -1125,16 +1142,12 @@ button:focus {
 
 .text:focus,
 .textarea:focus,
-.textcontrasena:focus,
 .date:focus,
 .select:focus {
     outline: none !important;
     outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
     color: #4a567c !important;
-    box-shadow: 0 0 0 1.5pt #6272a4 !important;
+    box-shadow: 0 0 0 2pt #6f7ba1 !important;
     transition: all 350ms ease-in;
 }
 
