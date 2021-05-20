@@ -564,9 +564,7 @@ button:focus {
     transition: all 350ms ease-out;
 }
 
-.form-login .text:hover,
 .form-login .text:focus,
-.textcontrasena:hover,
 .textcontrasena:focus {
     outline: none !important;
     outline-width: 0 !important;
@@ -1534,6 +1532,19 @@ input[type="range"]:focus,
 input[type="range"]:hover,
 input[type="range"]:active {
     background: transparent !important;
+}
+
+
+/*-------------------------------------------
+  Formulario | School Period
+-------------------------------------------*/
+
+.form-data .body .td-school {
+    width: 10%;
+}
+
+.form-data .body .td-school-label {
+    padding: 0;
 }
 
 
