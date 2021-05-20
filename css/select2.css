@@ -393,6 +393,7 @@
 }
 
 .select2-container--default .select2-search--inline .select2-search__field {
+    margin-top: 10px;
     background: transparent;
     border: none;
     color: #687292 !important;
