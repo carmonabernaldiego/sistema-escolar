@@ -635,11 +635,23 @@ button:focus {
     clear: both;
 }
 
-.form-options .search .text {
-    float: left;
-    width: 62.5%;
+.form-options .search p {
+    display: block;
     height: 36px;
-    margin: 0 0 0 6.5%;
+    margin: 0 8%;
+    border-radius: 0.25em;
+    transition: all 350ms ease-out;
+}
+
+.form-options .search p.search-active {
+    box-shadow: 0 0 0 2pt #6f7ba1 !important;
+    transition: all 350ms ease-in;
+}
+
+.form-options .search .text-search {
+    float: left;
+    width: 72%;
+    height: 36px;
     padding: 0 3%;
     background: #eef4ff;
     box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
@@ -652,12 +664,13 @@ button:focus {
     font-weight: 500;
     font-size: 0.9em;
     transition: all 350ms ease-out;
+    outline: none !important;
+    outline-width: 0 !important;
 }
 
 .form-options .search .btn-search {
     float: left;
-    margin: 0 6.5% 0 0;
-    width: 18.5%;
+    width: 22%;
     height: 36px;
     background: #6272a4;
     box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);

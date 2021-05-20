@@ -19,7 +19,7 @@ include_once 'security.php';
 	<div class="search">
 		<form name="form-search" action="" method="POST">
 			<p>
-				<input type="text" class="text" name="search" placeholder="Buscar..." maxlength="50" disabled>
+				<input type="text" class="text-search" name="search" placeholder="Buscar..." maxlength="50" disabled>
 				<button class="btn-search disabled icon" type="submit" disabled>search</button>
 			</p>
 		</form>
