@@ -4930,16 +4930,16 @@
                     return 'No se han encontrado resultados';
                 },
                 searching: function() {
-                    return 'Searching…';
+                    return 'Buscando…';
                 },
                 removeAllItems: function() {
-                    return 'Remove all items';
+                    return 'Eliminar todos los elementos';
                 },
                 removeItem: function() {
-                    return 'Remove item';
+                    return 'Eliminar elemento';
                 },
                 search: function() {
-                    return 'Search';
+                    return 'Buscar';
                 }
             };
         });
