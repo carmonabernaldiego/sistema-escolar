@@ -101,7 +101,7 @@ if (isset($_SESSION['school_period']) != '') {
 		<div class="search">
 			<form name="form-search" action="" method="POST">
 				<p>
-					<input type="text" class="text" name="search" placeholder="Buscar..." disabled>
+					<input type="text" class="text-search" name="search" placeholder="Buscar..." disabled>
 					<button class="btn-search disabled icon" type="submit" disabled>search</button>
 				</p>
 			</form>

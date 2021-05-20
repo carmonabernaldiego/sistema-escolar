@@ -635,50 +635,42 @@ button:focus {
     clear: both;
 }
 
-.form-options .search p {
-    display: block;
-    height: 36px;
-    margin: 0 8%;
-    border-radius: 0.25em;
-    transition: all 350ms ease-out;
-}
-
-.form-options .search p.search-active {
-    box-shadow: 0 0 0 2pt #6f7ba1 !important;
-    transition: all 350ms ease-in;
-}
-
 .form-options .search .text-search {
     float: left;
-    width: 72%;
+    width: 81%;
     height: 36px;
+    margin: 0 0 0 6.5%;
     padding: 0 3%;
     background: #eef4ff;
     box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
     border: none;
-    border-top-left-radius: 0.25em;
-    border-bottom-left-radius: 0.25em;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 0.25em;
     color: #687292;
     font-weight: 500;
     font-size: 0.9em;
     transition: all 350ms ease-out;
     outline: none !important;
     outline-width: 0 !important;
+    transition: all 350ms ease-out;
+}
+
+.form-options .search .text-search:focus {
+    box-shadow: 0 0 0 2pt #6f7ba1 !important;
+    transition: all 350ms ease-in;
 }
 
 .form-options .search .btn-search {
     float: left;
-    width: 22%;
+    width: 20%;
     height: 36px;
+    margin: 0 6.5% 0 -20%;
     background: #6272a4;
     box-shadow: 0 0 4px rgba(142, 136, 192, 0.4);
     border: none;
     color: #eef4ff;
     cursor: initial;
-    border-top-right-radius: 0.25em;
-    border-bottom-right-radius: 0.25em;
+    border-top-right-radius: 0.20em;
+    border-bottom-right-radius: 0.20em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     font-size: 1.02em;
@@ -1963,13 +1955,13 @@ input[type="range"]:active {
         margin: 0;
         padding: 2px 0 12px;
     }
-    .form-options .search .text {
-        width: 73%;
+    .form-options .search .text-search {
+        width: 83%;
         height: 42px;
         padding: 0 2%;
     }
     .form-options .search .btn-search {
-        width: 10%;
+        width: 20%;
         height: 42px;
     }
     .form-options .options .search-mobile,
@@ -2009,13 +2001,13 @@ input[type="range"]:active {
         margin: 0;
         padding: 8px 0 8px;
     }
-    .form-options .search .text {
-        width: 73%;
+    .form-options .search .text-search {
+        width: 83%;
         height: 38px;
         padding: 0 2%;
     }
     .form-options .search .btn-search {
-        width: 10%;
+        width: 20%;
         height: 38px;
     }
     .form-gridview .pages ul li button {
@@ -2073,12 +2065,12 @@ input[type="range"]:active {
         padding-right: 35px;
     }
     .form-options .search .text {
-        width: 67%;
+        width: 81%;
         height: 38px;
         padding: 0 3%;
     }
     .form-options .search .btn-search {
-        width: 14%;
+        width: 20%;
         height: 38px;
     }
     .form-data .delete .btn-si {
