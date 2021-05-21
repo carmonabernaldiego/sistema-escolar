@@ -15,7 +15,7 @@ $(document).ready(function() {
     });
 
     $('#file_upload_image').on('change', function() {
-        var reader = new FileReader();
+        let reader = new FileReader();
         reader.onload = function(event) {
             $image_crop.croppie('bind', {
                 url: event.target.result

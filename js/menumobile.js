@@ -1,12 +1,12 @@
-var card = document.getElementById('activator');
+let card = document.getElementById('activator');
 
-var tl = gsap.timeline({
+let tl = gsap.timeline({
     defaults: {
         ease: "power2.inOut"
     }
 })
 
-var toggle = false;
+let toggle = false;
 
 tl.to('.activator', {
     background: '#6272a4',
@@ -30,15 +30,15 @@ card.addEventListener('click', () => {
     if (toggle ? tl.play() : tl.reverse());
 })
 
-var cardU = document.getElementById('activator-user');
+let cardU = document.getElementById('activator-user');
 
-var tlU = gsap.timeline({
+let tlU = gsap.timeline({
     defaults: {
         ease: "power2.inOut"
     }
 })
 
-var toggleU = false;
+let toggleU = false;
 
 tlU.to('.user-mobile .activator-user', {
     borderRadius: '0 5em 5em 0',

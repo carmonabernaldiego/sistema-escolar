@@ -751,17 +751,18 @@ button:focus {
 
 .form-options .options .search-mobile.btnsearch {
     display: none;
-    background: #6272a4;
     box-shadow: 2px 2px 4px rgba(73, 100, 219, 0.3);
-    transition: all 350ms ease-out;
+    background: #6a7cb3;
+    border-color: #8192c9;
+    transition: all 300ms ease-out;
 }
 
 .form-options .options .btnsearch:hover,
 .form-options .options .btnsearch:focus {
     background: #4a567c;
+    border: 4px solid #8192c9;
     color: #eef4ff98;
-    border: none;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .form-options .options .btnsearch:active {
