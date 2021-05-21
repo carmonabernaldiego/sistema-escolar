@@ -160,6 +160,11 @@
     text-align: center;
 }
 
+.cr-slider::-webkit-slider-thumb:hover,
+.cr-slider::-webkit-slider-thumb:active {
+    box-shadow: 0 0 0 2.5pt #8192c9 !important;
+}
+
 .cr-slider::-webkit-slider-runnable-track {
     width: 100%;
     height: 4px;

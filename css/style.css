@@ -448,19 +448,21 @@ button:focus {
     line-height: 2.2;
     font-size: 0.6em;
     border: none;
+    border-color: #e77f7f;
     border-radius: 2em;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 50ms ease-out;
 }
 
 .box-notification-ok .button:hover,
 .box-notification-ok .button:focus,
 .box-notification-error .button:hover,
 .box-notification-error .button:focus {
+    line-height: 1.9;
     background: #aa3535;
+    border: 2px solid #e77f7f;
     color: #eef4ff98;
-    border: none;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 
@@ -1137,21 +1139,22 @@ button:focus {
     padding: 8px 0 0 8px;
     background: #6272a4;
     border: none;
+    border-color: #8192c9;
     border-top-left-radius: 100%;
     border-bottom-right-radius: 0.25em;
     color: #eef4ff;
     text-shadow: none;
     font-size: 1.1em;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-data .body .btn:hover,
 .form-data .body .btn:focus {
     background: #4a567c;
+    border: 4px solid #8192c9;
     color: #eef4ff98;
-    border: none;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .text:focus,
@@ -1513,14 +1516,15 @@ button:focus {
     font-weight: 100;
     text-align: center;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .formConfigUser .body #section-user-image .file:hover,
 .form-data .body #section-user-image .file:hover {
     background: #4a567c;
+    box-shadow: 0 0 0 2.5pt #8192c9 !important;
     color: #AEBBD3;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .formConfigUser .body #section-croppie-image,
@@ -1551,14 +1555,15 @@ button:focus {
     font-weight: 100;
     cursor: pointer;
     z-index: 999;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .formConfigUser .body #section-croppie-image .crop_btn:hover,
 .form-data .body #section-croppie-image .crop_btn:hover {
     background: #4a567c;
+    box-shadow: 0 0 0 2.5pt #8192c9 !important;
     color: #AEBBD3;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 input[type="range"]:focus,
