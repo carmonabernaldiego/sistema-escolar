@@ -36,7 +36,7 @@ if (isset($_SESSION['school_period']) != '') {
 				<?php
 				echo
 				'
-						<table>
+						<table class="table-school-period">
 							<tr>
 								<th class="center" colspan="4">Periodos</th>
 							</tr>

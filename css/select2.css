@@ -363,7 +363,7 @@
     background: #dde8fc;
     outline: 0;
     outline-width: 0;
-    box-shadow: 0 0 0 2.5pt #9fa9c7 !important;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
     transition: all 350ms ease-in;
 }
 
@@ -408,7 +408,7 @@
     max-height: 200px;
     overflow-y: auto;
     border-radius: 0.25em;
-    box-shadow: 0 0 0 2.5pt #9fa9c7 !important;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
     transition: all 350ms ease-in;
 }
 

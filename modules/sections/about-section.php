@@ -59,7 +59,7 @@ if (strpos($url_actual, 'modules')) {
     </span>
 </div>
 <div class="info-school-period">
-    <span class="school_period">
+    <span class="school-period">
         Periodo Escolar /
         <a id="schoolPeriod" href="/modules/school_period"><?php print $_SESSION['school_period']; ?></a>
     </span>
