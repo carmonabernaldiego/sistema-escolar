@@ -78,7 +78,7 @@ if (isset($_SESSION['school_period']) != '') {
 				}
 				?>
 			</div>
-			<button class="btn-save icon" name="btn-school-period" value="true" type="submit">save</button>
+			<button class="btn icon" name="btn-school-period" value="true" type="submit">save</button>
 		</form>
 	</div>
 </div>

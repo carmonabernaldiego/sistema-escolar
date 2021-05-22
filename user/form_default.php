@@ -5,6 +5,7 @@ $_SESSION['user_id'] = array();
 $_SESSION['email'] = array();
 $_SESSION['user_type'] = array();
 $_SESSION['user_image'] = array();
+$_SESSION['last_image_update'] = array();
 
 $sql = "SELECT * FROM users WHERE user = '" . $_SESSION['user'] . "'";
 
@@ -14,6 +15,7 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['email'][0] = $row['email'];
 		$_SESSION['user_type'][0] = $row['permissions'];
 		$_SESSION['user_image'][0] = $row['image'];
+		$_SESSION['last_image_update'][0] = $row['last_image_update'];
 	}
 }
 
@@ -49,8 +51,31 @@ echo '
 			<div class="wrap">
 				<div id="section-user-image">
 					<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
+';
+$date_time_start = date_create($_SESSION['last_image_update'][0]);
+$date_time_end = date_create(date('Y-m-d'));
+$interval = date_diff($date_time_start, $date_time_end);
+$days = intval($interval->format('%a'));
+
+if ($days >= 15) {
+	echo '
 					<label class="file" for="file_upload_image"><span class="icon">add_a_photo</span></label>
 					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
+	';
+} else {
+	echo '
+					<label class="file disabled" for="file_upload_image"><span class="icon">add_a_photo</span></label>
+	';
+	$_SESSION['msgbox_info'] = 1;
+	$_SESSION['msgbox_error'] = 0;
+
+	if ((15 - $days) == 1) {
+		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente (Deshabilitado por ' . (15 - $days) . ' día)';
+	} else {
+		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente (Deshabilitado por ' . (15 - $days) . ' días)';
+	}
+}
+echo '
 				</div>
 				<div class="first">
 					<label class="label">Usuario</label>

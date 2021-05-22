@@ -1392,32 +1392,6 @@ button:focus {
     transition: all 350ms ease-in;
 }
 
-.form-data button.btn-save {
-    display: block;
-    float: right;
-    width: 50px;
-    height: 50px;
-    padding: 8px 0 0 8px;
-    background: #6272a4;
-    color: #eef4ff;
-    text-transform: none;
-    line-height: 1.6;
-    font-size: 1.1em;
-    border-top-left-radius: 100%;
-    border-bottom-right-radius: 0.6em;
-    border: none;
-    cursor: pointer;
-    transition: all 350ms ease-out;
-}
-
-.form-data button.btn-save:hover,
-.form-data button.btn-save:focus {
-    background: #4a567c;
-    color: #eef4ff98;
-    border: none;
-    transition: all 350ms ease-in;
-}
-
 
 /*-------------------------------------------
   Formulario | Careers
@@ -1531,6 +1505,17 @@ button:focus {
     box-shadow: 0 0 0 2.5pt #8192c9 !important;
     color: #AEBBD3;
     transition: all 200ms ease-in;
+}
+
+.formConfigUser .body #section-user-image .file.disabled {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: initial;
+}
+
+.formConfigUser .body #section-user-image .file.disabled:hover,
+.formConfigUser .body #section-user-image .file.disabled:focus {
+    box-shadow: none!important;
 }
 
 .formConfigUser .body #section-croppie-image,

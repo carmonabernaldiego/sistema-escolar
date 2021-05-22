@@ -37,7 +37,7 @@ if (!empty($_POST['btn'])) {
 			$(".loader").fadeOut("slow");
 		});
 	</script>
-	<script src="/js/unsetnotif.js"></script>
+	<script src="/js/unsetnotifuser.js"></script>
 </head>
 
 <body>
