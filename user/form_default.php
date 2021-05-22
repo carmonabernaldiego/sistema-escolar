@@ -62,16 +62,13 @@ if ($days >= 15) {
 					<label class="file" for="file_upload_image"><span class="icon">add_a_photo</span></label>
 					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
 	';
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 0;
 } else {
 	echo '
 					<label class="file disabled" for="file_upload_image"><span class="icon">add_a_photo</span></label>
 	';
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['msgbox_error'] = 0;
-
 	if ((15 - $days) == 1) {
+		$_SESSION['msgbox_info'] = 1;
+		$_SESSION['msgbox_error'] = 0;
 		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente';
 	}
 }

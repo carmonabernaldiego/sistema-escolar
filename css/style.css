@@ -92,7 +92,7 @@ input:focus,
 select:focus,
 textarea:focus {
     background: #dde8fc !important;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 select[disabled],
@@ -420,7 +420,7 @@ button:focus {
 }
 
 .box-notification-ok p {
-    padding: 8% 6%;
+    padding: 8% 7%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(136, 184, 165, 0.7);
     font-size: 0.875em;
@@ -428,7 +428,7 @@ button:focus {
 }
 
 .box-notification-error p {
-    padding: 8% 6%;
+    padding: 8% 7%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(154, 185, 173, 0.7);
     font-size: 0.875em;
@@ -563,7 +563,7 @@ button:focus {
     border-radius: 0.4em;
     font-size: .9em;
     font-weight: bold;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-login .text:focus,
@@ -571,7 +571,7 @@ button:focus {
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .form-login .labelrecordar {
@@ -605,7 +605,7 @@ button:focus {
     font-size: .9em;
     font-weight: bold;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-login .button:hover,
@@ -613,7 +613,7 @@ button:focus {
     background: #383a59c5;
     border: none;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 
@@ -656,7 +656,7 @@ button:focus {
     color: #687292;
     font-weight: 500;
     font-size: 0.9em;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
     outline: none !important;
     outline-width: 0 !important;
     transition: all 300ms ease-out;
@@ -855,7 +855,7 @@ button:focus {
     font-size: 0.9em;
     font-weight: 500;
     text-align: left;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-gridview td p {
@@ -937,7 +937,7 @@ button:focus {
 
 .form-gridview tr:hover td {
     background: #dde8fc;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .pages {
@@ -971,14 +971,14 @@ button:focus {
     line-height: 23px;
     font-size: 0.625em;
     font-weight: 600;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .pages ul li button:hover,
 .pages ul li button:focus {
     background: #4c597e;
     cursor: pointer;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .pages ul li.active button {
@@ -989,7 +989,7 @@ button:focus {
 .pages ul li.active button:focus {
     background: #7e8aac;
     cursor: pointer;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 
@@ -1207,11 +1207,12 @@ button:focus {
     background: #3f6992;
     box-shadow: 0 0 4px rgba(63, 105, 146, 0.3);
     border: none;
+    border-color: #7eb2e2;
     border-radius: 0.25em;
     color: #eef4ff;
     font-size: 0.9em;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-data .delete .btn-no {
@@ -1222,32 +1223,33 @@ button:focus {
     background: #db4949;
     box-shadow: 0 0 4px rgba(219, 73, 73, 0.3);
     border: none;
+    border-color: #e77f7f;
     border-radius: 0.25em;
     color: #eef4ff;
     font-size: 0.9em;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-data .delete .btn-si:hover,
 .form-data .delete .btn-si:focus {
-    color: #eef4ff98;
+    border: 4px solid #7eb2e2;
     background: #2a4866;
-    border: none;
-    transition: all 350ms ease-in;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
 }
 
 .form-data .delete .btn-no:hover,
 .form-data .delete .btn-no:focus {
-    color: #eef4ff98;
+    border: 4px solid #e77f7f;
     background: #aa3535;
-    border: none;
-    transition: all 350ms ease-in;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
 }
 
 
 /*-------------------------------------------
-  Formulario | School Period
+  Formulario | School Period - Groups
 -------------------------------------------*/
 
 .form-data .body .table-school-period {
@@ -1261,11 +1263,6 @@ button:focus {
 .form-data .body .td-school-label {
     padding: 0;
 }
-
-
-/*-------------------------------------------
-  Formulario | Groups - School Period
--------------------------------------------*/
 
 .form-data table {
     width: 94%;
@@ -1308,7 +1305,7 @@ button:focus {
     font-size: 0.9em;
     font-weight: 500;
     text-align: left;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-data td.center {
@@ -1317,7 +1314,7 @@ button:focus {
 
 .form-data tr:hover td {
     background: #dde8fc;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .form-data td label {
@@ -1355,7 +1352,7 @@ button:focus {
     border-radius: 0.25em;
     border: none;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-data button.btn-add-subjects:hover,
@@ -1363,7 +1360,7 @@ button:focus {
     background: #4a567c;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .form-data button.btn-add-students {
@@ -1381,7 +1378,7 @@ button:focus {
     border-top-right-radius: 0.8em;
     border: none;
     cursor: pointer;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .form-data button.btn-add-students:hover,
@@ -1389,7 +1386,7 @@ button:focus {
     background: #4a567c;
     color: #eef4ff98;
     border: none;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 
@@ -1408,7 +1405,7 @@ button:focus {
     margin: 0 0 25px 0;
     padding: 3px 1.2% 3px;
     resize: vertical;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 
@@ -1452,10 +1449,12 @@ button:focus {
     text-align: center;
     background-color: #db5f5f;
     box-shadow: 2px 2px 4px rgb(219 73 73 / 30%);
+    transition: all 300ms ease-out;
 }
 
 .formConfigUser .body .labelError.show {
     visibility: visible!important;
+    transition: all 300ms ease-in;
 }
 
 .formConfigUser .body #section-user-image,
@@ -1715,12 +1714,12 @@ input[type="range"]:active {
     height: 40px;
     border-radius: 100%;
     transition: all 300ms;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .user-mobile nav ul li a:hover {
     background: #323844;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .user-mobile nav ul li a img {
@@ -1822,13 +1821,13 @@ input[type="range"]:active {
     padding: .4em .8em;
     margin: 4.5px;
     border-radius: 0.25em;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .menu-mobile header nav ul li a:hover,
 .menu-mobile header nav ul li a.active {
     background: #323844;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .menu-mobile header nav ul li a img {
