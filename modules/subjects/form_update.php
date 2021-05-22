@@ -86,8 +86,6 @@ echo '</textarea>
 if (isset($_SESSION['temp_subject_career_id'])) {
 	if (isset($_SESSION['temp_subject_career_id'])) {
 		echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
-	} else {
-		echo '<option value="">Seleccioné</option>';
 	}
 
 	$i = 0;
@@ -108,6 +106,8 @@ if (isset($_SESSION['temp_subject_career_id'])) {
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {
 			echo '<option value="' . $row['career'] . '">' . $row['name'] . '</option>';
+			$_SESSION['temp_subject_career_id'] = $row['career'];
+			$_SESSION['temp_subject_career_name'] = $row['name'];
 		}
 	}
 

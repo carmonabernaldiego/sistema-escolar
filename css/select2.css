@@ -252,12 +252,11 @@
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 500;
-    transition: all 350ms ease-out;
     cursor: text;
     padding-bottom: 5px;
     padding-right: 5px;
     position: relative;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .select2-container--default .select2-selection--multiple:focus {
@@ -267,7 +266,7 @@
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     color: #4a567c !important;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .select2-container--default .select2-selection--multiple.select2-selection--clearable {
@@ -323,7 +322,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
@@ -331,7 +330,7 @@
     background-color: #eef4ff;
     color: #6272a4;
     outline: none;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
@@ -347,8 +346,8 @@
 .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
     border-left: 1px solid #aaa;
     border-right: none;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
@@ -364,7 +363,7 @@
     outline: 0;
     outline-width: 0;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--multiple {
@@ -409,7 +408,7 @@
     overflow-y: auto;
     border-radius: 0.25em;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .select2-container--default .select2-results__option .select2-results__option {
@@ -456,11 +455,13 @@
 .select2-container--default .select2-results__option--selected {
     background: #6a7186;
     color: #eef4ff98;
+    transition: all 200ms ease-in;
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background-color: #6272a4;
     color: #eef4ff;
+    transition: all 200ms ease-in;
 }
 
 .select2-container--default .select2-results__group {
