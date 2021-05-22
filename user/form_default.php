@@ -57,7 +57,7 @@ $date_time_end = date_create(date('Y-m-d'));
 $interval = date_diff($date_time_start, $date_time_end);
 $days = intval($interval->format('%a'));
 
-if ($days >= 15) {
+if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 	echo '
 					<label class="file" for="file_upload_image"><span class="icon">add_a_photo</span></label>
 					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
