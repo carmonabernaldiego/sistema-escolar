@@ -70,9 +70,7 @@ if ($days >= 15) {
 	$_SESSION['msgbox_error'] = 0;
 
 	if ((15 - $days) == 1) {
-		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente (Deshabilitado por ' . (15 - $days) . ' día)';
-	} else {
-		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente (Deshabilitado por ' . (15 - $days) . ' días)';
+		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente';
 	}
 }
 echo '
