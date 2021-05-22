@@ -26,7 +26,9 @@ if (isset($_POST["image"])) {
 
 	file_put_contents($nameFile, $data);
 
-	$sql_update = "UPDATE users SET image = '" . $imageName . "' WHERE user = '" . $_SESSION['user_id'][0] . "'";
+	$date = date('Y-m-d');
+
+	$sql_update = "UPDATE users SET image = '" . $imageName . "', last_image_update = '" . $date . "' WHERE user = '" . $_SESSION['user_id'][0] . "'";
 
 	if (mysqli_query($conexion, $sql_update)) {
 		if ($_SESSION['image'] != "user.png") {
