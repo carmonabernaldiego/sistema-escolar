@@ -688,7 +688,7 @@ button:focus {
 .form-options .search .btn-search:hover,
 .form-options .search .btn-search:focus {
     background: #4a567c;
-    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    box-shadow: inset 0 0 0 2.5pt #929cb9 !important;
     color: #eef4ff98;
     transition: all 200ms ease-in;
 }
