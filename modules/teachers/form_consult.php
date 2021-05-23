@@ -102,7 +102,7 @@ echo '
 					<input class="text" type="text" name="txtspecialty" value="' . $_SESSION['teacher_specialty'][0] . '" disabled/>
 				</div>
 			</div>
-			<button class="btn icon" type="submit" autofocus>done</button>
+			<button id="btnSave" class="btn icon" type="submit" autofocus>done</button>
         </form>
     </div>
 </div>

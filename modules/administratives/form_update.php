@@ -92,7 +92,7 @@ echo '
 					<input id="txtuserobservation" class="text" type="text" name="txtobservation" value="' . $_SESSION['administrative_observations'][0] . '" maxlength="200"/>
 				</div>
 			</div>
-			<button class="btn icon" type="submit">save</button>
+			<button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

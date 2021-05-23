@@ -21,7 +21,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                     <textarea maxlength="2000" class="textarea" name="txtcareerdescription" data-expandable></textarea>
                 </div>
             </div>
-            <button class="btn icon" type="submit">save</button>
+            <button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

@@ -46,7 +46,7 @@ $id_generate = 'admin' . unique_id(5);
                     <input id="txtuserobservation" class="text" type="text" name="txtobservation" value="" maxlength="200" />
                 </div>
             </div>
-            <button class="btn icon" type="submit">save</button>
+            <button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

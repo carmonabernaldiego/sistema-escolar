@@ -123,7 +123,7 @@ echo '
 					<input class="text" type="text" name="txtspecialty" value="' . $_SESSION['teacher_specialty'][0] . '" maxlength="100" required/>
 				</div>
 			</div>
-			<button class="btn icon" type="submit">save</button>
+			<button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

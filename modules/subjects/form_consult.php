@@ -92,7 +92,7 @@ echo
                     </select>
                 </div>
 			</div>
-			<button class="btn icon" type="submit" autofocus>done</button>
+			<button id="btnSave" class="btn icon" type="submit" autofocus>done</button>
         </form>
     </div>
 </div>

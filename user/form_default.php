@@ -129,7 +129,7 @@ echo
 					<input class="text" id="pass2" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña" maxlength="50"/>
 				</div>
 			</div>
-			<button class="btn icon" type="submit">save</button>
+			<button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

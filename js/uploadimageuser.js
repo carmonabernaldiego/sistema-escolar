@@ -5,11 +5,11 @@ function confirmPass() {
     pass2 = document.getElementById('pass2');
 
     if (pass1.value != pass2.value) {
-        document.getElementById("labelError").classList.add("show");
+        document.getElementById('labelError').classList.add('show');
 
         return false;
     } else {
-        document.getElementById("labelError").classList.remove("show");
+        document.getElementById('labelError').classList.remove('show');
 
         return true;
     }
@@ -60,18 +60,18 @@ $(document).ready(function() {
             quality: 1,
             circle: false
         }).then(function(response) {
-            $('.loader-image-upload').css("visibility", "visible");
+            $('.loader-image-upload').css('visibility', 'visible');
             $('#section-user-image').show();
             $('#section-croppie-image').hide();
             $.ajax({
-                url: "upload.php",
-                type: "POST",
+                url: 'upload.php',
+                type: 'POST',
                 data: {
-                    "image": response
+                    'image': response
                 },
                 success: function() {
                     location.href = location.href;
-                    window.location.href = "/user";
+                    window.location.href = '/user';
                 }
             });
         })

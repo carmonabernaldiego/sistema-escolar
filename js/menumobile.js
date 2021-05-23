@@ -2,7 +2,7 @@ let card = document.getElementById('activator');
 
 let tl = gsap.timeline({
     defaults: {
-        ease: "power2.inOut"
+        ease: 'power2.inOut'
     }
 })
 
@@ -15,13 +15,13 @@ tl.to('.activator', {
 
 tl.to('.menu-mobile nav', {
     'clipPath': 'ellipse(100% 100% at 50% 50%)'
-}, "-=.5")
+}, '-=.5')
 
 tl.to('.menu-mobile nav img', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05
-}, "-=.5")
+}, '-=.5')
 
 tl.pause();
 
@@ -34,7 +34,7 @@ let cardU = document.getElementById('activator-user');
 
 let tlU = gsap.timeline({
     defaults: {
-        ease: "power2.inOut"
+        ease: 'power2.inOut'
     }
 })
 
@@ -56,7 +56,7 @@ tlU.to('.user-mobile nav img', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05,
-}, "-=.5")
+}, '-=.5')
 
 tlU.pause();
 

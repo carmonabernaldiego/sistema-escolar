@@ -95,7 +95,7 @@ echo '
 					<input class="date" type="date" name="dateadmission" value="' . $_SESSION['student_admission_date'][0] . '" required/>
 				</div>
 			</div>
-			<button class="btn icon" type="submit">save</button>
+			<button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

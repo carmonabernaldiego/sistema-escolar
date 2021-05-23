@@ -29,7 +29,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
                     </select>
                 </div>
             </div>
-            <button class="btn icon" type="submit">save</button>
+            <button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

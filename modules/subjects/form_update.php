@@ -179,7 +179,7 @@ echo '
                     </select>
                 </div>
 			</div>
-			<button class="btn icon" type="submit">save</button>
+			<button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

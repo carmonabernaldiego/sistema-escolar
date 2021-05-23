@@ -35,18 +35,18 @@ $(document).ready(function() {
             quality: 1,
             circle: false
         }).then(function(response) {
-            $('.loader-image-upload').css("visibility", "visible");
+            $('.loader-image-upload').css('visibility', 'visible');
             $('#section-user-image').show();
             $('#section-croppie-image').hide();
             $.ajax({
-                url: "upload.php",
-                type: "POST",
+                url: 'upload.php',
+                type: 'POST',
                 data: {
-                    "image": response
+                    'image': response
                 },
                 success: function() {
                     location.href = location.href;
-                    window.location.href = "/modules/users/";
+                    window.location.href = '/modules/users/';
                 }
             });
         })

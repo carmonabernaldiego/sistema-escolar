@@ -2,7 +2,7 @@
 
 /*-------------------------------------------
   style.css
-  Design by Diego Carmona Bernal
+  By Diego Carmona Bernal
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
@@ -228,6 +228,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.info-school-period .school-period a:active {
+    color: #7875a1;
+    transition: all 200ms ease-in;
+}
+
 
 /*-------------------------------------------
   Home | Navigation
@@ -299,12 +304,20 @@ button:focus {
     text-decoration: none;
     font-size: 1em;
     font-weight: 500;
-    transition: all 200ms ease-out;
+    transition: all 300ms ease-out;
+    outline: none;
+    outline-width: none;
 }
 
-.nav-home .user span.logout_user>a:hover {
+.nav-home .user span.logout_user>a:hover,
+.nav-home .user span.logout_user>a:focus {
     color: #9492c0;
-    transition: all 300ms ease-in;
+    transition: all 200ms ease-in;
+}
+
+.nav-home .user span.logout_user>a:active {
+    color: #7875a1;
+    transition: all 200ms ease-in;
 }
 
 .nav-home .user span.logout_user>a+ul>li {
@@ -327,7 +340,7 @@ button:focus {
 
 .nav-home .user span.logout_user>a:focus+ul>li {
     display: block;
-    animation: fadeIn 300ms;
+    animation: fadeIn 200ms;
 }
 
 @keyframes fadeIn {
@@ -361,7 +374,9 @@ button:focus {
     font-size: 0.97em;
     font-weight: 500;
     text-decoration: none;
-    transition: all 200ms ease-out;
+    outline: none;
+    outline-width: none;
+    transition: all 300ms ease-out;
 }
 
 .nav-home ul li a .icon {
@@ -370,9 +385,10 @@ button:focus {
     margin-right: 15px;
 }
 
-.nav-home ul a:hover {
+.nav-home ul li a:hover,
+.nav-home ul li a:focus {
     color: #9492c0;
-    transition: all 300ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .nav-home ul li a.active {
@@ -380,7 +396,13 @@ button:focus {
     color: #9492c0;
     text-shadow: none;
     border-left: 4px solid #6272a4;
-    transition: all 300ms ease-in;
+    transition: all 200ms ease-in;
+}
+
+.nav-home ul li a:active,
+.nav-home ul li a.active:active {
+    color: #7875a1;
+    transition: all 200ms ease-in;
 }
 
 
@@ -433,36 +455,6 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(154, 185, 173, 0.7);
     font-size: 0.875em;
     font-weight: 500;
-}
-
-.box-notification-ok .button,
-.box-notification-error .button {
-    float: right;
-    margin: 6px 6px 0 0;
-    width: 20px;
-    height: 20px;
-    background: #db4949;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
-    color: #eef4ff;
-    font-weight: bold;
-    line-height: 2.2;
-    font-size: 0.6em;
-    border: none;
-    border-color: #e77f7f;
-    border-radius: 2em;
-    cursor: pointer;
-    transition: all 50ms ease-out;
-}
-
-.box-notification-ok .button:hover,
-.box-notification-ok .button:focus,
-.box-notification-error .button:hover,
-.box-notification-error .button:focus {
-    line-height: 1.9;
-    background: #aa3535;
-    border: 2px solid #e77f7f;
-    color: #eef4ff98;
-    transition: all 200ms ease-in;
 }
 
 
@@ -617,6 +609,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-login .button:active {
+    background: #4a567cc5;
+    transition: all 200ms ease-in;
+}
+
 
 /*-------------------------------------------
   Formulario | Herramientas
@@ -697,6 +694,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-options .search .btn-search:hover:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
 .form-options .options {
     display: flex;
     flex-flow: row wrap;
@@ -743,6 +745,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-options .options .btnadd:active {
+    background: #569188;
+    transition: all 200ms ease-in;
+}
+
 .form-options .options .btnexit {
     box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     background: #db4949;
@@ -758,6 +765,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-options .options .btnexit:active {
+    background: #db4949;
+    transition: all 200ms ease-in;
+}
+
 .form-options .options .search-mobile {
     display: none;
 }
@@ -765,21 +777,22 @@ button:focus {
 .form-options .options .search-mobile.btnsearch {
     display: none;
     box-shadow: 2px 2px 4px rgba(73, 100, 219, 0.3);
-    background: #6a7cb3;
+    background: #6272a4;
     border-color: #8192c9;
     transition: all 300ms ease-out;
 }
 
-.form-options .options .btnsearch:hover,
-.form-options .options .btnsearch:focus {
+.form-options .options .search-mobile.btnsearch:hover,
+.form-options .options .search-mobile.btnsearch:focus {
     background: #4a567c;
     border: 4px solid #8192c9;
     color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
-.form-options .options .btnsearch:active {
+.form-options .options .search-mobile.btnsearch:active {
     background: #6272a4;
+    transition: all 200ms ease-in;
 }
 
 
@@ -896,6 +909,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-gridview td button.btnview:active {
+    background: #569188;
+    transition: all 200ms ease-in;
+}
+
 .form-gridview td button.btnedit {
     margin: 0 auto;
     display: block;
@@ -918,6 +936,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-gridview td button.btnedit:active {
+    background: #3f6992;
+    transition: all 200ms ease-in;
+}
+
 .form-gridview td button.btndelete {
     margin: 0 auto;
     display: block;
@@ -937,6 +960,11 @@ button:focus {
 .form-gridview td button.btndelete:focus {
     background: #aa3535;
     border: 4px solid #e77f7f;
+    transition: all 200ms ease-in;
+}
+
+.form-gridview td button.btndelete:active {
+    background: #db4949;
     transition: all 200ms ease-in;
 }
 
@@ -1168,6 +1196,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-data .body .btn:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
 .text:focus,
 .textarea:focus,
 .date:focus,
@@ -1220,6 +1253,19 @@ button:focus {
     transition: all 300ms ease-out;
 }
 
+.form-data .delete .btn-si:hover,
+.form-data .delete .btn-si:focus {
+    border: 4px solid #7eb2e2;
+    background: #2a4866;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-data .delete .btn-si:active {
+    background: #3f6992;
+    transition: all 200ms ease-in;
+}
+
 .form-data .delete .btn-no {
     float: right;
     margin: 22px 29% 25px 0;
@@ -1236,19 +1282,16 @@ button:focus {
     transition: all 300ms ease-out;
 }
 
-.form-data .delete .btn-si:hover,
-.form-data .delete .btn-si:focus {
-    border: 4px solid #7eb2e2;
-    background: #2a4866;
-    color: #eef4ff98;
-    transition: all 200ms ease-in;
-}
-
 .form-data .delete .btn-no:hover,
 .form-data .delete .btn-no:focus {
     border: 4px solid #e77f7f;
     background: #aa3535;
     color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-data .delete .btn-no:active {
+    background: #db4949;
     transition: all 200ms ease-in;
 }
 
@@ -1511,6 +1554,12 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.formConfigUser .body #section-user-image .file:active,
+.form-data .body #section-user-image .file:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
 .formConfigUser .body #section-user-image .file.disabled {
     background: #6a7186;
     color: #eef4ff98;
@@ -1558,6 +1607,12 @@ button:focus {
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #8192c9 !important;
     color: #AEBBD3;
+    transition: all 200ms ease-in;
+}
+
+.formConfigUser .body #section-croppie-image .crop_btn:active,
+.form-data .body #section-croppie-image .crop_btn:active {
+    background: #6272a4;
     transition: all 200ms ease-in;
 }
 

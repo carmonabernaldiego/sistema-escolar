@@ -37,7 +37,7 @@ echo '
 					<textarea disabled class="textarea" name="txtcareerdescription" data-expandable>' . $_SESSION['career_description'][0] . '</textarea>				
 				</div>
 			</div>
-			<button class="btn icon" type="submit" autofocus>done</button>
+			<button id="btnSave" class="btn icon" type="submit" autofocus>done</button>
         </form>
     </div>
 </div>
