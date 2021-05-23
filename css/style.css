@@ -721,6 +721,7 @@ button:focus {
     background: #6a7186;
     color: #eef4ff98;
     cursor: initial;
+    pointer-events: none;
 }
 
 .form-options .search .btn-search.disabled.disabled:hover {
