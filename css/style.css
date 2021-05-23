@@ -591,6 +591,7 @@ button:focus {
 .form-login #checkboxrecordar:focus {
     outline: none !important;
     outline-width: 0 !important;
+    box-shadow: 0 0 0 3.5pt #929cb9 !important;
 }
 
 .form-login .button {
@@ -652,7 +653,10 @@ button:focus {
     background: #eef4ff;
     box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
     border: none;
-    border-radius: 0.25em;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    border-top-right-radius: 0.40em;
+    border-bottom-right-radius: 0.40em;
     color: #687292;
     font-weight: 500;
     font-size: 0.9em;
@@ -676,8 +680,8 @@ button:focus {
     border: none;
     color: #eef4ff;
     cursor: initial;
-    border-top-right-radius: 0.20em;
-    border-bottom-right-radius: 0.20em;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     font-size: 1.02em;
