@@ -74,5 +74,6 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
+<script src="/js/controlbuttons.js"></script>
 
 </html>

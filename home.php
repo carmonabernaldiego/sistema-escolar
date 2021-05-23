@@ -43,5 +43,6 @@ $_SESSION['raiz'] = dirname(__FILE__);
         ?>
     </aside>
 </body>
+<script src="/js/controlbuttons.js"></script>
 
 </html>

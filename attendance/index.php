@@ -58,5 +58,6 @@ if (!empty($_POST['btn'])) {
 		?>
 	</section>
 </body>
+<script src="/js/controlbuttons.js"></script>
 
 </html>
