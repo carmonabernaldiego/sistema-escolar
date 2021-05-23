@@ -64,5 +64,6 @@ if (!empty($_POST['btn'])) {
 	</section>
 </body>
 <script src="/js/uploadimageuser.js"></script>
+<script src="/js/controlbuttons.js"></script>
 
 </html>
