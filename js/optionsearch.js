@@ -1,22 +1,36 @@
-let btnSearchDisabled = $('#btnSearchMobile');
+let btnSearchMobileDisabled = $('#btnSearchMobile');
+let btnSearchDisabled = $('#btnSearch');
+
+function activateSearchMobileClick() {
+    btnSearchMobileDisabled.attr('disabled', false);
+}
+
+function activateSearchClick() {
+    btnSearchDisabled.attr('disabled', false);
+}
+
+function disabledSearchClick() {
+    btnSearchDisabled.attr('disabled', true);
+}
 
 $(function() {
     let formSearch = $('.search');
 
-    btnSearchDisabled.on('click', function() {
+    btnSearchMobileDisabled.on('click', function() {
         if (formSearch.is(':hidden')) {
             formSearch.slideToggle();
             document.getElementById('txtSearch').focus();
-            btnSearchDisabled.attr('disabled', true);
-            setTimeout(activateClick, 1000);
+            btnSearchMobileDisabled.attr('disabled', true);
+            setTimeout(activateSearchMobileClick, 1000);
         } else {
             formSearch.slideToggle();
-            btnSearchDisabled.attr('disabled', true);
-            setTimeout(activateClick, 1000);
+            btnSearchMobileDisabled.attr('disabled', true);
+            setTimeout(activateSearchMobileClick, 1000);
         }
     });
-});
 
-function activateClick() {
-    btnSearchDisabled.attr('disabled', false);
-}
+    btnSearchDisabled.on('click', function() {
+        setTimeout(disabledSearchClick, 300);
+        setTimeout(activateSearchClick, 1000);
+    });
+});
