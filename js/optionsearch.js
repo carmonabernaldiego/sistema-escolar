@@ -8,9 +8,11 @@ $(function() {
             formSearch.slideToggle();
             document.getElementById("txtSearch").focus();
             botonMostrar.attr("disabled", true);
-            setTimeout(activateClick, 1500);
+            setTimeout(activateClick, 1000);
         } else {
             formSearch.slideToggle();
+            botonMostrar.attr("disabled", true);
+            setTimeout(activateClick, 1000);
         }
     });
 });
