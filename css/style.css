@@ -1773,12 +1773,19 @@ input[type="range"]:active {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    transition: all 300ms;
+    outline: none;
+    outline-width: none;
     transition: all 300ms ease-out;
 }
 
-.user-mobile nav ul li a:hover {
+.user-mobile nav ul li a:hover,
+.user-mobile nav ul li a:focus {
     background: #323844;
+    transition: all 200ms ease-in;
+}
+
+.user-mobile nav ul li a:active {
+    background: #282d36;
     transition: all 200ms ease-in;
 }
 
@@ -1881,12 +1888,20 @@ input[type="range"]:active {
     padding: .4em .8em;
     margin: 4.5px;
     border-radius: 0.25em;
+    outline: none;
+    outline-width: none;
     transition: all 300ms ease-out;
 }
 
 .menu-mobile header nav ul li a:hover,
+.menu-mobile header nav ul li a:focus,
 .menu-mobile header nav ul li a.active {
     background: #323844;
+    transition: all 200ms ease-in;
+}
+
+.menu-mobile header nav ul li a:active {
+    background: #282d36;
     transition: all 200ms ease-in;
 }
 
