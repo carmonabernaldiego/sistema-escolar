@@ -27,14 +27,14 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtgroup" value="' . $_SESSION["group"][$i] . '"/>
 								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="' . $_SESSION['group_school_period'][$i] . '"/>
-								<button id="btnViewGrid" class="btnview" name="btn" value="form_consult" type="submit"></button>
+								<button class="btnview" name="btn" value="form_consult" type="submit"></button>
 							</form>
 						</td>
 						<td>
 							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtgroup" value="' . $_SESSION["group"][$i] . '"/>
 								<input style="display:none;" type="text" name="txtgroupschoolperiod" value="' . $_SESSION['group_school_period'][$i] . '"/>
-								<button id="btnEditGrid" class="btnedit" name="btn" value="form_update" type="submit"></button>
+								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
 						</td>';
 			if ($_SESSION['permissions'] != 'editor') {
@@ -43,7 +43,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 									<form action="" method="POST">
 										<input style="display:none;" type="text" name="txtgroup" value="' . $_SESSION["group"][$i] . '"/>
 										<input style="display:none;" type="text" name="txtgroupschoolperiod" value="' . $_SESSION['group_school_period'][$i] . '"/>
-										<button id="btnDeleteGrid" class="btndelete" name="btn" value="form_delete" type="submit"></button>
+										<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
 									</form>
 								</td>
 							';
