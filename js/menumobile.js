@@ -10,6 +10,7 @@ let toggle = false;
 
 tl.to('.activator', {
     color: '#eef4ff98',
+    transition: 'color 150ms ease-in'
 }, '-=.3');
 
 tl.to('.activator', {
@@ -20,13 +21,13 @@ tl.to('.activator', {
 
 tl.to('.menu-mobile nav', {
     'clipPath': 'ellipse(100% 100% at 50% 50%)'
-}, '-=.5');
+}, '-=.6');
 
 tl.to('.menu-mobile nav span', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05
-}, '-=.5');
+}, '-=.3');
 
 tl.pause();
 
@@ -46,21 +47,21 @@ let tlU = gsap.timeline({
 let toggleU = false;
 
 tlU.to('.user-mobile .activator-user', {
-    borderRadius: '0 5em 5em 0',
     background: '#6272a4',
-    transition: 'all 100ms ease-in'
+    borderRadius: '0 5em 5em 0'
 });
 
 tlU.to('.user-mobile nav', {
     clipPath: 'ellipse(100% 100% at 100% 50%)',
-    duration: 0.3
+    duration: 0.2
 });
 
 tlU.to('.user-mobile nav span', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05,
-}, '-=.5')
+    duration: 0.3
+})
 
 tlU.pause();
 

@@ -21,16 +21,16 @@ $(function() {
             formSearch.slideToggle();
             document.getElementById('txtSearch').focus();
             btnSearchMobileDisabled.attr('disabled', true);
-            setTimeout(activateSearchMobileClick, 1000);
+            setTimeout(activateSearchMobileClick, 800);
         } else {
             formSearch.slideToggle();
             btnSearchMobileDisabled.attr('disabled', true);
-            setTimeout(activateSearchMobileClick, 1000);
+            setTimeout(activateSearchMobileClick, 800);
         }
     });
 
     btnSearchDisabled.on('click', function() {
         setTimeout(disabledSearchClick, 300);
-        setTimeout(activateSearchClick, 1000);
+        setTimeout(activateSearchClick, 800);
     });
 });
