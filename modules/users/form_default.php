@@ -26,14 +26,14 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 						<td>
 							<form action="" method="POST">
 								<input style="display:none;" type="text" name="id" value="' . $_SESSION["user_id"][$i] . '"/>
-								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
+								<button id="btnEditGrid" class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
 						</td>
 						<td>
 							<form action="" method="POST">
 								<input style="display:none;" type="text" name="id" value="' . $_SESSION["user_id"][$i] . '"/>
 								<input style="display:none;" type="text" name="userimage" value="' . $_SESSION["user_image"][$i] . '"/>
-								<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
+								<button id="btnDeleteGrid" class="btndelete" name="btn" value="form_delete" type="submit"></button>
 							</form>
 						</td>
 					</tr>

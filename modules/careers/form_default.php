@@ -27,13 +27,13 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 						<td>
 							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtcareer" value="' . $_SESSION["career"][$i] . '"/>
-								<button class="btnview" name="btn" value="form_consult" type="submit"></button>
+								<button id="btnViewGrid" class="btnview" name="btn" value="form_consult" type="submit"></button>
 							</form>
 						</td>
 						<td>
 							<form action="" method="POST">
 								<input style="display:none;" type="text" name="txtcareer" value="' . $_SESSION["career"][$i] . '"/>
-								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
+								<button id="btnEditGrid" class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
 						</td>';
 			if ($_SESSION['permissions'] != 'editor') {
@@ -41,7 +41,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 								<td>
 									<form action="" method="POST">
 										<input style="display:none;" type="text" name="txtcareer" value="' . $_SESSION["career"][$i] . '"/>
-										<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
+										<button id="btnDeleteGrid" class="btndelete" name="btn" value="form_delete" type="submit"></button>
 									</form>
 								</td>
 							';
