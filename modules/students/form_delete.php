@@ -11,10 +11,10 @@ echo '
                 <h2>¡Se borrará de forma permanente!</h2>
                 <form name="form-delete-students" action="delete.php" method="POST">
                     <input style="display: none;" type="text" name="txtuserid" value="' . $_POST['txtuserid'] . '" />
-                    <button class="btn-si" type="submit" autofocus>¡Si, bórralo!</button>
+                    <button id="btnYesDelete" class="btn-si" type="submit" autofocus>¡Si, bórralo!</button>
                 </form>
                 <form action="" method="POST">
-                    <button class="btn-no" name="btn" value="form_default" type="submit">Cancelar</button>
+                    <button id="btnNoDelete" class="btn-no" name="btn" value="form_default" type="submit">Cancelar</button>
                 </form>
             </div>
         </div>
