@@ -19,6 +19,11 @@
     src: url(fonts/MaterialIcons-Regular.eot);
     /* For IE6-8 */
     src: local('Material Icons'), local('MaterialIcons-Regular'), url(fonts/MaterialIcons-Regular.woff2) format('woff2'), url(fonts/MaterialIcons-Regular.woff) format('woff'), url(fonts/MaterialIcons-Regular.ttf) format('truetype');
+    /*font-family: "WebSymbolsRegular";
+    src: url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/websymbols-regular-webfont.woff) format('woff'), url(fonts/websymbols-regular-webfont.ttf) format('truetype'), url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;*/
 }
 
 .icon {
@@ -1550,7 +1555,7 @@ button:focus {
 .form-data .body #section-user-image .file:hover {
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #8192c9 !important;
-    color: #AEBBD3;
+    color: #aebbd3;
     transition: all 200ms ease-in;
 }
 
@@ -1606,7 +1611,7 @@ button:focus {
 .form-data .body #section-croppie-image .crop_btn:hover {
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #8192c9 !important;
-    color: #AEBBD3;
+    color: #aebbd3;
     transition: all 200ms ease-in;
 }
 
@@ -1692,7 +1697,6 @@ input[type="range"]:active {
     margin-right: 3%;
     position: relative;
     background: transparent;
-    color: white;
     display: -ms-grid;
     display: grid;
     place-content: left;
@@ -1725,11 +1729,12 @@ input[type="range"]:active {
     background: #44475a;
     box-shadow: -1px 3px 2px rgba(73, 80, 104, 0.4);
     cursor: pointer;
-    transition: all 600ms;
+    transition: all 300ms ease-out;
 }
 
 .user-mobile header .activator-user:hover {
     background: #44475a;
+    transition: all 300ms ease-out;
 }
 
 .user-mobile ul {
@@ -1772,6 +1777,11 @@ input[type="range"]:active {
     margin-top: 6px;
     width: 40px;
     height: 40px;
+    color: #eef4ff;
+    font-size: 1.3em;
+    line-height: 2.24em;
+    text-decoration: none;
+    text-align: center;
     border-radius: 100%;
     outline: none;
     outline-width: none;
@@ -1786,12 +1796,11 @@ input[type="range"]:active {
 
 .user-mobile nav ul li a:active {
     background: #282d36;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
-.user-mobile nav ul li a img {
-    margin-left: 10px;
-    margin-top: 10px;
+.user-mobile nav ul li a span {
     width: 20px;
     opacity: 0;
     -webkit-transform: translateX(10px);
@@ -1810,7 +1819,6 @@ input[type="range"]:active {
     margin: 0 auto;
     padding: 0;
     background: transparent;
-    color: white;
     display: -ms-grid;
     display: grid;
     place-content: center;
@@ -1838,10 +1846,13 @@ input[type="range"]:active {
 }
 
 .menu-mobile header .activator {
-    padding: 1em;
+    padding: 0.77em 0.77em;
     border-radius: 0.25em;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    color: #eef4ff;
+    font-size: 1.3em;
+    line-height: 0.95em;
     cursor: pointer;
 }
 
@@ -1849,7 +1860,7 @@ input[type="range"]:active {
     background: #44475a;
 }
 
-.menu-mobile header img {
+.menu-mobile header span.activator {
     width: 20px;
     max-width: 20px;
     max-height: 20px;
@@ -1885,8 +1896,12 @@ input[type="range"]:active {
 
 .menu-mobile header nav ul li a {
     display: block;
-    padding: .4em .8em;
+    padding: .35em .55em;
     margin: 4.5px;
+    color: #eef4ff;
+    font-size: 1.3em;
+    line-height: 2.8px;
+    text-decoration: none;
     border-radius: 0.25em;
     outline: none;
     outline-width: none;
@@ -1897,6 +1912,7 @@ input[type="range"]:active {
 .menu-mobile header nav ul li a:focus,
 .menu-mobile header nav ul li a.active {
     background: #323844;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
@@ -1905,7 +1921,7 @@ input[type="range"]:active {
     transition: all 200ms ease-in;
 }
 
-.menu-mobile header nav ul li a img {
+.menu-mobile header nav ul li a span {
     margin-top: 5px;
     opacity: 0;
     -webkit-transform: translateX(-10px);
