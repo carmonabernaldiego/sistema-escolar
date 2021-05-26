@@ -1,8 +1,8 @@
-let btnSaveDisabled = $('#btnSave');
-let btnAddOptionsDisabled = $('#btnAddOptions');
-let btnExitOptionsDisabled = $('#btnExitOptions');
-let btnYesDeleteDisabled = $('#btnYesDelete');
-let btnNoDeleteDisabled = $('#btnNoDelete');
+let btnSaveDisabled = $('#btnSave'),
+    btnAddOptionsDisabled = $('#btnAddOptions'),
+    btnExitOptionsDisabled = $('#btnExitOptions'),
+    btnYesDeleteDisabled = $('#btnYesDelete'),
+    btnNoDeleteDisabled = $('#btnNoDelete');
 
 function activateSaveClick() {
     btnSaveDisabled.attr('disabled', false);
