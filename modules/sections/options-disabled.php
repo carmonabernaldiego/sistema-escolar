@@ -13,13 +13,13 @@ include_once 'security.php';
 			<button class="btn disabled icon" name="btn" value="form_printer" type="submit" disabled>print</button>
 		</form>
 		<form action="" method="POST">
-			<button class="btn btnexit icon" name="btn" value="form_default" type="submit">close</button>
+			<button id="btnExitOptions" class="btn btnexit icon" name="btn" value="form_default" type="submit">close</button>
 		</form>
 	</div>
 	<div class="search">
 		<form name="form-search" action="" method="POST">
 			<p>
-				<input type="text" class="text-search" name="search" placeholder="Buscar..." maxlength="50" disabled>
+				<input type="text" class="text-search" name="search" placeholder="Buscar..." disabled>
 				<button class="btn-search disabled icon" type="submit" disabled>search</button>
 			</p>
 		</form>
