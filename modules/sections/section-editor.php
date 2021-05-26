@@ -81,38 +81,38 @@ if (strpos($url_actual, 'modules')) {
 </div>
 <div class="menu-mobile">
     <header>
-        <img class="activator" id="activator" src="/images/menu_mobile/hero-outline.svg">
+        <span class="activator icon" id="activator">menu</span>
         <nav>
             <ul>
                 <li>
                     <a class="<?php if ($output[1] == 'home') {
                                     echo 'active';
-                                } ?>" href="/home" title="Dashboard"><img src="/images/menu_mobile/dashboard.svg" title="Dashboard"></a>
+                                } ?>" href="/home" title="Dashboard"><span class="icon">dashboard</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'teachers') {
                                     echo 'active';
-                                } ?>" href="/modules/teachers" title="Docentes"><img src="/images/menu_mobile/person_pin.svg" title="Docentes"></a>
+                                } ?>" href="/modules/teachers" title="Docentes"><span class="icon">person_pin</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'students') {
                                     echo 'active';
-                                } ?>" href="/modules/students" title="Alumnos"><img src="/images/menu_mobile/recent_actors.svg" title="Alumnos"></a>
+                                } ?>" href="/modules/students" title="Alumnos"><span class="icon">recent_actors</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'careers') {
                                     echo 'active';
-                                } ?>" href="/modules/careers" title="Carreras"><img src="/images/menu_mobile/style.svg" title="Carreras"></a>
+                                } ?>" href="/modules/careers" title="Carreras"><span class="icon">style</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'subjects') {
                                     echo 'active';
-                                } ?>" href="/modules/subjects" title="Asignaturas"><img src="/images/menu_mobile/auto_stories.svg" title="Asignaturas"></a>
+                                } ?>" href="/modules/subjects" title="Asignaturas"><span class="icon">group_work</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'groups') {
                                     echo 'active';
-                                } ?>" href="/modules/groups" title="Grupos"><img src="/images/menu_mobile/group_work.svg" title="Grupos"></a>
+                                } ?>" href="/modules/groups" title="Grupos"><span class="icon">assignment_turned_in</span></a>
                 </li>
             </ul>
         </nav>
@@ -125,10 +125,10 @@ if (strpos($url_actual, 'modules')) {
         <nav>
             <ul>
                 <li class="first">
-                    <a href="/modules/logout"><img src="/images/menu_mobile/logout.svg" title="Cerrar Sesión"></a>
+                    <a href="/modules/logout"><span class="icon">logout</span></a>
                 </li>
                 <li>
-                    <a href="/user"><img src="/images/menu_mobile/settings.svg" title="Configuración"></a>
+                    <a href="/user"><span class="icon">settings</span></a>
                 </li>
             </ul>
         </nav>
