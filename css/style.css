@@ -19,11 +19,6 @@
     src: url(fonts/MaterialIcons-Regular.eot);
     /* For IE6-8 */
     src: local('Material Icons'), local('MaterialIcons-Regular'), url(fonts/MaterialIcons-Regular.woff2) format('woff2'), url(fonts/MaterialIcons-Regular.woff) format('woff'), url(fonts/MaterialIcons-Regular.ttf) format('truetype');
-    /*font-family: "WebSymbolsRegular";
-    src: url(fonts/websymbols-regular-webfont.eot);
-    src: url(fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/websymbols-regular-webfont.woff) format('woff'), url(fonts/websymbols-regular-webfont.ttf) format('truetype'), url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg');
-    font-weight: normal;
-    font-style: normal;*/
 }
 
 .icon {
