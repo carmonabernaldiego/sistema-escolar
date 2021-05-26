@@ -125,10 +125,10 @@ if (strpos($url_actual, 'modules')) {
         <nav>
             <ul>
                 <li class="first">
-                    <a href="/modules/logout"><span class="icon">logout</span></a>
+                    <a href="/modules/logout" title="Cerrar Sesión"><span class="icon">logout</span></a>
                 </li>
                 <li>
-                    <a href="/user"><span class="icon">settings</span></a>
+                    <a href="/user" title="Configuración"><span class="icon">settings</span></a>
                 </li>
             </ul>
         </nav>
