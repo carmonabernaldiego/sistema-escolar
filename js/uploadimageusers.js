@@ -31,7 +31,7 @@ $(document).ready(function() {
     $('.crop_btn').click(function(event) {
         $image_crop.croppie('result', {
             type: 'canvas',
-            size: 'original',
+            size: 'viewport',
             quality: 1,
             circle: false
         }).then(function(response) {
