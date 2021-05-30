@@ -1786,13 +1786,22 @@ input[type="range"]:active {
 .user-mobile nav ul li a:hover,
 .user-mobile nav ul li a:focus {
     background: #323844;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
-.user-mobile nav ul li a:active {
+.user-mobile nav ul li a:active,
+.user-mobile nav ul li a.active:active {
     background: #282d36;
-    color: #eef4ff98;
     transition: all 200ms ease-in;
+}
+
+.user-mobile nav ul li a.active {
+    background: #323844;
+    opacity: 0;
+    color: #eef4ff98;
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
 }
 
 .user-mobile nav ul li a span {

@@ -4,7 +4,7 @@ let tl = gsap.timeline({
     defaults: {
         ease: 'power2.inOut'
     }
-})
+});
 
 let toggle = false;
 
@@ -40,7 +40,7 @@ tl.pause();
 card.addEventListener('click', () => {
     toggle = !toggle;
     if (toggle ? tl.play() : tl.reverse());
-})
+});
 
 let cardU = document.getElementById('activator-user');
 
@@ -48,7 +48,7 @@ let tlU = gsap.timeline({
     defaults: {
         ease: 'power2.inOut'
     }
-})
+});
 
 let toggleU = false;
 
@@ -62,16 +62,23 @@ tlU.to('.user-mobile nav', {
     duration: 0.2
 });
 
+tlU.to('.user-mobile nav .active', {
+    opacity: 1,
+    transform: 'translateX(0)',
+    stagger: .05,
+    duration: 0.3
+});
+
 tlU.to('.user-mobile nav span', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05,
     duration: 0.3
-})
+});
 
 tlU.pause();
 
 cardU.addEventListener('click', () => {
     toggleU = !toggleU;
     if (toggleU ? tlU.play() : tlU.reverse());
-})
+});
