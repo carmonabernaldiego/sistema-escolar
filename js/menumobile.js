@@ -23,17 +23,17 @@ tl.to('.menu-mobile nav', {
     'clipPath': 'ellipse(100% 100% at 50% 50%)'
 }, '-=.6');
 
+tl.to('.menu-mobile nav span', {
+    opacity: 1,
+    transform: 'translateX(0)',
+    stagger: .03
+}, '-=.3');
+
 tl.to('.menu-mobile nav .active', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05
-}, '-=.3');
-
-tl.to('.menu-mobile nav span', {
-    opacity: 1,
-    transform: 'translateX(0)',
-    stagger: .05
-}, '-=.3');
+}, '-=.9');
 
 tl.pause();
 
@@ -62,14 +62,14 @@ tlU.to('.user-mobile nav', {
     duration: 0.2
 });
 
-tlU.to('.user-mobile nav .active', {
+tlU.to('.user-mobile nav span', {
     opacity: 1,
     transform: 'translateX(0)',
-    stagger: .05,
+    stagger: .03,
     duration: 0.3
 });
 
-tlU.to('.user-mobile nav span', {
+tlU.to('.user-mobile nav .active', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05,
