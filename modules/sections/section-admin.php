@@ -162,7 +162,9 @@ if (strpos($url_actual, 'modules')) {
                     <a href="/modules/logout" title="Cerrar Sesión"><span class="icon">logout</span></a>
                 </li>
                 <li>
-                    <a href="/user" title="Configuración"><span class="icon">settings</span></a>
+                    <a class="<?php if ($output[1] == 'user') {
+                                    echo 'active';
+                                } ?>" href="/user" title="Configuración"><span class="icon">settings</span></a>
                 </li>
             </ul>
         </nav>
