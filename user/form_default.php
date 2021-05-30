@@ -69,7 +69,7 @@ if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 	if ((15 - $days) == 1) {
 		$_SESSION['msgbox_info'] = 1;
 		$_SESSION['msgbox_error'] = 0;
-		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente';
+		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente.';
 	}
 }
 echo '
