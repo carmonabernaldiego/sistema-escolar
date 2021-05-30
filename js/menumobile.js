@@ -23,6 +23,12 @@ tl.to('.menu-mobile nav', {
     'clipPath': 'ellipse(100% 100% at 50% 50%)'
 }, '-=.6');
 
+tl.to('.menu-mobile nav .active', {
+    opacity: 1,
+    transform: 'translateX(0)',
+    stagger: .05
+}, '-=.3');
+
 tl.to('.menu-mobile nav span', {
     opacity: 1,
     transform: 'translateX(0)',

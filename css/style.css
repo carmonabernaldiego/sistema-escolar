@@ -1904,16 +1904,24 @@ input[type="range"]:active {
 }
 
 .menu-mobile header nav ul li a:hover,
-.menu-mobile header nav ul li a:focus,
-.menu-mobile header nav ul li a.active {
+.menu-mobile header nav ul li a:focus {
     background: #323844;
     color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
-.menu-mobile header nav ul li a:active {
+.menu-mobile header nav ul li a:active,
+.menu-mobile header nav ul li a.active:active {
     background: #282d36;
     transition: all 200ms ease-in;
+}
+
+.menu-mobile header nav ul li a.active {
+    background: #323844;
+    opacity: 0;
+    color: #eef4ff98;
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
 }
 
 .menu-mobile header nav ul li a span {
