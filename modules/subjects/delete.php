@@ -15,11 +15,11 @@ $sql_delete = "DELETE FROM subjects WHERE subject = '" . $_POST['txtsubject'] . 
 if (mysqli_query($conexion, $sql_delete)) {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Asignatura eliminada';
+	$_SESSION['text_msgbox_error'] = 'Asignatura eliminada.';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al eliminar';
+	$_SESSION['text_msgbox_error'] = 'Error al eliminar.';
 }
 
 

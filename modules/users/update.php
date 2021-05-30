@@ -15,7 +15,7 @@ $sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', perm
 if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['msgbox_error'] = 0;
 	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Usuario actualizado';
+	$_SESSION['text_msgbox_info'] = 'Usuario actualizado.';
 
 	if ($nombre_img != "") {
 		if ($_POST['txtuseridUpdate'] == $_SESSION['user']) {
@@ -26,7 +26,7 @@ if (mysqli_query($conexion, $sql_update)) {
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al actualizar';
+	$_SESSION['text_msgbox_error'] = 'Error al actualizar.';
 }
 
 header('Location: /modules/users');

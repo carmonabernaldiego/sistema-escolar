@@ -19,11 +19,11 @@ $sql_delete = "DELETE FROM users WHERE user = '" . $_POST['txtuserid'] . "'";
 if (mysqli_query($conexion, $sql_delete)) {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Usuario eliminado';
+	$_SESSION['text_msgbox_error'] = 'Usuario eliminado.';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al eliminar';
+	$_SESSION['text_msgbox_error'] = 'Error al eliminar.';
 }
 
 header('Location: /modules/users');
