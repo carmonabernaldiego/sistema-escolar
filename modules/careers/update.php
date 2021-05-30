@@ -15,11 +15,11 @@ $sql_update = "UPDATE careers SET name = '" . $_POST['txtcareername'] . "', desc
 if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['msgbox_error'] = 0;
 	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Carrera actualizada';
+	$_SESSION['text_msgbox_info'] = 'Carrera actualizada.';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al actualizar';
+	$_SESSION['text_msgbox_error'] = 'Error al actualizar.';
 }
 
 header('Location: /modules/careers');

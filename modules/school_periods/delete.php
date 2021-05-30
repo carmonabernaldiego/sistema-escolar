@@ -15,11 +15,11 @@ $sql_delete = "DELETE FROM school_periods WHERE school_period = '" . $_POST['txt
 if (mysqli_query($conexion, $sql_delete)) {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Periodo escolar eliminado';
+	$_SESSION['text_msgbox_error'] = 'Periodo escolar eliminado.';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al eliminar';
+	$_SESSION['text_msgbox_error'] = 'Error al eliminar.';
 }
 
 

@@ -69,7 +69,7 @@ if ($_SESSION['students_count'] == 0) {
 			} else {
 				$_SESSION['msgbox_info'] = 0;
 				$_SESSION['msgbox_error'] = 1;
-				$_SESSION['text_msgbox_error'] = 'Error al guardar datos en tabla.';
+				$_SESSION['text_msgbox_error'] = 'Error al guardar. datos en tabla.';
 			}
 
 			header('Location: /modules/groups');

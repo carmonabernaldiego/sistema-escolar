@@ -33,11 +33,11 @@ $sql_insert = "INSERT INTO school_periods(school_period, start_date, end_date, a
 if (mysqli_query($conexion, $sql_insert)) {
 	$_SESSION['msgbox_error'] = 0;
 	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Periodo escolar agregado';
+	$_SESSION['text_msgbox_info'] = 'Periodo escolar agregado.';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al guardar';
+	$_SESSION['text_msgbox_error'] = 'Error al guardar.';
 }
 
 header('Location: /modules/school_periods');

@@ -23,11 +23,11 @@ $sql_update = "UPDATE school_periods SET start_date = '" . $_POST['datespstart']
 if (mysqli_query($conexion, $sql_update)) {
 	$_SESSION['msgbox_error'] = 0;
 	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Periodo escolar actualizado';
+	$_SESSION['text_msgbox_info'] = 'Periodo escolar actualizado.';
 } else {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al actualizar';
+	$_SESSION['text_msgbox_error'] = 'Error al actualizar.';
 }
 
 
