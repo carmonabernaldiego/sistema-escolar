@@ -125,12 +125,12 @@ if (strpos($url_actual, 'modules')) {
         <nav>
             <ul>
                 <li class="first">
-                    <a href="/modules/logout" title="Cerrar Sesión"><span class="icon">logout</span></a>
-                </li>
-                <li>
                     <a class="<?php if ($output[1] == 'user') {
                                     echo 'active';
                                 } ?>" href="/user" title="Configuración"><span class="icon">settings</span></a>
+                </li>
+                <li>
+                    <a href="/modules/logout" title="Cerrar Sesión"><span class="icon">logout</span></a>
                 </li>
             </ul>
         </nav>

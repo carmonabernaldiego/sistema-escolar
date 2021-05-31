@@ -20,7 +20,7 @@ if (empty($_POST['txtuseridUpdate'])) {
 				if ($row = mysqli_fetch_array($result)) {
 					$_SESSION['msgbox_info'] = 0;
 					$_SESSION['msgbox_error'] = 1;
-					$_SESSION['text_msgbox_error'] = 'Esta dirección de correo electrónico ya está en uso.';
+					$_SESSION['text_msgbox_error'] = 'Este correo electrónico ya está en uso.';
 					header('Location: /user');
 					exit();
 				} else {

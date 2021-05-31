@@ -66,7 +66,7 @@ if ($result = $conexion->query($sql)) {
 
 						if ($result = $conexion->query($sql)) {
 							if ($row = mysqli_fetch_array($result)) {
-								Error('Esta dirección de correo electrónico ya está en uso.');
+								Error('Este correo electrónico ya está en uso.');
 							} else {
 								AddUserDB($conexion, $_POST['txtuseridAdd'], $_POST['txtemailAdd'], $_POST['txtuserpassAdd'], $_POST['txtusertype']);
 							}
@@ -88,7 +88,7 @@ if ($result = $conexion->query($sql)) {
 
 						if ($result = $conexion->query($sql)) {
 							if ($row = mysqli_fetch_array($result)) {
-								Error('Esta dirección de correo electrónico ya está en uso.');
+								Error('Este correo electrónico ya está en uso.');
 							} else {
 								AddUserDB($conexion, $_POST['txtuseridAdd'], $_POST['txtemailAdd'], $_POST['txtuserpassAdd'], $_POST['txtusertype']);
 							}
@@ -110,7 +110,7 @@ if ($result = $conexion->query($sql)) {
 
 						if ($result = $conexion->query($sql)) {
 							if ($row = mysqli_fetch_array($result)) {
-								Error('Esta dirección de correo electrónico ya está en uso.');
+								Error('Este correo electrónico ya está en uso.');
 							} else {
 								AddUserDB($conexion, $_POST['txtuseridAdd'], $_POST['txtemailAdd'], $_POST['txtuserpassAdd'], $_POST['txtusertype']);
 							}
