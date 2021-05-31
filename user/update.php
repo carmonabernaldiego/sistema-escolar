@@ -14,7 +14,7 @@ if (empty($_POST['txtuseridUpdate'])) {
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {
-			$sql = "SELECT * FROM users WHERE email = '" . $_POST['txtemailUpdate'] . "' AND user != '" . $_POST['txtuseridUpdate'] . "' LIMIT 1";
+			$sql = "SELECT user, email FROM users WHERE email = '" . $_POST['txtemailUpdate'] . "' AND user != '" . $_POST['txtuseridUpdate'] . "' LIMIT 1";
 
 			if ($result = $conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($result)) {
