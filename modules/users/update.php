@@ -25,9 +25,9 @@ function Info($textMsgBox)
 function UpdateUserDB($conex, $user, $email, $permissions)
 {
 	if ($email == '') {
-		$sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "' WHERE user = '" . $user . "', last_update = '" . date('Y-m-d') . "'";
+		$sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "', last_update = '" . date('Y-m-d') . "' WHERE user = '" . $user . "'";
 	} else {
-		$sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "' WHERE user = '" . $user . "', last_update = '" . date('Y-m-d') . "'";
+		$sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "', last_update = '" . date('Y-m-d') . "' WHERE user = '" . $user . "'";
 	}
 
 	if (mysqli_query($conex, $sql_update)) {
@@ -51,10 +51,3 @@ if ($result = $conexion->query($sql)) {
 		UpdateUserDB($conexion, $_POST['txtuseridUpdate'], $_POST['txtemailUpdate'], $_POST['txtusertype']);
 	}
 }
-
-/*if ($nombre_img != "") {
-	if ($_POST['txtuseridUpdate'] == $_SESSION['user']) {
-		$_SESSION['image'] = $nombre_img;
-		setcookie('image', $nombre_img, time() + 365 * 24 * 60 * 60, "/");
-	}
-}*/
