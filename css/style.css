@@ -509,7 +509,7 @@ button:focus {
     height: 340px;
     margin: -55px auto 0;
     background-color: #eef4ff;
-    border-top: 3px solid #4a567cc5;
+    border-top: 3px solid #6f7a9a;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
     -webkit-user-select: none;
@@ -526,7 +526,7 @@ button:focus {
     right: 0;
     margin: -55px auto 0;
     background: url(../images/user_icon.png)#eef4ff no-repeat bottom / 120px 120px;
-    border: 4px solid #4a567cc5;
+    border: 4px solid #6f7a9a;
     border-radius: 5em;
 }
 
@@ -591,7 +591,7 @@ button:focus {
     width: 32%;
     height: 35px;
     margin-right: 4.3%;
-    background: #4a567cc5;
+    background: #6f7a9a;
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
@@ -610,7 +610,7 @@ button:focus {
 }
 
 .form-login .button:active {
-    background: #4a567cc5;
+    background: #6f7a9a;
     transition: all 200ms ease-in;
 }
 
