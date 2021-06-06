@@ -40,8 +40,8 @@ include_once 'load_data.php';
 	<title>Docentes | Sistema Escolar</title>
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
+	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal" />
 	<script src="/js/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
