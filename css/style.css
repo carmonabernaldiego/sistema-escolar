@@ -46,7 +46,7 @@ body {
 
 body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #ececec url(../images/background_login.jpg) no-repeat top center fixed;
+    background: #dadceb url(../images/background_login.png) no-repeat top center fixed;
     background-size: cover !important;
 }
 
@@ -510,7 +510,7 @@ button:focus {
     margin: -55px auto 0;
     background-color: #eef4ff;
     border-top: 3px solid #6f7a9a;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1946,11 +1946,13 @@ input[type="range"]:active {
   Formulario | Iniciar Sesión
 -------------------------------------------*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 450px) {
     body.login {
-        background: none;
-        background-color: #ececec;
+        background: #dadceb url(../images/background_login_mobile.png) no-repeat top center fixed;
     }
+}
+
+@media only screen and (max-width: 700px) {
     .wrap-title-login {
         height: 200px;
     }

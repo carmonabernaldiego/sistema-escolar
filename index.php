@@ -145,18 +145,18 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 									<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
 									<input id="checkboxrecordar" type="checkbox" name="remember_session" value="1">
 									<label class="labelrecordar" for="checkboxrecordar">Recuérdame</label>
-									<button class="button" type="submit">Iniciar sesión</button>
+									<button class="button" type="submit">Entrar</button>
 								';
 					}
 				}
 			} else {
 				echo '
-						<label class="label">Iniciar sesión</label>
+						<label class="label">Inicia sesión</label>
 						<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 						<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
 						<input id="checkboxrecordar" type="checkbox" name="remember_session" value="1">
 						<label class="labelrecordar" for="checkboxrecordar">Recuérdame</label>
-						<button class="button" type="submit">Iniciar sesión</button>
+						<button class="button" type="submit">Entrar</button>
 					';
 			}
 			?>
