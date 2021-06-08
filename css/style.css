@@ -46,7 +46,7 @@ body {
 
 body.login {
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #dadceb url(../images/background_login.png) no-repeat top center fixed;
+    background: #dadceb url(../images/background_login.jpg) no-repeat top center fixed;
     background-size: cover !important;
 }
 
@@ -1948,7 +1948,7 @@ input[type="range"]:active {
 
 @media only screen and (max-width: 450px) {
     body.login {
-        background: #dadceb url(../images/background_login_mobile.png) no-repeat top center fixed;
+        background: #dadceb url(../images/background_login_mobile.jpg) no-repeat top center fixed;
     }
 }
 
