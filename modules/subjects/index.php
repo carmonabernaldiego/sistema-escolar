@@ -81,6 +81,17 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
+
 <script src="/js/controlbuttons.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('.select').select2();
+
+		$(".select").select2({
+			minimumResultsForSearch: Infinity
+		});
+	});
+</script>
 
 </html>
