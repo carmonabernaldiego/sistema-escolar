@@ -89,4 +89,4 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     ?>
 </div>
 <script src="/js/dataexpandable.js"></script>
-<script src="/js/addcareer.js"></script>
+<script src="/js/addsubject.js"></script>
