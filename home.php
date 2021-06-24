@@ -16,6 +16,7 @@ $_SESSION['raiz'] = dirname(__FILE__);
     <title>Sistema Escolar</title>
     <link rel="icon" type="image/png" href="/images/icon.png" />
     <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
+    <meta name="google" value="notranslate">
     <meta name="description" content="Sistema Escolar, gestión de asistencias." />
     <meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal" />
     <script src="/js/jquery.min.js"></script>
