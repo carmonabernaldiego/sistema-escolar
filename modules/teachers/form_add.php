@@ -16,25 +16,25 @@ $id_generate = 'tchr' . unique_id(6);
 		<form name="form-add-teachers" action="insert.php" method="POST">
 			<div class="wrap">
 				<div class="first">
-					<label class="label">Usuario</label>
+					<label for="txtuserid" class="label">Usuario</label>
 					<input class="text" style=" display: none;" type="text" name="txtuserid" value="<?php echo $id_generate; ?>" maxlength="50" required />
-					<input class="text" type="text" name="txt" value="<?php echo $id_generate; ?>" required disabled />
-					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtname" value="" maxlength="25" required autofocus />
-					<label class="label">Apellidos</label>
-					<input class="text" type="text" name="txtsurnames" value="" maxlength="50" required />
-					<label class="label">CURP</label>
-					<input class="text" type="text" name="txtcurp" value="" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
-					<label class="label">RFC</label>
-					<input class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
+					<input id="txtuserid" class="text" type="text" name="txt" value="<?php echo $id_generate; ?>" required disabled />
+					<label for="txtusername" class="label">Nombre</label>
+					<input id="txtusername" class="text" type="text" name="txtname" value="" maxlength="25" required autofocus />
+					<label for="txtusersurnames" class="label">Apellidos</label>
+					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="" maxlength="50" required />
+					<label for="txtusercurp" class="label">CURP</label>
+					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
+					<label for="txtuserrfc" class="label">RFC</label>
+					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
 				</div>
 				<div class="last">
-					<label class="label">Telefono</label>
-					<input class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" inputmode="email" required />
-					<label class="label">Domicilio</label>
-					<input class="text" type="text" name="txtaddress" value="" maxlength="100" required />
-					<label class="label">Facultad</label>
-					<select class="select" name="selectcareer">
+					<label for="txtuserphone" class="label">Telefono</label>
+					<input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" inputmode="email" required />
+					<label for="txtuseraddress" class="label">Domicilio</label>
+					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" maxlength="100" required />
+					<label for="selectusercareer" class="label">Facultad</label>
+					<select id="selectusercareer" class="select" name="selectcareer">
 						<?php
 						$i = 0;
 
@@ -55,15 +55,15 @@ $id_generate = 'tchr' . unique_id(6);
 						}
 						?>
 					</select>
-					<label class="label">Nivel de estudios</label>
-					<select class="select" name="selectlevelstudies">
+					<label for="selectuserlevelstudies" class="label">Nivel de estudios</label>
+					<select id="selectuserlevelstudies" class="select" name="selectlevelstudies">
 						<option value="Licenciatura">Licenciatura</option>
 						<option value="Ingenieria">Ingenieria</option>
 						<option value="Maestria">Maestria</option>
 						<option value="Doctorado">Doctorado</option>
 					</select>
-					<label class="label">Especialidad</label>
-					<input class="text" type="text" name="txtspecialty" value="" maxlength="100" required />
+					<label for="selectuserspecialty" class="label">Especialidad</label>
+					<input id="selectuserspecialty" class="text" type="text" name="txtspecialty" value="" maxlength="100" required />
 				</div>
 			</div>
 			<button id="btnSave" class="btn icon" type="submit">save</button>
