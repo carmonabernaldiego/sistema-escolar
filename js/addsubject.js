@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $(".select").select2({
+        minimumResultsForSearch: Infinity
+    });
     $('.select-careers-teachers').select2();
 });
 

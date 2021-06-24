@@ -85,8 +85,6 @@ include_once 'load_data.php';
 
 <script>
 	$(document).ready(function() {
-		$('.select').select2();
-
 		$(".select").select2({
 			minimumResultsForSearch: Infinity
 		});
