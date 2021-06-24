@@ -31,25 +31,25 @@ echo '
         <form name="form-update-students" action="update.php" method="POST">
 			<div class="wrap">
 				<div class="first">
-					<label class="label">Usuario</label>
+					<label for="txtuserid" class="label">Usuario</label>
 					<input style="display: none;" type="text" name="txtuserid" value="' . $_SESSION['user_id'][0] . '"/>
-					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
-					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtname" value="' . $_SESSION['student_name'][0] . '" autofocus maxlength="25" required/>
-					<label class="label">Apellidos</label>
-					<input class="text" type="text" name="txtsurnames" value="' . $_SESSION['student_surnames'][0] . '" maxlength="50" required/>
-					<label class="label">CURP</label>
-					<input class="text" type="text" name="txtcurp" value="' . $_SESSION['student_curp'][0] . '" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
-					<label class="label">RFC</label>
-					<input class="text" type="text" name="txtrfc" value="' . $_SESSION['student_rfc'][0] . '" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required/>
+					<input id="txtuserid" class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
+					<label for="txtusername" class="label">Nombre</label>
+					<input id="txtusername" class="text" type="text" name="txtname" value="' . $_SESSION['student_name'][0] . '" autofocus maxlength="25" required/>
+					<label for="txtusersurnames" class="label">Apellidos</label>
+					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="' . $_SESSION['student_surnames'][0] . '" maxlength="50" required/>
+					<label for="txtusercurp" class="label">CURP</label>
+					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="' . $_SESSION['student_curp'][0] . '" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
+					<label for="txtuserrfc" class="label">RFC</label>
+					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="' . $_SESSION['student_rfc'][0] . '" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required/>
 				</div>
 				<div class="last">
-					<label class="label">Telefono</label>
-					<input class="text" type="number" name="txtphone" value="' . $_SESSION['student_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
-					<label class="label">Domicilio</label>
-					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['student_address'][0] . '" maxlength="100" required/>
-					<label class="label">Carrera</label>
-					<select class="select" name="selectcareer">
+					<label for="txtuserphone" class="label">Telefono</label>
+					<input id="txtuserphone" class="text" type="number" name="txtphone" value="' . $_SESSION['student_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
+					<label for="txtuseraddress" class="label">Domicilio</label>
+					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="' . $_SESSION['student_address'][0] . '" maxlength="100" required/>
+					<label for="selectusercareer" class="label">Carrera</label>
+					<select id="selectusercareer" class="select" name="selectcareer">
 						<option value="' . $_SESSION['student_career'][0] . '">' . $_SESSION['student_career'][0] . '</option>
 				';
 $i = 0;
@@ -73,8 +73,8 @@ if ($result = $conexion->query($sql)) {
 }
 echo '
 					</select>
-					<label class="label">Documentación</label>
-					<select class="select" name="selectdocumentation">
+					<label for="selectuserdocumentation" class="label">Documentación</label>
+					<select id="selectuserdocumentation" class="select" name="selectdocumentation">
 				';
 if ($_SESSION['student_documentation'][0] == 1) {
 	echo
@@ -91,8 +91,8 @@ if ($_SESSION['student_documentation'][0] == 1) {
 }
 echo '
 					</select>
-					<label class="label">Fecha de admisión</label>
-					<input class="date" type="date" name="dateadmission" value="' . $_SESSION['student_admission_date'][0] . '" required/>
+					<label for="dateuseradmission" class="label">Fecha de admisión</label>
+					<input id="dateuseradmission" class="date" type="date" name="dateadmission" value="' . $_SESSION['student_admission_date'][0] . '" required/>
 				</div>
 			</div>
 			<button id="btnSave" class="btn icon" type="submit">save</button>
