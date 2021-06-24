@@ -103,4 +103,11 @@ echo '
 </div>
 <script src="/js/dataexpandable.js"></script>
 <script src="/js/consultcareer.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".select").select2({
+			minimumResultsForSearch: Infinity
+		});
+	});
+</script>
 ';

@@ -82,7 +82,7 @@ echo '</textarea>
 				</div>
 				<div class="last">
 					<label class="label">Carrera</label>
-					<select id="selectsubjectcareer" class="select" name="selectcareer" required>';
+					<select id="selectsubjectcareer" class="selectCareer" name="selectcareer" required>';
 if (isset($_SESSION['temp_subject_career_id'])) {
 	if (isset($_SESSION['temp_subject_career_id'])) {
 		echo '<option value="' . $_SESSION['temp_subject_career_id'] . '">' . $_SESSION['temp_subject_career_name'] . '</option>';
