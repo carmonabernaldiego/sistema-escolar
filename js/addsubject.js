@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".select").select2({
+    $(".selectCareer").select2({
         minimumResultsForSearch: Infinity
     });
     $('.select-careers-teachers').select2();
@@ -9,22 +9,12 @@ let txtSubject = '',
     txtSubjectName = '',
     txtSubjectSemester = '',
     txtSubjectDescription = '',
-    selectCareer = '',
-    selectSubjectCareer = '',
     selectSubjectCareerId = '',
-    selectSubjectCareerName = '',
-    optionSelect = '';
+    selectSubjectCareerName = '';
 
-selectSubjectCareer = document.getElementById('selectsubjectcareer');
-selectSubjectCareer.addEventListener('change',
-    function() {
-        optionSelect = this.options[selectSubjectCareer.selectedIndex];
-        selectSubjectCareerId = optionSelect.value;
-        selectSubjectCareerName = optionSelect.text;
-    });
-
-selectCareer = document.getElementById('selectsubjectcareer');
-selectCareer.addEventListener('change', () => {
+$('.selectCareer').on('select2:select', function(e) {
+    selectSubjectCareerId = e.params.data.id;
+    selectSubjectCareerName = e.params.data.text;
     txtSubject = $('#txtsubject').val();
     txtSubjectName = $('#txtsubjectname').val();
     txtSubjectSemester = $('#txtsubjectsemester').val();
