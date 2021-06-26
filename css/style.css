@@ -551,7 +551,7 @@ button:focus {
     margin: 0 5% 18px;
     padding: 0 2.3%;
     background: transparent;
-    color: #4a567c;
+    color: #687292;
     border: 2px solid #929cb9;
     border-radius: 0.4em;
     font-size: .9em;
@@ -563,6 +563,7 @@ button:focus {
 .textcontrasena:focus {
     outline: none !important;
     outline-width: 0 !important;
+    color: #4a567c !important;
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
     transition: all 200ms ease-in;
 }
@@ -699,6 +700,7 @@ button:focus {
 
 .form-options .search .text-search:focus {
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    color: #4a567c !important;
     transition: all 200ms ease-in;
 }
 
