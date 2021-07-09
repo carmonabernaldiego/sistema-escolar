@@ -568,7 +568,8 @@ button:focus {
 }
 
 .form-login .pretty {
-    margin: 4.5% 0 2% 6.25%;
+    float: left;
+    margin: 2.8% 0 2% 6.25%;
 }
 
 .form-login .button {
