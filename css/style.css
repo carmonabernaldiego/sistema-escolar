@@ -506,7 +506,7 @@ button:focus {
 
 .form-login {
     width: 380px;
-    height: 352px;
+    height: 354px;
     margin: -55px auto 0;
     background-color: #eef4ff;
     border-top: 3px solid #6f7a9a;
@@ -567,61 +567,9 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
-
-/*
-.form-login .labelrecordar {
-    float: left;
-    margin: 2.2% 0 2% 5.2%;
-    color: #4a567c;
-    font-size: 0.9em;
-    font-weight: bold;
+.form-login .pretty {
+    margin: 4.5% 0 2% 6.25%;
 }
-
-.form-login .labelrecordar input[type=checkbox]+.label-text:hover:before {
-    color: #929cb9;
-    font-size: 1em;
-}
-
-.form-login .labelrecordar input[type=checkbox] {
-    display: none;
-}
-
-.form-login .labelrecordar input[type=checkbox]+.label-text:before {
-    content: "";
-    color: #929cb9;
-    font-size: 1em;
-    font-family: "fontAwesome";
-    line-height: 1;
-    width: 1.2em;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.form-login .labelrecordar input[type=checkbox]:checked+.label-text:before {
-    content: "";
-    color: #929cb9;
-    font-size: 1em;
-    animation: tick 150ms ease-in;
-}
-
-.form-login .labelrecordar input[type=checkbox]:disabled+.label-text:before {
-    content: "";
-    color: #dddfe6;
-    font-size: 1em;
-}
-
-@keyframes tick {
-    0% {
-        transform: scale(0);
-    }
-    90% {
-        transform: scale(1.3);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-*/
 
 .form-login .button {
     float: right;
@@ -2000,11 +1948,11 @@ input[type="range"]:active {
     }
     .form-login {
         width: 300px;
-        height: 370px;
+        height: 382px;
     }
     .form-login .text,
     .textcontrasena {
-        width: 84.3%;
+        width: 82.3%;
     }
     .form-login .labelrecordar {
         float: left;
@@ -2013,7 +1961,7 @@ input[type="range"]:active {
     .form-login .button {
         float: none;
         display: block;
-        width: 90%;
+        width: 88%;
         margin: 0 auto;
     }
 }

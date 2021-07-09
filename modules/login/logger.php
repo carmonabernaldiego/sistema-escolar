@@ -111,9 +111,12 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
 			<label class="label">Inicia sesión</label>
 			<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 			<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
-			<label class="labelrecordar">
-				<input type="checkbox" name="remember_session" value="1" /><span class="label-text">Recuérdame</span>
-			</label>
+            <div class="pretty p-switch p-fill">
+                <input type="checkbox" />
+                <div class="state p-primary">
+                    <label>Recuérdame</label>
+                </div>
+            </div>
 			<button class="button" type="submit">Entrar</button>
 		';
 }
