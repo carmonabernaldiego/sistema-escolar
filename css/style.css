@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";
 
 /*-------------------------------------------
   style.css
@@ -507,7 +506,7 @@ button:focus {
 
 .form-login {
     width: 380px;
-    height: 340px;
+    height: 352px;
     margin: -55px auto 0;
     background-color: #eef4ff;
     border-top: 3px solid #6f7a9a;
@@ -538,17 +537,17 @@ button:focus {
 
 .form-login .label {
     display: block;
-    padding: 100px 0 20px 0;
+    padding: 105px 0 22px 0;
     color: #4a567c;
-    font-size: 1.8em;
+    font-size: 1.7em;
     text-align: center;
 }
 
 .form-login .text,
 .textcontrasena {
-    width: 85%;
+    width: 82.5%;
     height: 40px;
-    margin: 0 5% 18px;
+    margin: 0 6.25% 22px;
     padding: 0 2.3%;
     background: transparent;
     color: #687292;
@@ -568,6 +567,8 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+
+/*
 .form-login .labelrecordar {
     float: left;
     margin: 2.2% 0 2% 5.2%;
@@ -620,12 +621,13 @@ button:focus {
         transform: scale(1);
     }
 }
+*/
 
 .form-login .button {
     float: right;
     width: 32%;
     height: 35px;
-    margin-right: 4.3%;
+    margin-right: 5.55%;
     background: #6f7a9a;
     border: none;
     border-radius: 0.4em;
