@@ -61,7 +61,7 @@
     z-index: 0;
     position: absolute;
     left: 0;
-    top: calc((0% - (100% - 1em)) - 8%);
+    top: calc((0% - (100% - 1em)) - 9%);
     background-color: transparent;
 }
 

@@ -1953,15 +1953,17 @@ input[type="range"]:active {
     }
     .form-login {
         width: 300px;
-        height: 382px;
+        height: 378px;
     }
     .form-login .text,
     .textcontrasena {
         width: 82.3%;
     }
-    .form-login .labelrecordar {
-        float: left;
-        margin: -0.9% 0 4% 32%;
+    .form-login .pretty {
+        margin: -1.6% 25% 5%;
+    }
+    .form-login .pretty .state label {
+        margin: 0 0 0 4px;
     }
     .form-login .button {
         float: none;
