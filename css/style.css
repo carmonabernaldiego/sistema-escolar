@@ -569,7 +569,11 @@ button:focus {
 
 .form-login .pretty {
     float: left;
-    margin: 2.8% 0 2% 6.25%;
+    margin: 2.6% 0 2% 6.25%;
+}
+
+.form-login .pretty .state label {
+    margin: 0 0 0 4px;
 }
 
 .form-login .button {
