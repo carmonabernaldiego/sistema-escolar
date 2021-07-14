@@ -577,6 +577,14 @@ button:focus {
     color: #4a567c;
 }
 
+.pretty.p-switch input:focus~.state:before {
+    box-shadow: 0 0 0 1.5pt #929cb9 !important;
+}
+
+.pretty.p-switch input:hover~.state:before {
+    box-shadow: 0 0 0 1.5pt #929cb9 !important;
+}
+
 .form-login .button {
     float: right;
     width: 32%;
