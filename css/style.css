@@ -573,7 +573,8 @@ button:focus {
 }
 
 .form-login .pretty .state label {
-    margin: 0 0 0 4px;
+    margin: 0 0 0 8px;
+    color: #4a567c;
 }
 
 .form-login .button {

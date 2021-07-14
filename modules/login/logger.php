@@ -117,7 +117,7 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
             <div class="pretty p-switch p-fill">
                 <input type="checkbox" name="remember_session" value="1" />
                 <div class="state p-primary">
-                    <label>Recuérdame</label>
+                    <label class="remember">Recuérdame</label>
                 </div>
             </div>
 			<button class="button" type="submit">Entrar</button>
