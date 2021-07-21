@@ -574,7 +574,7 @@ button:focus {
 .form-login .forgot-pass {
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0 9px;
     text-align: center;
 }
 
@@ -593,7 +593,7 @@ button:focus {
     display: block;
     content: '';
     width: 0;
-    height: 1px;
+    height: 1.5px;
     margin: 0 auto;
     padding: 0 0;
     background: #929cb9;
