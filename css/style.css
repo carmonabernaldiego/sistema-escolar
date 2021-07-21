@@ -505,6 +505,7 @@ button:focus {
 }
 
 .form-login {
+    position: relative;
     width: 380px;
     height: 370px;
     margin: -55px auto 0;
@@ -1997,24 +1998,27 @@ input[type="range"]:active {
 
 @media only screen and (max-width: 700px) {
     .wrap-title-login {
-        height: 200px;
+        height: 190px;
     }
     .wrap-title-login .title-login h1 {
+        padding-top: 15px;
         font-size: 2.2em;
     }
     .form-login {
         width: 300px;
-        height: 396px;
+        height: 391px;
     }
     .form-login .text,
-    .textcontrasena {
-        width: 82.3%;
+    .form-login .textcontrasena {
+        width: 81.9%;
     }
     .form-login .forgot-pass {
-        margin-top: 83px;
+        margin-top: 28px;
+        margin-bottom: -3px;
     }
     .form-login .pretty {
-        margin: -36.5% 0 4.1% 27.5%;
+        margin: -17% 0 0 27.5%;
+        font-size: 0.95em;
     }
     .form-login .pretty .state label {
         margin: 0 0 0 4px;
@@ -2024,7 +2028,9 @@ input[type="range"]:active {
         display: block;
         width: 88%;
         margin: 0 auto;
-        margin-top: -77px;
+    }
+    .pretty.p-switch .state:before {
+        top: calc((0% - (100% - 1em)) - 22%) !important;
     }
 }
 
