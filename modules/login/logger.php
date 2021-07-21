@@ -106,6 +106,9 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                         </div>
                     </div>
 					<button class="button" type="submit">Entrar</button>
+                    <div class="forgot-pass">
+                        <a href="#">¿Olvidaste la contraseña?</a>
+                    </div>
                 ';
         }
     }
@@ -121,5 +124,8 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                 </div>
             </div>
 			<button class="button" type="submit">Entrar</button>
+            <div class="forgot-pass">
+                <a href="#">¿Olvidaste la contraseña?</a>
+            </div>
 		';
 }

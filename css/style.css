@@ -506,7 +506,7 @@ button:focus {
 
 .form-login {
     width: 380px;
-    height: 354px;
+    height: 350px;
     margin: -55px auto 0;
     background-color: #eef4ff;
     border-top: 3px solid #6f7a9a;
@@ -537,7 +537,7 @@ button:focus {
 
 .form-login .label {
     display: block;
-    padding: 105px 0 22px 0;
+    padding: 104px 0 19px 0;
     color: #4a567c;
     font-size: 1.7em;
     text-align: center;
@@ -569,20 +569,22 @@ button:focus {
 
 .form-login .pretty {
     float: left;
-    margin: 2.6% 0 2% 6.25%;
+    margin: 2.2% 0 0 6.25%;
 }
 
 .form-login .pretty .state label {
-    margin: 0 0 0 8px;
+    margin: 0 0 0 6px;
     color: #4a567c;
 }
 
-.pretty.p-switch input:focus~.state:before {
-    box-shadow: 0 0 0 1.5pt #929cb9 !important;
+.pretty.p-switch input.state:before {
+    transition: all 300ms ease-out;
 }
 
-.pretty.p-switch input:hover~.state:before {
+.pretty.p-switch input:hover~.state:before,
+.pretty.p-switch input:focus~.state:before {
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
 }
 
 .form-login .button {
