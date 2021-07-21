@@ -103,7 +103,7 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                         <a class="un" href="#">¿Olvidaste la contraseña?</a>
                     </div>
                     <div class="pretty p-switch p-fill">
-                        <input type="checkbox" name="remember_session" value="1" />
+                        <input type="checkbox" name="remember_session" placeholder="Recordar" value="1" />
                         <div class="state p-primary">
                             <label>Recuérdame</label>
                         </div>
@@ -121,7 +121,7 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                 <a class="un" href="#">¿Olvidaste la contraseña?</a>
             </div>           
             <div class="pretty p-switch p-fill">
-                <input type="checkbox" name="remember_session" value="1" />
+                <input type="checkbox" name="remember_session" placeholder="Recordar" value="1" />
                 <div class="state p-primary">
                     <label class="remember">Recuérdame</label>
                 </div>
