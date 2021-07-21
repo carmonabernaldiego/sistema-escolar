@@ -2004,14 +2004,17 @@ input[type="range"]:active {
     }
     .form-login {
         width: 300px;
-        height: 378px;
+        height: 396px;
     }
     .form-login .text,
     .textcontrasena {
         width: 82.3%;
     }
+    .form-login .forgot-pass {
+        margin-top: 83px;
+    }
     .form-login .pretty {
-        margin: -1.6% 25% 5%;
+        margin: -36.5% 0 4.1% 27.5%;
     }
     .form-login .pretty .state label {
         margin: 0 0 0 4px;
@@ -2021,6 +2024,7 @@ input[type="range"]:active {
         display: block;
         width: 88%;
         margin: 0 auto;
+        margin-top: -77px;
     }
 }
 
