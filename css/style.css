@@ -506,7 +506,7 @@ button:focus {
 
 .form-login {
     width: 380px;
-    height: 350px;
+    height: 370px;
     margin: -55px auto 0;
     background-color: #eef4ff;
     border-top: 3px solid #6f7a9a;
@@ -544,7 +544,7 @@ button:focus {
 }
 
 .form-login .text,
-.textcontrasena {
+.form-login .textcontrasena {
     width: 82.5%;
     height: 40px;
     margin: 0 6.25% 22px;
@@ -559,11 +559,51 @@ button:focus {
 }
 
 .form-login .text:focus,
-.textcontrasena:focus {
+.form-login .textcontrasena:focus {
     outline: none !important;
     outline-width: 0 !important;
     color: #4a567c !important;
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
+}
+
+.form-login .textcontrasena {
+    margin: 0 6.25% 0;
+}
+
+.form-login .forgot-pass {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.form-login .forgot-pass a {
+    outline: none;
+    color: #4a567c;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.form-login .forgot-pass a.un {
+    display: inline-block;
+}
+
+.form-login .forgot-pass a.un::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    padding: 0 0;
+    background: #929cb9;
+    border-radius: 1em;
+    transition: all 300ms ease-out;
+}
+
+.form-login .forgot-pass a.un:hover::after,
+.form-login .forgot-pass a.un:focus::after {
+    padding: 0 50%;
     transition: all 200ms ease-in;
 }
 

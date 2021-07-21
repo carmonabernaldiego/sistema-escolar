@@ -99,16 +99,16 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                     <label class="label" style="margin: 9px 0 0 0; color: #c93f3f; font-size: 1.2em; font-weight: bold;">usuario/contraseña - ¡incorrecto!</label>
 					<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 					<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
-					<div class="pretty p-switch p-fill">
+					<div class="forgot-pass">
+                        <a class="un" href="#">¿Olvidaste la contraseña?</a>
+                    </div>
+                    <div class="pretty p-switch p-fill">
                         <input type="checkbox" name="remember_session" value="1" />
                         <div class="state p-primary">
                             <label>Recuérdame</label>
                         </div>
                     </div>
 					<button class="button" type="submit">Entrar</button>
-                    <div class="forgot-pass">
-                        <a href="#">¿Olvidaste la contraseña?</a>
-                    </div>
                 ';
         }
     }
@@ -117,6 +117,9 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
 			<label class="label">Inicia sesión</label>
 			<input type="text" class="text" name="txtuser" placeholder="Correo electrónico o matrícula" autofocus required />
 			<input type="password" class="textcontrasena" name="txtpass" placeholder="Contraseña" autocomplete="off" required />
+            <div class="forgot-pass">
+                <a class="un" href="#">¿Olvidaste la contraseña?</a>
+            </div>           
             <div class="pretty p-switch p-fill">
                 <input type="checkbox" name="remember_session" value="1" />
                 <div class="state p-primary">
@@ -124,8 +127,5 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                 </div>
             </div>
 			<button class="button" type="submit">Entrar</button>
-            <div class="forgot-pass">
-                <a href="#">¿Olvidaste la contraseña?</a>
-            </div>
 		';
 }
