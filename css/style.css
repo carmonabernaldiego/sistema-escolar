@@ -598,7 +598,7 @@ button:focus {
     margin: 0 auto;
     padding: 0 0;
     background: #929cb9;
-    border-radius: 1em;
+    border-radius: 0.1em;
     transition: all 300ms ease-out;
 }
 
