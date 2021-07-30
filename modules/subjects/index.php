@@ -42,25 +42,25 @@ include_once 'load_data.php';
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-	<title>Asignaturas | Sistema de Control Escolar</title>
+	<meta name="robots" content="noindex">
+	<meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
-	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
+	<title>Asignaturas | Sistema de Control Escolar</title>
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
-	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal" />
+	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="/css/select2.css" media="screen, projection" type="text/css" />
 	<script src="/js/jquery.min.js"></script>
+	<script src="/js/unsetnotif.js"></script>
+	<script src="/js/select2.js"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
 		});
 	</script>
-	<link href="/css/select2.css" rel="stylesheet" />
-	<script src="/js/select2.js"></script>
-	<script src="/js/unsetnotif.js"></script>
 </head>
 
 <body>
 	<div class="loader"></div>
-
 	<header class="header">
 		<?php
 		include_once "../sections/about-section.php";

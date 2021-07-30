@@ -23,23 +23,23 @@ if (!empty($_POST['btn'])) {
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-	<title>Periodo Escolar | Sistema de Control Escolar</title>
+	<meta name="robots" content="noindex">
+	<meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
-	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
+	<title>Periodo Escolar | Sistema de Control Escolar</title>
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
-	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal" />
+	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
 	<script src="/js/jquery.min.js"></script>
+	<script src="/js/unsetnotif.js"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
 		});
 	</script>
-	<script src="/js/unsetnotif.js"></script>
 </head>
 
 <body>
 	<div class="loader"></div>
-
 	<header class="header">
 		<?php
 		include_once "../sections/about-section.php";

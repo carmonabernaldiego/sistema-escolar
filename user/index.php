@@ -23,26 +23,26 @@ if (!empty($_POST['btn'])) {
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-	<title>Usuarios | Sistema Escolar</title>
+	<meta name="robots" content="noindex">
+    <meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
+	<title>Usuarios | Sistema Escolar</title>
+	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
 	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/styleconfiguser.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
-	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
-	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal" />
 	<script src="/js/jquery.min.js"></script>
+	<script src="/js/unsetnotifuser.js"></script>
 	<script src="/js/croppie.js"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
 		});
 	</script>
-	<script src="/js/unsetnotifuser.js"></script>
 </head>
 
 <body>
 	<div class="loader"></div>
-
 	<header class="header">
 		<?php
 		include_once "../modules/sections/about-section.php";
@@ -63,7 +63,7 @@ if (!empty($_POST['btn'])) {
 		?>
 	</section>
 </body>
-<script src="/js/uploadimageuser.js"></script>
 <script src="/js/controlbuttons.js"></script>
+<script src="/js/uploadimageuser.js"></script>
 
 </html>
