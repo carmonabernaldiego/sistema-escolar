@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  addgroup.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 $(document).ready(function() {
     $('.select-subjects').select2();
 });

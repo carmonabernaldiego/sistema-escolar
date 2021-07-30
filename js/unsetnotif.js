@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  unsetnotif.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 function closeNotif() {
     if (window.matchMedia("(min-width: 963px)").matches) {
         $('.box-notification-ok').slideToggle();

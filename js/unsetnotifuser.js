@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  unsetnotifuser.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 function closeNotif() {
     $('.box-notification-ok').fadeOut('slow');
     $('.box-notification-error').fadeOut('slow');

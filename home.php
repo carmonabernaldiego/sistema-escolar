@@ -13,12 +13,12 @@ $_SESSION['raiz'] = dirname(__FILE__);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <title>Sistema Escolar</title>
-    <link rel="icon" type="image/png" href="/images/icon.png" />
-    <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
+    <meta name="robots" content="noindex">
     <meta name="google" value="notranslate">
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <title>Sistema Escolar</title>
     <meta name="description" content="Sistema Escolar, gestión de asistencias." />
-    <meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal" />
+    <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
     <script src="/js/jquery.min.js"></script>
     <script type="text/javascript">
         $(window).load(function() {

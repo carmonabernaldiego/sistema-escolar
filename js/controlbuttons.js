@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  controlbuttons.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 let btnSaveDisabled = $('#btnSave'),
     btnAddOptionsDisabled = $('#btnAddOptions'),
     btnExitOptionsDisabled = $('#btnExitOptions'),

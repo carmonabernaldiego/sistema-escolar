@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  updatesubject.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 let selectTeachers = ',';
 
 $(document).ready(function() {

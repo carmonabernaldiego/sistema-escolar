@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  menumobile.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 let card = document.getElementById('activator');
 
 let tl = gsap.timeline({

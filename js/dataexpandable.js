@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  dataexpandable.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 $('body').on('keydown input', 'textarea[data-expandable]', function() {
     //Auto-expanding textarea
     this.style.removeProperty('height');

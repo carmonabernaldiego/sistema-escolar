@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  addsubjectjs
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 $(document).ready(function() {
     $(".selectCareer").select2({
         minimumResultsForSearch: Infinity

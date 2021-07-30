@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  uploadimageuser.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 $('#section-croppie-image').hide();
 
 function confirmPass() {

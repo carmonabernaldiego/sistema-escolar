@@ -1,3 +1,10 @@
+/*-------------------------------------------
+  optionsearch.js
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
 let btnSearchMobileDisabled = $('#btnSearchMobile');
 let btnSearchDisabled = $('#btnSearch');
 
