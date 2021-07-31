@@ -544,6 +544,12 @@ button:focus {
     text-align: center;
 }
 
+.form-login .label.error {
+    margin: 9px 0 2px 0;
+    color: #da5353;
+    font-size: 1.2em;
+}
+
 .form-login .text,
 .form-login .textcontrasena {
     width: 82.5%;
@@ -586,6 +592,11 @@ button:focus {
     text-decoration: none;
 }
 
+.form-login .forgot-pass a:active {
+    color: #687292;
+    transition: all 200ms ease-in;
+}
+
 .form-login .forgot-pass a.un {
     display: inline-block;
 }
@@ -608,6 +619,11 @@ button:focus {
     transition: all 200ms ease-in;
 }
 
+.form-login .forgot-pass a.un:active::after {
+    padding: 0 0;
+    transition: all 200ms ease-in;
+}
+
 .form-login .pretty {
     float: left;
     margin: 2.2% 0 0 6.25%;
@@ -616,6 +632,10 @@ button:focus {
 .form-login .pretty .state label {
     margin: 0 0 0 6px;
     color: #4a567c;
+}
+
+.form-login .pretty input:active~.state label {
+    color: #687292;
 }
 
 .pretty.p-switch input.state:before {
@@ -2007,7 +2027,10 @@ input[type="range"]:active {
     .form-login {
         margin-top: -60px;
         width: 300px;
-        height: 391px;
+        height: 382.5px;
+    }
+    .form-login .label {
+        margin: -5px 0 -5px 0;
     }
     .form-login .text,
     .form-login .textcontrasena {
@@ -2024,6 +2047,10 @@ input[type="range"]:active {
     .form-login .pretty .state label {
         margin: 0 0 0 4px;
     }
+    .form-login .label.error {
+        margin: 6px 0 -.8px 0;
+        font-size: 1em;
+    }
     .form-login .button {
         float: none;
         display: block;
@@ -2031,7 +2058,7 @@ input[type="range"]:active {
         margin: 0 auto;
     }
     .pretty.p-switch .state:before {
-        top: calc((0% - (100% - 1em)) - 22%) !important;
+        top: calc((0% - (100% - 1em)) - 22.5%) !important;
     }
 }
 
