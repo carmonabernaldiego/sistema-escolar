@@ -594,7 +594,6 @@ button:focus {
 
 .form-login .forgot-pass a:active {
     color: #687292;
-    transition: all 200ms ease-in;
 }
 
 .form-login .forgot-pass a.un {
@@ -630,7 +629,7 @@ button:focus {
 }
 
 .form-login .pretty .state label {
-    margin: 0 0 0 6px;
+    margin: 0 0 0 4px;
     color: #4a567c;
 }
 

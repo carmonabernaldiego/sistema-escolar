@@ -61,12 +61,12 @@
     z-index: 0;
     position: absolute;
     left: 0;
-    top: calc((0% - (100% - 1em)) - 10%);
+    top: calc((0% - (100% - 1em)) - 8%);
     background-color: transparent;
 }
 
 .pretty .state label:before {
-    border-color: #929cb9;
+    border: 2px solid #929cb9;
 }
 
 .pretty .state.p-is-hover,
@@ -446,7 +446,7 @@
     height: calc(1em + 2px);
     position: absolute;
     top: 0;
-    top: calc((0% - (100% - 1em)) - 20%);
+    top: calc((0% - (100% - 1em)) - 16%);
     z-index: 0;
     transition: all 0.5s ease;
 }
