@@ -216,7 +216,7 @@ button:focus {
 .info-school-period .school-period a {
     color: #eef4ff;
     font-size: 0.92em;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     transition: all 300ms ease-out;
 }
@@ -545,9 +545,10 @@ button:focus {
 }
 
 .form-login .label.error {
-    margin: 9px 0 2px 0;
-    color: #da5353;
+    margin: 8px 0 3px 0;
+    color: #ff7058;
     font-size: 1.2em;
+    font-weight: 600;
 }
 
 .form-login .text,
@@ -561,7 +562,7 @@ button:focus {
     border: 2px solid #929cb9;
     border-radius: 0.4em;
     font-size: .9em;
-    font-weight: bold;
+    font-weight: 600;
     transition: all 300ms ease-out;
 }
 
@@ -626,10 +627,11 @@ button:focus {
 .form-login .pretty {
     float: left;
     margin: 2.2% 0 0 6.25%;
+    font-size: 1em;
 }
 
 .form-login .pretty .state label {
-    margin: 0 0 0 4px;
+    margin: 0 0 0 5px;
     color: #4a567c;
 }
 
@@ -637,12 +639,18 @@ button:focus {
     color: #687292;
 }
 
-.pretty.p-switch input.state:before {
+.pretty.p-svg input.state:before {
     transition: all 300ms ease-out;
 }
 
-.pretty.p-switch input:hover~.state:before,
-.pretty.p-switch input:focus~.state:before {
+.pretty.p-svg input:hover~.state:before,
+.pretty.p-svg input:focus~.state:before {
+    box-shadow: 0 0 0 1.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
+}
+
+.pretty.p-svg input:hover~.state,
+.pretty.p-svg input:focus~.state {
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
     transition: all 200ms ease-in;
 }
@@ -657,7 +665,7 @@ button:focus {
     border-radius: 0.4em;
     color: #eef4ff;
     font-size: .9em;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     transition: all 300ms ease-out;
 }
@@ -1459,7 +1467,7 @@ button:focus {
     text-transform: capitalize;
     line-height: 2.9;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 0.25em;
     border: none;
     cursor: pointer;
@@ -1484,7 +1492,7 @@ button:focus {
     text-transform: capitalize;
     line-height: 2.9;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 600;
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
     border: none;
@@ -2040,7 +2048,7 @@ input[type="range"]:active {
         margin-bottom: -3px;
     }
     .form-login .pretty {
-        margin: -17% 0 0 27.5%;
+        margin: -17% 0 0 31.05%;
         font-size: 0.95em;
     }
     .form-login .pretty .state label {
@@ -2055,9 +2063,6 @@ input[type="range"]:active {
         display: block;
         width: 88%;
         margin: 0 auto;
-    }
-    .pretty.p-switch .state:before {
-        top: calc((0% - (100% - 1em)) - 22.5%) !important;
     }
 }
 
