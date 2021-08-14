@@ -1983,8 +1983,8 @@ input[type="range"]:active {
         margin-bottom: -3px;
     }
     .form-login .pretty {
-        margin: -17% 0 0 31.05%;
-        font-size: 0.95em;
+        margin: -17% 0 0 30.3%;
+        font-size: 1em;
     }
     .form-login .pretty .state label {
         margin: 0 0 0 4px;
