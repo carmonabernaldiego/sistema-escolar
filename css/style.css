@@ -617,14 +617,8 @@ button:focus {
     transition: all 300ms ease-out;
 }
 
-.pretty.p-svg input:hover~.state:before,
-.pretty.p-svg input:focus~.state:before {
-    box-shadow: 0 0 0 1.5pt #929cb9 !important;
-    transition: all 200ms ease-in;
-}
-
-.pretty.p-svg input:hover~.state,
-.pretty.p-svg input:focus~.state {
+.pretty.p-svg input:hover~.state label:before,
+.pretty.p-svg input:focus~.state label:before {
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
     transition: all 200ms ease-in;
 }
