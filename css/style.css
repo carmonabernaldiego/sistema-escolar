@@ -35,7 +35,6 @@
     margin: 0;
     padding: 0;
     line-height: 1.4;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -106,8 +105,6 @@ button:focus {
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
     color: #b6c1d4 !important;
 }
 
@@ -117,11 +114,6 @@ button:focus {
 }
 
 ::-webkit-selection {
-    background: #a4b5d3;
-    color: #eef4ff;
-}
-
-::-moz-selection {
     background: #a4b5d3;
     color: #eef4ff;
 }
@@ -173,9 +165,6 @@ button:focus {
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.25em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -247,9 +236,6 @@ button:focus {
     box-shadow: 0px 3px 2px rgba(73, 80, 104, 0.4);
     overflow-x: hidden;
     overflow-y: auto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -416,9 +402,6 @@ button:focus {
     background: #569188;
     box-shadow: 2px 3px 2px rgba(98, 164, 139, 0.4);
     border-radius: 0.25em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -428,9 +411,6 @@ button:focus {
     background: #c0605d;
     box-shadow: 2px 3px 2px rgba(164, 98, 98, 0.4);
     border-radius: 0.25em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -491,9 +471,6 @@ button:focus {
     height: 230px;
     background: #383a59e7;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -513,9 +490,6 @@ button:focus {
     border-top: 3px solid #6f7a9a;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -693,9 +667,6 @@ button:focus {
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.25em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -885,9 +856,6 @@ button:focus {
     width: 80%;
     margin: 2% auto 5%;
     pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -905,7 +873,6 @@ button:focus {
 
 .form-gridview table.full {
     display: block;
-    max-width: -moz-fit-content;
     max-width: fit-content;
     overflow-x: auto;
     white-space: nowrap;
@@ -1045,9 +1012,6 @@ button:focus {
 
 .pages {
     margin: 2.8% 0 2.8% 2.89%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -1108,9 +1072,6 @@ button:focus {
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.25em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -1763,22 +1724,13 @@ input[type="range"]:active {
     margin-right: 3%;
     position: relative;
     background: transparent;
-    display: -ms-grid;
     display: grid;
     place-content: left;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
 .user-mobile header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
 }
 
@@ -1814,13 +1766,10 @@ input[type="range"]:active {
     background: #44475a;
     box-shadow: -1px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 5em 0 0 5em;
-    -webkit-clip-path: ellipse(50% 50% at 150% 50%);
     clip-path: ellipse(50% 50% at 150% 50%);
 }
 
 .user-mobile nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1871,14 +1820,12 @@ input[type="range"]:active {
     background: #323844;
     opacity: 0;
     color: #eef4ff98;
-    -webkit-transform: translateX(10px);
     transform: translateX(10px);
 }
 
 .user-mobile nav ul li a span {
     width: 20px;
     opacity: 0;
-    -webkit-transform: translateX(10px);
     transform: translateX(10px);
 }
 
@@ -1894,12 +1841,8 @@ input[type="range"]:active {
     margin: 0 auto;
     padding: 0;
     background: transparent;
-    display: -ms-grid;
     display: grid;
     place-content: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -1915,8 +1858,6 @@ input[type="range"]:active {
 }
 
 .menu-mobile header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1949,7 +1890,6 @@ input[type="range"]:active {
 
 .menu-mobile header nav {
     z-index: 99;
-    max-width: -moz-fit-content;
     max-width: fit-content;
     overflow-x: auto;
     overflow-y: hidden;
@@ -1959,13 +1899,10 @@ input[type="range"]:active {
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0 0.25em 0.25em 0;
     padding: 0 .5em;
-    -webkit-clip-path: ellipse(50% 50% at -50% 50%);
     clip-path: ellipse(50% 50% at -50% 50%);
 }
 
 .menu-mobile header nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
@@ -2000,14 +1937,12 @@ input[type="range"]:active {
     background: #323844;
     opacity: 0;
     color: #eef4ff98;
-    -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
 }
 
 .menu-mobile header nav ul li a span {
     margin-top: 5px;
     opacity: 0;
-    -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
 }
 
@@ -2220,7 +2155,6 @@ input[type="range"]:active {
     }
     .form-gridview table {
         display: block;
-        max-width: -moz-fit-content;
         max-width: fit-content;
         margin: 6% auto 0;
         overflow-x: auto;

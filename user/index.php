@@ -32,6 +32,7 @@ if (!empty($_POST['btn'])) {
 	<link rel="stylesheet" href="/css/styleconfiguser.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
 	<script src="/js/jquery.min.js"></script>
+    <script src="/js/prefixfree.min.js"></script>
 	<script src="/js/unsetnotifuser.js"></script>
 	<script src="/js/croppie.js"></script>
 	<script type="text/javascript">

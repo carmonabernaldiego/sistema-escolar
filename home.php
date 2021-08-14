@@ -20,6 +20,7 @@ $_SESSION['raiz'] = dirname(__FILE__);
     <meta name="description" content="Sistema Escolar, gestión de asistencias." />
     <link rel="stylesheet" href="css/style.css" media="screen, projection" type="text/css" />
     <script src="/js/jquery.min.js"></script>
+    <script src="/js/prefixfree.min.js"></script>
     <script type="text/javascript">
         $(window).load(function() {
             $(".loader").fadeOut("slow");
