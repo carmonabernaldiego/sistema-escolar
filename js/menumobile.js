@@ -23,7 +23,7 @@ tl.to('.activator', {
 tl.to('.activator', {
     background: '#6272a4',
     color: '#eef4ff98',
-    'borderRadius': '0.25em 0 0 0.25em'
+    'borderRadius': '0.4em 0 0 0.4em'
 });
 
 tl.to('.menu-mobile nav', {

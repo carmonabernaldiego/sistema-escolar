@@ -148,8 +148,8 @@ button:focus {
     height: 380px;
     z-index: 9999;
     background: url(../images/user_upload_loader.gif) 50% 50% no-repeat #44475a;
-    border-top-left-radius: 0.25em;
-    border-top-right-radius: 0.25em;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
     opacity: 1;
 }
 
@@ -165,7 +165,7 @@ button:focus {
     margin: 35px 3%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     user-select: none;
 }
 
@@ -177,7 +177,7 @@ button:focus {
 
 .info-title .title {
     display: block;
-    margin: 11.5px 0 0 3%;
+    margin: 11.5px 0 0 4%;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 1.25em;
@@ -316,7 +316,7 @@ button:focus {
     background: #383a59;
     box-shadow: 0px 1px 4px rgba(142, 136, 192, 0.3);
     border: 3px solid #6272a4;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     text-align: center;
     cursor: pointer;
 }
@@ -402,7 +402,7 @@ button:focus {
     margin: 0 0 8% 0;
     background: #569188;
     box-shadow: 2px 3px 2px rgba(98, 164, 139, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     user-select: none;
 }
 
@@ -411,7 +411,7 @@ button:focus {
     margin: 0 0 8% 0;
     background: #c0605d;
     box-shadow: 2px 3px 2px rgba(164, 98, 98, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     user-select: none;
 }
 
@@ -664,7 +664,7 @@ button:focus {
     width: 100%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     user-select: none;
 }
 
@@ -688,10 +688,10 @@ button:focus {
     background: #eef4ff;
     box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
     border: none;
-    border-top-left-radius: 0.25em;
-    border-bottom-left-radius: 0.25em;
-    border-top-right-radius: 0.40em;
-    border-bottom-right-radius: 0.40em;
+    border-top-left-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    border-top-right-radius: 0.55em;
+    border-bottom-right-radius: 0.55em;
     color: #687292;
     font-weight: 500;
     font-size: 0.9em;
@@ -716,8 +716,8 @@ button:focus {
     border: none;
     color: #eef4ff;
     cursor: initial;
-    border-top-right-radius: 0.25em;
-    border-bottom-right-radius: 0.25em;
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     font-size: 1.02em;
@@ -845,7 +845,7 @@ button:focus {
     width: 71%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
 }
 
 .form-gridview img.data-not-found,
@@ -858,14 +858,14 @@ button:focus {
 }
 
 .form-gridview table {
-    width: 94%;
+    width: 92%;
     margin: 4.5% auto 0;
     box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
     border-collapse: collapse;
-    border-top-left-radius: 0.25em;
-    border-top-right-radius: 0.25em;
-    border-bottom-left-radius: 0.25em;
-    border-bottom-right-radius: 0.25em;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
     overflow: hidden;
 }
 
@@ -1009,7 +1009,7 @@ button:focus {
 }
 
 .pages {
-    margin: 2.8% 0 2.8% 2.89%;
+    margin: 2.8% 0 2.8% 3.8%;
     user-select: none;
 }
 
@@ -1031,7 +1031,7 @@ button:focus {
     background: #7e8aac;
     box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
     border: none;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     color: #eef4ff;
     line-height: 23px;
     font-size: 0.625em;
@@ -1069,7 +1069,7 @@ button:focus {
     width: 71%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     user-select: none;
 }
 
@@ -1096,11 +1096,12 @@ button:focus {
 
 .form-data .body .first,
 .form-data .body .last {
-    width: 46%;
+    width: 45%;
 }
 
 .form-data .body .content-full {
-    width: 94.7%;
+    display: block;
+    width: 93.3%;
     margin-bottom: 10px;
 }
 
@@ -1122,7 +1123,7 @@ button:focus {
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     color: #687292;
     font-weight: 500;
     font-size: 0.9em;
@@ -1130,7 +1131,8 @@ button:focus {
 }
 
 .form-data .body .textarea {
-    width: 201.7%;
+    display: block;
+    width: 203.5%;
     min-height: 50px;
     max-height: 120px;
     margin: 0 0 20px 0;
@@ -1138,7 +1140,7 @@ button:focus {
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     color: #687292;
     line-height: 1.7;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
@@ -1157,7 +1159,7 @@ button:focus {
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
@@ -1167,7 +1169,7 @@ button:focus {
 
 .select2 {
     width: 100%!important;
-    margin: 0 0 25px 0 !important;
+    margin-bottom: 25px !important;
 }
 
 .form-data .body .select option {
@@ -1183,7 +1185,7 @@ button:focus {
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     color: #687292;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
@@ -1207,10 +1209,11 @@ button:focus {
     margin: 0;
     padding: 8px 0 0 8px;
     background: #6272a4;
+    box-shadow: -2px -2px 4px rgb(142, 136, 192, 0.3);
     border: none;
     border-color: #929cb9;
     border-top-left-radius: 100%;
-    border-bottom-right-radius: 0.25em;
+    border-bottom-right-radius: 0.4em;
     color: #eef4ff;
     text-shadow: none;
     font-size: 1.1em;
@@ -1276,7 +1279,7 @@ button:focus {
     box-shadow: 0 0 4px rgba(63, 105, 146, 0.3);
     border: none;
     border-color: #7eb2e2;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     color: #eef4ff;
     font-size: 0.9em;
     cursor: pointer;
@@ -1305,7 +1308,7 @@ button:focus {
     box-shadow: 0 0 4px rgba(219, 73, 73, 0.3);
     border: none;
     border-color: #e77f7f;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     color: #eef4ff;
     font-size: 0.9em;
     cursor: pointer;
@@ -1427,7 +1430,7 @@ button:focus {
     line-height: 2.9;
     font-size: 0.9em;
     font-weight: 600;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     border: none;
     cursor: pointer;
     transition: all 300ms ease-out;
@@ -1473,15 +1476,16 @@ button:focus {
 -------------------------------------------*/
 
 .form-data .body .description {
-    width: 95%;
+    width: 93.3%;
 }
 
 .form-data .body .description .textarea {
-    width: 97.4%;
-    min-height: 50px;
+    display: block;
+    width: 96.1%;
+    min-height: 60px;
     max-height: 120px;
-    margin: 0 0 25px 0;
-    padding: 3px 1.2% 3px;
+    margin: 0 auto;
+    margin-bottom: 25px;
     resize: vertical;
     transition: all 300ms ease-out;
 }
@@ -1497,7 +1501,7 @@ button:focus {
     width: 100%;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
 }
 
 .formConfigUser:after {
@@ -1523,7 +1527,7 @@ button:focus {
     display: block;
     margin-top: -10px;
     padding: 5px 0;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     text-align: center;
     background-color: #db5f5f;
     box-shadow: 2px 2px 4px rgb(219 73 73 / 30%);
@@ -1540,14 +1544,14 @@ button:focus {
     width: 100%;
     margin: 0 auto;
     margin-top: 28px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 .formConfigUser .body #section-user-image img,
 .form-data .body #section-user-image img {
     display: block;
-    width: 270px;
-    height: 270px;
+    width: 210px;
+    height: 210px;
     margin: 0 auto;
     border: solid #eef4ff 4px;
     border-radius: 100%;
@@ -1557,10 +1561,12 @@ button:focus {
 
 .ConfigUser .body #section-user-image .file,
 .form-data .body #section-user-image .file {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     margin: 0 auto;
     margin-top: -36px;
     padding: 0;
@@ -1568,10 +1574,8 @@ button:focus {
     box-shadow: none;
     border-radius: 100%;
     color: #eef4ff;
-    line-height: 2.5em;
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: 100;
-    text-align: center;
     cursor: pointer;
     transition: all 300ms ease-out;
 }
@@ -1671,6 +1675,55 @@ input[type="range"]:active {
     font-size: 0.9em;
 }
 
+.formConfigUser .body .btn-edit-info-user,
+.formConfigUser .body .btn-change-pass {
+    width: 100%;
+    height: 35px;
+    margin-right: 5.55%;
+    margin-bottom: 24px;
+    background: #6f7a9a;
+    border: none;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    font-size: .9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.formConfigUser .body .btn-change-pass {
+    margin-bottom: 0;
+}
+
+.formConfigUser .body .btn-edit-info-user:hover,
+.formConfigUser .body .btn-edit-info-user:focus,
+.formConfigUser .body .btn-change-pass:hover,
+.formConfigUser .body .btn-change-pass:focus {
+    background: #383a59c5;
+    border: none;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
+}
+
+.formConfigUser .body .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.formConfigUser .body .footer span.user-permissions {
+    padding: 4px 14px;
+    border: 2px solid #8192c9;
+    border-radius: 0.4em;
+    color: #8192c9;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 
 /*-------------------------------------------
   Formulario | Attendance
@@ -1683,7 +1736,7 @@ input[type="range"]:active {
     height: 450px;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.4em;
 }
 
 .formAttendanceAdd {
@@ -1697,7 +1750,7 @@ input[type="range"]:active {
     width: 47%;
     box-shadow: none;
     border-collapse: collapse;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     overflow: hidden;
 }
 
@@ -1880,7 +1933,7 @@ input[type="range"]:active {
 
 .menu-mobile header .activator {
     padding: 0.77em 0.77em;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
     color: #eef4ff;
@@ -1914,7 +1967,7 @@ input[type="range"]:active {
     height: 52px;
     background: #44475a;
     box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 0 0.25em 0.25em 0;
+    border-radius: 0 0.4em 0.4em 0;
     padding: 0 .5em;
     clip-path: ellipse(50% 50% at -50% 50%);
 }
@@ -1931,7 +1984,7 @@ input[type="range"]:active {
     font-size: 1.3em;
     line-height: 2.8px;
     text-decoration: none;
-    border-radius: 0.25em;
+    border-radius: 0.4em;
     outline: none;
     outline-width: none;
     transition: all 300ms ease-out;
@@ -2122,12 +2175,15 @@ input[type="range"]:active {
 
 @media only screen and (max-width: 701px) {
     .info-title {
-        width: 58.6%;
+        width: 59.5%;
+    }
+    .info-title .title {
+        margin-left: 7%;
     }
     .form-data .body .first,
     .form-data .body .last,
     .form-data .body .description {
-        width: 93%;
+        width: 91%;
     }
     .form-data .body .content-full {
         width: 93%;
@@ -2137,7 +2193,7 @@ input[type="range"]:active {
         width: 96%;
     }
     .form-data .body .description .textarea {
-        width: 97.6%;
+        width: 96%;
     }
     .form-options {
         padding: 3px 0;
@@ -2194,9 +2250,8 @@ input[type="range"]:active {
         width: 59.5%;
     }
     .info-title .title {
-        margin-left: 18px;
-        font-size: 1.2em;
         margin-top: 12px;
+        font-size: 1.2em;
     }
     .info-school-period .school-period {
         padding: 0 8px;

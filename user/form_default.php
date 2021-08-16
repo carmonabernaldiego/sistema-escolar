@@ -79,10 +79,14 @@ echo '
 					<span class="user-id">- ' . $_SESSION['user_id'][0] . ' -</span>
 				</div>
 				<div class="first">
-					<label for="txtemailupdate" class="label">Email</label>
-					<input id="txtemailupdate" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" required autocomplete="off"/>
+					<input id="txtemailupdate" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" required placeholder="Correo electrónico" autocomplete="off"/>
+					<button class="btn-edit-info-user">Actualizar mi cuenta</button>
+					<button class="btn-change-pass">Cambiar contraseña</button>
 				</div>
 				<div class="last">
+				</div>
+				<div class="footer">
+					<span class="user-permissions">' . $_SESSION['permissions'] . '</span>
 				</div>
 			</div>
         </form>
