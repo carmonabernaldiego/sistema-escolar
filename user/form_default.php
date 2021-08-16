@@ -66,7 +66,7 @@ if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 	echo '
 					<label class="file disabled" for="file_upload_image"><span class="icon">add_a_photo</span></label>
 	';
-	if ((15 - $days) == 1) {
+	if ((15 - $days) >= 1) {
 		$_SESSION['msgbox_info'] = 1;
 		$_SESSION['msgbox_error'] = 0;
 		$_SESSION['text_msgbox_info'] = 'Imagen de usuario actualizada recientemente.';
@@ -74,62 +74,17 @@ if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 }
 echo '
 				</div>
+				<div class="section-user-info">
+					<span class="user-name">' . $_SESSION['name'] . ' ' . $_SESSION['surnames'] . '</span>
+					<span class="user-id">- ' . $_SESSION['user_id'][0] . ' -</span>
+				</div>
 				<div class="first">
-					<label class="label">Usuario</label>
-					<input style="display: none;" type="text" name="txtuseridUpdate" value="' . $_SESSION['user_id'][0] . '"/>
-					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
 					<label for="txtemailupdate" class="label">Email</label>
-					<input id="txtemailupdate" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" required autofocus/>
-					<label class="label">Permisos</label>
-					<select class="select" name="txt" disabled>
-				';
-if ($_SESSION['user_type'][0] == 'admin') {
-	echo
-	'
-							<option value="admin">Administrador</option>
-							<option value="student">Alumno</option>
-							<option value="teacher">Docente</option>
-							<option value="editor">Editor</option>	
-						';
-} elseif ($_SESSION['user_type'][0] == 'alumno') {
-	echo
-	'
-							<option value="student">Alumno</option>
-							<option value="admin">Administrador</option>
-							<option value="teacher">Docente</option>
-							<option value="editor">Editor</option>	
-						';
-} elseif ($_SESSION['user_type'][0] == 'docente') {
-	echo
-	'
-							<option value="teacher">Docente</option>
-							<option value="admin">Administrador</option>
-							<option value="student">Alumno</option>
-							<option value="editor">Editor</option>	
-						';
-} elseif ($_SESSION['user_type'][0] == 'editor') {
-	echo
-	'
-							<option value="editor">Editor</option>
-							<option value="admin">Administrador</option>
-							<option value="student">Alumno</option>
-							<option value="teacher">Docente</option>
-						';
-}
-echo
-'
-					</select>
+					<input id="txtemailupdate" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" required autocomplete="off"/>
 				</div>
 				<div class="last">
-					<label for="txtuserpassoldupdate" class="label">Confirmar contraseña</label>
-					<input id="txtuserpassoldupdate" class="text" type="password" name="txtuserpassOldUpdate" placeholder="Contraseña actual" maxlength="50" required/>
-					<label for="pass1" class="label">Cambiar contraseña</label>
-					<input class="text" id="pass1" type="password" name="txtuserpassNewUpdate" placeholder="Nueva contraseña" maxlength="50"/>
-					<label for="pass2" id="labelError" class="label labelError">Las contraseñas no coinciden.</label>
-					<input class="text" id="pass2" type="password" name="txtuserpassConfirmUpdate" placeholder="Confirmar contraseña" maxlength="50"/>
 				</div>
 			</div>
-			<button id="btnSave" class="btn icon" type="submit">save</button>
         </form>
     </div>
 </div>

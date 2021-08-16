@@ -44,7 +44,7 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 	<div class="form-login">
 		<div class="logo-form-login">
 		</div>
-		<form name="frm-login" action="" method="POST">
+		<form name="frm-login" action="" method="POST" data-nosnippet>
 			<?php
 			include_once 'modules/login/logger.php';
 			?>
