@@ -1096,12 +1096,12 @@ button:focus {
 
 .form-data .body .first,
 .form-data .body .last {
-    width: 45%;
+    width: 44%;
 }
 
 .form-data .body .content-full {
     display: block;
-    width: 93.3%;
+    width: 92%;
     margin-bottom: 10px;
 }
 
@@ -1132,7 +1132,7 @@ button:focus {
 
 .form-data .body .textarea {
     display: block;
-    width: 203.5%;
+    width: 205.1%;
     min-height: 50px;
     max-height: 120px;
     margin: 0 0 20px 0;
@@ -1476,12 +1476,12 @@ button:focus {
 -------------------------------------------*/
 
 .form-data .body .description {
-    width: 93.3%;
+    width: 92.1%;
 }
 
 .form-data .body .description .textarea {
     display: block;
-    width: 96.1%;
+    width: 95.92%;
     min-height: 60px;
     max-height: 120px;
     margin: 0 auto;
@@ -1753,6 +1753,7 @@ input[type="range"]:active {
 .formConfigUser .body .config-data-user .btn-change-pass span.icon {
     display: block;
     font-size: 1.2em;
+    margin-top: 1px;
     margin-right: 15px;
 }
 
@@ -1769,14 +1770,13 @@ input[type="range"]:active {
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    padding: 3px 15px;
+    padding: 5px 15px 4px;
     border: 2px solid #eef4ff;
     border-radius: 0.4em;
     color: #eef4ff;
     text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.8em;
     font-weight: 600;
-    text-align: center;
     text-transform: uppercase;
 }
 
@@ -2239,14 +2239,14 @@ input[type="range"]:active {
     .form-data .body .first,
     .form-data .body .last,
     .form-data .body .description {
-        width: 91%;
+        width: 88%;
     }
     .formConfigUser .body .first,
     .formConfigUser .body .last {
-        width: 82%;
+        width: 87.5%;
     }
     .form-data .body .content-full {
-        width: 93%;
+        width: 88%;
         margin-bottom: 35px;
     }
     .form-data .body .textarea {
@@ -2282,20 +2282,27 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 641px) {
+    .info-title .title {
+        margin-left: 11.5%;
+    }
     .form-gridview img.data-not-found,
     .form-data img.data-not-found {
         margin: 1% auto 5%;
     }
+    .form-gridview {
+        width: 94%;
+        padding: 0 3%;
+    }
     .form-gridview table {
         display: block;
         max-width: fit-content;
-        margin: 6% auto 0;
+        margin: 7.5% auto 0;
         overflow-x: auto;
         white-space: nowrap;
         box-shadow: 0 1.4px 4px rgba(142, 136, 192, 0.2);
     }
     .form-gridview .pages {
-        margin: 3.2% 0 3.2% 2.89%;
+        margin: 3.2% 0 3.2% 3.89%;
     }
     .form-data .delete .btn-si {
         margin: 22px 0 25px 20%;
