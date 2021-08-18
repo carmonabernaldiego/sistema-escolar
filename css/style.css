@@ -686,7 +686,7 @@ button:focus {
     margin: 0 0 0 6.5%;
     padding: 0 23% 0 3%;
     background: #eef4ff;
-    box-shadow: -1px 0 4px rgba(142, 136, 192, 0.7);
+    box-shadow: -1px 0 4px rgba(142, 136, 192, 0.5);
     border: none;
     border-top-left-radius: 0.4em;
     border-bottom-left-radius: 0.4em;
@@ -1513,9 +1513,15 @@ button:focus {
 .formConfigUser .body .wrap,
 .form-users .body .wrap {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: 0 0 2% 0;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.formConfigUser .body .first,
+.formConfigUser .body .last {
+    width: 535px;
 }
 
 .formConfigUser .body .label {
@@ -1542,16 +1548,13 @@ button:focus {
 .formConfigUser .body #section-user-image,
 .form-data .body #section-user-image {
     width: 100%;
-    margin: 0 auto;
-    margin-top: 28px;
-    margin-bottom: 10px;
 }
 
 .formConfigUser .body #section-user-image img,
 .form-data .body #section-user-image img {
     display: block;
-    width: 210px;
-    height: 210px;
+    width: 220px;
+    height: 220px;
     margin: 0 auto;
     border: solid #eef4ff 4px;
     border-radius: 100%;
@@ -1568,7 +1571,7 @@ button:focus {
     width: 55px;
     height: 55px;
     margin: 0 auto;
-    margin-top: -36px;
+    margin-top: -32px;
     padding: 0;
     background: #6272a4;
     box-shadow: none;
@@ -1583,7 +1586,7 @@ button:focus {
 .formConfigUser .body #section-user-image .file:hover,
 .form-data .body #section-user-image .file:hover {
     background: #4a567c;
-    box-shadow: 0 0 0 2.5pt #8192c9 !important;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
     color: #aebbd3;
     transition: all 200ms ease-in;
 }
@@ -1639,7 +1642,7 @@ button:focus {
 .formConfigUser .body #section-croppie-image .crop_btn:hover,
 .form-data .body #section-croppie-image .crop_btn:hover {
     background: #4a567c;
-    box-shadow: 0 0 0 2.5pt #8192c9 !important;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
     color: #aebbd3;
     transition: all 200ms ease-in;
 }
@@ -1656,6 +1659,19 @@ input[type="range"]:active {
     background: transparent !important;
 }
 
+.formConfigUser .body .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 0 15px;
+}
+
+.formConfigUser .body .last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .formConfigUser .body .section-user-info {
     display: block;
     width: 100%;
@@ -1665,44 +1681,79 @@ input[type="range"]:active {
 .formConfigUser .body .section-user-info span.user-id {
     display: block;
     color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     text-align: center;
-    font-size: 1.1em;
-    font-weight: bold;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.formConfigUser .body .section-user-info span.user-name {
+    margin-top: 8px;
 }
 
 .formConfigUser .body .section-user-info span.user-id {
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
-.formConfigUser .body .btn-edit-info-user,
-.formConfigUser .body .btn-change-pass {
+.formConfigUser .body .config-data-user {
     width: 100%;
-    height: 35px;
-    margin-right: 5.55%;
-    margin-bottom: 24px;
-    background: #6f7a9a;
+}
+
+.formConfigUser .body .config-data-user .text {
+    margin: 0;
+}
+
+.formConfigUser .body .config-data-user .btn-edit-info-user,
+.formConfigUser .body .config-data-user .btn-change-pass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    background: #6272a4;
+    box-shadow: 1px 1px 4px rgb(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
-    font-size: .9em;
+    font-size: 0.9em;
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
     transition: all 300ms ease-out;
 }
 
-.formConfigUser .body .btn-change-pass {
-    margin-bottom: 0;
-}
-
-.formConfigUser .body .btn-edit-info-user:hover,
-.formConfigUser .body .btn-edit-info-user:focus,
-.formConfigUser .body .btn-change-pass:hover,
-.formConfigUser .body .btn-change-pass:focus {
-    background: #383a59c5;
+.formConfigUser .body .config-data-user .btn-edit-info-user:hover,
+.formConfigUser .body .config-data-user .btn-edit-info-user:focus,
+.formConfigUser .body .config-data-user .btn-change-pass:hover,
+.formConfigUser .body .config-data-user .btn-change-pass:focus {
+    background: #4a567c;
     border: none;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    color: #aebbd3;
     transition: all 200ms ease-in;
+}
+
+.formConfigUser .body .config-data-user .btn-edit-info-user:active,
+.formConfigUser .body .config-data-user .btn-change-pass:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.formConfigUser .body .config-data-user .btn-edit-info-user {
+    margin: 10% 0;
+}
+
+.formConfigUser .body .config-data-user .btn-edit-info-user span.icon {
+    display: block;
+    font-size: 1.6em;
+    margin-right: 15px;
+}
+
+.formConfigUser .body .config-data-user .btn-change-pass span.icon {
+    display: block;
+    font-size: 1.2em;
+    margin-right: 15px;
 }
 
 .formConfigUser .body .footer {
@@ -1710,16 +1761,21 @@ input[type="range"]:active {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 15px 0;
+    padding: 30px 0 25px;
 }
 
 .formConfigUser .body .footer span.user-permissions {
-    padding: 4px 14px;
-    border: 2px solid #8192c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    padding: 3px 15px;
+    border: 2px solid #eef4ff;
     border-radius: 0.4em;
-    color: #8192c9;
+    color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
 }
@@ -2184,6 +2240,10 @@ input[type="range"]:active {
     .form-data .body .last,
     .form-data .body .description {
         width: 91%;
+    }
+    .formConfigUser .body .first,
+    .formConfigUser .body .last {
+        width: 82%;
     }
     .form-data .body .content-full {
         width: 93%;
