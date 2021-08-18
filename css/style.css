@@ -1574,7 +1574,7 @@ button:focus {
     margin-top: -32px;
     padding: 0;
     background: #6272a4;
-    box-shadow: none;
+    box-shadow: 1px 1px 4px rgb(142, 136, 192, 0.3);
     border-radius: 100%;
     color: #eef4ff;
     font-size: 1.6em;
@@ -1613,18 +1613,20 @@ button:focus {
     position: relative;
     width: 100%;
     margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 18px;
+    padding-top: 25px;
+    padding-bottom: 6px;
 }
 
 .formConfigUser .body #section-croppie-image .crop_btn,
 .form-data .body #section-croppie-image .crop_btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     margin: 0 auto;
-    margin-top: -52px;
+    margin-top: -47px;
     padding: 0;
     background: #6272a4;
     box-shadow: none;

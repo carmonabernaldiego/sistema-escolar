@@ -41,8 +41,8 @@ $(document).ready(function() {
             type: 'circle' //square
         },
         boundary: {
-            width: 270,
-            height: 270
+            width: 220,
+            height: 220
         }
     });
 
