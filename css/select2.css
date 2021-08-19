@@ -17,8 +17,7 @@
 
 .select2-container .select2-selection--single .select2-selection__rendered {
     display: block;
-    padding-left: 8px;
-    padding-right: 20px;
+    padding: 0 3%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -100,7 +99,7 @@
 }
 
 .select2-results__option {
-    padding: 6px;
+    padding: 6px 3%;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -222,7 +221,7 @@
     height: 26px;
     position: absolute;
     top: 5px;
-    right: 4px;
+    right: 2.7%;
     width: 20px;
 }
 
@@ -273,8 +272,7 @@
     font-size: 0.9em;
     font-weight: 500;
     cursor: text;
-    padding-bottom: 5px;
-    padding-right: 5px;
+    padding: 7px 0.93% 12px;
     position: relative;
     transition: all 300ms ease-out;
 }

@@ -548,7 +548,7 @@ button:focus {
     outline: none !important;
     outline-width: 0 !important;
     color: #4a567c !important;
-    cursor: pointer;
+    cursor: text;
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
     transition: all 200ms ease-in;
 }
@@ -681,10 +681,10 @@ button:focus {
 
 .form-options .search .text-search {
     float: left;
-    width: 61%;
+    width: 57%;
     height: 36px;
-    margin: 0 0 0 6.5%;
-    padding: 0 23% 0 3%;
+    margin: 0 0 0 8%;
+    padding: 0 23.5% 0 3.5%;
     background: #eef4ff;
     box-shadow: -1px 0 4px rgba(142, 136, 192, 0.5);
     border: none;
@@ -1116,10 +1116,10 @@ button:focus {
 }
 
 .form-data .body .text {
-    width: 96%;
+    width: 94%;
     height: 36px;
     margin: 0 0 25px 0;
-    padding: 0 2%;
+    padding: 0 3%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
@@ -1132,11 +1132,11 @@ button:focus {
 
 .form-data .body .textarea {
     display: block;
-    width: 205.1%;
+    width: 203.1%;
     min-height: 50px;
     max-height: 120px;
     margin: 0 0 20px 0;
-    padding: 3px 2% 3px;
+    padding: 6px 3%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
@@ -1178,10 +1178,10 @@ button:focus {
 }
 
 .form-data .body .date {
-    width: 96%;
+    width: 94%;
     height: 36px;
     margin: 0 0 25px 0;
-    padding: 0 2%;
+    padding: 0 3%;
     background: #eef4ff;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
     border: none;
@@ -1481,11 +1481,12 @@ button:focus {
 
 .form-data .body .description .textarea {
     display: block;
-    width: 95.92%;
+    width: 97.1%;
     min-height: 60px;
     max-height: 120px;
     margin: 0 auto;
     margin-bottom: 25px;
+    padding: 6px 1.4%;
     resize: vertical;
     transition: all 300ms ease-out;
 }
@@ -2214,16 +2215,17 @@ input[type="range"]:active {
     .form-options .search {
         display: none;
         margin: 0;
-        padding: 2px 0 12px;
+        padding: 4px 0 13px;
     }
     .form-options .search .text-search {
         width: 63%;
-        height: 42px;
+        height: 36px;
+        margin-left: 6.5%;
         padding: 0 22% 0 2%;
     }
     .form-options .search .btn-search {
         width: 20%;
-        height: 42px;
+        height: 36px;
     }
     .form-options .options .search-mobile,
     .form-options .options .search-mobile.btnsearch {
@@ -2236,7 +2238,7 @@ input[type="range"]:active {
         width: 59.5%;
     }
     .info-title .title {
-        margin-left: 7%;
+        margin-left: 10.5%;
     }
     .form-data .body .first,
     .form-data .body .last,
@@ -2252,10 +2254,15 @@ input[type="range"]:active {
         margin-bottom: 35px;
     }
     .form-data .body .textarea {
-        width: 96%;
+        width: 94%;
+        padding: 6px 3%;
     }
     .form-data .body .description .textarea {
-        width: 96%;
+        width: 94%;
+        padding: 6px 3%;
+    }
+    .select2-container--default .select2-selection--multiple {
+        padding: 7px 2% 12px !important;
     }
     .form-options {
         padding: 3px 0;
@@ -2267,16 +2274,7 @@ input[type="range"]:active {
     .form-options .search {
         display: none;
         margin: 0;
-        padding: 8px 0 8px;
-    }
-    .form-options .search .text-search {
-        width: 63%;
-        height: 38px;
-        padding: 0 22% 0 2%;
-    }
-    .form-options .search .btn-search {
-        width: 20%;
-        height: 38px;
+        padding: 8px 0 9px;
     }
     .form-gridview .pages ul li button {
         width: 5%;
@@ -2284,9 +2282,6 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 641px) {
-    .info-title .title {
-        margin-left: 11.5%;
-    }
     .form-gridview img.data-not-found,
     .form-data img.data-not-found {
         margin: 1% auto 5%;
@@ -2336,15 +2331,6 @@ input[type="range"]:active {
     .form-options .options {
         padding-left: 35px;
         padding-right: 35px;
-    }
-    .form-options .search .text-search {
-        width: 61%;
-        height: 38px;
-        padding: 0 23% 0 3%;
-    }
-    .form-options .search .btn-search {
-        width: 20%;
-        height: 38px;
     }
     .form-data .delete .btn-si {
         margin: 22px 0 25px 6%;
