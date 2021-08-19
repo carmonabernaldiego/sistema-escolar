@@ -471,7 +471,7 @@ button:focus {
 .wrap-title-login {
     height: 230px;
     background: #383a59e7;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     user-select: none;
 }
 
@@ -480,6 +480,7 @@ button:focus {
     padding: 25px 0 0 0;
     font-size: 3.2em;
     color: #eef4ff;
+    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
 }
 
 .form-login {
@@ -502,6 +503,7 @@ button:focus {
     right: 0;
     margin: -55px auto 0;
     background: url(../images/user_icon.png)#eef4ff no-repeat bottom / 120px 120px;
+    box-shadow: 0 2px 4px rgba(142, 136, 192, 0.3);
     border: 4px solid #6f7a9a;
     border-radius: 5em;
 }
@@ -515,6 +517,7 @@ button:focus {
     display: block;
     padding: 104px 0 19px 0;
     color: #4a567c;
+    text-shadow: 0 2.5px 4px rgba(142, 136, 192, 0.3);
     font-size: 1.7em;
     text-align: center;
 }
@@ -533,6 +536,7 @@ button:focus {
     margin: 0 6.25% 22px;
     padding: 0 2.3%;
     background: transparent;
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     color: #687292;
     border: 2px solid #929cb9;
     border-radius: 0.4em;
@@ -569,6 +573,7 @@ button:focus {
     color: #4a567c;
     font-size: 1em;
     text-decoration: none;
+    text-shadow: 0 2.5px 4px rgba(142, 136, 192, 0.3);
 }
 
 .form-login .forgot-pass a:active {
@@ -611,6 +616,7 @@ button:focus {
 .form-login .pretty .state label {
     margin: 0 0 0 5px;
     color: #4a567c;
+    text-shadow: 0 2.5px 4px rgba(142, 136, 192, 0.3);
 }
 
 .form-login .pretty input:active~.state label {
@@ -618,7 +624,7 @@ button:focus {
 }
 
 .pretty.p-svg input.state:before {
-    transition: all 300ms ease-out;
+    transition: all 3000ms ease-out;
 }
 
 .pretty.p-svg input:hover~.state label:before,
@@ -633,6 +639,7 @@ button:focus {
     height: 35px;
     margin-right: 5.55%;
     background: #6f7a9a;
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;

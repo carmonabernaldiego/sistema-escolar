@@ -67,6 +67,7 @@
 
 .pretty .state label:before {
     border: 2px solid #929cb9;
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
 }
 
 .pretty .state.p-is-hover,
