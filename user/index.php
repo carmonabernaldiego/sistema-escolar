@@ -28,7 +28,7 @@ if (!empty($_POST['btn'])) {
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 	<title>Usuarios | Sistema Escolar</title>
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
-	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/styleconfiguser.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
 	<script src="/js/jquery.min.js"></script>
