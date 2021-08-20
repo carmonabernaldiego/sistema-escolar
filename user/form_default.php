@@ -45,8 +45,7 @@ if ($_SESSION['user_type'][0] == 'admin') {
 
 echo '
 <div class="form-data formConfigUser">
-	<div class="loader-image-upload">
-	</div>
+	<div class="loader-image-upload"></div>
 	<div class="body">
 		<div id="section-croppie-image">
 			<div id="image_crop"></div>
@@ -79,10 +78,11 @@ if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 	}
 }
 echo '
-					</div>
-					<div class="section-user-info">
-						<span class="user-name">' . $_SESSION['name'] . ' ' . $_SESSION['surnames'] . '</span>
-						<span class="user-id">' . $_SESSION['user_id'][0] . '</span>
+					
+						<div class="section-user-info">
+							<span class="user-name">' . $_SESSION['name'] . ' ' . $_SESSION['surnames'] . '</span>
+							<span class="user-id">' . $_SESSION['user_id'][0] . '</span>
+						</div>
 					</div>
 				</div>
 				<div class="last">

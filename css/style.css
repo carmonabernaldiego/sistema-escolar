@@ -1510,7 +1510,6 @@ button:focus {
 -------------------------------------------*/
 
 .formConfigUser {
-    position: relative;
     float: none;
     width: 100%;
     background: #44475a;
@@ -1624,11 +1623,8 @@ button:focus {
 
 .formConfigUser .body #section-croppie-image,
 .form-data .body #section-croppie-image {
-    position: relative;
     width: 100%;
-    margin: 0 auto;
-    padding-top: 25px;
-    padding-bottom: 6px;
+    padding: 33px 0 53.5px;
 }
 
 .formConfigUser .body #section-croppie-image .crop_btn,

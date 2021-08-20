@@ -100,9 +100,11 @@
 
 .select2-results__option {
     font-size: 0.9em;
+    font-weight: 500;
     padding: 6px 12px;
     user-select: none;
     -webkit-user-select: none;
+    color: #4a567c;
 }
 
 .select2-results__option--selectable {
@@ -193,8 +195,12 @@
     background: #dde8fc;
     outline: 0;
     outline-width: 0;
-    color: #4a567c !important;
     box-shadow: 0 0 0 2.5pt #929cb9;
+    transition: all 200ms ease-in;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered {
+    color: #4a567c;
     transition: all 200ms ease-in;
 }
 
@@ -416,7 +422,7 @@
     background: transparent;
     border: none;
     color: #4a567c !important;
-    font-size: 0.95sem;
+    font-size: 0.95em;
     font-weight: 500;
     outline: 0;
     box-shadow: none;

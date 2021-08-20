@@ -56,7 +56,7 @@ $(document).ready(function() {
             });
         }
         reader.readAsDataURL(this.files[0]);
-        $('#section-user-image').hide();
+        $('.wrap').hide();
         $('#section-croppie-image').show();
     });
 
@@ -67,8 +67,7 @@ $(document).ready(function() {
             quality: 1,
             circle: false
         }).then(function(response) {
-            $('.loader-image-upload').css('visibility', 'visible');
-            $('#section-user-image').show();
+            $('.wrap').show();
             $('#section-croppie-image').hide();
             $.ajax({
                 url: 'upload.php',

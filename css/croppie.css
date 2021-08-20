@@ -141,23 +141,19 @@
 /*************************************/
 
 .cr-slider {
+    display: block;
+    position: absolute;
     -webkit-appearance: none;
     /*removes default webkit styles*/
     /*border: 1px solid white; */
     /*fix for FF unable to apply focus style bug */
-    width: 228px;
+    width: 170px;
     /*required for proper track sizing in FF*/
     max-width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-color: transparent;
-    position: absolute;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     left: 0;
     right: 0;
-    text-align: center;
+    margin: 23.5px auto 0;
+    background-color: transparent;
 }
 
 .cr-slider::-webkit-slider-thumb:hover,
