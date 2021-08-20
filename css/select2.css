@@ -96,6 +96,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
 }
 
 .select2-results__option {
@@ -180,10 +181,11 @@
 .select2-container--default .select2-selection--single {
     height: 36px;
     background-color: #eef4ff;
-    box-shadow: 1px 1px 4px rgb(142 136 192);
+    box-shadow: 0 1px 4px rgb(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 500;
@@ -271,10 +273,11 @@
 
 .select2-container--default .select2-selection--multiple {
     background: #eef4ff;
-    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 500;
@@ -311,6 +314,7 @@
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
     background-color: #6272a4;
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     color: #eef4ff !important;
     border: none;
     border-radius: 0.4em;
@@ -340,6 +344,7 @@
     border: none;
     border-right: 1px solid #eef4ff;
     color: #eef4ff;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
@@ -422,6 +427,7 @@
     background: transparent;
     border: none;
     color: #4a567c !important;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-size: 0.95em;
     font-weight: 500;
     outline: 0;

@@ -24,6 +24,7 @@
 .icon {
     font-family: "icons" !important;
     text-transform: none;
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
 }
 
 
@@ -269,7 +270,7 @@ button:focus {
     width: 50px;
     height: 50px;
     margin: 5% 8%;
-    box-shadow: 0 0px 6px rgba(98, 114, 164, 0.8);
+    box-shadow: 0 0 8px rgba(94, 109, 151, 0.3);
     border: 2px solid #9492c0;
     border-radius: 10em;
     pointer-events: none;
@@ -555,6 +556,7 @@ button:focus {
     border: 2px solid #929cb9;
     border-radius: 0.4em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-size: .9em;
     font-weight: 600;
     outline: none !important;
@@ -655,6 +657,7 @@ button:focus {
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-size: .9em;
     font-weight: 600;
     cursor: pointer;
@@ -706,13 +709,14 @@ button:focus {
     margin: 0 0 0 8%;
     padding: 0 23.5% 0 3.5%;
     background: #eef4ff;
-    box-shadow: -1px 0 4px rgba(142, 136, 192, 0.5);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-top-left-radius: 0.4em;
     border-bottom-left-radius: 0.4em;
     border-top-right-radius: 0.55em;
     border-bottom-right-radius: 0.55em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-weight: 500;
     font-size: 0.9em;
     transition: all 300ms ease-out;
@@ -775,6 +779,7 @@ button:focus {
     border: none;
     border-radius: 100%;
     cursor: pointer;
+    box-shadow: 0 1px 4px rgba(131, 131, 131, 0.3);
 }
 
 .form-options .options .btn.disabled,
@@ -790,7 +795,7 @@ button:focus {
 }
 
 .form-options .options .btnadd {
-    box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
+    box-shadow: 0 1px 4px rgba(91, 133, 127, 0.3);
     background: #569188;
     border-color: #6daaa3;
     transition: all 300ms ease-out;
@@ -810,7 +815,7 @@ button:focus {
 }
 
 .form-options .options .btnexit {
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    box-shadow: 0 1px 4px rgba(219, 73, 73, 0.3);
     background: #db4949;
     border-color: #e77f7f;
     transition: all 300ms ease-out;
@@ -835,7 +840,7 @@ button:focus {
 
 .form-options .options .search-mobile.btnsearch {
     display: none;
-    box-shadow: 2px 2px 4px rgba(73, 100, 219, 0.3);
+    box-shadow: 0 1px 4px rgba(73, 100, 219, 0.3);
     background: #6272a4;
     border-color: #8192c9;
     transition: all 300ms ease-out;
@@ -880,7 +885,7 @@ button:focus {
 .form-gridview table {
     width: 92%;
     margin: 4.5% auto 0;
-    box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border-collapse: collapse;
     border-top-left-radius: 0.4em;
     border-top-right-radius: 0.4em;
@@ -894,7 +899,7 @@ button:focus {
     max-width: fit-content;
     overflow-x: auto;
     white-space: nowrap;
-    box-shadow: 0 1.4px 4px rgba(142, 136, 192, 0.2);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
 }
 
 .form-gridview th {
@@ -923,7 +928,7 @@ button:focus {
     padding: 8px 15px;
     background: #eef4ff;
     color: #4a567c;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.2);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     border-bottom: solid #6273a495 1px;
     font-size: 0.9em;
     font-weight: 500;
@@ -948,7 +953,7 @@ button:focus {
     width: 20px;
     height: 20px;
     background: #569188;
-    box-shadow: 2px 2px 4px rgba(91, 133, 127, 0.3);
+    box-shadow: 0 1px 4px rgba(91, 133, 127, 0.3);
     border: none;
     border-radius: 2em;
     color: #eef4ff;
@@ -975,7 +980,7 @@ button:focus {
     width: 20px;
     height: 20px;
     background: #3f6992;
-    box-shadow: 2px 2px 4px rgba(63, 105, 146, 0.3);
+    box-shadow: 0 1px 4px rgba(63, 105, 146, 0.3);
     border: none;
     border-radius: 2em;
     color: #eef4ff;
@@ -1002,7 +1007,7 @@ button:focus {
     width: 20px;
     height: 20px;
     background: #db4949;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
+    box-shadow: 0 1px 4px rgba(219, 73, 73, 0.3);
     border: none;
     border-radius: 2em;
     color: #eef4ff;
@@ -1049,7 +1054,7 @@ button:focus {
     width: 5%;
     height: 22px;
     background: #7e8aac;
-    box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.3);
+    box-shadow: 0 1px 4px rgba(98, 114, 164, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
@@ -1141,10 +1146,11 @@ button:focus {
     margin: 0 0 25px 0;
     padding: 0 3%;
     background: #eef4ff;
-    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-weight: 500;
     font-size: 0.9em;
     transition: all 300ms ease-out;
@@ -1158,10 +1164,11 @@ button:focus {
     margin: 0 0 20px 0;
     padding: 6px 3%;
     background: #eef4ff;
-    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     line-height: 1.7;
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
@@ -1177,10 +1184,11 @@ button:focus {
     margin: 0 0 25px 0;
     padding: 0 1%;
     background: #eef4ff;
-    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 500;
@@ -1203,10 +1211,11 @@ button:focus {
     margin: 0 0 25px 0;
     padding: 0 3%;
     background: #eef4ff;
-    box-shadow: 1px 1px 4px rgba(142, 136, 192, 1);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #687292;
+    text-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 500;
@@ -1229,7 +1238,7 @@ button:focus {
     margin: 0;
     padding: 8px 0 0 8px;
     background: #6272a4;
-    box-shadow: -2px -2px 4px rgba(142, 136, 192, 0.3);
+    box-shadow: -1px -1px 8px rgba(142, 136, 192, 0.2);
     border: none;
     border-color: #929cb9;
     border-top-left-radius: 100%;
@@ -1239,6 +1248,10 @@ button:focus {
     font-size: 1.1em;
     cursor: pointer;
     transition: all 300ms ease-out;
+}
+
+.form-data .body .btn.icon {
+    text-shadow: -1px -1px 4px rgb(142, 136, 192, 1);
 }
 
 .form-data .body .btn:hover,
@@ -1368,7 +1381,7 @@ button:focus {
 .form-data table {
     width: 94%;
     margin: 0 auto 3%;
-    box-shadow: 0 1.5px 4px rgba(142, 136, 192, 0.4);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border-collapse: collapse;
     border-top-left-radius: 0.6em;
     border-top-right-radius: 0.6em;
@@ -1548,23 +1561,6 @@ button:focus {
     text-transform: none;
 }
 
-.formConfigUser .body .labelError {
-    visibility: hidden;
-    display: block;
-    margin-top: -10px;
-    padding: 5px 0;
-    border-radius: 0.4em;
-    text-align: center;
-    background-color: #db5f5f;
-    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
-    transition: all 300ms ease-out;
-}
-
-.formConfigUser .body .labelError.show {
-    visibility: visible!important;
-    transition: all 300ms ease-in;
-}
-
 .formConfigUser .body #section-user-image,
 .form-data .body #section-user-image {
     width: 100%;
@@ -1579,7 +1575,7 @@ button:focus {
     border: solid #eef4ff 4px;
     border-radius: 100%;
     pointer-events: none;
-    box-shadow: 0 0 8px rgba(142, 136, 1924, 0.3);
+    box-shadow: 0 0 8px rgba(142, 136, 192, 0.3);
 }
 
 .ConfigUser .body #section-user-image .file,
@@ -1594,7 +1590,7 @@ button:focus {
     margin-top: -32px;
     padding: 0;
     background: #6272a4;
-    box-shadow: 1px 1px 8px rgba(142, 136, 192, 0.3);
+    box-shadow: 0 0 8px rgba(142, 136, 192, 0.3);
     border-radius: 100%;
     color: #eef4ff;
     font-size: 1.6em;
@@ -1646,7 +1642,7 @@ button:focus {
     margin-top: -47px;
     padding: 0;
     background: #6272a4;
-    box-shadow: none;
+    box-shadow: 0 0 8px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 100%;
     color: #eef4ff;
@@ -1701,7 +1697,7 @@ input[type="range"]:active {
 .formConfigUser .body .section-user-info span.user-id {
     display: block;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
+    text-shadow: 0 2px 4px rgba(142, 136, 192, 0.3);
     text-align: center;
     font-size: 1em;
     font-weight: 600;
@@ -1724,7 +1720,7 @@ input[type="range"]:active {
     width: 72%;
     margin: 0;
     padding: 0 25% 0 3%;
-    box-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
 }
 
 .formConfigUser .body .config-data-user .btn-edit-email {
@@ -1770,13 +1766,14 @@ input[type="range"]:active {
     height: 36px;
     padding-left: 10.6%;
     background: #6272a4;
-    box-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
     font-size: 0.95em;
     font-weight: 500;
     text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     cursor: pointer;
     transition: all 300ms ease-out;
 }
@@ -1828,12 +1825,12 @@ input[type="range"]:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
+    box-shadow: 0 2px 4px rgba(142, 136, 192, 0.3);
     padding: 5px 15px 4px;
     border: 2px solid #eef4ff;
     border-radius: 0.4em;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
+    text-shadow: 0 2px 4px rgba(142, 136, 192, 0.3);
     font-size: 0.8em;
     font-weight: 600;
     text-transform: uppercase;
@@ -2354,7 +2351,7 @@ input[type="range"]:active {
         width: 5%;
     }
     .content-full {
-        margin-bottom: 0px !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -2373,7 +2370,7 @@ input[type="range"]:active {
         margin: 7.5% auto 0;
         overflow-x: auto;
         white-space: nowrap;
-        box-shadow: 0 1.4px 4px rgba(142, 136, 192, 0.2);
+        box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     }
     .form-gridview .pages {
         margin: 3.2% 0 3.2% 3.89%;
