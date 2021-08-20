@@ -2255,6 +2255,15 @@ input[type="range"]:active {
     }
 }
 
+@media only screen and (max-width: 820px) {
+    .formConfigUser .body .config-data-user .btn-edit-info-user,
+    .formConfigUser .body .config-data-user .btn-change-pass {
+        width: 87.9%;
+        height: 36px;
+        padding-left: 12%;
+    }
+}
+
 @media only screen and (max-width: 701px) {
     .info-title {
         width: 59.5%;
@@ -2273,6 +2282,12 @@ input[type="range"]:active {
     }
     .formConfigUser .body .first {
         padding: 24px 0 2%;
+    }
+    .formConfigUser .body .config-data-user .btn-edit-info-user,
+    .formConfigUser .body .config-data-user .btn-change-pass {
+        width: 90.9%;
+        height: 36px;
+        padding-left: 9%;
     }
     .formConfigUser .body .footer {
         padding: 24px 0 24px;
@@ -2337,6 +2352,15 @@ input[type="range"]:active {
     }
 }
 
+@media only screen and (max-width: 540px) {
+    .formConfigUser .body .config-data-user .btn-edit-info-user,
+    .formConfigUser .body .config-data-user .btn-change-pass {
+        width: 89%;
+        height: 36px;
+        padding-left: 11%;
+    }
+}
+
 @media only screen and (max-width: 436px) {
     .info-title {
         width: 59.5%;
@@ -2363,5 +2387,14 @@ input[type="range"]:active {
     }
     .form-data .delete .btn-no {
         margin: 22px 6% 25px 0;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .formConfigUser .body .config-data-user .btn-edit-info-user,
+    .formConfigUser .body .config-data-user .btn-change-pass {
+        width: 90%;
+        height: 36px;
+        padding-left: 13%;
     }
 }
