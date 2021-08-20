@@ -87,7 +87,10 @@ echo '
 				</div>
 				<div class="last">
 					<div class="config-data-user">
-						<input disabled id="txtemailupdate" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" required placeholder="Correo electrónico" autocomplete="off"/>
+						<p>
+							<input disabled id="txtemailupdate" class="text text-edit-email" type="email" name="txtemailupdate" value="' . $_SESSION['email'][0] . '" maxlength="200" placeholder="Correo electrónico" autocomplete="off" required>
+							<button id="btnemailupdate" class="btn-edit-email icon" name="btnemailupdate" type="submit">edit</button>
+						</p>
 						<a class="btn-edit-info-user" href="#"><span class="icon">edit_note</span>Información Personal</a>
 						<a class="btn-change-pass" href="#"><span class="icon">lock_open</span>Cambiar Contraseña</a>
 					</div>

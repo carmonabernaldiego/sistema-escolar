@@ -16,8 +16,8 @@ $(document).ready(function() {
             type: 'circle' //square
         },
         boundary: {
-            width: 220,
-            height: 220
+            width: 224,
+            height: 224
         }
     });
 

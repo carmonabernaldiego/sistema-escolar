@@ -316,18 +316,25 @@ button:focus {
     display: none;
     position: absolute;
     right: 4%;
-    width: 40%;
+    width: 55%;
     margin-top: -10%;
     background: #383a59;
     box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: 3px solid #6272a4;
     border-radius: 0.4em;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
 }
 
 .nav-home .user span.logout_user>a+ul>li>a {
     font-size: 0.875em;
+}
+
+.nav-home .user span.logout_user>a+ul>li>a .icon {
+    margin: 0;
+    margin-right: 15.5px;
+    padding: 0;
+    font-size: 1em;
 }
 
 .nav-home .user span.logout_user>a:focus+ul>li {
@@ -1714,7 +1721,43 @@ input[type="range"]:active {
 }
 
 .formConfigUser .body .config-data-user .text {
+    width: 72%;
     margin: 0;
+    padding: 0 25% 0 3%;
+    box-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
+}
+
+.formConfigUser .body .config-data-user .btn-edit-email {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 22%;
+    height: 36px;
+    margin-top: -36px;
+    background: #6272a4;
+    box-shadow: none !important;
+    border: none;
+    border-color: #929cb9;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #eef4ff;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.formConfigUser .body .config-data-user .btn-edit-email:hover,
+.formConfigUser .body .config-data-user .btn-edit-email:focus {
+    background: #4a567c;
+    border: 4px solid #929cb9;
+    color: #aebbd3;
+    transition: all 200ms ease-in;
 }
 
 .formConfigUser .body .config-data-user .btn-edit-info-user,

@@ -52,8 +52,8 @@ if (strpos($url_actual, 'modules')) {
             <a class="icon" href="#">expand_more</a>
             <ul>
                 <li>
-                    <a style="border-bottom: 3px solid #6272a4;" href="/user">Configuración</a>
-                    <a href="/modules/logout">Cerrar Sesión</a>
+                    <a style="border-bottom: 3px solid #6272a4;" href="/user"><span class="icon">settings</span>Configuración</a>
+                    <a href="/modules/logout"><span class="icon">logout</span>Cerrar Sesión</a>
                 </li>
             </ul>
         </span>
