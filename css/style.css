@@ -478,7 +478,7 @@ button:focus {
 .wrap-title-login {
     height: 230px;
     background: #383a59e7;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     user-select: none;
 }
 
@@ -487,7 +487,7 @@ button:focus {
     padding: 25px 0 0 0;
     font-size: 3.2em;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
+    text-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
 }
 
 .form-login {
@@ -524,7 +524,7 @@ button:focus {
     display: block;
     padding: 104px 0 19px 0;
     color: #4a567c;
-    text-shadow: 0 2px 4px rgba(142, 136, 192, 0.2);
+    text-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
     font-size: 1.7em;
     text-align: center;
 }
@@ -532,6 +532,7 @@ button:focus {
 .form-login .label.error {
     margin: 8px 0 3px 0;
     color: #ff7058;
+    text-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
     font-size: 1.2em;
     font-weight: 600;
 }
@@ -543,12 +544,14 @@ button:focus {
     margin: 0 6.25% 22px;
     padding: 0 2.3%;
     background: transparent;
-    box-shadow: 0 2px 4px rgba(142, 136, 192, 0.2);
-    color: #687292;
+    box-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
     border: 2px solid #929cb9;
     border-radius: 0.4em;
+    color: #687292;
     font-size: .9em;
     font-weight: 600;
+    outline: none !important;
+    outline-width: 0 !important;
     transition: all 300ms ease-out;
 }
 
@@ -556,8 +559,6 @@ button:focus {
 .form-login .text:focus,
 .form-login .textcontrasena:hover,
 .form-login .textcontrasena:focus {
-    outline: none !important;
-    outline-width: 0 !important;
     color: #4a567c !important;
     cursor: text;
     box-shadow: 0 0 0 1.5pt #929cb9 !important;
@@ -576,11 +577,12 @@ button:focus {
 }
 
 .form-login .forgot-pass a {
-    outline: none;
     color: #4a567c;
     font-size: 1em;
     text-decoration: none;
-    text-shadow: 0 2px 4px rgba(142, 136, 192, 0.2);
+    outline: none !important;
+    outline-width: 0 !important;
+    text-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
 }
 
 .form-login .forgot-pass a:active {
@@ -623,19 +625,11 @@ button:focus {
 .form-login .pretty .state label {
     margin: 0 0 0 5px;
     color: #4a567c;
-    text-shadow: 0 2px 4px rgba(142, 136, 192, 0.2);
+    text-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
 }
 
 .form-login .pretty .state label:before {
-    box-shadow: 0 2px 4px rgba(142, 136, 192, 0.2);
-}
-
-.form-login .pretty input:active~.state label {
-    color: #687292;
-}
-
-.form-login .pretty.p-svg input.state:before {
-    transition: all 3000ms ease-out;
+    box-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
 }
 
 .form-login .pretty.p-svg input:hover~.state label:before,
@@ -650,20 +644,21 @@ button:focus {
     height: 35px;
     margin-right: 5.55%;
     background: #6f7a9a;
-    box-shadow: 0 2px 4px rgba(142, 136, 192, 0.2);
+    box-shadow: 0 2px 6px rgba(142, 136, 192, 0.2);
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
     font-size: .9em;
     font-weight: 600;
     cursor: pointer;
+    outline: none !important;
+    outline-width: 0 !important;
     transition: all 300ms ease-out;
 }
 
 .form-login .button:hover,
 .form-login .button:focus {
     background: #383a59c5;
-    border: none;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
     transition: all 200ms ease-in;
 }
