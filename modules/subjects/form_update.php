@@ -64,24 +64,24 @@ echo '
 		<form name="form-update-subjects" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return sendTeachers()">
 			<div class="wrap">
 				<div class="first">
-					<label class="label">Asignatura</label>
+					<label for="txtsubjectid" class="label">Asignatura</label>
 					<input style="display: none;" type="text" name="txtsubject" value="' . $_SESSION['subject'][0] . '"/>
-					<input class="text" type="text" id="txtsubject" name="txtsubject" value="' . $_SESSION['subject'][0] . '" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" disabled/>
-					<label class="label">Nombre</label>
-                    <input class="text" type="text" id="txtsubjectname" name="txtsubjectname" value="';
+					<input id="txtsubjectid" class="text" type="text" id="txtsubject" name="txtsubject" value="' . $_SESSION['subject'][0] . '" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" disabled/>
+					<label for="txtsubjectname" class="label">Nombre</label>
+                    <input id="txtsubjectname" class="text" type="text" id="txtsubjectname" name="txtsubjectname" value="';
 if (isset($_SESSION['temp_subject_name'])) {
 	echo $_SESSION['temp_subject_name'];
 }
 echo '" maxlength="100" required autofocus/>
-					<label class="label">Descripción</label>
-					<textarea maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription" data-expandable>';
+					<label for="txtsubjectdescription" class="label">Descripción</label>
+					<textarea id="txtsubjectdescription" maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription" data-expandable>';
 if (isset($_SESSION['temp_subject_description'])) {
 	echo $_SESSION['temp_subject_description'];
 }
 echo '</textarea>
 				</div>
 				<div class="last">
-					<label class="label">Carrera</label>
+					<label for="selectsubjectcareer" class="label">Carrera</label>
 					<select id="selectsubjectcareer" class="selectCareer" name="selectcareer" required>';
 if (isset($_SESSION['temp_subject_career_id'])) {
 	if (isset($_SESSION['temp_subject_career_id'])) {
@@ -126,7 +126,7 @@ if (isset($_SESSION['temp_subject_career_id'])) {
 }
 echo '
 					</select>
-					<label class="label">Semestre</label>
+					<label for="txtsubjectsemester" class="label">Semestre</label>
                     <input class="text" type="number" id="txtsubjectsemester" name="txtsubjectsemester" value="';
 if (isset($_SESSION['temp_subject_semester'])) {
 	echo $_SESSION['temp_subject_semester'];
@@ -149,8 +149,8 @@ echo '
 					<input style="display: none;" type="text" id="txtsubjectcareer" name="txtsubjectcareer" value="' . $_SESSION['subject_career'][0] . '"/>
 					<input style="display: none;" type="text" id="tempsubjectcareer" name="tempsubjectcareer" value="' . $_SESSION['temp_subject_career_id'] . '"/>
 					<input style="display: none;" type="text" id="txtsubjectteachers" name="txtsubjectteachers" value="' . $_SESSION['subject_teachers'] . '"/>
-                    <label class="label">Docente(s)</label>
-                    <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" required>
+                    <label for="selectcareersteachers" class="label">Docente(s)</label>
+                    <select id="selectcareersteachers" class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" required>
 ';
 if (isset($_SESSION['temp_subject_teachers_user'])) {
 	$i = 0;

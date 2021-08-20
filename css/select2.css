@@ -99,7 +99,8 @@
 }
 
 .select2-results__option {
-    padding: 6px 3%;
+    font-size: 0.9em;
+    padding: 6px 12px;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -272,7 +273,7 @@
     font-size: 0.9em;
     font-weight: 500;
     cursor: text;
-    padding: 7px 0.93% 12px;
+    padding: 5px 9px 9.5px 4px;
     position: relative;
     transition: all 300ms ease-out;
 }
@@ -309,11 +310,11 @@
     border-radius: 0.4em;
     box-sizing: border-box;
     display: inline-block;
-    margin-left: 5px;
     margin-top: 5px;
-    padding: 0;
+    margin-left: 5px;
     padding: 3px 0;
-    padding-left: 20px;
+    padding-left: 24.3px;
+    padding-right: 1px;
     position: relative;
     max-width: 100%;
     overflow: hidden;
@@ -336,7 +337,7 @@
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    padding: 3px 4px;
+    padding: 3px 5px 3px 6.5px;
     position: absolute;
     left: 0;
     top: 0;
@@ -414,11 +415,11 @@
     margin-top: 10px;
     background: transparent;
     border: none;
-    color: #687292 !important;
+    color: #4a567c !important;
+    font-size: 0.95sem;
     font-weight: 500;
     outline: 0;
     box-shadow: none;
-    -webkit-appearance: textfield;
 }
 
 .select2-container--default .select2-results>.select2-results__options {

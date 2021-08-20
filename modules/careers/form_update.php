@@ -24,17 +24,17 @@ echo '
 		<form name="form-update-careers" action="update.php" method="POST">
 			<div class="wrap">
 				<div class="first">
-					<label class="label">Carrera</label>
+					<label for="txtcareerid" class="label">Carrera</label>
 					<input style="display: none;" type="text" name="txtcareer" value="' . $_SESSION['career'][0] . '"/>
-					<input class="text" type="text" name="txtcareer" value="' . $_SESSION['career'][0] . '" disabled/>
+					<input id="txtcareerid" class="text" type="text" name="txtcareer" value="' . $_SESSION['career'][0] . '" disabled/>
 				</div>
 				<div class="last">
-					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtcareername" value="' . $_SESSION['career_name'][0] . '" maxlength="100" required autofocus/>
+					<label for="txtcareername" class="label">Nombre</label>
+					<input id="txtcareername" class="text" type="text" name="txtcareername" value="' . $_SESSION['career_name'][0] . '" maxlength="100" required autofocus/>
 				</div>
 				<div class="description">
-					<label class="label">Descripción</label>
-					<textarea maxlength="2000" class="textarea" name="txtcareerdescription" data-expandable>' . $_SESSION['career_description'][0] . '</textarea>
+					<label for="txtcareerdescription" class="label">Descripción</label>
+					<textarea id="txtcareerdescription" maxlength="2000" class="textarea" name="txtcareerdescription" data-expandable>' . $_SESSION['career_description'][0] . '</textarea>
 				</div>
 			</div>
 			<button id="btnSave" class="btn icon" type="submit">save</button>

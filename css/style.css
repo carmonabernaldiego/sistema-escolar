@@ -61,7 +61,7 @@ body.login {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(98, 114, 164);
+    background: rgba(98, 114, 164);
     border-bottom-left-radius: 0.6em;
     border-bottom-right-radius: 0.6em;
 }
@@ -170,6 +170,9 @@ button:focus {
 }
 
 .info-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     float: left;
     width: 73.1%;
     height: 100%;
@@ -177,15 +180,18 @@ button:focus {
 
 .info-title .title {
     display: block;
-    margin: 11.5px 0 0 4%;
+    margin-left: 4%;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     font-size: 1.25em;
     font-weight: 500;
     text-transform: capitalize;
 }
 
 .info-school-period {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     float: right;
     width: 26.7%;
     height: 100%;
@@ -194,12 +200,11 @@ button:focus {
 
 .info-school-period .school-period {
     display: block;
-    margin-top: 15px;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
-    text-align: center;
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     font-size: 0.9em;
     font-weight: 500;
+    text-align: center;
     text-transform: capitalize;
 }
 
@@ -234,7 +239,7 @@ button:focus {
     top: 0;
     bottom: 0;
     background: #383a59;
-    box-shadow: 0px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 3px 2px rgba(73, 80, 104, 0.4);
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
@@ -264,7 +269,7 @@ button:focus {
     width: 50px;
     height: 50px;
     margin: 5% 8%;
-    box-shadow: 0px 0px 6px rgba(98, 114, 164, 0.8);
+    box-shadow: 0 0px 6px rgba(98, 114, 164, 0.8);
     border: 2px solid #9492c0;
     border-radius: 10em;
     pointer-events: none;
@@ -274,7 +279,7 @@ button:focus {
     float: left;
     margin: -2% 0 2% 8%;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     font-weight: 500;
     font-size: 0.97em;
     text-transform: capitalize;
@@ -287,7 +292,7 @@ button:focus {
 
 .nav-home .user span.logout_user>a {
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     text-decoration: none;
     font-size: 1em;
     font-weight: 500;
@@ -314,7 +319,7 @@ button:focus {
     width: 40%;
     margin-top: -10%;
     background: #383a59;
-    box-shadow: 0px 1px 4px rgba(142, 136, 192, 0.3);
+    box-shadow: 0 1px 4px rgba(142, 136, 192, 0.3);
     border: 3px solid #6272a4;
     border-radius: 0.4em;
     text-align: center;
@@ -357,7 +362,7 @@ button:focus {
     display: block;
     padding: 4% 8%;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     font-size: 0.97em;
     font-weight: 500;
     text-decoration: none;
@@ -404,6 +409,7 @@ button:focus {
     box-shadow: 2px 3px 2px rgba(98, 164, 139, 0.4);
     border-radius: 0.4em;
     user-select: none;
+    overflow: hidden;
 }
 
 .box-notification-error {
@@ -413,6 +419,7 @@ button:focus {
     box-shadow: 2px 3px 2px rgba(164, 98, 98, 0.4);
     border-radius: 0.4em;
     user-select: none;
+    overflow: hidden;
 }
 
 .box-notification-error:after,
@@ -480,7 +487,7 @@ button:focus {
     padding: 25px 0 0 0;
     font-size: 3.2em;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
 }
 
 .form-login {
@@ -892,7 +899,7 @@ button:focus {
     padding: 7px 15px;
     background: #282a36;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     border: none;
     text-align: left;
     font-size: 0.9em;
@@ -1092,7 +1099,7 @@ button:focus {
 .form-data .head h1 {
     color: #eef4ff;
     font-size: 1em;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     text-align: center;
     font-weight: 500;
     text-transform: capitalize;
@@ -1120,7 +1127,7 @@ button:focus {
     display: block;
     margin: 0 0 6px 0;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     font-size: 0.9em;
     font-weight: 500;
     text-transform: none;
@@ -1220,7 +1227,7 @@ button:focus {
     margin: 0;
     padding: 8px 0 0 8px;
     background: #6272a4;
-    box-shadow: -2px -2px 4px rgb(142, 136, 192, 0.3);
+    box-shadow: -2px -2px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-color: #929cb9;
     border-top-left-radius: 100%;
@@ -1376,7 +1383,7 @@ button:focus {
     padding: 10px 15px;
     background: #282a36;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     border: none;
     text-align: left;
     font-size: 0.9em;
@@ -1525,15 +1532,15 @@ button:focus {
 .formConfigUser .body .wrap,
 .form-users .body .wrap {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 0;
 }
 
 .formConfigUser .body .first,
 .formConfigUser .body .last {
-    width: 535px;
+    width: 45%;
 }
 
 .formConfigUser .body .label {
@@ -1548,7 +1555,7 @@ button:focus {
     border-radius: 0.4em;
     text-align: center;
     background-color: #db5f5f;
-    box-shadow: 2px 2px 4px rgb(219 73 73 / 30%);
+    box-shadow: 2px 2px 4px rgba(219, 73, 73, 0.3);
     transition: all 300ms ease-out;
 }
 
@@ -1571,7 +1578,7 @@ button:focus {
     border: solid #eef4ff 4px;
     border-radius: 100%;
     pointer-events: none;
-    box-shadow: 0px 0 8px rgba(182, 193, 224, 0.8);
+    box-shadow: 0 0 8px rgba(142, 136, 1924, 0.3);
 }
 
 .ConfigUser .body #section-user-image .file,
@@ -1586,7 +1593,7 @@ button:focus {
     margin-top: -32px;
     padding: 0;
     background: #6272a4;
-    box-shadow: 1px 1px 4px rgb(142, 136, 192, 0.3);
+    box-shadow: 1px 1px 8px rgba(142, 136, 192, 0.3);
     border-radius: 100%;
     color: #eef4ff;
     font-size: 1.6em;
@@ -1677,7 +1684,7 @@ input[type="range"]:active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px 0 15px;
+    padding: 25px 0 3.5%;
 }
 
 .formConfigUser .body .last {
@@ -1695,7 +1702,7 @@ input[type="range"]:active {
 .formConfigUser .body .section-user-info span.user-id {
     display: block;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     text-align: center;
     font-size: 1em;
     font-weight: 600;
@@ -1723,15 +1730,16 @@ input[type="range"]:active {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     width: 100%;
     height: 36px;
     background: #6272a4;
-    box-shadow: 1px 1px 4px rgb(142, 136, 192, 0.3);
+    box-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
     border-radius: 0.4em;
     color: #eef4ff;
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 0.95em;
+    font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     transition: all 300ms ease-out;
@@ -1760,15 +1768,16 @@ input[type="range"]:active {
 
 .formConfigUser .body .config-data-user .btn-edit-info-user span.icon {
     display: block;
+    position: absolute;
+    left: 2.7%;
     font-size: 1.6em;
-    margin-right: 15px;
 }
 
 .formConfigUser .body .config-data-user .btn-change-pass span.icon {
     display: block;
+    position: absolute;
+    left: 2.7%;
     font-size: 1.2em;
-    margin-top: 1px;
-    margin-right: 15px;
 }
 
 .formConfigUser .body .footer {
@@ -1776,19 +1785,19 @@ input[type="range"]:active {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 30px 0 25px;
+    padding: 25px 0 25px;
 }
 
 .formConfigUser .body .footer span.user-permissions {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    box-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     padding: 5px 15px 4px;
     border: 2px solid #eef4ff;
     border-radius: 0.4em;
     color: #eef4ff;
-    text-shadow: 2px 2px 4px rgba(98, 114, 164, 0.7);
+    text-shadow: 2px 2px 4px rgba(142, 136, 192, 0.3);
     font-size: 0.8em;
     font-weight: 600;
     text-transform: uppercase;
@@ -2190,7 +2199,7 @@ input[type="range"]:active {
         width: 59.8%;
     }
     .info-title .title {
-        margin: 11.5px 0 0 5.5%;
+        margin-right: 5.5%;
     }
     .info-school-period {
         width: 40%;
@@ -2272,9 +2281,6 @@ input[type="range"]:active {
         width: 94%;
         padding: 6px 3%;
     }
-    .select2-container--default .select2-selection--multiple {
-        padding: 7px 2% 12px !important;
-    }
     .form-options {
         padding: 3px 0;
     }
@@ -2289,6 +2295,9 @@ input[type="range"]:active {
     }
     .form-gridview .pages ul li button {
         width: 5%;
+    }
+    .content-full {
+        margin-bottom: 0px !important;
     }
 }
 
@@ -2325,12 +2334,10 @@ input[type="range"]:active {
         width: 59.5%;
     }
     .info-title .title {
-        margin-top: 12px;
         font-size: 1.2em;
     }
     .info-school-period .school-period {
         padding: 0 8px;
-        margin-top: 7px;
         font-size: .85em;
     }
     .info-school-period .school-period a {

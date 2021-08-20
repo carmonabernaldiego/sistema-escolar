@@ -9,16 +9,16 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
         <form name="form-add-careers" action="insert.php" method="POST">
             <div class="wrap">
                 <div class="first">
-                    <label class="label">Carrera</label>
-                    <input class="text" type="text" name="txtcareer" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" autofocus required />
+                    <label for="txtcareerid" class="label">Carrera</label>
+                    <input id="txtcareerid" class="text" type="text" name="txtcareer" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" autofocus required />
                 </div>
                 <div class="last">
-                    <label class="label">Nombre</label>
-                    <input class="text" type="text" name="txtcareername" value="" maxlength="100" required />
+                    <label for="txtcareername" class="label">Nombre</label>
+                    <input id="txtcareername" class="text" type="text" name="txtcareername" value="" maxlength="100" required />
                 </div>
                 <div class="description">
-                    <label class="label">Descripción</label>
-                    <textarea maxlength="2000" class="textarea" name="txtcareerdescription" data-expandable></textarea>
+                    <label for="txtcareerdescription" class="label">Descripción</label>
+                    <textarea id="txtcareerdescription" maxlength="2000" class="textarea" name="txtcareerdescription" data-expandable></textarea>
                 </div>
             </div>
             <button id="btnSave" class="btn icon" type="submit">save</button>

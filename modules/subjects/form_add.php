@@ -9,21 +9,21 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
         <form name="form-add-subjects" action="insert.php" enctype="multipart/form-data" method="POST" onsubmit="return sendTeachers()">
             <div class="wrap">
                 <div class="first">
-                    <label class="label">Asignatura</label>
-                    <input class="text" type="text" id="txtsubject" name="txtsubject" value="<?php if (isset($_SESSION['temp_subject'])) {
+                    <label for="txtsubjectid" class="label">Asignatura</label>
+                    <input id="txtsubjectid" class="text" type="text" id="txtsubject" name="txtsubject" value="<?php if (isset($_SESSION['temp_subject'])) {
                                                                                                     echo $_SESSION['temp_subject'];
                                                                                                 } ?>" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" autofocus required />
-                    <label class="label">Nombre</label>
-                    <input class="text" type="text" id="txtsubjectname" name="txtsubjectname" value="<?php if (isset($_SESSION['temp_subject_name'])) {
+                    <label for="txtsubjectname" class="label">Nombre</label>
+                    <input id="txtsubjectname" class="text" type="text" id="txtsubjectname" name="txtsubjectname" value="<?php if (isset($_SESSION['temp_subject_name'])) {
                                                                                                             echo $_SESSION['temp_subject_name'];
                                                                                                         } ?>" maxlength="100" required />
-                    <label class="label">Descripción</label>
-                    <textarea maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription" data-expandable><?php if (isset($_SESSION['temp_subject_description'])) {
+                    <label for="txtsubjectdescription" class="label">Descripción</label>
+                    <textarea id="txtsubjectdescription" maxlength="2000" class="textarea" id="txtsubjectdescription" name="txtsubjectdescription" data-expandable><?php if (isset($_SESSION['temp_subject_description'])) {
                                                                                                                                             echo $_SESSION['temp_subject_description'];
                                                                                                                                         } ?></textarea>
                 </div>
                 <div class="last">
-                    <label class="label">Carrera</label>
+                    <label for="selectsubjectcareer" class="label">Carrera</label>
                     <select id="selectsubjectcareer" class="selectCareer" name="selectcareer" required>
                         <?php
                         if (isset($_SESSION['temp_subject_career_id'])) {
@@ -46,7 +46,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                         }
                         ?>
                     </select>
-                    <label class="label">Semestre</label>
+                    <label for="txtsubjectsemester" class="label">Semestre</label>
                     <input class="text" type="number" id="txtsubjectsemester" name="txtsubjectsemester" value="<?php if (isset($_SESSION['temp_subject_semester'])) {
                                                                                                                     echo $_SESSION['temp_subject_semester'];
                                                                                                                 } ?>" maxlength="2" min="1" max="12" list="defaultsemestres" required />
@@ -62,8 +62,8 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
                     </datalist>
                 </div>
                 <div class="content-full">
-                    <label class="label">Docente(s)</label>
-                    <select class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" required>
+                    <label for="selectcareersteachers" class="label">Docente(s)</label>
+                    <select id="selectcareersteachers" class="select-careers-teachers" name="selectCareersTeachers[]" multiple="multiple" required>
                         <?php
                         $i = 0;
 
