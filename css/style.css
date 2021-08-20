@@ -1683,8 +1683,9 @@ input[type="range"]:active {
 .formConfigUser .body .first {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 25px 0 3.5%;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0;
 }
 
 .formConfigUser .body .last {
@@ -1729,10 +1730,11 @@ input[type="range"]:active {
 .formConfigUser .body .config-data-user .btn-change-pass {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
-    width: 100%;
+    width: 89.4%;
     height: 36px;
+    padding-left: 10.6%;
     background: #6272a4;
     box-shadow: 1px 1px 4px rgba(142, 136, 192, 0.3);
     border: none;
@@ -1785,7 +1787,7 @@ input[type="range"]:active {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 25px 0 25px;
+    padding: 0 0 3%;
 }
 
 .formConfigUser .body .footer span.user-permissions {
@@ -2268,6 +2270,12 @@ input[type="range"]:active {
     .formConfigUser .body .first,
     .formConfigUser .body .last {
         width: 87.5%;
+    }
+    .formConfigUser .body .first {
+        padding: 24px 0 2%;
+    }
+    .formConfigUser .body .footer {
+        padding: 24px 0 24px;
     }
     .form-data .body .content-full {
         width: 88%;
