@@ -240,7 +240,7 @@ button:focus {
     top: 0;
     bottom: 0;
     background: #383a59;
-    box-shadow: 0 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 2px 0 2px rgba(73, 80, 104, 0.4);
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
@@ -414,7 +414,7 @@ button:focus {
     width: 100%;
     margin: 0 0 8% 0;
     background: #569188;
-    box-shadow: 0 3px 2px rgba(98, 164, 139, 0.4);
+    box-shadow: 0 2px 2px rgba(98, 164, 139, 0.4);
     border-radius: 0.4em;
     user-select: none;
     overflow: hidden;
@@ -424,7 +424,7 @@ button:focus {
     width: 100%;
     margin: 0 0 8% 0;
     background: #c0605d;
-    box-shadow: 0 3px 2px rgba(164, 98, 98, 0.4);
+    box-shadow: 0 2px 2px rgba(164, 98, 98, 0.4);
     border-radius: 0.4em;
     user-select: none;
     overflow: hidden;
