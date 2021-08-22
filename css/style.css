@@ -165,7 +165,7 @@ button:focus {
     height: 50px;
     margin: 35px 3%;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.4em;
     user-select: none;
 }
@@ -684,7 +684,7 @@ button:focus {
 .form-options {
     width: 100%;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.4em;
     user-select: none;
 }
@@ -867,7 +867,7 @@ button:focus {
     margin: 0 0 35px 0;
     width: 71%;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.4em;
 }
 
@@ -1091,7 +1091,7 @@ button:focus {
     margin: 0 0 35px 0;
     width: 71%;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.4em;
     user-select: none;
 }
@@ -1531,7 +1531,7 @@ button:focus {
     float: none;
     width: 100%;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.4em;
 }
 
@@ -1845,7 +1845,7 @@ input[type="range"]:active {
     width: 100%;
     height: 450px;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.4em;
 }
 
@@ -1925,7 +1925,7 @@ input[type="range"]:active {
     padding: 0.22em;
     border-radius: 100%;
     background: #44475a;
-    box-shadow: -1px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     cursor: pointer;
     transition: all 300ms ease-out;
 }
@@ -1944,7 +1944,7 @@ input[type="range"]:active {
 .user-mobile nav {
     max-height: 57px;
     background: #44475a;
-    box-shadow: -1px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 5em 0 0 5em;
     clip-path: ellipse(50% 50% at 150% 50%);
 }
@@ -2045,7 +2045,7 @@ input[type="range"]:active {
     padding: 0.77em 0.77em;
     border-radius: 0.4em;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     color: #eef4ff;
     font-size: 1.3em;
     line-height: 0.95em;
@@ -2076,7 +2076,7 @@ input[type="range"]:active {
     white-space: nowrap;
     height: 52px;
     background: #44475a;
-    box-shadow: 2px 3px 2px rgba(73, 80, 104, 0.4);
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0 0.4em 0.4em 0;
     padding: 0 .5em;
     clip-path: ellipse(50% 50% at -50% 50%);
