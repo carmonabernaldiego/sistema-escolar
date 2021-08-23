@@ -1,16 +1,23 @@
 /*-------------------------------------------
-  uploadimageuser.js
+  configuser.js
   By Diego Carmona Bernal
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
 
 $('.btn-edit-email').click(function(event) {
-    $('#txtemailupdate').prop("disabled", false);
+    $('#txtemailupdate').prop('disabled', false);
     $('#txtemailupdate').focus();
 
-    $('.btn-edit-email').prop("disabled", true);
+    $('.btn-edit-email').prop('disabled', true);
     $('.btn-edit-email').addClass('disabled');
+});
+
+$('#txtemailupdate').change(function(event) {
+    $('#txtemailupdate').prop('disabled', true);
+
+    $('.btn-edit-email').prop('disabled', false);
+    $('.btn-edit-email').removeClass('disabled');
 });
 
 $('.section-croppie-image').hide();
