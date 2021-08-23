@@ -47,8 +47,8 @@ echo '
 <div class="form-data formConfigUser">
 	<div class="loader-image-upload"></div>
 	<div class="body">
-		<div id="section-croppie-image">
-			<div id="image_crop"></div>
+		<div class="section-croppie-image">
+			<div class="image-crop"></div>
 			<div class="options">
 				<button class="crop-btn"><span class="icon">crop</span></button>
 				<form action="/user">      
@@ -59,7 +59,7 @@ echo '
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return confirmPass()">
 			<div class="wrap">
 				<div class="first">
-					<div id="section-user-image">
+					<div class="section-user-image">
 						<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
 		';
 $date_time_start = date_create($_SESSION['last_image_update'][0]);
@@ -70,11 +70,11 @@ $days = intval($interval->format('%a'));
 if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 	echo '
 						<a href="#" class="file"><span class="icon">add_a_photo</span></a>
-						<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
+						<input id="fileuploadimage" style="display: none;" type="file" name="fileuploadimage" accept=".jpg, .jpeg, .png" />
 		';
 } else {
 	echo '
-						<label class="file disabled" for="file_upload_image"><span class="icon">add_a_photo</span></label>
+						<a href="#" class="file disabled"><span class="icon">add_a_photo</span></a>
 		';
 	if ((15 - $days) >= 1) {
 		$_SESSION['msgbox_info'] = 1;
@@ -93,8 +93,8 @@ echo '
 				<div class="last">
 					<div class="config-data-user">
 						<p>
-							<input disabled id="txtemailupdate" class="text text-edit-email" type="email" name="txtemailupdate" value="' . $_SESSION['email'][0] . '" maxlength="200" placeholder="Correo electrónico" autocomplete="off" required>
-							<button id="btnemailupdate" class="btn-edit-email icon" name="btnemailupdate" type="submit">edit</button>
+							<input disabled id="txtemailupdate" class="text" type="email" name="txtemailupdate" value="' . $_SESSION['email'][0] . '" maxlength="200" placeholder="Correo electrónico" autocomplete="off" required>
+							<a class="btn-edit-email icon" href="#">edit</a>
 						</p>
 						<a class="btn-edit-info-user" href="#"><span class="icon">edit_note</span>Información Personal</a>
 						<a class="btn-change-pass" href="#"><span class="icon">lock_open</span>Cambiar Contraseña</a>

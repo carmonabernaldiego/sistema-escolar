@@ -5,7 +5,11 @@
   www.mysoftup.com
 -------------------------------------------*/
 
-$('#section-croppie-image').hide();
+$('.btn-edit-email').click(function(event) {
+    $('#fileuploadimage').trigger('click');
+});
+
+$('.section-croppie-image').hide();
 
 function confirmPass() {
     pass1 = document.getElementById('pass1');
@@ -23,11 +27,7 @@ function confirmPass() {
 }
 
 $(document).ready(function() {
-    $('.file').click(function(event) {
-        $('#file_upload_image').trigger('click');
-    });
-
-    $image_crop = $('#image_crop').croppie({
+    $image_crop = $('.image-crop').croppie({
         enableExif: true,
         viewport: {
             width: 190,
@@ -40,7 +40,11 @@ $(document).ready(function() {
         }
     });
 
-    $('#file_upload_image').on('change', function() {
+    $('.file').click(function(event) {
+        $('#fileuploadimage').trigger('click');
+    });
+
+    $('#fileuploadimage').on('change', function() {
         let reader = new FileReader();
         reader.onload = function(event) {
             $image_crop.croppie('bind', {
@@ -51,7 +55,7 @@ $(document).ready(function() {
         }
         reader.readAsDataURL(this.files[0]);
         $('.wrap').hide();
-        $('#section-croppie-image').show();
+        $('.section-croppie-image').show();
     });
 
     $('.crop-btn').click(function(event) {
@@ -62,7 +66,7 @@ $(document).ready(function() {
             circle: false
         }).then(function(response) {
             $('.wrap').show();
-            $('#section-croppie-image').hide();
+            $('.section-croppie-image').hide();
             $.ajax({
                 url: 'upload.php',
                 type: 'POST',
@@ -77,5 +81,4 @@ $(document).ready(function() {
         })
 
     });
-
 });
