@@ -94,7 +94,7 @@ echo '
 					<div class="config-data-user">
 						<p>
 							<input disabled id="txtemailupdate" class="text" type="email" name="txtemailupdate" value="' . $_SESSION['email'][0] . '" maxlength="200" placeholder="Correo electrónico" autocomplete="off" required>
-							<a class="btn-edit-email icon" href="#">edit</a>
+							<button class="btn-edit-email icon">edit</button>
 						</p>
 						<a class="btn-edit-info-user" href="#"><span class="icon">edit_note</span>Información Personal</a>
 						<a class="btn-change-pass" href="#"><span class="icon">lock_open</span>Cambiar Contraseña</a>

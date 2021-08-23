@@ -788,7 +788,7 @@ button:focus {
 }
 
 .form-options .search .btn-search.disabled.disabled:hover {
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
 .form-options .options .btnadd {
@@ -1624,7 +1624,7 @@ button:focus {
 
 .formConfigUser .body .section-user-image .file.disabled:hover,
 .formConfigUser .body .section-user-image .file.disabled:focus {
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
 .formConfigUser .body .section-user-image .file:active {
@@ -1757,6 +1757,12 @@ button:focus {
     transition: all 300ms ease-out;
 }
 
+.formConfigUser .body .config-data-user .btn-edit-email.disabled {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: default;
+}
+
 .formConfigUser .body .config-data-user .btn-edit-email:hover,
 .formConfigUser .body .config-data-user .btn-edit-email:focus {
     outline: none;
@@ -1765,6 +1771,12 @@ button:focus {
     box-shadow: inset 0 0 0 4px #929cb9;
     color: #aebbd3;
     transition: all 200ms ease-in;
+}
+
+.formConfigUser .body .config-data-user .btn-edit-email.disabled:hover,
+.formConfigUser .body .config-data-user .btn-edit-email.disabled:focus {
+    background: #6a7186;
+    box-shadow: none !important;
 }
 
 .formConfigUser .body .config-data-user .btn-edit-email:active {

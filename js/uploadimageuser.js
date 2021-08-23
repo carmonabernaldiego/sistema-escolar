@@ -6,7 +6,11 @@
 -------------------------------------------*/
 
 $('.btn-edit-email').click(function(event) {
-    $('#fileuploadimage').trigger('click');
+    $('#txtemailupdate').prop("disabled", false);
+    $('#txtemailupdate').focus();
+
+    $('.btn-edit-email').prop("disabled", true);
+    $('.btn-edit-email').addClass('disabled');
 });
 
 $('.section-croppie-image').hide();
