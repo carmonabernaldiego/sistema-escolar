@@ -62,7 +62,7 @@ body.login {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(142, 136, 192);
+    background: rgb(98, 114, 164);
     border-bottom-left-radius: 0.6em;
     border-bottom-right-radius: 0.6em;
 }
