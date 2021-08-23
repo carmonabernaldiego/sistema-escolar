@@ -30,10 +30,11 @@
     --litepicker-button-reset-color: #909090;
     --litepicker-button-reset-color-hover: #6272a4;
     --litepicker-highlighted-day-color: #4a567c;
-    --litepicker-highlighted-day-color-bg: #ffeb3b;
+    --litepicker-highlighted-day-color-bg: #4a567c;
 }
 
 .litepicker {
+    outline-color: #4a567c;
     margin-top: 10px;
     font-size: 0.9em;
 }
