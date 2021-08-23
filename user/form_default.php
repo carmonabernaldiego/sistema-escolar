@@ -69,7 +69,7 @@ $days = intval($interval->format('%a'));
 
 if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 	echo '
-						<button class="file"><span class="icon">add_a_photo</span></button>
+						<a href="#" class="file"><span class="icon">add_a_photo</span></a>
 						<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
 		';
 } else {

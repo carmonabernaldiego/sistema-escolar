@@ -1586,6 +1586,7 @@ button:focus {
     box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
     border-radius: 100%;
     color: #eef4ff;
+    text-decoration: none;
     font-size: 1.6em;
     font-weight: 100;
     cursor: pointer;
@@ -1593,7 +1594,11 @@ button:focus {
 }
 
 .formConfigUser .body #section-user-image .file:hover,
-.form-data .body #section-user-image .file:hover {
+.form-data .body #section-user-image .file:hover,
+.formConfigUser .body #section-user-image .file:focus,
+.form-data .body #section-user-image .file:focus {
+    outline: none;
+    outline-width: 0;
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
     color: #aebbd3;

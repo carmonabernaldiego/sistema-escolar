@@ -23,6 +23,9 @@ function confirmPass() {
 }
 
 $(document).ready(function() {
+    $('.file').click(function(event) {
+        $('#file_upload_image').trigger('click');
+    });
 
     $image_crop = $('#image_crop').croppie({
         enableExif: true,
