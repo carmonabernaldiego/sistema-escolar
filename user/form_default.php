@@ -74,7 +74,7 @@ if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 		';
 } else {
 	echo '
-						<a href="#" class="file disabled"><span class="icon">add_a_photo</span></a>
+						<a class="file disabled"><span class="icon">add_a_photo</span></a>
 		';
 	if ((15 - $days) >= 1) {
 		$_SESSION['msgbox_info'] = 1;

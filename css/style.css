@@ -1602,7 +1602,7 @@ button:focus {
 .formConfigUser .body .section-user-image .file.disabled {
     background: #6a7186;
     color: #eef4ff98;
-    cursor: initial;
+    cursor: default;
 }
 
 .formConfigUser .body .section-user-image .file:hover,
@@ -1613,6 +1613,13 @@ button:focus {
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
     color: #aebbd3;
     transition: all 200ms ease-in;
+}
+
+.formConfigUser .body .section-user-image .file.disabled:hover,
+.formConfigUser .body .section-user-image .file.disabled:focus {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: default;
 }
 
 .formConfigUser .body .section-user-image .file.disabled:hover,
