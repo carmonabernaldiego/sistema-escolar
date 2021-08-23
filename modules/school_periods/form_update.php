@@ -25,16 +25,16 @@ echo '
 		<h1 class="titulo">Actualizar</h1>
     </div>
     <div class="body">
-        <form name="form-update-school-periods" action="update.php" method="POST">
+        <form name="form-update-school-periods" action="update.php" method="POST" autocomplete="off">
 			<div class="wrap">
 				<div class="first">
 					<label for="txtspid" class="label">Periodo escolar</label>
 					<input style="display: none;" type="text" name="txtspid" value="' . $_SESSION['sp_id'][0] . '"/>
 					<input id="txtspid" class="text" type="text" name="txt" value="' . $_SESSION['sp_id'][0] . '" disabled/>
 					<label for="datespstart" class="label">Inicia</label>
-					<input id="datespstart" class="date" type="date" name="datespstart" value="' . $_SESSION['sp_start'][0] . '" required autofocus/>
+					<input id="datespstart" class="date" type="text" name="datespstart" value="' . $_SESSION['sp_start'][0] . '" required autofocus/>
 					<label for="datespend" class="label">Termina</label>
-					<input id="datespend" class="date" type="date" name="datespend" value="' . $_SESSION['sp_end'][0] . '" required/>
+					<input id="datespend" class="date" type="text" name="datespend" value="' . $_SESSION['sp_end'][0] . '" required/>
 				</div>
 				<div class="last">
 					<label for="selectactive" class="label">Activo</label>
