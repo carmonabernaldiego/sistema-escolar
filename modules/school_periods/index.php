@@ -46,6 +46,7 @@ include_once 'load_data.php';
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/select2.css" media="screen, projection" type="text/css" />
 	<script src="/js/litepicker.js"></script>
+	<link rel="stylesheet" href="/css/litepicker.css" media="screen, projection" type="text/css" />
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/prefixfree.min.js"></script>
 	<script src="/js/unsetnotif.js"></script>

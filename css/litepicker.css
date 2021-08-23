@@ -1,0 +1,43 @@
+:root {
+    /* change background color for .container__months */
+    --litepicker-container-months-color-bg: #dde8fc;
+    --litepicker-container-months-box-shadow-color: rgb(142, 136, 192);
+    --litepicker-footer-color-bg: #fafafa;
+    --litepicker-footer-box-shadow-color: rgb(142, 136, 192);
+    --litepicker-tooltip-color-bg: #fff;
+    --litepicker-month-header-color: #4a567c;
+    --litepicker-button-prev-month-color: #6a7186;
+    --litepicker-button-next-month-color: #6a7186;
+    --litepicker-button-prev-month-color-hover: #6272a4;
+    --litepicker-button-next-month-color-hover: #6272a4;
+    --litepicker-month-width: calc(var(--litepicker-day-width) * 7);
+    --litepicker-month-weekday-color: #6a7186;
+    --litepicker-month-week-number-color: #6a7186;
+    --litepicker-day-width: 38px;
+    --litepicker-day-color: #4a567c;
+    --litepicker-day-color-hover: #6272a4;
+    --litepicker-is-today-color: #f44336;
+    --litepicker-is-in-range-color: #bbdefb;
+    --litepicker-is-locked-color: #6a7186;
+    --litepicker-is-start-color: #fff;
+    --litepicker-is-start-color-bg: #6272a4;
+    --litepicker-is-end-color: #fff;
+    --litepicker-is-end-color-bg: #6272a4;
+    --litepicker-button-cancel-color: #fff;
+    --litepicker-button-cancel-color-bg: #6a7186;
+    --litepicker-button-apply-color: #fff;
+    --litepicker-button-apply-color-bg: #6272a4;
+    --litepicker-button-reset-color: #909090;
+    --litepicker-button-reset-color-hover: #6272a4;
+    --litepicker-highlighted-day-color: #4a567c;
+    --litepicker-highlighted-day-color-bg: #ffeb3b;
+}
+
+.litepicker {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.litepicker .container__months {
+    box-shadow: 0 0 0 2.5pt #929cb9;
+}
