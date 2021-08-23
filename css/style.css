@@ -1632,7 +1632,7 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 0 33px;
+    padding: 7px 0 33px;
 }
 
 .formConfigUser .body #section-croppie-image .options .crop-btn,
@@ -2395,6 +2395,9 @@ input[type="range"]:active {
     .formConfigUser .body #section-croppie-image .options {
         padding: 10px 0 24px;
     }
+    .cr-slider {
+        padding-bottom: 8px;
+    }
 }
 
 @media only screen and (max-width: 641px) {
@@ -2451,15 +2454,15 @@ input[type="range"]:active {
     .form-gridview .pages ul li button {
         width: 8%;
     }
-    .form-options .options {
-        padding-left: 35px;
-        padding-right: 35px;
-    }
     .form-data .delete .btn-si {
         margin: 22px 0 25px 6%;
     }
     .form-data .delete .btn-no {
         margin: 22px 6% 25px 0;
+    }
+    .form-options .options {
+        padding-left: 35px;
+        padding-right: 35px;
     }
 }
 
