@@ -49,7 +49,12 @@ echo '
 	<div class="body">
 		<div id="section-croppie-image">
 			<div id="image_crop"></div>
-			<button class="crop_btn"><span class="icon">crop</span></button>
+			<div class="options">
+				<button class="crop-btn"><span class="icon">crop</span></button>
+				<form action="/user">      
+					<button class="cancel-btn"><span class="icon">close</span></button>
+				</form>
+			</div>
 		</div>
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return confirmPass()">
 			<div class="wrap">
@@ -64,7 +69,7 @@ $days = intval($interval->format('%a'));
 
 if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
 	echo '
-						<label class="file" for="file_upload_image"><span class="icon">add_a_photo</span></label>
+						<button class="file"><span class="icon">add_a_photo</span></button>
 						<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
 		';
 } else {

@@ -8,10 +8,11 @@
 .box-notification-ok,
 .box-notification-error {
     position: absolute;
-    top: 0;
     width: 72%;
     height: 50px;
+    top: 0;
     margin: 35px 0 0 0;
+    box-shadow: none;
 }
 
 .box-notification-ok p,

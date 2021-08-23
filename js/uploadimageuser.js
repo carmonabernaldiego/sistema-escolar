@@ -22,15 +22,6 @@ function confirmPass() {
     }
 }
 
-//Desactivamos Enter para no ejecutar un Submit al Formulario
-/*document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll('input[type=email]').forEach(node => node.addEventListener('keypress', e => {
-		if (e.keyCode == 13) {
-			e.preventDefault();
-		}
-	}))
-});*/
-
 $(document).ready(function() {
 
     $image_crop = $('#image_crop').croppie({
@@ -60,7 +51,7 @@ $(document).ready(function() {
         $('#section-croppie-image').show();
     });
 
-    $('.crop_btn').click(function(event) {
+    $('.crop-btn').click(function(event) {
         $image_crop.croppie('result', {
             type: 'canvas',
             size: 'viewport',
