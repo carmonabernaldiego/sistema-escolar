@@ -2190,6 +2190,10 @@ input[type="range"]:active {
     .form-login .label {
         margin: -5px 0 -5px 0;
     }
+    .form-login .label.error {
+        margin: 6px 0 -.8px 0;
+        font-size: 1em;
+    }
     .form-login .text,
     .form-login .textcontrasena {
         width: 81.9%;
@@ -2204,10 +2208,6 @@ input[type="range"]:active {
     }
     .form-login .pretty .state label {
         margin: 0 0 0 4px;
-    }
-    .form-login .label.error {
-        margin: 6px 0 -.8px 0;
-        font-size: 1em;
     }
     .form-login .button {
         float: none;
@@ -2342,22 +2342,6 @@ input[type="range"]:active {
     .form-data .body .description {
         width: 88%;
     }
-    .formConfigUser .body .first,
-    .formConfigUser .body .last {
-        width: 87.5%;
-    }
-    .formConfigUser .body .first {
-        padding: 24px 0 2%;
-    }
-    .formConfigUser .body .config-data-user .btn-edit-info-user,
-    .formConfigUser .body .config-data-user .btn-change-pass {
-        width: 90.9%;
-        height: 36px;
-        padding-left: 9%;
-    }
-    .formConfigUser .body .footer {
-        padding: 24px 0 24px;
-    }
     .form-data .body .content-full {
         width: 88%;
         margin-bottom: 35px;
@@ -2369,6 +2353,12 @@ input[type="range"]:active {
     .form-data .body .description .textarea {
         width: 94%;
         padding: 6px 3%;
+    }
+    .form-gridview .pages ul li button {
+        width: 5%;
+    }
+    .content-full {
+        margin-bottom: 0 !important;
     }
     .form-options {
         padding: 3px 0;
@@ -2382,11 +2372,28 @@ input[type="range"]:active {
         margin: 0;
         padding: 8px 0 9px;
     }
-    .form-gridview .pages ul li button {
-        width: 5%;
+    .formConfigUser .body .first,
+    .formConfigUser .body .last {
+        width: 87.5%;
     }
-    .content-full {
-        margin-bottom: 0 !important;
+    .formConfigUser .body .first {
+        padding: 24px 0 2%;
+    }
+    .formConfigUser .body .footer {
+        padding: 24px 0 24px;
+    }
+    .formConfigUser .body .config-data-user .btn-edit-info-user,
+    .formConfigUser .body .config-data-user .btn-change-pass {
+        width: 90.9%;
+        height: 36px;
+        padding-left: 9%;
+    }
+    .formConfigUser .body #section-croppie-image,
+    .form-data .body #section-croppie-image {
+        padding: 24px 0 0;
+    }
+    .formConfigUser .body #section-croppie-image .options {
+        padding: 10px 0 24px;
     }
 }
 
