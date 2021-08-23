@@ -12,10 +12,12 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['user_id'][0] = $row['user'];
 		$_SESSION['administrative_name'][0] = $row['name'];
 		$_SESSION['administrative_surnames'][0] = $row['surnames'];
+		$_SESSION['administrative_gender'][0] = $row['gender'];
+		$_SESSION['administrative_date_of_birth'][0] = $row['date_of_birth'];
 		$_SESSION['administrative_curp'][0] = $row['curp'];
 		$_SESSION['administrative_rfc'][0] = $row['rfc'];
-		$_SESSION['administrative_address'][0] = $row['address'];
 		$_SESSION['administrative_phone'][0] = $row['phone'];
+		$_SESSION['administrative_address'][0] = $row['address'];
 		$_SESSION['administrative_level_studies'][0] = $row['level_studies'];
 		$_SESSION['administrative_employment'][0] = $row['employment'];
 		$_SESSION['administrative_observations'][0] = $row['observations'];
@@ -38,12 +40,56 @@ echo '
 					<input id="txtusername" class="text" type="text" name="txtname" value="' . $_SESSION['administrative_name'][0] . '" autofocus maxlength="25" required/>
 					<label for="txtusersurnames" class="label">Apellidos</label>
 					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="' . $_SESSION['administrative_surnames'][0] . '" maxlength="50" required/>
+					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
+                    <input id="dateofbirth" class="date" type="text" name="datespstart" value="' . $_SESSION['administrative_date_of_birth'][0] . '" required autofocus/>
+                    <label for="selectgender" class="label">Género</label>
+                    <select id="selectgender" class="select" name="selectgender" required>
+					';
+if ($_SESSION['administrative_date_of_birth'][0] == '') {
+	echo '
+						<option value="">Seleccioné</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="otro">Otro</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+} elseif ($_SESSION['administrative_date_of_birth'][0] == 'mujer') {
+	echo '
+						<option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="otro">Otro</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+} elseif ($_SESSION['administrative_date_of_birth'][0] == 'hombre') {
+	echo '
+						<option value="hombre">Hombre</option>
+						<option value="mujer">Mujer</option>
+                        <option value="otro">Otro</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+} elseif ($_SESSION['administrative_date_of_birth'][0] == 'otro') {
+	echo '
+						<option value="otro">Otro</option>
+						<option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+}elseif ($_SESSION['administrative_date_of_birth'][0] == 'nodecirlo') {
+	echo '
+						<option value="nodecirlo">Prefiero no decirlo</option>
+						<option value="otro">Otro</option>
+						<option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+	';
+}
+echo '
+                    </select>
 					<label for="txtusercurp" class="label">CURP</label>
 					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="' . $_SESSION['administrative_curp'][0] . '" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
-					<label for="txtuserrfc" class="label">RFC</label>
-					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="' . $_SESSION['administrative_rfc'][0] . '" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required/>
 				</div>
 				<div class="last">
+					<label for="txtuserrfc" class="label">RFC</label>
+					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="' . $_SESSION['administrative_rfc'][0] . '" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required/>
 					<label for="txtuserphone" class="label">Telefono</label>
 					<input id="txtuserphone" class="text" type="number" name="txtphone" value="' . $_SESSION['administrative_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
 					<label for="txtuseraddress" class="label">Domicilio</label>

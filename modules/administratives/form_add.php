@@ -23,12 +23,22 @@ $id_generate = 'admin' . unique_id(5);
                     <input id="txtusername" class="text" type="text" name="txtname" value="" maxlength="25" required autofocus />
                     <label for="txtusersurnames" class="label">Apellidos</label>
                     <input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="" maxlength="50" required />
+                    <label for="dateofbirth" class="label">Fecha de nacimiento</label>
+                    <input id="dateofbirth" class="date" type="text" name="datespstart" value="'.$_SESSION['sp_start'][0].'" required autofocus />
+                    <label for="selectgender" class="label">Género</label>
+                    <select id="selectgender" class="select" name="selectgender" required>
+                        <option value="">Seleccioné</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="otro">Otro</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+                    </select>
                     <label for="txtusercurp" class="label">CURP</label>
                     <input id="txtusercurp" class="text" type="text" name="txtcurp" value="" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
-                    <label for="txtuserrfc" class="label">RFC</label>
-                    <input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
                 </div>
                 <div class="last">
+                    <label for="txtuserrfc" class="label">RFC</label>
+                    <input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
                     <label for="txtuserphone" class="label">Telefono</label>
                     <input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" inputmode="email" required />
                     <label for="txtuseraddress" class="label">Domicilio</label>

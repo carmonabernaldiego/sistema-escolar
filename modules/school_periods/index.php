@@ -87,14 +87,24 @@ include_once 'load_data.php';
 		});
 	});
 
-	new Litepicker({
+	const dateStart = new Litepicker({
 		element: document.getElementById('datespstart'),
 		singleMode: true
 	});
 
-	new Litepicker({
+	const dateEnd = new Litepicker({
 		element: document.getElementById('datespend'),
 		singleMode: true
+	});
+
+	$("#datespstart").focus(function() {
+		dateStart.show();
+		dateEnd.hide();
+	});
+
+	$("#datespend").focus(function() {
+		dateEnd.show();
+		dateStart.hide();
 	});
 </script>
 
