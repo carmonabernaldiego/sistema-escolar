@@ -32,9 +32,9 @@ echo '
 					<input style="display: none;" type="text" name="txtspid" value="' . $_SESSION['sp_id'][0] . '"/>
 					<input id="txtspid" class="text" type="text" name="txt" value="' . $_SESSION['sp_id'][0] . '" disabled/>
 					<label for="datespstart" class="label">Inicia</label>
-					<input id="datespstart" class="date" type="text" name="datespstart" value="' . $_SESSION['sp_start'][0] . '" required autofocus/>
+					<input id="datespstart" class="date" type="text" name="datespstart" value="' . $_SESSION['sp_start'][0] . '" maxlength="10" required autofocus/>
 					<label for="datespend" class="label">Termina</label>
-					<input id="datespend" class="date" type="text" name="datespend" value="' . $_SESSION['sp_end'][0] . '" required/>
+					<input id="datespend" class="date" type="text" name="datespend" value="' . $_SESSION['sp_end'][0] . '" maxlength="10" required/>
 				</div>
 				<div class="last">
 					<label for="selectactive" class="label">Activo</label>

@@ -41,11 +41,11 @@ echo '
 					<label class="label">Apellidos</label>
 					<input class="text" type="text" name="txtsurnames" value="' . $_SESSION['administrative_surnames'][0] . '" disabled/>
 					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="datespstart" value="' . $_SESSION['administrative_date_of_birth'][0] . '" disabled/>
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'][0] . '" disabled/>
                     <label for="selectgender" class="label">Género</label>
                     <select id="selectgender" class="select" name="selectgender" disabled>
 					';
-if ($_SESSION['administrative_date_of_birth'][0] == '') {
+if ($_SESSION['administrative_gender'][0] == '') {
 	echo '
 						<option value="">Seleccioné</option>
                         <option value="mujer">Mujer</option>
@@ -53,28 +53,28 @@ if ($_SESSION['administrative_date_of_birth'][0] == '') {
                         <option value="otro">Otro</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
 	';
-} elseif ($_SESSION['administrative_date_of_birth'][0] == 'mujer') {
+} elseif ($_SESSION['administrative_gender'][0] == 'mujer') {
 	echo '
 						<option value="mujer">Mujer</option>
                         <option value="hombre">Hombre</option>
                         <option value="otro">Otro</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
 	';
-} elseif ($_SESSION['administrative_date_of_birth'][0] == 'hombre') {
+} elseif ($_SESSION['administrative_gender'][0] == 'hombre') {
 	echo '
 						<option value="hombre">Hombre</option>
 						<option value="mujer">Mujer</option>
                         <option value="otro">Otro</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
 	';
-} elseif ($_SESSION['administrative_date_of_birth'][0] == 'otro') {
+} elseif ($_SESSION['administrative_gender'][0] == 'otro') {
 	echo '
 						<option value="otro">Otro</option>
 						<option value="mujer">Mujer</option>
                         <option value="hombre">Hombre</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
 	';
-}elseif ($_SESSION['administrative_date_of_birth'][0] == 'nodecirlo') {
+}elseif ($_SESSION['administrative_gender'][0] == 'nodecirlo') {
 	echo '
 						<option value="nodecirlo">Prefiero no decirlo</option>
 						<option value="otro">Otro</option>

@@ -24,7 +24,7 @@ $id_generate = 'admin' . unique_id(5);
                     <label for="txtusersurnames" class="label">Apellidos</label>
                     <input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="" maxlength="50" required />
                     <label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="datespstart" value="'.$_SESSION['sp_start'][0].'" required autofocus />
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" maxlength="10" required />
                     <label for="selectgender" class="label">Género</label>
                     <select id="selectgender" class="select" name="selectgender" required>
                         <option value="">Seleccioné</option>
