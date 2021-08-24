@@ -22,12 +22,6 @@ $sql = "SELECT * FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['msgbox_info'] = 0;
-		$_SESSION['msgbox_error'] = 1;
-		$_SESSION['text_msgbox_error'] = 'Este ID ya está en uso. Elige otro.';
-		header('Location: /modules/school_periods');
-		exit();
-	} else {
 		$timestamp = '1299762201428';
 		$date = date('Y-m-d H:i:s');
 
@@ -44,5 +38,11 @@ if ($result = $conexion->query($sql)) {
 		}
 
 		header('Location: /modules/administratives');
+		exit();
+	} else {
+		$_SESSION['msgbox_info'] = 0;
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Este ID de administrativo no existe.';
+		header('Location: /modules/school_periods');
 	}
 }
