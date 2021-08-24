@@ -45,12 +45,12 @@ include_once 'load_data.php';
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/select2.css" media="screen, projection" type="text/css" />
-	<script src="/js/litepicker.js"></script>
 	<link rel="stylesheet" href="/css/litepicker.css" media="screen, projection" type="text/css" />
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/prefixfree.min.js"></script>
-	<script src="/js/unsetnotif.js"></script>
-	<script src="/js/select2.js"></script>
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+	<script src="/js/litepicker.js" type="text/javascript"></script>
+	<script src="/js/prefixfree.min.js" type="text/javascript"></script>
+	<script src="/js/unsetnotif.js" type="text/javascript"></script>
+	<script src="/js/select2.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
@@ -78,34 +78,6 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
-<script src="/js/controlbuttons.js"></script>
-
-<script>
-	$(document).ready(function() {
-		$(".select").select2({
-			minimumResultsForSearch: Infinity
-		});
-	});
-
-	const dateStart = new Litepicker({
-		element: document.getElementById('datespstart'),
-		singleMode: true
-	});
-
-	const dateEnd = new Litepicker({
-		element: document.getElementById('datespend'),
-		singleMode: true
-	});
-
-	$("#datespstart").focus(function() {
-		dateStart.show();
-		dateEnd.hide();
-	});
-
-	$("#datespend").focus(function() {
-		dateEnd.show();
-		dateStart.hide();
-	});
-</script>
+<script src="/js/controlbuttons.js" type="text/javascript"></script>
 
 </html>

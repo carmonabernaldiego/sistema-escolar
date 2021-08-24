@@ -82,4 +82,5 @@ echo '
 ';
 echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
-echo '</div>';
+echo '</div>
+<script src="/js/schoolperiods.js" type="text/javascript"></script>';

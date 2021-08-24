@@ -49,11 +49,11 @@ include_once 'load_data.php';
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/select2.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
-	<script src="/js/jquery.min.js"></script>
-    <script src="/js/prefixfree.min.js"></script>
-	<script src="/js/unsetnotif.js"></script>
-	<script src="/js/select2.js"></script>
-	<script src="/js/croppie.js"></script>
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/prefixfree.min.js" type="text/javascript"></script>
+	<script src="/js/unsetnotif.js" type="text/javascript"></script>
+	<script src="/js/select2.js" type="text/javascript"></script>
+	<script src="/js/croppie.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
@@ -81,7 +81,7 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
-<script src="/js/controlbuttons.js"></script>
+<script src="/js/controlbuttons.js" type="text/javascript"></script>
 <script src="/js/uploadimageusers.js"></script>
 
 <script>

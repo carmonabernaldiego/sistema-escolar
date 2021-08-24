@@ -25,8 +25,8 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal, Gestión de Asistencias" />
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="css/pretty-checkbox.css" media="screen, projection" type="text/css" />
-	<script src="/js/jquery.min.js"></script>
-    <script src="/js/prefixfree.min.js"></script>
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/prefixfree.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
@@ -51,6 +51,6 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 		</form>
 	</div>
 </body>
-<script src="/js/controlbuttons.js"></script>
+<script src="/js/controlbuttons.js" type="text/javascript"></script>
 
 </html>

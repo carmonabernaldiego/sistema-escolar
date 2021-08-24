@@ -31,10 +31,10 @@ if (!empty($_POST['btn'])) {
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/styleconfiguser.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
-	<script src="/js/jquery.min.js"></script>
-    <script src="/js/prefixfree.min.js"></script>
-	<script src="/js/unsetnotifuser.js"></script>
-	<script src="/js/croppie.js"></script>
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/prefixfree.min.js" type="text/javascript"></script>
+	<script src="/js/unsetnotifuser.js" type="text/javascript"></script>
+	<script src="/js/croppie.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
@@ -64,7 +64,7 @@ if (!empty($_POST['btn'])) {
 		?>
 	</section>
 </body>
-<script src="/js/controlbuttons.js"></script>
-<script src="/js/configuser.js"></script>
+<script src="/js/controlbuttons.js" type="text/javascript"></script>
+<script src="/js/configuser.js" type="text/javascript"></script>
 
 </html>
