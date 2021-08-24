@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Mexico_City');
+
 $conexion = mysqli_connect("localhost", "root", "", "db_escolar");
 
 mysqli_set_charset($conexion, 'utf8');

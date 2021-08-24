@@ -6,7 +6,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
         <h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-school-periods" action="insert.php" method="POST">
+        <form name="form-add-school-periods" action="insert.php" method="POST" autocomplete="off">
             <div class="wrap">
                 <div class="first">
                     <label for="txtspid" class="label">Periodo escolar</label>
@@ -18,12 +18,12 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
                 </div>
                 <div class="last">
                     <label for="selectactive" class="label">Activo</label>
-                    <select id="selectactive" class="select" name="selectactive">
+                    <select id="selectactive" class="select" name="selectactive" required>
                         <option value="1">Si</option>
                         <option value="0">No</option>
                     </select>
                     <label for="selectcurrent" class="label">Actual</label>
-                    <select id="selectcurrent" class="select" name="selectcurrent">
+                    <select id="selectcurrent" class="select" name="selectcurrent" required>
                         <option value="0">No</option>
                         <option value="1">Si</option>
                     </select>

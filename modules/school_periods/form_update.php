@@ -38,7 +38,7 @@ echo '
 				</div>
 				<div class="last">
 					<label for="selectactive" class="label">Activo</label>
-					<select id="selectactive" class="select" name="selectactive">
+					<select id="selectactive" class="select" name="selectactive" required>
 				';
 if ($_SESSION['sp_active'][0] == 1) {
 	echo
@@ -56,7 +56,7 @@ if ($_SESSION['sp_active'][0] == 1) {
 echo '
 					</select>
 					<label for="selectcurrent" class="label">Actual</label>
-					<select id="selectcurrent" class="select" name="selectcurrent">
+					<select id="selectcurrent" class="select" name="selectcurrent" required>
 				';
 if ($_SESSION['sp_current'][0] == 1) {
 	echo
