@@ -26,7 +26,7 @@ $days = $diff->invert;
 if ($days > 0) {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'La fecha en que termina el periodo escolar, debe ser mayor que fecha de inicio.';
+	$_SESSION['text_msgbox_error'] = 'La fecha en que termina el periodo escolar, debe ser mayor que la fecha de inicio.';
 	header('Location: /modules/school_periods');
 	exit();
 } else {
