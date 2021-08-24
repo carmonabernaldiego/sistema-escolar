@@ -30,18 +30,16 @@ echo '
 		<h1 class="titulo">Actualizar</h1>
     </div>
     <div class="body">
-        <form name="form-update-administratives" action="update.php" method="POST">
+        <form name="form-update-administratives" action="update.php" method="POST" autocomplete="off" autocapitalize="off">
 			<div class="wrap">
 				<div class="first">
 					<label for="txtuserid" class="label">Usuario</label>
-					<input id="txtuserid" style="display: none;" type="text" name="txtuserid" value="' . $_SESSION['user_id'][0] . '"/>
-					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
+					<input id="txtuserid" style="display: none;" type="text" name="txtuserid" value="' . $_SESSION['user_id'][0] . '" maxlength="50">
+					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" maxlength="50" disabled/>
 					<label for="txtusername" class="label">Nombre</label>
-					<input id="txtusername" class="text" type="text" name="txtname" value="' . $_SESSION['administrative_name'][0] . '" autofocus maxlength="25" required/>
+					<input id="txtusername" class="text" type="text" name="txtname" value="' . $_SESSION['administrative_name'][0] . '" autofocus maxlength="30" required/>
 					<label for="txtusersurnames" class="label">Apellidos</label>
-					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="' . $_SESSION['administrative_surnames'][0] . '" maxlength="50" required/>
-					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'][0] . '" required/>
+					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="' . $_SESSION['administrative_surnames'][0] . '" maxlength="60" required/>
                     <label for="selectgender" class="label">Género</label>
                     <select id="selectgender" class="select" name="selectgender" required>
 					';
@@ -84,6 +82,8 @@ if ($_SESSION['administrative_gender'][0] == '') {
 }
 echo '
                     </select>
+					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'][0] . '" maxlength="10" required/>
 					<label for="txtusercurp" class="label">CURP</label>
 					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="' . $_SESSION['administrative_curp'][0] . '" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
 				</div>
@@ -95,7 +95,7 @@ echo '
 					<label for="txtuseraddress" class="label">Domicilio</label>
 					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="' . $_SESSION['administrative_address'][0] . '" maxlength="100" required/>
 					<label for="selectlevelstudies" class="label">Nivel de estudios</label>
-					<select id="selectlevelstudies" class="select" name="selectlevelstudies">
+					<select id="selectlevelstudies" class="select" name="selectlevelstudies" required>
 				';
 if ($_SESSION['administrative_level_studies'][0] == 'Licenciatura') {
 	echo
@@ -145,4 +145,5 @@ echo '
 ';
 echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
-echo '</div>';
+echo '</div>
+<script src="/js/administratives.js" type="text/javascript"></script>';

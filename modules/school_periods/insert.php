@@ -50,7 +50,7 @@ if ($days > 0) {
 					$_SESSION['school_period'] = $_POST['txtspid'];
 
 					$sql_update = "UPDATE school_periods SET current = '0' WHERE school_period != '" . $_POST['txtspid'] . "'";
-					
+
 					mysqli_query($conexion, $sql_update);
 				}
 				$_SESSION['msgbox_error'] = 0;

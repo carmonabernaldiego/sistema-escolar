@@ -2,7 +2,6 @@
 include_once '../security.php';
 include_once '../conexion.php';
 
-
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
 if (empty($_POST['txtspid'])) {
@@ -21,6 +20,5 @@ if (mysqli_query($conexion, $sql_delete)) {
 	$_SESSION['msgbox_error'] = 1;
 	$_SESSION['text_msgbox_error'] = 'Error al eliminar.';
 }
-
 
 header('Location: /modules/school_periods');

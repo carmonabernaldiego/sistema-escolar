@@ -4,8 +4,17 @@ include_once '../conexion.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
+$_POST['txtspid'] = trim($_POST['txtspid']);
+
 if (empty($_POST['txtspid'])) {
 	header('Location: /');
+	exit();
+}
+if ($_POST['txtspid'] == '') {
+	$_SESSION['msgbox_info'] = 0;
+	$_SESSION['msgbox_error'] = 1;
+	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto.';
+	header('Location: /modules/school_periods');
 	exit();
 }
 

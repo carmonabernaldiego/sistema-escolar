@@ -2,24 +2,47 @@
 include_once '../security.php';
 include_once '../conexion.php';
 
-
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
+
+$_POST['txtuserid'] = trim($_POST['txtuserid']);
 
 if (empty($_POST['txtuserid'])) {
 	header('Location: /');
 	exit();
 }
-
-$sql_update = "UPDATE administratives SET name = '" . $_POST['txtname'] . "', surnames = '" . $_POST['txtsurnames'] . "', curp = '" . $_POST['txtcurp'] . "', rfc = '" . $_POST['txtrfc'] . "', gender = '" . $_POST['selectgender'] . "', date_of_birth = '" . $_POST['dateofbirth'] . "', phone = '" . $_POST['txtphone'] . "', address = '" . $_POST['txtaddress'] . "', level_studies = '" . $_POST['selectlevelstudies'] . "', employment = '" . $_POST['txtemployment'] . "', observations = '" . $_POST['txtobservation'] . "' WHERE user = '" . $_POST['txtuserid'] . "'";
-
-if (mysqli_query($conexion, $sql_update)) {
-	$_SESSION['msgbox_error'] = 0;
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = 'Personal administrativo actualizado.';
-} else {
+if ($_POST['txtuserid'] == '') {
 	$_SESSION['msgbox_info'] = 0;
 	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al actualizar.';
+	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto.';
+	header('Location: /modules/administratives');
+	exit();
 }
 
-header('Location: /modules/administratives');
+$sql = "SELECT * FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
+
+if ($result = $conexion->query($sql)) {
+	if ($row = mysqli_fetch_array($result)) {
+		$_SESSION['msgbox_info'] = 0;
+		$_SESSION['msgbox_error'] = 1;
+		$_SESSION['text_msgbox_error'] = 'Este ID ya está en uso. Elige otro.';
+		header('Location: /modules/school_periods');
+		exit();
+	} else {
+		$timestamp = '1299762201428';
+		$date = date('Y-m-d H:i:s');
+
+		$sql_update = "UPDATE administratives SET name = '" . $_POST['txtname'] . "', surnames = '" . $_POST['txtsurnames'] . "', curp = '" . $_POST['txtcurp'] . "', rfc = '" . $_POST['txtrfc'] . "', gender = '" . $_POST['selectgender'] . "', date_of_birth = '" . $_POST['dateofbirth'] . "', phone = '" . $_POST['txtphone'] . "', address = '" . $_POST['txtaddress'] . "', level_studies = '" . $_POST['selectlevelstudies'] . "', employment = '" . $_POST['txtemployment'] . "', observations = '" . $_POST['txtobservation'] . "', updated_created = '" . $date . "' WHERE user = '" . $_POST['txtuserid'] . "'";
+
+		if (mysqli_query($conexion, $sql_update)) {
+			$_SESSION['msgbox_error'] = 0;
+			$_SESSION['msgbox_info'] = 1;
+			$_SESSION['text_msgbox_info'] = 'Personal administrativo actualizado.';
+		} else {
+			$_SESSION['msgbox_info'] = 0;
+			$_SESSION['msgbox_error'] = 1;
+			$_SESSION['text_msgbox_error'] = 'Error al actualizar.';
+		}
+
+		header('Location: /modules/administratives');
+	}
+}

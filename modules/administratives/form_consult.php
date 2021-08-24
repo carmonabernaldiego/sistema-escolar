@@ -20,7 +20,7 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['administrative_address'][0] = $row['address'];
 		$_SESSION['administrative_level_studies'][0] = $row['level_studies'];
 		$_SESSION['administrative_employment'][0] = $row['employment'];
-		$_SESSION['administrative_observations'][0] = $row['observations'];
+		$_SESSION['ss'][0] = $row['observations'];
 	}
 }
 
@@ -135,7 +135,7 @@ echo '
 					<label class="label">Cargo</label>
 					<input class="text" type="text" name="txtemployment" value="' . $_SESSION['administrative_employment'][0] . '" disabled/>
 					<label class="label">Observación</label>
-					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['administrative_observation'][0] . '" disabled/>
+					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['administrative_observations'][0] . '" disabled/>
 				</div>
 			</div>
 			<button id="btnSave" class="btn icon" type="submit" autofocus>done</button>
@@ -145,4 +145,5 @@ echo '
 ';
 echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
-echo '</div>';
+echo '</div>
+<script src="/js/administratives.js" type="text/javascript"></script>';

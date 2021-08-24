@@ -13,18 +13,16 @@ $id_generate = 'admin' . unique_id(5);
         <h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-administratives" action="insert.php" method="POST">
+        <form name="form-add-administratives" action="insert.php" method="POST" autocomplete="off" autocapitalize="off">
             <div class="wrap">
                 <div class="first">
                     <label for="txtuserid" class="label">Usuario</label>
                     <input id="txtuserid" class="text" style=" display: none;" type="text" name="txtuserid" value="<?php echo $id_generate; ?>" maxlength="50" required />
                     <input class="text" type="text" name="txt" value="<?php echo $id_generate; ?>" required disabled />
                     <label for="txtusername" class="label">Nombre</label>
-                    <input id="txtusername" class="text" type="text" name="txtname" value="" maxlength="25" required autofocus />
+                    <input id="txtusername" class="text" type="text" name="txtname" value="" maxlength="30" required autofocus />
                     <label for="txtusersurnames" class="label">Apellidos</label>
-                    <input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="" maxlength="50" required />
-                    <label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" maxlength="10" required />
+                    <input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="" maxlength="60" required />
                     <label for="selectgender" class="label">Género</label>
                     <select id="selectgender" class="select" name="selectgender" required>
                         <option value="">Seleccioné</option>
@@ -33,6 +31,8 @@ $id_generate = 'admin' . unique_id(5);
                         <option value="otro">Otro</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
                     </select>
+                    <label for="dateofbirth" class="label">Fecha de nacimiento</label>
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" maxlength="10" required />
                     <label for="txtusercurp" class="label">CURP</label>
                     <input id="txtusercurp" class="text" type="text" name="txtcurp" value="" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
                 </div>
@@ -40,11 +40,11 @@ $id_generate = 'admin' . unique_id(5);
                     <label for="txtuserrfc" class="label">RFC</label>
                     <input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
                     <label for="txtuserphone" class="label">Telefono</label>
-                    <input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" inputmode="email" required />
+                    <input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" required />
                     <label for="txtuseraddress" class="label">Domicilio</label>
                     <input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" maxlength="100" required />
                     <label for="selectlevelstudies" class="label">Nivel de estudios</label>
-                    <select id="selectlevelstudies" class="select" name="selectlevelstudies">
+                    <select id="selectlevelstudies" class="select" name="selectlevelstudies" required>
                         <option value="Licenciatura">Licenciatura</option>
                         <option value="Ingenieria">Ingenieria</option>
                         <option value="Maestria">Maestria</option>
@@ -65,3 +65,4 @@ $id_generate = 'admin' . unique_id(5);
     include_once "../sections/options-disabled.php";
     ?>
 </div>
+<script src="/js/administratives.js" type="text/javascript"></script>

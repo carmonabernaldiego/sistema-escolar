@@ -35,7 +35,7 @@ echo '
 					<input style="display: none;" type="text" name="txtuserid" value="' . $_SESSION['user_id'][0] . '"/>
 					<input id="txtuserid" class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
 					<label for="txtusername" class="label">Nombre</label>
-					<input id="txtusername" class="text" type="text" name="txtname" value="' . $_SESSION['student_name'][0] . '" autofocus maxlength="25" required/>
+					<input id="txtusername" class="text" type="text" name="txtname" value="' . $_SESSION['student_name'][0] . '" autofocus maxlength="30" required/>
 					<label for="txtusersurnames" class="label">Apellidos</label>
 					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="' . $_SESSION['student_surnames'][0] . '" maxlength="50" required/>
 					<label for="txtusercurp" class="label">CURP</label>

@@ -29,8 +29,8 @@ echo '
 			<div class="wrap">
 				<div class="first">
 					<label for="txtspid" class="label">Periodo escolar</label>
-					<input style="display: none;" type="text" name="txtspid" value="' . $_SESSION['sp_id'][0] . '"/>
-					<input id="txtspid" class="text" type="text" name="txt" value="' . $_SESSION['sp_id'][0] . '" disabled/>
+					<input style="display: none;" type="text" name="txtspid" value="' . $_SESSION['sp_id'][0] . '" maxlength="20"/>
+					<input id="txtspid" class="text" type="text" name="txt" value="' . $_SESSION['sp_id'][0] . '" maxlength="20" disabled/>
 					<label for="datespstart" class="label">Inicia</label>
 					<input id="datespstart" class="date" type="text" name="datespstart" value="' . $_SESSION['sp_start'][0] . '" maxlength="10" required autofocus/>
 					<label for="datespend" class="label">Termina</label>

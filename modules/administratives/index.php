@@ -80,17 +80,4 @@ include_once 'load_data.php';
 </body>
 <script src="/js/controlbuttons.js" type="text/javascript"></script>
 
-<script>
-	$(document).ready(function() {
-		$(".select").select2({
-			minimumResultsForSearch: Infinity
-		});
-	});
-
-	new Litepicker({
-		element: document.getElementById('dateofbirth'),
-		singleMode: true
-	});
-</script>
-
 </html>

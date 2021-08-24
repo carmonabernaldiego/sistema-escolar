@@ -20,7 +20,7 @@ $id_generate = 'stdt' . unique_id(6);
 					<input class="text" style=" display: none;" type="text" name="txtuserid" value="<?php echo $id_generate; ?>" maxlength="50" required />
 					<input id="txtuserid" class="text" type="text" name="txt" value="<?php echo $id_generate; ?>" required disabled />
 					<label for="txtusername" class="label">Nombre</label>
-					<input id="txtusername" class="text" type="text" name="txtname" value="" maxlength="25" required autofocus />
+					<input id="txtusername" class="text" type="text" name="txtname" value="" maxlength="30" required autofocus />
 					<label for="txtusersurnames" class="label">Apellidos</label>
 					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="" maxlength="50" required />
 					<label for="txtusercurp" class="label">CURP</label>
@@ -30,7 +30,7 @@ $id_generate = 'stdt' . unique_id(6);
 				</div>
 				<div class="last">
 					<label for="txtuserphone" class="label">Telefono</label>
-					<input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" inputmode="email" required />
+					<input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10"  required />
 					<label for="txtuseraddress" class="label">Domicilio</label>
 					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" maxlength="100" required />
 					<label for="selectusercareer" class="label">Carrera</label>
