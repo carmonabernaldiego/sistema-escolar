@@ -18,12 +18,18 @@ if ($result = $conexion->query($sql)) {
 		$sql_delete = "DELETE FROM school_periods WHERE school_period = '" . $_POST['txtspid'] . "'";
 
 		if (mysqli_query($conexion, $sql_delete)) {
-			$sql = "SELECT school_period, current FROM school_periods WHERE current = 1";
+			$sql = "SELECT school_period FROM school_periods WHERE active = 1";
 
 			if ($result = $conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($result)) {
 					$_SESSION['school_period'] = $row['school_period'];
 					setcookie('school_period', $row['school_period'], time() + 365 * 24 * 60 * 60, "/");
+
+					$sql_update = "UPDATE school_periods SET current = '1' WHERE school_period = '" . $row['school_period'] . "'";
+
+					mysqli_query($conexion, $sql_update);
+				} else {
+					$_SESSION['school_period'] = '?';
 				}
 			}
 
