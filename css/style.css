@@ -271,7 +271,7 @@ button:focus {
     height: 50px;
     margin: 5% 8%;
     box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
-    border: 2px solid #9492c0;
+    border: 3px solid #6272a4;
     border-radius: 10em;
     pointer-events: none;
 }
