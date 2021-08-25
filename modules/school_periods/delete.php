@@ -18,7 +18,7 @@ if ($result = $conexion->query($sql)) {
 		$sql_delete = "DELETE FROM school_periods WHERE school_period = '" . $_POST['txtspid'] . "'";
 
 		if (mysqli_query($conexion, $sql_delete)) {
-			$sql = "SELECT school_period FROM school_periods WHERE active = 1";
+			$sql = "SELECT school_period FROM school_periods WHERE active = 1 ORDER BY school_period DESC";
 
 			if ($result = $conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($result)) {
