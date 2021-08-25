@@ -31,15 +31,25 @@ $("#datespend").focus(function() {
     dateStart.hide();
 });
 
-let value;
+let vcurrent, vactive;
 
 $('#selectactive').on('select2:select', function(e) {
-    value = e.params.data.id;
+    vcurrent = e.params.data.id;
 
-    if (value == 0) {
+    if (vcurrent == 0) {
         $('#selectcurrent').prop('disabled', true);
         $('#selectcurrent').val('0').trigger('change.select2');
-    } else if (value == 1) {
+    } else if (vcurrent == 1) {
         $('#selectcurrent').prop('disabled', false);
+    }
+});
+
+$('#selectcurrent').on('select2:select', function(e) {
+    vcurrent = e.params.data.id;
+    vactive = $("#selectactive").val();
+
+    if (vcurrent == 1 && vactive == 0) {
+        $('#selectcurrent').val('0').trigger('change.select2');
+        $('#selectcurrent').prop('disabled', true);
     }
 });
