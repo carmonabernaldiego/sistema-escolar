@@ -684,9 +684,97 @@ button:focus {
     user-select: none;
 }
 
+.form-options .options {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #282a3660;
+    padding: 5% 10%;
+}
+
+.form-options .options .btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #eef4ff;
+    font-size: 1em;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+}
+
+.form-options .options .btn.btn-disabled,
+.form-options .search .btn-search.btn-disabled {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: initial;
+    pointer-events: none;
+}
+
+.form-options .options .btn-add {
+    box-shadow: 0 1px 6px rgba(91, 133, 127, 0.2);
+    background: #569188;
+    border-color: #6daaa3;
+    transition: all 300ms ease-out;
+}
+
+.form-options .options .btn-add:hover,
+.form-options .options .btn-add:focus {
+    background: #456661;
+    border: 4px solid #6daaa3;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-add:active {
+    background: #569188;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-exit {
+    box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
+    background: #db4949;
+    border-color: #e77f7f;
+    transition: all 300ms ease-out;
+}
+
+.form-options .options .btn-exit:hover,
+.form-options .options .btn-exit:focus {
+    background: #aa3535;
+    border: 4px solid #e77f7f;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-exit:active {
+    background: #db4949;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-search-mobile {
+    display: none;
+    box-shadow: 0 1px 6px rgba(73, 100, 219, 0.2);
+    background: #6272a4;
+    border-color: #929cb9;
+    transition: all 300ms ease-out;
+}
+
+.form-options .options .btn-search-mobile:hover,
+.form-options .options .btn-search-mobile:focus {
+    background: #4a567c;
+    border: 4px solid #929cb9;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-search-mobile:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
 .form-options .search {
-    margin: 20px 0;
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
 
 .form-options .search:after {
@@ -699,7 +787,7 @@ button:focus {
     float: left;
     width: 57%;
     height: 36px;
-    margin: 0 0 0 8%;
+    margin: 0 0 0 7.9%;
     padding: 0 23.5% 0 3.5%;
     background: #eef4ff;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
@@ -750,103 +838,6 @@ button:focus {
 }
 
 .form-options .search .btn-search:hover:active {
-    background: #6272a4;
-    transition: all 200ms ease-in;
-}
-
-.form-options .options {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    border-bottom: 1px solid #282a3660;
-    padding: 5% 10%;
-}
-
-.form-options .options .btn {
-    display: block;
-    width: 40px;
-    height: 40px;
-    color: #eef4ff;
-    font-size: 1em;
-    border: none;
-    border-radius: 100%;
-    cursor: pointer;
-    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
-}
-
-.form-options .options .btn.disabled,
-.form-options .search .btn-search.disabled {
-    background: #6a7186;
-    color: #eef4ff98;
-    cursor: initial;
-    pointer-events: none;
-}
-
-.form-options .search .btn-search.disabled.disabled:hover {
-    box-shadow: none !important;
-}
-
-.form-options .options .btnadd {
-    box-shadow: 0 1px 6px rgba(91, 133, 127, 0.2);
-    background: #569188;
-    border-color: #6daaa3;
-    transition: all 300ms ease-out;
-}
-
-.form-options .options .btnadd:hover,
-.form-options .options .btnadd:focus {
-    background: #456661;
-    border: 4px solid #6daaa3;
-    color: #eef4ff98;
-    transition: all 200ms ease-in;
-}
-
-.form-options .options .btnadd:active {
-    background: #569188;
-    transition: all 200ms ease-in;
-}
-
-.form-options .options .btnexit {
-    box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
-    background: #db4949;
-    border-color: #e77f7f;
-    transition: all 300ms ease-out;
-}
-
-.form-options .options .btnexit:hover,
-.form-options .options .btnexit:focus {
-    background: #aa3535;
-    border: 4px solid #e77f7f;
-    color: #eef4ff98;
-    transition: all 200ms ease-in;
-}
-
-.form-options .options .btnexit:active {
-    background: #db4949;
-    transition: all 200ms ease-in;
-}
-
-.form-options .options .search-mobile {
-    display: none;
-}
-
-.form-options .options .search-mobile.btnsearch {
-    display: none;
-    box-shadow: 0 1px 6px rgba(73, 100, 219, 0.2);
-    background: #6272a4;
-    border-color: #929cb9;
-    transition: all 300ms ease-out;
-}
-
-.form-options .options .search-mobile.btnsearch:hover,
-.form-options .options .search-mobile.btnsearch:focus {
-    background: #4a567c;
-    border: 4px solid #929cb9;
-    color: #eef4ff98;
-    transition: all 200ms ease-in;
-}
-
-.form-options .options .search-mobile.btnsearch:active {
     background: #6272a4;
     transition: all 200ms ease-in;
 }
@@ -2300,10 +2291,12 @@ input[type="range"]:active {
         padding: 1.5% 10%;
         border: none;
     }
+    .form-options .options .btn-search-mobile {
+        display: block;
+    }
     .form-options .search {
         display: none;
-        margin: 0;
-        padding: 4px 0 13px;
+        padding: .5% 0 2.1%;
     }
     .form-options .search .text-search {
         width: 63%;
@@ -2314,10 +2307,6 @@ input[type="range"]:active {
     .form-options .search .btn-search {
         width: 20%;
         height: 36px;
-    }
-    .form-options .options .search-mobile,
-    .form-options .options .search-mobile.btnsearch {
-        display: block;
     }
 }
 
@@ -2367,11 +2356,6 @@ input[type="range"]:active {
         width: 35px;
         height: 35px;
     }
-    .form-options .search {
-        display: none;
-        margin: 0;
-        padding: 8px 0 9px;
-    }
     .formConfigUser .body .first,
     .formConfigUser .body .last {
         width: 87.5%;
@@ -2395,7 +2379,7 @@ input[type="range"]:active {
     .formConfigUser .body .section-croppie-image .options {
         padding: 10px 0 24px;
     }
-    .cr-slider {
+    .formConfigUser .body .section-croppie-image .cr-slider {
         padding-bottom: 8px;
     }
 }
