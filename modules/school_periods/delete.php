@@ -29,7 +29,7 @@ if ($result = $conexion->query($sql)) {
 
 					mysqli_query($conexion, $sql_update);
 				} else {
-					$_SESSION['school_period'] = '?';
+					$_SESSION['school_period'] = ' ? ';
 				}
 			}
 

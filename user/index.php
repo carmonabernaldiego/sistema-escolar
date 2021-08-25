@@ -24,15 +24,15 @@ if (!empty($_POST['btn'])) {
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<meta name="robots" content="noindex">
-    <meta name="google" value="notranslate">
+	<meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 	<title>Usuarios | Sistema Escolar</title>
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
-	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="/css/style.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/styleconfiguser.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
 	<script src="/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/prefixfree.min.js" type="text/javascript"></script>
+	<script src="/js/prefixfree.min.js" type="text/javascript"></script>
 	<script src="/js/unsetnotifuser.js" type="text/javascript"></script>
 	<script src="/js/croppie.js" type="text/javascript"></script>
 	<script type="text/javascript">
