@@ -30,7 +30,7 @@ if ($days > 0) {
 	header('Location: /modules/school_periods');
 	exit();
 } else {
-	$sql = "SELECT * FROM school_periods WHERE school_period = '" . $_POST['txtspid'] . "'";
+	$sql = "SELECT school_period FROM school_periods WHERE school_period = '" . $_POST['txtspid'] . "'";
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {

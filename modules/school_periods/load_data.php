@@ -9,6 +9,8 @@ if ($result = $conexion->query($sql)) {
 	}
 }
 
+$_POST['search'] = trim($_POST['search']);
+
 if (!empty($_POST['search'])) {
 	$_SESSION['sp_id'] = array();
 	$_SESSION['sp_start'] = array();
