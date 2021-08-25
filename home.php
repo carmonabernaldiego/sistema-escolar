@@ -32,7 +32,7 @@ $_SESSION['raiz'] = dirname(__FILE__);
     <div class="loader"></div>
     <header class="header">
         <?php
-        include_once "modules/sections/about-section.php";
+        include_once "modules/sections/section-info-title.php";
         ?>
     </header>
     <aside class="aside">

@@ -60,7 +60,7 @@ include_once 'load_data.php';
 
 	<header class="header">
 		<?php
-		include_once "../sections/about-section.php";
+		include_once "../sections/section-info-title.php";
 		?>
 	</header>
 	<aside>
