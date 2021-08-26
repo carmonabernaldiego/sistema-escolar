@@ -24,10 +24,12 @@ function Info($textMsgBox)
 
 function UpdateUserDB($conex, $user, $email, $permissions)
 {
+	$date = date('Y-m-d H:i:s');
+
 	if ($email == '') {
-		$sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "', updated_at = '" . date('Y-m-d') . "' WHERE user_id = '" . $user . "'";
+		$sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "', updated_at = '" . $date . "' WHERE user_id = '" . $user . "'";
 	} else {
-		$sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "', updated_at = '" . date('Y-m-d') . "' WHERE user_id = '" . $user . "'";
+		$sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "', updated_at = '" . $date . "' WHERE user_id = '" . $user . "'";
 	}
 
 	if (mysqli_query($conex, $sql_update)) {

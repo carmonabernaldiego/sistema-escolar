@@ -35,7 +35,6 @@ if ($days > 0) {
 			header('Location: /modules/school_periods');
 			exit();
 		} else {
-			$timestamp = '1299762201428';
 			$date = date('Y-m-d H:i:s');
 
 			$sql_insert = "INSERT INTO school_periods(school_period, start_date, end_date, active, current, created_at) VALUES('" . $_POST['txtspid'] . "', '" . $_POST['datespstart'] . "', '" . $_POST['datespend'] . "', '" . $_POST['selectactive'] . "', '" . $_POST['selectcurrent'] . "', '" . $date . "')";

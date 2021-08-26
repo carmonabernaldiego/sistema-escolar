@@ -24,10 +24,12 @@ function Info($textMsgBox)
 
 function AddUserDB($conex, $user, $email, $pass, $permissions)
 {
+	$date = date('Y-m-d H:i:s');
+
 	if ($email == '') {
-		$sql_insert = "INSERT INTO users(user_id, pass, permissions, image, created_at) VALUES('" . $user . "','" . $pass . "', '" . $permissions . "', 'user.png', '" . date('Y-m-d') . "')";
+		$sql_insert = "INSERT INTO users(user_id, pass, permissions, image, created_at) VALUES('" . $user . "','" . $pass . "', '" . $permissions . "', 'user.png', '" . $date . "')";
 	} else {
-		$sql_insert = "INSERT INTO users(user_id, email, pass, permissions, image, created_at) VALUES('" . $user . "', '" . $email . "', '" . $pass . "', '" . $permissions . "', 'user.png', '" . date('Y-m-d') . "')";
+		$sql_insert = "INSERT INTO users(user_id, email, pass, permissions, image, created_at) VALUES('" . $user . "', '" . $email . "', '" . $pass . "', '" . $permissions . "', 'user.png', '" . $date . "')";
 	}
 
 	if (mysqli_query($conex, $sql_insert)) {

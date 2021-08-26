@@ -27,7 +27,6 @@ if ($days > 0) {
 	header('Location: /modules/school_periods');
 	exit();
 } else {
-	$timestamp = '1299762201428';
 	$date = date('Y-m-d H:i:s');
 
 	$sql_update = "UPDATE school_periods SET start_date = '" . $_POST['datespstart'] . "', end_date = '" . $_POST['datespend'] . "', active = '" . $_POST['selectactive'] . "', current = '" . $_POST['selectcurrent'] . "', updated_at = '" . $date . "' WHERE school_period = '" . $_POST['txtspid'] . "'";

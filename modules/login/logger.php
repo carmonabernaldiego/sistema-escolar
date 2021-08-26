@@ -11,7 +11,7 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
         if ($row = mysqli_fetch_array($result)) {
             //Cargar Usuario
             if ($row['permissions'] == 'admin') {
-                $user = $row['user'];
+                $user = $row['user_id'];
                 $image = $row['image'];
                 $permissions = $row['permissions'];
 
@@ -40,7 +40,7 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                     }
                 }
             } elseif ($row['permissions'] == 'editor') {
-                $user = $row['user'];
+                $user = $row['user_id'];
                 $image = $row['image'];
                 $permissions = $row['permissions'];
 

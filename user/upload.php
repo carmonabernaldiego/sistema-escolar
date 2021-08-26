@@ -21,7 +21,7 @@ if (isset($_POST["image"])) {
 	$uploadImage = $_SESSION['raiz'] . '/images/users/' . $_SESSION['image'] . '';
 
 	if (file_exists($uploadImage)) {
-		$date = date('Y-m-d');
+		$date = date('Y-m-d H:i:s');
 
 		$sql_update = "UPDATE users SET image = '" . $imageName . "', image_updated_at = '" . $date . "' WHERE user_id = '" . $_SESSION['user_id'][0] . "'";
 
