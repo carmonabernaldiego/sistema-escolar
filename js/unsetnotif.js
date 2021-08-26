@@ -18,7 +18,7 @@ function closeNotif() {
 
     $.ajax({
         type: 'POST',
-        url: '../close_notif_info.php',
+        url: '../notif_info_close.php',
         data: {
             close_msgbox_info: close,
             close_msgbox_error: close

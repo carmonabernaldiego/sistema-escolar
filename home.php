@@ -3,7 +3,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 include_once 'modules/security.php';
 include_once 'modules/conexion.php';
-include_once 'modules/unset_notif_info.php';
+include_once 'modules/notif_info_unset.php';
 
 $_SESSION['raiz'] = dirname(__FILE__);
 ?>

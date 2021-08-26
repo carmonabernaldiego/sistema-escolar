@@ -1,6 +1,7 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
+include_once '../notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
@@ -32,16 +33,10 @@ if ($result = $conexion->query($sql)) {
 					$_SESSION['school_period'] = ' ? ';
 				}
 			}
-
-			$_SESSION['msgbox_info'] = 0;
-			$_SESSION['msgbox_error'] = 1;
-			$_SESSION['text_msgbox_error'] = 'Periodo escolar eliminado.';
+			Error('Periodo escolar eliminado.');
 		} else {
-			$_SESSION['msgbox_info'] = 0;
-			$_SESSION['msgbox_error'] = 1;
-			$_SESSION['text_msgbox_error'] = 'Error al eliminar.';
+			Error('Error al eliminar.');
 		}
-
 		header('Location: /modules/school_periods');
 	}
 }

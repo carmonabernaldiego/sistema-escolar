@@ -1,6 +1,7 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
+include_once '../notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
@@ -11,9 +12,7 @@ if (empty($_POST['txtspid'])) {
 	exit();
 }
 if ($_POST['txtspid'] == '') {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto.';
+	Error('Ingrese un ID correcto.');
 	header('Location: /modules/school_periods');
 	exit();
 }
@@ -24,9 +23,7 @@ $diff = $dateStart->diff($dateEnd);
 $days = $diff->invert;
 
 if ($days > 0) {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'La fecha en que termina el periodo escolar, debe ser mayor que la fecha de inicio.';
+	Error('La fecha en que termina el periodo escolar, debe ser mayor que la fecha de inicio.');
 	header('Location: /modules/school_periods');
 	exit();
 } else {
@@ -34,9 +31,7 @@ if ($days > 0) {
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {
-			$_SESSION['msgbox_info'] = 0;
-			$_SESSION['msgbox_error'] = 1;
-			$_SESSION['text_msgbox_error'] = 'Este ID ya está en uso. Elige otro.';
+			Error('Este ID ya está en uso. Elige otro.');
 			header('Location: /modules/school_periods');
 			exit();
 		} else {
@@ -53,13 +48,9 @@ if ($days > 0) {
 
 					mysqli_query($conexion, $sql_update);
 				}
-				$_SESSION['msgbox_error'] = 0;
-				$_SESSION['msgbox_info'] = 1;
-				$_SESSION['text_msgbox_info'] = 'Periodo escolar agregado.';
+				Info('Periodo escolar agregado.');
 			} else {
-				$_SESSION['msgbox_info'] = 0;
-				$_SESSION['msgbox_error'] = 1;
-				$_SESSION['text_msgbox_error'] = 'Error al guardar.';
+				Error('Error al guardar.');
 			}
 			header('Location: /modules/school_periods');
 			exit();
