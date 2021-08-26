@@ -50,8 +50,8 @@ $id_generate = 'admin' . unique_id(5);
                         <option value="Maestria">Maestria</option>
                         <option value="Doctorado">Doctorado</option>
                     </select>
-                    <label for="txtuseremployment" class="label">Cargo</label>
-                    <input id="txtuseremployment" class="text" type="text" name="txtemployment" value="" maxlength="100" required />
+                    <label for="txtuseroccupation" class="label">Cargo</label>
+                    <input id="txtuseroccupation" class="text" type="text" name="txtoccupation" value="" maxlength="100" required />
                     <label for="txtuserobservation" class="label">Observación</label>
                     <input id="txtuserobservation" class="text" type="text" name="txtobservation" value="" maxlength="200" />
                 </div>

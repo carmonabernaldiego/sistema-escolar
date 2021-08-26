@@ -19,7 +19,7 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['administrative_phone'][0] = $row['phone'];
 		$_SESSION['administrative_address'][0] = $row['address'];
 		$_SESSION['administrative_level_studies'][0] = $row['level_studies'];
-		$_SESSION['administrative_employment'][0] = $row['employment'];
+		$_SESSION['administrative_occupation'][0] = $row['occupation'];
 		$_SESSION['ss'][0] = $row['observations'];
 	}
 }
@@ -133,7 +133,7 @@ if ($_SESSION['administrative_level_studies'][0] == 'Licenciatura') {
 echo '
 					</select>
 					<label class="label">Cargo</label>
-					<input class="text" type="text" name="txtemployment" value="' . $_SESSION['administrative_employment'][0] . '" disabled/>
+					<input class="text" type="text" name="txtoccupation" value="' . $_SESSION['administrative_occupation'][0] . '" disabled/>
 					<label class="label">Observación</label>
 					<input class="text" type="text" name="txtobservation" value="' . $_SESSION['administrative_observations'][0] . '" disabled/>
 				</div>

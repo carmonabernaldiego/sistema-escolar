@@ -14,7 +14,7 @@ if ($_POST['txtuserimage'] != 'user.png') {
 	unlink('../../images/users/' . $_POST['txtuserimage'] . '');
 }
 
-$sql_delete = "DELETE FROM users WHERE user = '" . $_POST['txtuserid'] . "'";
+$sql_delete = "DELETE FROM users WHERE user_id = '" . $_POST['txtuserid'] . "'";
 
 if (mysqli_query($conexion, $sql_delete)) {
 	$_SESSION['msgbox_info'] = 0;

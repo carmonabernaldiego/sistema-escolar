@@ -31,7 +31,7 @@ if ($result = $conexion->query($sql)) {
 		$timestamp = '1299762201428';
 		$date = date('Y-m-d H:i:s');
 
-		$sql_insert = "INSERT INTO administratives(user, name, surnames, curp, rfc, gender, date_of_birth, phone, address, level_studies, employment, observations, created_at) VALUES('" . $_POST['txtuserid'] . "', '" . $_POST['txtname'] . "', '" . $_POST['txtsurnames'] . "', '" . $_POST['txtcurp'] . "', '" . $_POST['txtrfc'] . "', '" . $_POST['selectgender'] . "', '" . $_POST['dateofbirth'] . "', '" . $_POST['txtphone'] . "', '" . $_POST['txtaddress'] . "', '" . $_POST['selectlevelstudies'] . "', '" . $_POST['txtemployment'] . "', '" . $_POST['txtobservation'] . "', '" . $date . "')";
+		$sql_insert = "INSERT INTO administratives(user, name, surnames, curp, rfc, gender, date_of_birth, phone, address, level_studies, occupation, observations, created_at) VALUES('" . $_POST['txtuserid'] . "', '" . $_POST['txtname'] . "', '" . $_POST['txtsurnames'] . "', '" . $_POST['txtcurp'] . "', '" . $_POST['txtrfc'] . "', '" . $_POST['selectgender'] . "', '" . $_POST['dateofbirth'] . "', '" . $_POST['txtphone'] . "', '" . $_POST['txtaddress'] . "', '" . $_POST['selectlevelstudies'] . "', '" . $_POST['txtoccupation'] . "', '" . $_POST['txtobservation'] . "', '" . $date . "')";
 
 		if (mysqli_query($conexion, $sql_insert)) {
 			$_SESSION['msgbox_error'] = 0;

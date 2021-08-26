@@ -25,9 +25,9 @@ function Info($textMsgBox)
 function AddUserDB($conex, $user, $email, $pass, $permissions)
 {
 	if ($email == '') {
-		$sql_insert = "INSERT INTO users(user, pass, permissions, image, date_create) VALUES('" . $user . "','" . $pass . "', '" . $permissions . "', 'user.png', '" . date('Y-m-d') . "')";
+		$sql_insert = "INSERT INTO users(user_id, pass, permissions, image, created_at) VALUES('" . $user . "','" . $pass . "', '" . $permissions . "', 'user.png', '" . date('Y-m-d') . "')";
 	} else {
-		$sql_insert = "INSERT INTO users(user, email, pass, permissions, image, date_create) VALUES('" . $user . "', '" . $email . "', '" . $pass . "', '" . $permissions . "', 'user.png', '" . date('Y-m-d') . "')";
+		$sql_insert = "INSERT INTO users(user_id, email, pass, permissions, image, created_at) VALUES('" . $user . "', '" . $email . "', '" . $pass . "', '" . $permissions . "', 'user.png', '" . date('Y-m-d') . "')";
 	}
 
 	if (mysqli_query($conex, $sql_insert)) {
@@ -48,7 +48,7 @@ if ($_POST['txtuseridAdd'] == '') {
 	Error('Ingrese un ID de usuario correcto.');
 }
 
-$sql = "SELECT user FROM users WHERE user = '" . $_POST['txtuseridAdd'] . "' LIMIT 1";
+$sql = "SELECT user_id FROM users WHERE user_id = '" . $_POST['txtuseridAdd'] . "' LIMIT 1";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {

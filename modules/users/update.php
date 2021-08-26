@@ -25,9 +25,9 @@ function Info($textMsgBox)
 function UpdateUserDB($conex, $user, $email, $permissions)
 {
 	if ($email == '') {
-		$sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "', last_update = '" . date('Y-m-d') . "' WHERE user = '" . $user . "'";
+		$sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "', updated_at = '" . date('Y-m-d') . "' WHERE user_id = '" . $user . "'";
 	} else {
-		$sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "', last_update = '" . date('Y-m-d') . "' WHERE user = '" . $user . "'";
+		$sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "', updated_at = '" . date('Y-m-d') . "' WHERE user_id = '" . $user . "'";
 	}
 
 	if (mysqli_query($conex, $sql_update)) {
@@ -42,7 +42,7 @@ if (empty($_POST['txtuseridUpdate'])) {
 	exit();
 }
 
-$sql = "SELECT user, email FROM users WHERE email = '" . $_POST['txtemailUpdate'] . "' AND user != '" . $_POST['txtuseridUpdate'] . "' LIMIT 1";
+$sql = "SELECT user_id, email FROM users WHERE email = '" . $_POST['txtemailUpdate'] . "' AND user_id != '" . $_POST['txtuseridUpdate'] . "' LIMIT 1";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
