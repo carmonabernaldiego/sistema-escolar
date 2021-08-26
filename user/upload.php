@@ -1,6 +1,7 @@
 <?php
 include_once '../modules/security.php';
 include_once '../modules/conexion.php';
+include_once '../modules/notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
@@ -22,7 +23,7 @@ if (isset($_POST["image"])) {
 	if (file_exists($uploadImage)) {
 		$date = date('Y-m-d');
 
-		$sql_update = "UPDATE users SET image = '" . $imageName . "', last_image_update = '" . $date . "' WHERE user = '" . $_SESSION['user_id'][0] . "'";
+		$sql_update = "UPDATE users SET image = '" . $imageName . "', image_updated_at = '" . $date . "' WHERE user_id = '" . $_SESSION['user_id'][0] . "'";
 
 		if (mysqli_query($conexion, $sql_update)) {
 			if ($_SESSION['image'] != "user.png") {
@@ -32,11 +33,9 @@ if (isset($_POST["image"])) {
 			}
 			$_SESSION['msgbox_error'] = 0;
 			$_SESSION['msgbox_info'] = 1;
-			$_SESSION['text_msgbox_info'] = 'La imagen se cargo correctamente.';
+			Info('La imagen se cargo correctamente.');
 		} else {
-			$_SESSION['msgbox_info'] = 0;
-			$_SESSION['msgbox_error'] = 1;
-			$_SESSION['text_msgbox_error'] = 'Existe un problema en la BD al actualizar el nombre de la imagen de usuario.';
+			Error('Existe un problema en la BD al actualizar el nombre de la imagen de usuario.');
 		}
 
 		if ($_SESSION['user'] == $_SESSION['user_id'][0]) {
@@ -44,12 +43,8 @@ if (isset($_POST["image"])) {
 			setcookie('image', $imageName, time() + 365 * 24 * 60 * 60, "/");
 		}
 	} else {
-		$_SESSION['msgbox_info'] = 0;
-		$_SESSION['msgbox_error'] = 1;
-		$_SESSION['text_msgbox_error'] = 'Existe un error al cargar la imagen.';
+		Error('Existe un error al cargar la imagen.');
 	}
 } else {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Existe un error al cargar la imagen.';
+	Error('Existe un error al cargar la imagen.');
 }

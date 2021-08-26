@@ -5,10 +5,10 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
     $pass = mysqli_real_escape_string($conexion, $_POST['txtpass']);
 
     //Buscar Usuario
-    $sql = "SELECT * FROM users WHERE BINARY user = '$user' and BINARY pass = '$pass' or BINARY email = '$user' and BINARY pass = '$pass' LIMIT 1";
+    $sql = "SELECT * FROM users WHERE BINARY user_id = '$user' and BINARY pass = '$pass' or BINARY email = '$user' and BINARY pass = '$pass' LIMIT 1";
 
     if ($result = $conexion->query($sql)) {
-        if (/*$row = $result -> fetch_row()*/$row = mysqli_fetch_array($result)) {
+        if ($row = mysqli_fetch_array($result)) {
             //Cargar Usuario
             if ($row['permissions'] == 'admin') {
                 $user = $row['user'];

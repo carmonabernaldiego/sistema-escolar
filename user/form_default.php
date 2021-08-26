@@ -5,17 +5,17 @@ $_SESSION['user_id'] = array();
 $_SESSION['email'] = array();
 $_SESSION['user_type'] = array();
 $_SESSION['user_image'] = array();
-$_SESSION['last_image_update'] = array();
+$_SESSION['image_updated_at'] = array();
 
-$sql = "SELECT * FROM users WHERE user = '" . $_SESSION['user'] . "'";
+$sql = "SELECT user_id, email, permissions, image, image_updated_at FROM users WHERE user_id = '" . $_SESSION['user'] . "'";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['user_id'][0] = $row['user'];
+		$_SESSION['user_id'][0] = $row['user_id'];
 		$_SESSION['email'][0] = $row['email'];
 		$_SESSION['user_type'][0] = $row['permissions'];
 		$_SESSION['user_image'][0] = $row['image'];
-		$_SESSION['last_image_update'][0] = $row['last_image_update'];
+		$_SESSION['image_updated_at'][0] = $row['image_updated_at'];
 	}
 }
 
@@ -62,12 +62,12 @@ echo '
 					<div class="section-user-image">
 						<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
 		';
-$date_time_start = date_create($_SESSION['last_image_update'][0]);
+$date_time_start = date_create($_SESSION['image_updated_at'][0]);
 $date_time_end = date_create(date('Y-m-d'));
 $interval = date_diff($date_time_start, $date_time_end);
 $days = intval($interval->format('%a'));
 
-if ($days >= 15 or $_SESSION['last_image_update'][0] == null) {
+if ($days >= 15 or $_SESSION['image_updated_at'][0] == null) {
 	echo '
 						<a href="#" class="file"><span class="icon">add_a_photo</span></a>
 						<input id="fileuploadimage" style="display: none;" type="file" name="fileuploadimage" accept=".jpg, .jpeg, .png" />
