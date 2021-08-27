@@ -1219,6 +1219,7 @@ button:focus {
     color: #4a567c;
     font-size: 1em;
     font-weight: 600;
+    text-transform: capitalize;
     outline: none;
     outline-width: 0;
 }
