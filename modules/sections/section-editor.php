@@ -7,7 +7,7 @@ $name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['image'] . '
 
 if (file_exists($name_image_user)) {
 } else {
-    $sql = "SELECT image FROM users WHERE user = '" . $_SESSION['user'] . "'";
+    $sql = "SELECT image FROM users WHERE user_id = '" . $_SESSION['user'] . "'";
 
     if ($result = $conexion->query($sql)) {
         if ($row = mysqli_fetch_array($result)) {
