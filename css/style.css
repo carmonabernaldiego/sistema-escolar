@@ -136,7 +136,7 @@ button:focus {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url(../images/page_loader.gif) 50% 50% no-repeat #282a36;
+    background: url(../images/loader.gif) 50% 50% no-repeat #282a36;
     opacity: 1;
 }
 
@@ -148,7 +148,7 @@ button:focus {
     width: 100%;
     height: 380px;
     z-index: 9999;
-    background: url(../images/user_loader.gif) 50% 50% no-repeat #44475a;
+    background: url(../images/loader_user.gif) 50% 50% no-repeat #44475a;
     border-top-left-radius: 0.4em;
     border-top-right-radius: 0.4em;
     opacity: 1;
@@ -512,7 +512,7 @@ button:focus {
     left: 0;
     right: 0;
     margin: -55px auto 0;
-    background: url(../images/user_icon.png)#eef4ff no-repeat bottom / 125px 125px;
+    background: url(../images/icon_user.png)#eef4ff no-repeat bottom / 125px 125px;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
     border: 4px solid #6f7a9a;
     border-radius: 5em;
