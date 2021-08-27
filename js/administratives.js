@@ -6,7 +6,7 @@
 -------------------------------------------*/
 
 $(document).ready(function() {
-    $('#selectgender').select2({
+    $('.select').select2({
         minimumResultsForSearch: Infinity
     });
 });
