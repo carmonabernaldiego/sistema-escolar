@@ -1212,7 +1212,7 @@ button:focus {
 
 .month-item-name,
 .month-item-year {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
     background: #dde8fc;
     border: none;
     border-radius: 0.4em;
@@ -1584,6 +1584,7 @@ button:focus {
     width: 220px;
     height: 220px;
     margin: 0 auto;
+    background-color: #eef4ff;
     border: solid #eef4ff 4px;
     border-radius: 100%;
     pointer-events: none;

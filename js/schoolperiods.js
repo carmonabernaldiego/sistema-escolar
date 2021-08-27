@@ -13,12 +13,14 @@ $(document).ready(function() {
 
 const dateStart = new Litepicker({
     element: document.getElementById('datespstart'),
-    singleMode: true
+    lang: 'es-MX',
+    singleMode: true,
 });
 
 const dateEnd = new Litepicker({
     element: document.getElementById('datespend'),
-    singleMode: true
+    lang: 'es-MX',
+    singleMode: true,
 });
 
 $('#datespstart').focus(function() {
