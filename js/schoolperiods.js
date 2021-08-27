@@ -6,7 +6,7 @@
 -------------------------------------------*/
 
 $(document).ready(function() {
-    $(".select").select2({
+    $('.select').select2({
         minimumResultsForSearch: Infinity
     });
 });
@@ -21,12 +21,12 @@ const dateEnd = new Litepicker({
     singleMode: true
 });
 
-$("#datespstart").focus(function() {
+$('#datespstart').focus(function() {
     dateStart.show();
     dateEnd.hide();
 });
 
-$("#datespend").focus(function() {
+$('#datespend').focus(function() {
     dateEnd.show();
     dateStart.hide();
 });
@@ -46,7 +46,7 @@ $('#selectactive').on('select2:select', function(e) {
 
 $('#selectcurrent').on('select2:select', function(e) {
     vcurrent = e.params.data.id;
-    vactive = $("#selectactive").val();
+    vactive = $('#selectactive').val();
 
     if (vcurrent == 1 && vactive == 0) {
         $('#selectcurrent').val('0').trigger('change.select2');

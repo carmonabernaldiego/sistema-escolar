@@ -6,20 +6,22 @@
 -------------------------------------------*/
 
 $(document).ready(function() {
-    $(".select").select2({
+    $('#selectgender').select2({
         minimumResultsForSearch: Infinity
     });
 });
 
 const dateOfBirth = new Litepicker({
     element: document.getElementById('dateofbirth'),
-    singleMode: true
+    lang: 'es-MX',
+    singleMode: true,
+    dropdowns: { minYear: 1950, maxYear: (new Date()).getFullYear(), months: 1, years: 1 }
 });
 
-$("#dateofbirth").focus(function() {
+$('#dateofbirth').focus(function() {
     dateOfBirth.show();
 });
 
-$("#txtusercurp").focus(function() {
+$('#txtusercurp').focus(function() {
     dateOfBirth.hide();
 });
