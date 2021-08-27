@@ -45,7 +45,7 @@ if ($_SESSION['user_type'][0] == 'admin') {
 
 echo '
 <div class="form-data formConfigUser">
-	<div class="loader-image-upload"></div>
+	<div class="loader-user"></div>
 	<div class="body">
 		<div class="section-croppie-image">
 			<div class="image-crop"></div>

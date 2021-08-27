@@ -42,7 +42,7 @@ $(document).ready(function() {
             quality: 1,
             circle: false
         }).then(function(response) {
-            $('.loader-image-upload').css('visibility', 'visible');
+            $('.loader-user').css('visibility', 'visible');
             $('#section-user-image').show();
             $('#section-croppie-image').hide();
             $.ajax({

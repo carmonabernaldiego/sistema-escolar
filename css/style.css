@@ -140,7 +140,7 @@ button:focus {
     opacity: 1;
 }
 
-.loader-image-upload {
+.loader-user {
     visibility: hidden;
     position: absolute;
     left: 0px;

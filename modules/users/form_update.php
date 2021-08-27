@@ -42,7 +42,7 @@ if (file_exists($name_image_user)) {
 }
 echo '
 <div class="form-data form-users">
-	<div class="loader-image-upload">
+	<div class="loader-user">
 	</div>
 	<div class="body">
 		<div id="section-croppie-image">
