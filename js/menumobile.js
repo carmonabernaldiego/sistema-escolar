@@ -62,7 +62,8 @@ let toggleU = false;
 tlU.to('.user-mobile .activator-user', {
     background: '#6272a4',
     border: '3px solid #6272a4',
-    borderRadius: '0 5em 5em 0'
+    borderTopLeftRadius: '0',
+    borderBottomLeftRadius: '0'
 });
 
 tlU.to('.user-mobile nav', {

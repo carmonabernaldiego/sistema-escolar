@@ -1981,14 +1981,17 @@ input[type="range"]:active {
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border: 3px solid #44475a;
-    border-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
     cursor: pointer;
-    transition: all 600ms ease-out;
+    transition: background 100ms ease-in;
 }
 
 .user-mobile header .activator-user:hover {
     background: #44475a;
-    transition: all 600ms ease-out;
+    transition: background 100ms ease-in;
 }
 
 .user-mobile ul {
@@ -2103,8 +2106,8 @@ input[type="range"]:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 51px;
-    min-height: 51px;
+    min-width: 52px;
+    min-height: 52px;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0.4em;
@@ -2112,11 +2115,12 @@ input[type="range"]:active {
     font-size: 1.3em;
     line-height: 0.95em;
     cursor: pointer;
-    transition: all 300ms ease-out;
+    transition: color 100ms ease-in;
 }
 
 .menu-mobile header .activator:hover {
     background: #44475a;
+    transition: color 100ms ease-in;
 }
 
 .menu-mobile header span.activator {
@@ -2137,7 +2141,7 @@ input[type="range"]:active {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    height: 51px;
+    height: 52px;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0 0.4em 0.4em 0;
@@ -2152,7 +2156,7 @@ input[type="range"]:active {
 .menu-mobile header nav ul li a {
     display: block;
     padding: .35em .55em;
-    margin: 4px;
+    margin: 4.5px;
     color: #eef4ff;
     font-size: 1.3em;
     line-height: 2.8px;
@@ -2160,7 +2164,6 @@ input[type="range"]:active {
     border-radius: 0.4em;
     outline: none;
     outline-width: none;
-    transition: all 300ms ease-out;
 }
 
 .menu-mobile header nav ul li a:hover,
