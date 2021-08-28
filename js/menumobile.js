@@ -5,6 +5,10 @@
   www.mysoftup.com
 -------------------------------------------*/
 
+/*-------------------------------------------
+  menu
+-------------------------------------------*/
+
 let card = document.getElementById('activator');
 
 let tl = gsap.timeline({
@@ -16,10 +20,6 @@ let tl = gsap.timeline({
 let toggle = false;
 
 tl.to('.activator', {
-    color: '#eef4ff98'
-}, '-=.3');
-
-tl.to('.activator', {
     background: '#6272a4',
     color: '#eef4ff98',
     borderTopRightRadius: '0',
@@ -27,20 +27,23 @@ tl.to('.activator', {
 });
 
 tl.to('.menu-mobile nav', {
-    'clipPath': 'ellipse(100% 100% at 50% 50%)'
-}, '-=.6');
+    clipPath: 'ellipse(100% 100% at 50% 50%)',
+    duration: 0.6
+});
 
 tl.to('.menu-mobile nav span', {
     opacity: 1,
     transform: 'translateX(0)',
-    stagger: .03
-}, '-=.3');
+    stagger: .01,
+    duration: 0.3
+});
 
 tl.to('.menu-mobile nav .active', {
     opacity: 1,
     transform: 'translateX(0)',
-    stagger: .05
-}, '-=.9');
+    stagger: .05,
+    duration: 0.3
+});
 
 tl.pause();
 
@@ -48,6 +51,10 @@ card.addEventListener('click', () => {
     toggle = !toggle;
     if (toggle ? tl.play() : tl.reverse());
 });
+
+/*-------------------------------------------
+  user
+-------------------------------------------*/
 
 let cardU = document.getElementById('activator-user');
 
