@@ -16,14 +16,14 @@ let tl = gsap.timeline({
 let toggle = false;
 
 tl.to('.activator', {
-    color: '#eef4ff98',
-    transition: 'color 150ms ease-in'
+    color: '#eef4ff98'
 }, '-=.3');
 
 tl.to('.activator', {
     background: '#6272a4',
     color: '#eef4ff98',
-    'borderRadius': '0.4em 0 0 0.4em'
+    borderTopRightRadius: '0',
+    borderBottomRightRadius: '0'
 });
 
 tl.to('.menu-mobile nav', {
@@ -61,6 +61,7 @@ let toggleU = false;
 
 tlU.to('.user-mobile .activator-user', {
     background: '#6272a4',
+    border: '3px solid #6272a4',
     borderRadius: '0 5em 5em 0'
 });
 

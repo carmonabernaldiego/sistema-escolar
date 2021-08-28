@@ -270,7 +270,7 @@ button:focus {
     width: 50px;
     height: 50px;
     margin: 5% 8%;
-    background-color: #eef4ff;
+    background-color: #6272a4;
     box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
     border: 3px solid #6272a4;
     border-radius: 10em;
@@ -1184,6 +1184,36 @@ button:focus {
     opacity: 1;
 }
 
+.litepicker {
+    user-select: none;
+}
+
+.month-item-name,
+.month-item-year {
+    background: #dde8fc;
+    border: none;
+    border-radius: 0.4em;
+    color: #4a567c;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: capitalize;
+    outline: none;
+    outline-width: 0;
+    cursor: pointer;
+}
+
+select.month-item-name option,
+select.month-item-year option {
+    background: #dde8fc;
+    border: none;
+    border-radius: 0.4em;
+    color: #4a567c;
+    font-size: 1em;
+    font-weight: 600;
+    outline: none;
+    outline-width: 0;
+}
+
 .form-data .body .select {
     width: 100%;
     height: 36px;
@@ -1208,32 +1238,6 @@ button:focus {
 .select2 {
     width: 100%!important;
     margin-bottom: 25px !important;
-}
-
-.month-item-name,
-.month-item-year {
-    margin-bottom: 6px;
-    background: #dde8fc;
-    border: none;
-    border-radius: 0.4em;
-    color: #4a567c;
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: capitalize;
-    outline: none;
-    outline-width: 0;
-}
-
-.month-item-name option,
-.month-item-year option {
-    background: #dde8fc;
-    border: none;
-    border-radius: 0.4em;
-    color: #4a567c;
-    font-size: 1em;
-    font-weight: 600;
-    outline: none;
-    outline-width: 0;
 }
 
 .form-data .body .btn {
@@ -1974,17 +1978,17 @@ input[type="range"]:active {
 .user-mobile header .activator-user {
     width: 45px;
     height: 45px;
-    padding: 0.22em;
-    border-radius: 100%;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border: 3px solid #44475a;
+    border-radius: 100%;
     cursor: pointer;
-    transition: all 300ms ease-out;
+    transition: all 600ms ease-out;
 }
 
 .user-mobile header .activator-user:hover {
     background: #44475a;
-    transition: all 300ms ease-out;
+    transition: all 600ms ease-out;
 }
 
 .user-mobile ul {
@@ -2096,14 +2100,19 @@ input[type="range"]:active {
 }
 
 .menu-mobile header .activator {
-    padding: 0.77em 0.77em;
-    border-radius: 0.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 51px;
+    min-height: 51px;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
     color: #eef4ff;
     font-size: 1.3em;
     line-height: 0.95em;
     cursor: pointer;
+    transition: all 300ms ease-out;
 }
 
 .menu-mobile header .activator:hover {
@@ -2128,7 +2137,7 @@ input[type="range"]:active {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    height: 52px;
+    height: 51px;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-radius: 0 0.4em 0.4em 0;
@@ -2143,7 +2152,7 @@ input[type="range"]:active {
 .menu-mobile header nav ul li a {
     display: block;
     padding: .35em .55em;
-    margin: 4.5px;
+    margin: 4px;
     color: #eef4ff;
     font-size: 1.3em;
     line-height: 2.8px;
