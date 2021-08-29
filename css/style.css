@@ -29,7 +29,7 @@
 
 
 /*-------------------------------------------
-  Home | Estructura
+  Structure
 -------------------------------------------*/
 
 * {
@@ -39,22 +39,14 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
-    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #282a36;
-    color: #4a567c;
+::selection {
+    background: #a4b5d3;
+    color: #eef4ff;
 }
 
-body.login {
-    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
-    background: #dadceb url(../images/background_login.jpg) no-repeat top center fixed;
-    background-size: cover !important;
+::placeholder {
+    color: #687292;
 }
-
-
-/*::-webkit-scrollbar {
-    display: none;
-}*/
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -81,47 +73,37 @@ body.login {
     background: #eef4ff3d;
 }
 
-input::-webkit-datetime-edit-day-field:focus,
-input::-webkit-datetime-edit-month-field:focus,
-input::-webkit-datetime-edit-year-field:focus {
-    background: #a4b5d3;
-    color: #eef4ff;
-    outline: none;
+input[disabled],
+select[disabled],
+textarea[disabled] {
+    background: #eef4ff !important;
+    color: #687292 !important;
+    transition: all 200ms ease-in !important;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
     background: #dde8fc !important;
-    transition: all 200ms ease-in;
-}
-
-select[disabled],
-input[disabled] {
-    background: #eef4ff !important;
-    opacity: 1;
-    color: #687292 !important;
+    transition: all 200ms ease-in !important;
 }
 
 button:focus {
     outline: none !important;
     outline-width: 0 !important;
-    box-shadow: none;
-    color: #b6c1d4 !important;
+    transition: all 200ms ease-in !important;
 }
 
-::selection {
-    background: #a4b5d3;
-    color: #eef4ff;
+body {
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    background: #282a36;
+    color: #4a567c;
 }
 
-::-webkit-selection {
-    background: #a4b5d3;
-    color: #eef4ff;
-}
-
-::placeholder {
-    color: #687292;
+body.login {
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    background: #dadceb url(../images/background_login.jpg) no-repeat top center fixed;
+    background-size: cover !important;
 }
 
 
@@ -1188,8 +1170,8 @@ button:focus {
     user-select: none;
 }
 
-.month-item-name,
-.month-item-year {
+.litepicker .month-item-name,
+.litepicker .month-item-year {
     background: #dde8fc;
     border: none;
     border-radius: 0.4em;
@@ -1199,11 +1181,10 @@ button:focus {
     text-transform: capitalize;
     outline: none;
     outline-width: 0;
-    cursor: pointer;
 }
 
-select.month-item-name option,
-select.month-item-year option {
+.litepicker select.month-item-name option,
+.litepicker select.month-item-year option {
     background: #dde8fc;
     border: none;
     border-radius: 0.4em;
