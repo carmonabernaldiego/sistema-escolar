@@ -2389,9 +2389,6 @@ input[type="range"]:active {
     .content-full {
         margin-bottom: 0 !important;
     }
-    .form-options {
-        padding: 3px 0;
-    }
     .form-options .options .btn {
         width: 35px;
         height: 35px;
