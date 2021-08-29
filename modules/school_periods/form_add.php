@@ -10,9 +10,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
             <div class="wrap">
                 <div class="first">
                     <label for="txtspid" class="label">Periodo escolar</label>
-                    <input id="txtspid" class="text" type="text" name="txtspid" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" required />
+                    <input id="txtspid" class="text" type="text" name="txtspid" value="" maxlength="20" onkeyup="this.value = this.value.toUpperCase()" required autofocus />
                     <label for="datespstart" class="label">Inicia</label>
-                    <input id="datespstart" class="date" type="text" name="datespstart" value="" maxlength="10" required autofocus />
+                    <input id="datespstart" class="date" type="text" name="datespstart" value="" maxlength="10" required />
                     <label for="datespend" class="label">Termina</label>
                     <input id="datespend" class="date" type="text" name="datespend" value="" maxlength="10" required />
                 </div>
