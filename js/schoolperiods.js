@@ -33,24 +33,24 @@ $('#datespend').focus(function() {
     dateStart.hide();
 });
 
-let vcurrent, vactive;
+let valcurrent, valactive;
 
 $('#selectactive').on('select2:select', function(e) {
-    vcurrent = e.params.data.id;
+    valcurrent = e.params.data.id;
 
-    if (vcurrent == 0) {
+    if (valcurrent == 0) {
         $('#selectcurrent').prop('disabled', true);
         $('#selectcurrent').val('0').trigger('change.select2');
-    } else if (vcurrent == 1) {
+    } else if (valcurrent == 1) {
         $('#selectcurrent').prop('disabled', false);
     }
 });
 
 $('#selectcurrent').on('select2:select', function(e) {
-    vcurrent = e.params.data.id;
-    vactive = $('#selectactive').val();
+    valcurrent = e.params.data.id;
+    valactive = $('#selectactive').val();
 
-    if (vcurrent == 1 && vactive == 0) {
+    if (valcurrent == 1 && valactive == 0) {
         $('#selectcurrent').val('0').trigger('change.select2');
         $('#selectcurrent').prop('disabled', true);
     }
