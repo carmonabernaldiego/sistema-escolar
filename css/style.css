@@ -541,9 +541,7 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.form-login .text:hover,
 .form-login .text:focus,
-.form-login .textcontrasena:hover,
 .form-login .textcontrasena:focus {
     color: #4a567c !important;
     cursor: text;
