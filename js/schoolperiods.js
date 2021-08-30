@@ -36,6 +36,8 @@ $('#datespend').focus(function() {
 let valcurrent, valactive;
 
 $('#selectactive').on('select2:select', function(e) {
+    dateEnd.hide();
+
     valcurrent = e.params.data.id;
 
     if (valcurrent == 0) {
