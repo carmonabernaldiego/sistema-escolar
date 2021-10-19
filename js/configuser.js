@@ -76,6 +76,7 @@ $(document).ready(function() {
             quality: 1,
             circle: false
         }).then(function(response) {
+            $('.loader-user').css('visibility', 'visible');
             $('.wrap').show();
             $('.section-croppie-image').hide();
             $.ajax({
