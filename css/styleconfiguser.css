@@ -8,39 +8,28 @@
 .box-notification-ok,
 .box-notification-error {
     position: absolute;
-    width: 72%;
+    width: 68%;
     height: 50px;
     top: 0;
     margin: 35px 0 0 0;
+    padding: 0 2%;
     box-shadow: none;
-}
-
-.box-notification-ok p,
-.box-notification-error p {
-    padding: 0 35px;
-    line-height: 50px;
 }
 
 @media only screen and (max-width: 1186px) {
     .box-notification-ok,
     .box-notification-error {
-        position: absolute;
-        top: 0;
-        width: 94%;
+        width: 89%;
         margin: 100px 0 0 0;
+        padding: 0 2.5%;
     }
 }
 
 @media only screen and (max-width: 963px) {
     .box-notification-ok,
     .box-notification-error {
-        position: initial;
-        width: 100%;
-        margin: -77px 0 27px 0;
-    }
-    .box-notification-ok p,
-    .box-notification-error p {
-        padding: 0 5%;
-        line-height: 50px;
+        width: 87%;
+        margin: 100px 0 0 0;
+        padding: 0 3.5%;
     }
 }
