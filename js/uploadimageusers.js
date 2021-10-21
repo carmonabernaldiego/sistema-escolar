@@ -5,6 +5,9 @@
   www.mysoftup.com
 -------------------------------------------*/
 
+$('#btnAddOptions').addClass('btn-disabled');
+
+
 $('#section-croppie-image').hide();
 $(document).ready(function() {
 
