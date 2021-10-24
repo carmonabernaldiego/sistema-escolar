@@ -1,40 +1,66 @@
--- --------------------------------------------------------
--- Host:                         localhost
--- Versión del servidor:         5.7.24 - MySQL Community Server (GPL)
--- SO del servidor:              Win64
--- HeidiSQL Versión:             10.2.0.5599
--- --------------------------------------------------------
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 01-10-2021 a las 16:52:35
+-- Versión del servidor: 10.4.19-MariaDB-cll-lve
+-- Versión de PHP: 7.2.34
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
--- Volcando estructura para tabla db_escolar.administratives
-CREATE TABLE IF NOT EXISTS `administratives` (
+--
+-- Base de datos: `u921810722_db_school`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `administratives`
+--
+
+CREATE TABLE `administratives` (
   `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `surnames` varchar(60) COLLATE utf8_spanish2_ci NOT NULL,
+  `gender` varchar(30) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `date_of_birth` date DEFAULT NULL,
   `curp` varchar(18) COLLATE utf8_spanish2_ci NOT NULL,
   `rfc` varchar(13) COLLATE utf8_spanish2_ci NOT NULL,
-  `address` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `phone` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
+  `address` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `level_studies` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
-  `documentation` int(1) NOT NULL,
+  `occupation` varchar(100) COLLATE utf8_spanish2_ci NOT NULL DEFAULT '',
   `observations` varchar(200) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  PRIMARY KEY (`user`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.administratives: 2 rows
-/*!40000 ALTER TABLE `administratives` DISABLE KEYS */;
-INSERT INTO `administratives` (`user`, `name`, `surnames`, `curp`, `rfc`, `address`, `phone`, `level_studies`, `documentation`, `observations`) VALUES
-	('admin', 'Diego', 'Carmona Bernal', 'CABD970405CSRRG03', 'CABD9704052K5', 'Av Francisco Sarabia', '9614044227', 'Ingenieria', 1, ''),
-	('admin_d4bf7', 'Damian', 'Esponda Toledo', 'CONOCIDO', 'CONOCIDO', 'Conocido', '9373737737', 'Licenciatura', 1, '');
-/*!40000 ALTER TABLE `administratives` ENABLE KEYS */;
+--
+-- Volcado de datos para la tabla `administratives`
+--
 
--- Volcando estructura para tabla db_escolar.attendance
-CREATE TABLE IF NOT EXISTS `attendance` (
+INSERT INTO `administratives` (`user`, `name`, `surnames`, `gender`, `date_of_birth`, `curp`, `rfc`, `phone`, `address`, `level_studies`, `occupation`, `observations`, `created_at`, `updated_at`) VALUES
+('admin', 'Diego', 'Carmona Bernal', 'hombre', '1997-04-05', 'CABD970405CSRRG03', 'CABD9704052K5', '9614044227', 'Av. Francisco Sarabia #14 Col. Bienestar Social, Tuxtla Gutiérrez, Chiapas.', 'Ingenieria', 'Analista de Sistemas', '', NULL, '2021-08-27 03:40:26'),
+('adminec4e9', 'holi', 'kdkd', 'otro', '2021-08-18', 'KDKD', 'XXKKZ', '1661', 'djd', 'Licenciatura', 'f', '', '2021-08-27 03:41:36', NULL),
+('editor', 'Jesús Antonio', 'Olvera Gálvez', 'hombre', '1989-10-14', 'OGJA891014HCSRRG02', 'OGJA8910142V9', '9616541519', '9 Av. Sur. Ote #2167', 'Maestria', 'Recursos Humanos', '', NULL, '2021-08-24 18:25:07');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `attendance`
+--
+
+CREATE TABLE `attendance` (
   `id_attendance` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `id_group` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `school_period` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
@@ -42,18 +68,23 @@ CREATE TABLE IF NOT EXISTS `attendance` (
   `subject` varchar(400) COLLATE utf8_spanish2_ci NOT NULL,
   `user_teacher` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `registered` date NOT NULL,
-  `update_registered` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_attendance`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci ROW_FORMAT=DYNAMIC;
+  `update_registered` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci ROW_FORMAT=DYNAMIC;
 
--- Volcando datos para la tabla db_escolar.attendance: 1 rows
-/*!40000 ALTER TABLE `attendance` DISABLE KEYS */;
+--
+-- Volcado de datos para la tabla `attendance`
+--
+
 INSERT INTO `attendance` (`id_attendance`, `id_group`, `school_period`, `semester`, `subject`, `user_teacher`, `registered`, `update_registered`) VALUES
-	('xfs980s', 'ADMIN_1205', '2021-1', 1, 'CAL_DIF_01', 'teacher_e94ac', '2021-03-09', NULL);
-/*!40000 ALTER TABLE `attendance` ENABLE KEYS */;
+('xfs980s', 'ADMIN_1205', '2021-1', 1, 'CAL_DIF_01', 'teacher_e94ac', '2021-03-09', NULL);
 
--- Volcando estructura para tabla db_escolar.attendance_details
-CREATE TABLE IF NOT EXISTS `attendance_details` (
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `attendance_details`
+--
+
+CREATE TABLE `attendance_details` (
   `id_attendance` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `id_group` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `school_period` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
@@ -63,135 +94,144 @@ CREATE TABLE IF NOT EXISTS `attendance_details` (
   `registered` date NOT NULL,
   `update_registered` date DEFAULT NULL,
   `user_student` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
-  `attend` int(1) NOT NULL DEFAULT '0',
-  `tardiness` int(1) NOT NULL DEFAULT '0',
-  `absent` int(1) NOT NULL DEFAULT '0',
-  KEY `FK_attendance_details_attendance` (`id_attendance`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci ROW_FORMAT=DYNAMIC;
+  `attend` int(1) NOT NULL DEFAULT 0,
+  `tardiness` int(1) NOT NULL DEFAULT 0,
+  `absent` int(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci ROW_FORMAT=DYNAMIC;
 
--- Volcando datos para la tabla db_escolar.attendance_details: 0 rows
-/*!40000 ALTER TABLE `attendance_details` DISABLE KEYS */;
-/*!40000 ALTER TABLE `attendance_details` ENABLE KEYS */;
+-- --------------------------------------------------------
 
--- Volcando estructura para tabla db_escolar.careers
-CREATE TABLE IF NOT EXISTS `careers` (
+--
+-- Estructura de tabla para la tabla `careers`
+--
+
+CREATE TABLE `careers` (
   `career` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
-  `name` varchar(150) COLLATE utf8_spanish2_ci NOT NULL,
-  `description` text COLLATE utf8_spanish2_ci,
-  PRIMARY KEY (`career`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci ROW_FORMAT=DYNAMIC;
+  `name` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
+  `description` text COLLATE utf8_spanish2_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci ROW_FORMAT=DYNAMIC;
 
--- Volcando datos para la tabla db_escolar.careers: 11 rows
-/*!40000 ALTER TABLE `careers` DISABLE KEYS */;
+--
+-- Volcado de datos para la tabla `careers`
+--
+
 INSERT INTO `careers` (`career`, `name`, `description`) VALUES
-	('IDS', 'Ingeniería en Desarrollo de Software', 'Es la aplicación práctica del conocimiento científico y humanístico al diseño y construcción de programas de computadora, diseñando soluciones de software innovadoras y acordes con el entorno social y empresarial, mediante herramientas, técnicas, tecnologías de usabilidad, base de datos, redes, teleproceso y lenguajes de programación. En Politécnica de Chiapas formamos ingenieros profesionales especializados en el desarrollo de software; capaces de crear, innovar y aplicar la tecnología para ofrecer soluciones en las áreas de la comunicación digital, automatización, negocios, sistemas computacionales, educación, transportes, diversión y entretenimiento.'),
-	('IEM', 'Ingeniería Mecatrónica', 'En esta Ingeniería se combinan diversas disciplinas como la mecánica, electrónica, computación, y control. Las (os) ingenieros mecatrónicos diseñan, integran y desarrollan diversos productos, mecanismos, equipos, maquinaria y sistemas integrales de automatización, así como la elaboración de análisis y consultorías técnicas en procesos relacionados con las áreas de aplicación de la ingeniería mecatrónica, todo esto con la ayuda de herramientas de hardware y software de vanguardia. En la Politécnica de Chiapas contamos con una formación integral, humana, práctica, teórica, empresarial, que permite a nuestras (os) ingenieros desarrollar e implementar tecnología para ofrecer soluciones que contribuyan a mejorar la calidad de vida de las personas así como optimizar los recursos de las empresas. Para ello, contamos con laboratorios equipados, académicos reconocidos y un programa educativo reconocido por una institución de calidad, CACEI.'),
-	('ITA', 'Ingeniería en Tecnología Ambiental', 'Formar ingenieros ambientales competitivos, con dominio de los temas ambientales y ecológicos que se aboquen a solucionar los problemas ambientales de nuestro estado y país, con el propósito de impulsar el desarrollo sustentable mediante la investigación y aplicación de tecnologías ambientales. En la Universidad Politécnica de Chiapas formamos ingenieras (os) en Tecnología Ambiental de manera profesional y especializada, con valores, capaces de desarrollar, adoptar y aplicar la tecnología para ofrecer soluciones integrales en el área del medio ambiente.'),
-	('LAGPYMES', 'Licenciatura en Administración y Gestión de PYMES', 'Forma profesionales con capacidades gerenciales, altamente competitivos que respondan a los desafíos que enfrentan las organizaciones en ambientes de incertidumbre; dirigiendo eficazmente sus recursos y funciones a través de una visión vanguardista, para diseñar, evaluar y aplicar estrategias que permitan innovar o mejorar procesos en las organizaciones en un marco de sustentabilidad.'),
-	('INGPLRA', 'Ingeniería Petrolera', 'El ingeniero petrolero se forma aprovechando de manera sustentable los recursos naturales, atendiendo la preservación del medio ambiente, aplicando para ello las nuevas tecnologías, con habilidades, actitudes, aptitudes analíticas y creativas, de liderazgo y calidad humana, con un espíritu de superación permanente para investigar, desarrollar y aplicar el conocimiento científico y tecnológico. Las y los ingenieros petroleros son profesionistas capaces de atender las necesidades emanadas de los procesos de explotación de hidrocarburos, de agua y de energía geotérmica, a fin de redituar beneficios económicos al país y prever los posibles daños ecológicos al medio ambiente. En la Politécnica de Chiapas formamos ingenieros(as) petroleros de manera profesional, técnica y humana, comprometidos con las necesidades sociales, ambientales y económicas.'),
-	('ITDM', 'Ingeniería en Tecnologías de Manufactura', 'El ingeniero en tecnologías de manufactura es el profesionista capaz de atender las necesidades emanadas de los procesos de transformación de productos manufacturados, contribuyendo al desarrollo local, regional y/o nacional. La combinación de conocimientos de automatización de procesos, tecnologías de manufactura avanzada y técnicas de gestión industrial, hacen del ingeniero en Tecnologías de Manufactura un líder en la industria manufacturera. Las y los ingenieros en Tecnologías de Manufactura de la Universidad Politécnica de Chiapas combinan la aplicación de los conocimientos científicos y tecnológicos para mejorar, diseñar, implantar, automatizar procesos de manufactura, así como administrar y evaluar proyectos en el ámbito de su competencia, con una formación en valores humanos como fundamento de un compromiso real con la sociedad, medio ambiente y las necesidades del crecimiento económico del estado y del país a través de la adquisición de habilidades en tecnologías industriales avanzadas.'),
-	('INGENER', 'Ingeniería en Energía', 'La Ingeniería en Energía es una carrera profesional que se centra en los principios fundamentales para la toma de decisiones en la generación, distribución y utilización eficiente de la energía con responsabilidad ambiental, sostenible y social. Así también, estudian las fuentes energéticas alternas (energías renovables) para su transformación en energía secundaria tales como: electricidad, calor, etc. y su uso óptimo en los procesos de equipo y producción. En la Universidad Politécnica de Chiapas formamos ingenieros en energía con sólidos conocimientos basados en la teoría, la práctica y visión empresarial, capaces de ofrecer soluciones científicas y tecnológicas relacionadas con las fuentes convencionales y renovables de energía. El programa educativo de Ingeniería en Energía está acreditado por el Consejo de Acreditación para la Enseñanza de la Ingeniería (CACEI), los profesores pertenecen al cuerpo académico de energía y sustentabilidad que se encuentra consolidado y adscritos al Sistema Nacional de Investigadores (SNI) y/o al Sistema Estatal de Investigadores (SEI).'),
-	('INGBIO', 'Ingeniería Biomédica', 'En esta rama de la ingeniería se fusionan aspectos de electrónica, medicina, física, informática, química, biología y matemáticas. Las y los ingenieros biomédicos diseñan, crean, desarrollan, innovan e implementan equipos, dispositivos y sistemas médicos que ofrezcan soluciones tecnológicas y científicas en el área de la salud; así también manejan programas de mejoramiento, administración, operación y conservación de instalaciones y equipo hospitalario. En Politécnica de Chiapas formamos ingenieras (os) biomédicos profesionales y especializados, con valores, capaces de desarrollar, adoptar y aplicar la tecnología para ofrecer soluciones científicas y administrativas integrales en el campo de la salud en nuestro país.'),
-	('INGAGRO', 'Ingeniería Agroindustrial', 'En esta ingeniería se mezclan, las ciencias básicas como biología, química, matemáticas, física con la tecnología de alimentos y herramientas de gestión empresarial, a fin de crear y emprender nuevas fuentes de negocios con productos innovadores con alto contenido nutricional, aprovechando las bondades que ofrece la agroindustria, cuidando al medio ambiente. Las y los ingenieros Agroindustriales de la Universidad Politécnica de Chiapas cuentan con formación profesional, técnica y humana. Son capaces de aplicar, mantener, evaluar y seleccionar los procesos de transformación, producción de materias primas e insumos para convertirlos en productos terminados, aplicando herramientas y maquinaria que beneficien al sector productivo agropecuario.'),
-	('MTAENEROV', 'Maestría en Energías Renovables', 'La Maestría en Energías Renovables de la Universidad Politécnica de Chiapas representa una excelente opción para todos aquellos que buscan una superación académica para los egresados de licenciaturas de las áreas de las ciencias y las ingenierías, tales como Ingeniería en Energía, Química, Mecánica, Eléctrica, Industrial, Física, Arquitectura y demás carreras afines.'),
-	('MTABIOTEC', 'Maestría en Biotecnología', 'La Universidad Politécnica de Chiapas ofrece formar profesionales críticos capaces de generar y aportar conocimientos científicos y tecnológicos en el área de la Biotecnología, enfocándose siempre en buscar beneficios para los diversos sectores de la sociedad.\r\n\r\nMediante la biotecnología, los científicos buscan formas de aprovechar la "tecnología biológica" de los seres vivos para generar alimentos más saludables, mejores medicamentos, materiales más resistentes o menos contaminantes, cultivos más productivos, fuentes de energía renovables e incluso sistemas para eliminar la contaminación.\r\n\r\nLas y los maestros en Biotecnología podrán coadyuvar en la incorporación de procesos y técnicas biotecnológicas para la producción y transformación en diferentes sectores socioeconómicos, así también podrán participar en ámbitos académicos, empresariales y de investigación.');
-/*!40000 ALTER TABLE `careers` ENABLE KEYS */;
+('IDS', 'Ingeniería en Desarrollo de Software', 'Es la aplicación práctica del conocimiento científico y humanístico al diseño y construcción de programas de computadora, diseñando soluciones de software innovadoras y acordes con el entorno social y empresarial, mediante herramientas, técnicas, tecnologías de usabilidad, base de datos, redes, teleproceso y lenguajes de programación. En Politécnica de Chiapas formamos ingenieros profesionales especializados en el desarrollo de software; capaces de crear, innovar y aplicar la tecnología para ofrecer soluciones en las áreas de la comunicación digital, automatización, negocios, sistemas computacionales, educación, transportes, diversión y entretenimiento.'),
+('IEM', 'Ingeniería Mecatrónica', 'En esta Ingeniería se combinan diversas disciplinas como la mecánica, electrónica, computación, y control. Las (os) ingenieros mecatrónicos diseñan, integran y desarrollan diversos productos, mecanismos, equipos, maquinaria y sistemas integrales de automatización, así como la elaboración de análisis y consultorías técnicas en procesos relacionados con las áreas de aplicación de la ingeniería mecatrónica, todo esto con la ayuda de herramientas de hardware y software de vanguardia. En la Politécnica de Chiapas contamos con una formación integral, humana, práctica, teórica, empresarial, que permite a nuestras (os) ingenieros desarrollar e implementar tecnología para ofrecer soluciones que contribuyan a mejorar la calidad de vida de las personas así como optimizar los recursos de las empresas. Para ello, contamos con laboratorios equipados, académicos reconocidos y un programa educativo reconocido por una institución de calidad, CACEI.'),
+('INGBIO', 'Ingeniería Biomédica', 'En esta rama de la ingeniería se fusionan aspectos de electrónica, medicina, física, informática, química, biología y matemáticas. Las y los ingenieros biomédicos diseñan, crean, desarrollan, innovan e implementan equipos, dispositivos y sistemas médicos que ofrezcan soluciones tecnológicas y científicas en el área de la salud; así también manejan programas de mejoramiento, administración, operación y conservación de instalaciones y equipo hospitalario. En Politécnica de Chiapas formamos ingenieras (os) biomédicos profesionales y especializados, con valores, capaces de desarrollar, adoptar y aplicar la tecnología para ofrecer soluciones científicas y administrativas integrales en el campo de la salud en nuestro país.'),
+('INGPLRA', 'Ingeniería Petrolera', 'El ingeniero petrolero se forma aprovechando de manera sustentable los recursos naturales, atendiendo la preservación del medio ambiente, aplicando para ello las nuevas tecnologías, con habilidades, actitudes, aptitudes analíticas y creativas, de liderazgo y calidad humana, con un espíritu de superación permanente para investigar, desarrollar y aplicar el conocimiento científico y tecnológico. Las y los ingenieros petroleros son profesionistas capaces de atender las necesidades emanadas de los procesos de explotación de hidrocarburos, de agua y de energía geotérmica, a fin de redituar beneficios económicos al país y prever los posibles daños ecológicos al medio ambiente. En la Politécnica de Chiapas formamos ingenieros(as) petroleros de manera profesional, técnica y humana, comprometidos con las necesidades sociales, ambientales y económicas.'),
+('MATBASICAS', 'Tronco común', ''),
+('MTABIOTEC', 'Maestría en Biotecnología', 'Mediante la biotecnología, los científicos buscan formas de aprovechar la \"tecnología biológica\" de los seres vivos para generar alimentos más saludables, mejores medicamentos, materiales más resistentes o menos contaminantes, cultivos más productivos, fuentes de energía renovables e incluso sistemas para eliminar la contaminación.\r\n\r\nLas y los maestros en Biotecnología podrán coadyuvar en la incorporación de procesos y técnicas biotecnológicas para la producción y transformación en diferentes sectores socioeconómicos, así también podrán participar en ámbitos académicos, empresariales y de investigación.');
 
--- Volcando estructura para tabla db_escolar.groups
-CREATE TABLE IF NOT EXISTS `groups` (
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `groups`
+--
+
+CREATE TABLE `groups` (
   `id_group` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `school_period` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `semester` int(2) NOT NULL,
   `subjects` varchar(500) COLLATE utf8_spanish2_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.groups: 2 rows
-/*!40000 ALTER TABLE `groups` DISABLE KEYS */;
-INSERT INTO `groups` (`id_group`, `school_period`, `name`, `semester`, `subjects`) VALUES
-	('ADMIN2021', '2021-1', 'Desarrollo Web', 1, 'DSWEB2Q,'),
-	('ADMIN_1205', '2021-1', 'Administración de Empresas 1205', 1, 'CAL_DIF_01,FUND_INV_DCSM09,ING_BAS_1,');
-/*!40000 ALTER TABLE `groups` ENABLE KEYS */;
+-- --------------------------------------------------------
 
--- Volcando estructura para tabla db_escolar.groups_students
-CREATE TABLE IF NOT EXISTS `groups_students` (
+--
+-- Estructura de tabla para la tabla `groups_students`
+--
+
+CREATE TABLE `groups_students` (
   `id_group` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `school_period` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `user_student` varchar(50) COLLATE utf8_spanish2_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.groups_students: 5 rows
-/*!40000 ALTER TABLE `groups_students` DISABLE KEYS */;
-INSERT INTO `groups_students` (`id_group`, `school_period`, `user_student`) VALUES
-	('ADMIN_1205', '2021-1', 'student_f0404'),
-	('ADMIN_1205', '2021-1', 'student_28e64'),
-	('ADMIN_1205', '2021-1', 'student_0beb9'),
-	('ADMIN2021', '2021-1', 'student_f0404'),
-	('ADMIN2021', '2021-1', 'student_28e64');
-/*!40000 ALTER TABLE `groups_students` ENABLE KEYS */;
+-- --------------------------------------------------------
 
--- Volcando estructura para tabla db_escolar.school_periods
-CREATE TABLE IF NOT EXISTS `school_periods` (
+--
+-- Estructura de tabla para la tabla `school_periods`
+--
+
+CREATE TABLE `school_periods` (
   `school_period` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
   `active` int(1) NOT NULL,
   `current` int(1) NOT NULL,
-  PRIMARY KEY (`school_period`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.school_periods: 2 rows
-/*!40000 ALTER TABLE `school_periods` DISABLE KEYS */;
-INSERT INTO `school_periods` (`school_period`, `start_date`, `end_date`, `active`, `current`) VALUES
-	('2021-1', '2021-01-08', '2021-07-07', 1, 1),
-	('2021-2', '2021-07-21', '2021-12-21', 1, 0);
-/*!40000 ALTER TABLE `school_periods` ENABLE KEYS */;
+--
+-- Volcado de datos para la tabla `school_periods`
+--
 
--- Volcando estructura para tabla db_escolar.students
-CREATE TABLE IF NOT EXISTS `students` (
+INSERT INTO `school_periods` (`school_period`, `start_date`, `end_date`, `active`, `current`, `created_at`, `updated_at`) VALUES
+('2021-1', '2021-08-20', '2021-12-17', 1, 1, '2021-08-24 13:43:59', '2021-09-15 13:25:26');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `students`
+--
+
+CREATE TABLE `students` (
   `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
-  `school_period` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `surnames` varchar(60) COLLATE utf8_spanish2_ci NOT NULL,
   `curp` varchar(18) COLLATE utf8_spanish2_ci NOT NULL,
   `rfc` varchar(13) COLLATE utf8_spanish2_ci NOT NULL,
   `address` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `phone` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
-  `level_studies` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
+  `career` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `documentation` int(1) NOT NULL,
-  `observations` varchar(200) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  PRIMARY KEY (`user`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+  `admission_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.students: 3 rows
-/*!40000 ALTER TABLE `students` DISABLE KEYS */;
-INSERT INTO `students` (`user`, `school_period`, `name`, `surnames`, `curp`, `rfc`, `address`, `phone`, `level_studies`, `documentation`, `observations`) VALUES
-	('student_28e64', '2021-1', 'María Juana', 'Pompeya Corzo', 'CONOCIDO', 'CONOCIDO', 'Conocido', '9828782828', 'Licenciatura', 1, ''),
-	('student_0beb9', '2021-1', 'Jesus', 'Ruiz Ruiz', 'CONOCIDO', 'CONOCIDO', 'Conocido', '2737283838', 'Licenciatura', 1, ''),
-	('student_f0404', '2021-1', 'Ricardo', 'Flores Magon', 'CONOCIDO', 'CONOCIDO', 'Conocido', '272878328', 'Licenciatura', 1, '');
-/*!40000 ALTER TABLE `students` ENABLE KEYS */;
+--
+-- Volcado de datos para la tabla `students`
+--
 
--- Volcando estructura para tabla db_escolar.subjects
-CREATE TABLE IF NOT EXISTS `subjects` (
+INSERT INTO `students` (`user`, `name`, `surnames`, `curp`, `rfc`, `address`, `phone`, `career`, `documentation`, `admission_date`) VALUES
+('student_0beb9', 'Jesus', 'Ruiz Ruiz', 'PIJA0SKKS000022236', 'CONOCIDO', 'Conocido', '2737283838', 'Tronco común', 1, '2021-08-02'),
+('student_28e64', 'María Juana', 'Pompeya Corzo', 'L02LSLSJLJKJ89994P', 'CONOCIDO', 'Conocido', '9828782828', 'Maestría en Biotecnología', 0, '2021-08-02'),
+('student_f0404', 'Ricardo', 'Flores Magon', 'KKSKK99991P9199191', 'CONOCIDO', 'Conocido', '272878328', 'Ingeniería Petrolera', 1, '2021-08-02');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `subjects`
+--
+
+CREATE TABLE `subjects` (
   `subject` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `career` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
-  `description` text COLLATE utf8_spanish2_ci,
   `semester` int(2) NOT NULL,
-  `user_teacher` varchar(50) COLLATE utf8_spanish2_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+  `description` text COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `user_teachers` text COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.subjects: 4 rows
-/*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
-INSERT INTO `subjects` (`subject`, `career`, `name`, `description`, `semester`, `user_teacher`) VALUES
-	('ING_BAS_1', '2021-1', 'Ingles Básico I', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit viverra libero nec posuere. Mauris convallis neque et magna venenatis, eu egestas urna consequat. Donec tellus sem, pretium non leo eget, euismod consequat augue. Aliquam posuere, massa sed scelerisque rhoncus, nulla odio sodales ligula, et pretium arcu nunc quis ex. Integer in dapibus massa. Sed pulvinar semper purus id sagittis. Integer quam lorem, elementum eget efficitur a, venenatis sit amet metus. Sed gravida aliquet arcu non bibendum. Aliquam ac mattis odio. Nullam molestie bibendum eleifend. Proin auctor sodales tortor vitae interdum. Etiam in convallis elit. Duis eu urna ut elit dapibus suscipit.', 1, 'teacher_e94ac'),
-	('CAL_DIF_01', '2021-1', 'Calculo Diferencial', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit viverra libero nec posuere. Mauris convallis neque et magna venenatis, eu egestas urna consequat. Donec tellus sem, pretium non leo eget, euismod consequat augue. Aliquam posuere, massa sed scelerisque rhoncus, nulla odio sodales ligula, et pretium arcu nunc quis ex. Integer in dapibus massa. Sed pulvinar semper purus id sagittis. Integer quam lorem, elementum eget efficitur a, venenatis sit amet metus. Sed gravida aliquet arcu non bibendum. Aliquam ac mattis odio. Nullam molestie bibendum eleifend. Proin auctor sodales tortor vitae interdum. Etiam in convallis elit. Duis eu urna ut elit dapibus suscipit.', 1, 'teacher_e94ac'),
-	('DSWEB2Q', '2021-1', 'Diseño CSS', '', 1, 'teacher_e94ac'),
-	('FUND_INV_DCSM09', '2021-1', 'Fundamentos de Investigación', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit viverra libero nec posuere. Mauris convallis neque et magna venenatis, eu egestas urna consequat. Donec tellus sem, pretium non leo eget, euismod consequat augue. Aliquam posuere, massa sed scelerisque rhoncus, nulla odio sodales ligula, et pretium arcu nunc quis ex. Integer in dapibus massa. Sed pulvinar semper purus id sagittis. Integer quam lorem, elementum eget efficitur a, venenatis sit amet metus. Sed gravida aliquet arcu non bibendum. Aliquam ac mattis odio. Nullam molestie bibendum eleifend. Proin auctor sodales tortor vitae interdum. Etiam in convallis elit. Duis eu urna ut elit dapibus suscipit.', 1, 'teacher_e94ac');
-/*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
+--
+-- Volcado de datos para la tabla `subjects`
+--
 
--- Volcando estructura para tabla db_escolar.teachers
-CREATE TABLE IF NOT EXISTS `teachers` (
+INSERT INTO `subjects` (`subject`, `career`, `name`, `semester`, `description`, `user_teachers`) VALUES
+('CALDIF01', 'MATBASICAS', 'Calculo Diferencial', 9, 'Calculo jsjsjs', 'teacher_e9418,tchr37db23,teacher_e9408,'),
+('CALINT', 'IDS', 'Calculo Integral', 1, '', 'tchra80e12,teacher_617af,teacher_e9443,'),
+('DESARROLLO', 'MATBASICAS', 'Software', 3, 'jsjsjsj lalalas', 'teacher_e9408,'),
+('INGBAS01', 'IDS', 'Ingles Básico', 1, 'El idioma inglés (English language o English, pronunciado /ˈɪŋɡlɪʃ/) es una lengua germánica occidental que surgió en los reinos anglosajones de Inglaterra y se extendió hasta el Norte en lo que se convertiría en el sudeste de Escocia, bajo la influencia del Reino de Northumbria.', ',teacher_617af,tchra80e12,teacher_e9443,');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `teachers`
+--
+
+CREATE TABLE `teachers` (
   `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `surnames` varchar(60) COLLATE utf8_spanish2_ci NOT NULL,
@@ -200,36 +240,118 @@ CREATE TABLE IF NOT EXISTS `teachers` (
   `address` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `phone` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
   `level_studies` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
-  `documentation` int(1) NOT NULL,
-  `observations` varchar(200) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  PRIMARY KEY (`user`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+  `specialty` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
+  `career` varchar(20) COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.teachers: 3 rows
-/*!40000 ALTER TABLE `teachers` DISABLE KEYS */;
-INSERT INTO `teachers` (`user`, `name`, `surnames`, `curp`, `rfc`, `address`, `phone`, `level_studies`, `documentation`, `observations`) VALUES
-	('teacher_5c1ca', 'Moisés', 'Gómez Meléndez', 'CONOCIDO', 'CONOCIDO', 'Conocido', '9716278838', 'Licenciatura', 1, ''),
-	('teacher_617af', 'Rigoberto', 'Nanguluru Conde', 'CONOCIDO', 'CONOCIDO', 'Conocido', '9881877732', 'Licenciatura', 1, ''),
-	('teacher_e94ac', 'Fabiola', 'Cadenas Roblero', 'CONOCIDO', 'CONOCIDO', 'Conocido', '9672282892', 'Licenciatura', 1, 'Ninguna');
-/*!40000 ALTER TABLE `teachers` ENABLE KEYS */;
+--
+-- Volcado de datos para la tabla `teachers`
+--
 
--- Volcando estructura para tabla db_escolar.users
-CREATE TABLE IF NOT EXISTS `users` (
-  `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+INSERT INTO `teachers` (`user`, `name`, `surnames`, `curp`, `rfc`, `address`, `phone`, `level_studies`, `specialty`, `career`) VALUES
+('tchra80e12', 'Pamela', 'Sánchez', 'ATME980215KMN32221', 'ATME980215KMN', 'Av. Siempre Viva', '9991020394', 'Licenciatura', 'Negocios', 'IDS'),
+('teacher_5c1ca', 'Moisés', 'Gómez Meléndez', 'KSK92992292KSA0000', 'CONOCIDO', 'CONOCIDO', '9716278838', 'Ingenieria', 'Cálculo Diferencial', 'INGPLRA'),
+('teacher_617af', 'Rigoberto', 'Nanguluru Conde', 'CLLLS9202JS8KS90SS', 'CONOCIDO', 'CONOCIDO', '9881877732', 'Doctorado', 'Maestría en Computación', 'IDS'),
+('teacher_e9408', 'Juanita de la Cruz', 'Nepomuceno', 'KSKKS020020219100S', 'CONOCIDO', 'CONOCIDO', '9672282646', 'Maestria', 'Enseñanza del Español', 'MATBASICAS'),
+('teacher_e9423', 'Carlos Alberto', 'Marín Roblero', 'KSKKS020020219100S', 'CONOCIDO', 'CONOCIDO', '9613334538', 'Ingenieria', 'Automatas', 'INGPLRA'),
+('teacher_e9443', 'Jaime', 'Ponce Torres', 'KSKKS020020219100S', 'CONOCIDO', 'CONOCIDO', '9653649800', 'Ingenieria', 'Máquinas', 'IDS');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `email` varchar(200) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `pass` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `permissions` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
-  `image` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
-  PRIMARY KEY (`user`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+  `image` varchar(50) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `image_updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
--- Volcando datos para la tabla db_escolar.users: 2 rows
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`user`, `email`, `pass`, `permissions`, `image`) VALUES
-	('admin', 'carmonabernaldiego@gmail.com', 'root', 'admin', 'admin84.png'),
-	('admin_d4bf7', 'editor@gmail.com', 'verga', 'editor', 'user.png');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+--
+-- Volcado de datos para la tabla `users`
+--
 
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+INSERT INTO `users` (`user_id`, `email`, `pass`, `permissions`, `image`, `image_updated_at`, `created_at`, `updated_at`) VALUES
+('admin', NULL, 'root', 'admin', 'user.png', NULL, '2021-08-25 00:00:00', NULL),
+('adminec4e9', NULL, 'adminec4e9', 'editor', 'user.png', NULL, '2021-08-27 03:41:36', NULL),
+('editor', 'editor@gmail.com', 'editor', 'editor', 'user.png', NULL, '2021-05-01 00:00:00', NULL);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `administratives`
+--
+ALTER TABLE `administratives`
+  ADD PRIMARY KEY (`user`);
+
+--
+-- Indices de la tabla `attendance`
+--
+ALTER TABLE `attendance`
+  ADD PRIMARY KEY (`id_attendance`);
+
+--
+-- Indices de la tabla `attendance_details`
+--
+ALTER TABLE `attendance_details`
+  ADD KEY `FK_attendance_details_attendance` (`id_attendance`);
+
+--
+-- Indices de la tabla `careers`
+--
+ALTER TABLE `careers`
+  ADD PRIMARY KEY (`career`);
+
+--
+-- Indices de la tabla `school_periods`
+--
+ALTER TABLE `school_periods`
+  ADD PRIMARY KEY (`school_period`);
+
+--
+-- Indices de la tabla `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`user`);
+
+--
+-- Indices de la tabla `subjects`
+--
+ALTER TABLE `subjects`
+  ADD PRIMARY KEY (`subject`);
+
+--
+-- Indices de la tabla `teachers`
+--
+ALTER TABLE `teachers`
+  ADD PRIMARY KEY (`user`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `administratives`
+--
+ALTER TABLE `administratives`
+  ADD CONSTRAINT `administratives_ibfk_1` FOREIGN KEY (`user`) REFERENCES `users` (`user_id`);
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
