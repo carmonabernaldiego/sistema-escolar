@@ -5,6 +5,21 @@
   www.mysoftup.com
 -------------------------------------------*/
 
+function confirmPass() {
+    pass1 = document.getElementById('pass1');
+    pass2 = document.getElementById('pass2');
+
+    if (pass1.value != pass2.value) {
+        document.getElementById('labelError').classList.add('show');
+
+        return false;
+    } else {
+        document.getElementById('labelError').classList.remove('show');
+
+        return true;
+    }
+}
+
 $('.btn-edit-email').click(function(event) {
     $('#txtemailupdate').prop('disabled', false);
     $('#txtemailupdate').focus();
@@ -21,21 +36,6 @@ $('#txtemailupdate').change(function(event) {
 });
 
 $('.section-croppie-image').hide();
-
-function confirmPass() {
-    pass1 = document.getElementById('pass1');
-    pass2 = document.getElementById('pass2');
-
-    if (pass1.value != pass2.value) {
-        document.getElementById('labelError').classList.add('show');
-
-        return false;
-    } else {
-        document.getElementById('labelError').classList.remove('show');
-
-        return true;
-    }
-}
 
 $(document).ready(function() {
     $image_crop = $('.image-crop').croppie({

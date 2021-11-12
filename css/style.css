@@ -299,8 +299,8 @@ body.login {
 .nav-home .user span.logout_user>a+ul>li {
     display: none;
     position: absolute;
-    right: 4%;
-    width: 55%;
+    right: 3%;
+    width: 52%;
     margin-top: -10%;
     background: #383a59;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
@@ -1645,9 +1645,17 @@ body.login {
     transition: all 200ms ease-in;
 }
 
+.form-users .body .section-croppie-image,
 .form-config-user .body .section-croppie-image {
     width: 100%;
     padding: 33px 0 0;
+}
+
+.form-users .body .section-croppie-image .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0 0px;
 }
 
 .form-config-user .body .section-croppie-image .options {
@@ -1657,14 +1665,16 @@ body.login {
     padding: 7px 0 32.5px;
 }
 
+.form-users .body .section-croppie-image .options .crop-btn,
 .form-config-user .body .section-croppie-image .options .crop-btn,
+.form-users .body .section-croppie-image .options .cancel-btn,
 .form-config-user .body .section-croppie-image .options .cancel-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 55px;
-    width: 55px;
-    height: 55px;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
     margin: 0 25px;
     background: #6272a4;
     box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
@@ -1672,19 +1682,22 @@ body.login {
     border-radius: 100%;
     color: #eef4ff;
     line-height: 2.55em;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 100;
     cursor: pointer;
     z-index: 999;
     transition: all 300ms ease-out;
 }
 
+.form-users .body .section-croppie-image .options .cancel-btn,
 .form-config-user .body .section-croppie-image .options .cancel-btn {
     background: #db4949;
     box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
 }
 
+.form-users .body .section-croppie-image .options .crop-btn:hover,
 .form-config-user .body .section-croppie-image .options .crop-btn:hover,
+.form-users .body .section-croppie-image .options .crop-btn:focus,
 .form-config-user .body .section-croppie-image .options .crop-btn:focus {
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
@@ -1692,7 +1705,9 @@ body.login {
     transition: all 200ms ease-in;
 }
 
+.form-users .body .section-croppie-image .options .cancel-btn:hover,
 .form-config-user .body .section-croppie-image .options .cancel-btn:hover,
+.form-users .body .section-croppie-image .options .cancel-btn:focus,
 .form-config-user .body .section-croppie-image .options .cancel-btn:focus {
     background: #aa3535;
     box-shadow: 0 0 0 2.5pt #e77f7f !important;
@@ -1700,11 +1715,13 @@ body.login {
     transition: all 200ms ease-in;
 }
 
+.form-users .body .section-croppie-image .options .crop-btn:active,
 .form-config-user .body .section-croppie-image .options .crop-btn:active {
     background: #6272a4;
     transition: all 200ms ease-in;
 }
 
+.form-users .body .section-croppie-image .options .cancel-btn:active,
 .form-config-user .body .section-croppie-image .options .cancel-btn:active {
     background: #db4949;
     transition: all 200ms ease-in;
@@ -1893,10 +1910,11 @@ input[type="range"]:active {
 .form-users .body .section-user-info {
     display: block;
     width: 100%;
-    margin: 17px 0 15px;
+    margin: 13px 0 10px;
 }
 
-.form-users .body .section-user-info span.user-id {
+.form-users .body .section-user-info span.user-id,
+.form-users .body .section-user-info span.user-name {
     display: block;
     color: #eef4ff;
     text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
@@ -1907,7 +1925,11 @@ input[type="range"]:active {
 
 .form-users .body .section-user-info span.user-id {
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 0.8em;
+}
+
+.form-config-user .body .section-user-info span.user-name {
+    margin-top: 8px;
 }
 
 
@@ -2466,6 +2488,9 @@ input[type="range"]:active {
     }
     .form-data .delete .btn-no {
         margin: 22px 20% 25px 0;
+    }
+    .form-data.form-users .body .wrap {
+        padding: 25px 0 0 0;
     }
 }
 

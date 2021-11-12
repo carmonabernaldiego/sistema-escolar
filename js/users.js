@@ -1,17 +1,14 @@
 /*-------------------------------------------
-  uploadimageusers.js
+  users.js
   By Diego Carmona Bernal
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
 
-$('#btnAddOptions').addClass('btn-disabled');
-
-
 $('#section-croppie-image').hide();
-$(document).ready(function() {
 
-    $image_crop = $('#image_crop').croppie({
+$(document).ready(function() {
+    $image_crop = $('.image-crop').croppie({
         enableExif: true,
         viewport: {
             width: 190,
@@ -24,7 +21,17 @@ $(document).ready(function() {
         }
     });
 
-    $('#file_upload_image').on('change', function() {
+    $('.cancel-btn').click(function(event) {
+        $('.section-user-image').show();
+        $('.section-user-info').show();
+        $('.section-croppie-image').hide();
+    });
+
+    $('.file').click(function(event) {
+        $('#fileuploadimage').trigger('click');
+    });
+
+    $('#fileuploadimage').on('change', function() {
         let reader = new FileReader();
         reader.onload = function(event) {
             $image_crop.croppie('bind', {
@@ -34,11 +41,12 @@ $(document).ready(function() {
             });
         }
         reader.readAsDataURL(this.files[0]);
-        $('#section-user-image').hide();
-        $('#section-croppie-image').show();
+        $('.section-user-image').hide();
+        $('.section-user-info').hide();
+        $('.section-croppie-image').show();
     });
 
-    $('.crop_btn').click(function(event) {
+    $('.crop-btn').click(function(event) {
         $image_crop.croppie('result', {
             type: 'canvas',
             size: 'viewport',
@@ -46,8 +54,9 @@ $(document).ready(function() {
             circle: false
         }).then(function(response) {
             $('.loader-user').css('visibility', 'visible');
-            $('#section-user-image').show();
-            $('#section-croppie-image').hide();
+            $('.section-user-image').show();
+            $('.section-user-info').show();
+            $('.section-croppie-image').hide();
             $.ajax({
                 url: 'upload.php',
                 type: 'POST',

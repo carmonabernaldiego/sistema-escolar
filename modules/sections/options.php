@@ -26,4 +26,4 @@ include_once 'security.php';
         </form>
     </div>
 </div>
-<script src="/js/optionsearch.js"></script>
+<script src="/js/options.js"></script>

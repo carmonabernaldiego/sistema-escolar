@@ -57,9 +57,14 @@ echo '
 	<div class="loader-user">
 	</div>
 	<div class="body">
-		<div id="section-croppie-image">
-			<div id="image_crop"></div>
-			<button class="crop_btn"><span class="icon">crop</span></button>
+		<div class="section-croppie-image" style="display: none;">
+			<div class="image-crop"></div>
+			<div class="options">
+				<button class="crop-btn"><span class="icon">crop</span></button>
+				<form action="#">
+					<button class="cancel-btn"><span class="icon">close</span></button>
+				</form>
+			</div>
 		</div>
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST">
 			<div class="wrap">
@@ -72,11 +77,11 @@ echo '
 					<span class="user-name">' . $_SESSION['user_name'][0] . ' ' . $_SESSION['user_surnames'][0] . '</span>
 					<span class="user-id">' . $_SESSION['user_id'][0] . '</span>
 				</div>
-				<div class="full">
+				<div class="first">
 					<label for="txtuseremail" class="label">Email</label>
 					<input id="txtuseremail" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" autofocus/>
 				</div>
-				<div class="full">
+				<div class="last">
 					<label for="selectusertype" class="label">Permisos</label>
 					<select id="selectusertype" class="select" name="txtusertype">
 					';
