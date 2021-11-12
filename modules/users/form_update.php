@@ -9,6 +9,8 @@ $_SESSION['user_id'] = array();
 $_SESSION['email'] = array();
 $_SESSION['user_type'] = array();
 $_SESSION['user_image'] = array();
+$_SESSION['user_name'] = array();
+$_SESSION['user_surnames'] = array();
 
 $sql = "SELECT user_id, email, permissions, image FROM users WHERE user_id = '" . $_SESSION['POST_id'] . "'";
 
@@ -18,13 +20,23 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['email'][0] = $row['email'];
 		$_SESSION['user_type'][0] = $row['permissions'];
 		$_SESSION['user_image'][0] = $row['image'];
+
+		if ($_SESSION['user_type'][0] == 'admin' || $_SESSION['user_type'][0] == 'editor') {
+			$sql = "SELECT name, surnames FROM administratives WHERE user = '" . $_SESSION['user_id'][0] . "'";
+
+			if ($result = $conexion->query($sql)) {
+				if ($row = mysqli_fetch_array($result)) {
+					$_SESSION['user_name'][0] = $row['name'];
+					$_SESSION['user_surnames'][0] = $row['surnames'];
+				}
+			}
+		}
 	}
 }
 
 $name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'][0] . '';
 
-if (file_exists($name_image_user)) {
-} else {
+if (!file_exists($name_image_user)) {
 	$sql = "SELECT image FROM users WHERE user_id = '" . $_SESSION['user_id'][0] . "'";
 
 	if ($result = $conexion->query($sql)) {
@@ -57,6 +69,7 @@ echo '
 					<input id="fileuploadimage" style="display: none;" type="file" name="fileuploadimage" accept=".jpg, .jpeg, .png" />
 				</div>
 				<div class="section-user-info">
+					<span class="user-name">' . $_SESSION['user_name'][0] . ' ' . $_SESSION['user_surnames'][0] . '</span>
 					<span class="user-id">' . $_SESSION['user_id'][0] . '</span>
 				</div>
 				<div class="full">

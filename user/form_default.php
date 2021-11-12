@@ -21,8 +21,7 @@ if ($result = $conexion->query($sql)) {
 
 $name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'][0] . '';
 
-if (file_exists($name_image_user)) {
-} else {
+if (!file_exists($name_image_user)) {
 	$sql = "SELECT image FROM users WHERE user_id = '" . $_SESSION['user_id'][0] . "'";
 
 	if ($result = $conexion->query($sql)) {
