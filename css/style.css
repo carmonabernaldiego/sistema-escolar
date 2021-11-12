@@ -128,11 +128,10 @@ body.login {
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 380px;
+    height: 100%;
     z-index: 9999;
     background: url(../images/loader_user.gif) 50% 50% no-repeat #44475a;
-    border-top-left-radius: 0.4em;
-    border-top-right-radius: 0.4em;
+    border-radius: .4em;
     opacity: 1;
 }
 

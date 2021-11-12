@@ -5,6 +5,8 @@
   www.mysoftup.com
 -------------------------------------------*/
 
+$('#btnAddOptions').addClass('btn-disabled');
+
 $('#section-croppie-image').hide();
 
 $(document).ready(function() {
@@ -64,12 +66,10 @@ $(document).ready(function() {
                     'image': response
                 },
                 success: function() {
-                    location.href = location.href;
-                    window.location.href = '/modules/users/';
+                    $('.loader-user').css('visibility', 'hidden');
+                    location.reload();
                 }
             });
         })
-
     });
-
 });
