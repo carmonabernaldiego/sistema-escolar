@@ -2,7 +2,7 @@
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 ?>
 <div class="form-gridview">
-	<table>
+	<table class="default">
 		<?php
 		if ($_SESSION['total_users'] != 0) {
 			echo '

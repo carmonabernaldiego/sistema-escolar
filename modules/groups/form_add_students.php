@@ -55,7 +55,7 @@ if (isset($_SESSION['school_period_group']) != '') {
 				<?php
 				echo
 				'	
-						<table>
+						<table class="default">
 							<tr>
 								<th class="center" colspan="2">Alumnos</th>
 							</tr>

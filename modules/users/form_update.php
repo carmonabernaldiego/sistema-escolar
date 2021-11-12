@@ -51,21 +51,19 @@ echo '
 		</div>
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST">
 			<div class="wrap">
-				<div id="section-user-image">
+				<div class="section-user-image">
 					<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
-					<label class="file" for="file_upload_image"><span class="icon">add_a_photo</span></label>
-					<input id="file_upload_image" style="display: none;" type="file" name="file_upload_image" accept=".jpg, .jpeg, .png" />
+					<a href="#" class="file"><span class="icon">add_a_photo</span></a>
+					<input id="fileuploadimage" style="display: none;" type="file" name="fileuploadimage" accept=".jpg, .jpeg, .png" />
 				</div>
-				<div class="first">
-					<label for="txtuserid" class="label">Usuario</label>
-					<input style="display: none;" type="text" name="txtuseridUpdate" value="' . $_SESSION['user_id'][0] . '"/>
-					<input id="txtuserid" class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
+				<div class="section-user-info">
+					<span class="user-id">' . $_SESSION['user_id'][0] . '</span>
+				</div>
+				<div class="full">
 					<label for="txtuseremail" class="label">Email</label>
 					<input id="txtuseremail" class="text" type="email" name="txtemailUpdate" value="' . $_SESSION['email'][0] . '" maxlength="200" autofocus/>
 				</div>
-				<div class="last">
-					<label for="txtuserpass" class="label">Contraseña</label>
-					<input id="txtuserpass" class="text" type="password" name="txtuserpassUpdate" value="Password1234//*" disabled/>
+				<div class="full">
 					<label for="selectusertype" class="label">Permisos</label>
 					<select id="selectusertype" class="select" name="txtusertype">
 					';

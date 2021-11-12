@@ -846,7 +846,8 @@ body.login {
     user-select: none;
 }
 
-.form-gridview table {
+.form-gridview table.default,
+.form-gridview table.user {
     width: 92%;
     margin: 4.5% auto 0;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
@@ -858,7 +859,7 @@ body.login {
     overflow: hidden;
 }
 
-.form-gridview table.full {
+.form-gridview table.default.full {
     display: block;
     max-width: fit-content;
     overflow-x: auto;
@@ -900,8 +901,8 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.form-gridview td p {
-    width: 140px;
+.form-gridview td p.email {
+    width: 220px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1086,6 +1087,10 @@ body.login {
 .form-data .body .first,
 .form-data .body .last {
     width: 44%;
+}
+
+.form-data .body .full {
+    width: 88%;
 }
 
 .form-data .body .content-full {
@@ -1518,7 +1523,7 @@ body.login {
   Formulario | Configuration User
 -------------------------------------------*/
 
-.formConfigUser {
+.form-config-user {
     float: none;
     width: 100%;
     background: #44475a;
@@ -1526,13 +1531,13 @@ body.login {
     border-radius: 0.4em;
 }
 
-.formConfigUser:after {
+.form-config-user:after {
     display: block;
     content: "";
     clear: both;
 }
 
-.formConfigUser .body .wrap {
+.form-config-user .body .wrap {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -1540,12 +1545,12 @@ body.login {
     padding: 0;
 }
 
-.formConfigUser .body .first,
-.formConfigUser .body .last {
+.form-config-user .body .first,
+.form-config-user .body .last {
     width: 45%;
 }
 
-.formConfigUser .body .first {
+.form-config-user .body .first {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1553,17 +1558,19 @@ body.login {
     padding: 3% 0;
 }
 
-.formConfigUser .body .last {
+.form-config-user .body .last {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.formConfigUser .body .section-user-image {
+.form-users .body .section-user-image,
+.form-config-user .body .section-user-image {
     width: 100%;
 }
 
-.formConfigUser .body .section-user-image img {
+.form-users .body .section-user-image img,
+.form-config-user .body .section-user-image img {
     display: block;
     width: 220px;
     height: 220px;
@@ -1575,7 +1582,8 @@ body.login {
     box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
 }
 
-.formConfigUser .body .section-user-image .file {
+.form-users .body .section-user-image .file,
+.form-config-user .body .section-user-image .file {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1596,14 +1604,17 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.formConfigUser .body .section-user-image .file.disabled {
+.form-users .body .section-user-image .file.disabled,
+.form-config-user .body .section-user-image .file.disabled {
     background: #6a7186;
     color: #eef4ff98;
     cursor: default;
 }
 
-.formConfigUser .body .section-user-image .file:hover,
-.formConfigUser .body .section-user-image .file:focus {
+.form-users .body .section-user-image .file:hover,
+.form-config-user .body .section-user-image .file:hover,
+.form-users .body .section-user-image .file:focus,
+.form-config-user .body .section-user-image .file:focus {
     outline: none;
     outline-width: 0;
     background: #4a567c;
@@ -1612,37 +1623,42 @@ body.login {
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .section-user-image .file.disabled:hover,
-.formConfigUser .body .section-user-image .file.disabled:focus {
+.form-users .body .section-user-image .file.disabled:hover,
+.form-config-user .body .section-user-image .file.disabled:hover,
+.form-users .body .section-user-image .file.disabled:focus,
+.form-config-user .body .section-user-image .file.disabled:focus {
     background: #6a7186;
     color: #eef4ff98;
     cursor: default;
 }
 
-.formConfigUser .body .section-user-image .file.disabled:hover,
-.formConfigUser .body .section-user-image .file.disabled:focus {
+.form-users .body .section-user-image .file.disabled:hover,
+.form-config-user .body .section-user-image .file.disabled:hover,
+.form-users .body .section-user-image .file.disabled:focus,
+.form-config-user .body .section-user-image .file.disabled:focus {
     box-shadow: none !important;
 }
 
-.formConfigUser .body .section-user-image .file:active {
+.form-users .body .section-user-image .file:active,
+.form-config-user .body .section-user-image .file:active {
     background: #6272a4;
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .section-croppie-image {
+.form-config-user .body .section-croppie-image {
     width: 100%;
     padding: 33px 0 0;
 }
 
-.formConfigUser .body .section-croppie-image .options {
+.form-config-user .body .section-croppie-image .options {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 7px 0 32.5px;
 }
 
-.formConfigUser .body .section-croppie-image .options .crop-btn,
-.formConfigUser .body .section-croppie-image .options .cancel-btn {
+.form-config-user .body .section-croppie-image .options .crop-btn,
+.form-config-user .body .section-croppie-image .options .cancel-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1663,44 +1679,44 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.formConfigUser .body .section-croppie-image .options .cancel-btn {
+.form-config-user .body .section-croppie-image .options .cancel-btn {
     background: #db4949;
     box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
 }
 
-.formConfigUser .body .section-croppie-image .options .crop-btn:hover,
-.formConfigUser .body .section-croppie-image .options .crop-btn:focus {
+.form-config-user .body .section-croppie-image .options .crop-btn:hover,
+.form-config-user .body .section-croppie-image .options .crop-btn:focus {
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
     color: #aebbd3;
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .section-croppie-image .options .cancel-btn:hover,
-.formConfigUser .body .section-croppie-image .options .cancel-btn:focus {
+.form-config-user .body .section-croppie-image .options .cancel-btn:hover,
+.form-config-user .body .section-croppie-image .options .cancel-btn:focus {
     background: #aa3535;
     box-shadow: 0 0 0 2.5pt #e77f7f !important;
     color: #aebbd3;
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .section-croppie-image .options .crop-btn:active {
+.form-config-user .body .section-croppie-image .options .crop-btn:active {
     background: #6272a4;
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .section-croppie-image .options .cancel-btn:active {
+.form-config-user .body .section-croppie-image .options .cancel-btn:active {
     background: #db4949;
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .section-user-info {
+.form-config-user .body .section-user-info {
     display: block;
     width: 100%;
 }
 
-.formConfigUser .body .section-user-info span.user-name,
-.formConfigUser .body .section-user-info span.user-id {
+.form-config-user .body .section-user-info span.user-name,
+.form-config-user .body .section-user-info span.user-id {
     display: block;
     color: #eef4ff;
     text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
@@ -1709,27 +1725,27 @@ body.login {
     font-weight: 600;
 }
 
-.formConfigUser .body .section-user-info span.user-name {
+.form-config-user .body .section-user-info span.user-name {
     margin-top: 8px;
 }
 
-.formConfigUser .body .section-user-info span.user-id {
+.form-config-user .body .section-user-info span.user-id {
     text-transform: uppercase;
     font-size: 0.8em;
 }
 
-.formConfigUser .body .config-data-user {
+.form-config-user .body .config-data-user {
     width: 100%;
 }
 
-.formConfigUser .body .config-data-user .text {
+.form-config-user .body .config-data-user .text {
     width: 72%;
     margin: 0;
     padding: 0 25% 0 3%;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
 }
 
-.formConfigUser .body .config-data-user .btn-edit-email {
+.form-config-user .body .config-data-user .btn-edit-email {
     float: right;
     display: flex;
     align-items: center;
@@ -1754,14 +1770,14 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-email.disabled {
+.form-config-user .body .config-data-user .btn-edit-email.disabled {
     background: #6a7186;
     color: #eef4ff98;
     cursor: default;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-email:hover,
-.formConfigUser .body .config-data-user .btn-edit-email:focus {
+.form-config-user .body .config-data-user .btn-edit-email:hover,
+.form-config-user .body .config-data-user .btn-edit-email:focus {
     outline: none;
     outline-width: 0;
     background: #4a567c;
@@ -1770,19 +1786,19 @@ body.login {
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-email.disabled:hover,
-.formConfigUser .body .config-data-user .btn-edit-email.disabled:focus {
+.form-config-user .body .config-data-user .btn-edit-email.disabled:hover,
+.form-config-user .body .config-data-user .btn-edit-email.disabled:focus {
     background: #6a7186;
     box-shadow: none !important;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-email:active {
+.form-config-user .body .config-data-user .btn-edit-email:active {
     background: #6272a4;
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-info-user,
-.formConfigUser .body .config-data-user .btn-change-pass {
+.form-config-user .body .config-data-user .btn-edit-info-user,
+.form-config-user .body .config-data-user .btn-change-pass {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1803,28 +1819,28 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-info-user {
+.form-config-user .body .config-data-user .btn-edit-info-user {
     margin: 10% 0;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-info-user span.icon {
+.form-config-user .body .config-data-user .btn-edit-info-user span.icon {
     display: block;
     position: absolute;
     left: 2.7%;
     font-size: 1.6em;
 }
 
-.formConfigUser .body .config-data-user .btn-change-pass span.icon {
+.form-config-user .body .config-data-user .btn-change-pass span.icon {
     display: block;
     position: absolute;
     left: 2.7%;
     font-size: 1.2em;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-info-user:hover,
-.formConfigUser .body .config-data-user .btn-edit-info-user:focus,
-.formConfigUser .body .config-data-user .btn-change-pass:hover,
-.formConfigUser .body .config-data-user .btn-change-pass:focus {
+.form-config-user .body .config-data-user .btn-edit-info-user:hover,
+.form-config-user .body .config-data-user .btn-edit-info-user:focus,
+.form-config-user .body .config-data-user .btn-change-pass:hover,
+.form-config-user .body .config-data-user .btn-change-pass:focus {
     outline: none;
     outline-width: 0;
     background: #4a567c;
@@ -1834,13 +1850,13 @@ body.login {
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .config-data-user .btn-edit-info-user:active,
-.formConfigUser .body .config-data-user .btn-change-pass:active {
+.form-config-user .body .config-data-user .btn-edit-info-user:active,
+.form-config-user .body .config-data-user .btn-change-pass:active {
     background: #6272a4;
     transition: all 200ms ease-in;
 }
 
-.formConfigUser .body .footer {
+.form-config-user .body .footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1848,7 +1864,7 @@ body.login {
     padding: 0 0 3%;
 }
 
-.formConfigUser .body .footer span.user-permissions {
+.form-config-user .body .footer span.user-permissions {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1867,6 +1883,31 @@ input[type="range"]:focus,
 input[type="range"]:hover,
 input[type="range"]:active {
     background: transparent !important;
+}
+
+
+/*-------------------------------------------
+  Formulario | Users
+-------------------------------------------*/
+
+.form-users .body .section-user-info {
+    display: block;
+    width: 100%;
+    margin: 17px 0 15px;
+}
+
+.form-users .body .section-user-info span.user-id {
+    display: block;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.form-users .body .section-user-info span.user-id {
+    text-transform: uppercase;
+    font-size: 1em;
 }
 
 
@@ -2330,8 +2371,8 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 820px) {
-    .formConfigUser .body .config-data-user .btn-edit-info-user,
-    .formConfigUser .body .config-data-user .btn-change-pass {
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
         width: 87.9%;
         height: 36px;
         padding-left: 12%;
@@ -2372,30 +2413,30 @@ input[type="range"]:active {
         width: 35px;
         height: 35px;
     }
-    .formConfigUser .body .first,
-    .formConfigUser .body .last {
+    .form-config-user .body .first,
+    .form-config-user .body .last {
         width: 87.5%;
     }
-    .formConfigUser .body .first {
+    .form-config-user .body .first {
         padding: 24px 0 2%;
     }
-    .formConfigUser .body .footer {
+    .form-config-user .body .footer {
         padding: 24px 0 24px;
     }
-    .formConfigUser .body .config-data-user .btn-edit-info-user,
-    .formConfigUser .body .config-data-user .btn-change-pass {
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
         width: 90.9%;
         height: 36px;
         padding-left: 9%;
     }
-    .formConfigUser .body .section-croppie-image,
+    .form-config-user .body .section-croppie-image,
     .form-data .body .section-croppie-image {
         padding: 24px 0 0;
     }
-    .formConfigUser .body .section-croppie-image .options {
+    .form-config-user .body .section-croppie-image .options {
         padding: 10px 0 24px;
     }
-    .formConfigUser .body .section-croppie-image .cr-slider {
+    .form-config-user .body .section-croppie-image .cr-slider {
         padding-bottom: 8px;
     }
 }
@@ -2409,7 +2450,7 @@ input[type="range"]:active {
         width: 94%;
         padding: 0 3%;
     }
-    .form-gridview table {
+    .form-gridview table.default {
         display: block;
         max-width: fit-content;
         margin: 7.5% auto 0;
@@ -2429,11 +2470,22 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 540px) {
-    .formConfigUser .body .config-data-user .btn-edit-info-user,
-    .formConfigUser .body .config-data-user .btn-change-pass {
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
         width: 89%;
         height: 36px;
         padding-left: 11%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .form-gridview table.user {
+        display: block;
+        max-width: fit-content;
+        margin: 7.5% auto 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
     }
 }
 
@@ -2467,8 +2519,8 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 410px) {
-    .formConfigUser .body .config-data-user .btn-edit-info-user,
-    .formConfigUser .body .config-data-user .btn-change-pass {
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
         width: 87%;
         height: 36px;
         padding-left: 13%;

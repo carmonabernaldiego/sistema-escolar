@@ -2,7 +2,7 @@
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 ?>
 <div class="form-gridview">
-	<table>
+	<table class="user">
 		<?php
 		if ($_SESSION['total_users'] != 0) {
 			echo '
@@ -10,7 +10,6 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 						<th>Usuario</th>
 						<th>Correo</th>
 						<th>Permisos</th>
-						<th>Imagen</th>
 						<th class="edit center"><a class="icon">edit</a></th>
 					</tr>
 		';
@@ -21,7 +20,6 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 						<td>' . $_SESSION["user_id"][$i] . '</td>
 						<td><p>' . $_SESSION["user_email"][$i] . '</p></td>
 						<td>' . $_SESSION["user_type"][$i] . '</td>
-						<td>' . $_SESSION["user_image"][$i] . '</td>
 						<td>
 							<form action="" method="POST">
 								<input style="display:none;" type="text" name="id" value="' . $_SESSION["user_id"][$i] . '"/>
