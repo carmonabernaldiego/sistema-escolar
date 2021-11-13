@@ -14,7 +14,7 @@ if (empty($_POST['txtuseridUpdate'])) {
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {
-			$sql = "SELECT user, email FROM users WHERE email = '" . $_POST['txtemailUpdate'] . "' AND user != '" . $_POST['txtuseridUpdate'] . "' LIMIT 1";
+			$sql = "SELECT user, email FROM users WHERE email = '" . $_POST['txtemailupdate'] . "' AND user != '" . $_POST['txtuseridUpdate'] . "' LIMIT 1";
 
 			if ($result = $conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($result)) {
@@ -25,9 +25,9 @@ if (empty($_POST['txtuseridUpdate'])) {
 					exit();
 				} else {
 					if ($_POST['txtuserpassNewUpdate'] == $_POST['txtuserpassConfirmUpdate'] and $_POST['txtuserpassNewUpdate'] != "" and $_POST['txtuserpassConfirmUpdate'] != "") {
-						$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "', pass = '" . $_POST['txtuserpassNewUpdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+						$sql_update = "UPDATE users SET email = '" . $_POST['txtemailupdate'] . "', pass = '" . $_POST['txtuserpassNewUpdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
 					} else {
-						$sql_update = "UPDATE users SET email = '" . $_POST['txtemailUpdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
+						$sql_update = "UPDATE users SET email = '" . $_POST['txtemailupdate'] . "' WHERE user = '" . $_POST['txtuseridUpdate'] . "'";
 					}
 
 					if (mysqli_query($conexion, $sql_update)) {

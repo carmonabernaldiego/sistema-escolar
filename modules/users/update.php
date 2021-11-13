@@ -1,35 +1,18 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
+include_once '../notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
-
-function Error($textMsgBox)
-{
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = $textMsgBox;
-	header('Location: /modules/users');
-	exit();
-}
-
-function Info($textMsgBox)
-{
-	$_SESSION['msgbox_error'] = 0;
-	$_SESSION['msgbox_info'] = 1;
-	$_SESSION['text_msgbox_info'] = $textMsgBox;
-	header('Location: /modules/users');
-	exit();
-}
 
 function UpdateUserDB($conex, $user, $email, $permissions)
 {
 	$date = date('Y-m-d H:i:s');
 
 	if ($email == '') {
-		$sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "', updated_at = '" . $date . "' WHERE user_id = '" . $user . "'";
+		echo $sql_update = "UPDATE users SET email = null, permissions = '" . $permissions . "', updated_at = '" . $date . "' WHERE user_id = '" . $user . "'";
 	} else {
-		$sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "', updated_at = '" . $date . "' WHERE user_id = '" . $user . "'";
+		echo $sql_update = "UPDATE users SET email = '" . $email . "', permissions = '" . $permissions . "', updated_at = '" . $date . "' WHERE user_id = '" . $user . "'";
 	}
 
 	if (mysqli_query($conex, $sql_update)) {
@@ -37,19 +20,23 @@ function UpdateUserDB($conex, $user, $email, $permissions)
 	} else {
 		Error('Error al actualizar.');
 	}
-}
-
-if (empty($_POST['txtuseridUpdate'])) {
-	header('Location: /');
+	header('Location: /modules/users');
 	exit();
 }
 
-$sql = "SELECT user_id, email FROM users WHERE email = '" . $_POST['txtemailUpdate'] . "' AND user_id != '" . $_POST['txtuseridUpdate'] . "' LIMIT 1";
+if (!empty($_SESSION['user_id'][0]) && !empty($_POST['txtusertype'] == 'admin' || $_POST['txtusertype'] == 'editor')) {
+	$sql = "SELECT user_id FROM users WHERE email = '" . $_POST['txtemailupdate'] . "' AND user_id != '" . $_SESSION['user_id'][0] . "' LIMIT 1";
 
-if ($result = $conexion->query($sql)) {
-	if ($row = mysqli_fetch_array($result)) {
-		Error('Este correo electrónico ya está en uso.');
-	} else {
-		UpdateUserDB($conexion, $_POST['txtuseridUpdate'], $_POST['txtemailUpdate'], $_POST['txtusertype']);
+	if ($result = $conexion->query($sql)) {
+		if ($row = mysqli_fetch_array($result)) {
+			Error('Este correo electrónico ya está en uso.');
+			header('Location: /modules/users');
+			exit();
+		} else {
+			UpdateUserDB($conexion, $_SESSION['user_id'][0], $_POST['txtemailupdate'], $_POST['txtusertype']);
+		}
 	}
+} else {
+	header('Location: /');
+	exit();
 }
