@@ -2514,9 +2514,6 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 436px) {
-    .info-title {
-        width: 59.5%;
-    }
     .info-title .title {
         font-size: 1.2em;
     }
@@ -2537,8 +2534,7 @@ input[type="range"]:active {
         margin: 22px 6% 25px 0;
     }
     .form-options .options {
-        padding-left: 35px;
-        padding-right: 35px;
+        padding: 8px 35px;
     }
 }
 
