@@ -2514,6 +2514,9 @@ input[type="range"]:active {
 }
 
 @media only screen and (max-width: 436px) {
+    .info-title {
+        width: 59.5%;
+    }
     .info-title .title {
         font-size: 1.2em;
     }
