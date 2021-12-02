@@ -64,19 +64,19 @@ if (strpos($url_actual, 'modules')) {
                         } ?>" href="/home"><span class="icon">dashboard</span>Dashboard</a></li>
         <li><a class="<?php if ($output[1] == 'teachers') {
                             echo 'active';
-                        } ?>" href="/modules/teachers"><span class="icon">person_pin</span>Docentes</a></li>
+                        } ?>" href="/modules/teachers"><span class="icon">connect_without_contact</span>Docentes</a></li>
         <li><a class="<?php if ($output[1] == 'students') {
                             echo 'active';
                         } ?>" href="/modules/students"><span class="icon">recent_actors</span>Alumnos</a></li>
         <li><a class="<?php if ($output[1] == 'careers') {
                             echo 'active';
-                        } ?>" href="/modules/careers"><span class="icon">style</span>Carreras</a></li>
+                        } ?>" href="/modules/careers"><span class="icon">school</span>Carreras</a></li>
         <li><a class="<?php if ($output[1] == 'subjects') {
                             echo 'active';
-                        } ?>" href="/modules/subjects"><span class="icon">import_contacts</span>Asignaturas</a></li>
+                        } ?>" href="/modules/subjects"><span class="icon">library_books</span>Asignaturas</a></li>
         <li><a class="<?php if ($output[1] == 'groups') {
                             echo 'active';
-                        } ?>" href="/modules/groups"><span class="icon">group_work</span>Grupos</a></li>
+                        } ?>" href="/modules/groups"><span class="icon">groups</span>Grupos</a></li>
     </ul>
 </div>
 <div class="menu-mobile">
@@ -92,7 +92,7 @@ if (strpos($url_actual, 'modules')) {
                 <li>
                     <a class="<?php if ($output[1] == 'teachers') {
                                     echo 'active';
-                                } ?>" href="/modules/teachers" title="Docentes"><span class="icon">person_pin</span></a>
+                                } ?>" href="/modules/teachers" title="Docentes"><span class="icon">connect_without_contact</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'students') {
@@ -102,17 +102,17 @@ if (strpos($url_actual, 'modules')) {
                 <li>
                     <a class="<?php if ($output[1] == 'careers') {
                                     echo 'active';
-                                } ?>" href="/modules/careers" title="Carreras"><span class="icon">style</span></a>
+                                } ?>" href="/modules/careers" title="Carreras"><span class="icon">school</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'subjects') {
                                     echo 'active';
-                                } ?>" href="/modules/subjects" title="Asignaturas"><span class="icon">group_work</span></a>
+                                } ?>" href="/modules/subjects" title="Asignaturas"><span class="icon">library_books</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'groups') {
                                     echo 'active';
-                                } ?>" href="/modules/groups" title="Grupos"><span class="icon">assignment_turned_in</span></a>
+                                } ?>" href="/modules/groups" title="Grupos"><span class="icon">groups</span></a>
                 </li>
             </ul>
         </nav>
