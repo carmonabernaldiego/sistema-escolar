@@ -57,3 +57,7 @@ $('#selectcurrent').on('select2:select', function(e) {
         $('#selectcurrent').prop('disabled', true);
     }
 });
+
+$('#btnSave').click(function() {
+    $('#selectcurrent').prop('disabled', false);
+});
