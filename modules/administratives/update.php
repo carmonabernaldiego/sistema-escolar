@@ -1,6 +1,7 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
+include_once '../notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
@@ -11,9 +12,7 @@ if (empty($_POST['txtuserid'])) {
 	exit();
 }
 if ($_POST['txtuserid'] == '') {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Ingrese un ID correcto.';
+	Error('Ingrese un ID correcto.');
 	header('Location: /modules/administratives');
 	exit();
 }
@@ -27,21 +26,15 @@ if ($result = $conexion->query($sql)) {
 		$sql_update = "UPDATE administratives SET name = '" . $_POST['txtname'] . "', surnames = '" . $_POST['txtsurnames'] . "', curp = '" . $_POST['txtcurp'] . "', rfc = '" . $_POST['txtrfc'] . "', gender = '" . $_POST['selectgender'] . "', date_of_birth = '" . $_POST['dateofbirth'] . "', phone = '" . $_POST['txtphone'] . "', address = '" . $_POST['txtaddress'] . "', level_studies = '" . $_POST['selectlevelstudies'] . "', occupation = '" . $_POST['txtoccupation'] . "', observations = '" . $_POST['txtobservation'] . "', updated_at = '" . $date . "' WHERE user = '" . $_POST['txtuserid'] . "'";
 
 		if (mysqli_query($conexion, $sql_update)) {
-			$_SESSION['msgbox_error'] = 0;
-			$_SESSION['msgbox_info'] = 1;
-			$_SESSION['text_msgbox_info'] = 'Personal administrativo actualizado.';
+			Info('Personal administrativo actualizado.');
 		} else {
-			$_SESSION['msgbox_info'] = 0;
-			$_SESSION['msgbox_error'] = 1;
-			$_SESSION['text_msgbox_error'] = 'Error al actualizar.';
+			Error('Error al actualizar.');
 		}
 
 		header('Location: /modules/administratives');
 		exit();
 	} else {
-		$_SESSION['msgbox_info'] = 0;
-		$_SESSION['msgbox_error'] = 1;
-		$_SESSION['text_msgbox_error'] = 'Este ID de administrativo no existe.';
+		Error('Este ID de administrativo no existe.');
 		header('Location: /modules/school_periods');
 	}
 }

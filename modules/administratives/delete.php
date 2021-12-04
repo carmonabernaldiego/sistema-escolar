@@ -1,7 +1,7 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
-
+include_once '../notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
@@ -10,16 +10,19 @@ if (empty($_POST['txtuserid'])) {
 	exit();
 }
 
-$sql_delete = "DELETE FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
+$sql_delete = "DELETE FROM users WHERE user_id = '" . $_POST['txtuserid'] . "'";
 
 if (mysqli_query($conexion, $sql_delete)) {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Personal administrativo eliminado.';
+	$sql_delete = "DELETE FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
+
+	if (mysqli_query($conexion, $sql_delete)) {
+		Error('Personal administrativo eliminado.');
+	} else {
+		Error('Error al eliminar.');
+	}
 } else {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al eliminar.';
+	Error('Error al eliminar.');
 }
 
 header('Location: /modules/administratives');
+exit();
