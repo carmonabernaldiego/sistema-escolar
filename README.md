@@ -5,4 +5,4 @@ http://mysoftup.com
 
 user: editor
 
-pass: editor014738
+pass: editor
