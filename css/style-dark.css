@@ -1,0 +1,2551 @@
+@charset "utf-8";
+
+/*-------------------------------------------
+  style.css
+  By Diego Carmona Bernal
+  www.diegocarmonabernal.com
+  www.mysoftup.com
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+  Fonts
+-------------------------------------------*/
+
+@font-face {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/MaterialIconsOutlined-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(fonts/MaterialIcons-Regular.woff2) format('woff2'), url(fonts/MaterialIcons-Regular.woff) format('woff'), url(fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.icon {
+    font-family: "icons" !important;
+    text-transform: none;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+}
+
+
+/*-------------------------------------------
+  Structure
+-------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::selection {
+    background: #a4b5d3;
+    color: #eef4ff;
+}
+
+::placeholder {
+    color: #687292;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(98, 114, 164);
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #eef4ff73;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #eef4ff52;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #eef4ff3d;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled] {
+    background: #eef4ff !important;
+    color: #687292 !important;
+    transition: all 200ms ease-in !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: #dde8fc !important;
+    transition: all 200ms ease-in !important;
+}
+
+button:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    transition: all 200ms ease-in !important;
+}
+
+body {
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    background: #282a36;
+    color: #4a567c;
+}
+
+body.login {
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    background: #dadceb url(../images/background_login.jpg) no-repeat top center fixed;
+    background-size: cover !important;
+}
+
+
+/*-------------------------------------------
+  Page Loader
+-------------------------------------------*/
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/loader.gif) 50% 50% no-repeat #282a36;
+    opacity: 1;
+}
+
+.loader-user {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/loader_user.gif) 50% 50% no-repeat #44475a;
+    border-radius: .4em;
+    opacity: 1;
+}
+
+
+/*-------------------------------------------
+  Home | Header
+-------------------------------------------*/
+
+.header {
+    width: 72%;
+    float: right;
+    height: 50px;
+    margin: 35px 3%;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
+    user-select: none;
+}
+
+.info-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    float: left;
+    width: 73.1%;
+    height: 100%;
+}
+
+.info-title .title {
+    display: block;
+    margin-left: 4%;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-size: 1.25em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.info-school-period {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 26.7%;
+    height: 100%;
+    border-left: 1px solid #282a3660;
+}
+
+.info-school-period .school-period {
+    display: block;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.info-school-period .school-period a {
+    color: #eef4ff;
+    font-size: 0.92em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+}
+
+.info-school-period .school-period a:hover,
+.info-school-period .school-period a:focus {
+    color: #9492c0;
+    outline: none;
+    transition: all 200ms ease-in;
+}
+
+.info-school-period .school-period a:active {
+    color: #7875a1;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Home | Navigation
+-------------------------------------------*/
+
+.nav-home {
+    position: fixed;
+    width: 22%;
+    top: 0;
+    bottom: 0;
+    background: #383a59;
+    box-shadow: 2px 0 2px rgba(73, 80, 104, 0.4);
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+}
+
+.nav-home span.name_system {
+    display: block;
+    padding: 12% 0;
+    background: url(../images/logo.png) no-repeat center;
+    background-size: 55%;
+    text-indent: -999px;
+}
+
+.nav-home .user {
+    border-top: 1px solid #282a3680;
+    border-bottom: 1px solid #282a3680;
+}
+
+.nav-home .user::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.nav-home .user img.image_user {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 5% 8%;
+    background-color: #6272a4;
+    box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
+    border: 3px solid #6272a4;
+    border-radius: 10em;
+    pointer-events: none;
+}
+
+.nav-home .user span.name_user {
+    float: left;
+    margin: -2% 0 2% 8%;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-weight: 500;
+    font-size: 0.97em;
+    text-transform: capitalize;
+}
+
+.nav-home .user span.logout_user {
+    float: right;
+    margin: -2.5% 7% 2% 0;
+}
+
+.nav-home .user span.logout_user>a {
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 300ms ease-out;
+    outline: none;
+    outline-width: none;
+}
+
+.nav-home .user span.logout_user>a:hover,
+.nav-home .user span.logout_user>a:focus {
+    color: #9492c0;
+    transition: all 200ms ease-in;
+}
+
+.nav-home .user span.logout_user>a:active {
+    color: #7875a1;
+    transition: all 200ms ease-in;
+}
+
+.nav-home .user span.logout_user>a+ul>li {
+    display: none;
+    position: absolute;
+    right: 3%;
+    width: 52%;
+    margin-top: -10%;
+    background: #383a59;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: 3px solid #6272a4;
+    border-radius: 0.4em;
+    text-align: left;
+    cursor: pointer;
+}
+
+.nav-home .user span.logout_user>a+ul>li>a {
+    font-size: 0.875em;
+}
+
+.nav-home .user span.logout_user>a+ul>li>a .icon {
+    margin: 0;
+    margin-right: 15.5px;
+    padding: 0;
+    font-size: 1em;
+}
+
+.nav-home .user span.logout_user>a:focus+ul>li {
+    display: block;
+    animation: fadeIn 200ms;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0.99;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav-home .user span.logout_user>a+ul:hover>li {
+    display: block;
+}
+
+.nav-home ul {
+    margin-top: 5%;
+    display: flex;
+    flex-flow: column wrap;
+    list-style: none;
+}
+
+.nav-home ul li a {
+    display: block;
+    padding: 4% 8%;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-size: 0.97em;
+    font-weight: 500;
+    text-decoration: none;
+    outline: none;
+    outline-width: none;
+    transition: all 300ms ease-out;
+}
+
+.nav-home ul li a .icon {
+    float: left;
+    margin-top: -1px;
+    margin-right: 15px;
+}
+
+.nav-home ul li a:hover,
+.nav-home ul li a:focus {
+    color: #9492c0;
+    transition: all 200ms ease-in;
+}
+
+.nav-home ul li a.active {
+    padding: 4% 6.8%;
+    color: #9492c0;
+    text-shadow: none;
+    border-left: 4px solid #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.nav-home ul li a:active,
+.nav-home ul li a.active:active {
+    color: #7875a1;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Home | Mensajes
+-------------------------------------------*/
+
+.box-notification-ok,
+.box-notification-error {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    margin: 0 0 8% 0;
+    padding: 25px 6%;
+    background: #569188;
+    box-shadow: 0 2px 2px rgba(98, 164, 139, 0.4);
+    border-radius: 0.4em;
+    user-select: none;
+    overflow: hidden;
+}
+
+.box-notification-error {
+    background: #c0605d;
+    box-shadow: 0 2px 2px rgba(164, 98, 98, 0.4);
+}
+
+.box-notification-error:after,
+.box-notification-info:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.box-notification-ok p,
+.box-notification-error p {
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(136, 184, 165, 0.2);
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+.box-notification-error p {
+    text-shadow: 0 1px 5px rgba(185, 156, 154, 0.2);
+}
+
+
+/*-------------------------------------------
+  Contenedor Formularios
+-------------------------------------------*/
+
+.content {
+    display: block;
+    float: right;
+    margin: 0 3%;
+    width: 72%;
+}
+
+.content-aside {
+    display: block;
+    float: right;
+    width: 27%;
+}
+
+.content:after,
+.content-aside:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+/*-------------------------------------------
+  Formulario | Iniciar Sesión
+-------------------------------------------*/
+
+.wrap-title-login {
+    height: 230px;
+    background: #383a59e7;
+    box-shadow: 0 2px 6px rgba(142, 136, 192, 0.4);
+    user-select: none;
+}
+
+.wrap-title-login .title-login h1 {
+    text-align: center;
+    padding: 25px 0 0 0;
+    font-size: 3.2em;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+}
+
+.form-login {
+    position: relative;
+    width: 380px;
+    height: 370px;
+    margin: -55px auto 0;
+    background-color: #eef4ff;
+    border-top: 3px solid #6f7a9a;
+    box-shadow: 0 2px 6px rgba(142, 136, 192, 0.3);
+    border-radius: 0.5em;
+    user-select: none;
+}
+
+.logo-form-login {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 0;
+    right: 0;
+    margin: -55px auto 0;
+    background: url(../images/icon_user.png)#eef4ff no-repeat bottom / 125px 125px;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: 4px solid #6f7a9a;
+    border-radius: 5em;
+}
+
+.logo-form-login img {
+    width: 130px;
+    height: 130px;
+}
+
+.form-login .label {
+    display: block;
+    padding: 104px 0 19px 0;
+    color: #4a567c;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.form-login .label.error {
+    margin: 8px 0 3px 0;
+    color: #ff5858;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.form-login .text,
+.form-login .textcontrasena {
+    width: 82.5%;
+    height: 40px;
+    margin: 0 6.25% 22px;
+    padding: 0 2.3%;
+    background: transparent;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: 2px solid #929cb9;
+    border-radius: 0.4em;
+    color: #687292;
+    font-size: .9em;
+    font-weight: 600;
+    outline: none !important;
+    outline-width: 0 !important;
+    transition: all 300ms ease-out;
+}
+
+.form-login .text:focus,
+.form-login .textcontrasena:focus {
+    color: #4a567c !important;
+    cursor: text;
+    box-shadow: 0 0 0 1.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
+}
+
+.form-login .textcontrasena {
+    margin: 0 6.25% 0;
+}
+
+.form-login .forgot-pass {
+    display: block;
+    width: 100%;
+    padding: 10px 0 9px;
+    text-align: center;
+}
+
+.form-login .forgot-pass a {
+    color: #4a567c;
+    font-size: 1em;
+    text-decoration: none;
+    outline: none !important;
+    outline-width: 0 !important;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+}
+
+.form-login .forgot-pass a:active {
+    color: #687292;
+}
+
+.form-login .forgot-pass a.un {
+    display: inline-block;
+}
+
+.form-login .forgot-pass a.un::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    margin: 0 auto;
+    padding: 0 0;
+    background: #929cb9;
+    border-radius: 0.1em;
+    transition: all 300ms ease-out;
+}
+
+.form-login .forgot-pass a.un:hover::after,
+.form-login .forgot-pass a.un:focus::after {
+    padding: 0 50%;
+    transition: all 200ms ease-in;
+}
+
+.form-login .forgot-pass a.un:active::after {
+    padding: 0 0;
+    transition: all 200ms ease-in;
+}
+
+.form-login .pretty {
+    float: left;
+    margin: 2.2% 0 0 6.25%;
+    font-size: 1em;
+}
+
+.form-login .pretty .state label {
+    margin: 0 0 0 5px;
+    color: #4a567c;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+}
+
+.form-login .pretty .state label:before {
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+}
+
+.form-login .pretty.p-svg input:hover~.state label:before,
+.form-login .pretty.p-svg input:focus~.state label:before {
+    box-shadow: 0 0 0 1.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
+}
+
+.form-login .button {
+    float: right;
+    width: 32%;
+    height: 35px;
+    margin-right: 5.55%;
+    background: #6f7a9a;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    font-size: .9em;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none !important;
+    outline-width: 0 !important;
+    transition: all 300ms ease-out;
+}
+
+.form-login .button:hover,
+.form-login .button:focus {
+    background: #383a59c5;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
+}
+
+.form-login .button:active {
+    background: #6f7a9a;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Formulario | Herramientas
+-------------------------------------------*/
+
+.form-options {
+    width: 100%;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
+    user-select: none;
+}
+
+.form-options .options {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #282a3660;
+    padding: 5% 10%;
+}
+
+.form-options .options .btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #eef4ff;
+    font-size: 1em;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+}
+
+.form-options .options .btn.btn-disabled,
+.form-options .search .btn-search.btn-disabled {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: initial;
+    pointer-events: none;
+}
+
+.form-options .options .btn-add {
+    box-shadow: 0 1px 6px rgba(91, 133, 127, 0.2);
+    background: #569188;
+    border-color: #6daaa3;
+    transition: all 300ms ease-out;
+}
+
+.form-options .options .btn-add:hover,
+.form-options .options .btn-add:focus {
+    background: #456661;
+    border: 4px solid #6daaa3;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-add:active {
+    background: #569188;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-exit {
+    box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
+    background: #db4949;
+    border-color: #e77f7f;
+    transition: all 300ms ease-out;
+}
+
+.form-options .options .btn-exit:hover,
+.form-options .options .btn-exit:focus {
+    background: #aa3535;
+    border: 4px solid #e77f7f;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-exit:active {
+    background: #db4949;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-search-mobile {
+    display: none;
+    box-shadow: 0 1px 6px rgba(73, 100, 219, 0.2);
+    background: #6272a4;
+    border-color: #929cb9;
+    transition: all 300ms ease-out;
+}
+
+.form-options .options .btn-search-mobile:hover,
+.form-options .options .btn-search-mobile:focus {
+    background: #4a567c;
+    border: 4px solid #929cb9;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-options .options .btn-search-mobile:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.form-options .search {
+    padding: 20px 0;
+}
+
+.form-options .search:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.form-options .search .text-search {
+    float: left;
+    width: 57%;
+    height: 36px;
+    margin: 0 0 0 7.9%;
+    padding: 0 23.5% 0 3.5%;
+    background: #eef4ff;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-top-left-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    border-top-right-radius: 0.55em;
+    border-bottom-right-radius: 0.55em;
+    color: #687292;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 300ms ease-out;
+    outline: none !important;
+    outline-width: 0 !important;
+    transition: all 300ms ease-out;
+}
+
+.form-options .search .text-search:focus {
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    color: #4a567c !important;
+    transition: all 200ms ease-in;
+}
+
+.form-options .search .btn-search {
+    float: left;
+    width: 20%;
+    height: 36px;
+    margin: 0 6.5% 0 -20%;
+    background: #6272a4;
+    border: none;
+    color: #eef4ff;
+    cursor: initial;
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 1.02em;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-options .search .btn-search:hover,
+.form-options .search .btn-search:focus {
+    background: #4a567c;
+    box-shadow: inset 0 0 0 2.5pt #929cb9 !important;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-options .search .btn-search:hover:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Formulario | GridView
+-------------------------------------------*/
+
+.form-gridview {
+    float: left;
+    margin: 0 0 35px 0;
+    width: 71%;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
+}
+
+.form-gridview img.data-not-found,
+.form-data img.data-not-found {
+    display: block;
+    width: 80%;
+    margin: 2% auto 5%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.form-gridview table.default,
+.form-gridview table.user {
+    width: 92%;
+    margin: 4.5% auto 0;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border-collapse: collapse;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    overflow: hidden;
+}
+
+.form-gridview table.default.full {
+    display: block;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+}
+
+.form-gridview th {
+    padding: 7px 15px;
+    background: #282a36;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    border: none;
+    text-align: left;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: normal;
+}
+
+.form-gridview th.center {
+    text-align: center;
+}
+
+.form-gridview th a {
+    color: #eef4ff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.form-gridview td {
+    padding: 8px 15px;
+    background: #eef4ff;
+    color: #4a567c;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    border-bottom: solid #6273a495 1px;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: left;
+    transition: all 300ms ease-out;
+}
+
+.form-gridview td p.email {
+    width: 220px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.form-gridview td.center {
+    text-align: center;
+}
+
+.form-gridview td button.btnview {
+    margin: 0 auto;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #569188;
+    box-shadow: 0 1px 6px rgba(91, 133, 127, 0.2);
+    border: none;
+    border-radius: 2em;
+    color: #eef4ff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-gridview td button.btnview:hover,
+.form-gridview td button.btnview:focus {
+    background: #456661;
+    border: 4px solid #6daaa3;
+    transition: all 200ms ease-in;
+}
+
+.form-gridview td button.btnview:active {
+    background: #569188;
+    transition: all 200ms ease-in;
+}
+
+.form-gridview td button.btnedit {
+    margin: 0 auto;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #3f6992;
+    box-shadow: 0 1px 6px rgba(63, 105, 146, 0.2);
+    border: none;
+    border-radius: 2em;
+    color: #eef4ff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-gridview td button.btnedit:hover,
+.form-gridview td button.btnedit:focus {
+    background: #2a4866;
+    border: 4px solid #7eb2e2;
+    transition: all 200ms ease-in;
+}
+
+.form-gridview td button.btnedit:active {
+    background: #3f6992;
+    transition: all 200ms ease-in;
+}
+
+.form-gridview td button.btndelete {
+    margin: 0 auto;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #db4949;
+    box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
+    border: none;
+    border-radius: 2em;
+    color: #eef4ff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-gridview td button.btndelete:hover,
+.form-gridview td button.btndelete:focus {
+    background: #aa3535;
+    border: 4px solid #e77f7f;
+    transition: all 200ms ease-in;
+}
+
+.form-gridview td button.btndelete:active {
+    background: #db4949;
+    transition: all 200ms ease-in;
+}
+
+.form-gridview tr:hover td {
+    background: #dde8fc;
+    transition: all 200ms ease-in;
+}
+
+.pages {
+    margin: 2.8% 0 2.8% 3.8%;
+    user-select: none;
+}
+
+.pages:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.pages ul li {
+    list-style: none;
+}
+
+.pages ul li button {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 5%;
+    height: 22px;
+    background: #7e8aac;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    line-height: 23px;
+    font-size: 0.625em;
+    font-weight: 600;
+    transition: all 300ms ease-out;
+}
+
+.pages ul li button:hover,
+.pages ul li button:focus {
+    background: #4c597e;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.pages ul li.active button {
+    background: #6272a4;
+}
+
+.pages ul li.active button:hover,
+.pages ul li.active button:focus {
+    background: #7e8aac;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Formulario | Add / Update
+-------------------------------------------*/
+
+.form-data {
+    position: relative;
+    float: left;
+    margin: 0 0 35px 0;
+    width: 71%;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
+    user-select: none;
+}
+
+.form-data .head {
+    padding: 14px 0;
+    border-bottom: 1px solid #282a3660;
+}
+
+.form-data .head h1 {
+    color: #eef4ff;
+    font-size: 1em;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.form-data .body .wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 4% 0 0 0;
+}
+
+.form-data .body .first,
+.form-data .body .last {
+    width: 44%;
+}
+
+.form-data .body .full {
+    width: 88%;
+}
+
+.form-data .body .content-full {
+    display: block;
+    width: 92%;
+    margin-bottom: 10px;
+}
+
+.form-data .body .label {
+    display: block;
+    margin: 0 0 6px 0;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.form-data .body .text {
+    width: 94%;
+    height: 36px;
+    margin: 0 0 25px 0;
+    padding: 0 3%;
+    background: #eef4ff;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 0.4em;
+    color: #687292;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 300ms ease-out;
+}
+
+.form-data .body .textarea {
+    display: block;
+    width: 203.1%;
+    min-height: 50px;
+    max-height: 120px;
+    margin: 0 0 20px 0;
+    padding: 6px 3%;
+    background: #eef4ff;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 0.4em;
+    color: #687292;
+    line-height: 1.7;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: justify;
+    resize: vertical;
+    transition: all 300ms ease-out;
+}
+
+.form-data .body .date {
+    width: 94%;
+    height: 36px;
+    margin: 0 0 25px 0;
+    padding: 0 3%;
+    background: #eef4ff;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 0.4em;
+    color: #687292;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 300ms ease-out;
+}
+
+.form-data .body [type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.form-data .body [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+}
+
+.litepicker {
+    user-select: none;
+}
+
+.litepicker .month-item-name,
+.litepicker .month-item-year {
+    background: #dde8fc;
+    border: none;
+    border-radius: 0.4em;
+    color: #4a567c;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: capitalize;
+    outline: none;
+    outline-width: 0;
+}
+
+.litepicker select.month-item-name option,
+.litepicker select.month-item-year option {
+    background: #dde8fc;
+    border: none;
+    border-radius: 0.4em;
+    color: #4a567c;
+    font-size: 1em;
+    font-weight: 600;
+    outline: none;
+    outline-width: 0;
+}
+
+.form-data .body .select {
+    width: 100%;
+    height: 36px;
+    margin: 0 0 25px 0;
+    padding: 0 1%;
+    background: #eef4ff;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 0.4em;
+    color: #687292;
+    font-family: Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 300ms ease-out;
+}
+
+.form-data .body .select option {
+    color: #4a567c;
+    font-weight: 500;
+}
+
+.select2 {
+    width: 100%!important;
+    margin-bottom: 25px !important;
+}
+
+.form-data .body .btn {
+    display: block;
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 8px 0 0 8px;
+    background: #6272a4;
+    box-shadow: -1px -1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-color: #929cb9;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 0.4em;
+    color: #eef4ff;
+    text-shadow: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-data .body .btn.icon {
+    text-shadow: 0 -1px 5px rgb(142, 136, 192, 0.2);
+}
+
+.form-data .body .btn:hover,
+.form-data .body .btn:focus {
+    background: #4a567c;
+    border: 4px solid #929cb9;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-data .body .btn:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.text:focus,
+.textarea:focus,
+.date:focus,
+.select:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    color: #4a567c !important;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Formulario | Delete
+-------------------------------------------*/
+
+.form-data .delete {
+    margin: 20px 0 35px 0;
+    text-align: center;
+}
+
+.form-data .delete h1 {
+    color: #eef4ff;
+    font-size: 1.3em;
+    text-transform: initial;
+    font-weight: 600;
+}
+
+.form-data .delete h2 {
+    margin-top: 8px;
+    color: #eef4ff;
+    font-size: 1em;
+    text-transform: initial;
+    font-weight: 500;
+}
+
+.form-data .delete .btn-si {
+    float: left;
+    margin: 22px 0 25px 29%;
+    width: 120px;
+    height: 38px;
+    background: #3f6992;
+    box-shadow: 0 1px 6px rgba(63, 105, 146, 0.2);
+    border: none;
+    border-color: #7eb2e2;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-data .delete .btn-si:hover,
+.form-data .delete .btn-si:focus {
+    border: 4px solid #7eb2e2;
+    background: #2a4866;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-data .delete .btn-si:active {
+    background: #3f6992;
+    transition: all 200ms ease-in;
+}
+
+.form-data .delete .btn-no {
+    float: right;
+    margin: 22px 29% 25px 0;
+    width: 120px;
+    height: 38px;
+    background: #db4949;
+    box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
+    border: none;
+    border-color: #e77f7f;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-data .delete .btn-no:hover,
+.form-data .delete .btn-no:focus {
+    border: 4px solid #e77f7f;
+    background: #aa3535;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-data .delete .btn-no:active {
+    background: #db4949;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Formulario | School Period - Groups
+-------------------------------------------*/
+
+.form-data .body .table-school-period {
+    margin-bottom: 4%;
+}
+
+.form-data .body .td-school {
+    width: 10%;
+}
+
+.form-data .body .td-school-label {
+    padding: 0;
+}
+
+.form-data table {
+    width: 94%;
+    margin: 0 auto 3%;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border-collapse: collapse;
+    border-top-left-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+    overflow: hidden;
+}
+
+.form-data table.consult {
+    margin: -30px auto 65px;
+}
+
+.form-data th {
+    padding: 10px 15px;
+    background: #282a36;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    border: none;
+    text-align: left;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.form-data th.center {
+    text-align: center;
+}
+
+.form-data td {
+    padding: 0 15px;
+    background: #eef4ff;
+    color: #4a567c;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    border-bottom: solid #6273a495 1px;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: left;
+    transition: all 300ms ease-out;
+}
+
+.form-data td.center {
+    text-align: center;
+}
+
+.form-data tr:hover td {
+    background: #dde8fc;
+    transition: all 200ms ease-in;
+}
+
+.form-data td label {
+    display: block;
+    padding: 8px 0;
+}
+
+.form-data td .cbox-school-period {
+    display: block;
+    margin: 13% auto 10%;
+    width: 18px;
+    height: 18px;
+    background: #eef4ff;
+    cursor: pointer;
+}
+
+.form-data td .cbox-student {
+    margin: 16% 0 0 45%;
+    width: 18px;
+    height: 18px;
+    background: #eef4ff;
+}
+
+.form-data button.btn-add-subjects {
+    width: 100%;
+    height: 40px;
+    margin: 0 0 10% 0;
+    background: #6272a4;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    text-transform: capitalize;
+    line-height: 2.9;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-radius: 0.4em;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-data button.btn-add-subjects:hover,
+.form-data button.btn-add-subjects:focus {
+    background: #4a567c;
+    color: #eef4ff98;
+    border: none;
+    transition: all 200ms ease-in;
+}
+
+.form-data button.btn-add-students {
+    width: 35%;
+    height: 40px;
+    margin: 2% auto -2%;
+    background: #6272a4;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    text-transform: capitalize;
+    line-height: 2.9;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-data button.btn-add-students:hover,
+.form-data button.btn-add-students:focus {
+    background: #4a567c;
+    color: #eef4ff98;
+    border: none;
+    transition: all 200ms ease-in;
+}
+
+
+/*-------------------------------------------
+  Formulario | Careers
+-------------------------------------------*/
+
+.form-data .body .description {
+    width: 92.1%;
+}
+
+.form-data .body .description .textarea {
+    display: block;
+    width: 97.1%;
+    min-height: 60px;
+    max-height: 120px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 6px 1.4%;
+    resize: vertical;
+    transition: all 300ms ease-out;
+}
+
+
+/*-------------------------------------------
+  Formulario | Configuration User
+-------------------------------------------*/
+
+.form-config-user {
+    float: none;
+    width: 100%;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
+}
+
+.form-config-user:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.form-config-user .body .wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.form-config-user .body .first,
+.form-config-user .body .last {
+    width: 45%;
+}
+
+.form-config-user .body .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0;
+}
+
+.form-config-user .body .last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-users .body .section-user-image,
+.form-config-user .body .section-user-image {
+    width: 100%;
+}
+
+.form-users .body .section-user-image img,
+.form-config-user .body .section-user-image img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    background-color: #eef4ff;
+    border: solid #eef4ff 4px;
+    border-radius: 100%;
+    pointer-events: none;
+    box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
+}
+
+.form-users .body .section-user-image .file,
+.form-config-user .body .section-user-image .file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+    margin-top: -32px;
+    padding: 0;
+    background: #6272a4;
+    box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
+    border-radius: 100%;
+    color: #eef4ff;
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-users .body .section-user-image .file.disabled,
+.form-config-user .body .section-user-image .file.disabled {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: default;
+}
+
+.form-users .body .section-user-image .file:hover,
+.form-config-user .body .section-user-image .file:hover,
+.form-users .body .section-user-image .file:focus,
+.form-config-user .body .section-user-image .file:focus {
+    outline: none;
+    outline-width: 0;
+    background: #4a567c;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    color: #aebbd3;
+    transition: all 200ms ease-in;
+}
+
+.form-users .body .section-user-image .file.disabled:hover,
+.form-config-user .body .section-user-image .file.disabled:hover,
+.form-users .body .section-user-image .file.disabled:focus,
+.form-config-user .body .section-user-image .file.disabled:focus {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: default;
+}
+
+.form-users .body .section-user-image .file.disabled:hover,
+.form-config-user .body .section-user-image .file.disabled:hover,
+.form-users .body .section-user-image .file.disabled:focus,
+.form-config-user .body .section-user-image .file.disabled:focus {
+    box-shadow: none !important;
+}
+
+.form-users .body .section-user-image .file:active,
+.form-config-user .body .section-user-image .file:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.form-users .body .section-croppie-image,
+.form-config-user .body .section-croppie-image {
+    width: 100%;
+    padding: 33px 0 0;
+}
+
+.form-users .body .section-croppie-image .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0 0px;
+}
+
+.form-config-user .body .section-croppie-image .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0 32.5px;
+}
+
+.form-users .body .section-croppie-image .options .crop-btn,
+.form-config-user .body .section-croppie-image .options .crop-btn,
+.form-users .body .section-croppie-image .options .cancel-btn,
+.form-config-user .body .section-croppie-image .options .cancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0 25px;
+    background: #6272a4;
+    box-shadow: 0 0 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 100%;
+    color: #eef4ff;
+    line-height: 2.55em;
+    font-size: 1.5em;
+    font-weight: 100;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 300ms ease-out;
+}
+
+.form-users .body .section-croppie-image .options .cancel-btn,
+.form-config-user .body .section-croppie-image .options .cancel-btn {
+    background: #db4949;
+    box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
+}
+
+.form-users .body .section-croppie-image .options .crop-btn:hover,
+.form-config-user .body .section-croppie-image .options .crop-btn:hover,
+.form-users .body .section-croppie-image .options .crop-btn:focus,
+.form-config-user .body .section-croppie-image .options .crop-btn:focus {
+    background: #4a567c;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    color: #aebbd3;
+    transition: all 200ms ease-in;
+}
+
+.form-users .body .section-croppie-image .options .cancel-btn:hover,
+.form-config-user .body .section-croppie-image .options .cancel-btn:hover,
+.form-users .body .section-croppie-image .options .cancel-btn:focus,
+.form-config-user .body .section-croppie-image .options .cancel-btn:focus {
+    background: #aa3535;
+    box-shadow: 0 0 0 2.5pt #e77f7f !important;
+    color: #aebbd3;
+    transition: all 200ms ease-in;
+}
+
+.form-users .body .section-croppie-image .options .crop-btn:active,
+.form-config-user .body .section-croppie-image .options .crop-btn:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.form-users .body .section-croppie-image .options .cancel-btn:active,
+.form-config-user .body .section-croppie-image .options .cancel-btn:active {
+    background: #db4949;
+    transition: all 200ms ease-in;
+}
+
+.form-config-user .body .section-user-info {
+    display: block;
+    width: 100%;
+}
+
+.form-config-user .body .section-user-info span.user-name,
+.form-config-user .body .section-user-info span.user-id {
+    display: block;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.form-config-user .body .section-user-info span.user-name {
+    margin-top: 8px;
+}
+
+.form-config-user .body .section-user-info span.user-id {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.form-config-user .body .config-data-user {
+    width: 100%;
+}
+
+.form-config-user .body .config-data-user .text {
+    width: 72%;
+    margin: 0;
+    padding: 0 25% 0 3%;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+}
+
+.form-config-user .body .config-data-user .btn-edit-email {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 22%;
+    height: 36px;
+    margin-top: -36px;
+    background: #6272a4;
+    box-shadow: none;
+    border: none;
+    border-color: #929cb9;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #eef4ff;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-config-user .body .config-data-user .btn-edit-email.disabled {
+    background: #6a7186;
+    color: #eef4ff98;
+    cursor: default;
+}
+
+.form-config-user .body .config-data-user .btn-edit-email:hover,
+.form-config-user .body .config-data-user .btn-edit-email:focus {
+    outline: none;
+    outline-width: 0;
+    background: #4a567c;
+    box-shadow: inset 0 0 0 4px #929cb9;
+    color: #aebbd3;
+    transition: all 200ms ease-in;
+}
+
+.form-config-user .body .config-data-user .btn-edit-email.disabled:hover,
+.form-config-user .body .config-data-user .btn-edit-email.disabled:focus {
+    background: #6a7186;
+    box-shadow: none !important;
+}
+
+.form-config-user .body .config-data-user .btn-edit-email:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.form-config-user .body .config-data-user .btn-edit-info-user,
+.form-config-user .body .config-data-user .btn-change-pass {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 89.4%;
+    height: 36px;
+    padding-left: 10.6%;
+    background: #6272a4;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    border: none;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgb(142 136 192 / 20%);
+    font-size: 0.95em;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-config-user .body .config-data-user .btn-edit-info-user {
+    margin: 10% 0;
+}
+
+.form-config-user .body .config-data-user .btn-edit-info-user span.icon {
+    display: block;
+    position: absolute;
+    left: 2.7%;
+    font-size: 1.6em;
+}
+
+.form-config-user .body .config-data-user .btn-change-pass span.icon {
+    display: block;
+    position: absolute;
+    left: 2.7%;
+    font-size: 1.2em;
+}
+
+.form-config-user .body .config-data-user .btn-edit-info-user:hover,
+.form-config-user .body .config-data-user .btn-edit-info-user:focus,
+.form-config-user .body .config-data-user .btn-change-pass:hover,
+.form-config-user .body .config-data-user .btn-change-pass:focus {
+    outline: none;
+    outline-width: 0;
+    background: #4a567c;
+    border: none;
+    box-shadow: 0 0 0 2.5pt #929cb9 !important;
+    color: #aebbd3;
+    transition: all 200ms ease-in;
+}
+
+.form-config-user .body .config-data-user .btn-edit-info-user:active,
+.form-config-user .body .config-data-user .btn-change-pass:active {
+    background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.form-config-user .body .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 3%;
+}
+
+.form-config-user .body .footer span.user-permissions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    padding: 5px 15px 4px;
+    border: 2px solid #eef4ff;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input[type="range"]:focus,
+input[type="range"]:hover,
+input[type="range"]:active {
+    background: transparent !important;
+}
+
+
+/*-------------------------------------------
+  Formulario | Users
+-------------------------------------------*/
+
+.form-users .body .section-user-info {
+    display: block;
+    width: 100%;
+    margin: 13px 0 10px;
+}
+
+.form-users .body .section-user-info span.user-id,
+.form-users .body .section-user-info span.user-name {
+    display: block;
+    color: #eef4ff;
+    text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.form-users .body .section-user-info span.user-id {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.form-config-user .body .section-user-info span.user-name {
+    margin-top: 8px;
+}
+
+
+/*-------------------------------------------
+  Formulario | Attendance
+-------------------------------------------*/
+
+.formAttendance {
+    float: none;
+    margin: 0 0 35px 0;
+    width: 100%;
+    height: 450px;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
+}
+
+.formAttendanceAdd {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 30px 20px 10px;
+}
+
+.formAttendanceAdd table.attendanceGroups {
+    width: 47%;
+    box-shadow: none;
+    border-collapse: collapse;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+
+.formAttendanceAdd table.attendanceGroups th {
+    font-size: 0.8em;
+    padding: 10px 0;
+}
+
+.formAttendanceAdd table.attendanceGroups th.nameGroup {
+    background: #282a36;
+    text-transform: none;
+}
+
+.formAttendanceAdd table.attendanceGroups td {
+    font-size: 0.78em;
+    padding: 7px 0;
+}
+
+.formAttendanceAdd table.attendanceGroups td.left {
+    padding-left: 15px;
+}
+
+.formAttendanceAdd table.attendanceGroups td.right {
+    padding-right: 15px;
+}
+
+.formAttendanceAdd table.attendanceGroups td.right .btnview {
+    display: block;
+    float: right;
+}
+
+
+/*-------------------------------------------
+  User Mobile
+-------------------------------------------*/
+
+.user-mobile {
+    display: none !important;
+    float: right;
+    margin: 0 auto;
+    margin-right: 3%;
+    position: relative;
+    background: transparent;
+    display: grid;
+    place-content: left;
+    user-select: none;
+}
+
+.user-mobile header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.user-mobile header img {
+    max-width: 45px;
+    max-height: 45px;
+}
+
+.user-mobile header .activator-user {
+    width: 45px;
+    height: 45px;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border: 3px solid #44475a;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    cursor: pointer;
+    transition: background 100ms ease-in;
+}
+
+.user-mobile header .activator-user:hover {
+    background: #44475a;
+    transition: background 100ms ease-in;
+}
+
+.user-mobile ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-mobile nav {
+    max-height: 57px;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 5em 0 0 5em;
+    clip-path: ellipse(50% 50% at 150% 50%);
+}
+
+.user-mobile nav ul {
+    display: flex;
+}
+
+.user-mobile nav ul {
+    width: 107px;
+}
+
+.user-mobile nav ul li.first {
+    margin-left: 9px;
+    margin-right: 7px;
+}
+
+.user-mobile nav ul li {
+    margin-right: 9px;
+}
+
+.user-mobile nav ul li a {
+    display: block;
+    margin: 0 auto;
+    margin-top: 6px;
+    width: 40px;
+    height: 40px;
+    color: #eef4ff;
+    font-size: 1.3em;
+    line-height: 2.24em;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 100%;
+    outline: none;
+    outline-width: none;
+    transition: all 300ms ease-out;
+}
+
+.user-mobile nav ul li a:hover,
+.user-mobile nav ul li a:focus {
+    background: #323844;
+    box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.user-mobile nav ul li a:active,
+.user-mobile nav ul li a.active:active {
+    background: #282d36;
+    transition: all 200ms ease-in;
+}
+
+.user-mobile nav ul li a.active {
+    background: #323844;
+    box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
+    opacity: 0;
+    color: #eef4ff98;
+    transform: translateX(10px);
+}
+
+.user-mobile nav ul li a span {
+    width: 20px;
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+
+/*-------------------------------------------
+  Menu Mobile
+-------------------------------------------*/
+
+.menu-mobile {
+    display: none !important;
+    position: relative;
+    width: 94%;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    display: grid;
+    place-content: center;
+    user-select: none;
+}
+
+.menu-mobile span.name_system {
+    display: block;
+    width: 300px;
+    height: 60px;
+    margin: -55px auto 0px;
+    padding: 0;
+    background: url(../images/logo.png) no-repeat center;
+    background-size: 150px;
+    text-indent: -999px;
+}
+
+.menu-mobile header {
+    display: flex;
+}
+
+.menu-mobile header .activator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    min-height: 52px;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0.4em;
+    color: #eef4ff;
+    font-size: 1.3em;
+    line-height: 0.95em;
+    cursor: pointer;
+    transition: color 100ms ease-in;
+}
+
+.menu-mobile header .activator:hover {
+    background: #44475a;
+    transition: color 100ms ease-in;
+}
+
+.menu-mobile header span.activator {
+    width: 20px;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.menu-mobile header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-mobile header nav {
+    z-index: 99;
+    max-width: fit-content;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 52px;
+    background: #44475a;
+    box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
+    border-radius: 0 0.4em 0.4em 0;
+    padding: 0 .5em;
+    clip-path: ellipse(50% 50% at -50% 50%);
+}
+
+.menu-mobile header nav ul {
+    display: flex;
+}
+
+.menu-mobile header nav ul li a {
+    display: block;
+    padding: .35em .55em;
+    margin: 4.5px;
+    color: #eef4ff;
+    font-size: 1.3em;
+    line-height: 2.8px;
+    text-decoration: none;
+    border-radius: 0.4em;
+    outline: none;
+    outline-width: none;
+}
+
+.menu-mobile header nav ul li a:hover,
+.menu-mobile header nav ul li a:focus {
+    background: #323844;
+    box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.menu-mobile header nav ul li a:active,
+.menu-mobile header nav ul li a.active:active {
+    background: #282d36;
+    transition: all 200ms ease-in;
+}
+
+.menu-mobile header nav ul li a.active {
+    background: #323844;
+    box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
+    opacity: 0;
+    color: #eef4ff98;
+    transform: translateX(-10px);
+}
+
+.menu-mobile header nav ul li a span {
+    margin-top: 5px;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+
+/*-------------------------------------------
+  Responsive Design
+  Formulario | Iniciar Sesión
+-------------------------------------------*/
+
+@media only screen and (max-width: 450px) {
+    body.login {
+        background: #dadceb url(../images/background_login_mobile.jpg) no-repeat top center fixed;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .wrap-title-login {
+        height: 190px;
+    }
+    .wrap-title-login .title-login h1 {
+        padding-top: 15px;
+        font-size: 2.2em;
+    }
+    .form-login {
+        margin-top: -60px;
+        width: 300px;
+        height: 382.5px;
+    }
+    .form-login .label {
+        margin: -5px 0 -5px 0;
+    }
+    .form-login .label.error {
+        margin: 6px 0 -.8px 0;
+        font-size: 1em;
+    }
+    .form-login .text,
+    .form-login .textcontrasena {
+        width: 81.9%;
+    }
+    .form-login .forgot-pass {
+        margin-top: 28px;
+        margin-bottom: -3px;
+    }
+    .form-login .pretty {
+        margin: -17% 0 0 30.1%;
+        font-size: 1em;
+    }
+    .form-login .pretty .state label {
+        margin: 0 0 0 4px;
+    }
+    .form-login .button {
+        float: none;
+        display: block;
+        width: 88%;
+        margin: 0 auto;
+    }
+}
+
+
+/*-------------------------------------------
+  Responsive Design
+  All
+-------------------------------------------*/
+
+@media only screen and (max-width: 1186px) {
+    .menu-mobile,
+    .user-mobile {
+        display: block!important;
+    }
+    .menu-mobile {
+        margin-top: -162px;
+        margin-bottom: 97px;
+    }
+    .user-mobile {
+        margin-top: -154px;
+        margin-bottom: 100px;
+    }
+    .nav-home {
+        display: none;
+    }
+    .header {
+        float: none;
+        width: 94%;
+        margin-top: 100px;
+    }
+    .content {
+        float: none;
+        width: 94%;
+    }
+}
+
+@media only screen and (max-width: 963px) {
+    .menu-mobile ::-webkit-scrollbar {
+        height: 3px;
+    }
+    .menu-mobile {
+        margin-top: -162px;
+        margin-bottom: 97px;
+    }
+    .user-mobile {
+        margin-top: -154px;
+        margin-bottom: 100px;
+    }
+    .info-title {
+        width: 59.8%;
+    }
+    .info-title .title {
+        margin-left: 7%;
+    }
+    .info-school-period {
+        width: 40%;
+    }
+    .box-notification-ok,
+    .box-notification-error {
+        width: 94%;
+        height: 50px;
+        margin: -77px 0 27px 0;
+        padding: 0 3%;
+        box-shadow: none;
+    }
+    .content {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+    .content-aside {
+        width: 100%;
+    }
+    .form-gridview {
+        width: 100%;
+    }
+    .form-data {
+        width: 100%;
+    }
+    .form-options {
+        margin-bottom: 27px;
+    }
+    .form-options .options {
+        padding: 1.5% 10%;
+        border: none;
+    }
+    .form-options .options .btn-search-mobile {
+        display: block;
+    }
+    .form-options .search {
+        display: none;
+        padding: .5% 0 2.1%;
+    }
+    .form-options .search .text-search {
+        width: 63%;
+        height: 36px;
+        margin-left: 6.5%;
+        padding: 0 22% 0 2%;
+    }
+    .form-options .search .btn-search {
+        width: 20%;
+        height: 36px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
+        width: 87.9%;
+        height: 36px;
+        padding-left: 12%;
+    }
+}
+
+@media only screen and (max-width: 701px) {
+    .info-title {
+        width: 59.5%;
+    }
+    .info-title .title {
+        margin-left: 10%;
+    }
+    .form-data .body .first,
+    .form-data .body .last,
+    .form-data .body .description {
+        width: 88%;
+    }
+    .form-data .body .content-full {
+        width: 88%;
+        margin-bottom: 35px;
+    }
+    .form-data .body .textarea {
+        width: 94%;
+        padding: 6px 3%;
+    }
+    .form-data .body .description .textarea {
+        width: 94%;
+        padding: 6px 3%;
+    }
+    .form-gridview .pages ul li button {
+        width: 5%;
+    }
+    .content-full {
+        margin-bottom: 0 !important;
+    }
+    .form-options .options .btn {
+        width: 35px;
+        height: 35px;
+    }
+    .form-config-user .body .first,
+    .form-config-user .body .last {
+        width: 87.5%;
+    }
+    .form-config-user .body .first {
+        padding: 24px 0 2%;
+    }
+    .form-config-user .body .footer {
+        padding: 24px 0 24px;
+    }
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
+        width: 90.9%;
+        height: 36px;
+        padding-left: 9%;
+    }
+    .form-config-user .body .section-croppie-image,
+    .form-data .body .section-croppie-image {
+        padding: 24px 0 0;
+    }
+    .form-config-user .body .section-croppie-image .options {
+        padding: 10px 0 24px;
+    }
+    .form-config-user .body .section-croppie-image .cr-slider {
+        padding-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 641px) {
+    .form-gridview img.data-not-found,
+    .form-data img.data-not-found {
+        margin: 1% auto 5%;
+    }
+    .form-gridview {
+        width: 94%;
+        padding: 0 3%;
+    }
+    .form-gridview table.default {
+        display: block;
+        max-width: fit-content;
+        margin: 7.5% auto 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    }
+    .form-gridview .pages {
+        margin: 3.2% 0 3.2% 3.89%;
+    }
+    .form-data .delete .btn-si {
+        margin: 22px 0 25px 20%;
+    }
+    .form-data .delete .btn-no {
+        margin: 22px 20% 25px 0;
+    }
+    .form-data.form-users .body .wrap {
+        padding: 25px 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
+        width: 89%;
+        height: 36px;
+        padding-left: 11%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .form-gridview table.user {
+        display: block;
+        max-width: fit-content;
+        margin: 7.5% auto 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
+    }
+}
+
+@media only screen and (max-width: 436px) {
+    .info-title {
+        width: 59.5%;
+    }
+    .info-title .title {
+        font-size: 1.2em;
+    }
+    .info-school-period .school-period {
+        padding: 0 8px;
+        font-size: .85em;
+    }
+    .info-school-period .school-period a {
+        font-size: .95em;
+    }
+    .form-gridview .pages ul li button {
+        width: 8%;
+    }
+    .form-data .delete .btn-si {
+        margin: 22px 0 25px 6%;
+    }
+    .form-data .delete .btn-no {
+        margin: 22px 6% 25px 0;
+    }
+    .form-options .options {
+        padding: 8px 35px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .form-config-user .body .config-data-user .btn-edit-info-user,
+    .form-config-user .body .config-data-user .btn-change-pass {
+        width: 87%;
+        height: 36px;
+        padding-left: 13%;
+    }
+}
