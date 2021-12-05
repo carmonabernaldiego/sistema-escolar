@@ -29,6 +29,11 @@ $(document).ready(function() {
         $('.section-croppie-image').hide();
     });
 
+    $('.change-btn').click(function(event) {
+        $('#fileuploadimage').trigger('click');
+        $('.change-btn').blur();
+    });
+
     $('.file').click(function(event) {
         $('#fileuploadimage').trigger('click');
     });

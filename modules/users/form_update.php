@@ -60,10 +60,9 @@ echo '
 		<div class="section-croppie-image" style="display: none;">
 			<div class="image-crop"></div>
 			<div class="options">
-				<button class="crop-btn"><span class="icon">crop</span></button>
-				<form action="#">
-					<button class="cancel-btn"><span class="icon">close</span></button>
-				</form>
+				<a class="crop-btn"><span class="icon">crop</span></a>
+				<a href="#" class="change-btn"><span class="icon">sync</span></a>
+				<a href="#" class="cancel-btn"><span class="icon">close</span></a>
 			</div>
 		</div>
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST">

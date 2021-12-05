@@ -20,6 +20,11 @@ function confirmPass() {
     }
 }
 
+$('.change-btn').click(function(event) {
+    $('#fileuploadimage').trigger('click');
+    $('.change-btn').blur();
+});
+
 $('.btn-edit-email').click(function(event) {
     $('#txtemailupdate').prop('disabled', false);
     $('#txtemailupdate').focus();

@@ -1618,7 +1618,7 @@ body.login {
     outline-width: 0;
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
-    color: #aebbd3;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
@@ -1666,6 +1666,8 @@ body.login {
 
 .form-users .body .section-croppie-image .options .crop-btn,
 .form-config-user .body .section-croppie-image .options .crop-btn,
+.form-users .body .section-croppie-image .options .change-btn,
+.form-config-user .body .section-croppie-image .options .change-btn,
 .form-users .body .section-croppie-image .options .cancel-btn,
 .form-config-user .body .section-croppie-image .options .cancel-btn {
     display: flex;
@@ -1680,12 +1682,20 @@ body.login {
     border: none;
     border-radius: 100%;
     color: #eef4ff;
+    text-decoration: none;
+    outline: none;
     line-height: 2.55em;
     font-size: 1.5em;
     font-weight: 100;
     cursor: pointer;
     z-index: 999;
     transition: all 300ms ease-out;
+}
+
+.form-users .body .section-croppie-image .options .change-btn,
+.form-config-user .body .section-croppie-image .options .change-btn {
+    background: #3f6992;
+    box-shadow: 0 1px 6px rgba(63, 105, 146, 0.2);
 }
 
 .form-users .body .section-croppie-image .options .cancel-btn,
@@ -1700,7 +1710,17 @@ body.login {
 .form-config-user .body .section-croppie-image .options .crop-btn:focus {
     background: #4a567c;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
-    color: #aebbd3;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-users .body .section-croppie-image .options .change-btn:hover,
+.form-config-user .body .section-croppie-image .options .change-btn:hover,
+.form-users .body .section-croppie-image .options .change-btn:focus,
+.form-config-user .body .section-croppie-image .options .change-btn:focus {
+    background: #2a4866;
+    box-shadow: 0 0 0 2.5pt #7eb2e2 !important;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
@@ -1710,13 +1730,19 @@ body.login {
 .form-config-user .body .section-croppie-image .options .cancel-btn:focus {
     background: #aa3535;
     box-shadow: 0 0 0 2.5pt #e77f7f !important;
-    color: #aebbd3;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
 .form-users .body .section-croppie-image .options .crop-btn:active,
 .form-config-user .body .section-croppie-image .options .crop-btn:active {
     background: #6272a4;
+    transition: all 200ms ease-in;
+}
+
+.form-users .body .section-croppie-image .options .change-btn:active,
+.form-config-user .body .section-croppie-image .options .change-btn:active {
+    background: #3f6992;
     transition: all 200ms ease-in;
 }
 
@@ -1798,7 +1824,7 @@ body.login {
     outline-width: 0;
     background: #4a567c;
     box-shadow: inset 0 0 0 4px #929cb9;
-    color: #aebbd3;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
@@ -1862,7 +1888,7 @@ body.login {
     background: #4a567c;
     border: none;
     box-shadow: 0 0 0 2.5pt #929cb9 !important;
-    color: #aebbd3;
+    color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
