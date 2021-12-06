@@ -1,6 +1,8 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
+$_POST['search'] = mysqli_real_escape_string($conexion, $_POST['search']);
+
 $sql = "SELECT COUNT(user_id) AS total FROM users";
 
 if ($result = $conexion->query($sql)) {
