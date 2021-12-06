@@ -60,7 +60,7 @@ echo '
 		<div class="section-croppie-image" style="display: none;">
 			<div class="image-crop"></div>
 			<div class="options">
-				<a class="crop-btn"><span class="icon">crop</span></a>
+				<a href="#" class="crop-btn"><span class="icon">crop</span></a>
 				<a href="#" class="change-btn"><span class="icon">sync</span></a>
 				<a href="#" class="cancel-btn"><span class="icon">close</span></a>
 			</div>

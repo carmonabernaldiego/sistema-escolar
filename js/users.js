@@ -49,7 +49,7 @@ $('.file').click(function(event) {
 $('#fileuploadimage').on('change', function() {
     let reader = new FileReader();
     reader.onload = function(event) {
-        $image_crop.croppie('bind', {
+        image_crop.croppie('bind', {
             url: event.target.result
         }).then(function() {
             console.log('jQuery bind complete');
@@ -65,7 +65,7 @@ $('#fileuploadimage').on('change', function() {
 });
 
 $('.crop-btn').click(function(event) {
-    $image_crop.croppie('result', {
+    image_crop.croppie('result', {
         type: 'canvas',
         size: imageSize,
         quality: 0,
