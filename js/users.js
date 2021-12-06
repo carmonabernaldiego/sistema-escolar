@@ -26,6 +26,9 @@ $(document).ready(function() {
     $('.cancel-btn').click(function(event) {
         $('.section-user-image').show();
         $('.section-user-info').show();
+        $('.first').show();
+        $('.last').show();
+        $('#btnSave').show();
         $('.section-croppie-image').hide();
     });
 
@@ -50,6 +53,9 @@ $(document).ready(function() {
         reader.readAsDataURL(this.files[0]);
         $('.section-user-image').hide();
         $('.section-user-info').hide();
+        $('.first').hide();
+        $('.last').hide();
+        $('#btnSave').hide();
         $('.section-croppie-image').show();
     });
 
@@ -63,6 +69,9 @@ $(document).ready(function() {
             $('.loader-user').css('visibility', 'visible');
             $('.section-user-image').show();
             $('.section-user-info').show();
+            $('.first').show();
+            $('.last').show();
+            $('#btnSave').show();
             $('.section-croppie-image').hide();
             $.ajax({
                 url: 'upload.php',

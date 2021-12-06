@@ -18,19 +18,17 @@ if (isset($_POST["image"])) {
 
 	file_put_contents($nameFile, $data);
 
-	$uploadImage = $_SESSION['raiz'] . '/images/users/' . $_SESSION['image'] . '';
+	$uploadImage = $_SESSION['raiz'] . '/images/users/' . $imageName . '';
 
 	if (file_exists($uploadImage)) {
 		$sql_update = "UPDATE users SET image = '" . $imageName . "' WHERE user_id = '" . $_SESSION['user_id'][0] . "'";
 
 		if (mysqli_query($conexion, $sql_update)) {
-			if ($_SESSION['image'] != "user.png") {
-				if (copy($uploadFolder . $_SESSION['image'], $uploadFolder . "/old/" . $_SESSION['image'])) {
-					unlink($uploadFolder . $_SESSION['image']);
+			if ($_SESSION['user_image'][0] != "user.png") {
+				if (copy($uploadFolder . $_SESSION['user_image'][0], $uploadFolder . "/old/" . $_SESSION['user_image'][0])) {
+					unlink($uploadFolder . $_SESSION['user_image'][0]);
 				}
 			}
-			$_SESSION['msgbox_error'] = 0;
-			$_SESSION['msgbox_info'] = 1;
 			Info('La imagen se cargo correctamente.');
 		} else {
 			Error('Existe un problema en la BD al actualizar el nombre de la imagen de usuario.');
