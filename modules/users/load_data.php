@@ -1,8 +1,6 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
-$_POST['search'] = mysqli_real_escape_string($conexion, $_POST['search']);
-
 $sql = "SELECT COUNT(user_id) AS total FROM users";
 
 if ($result = $conexion->query($sql)) {
@@ -10,7 +8,11 @@ if ($result = $conexion->query($sql)) {
 		$tpages = ceil($row['total'] / $max);
 	}
 }
+
 if (!empty($_POST['search'])) {
+	$_POST['search'] = trim($_POST['search']);
+	$_POST['search'] = mysqli_real_escape_string($conexion, $_POST['search']);
+	
 	$_SESSION['user_id'] = array();
 	$_SESSION['user_email'] = array();
 	$_SESSION['user_type'] = array();

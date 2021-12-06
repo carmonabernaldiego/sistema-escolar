@@ -1,8 +1,6 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
-$_POST['search'] = mysqli_real_escape_string($conexion, $_POST['search']);
-
 $sql = "SELECT COUNT(subject) AS total FROM subjects";
 
 if ($result = $conexion->query($sql)) {
@@ -12,6 +10,9 @@ if ($result = $conexion->query($sql)) {
 }
 
 if (!empty($_POST['search'])) {
+	$_POST['search'] = trim($_POST['search']);
+	$_POST['search'] = mysqli_real_escape_string($conexion, $_POST['search']);
+	
 	$_SESSION['subject'] = array();
 	$_SESSION['subject_name'] = array();
 	$_SESSION['subject_semester'] = array();
