@@ -1243,6 +1243,16 @@ body.login {
     transition: all 300ms ease-out;
 }
 
+.form-data .body .btn.back {
+    display: block;
+    float: left;
+    padding: 8px 8px 0 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0;
+}
+
 .form-data .body .btn.icon {
     text-shadow: 0 -1px 5px rgb(142, 136, 192, 0.2);
 }
