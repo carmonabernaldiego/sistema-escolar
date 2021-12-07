@@ -83,7 +83,7 @@ if ($_SESSION['administrative_gender'][0] == '') {
 echo '
                     </select>
 					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'][0] . '" maxlength="10" required/>
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'][0] . '" pattern="\d{4}-\d{2}-\d{2}" placeholder="yyyy-mm-dd" maxlength="10" required/>
 					<label for="txtusercurp" class="label">CURP</label>
 					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="' . $_SESSION['administrative_curp'][0] . '" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
 				</div>
@@ -91,7 +91,7 @@ echo '
 					<label for="txtuserrfc" class="label">RFC</label>
 					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="' . $_SESSION['administrative_rfc'][0] . '" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required/>
 					<label for="txtuserphone" class="label">Telefono</label>
-					<input id="txtuserphone" class="text" type="number" name="txtphone" value="' . $_SESSION['administrative_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
+					<input id="txtuserphone" class="text" type="text" name="txtphone" value="' . $_SESSION['administrative_phone'][0] . '" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido." placeholder="9998887766" maxlength="10" required/>
 					<label for="txtuseraddress" class="label">Domicilio</label>
 					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="' . $_SESSION['administrative_address'][0] . '" maxlength="100" required/>
 					<label for="selectlevelstudies" class="label">Nivel de estudios</label>

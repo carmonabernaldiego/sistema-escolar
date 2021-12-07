@@ -61,7 +61,7 @@ echo '
 		<h1 class="titulo">Actualizar</h1>
     </div>
 	<div class="body">
-		<form name="form-update-subjects" action="update.php" enctype="multipart/form-data" method="POST" onsubmit="return sendTeachers()">
+		<form name="form-update-subjects" action="update.php" method="POST" onsubmit="return sendTeachers()">
 			<div class="wrap">
 				<div class="first">
 					<label for="txtsubjectid" class="label">Asignatura</label>

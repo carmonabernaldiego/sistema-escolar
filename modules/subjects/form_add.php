@@ -6,7 +6,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
         <h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-subjects" action="insert.php" enctype="multipart/form-data" method="POST" onsubmit="return sendTeachers()">
+        <form name="form-add-subjects" action="insert.php" method="POST" onsubmit="return sendTeachers()">
             <div class="wrap">
                 <div class="first">
                     <label for="txtsubjectid" class="label">Asignatura</label>

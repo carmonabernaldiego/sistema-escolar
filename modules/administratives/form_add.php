@@ -32,7 +32,7 @@ $id_generate = 'admin' . unique_id(5);
                         <option value="nodecirlo">Prefiero no decirlo</option>
                     </select>
                     <label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" maxlength="10" required />
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" pattern="\d{4}-\d{2}-\d{2}" placeholder="yyyy-mm-dd" maxlength="10" required />
                     <label for="txtusercurp" class="label">CURP</label>
                     <input id="txtusercurp" class="text" type="text" name="txtcurp" value="" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
                 </div>
@@ -40,11 +40,12 @@ $id_generate = 'admin' . unique_id(5);
                     <label for="txtuserrfc" class="label">RFC</label>
                     <input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
                     <label for="txtuserphone" class="label">Telefono</label>
-                    <input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" required />
+                    <input id="txtuserphone" class="text" type="text" name="txtphone" value="" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido." placeholder="9998887766" maxlength="10" required />
                     <label for="txtuseraddress" class="label">Domicilio</label>
                     <input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" maxlength="100" required />
                     <label for="selectlevelstudies" class="label">Nivel de estudios</label>
                     <select id="selectlevelstudies" class="select" name="selectlevelstudies" required>
+                        <option value="">Seleccioné</option>
                         <option value="Licenciatura">Licenciatura</option>
                         <option value="Ingenieria">Ingenieria</option>
                         <option value="Maestria">Maestria</option>

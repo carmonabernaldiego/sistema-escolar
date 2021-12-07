@@ -24,7 +24,26 @@ $('#txtusercurp').focus(function(event) {
     dateOfBirth.hide();
 });
 
-let anchoVentana = window.innerWidth;
+const validateFirst = () => {
+    if ($('#txtusername').val().length == 0) {
+        $('#txtusername').focus();
+        return 0;
+    } else if ($('#txtusersurnames').val().length == 0) {
+        $('#txtusersurnames').focus();
+        return 0;
+    } else if ($('#selectgender').val().length == 0) {
+        $('#selectgender').focus();
+        return 0;
+    } else if ($('#dateofbirth').val().length == 0) {
+        $('#dateofbirth').focus();
+        return 0;
+    } else if ($('#txtusercurp').val().length == 0) {
+        $('#txtusercurp').focus();
+        return 0;
+    } else {
+        return 1;
+    }
+}
 
 const showFirst = () => {
     $('.first').show();
@@ -47,6 +66,8 @@ const hideLast = () => {
     $('#btnNext').show();
     $('#btnSave').hide();
 }
+
+let anchoVentana = window.innerWidth;
 
 if (anchoVentana > 700) {
     showFirst();
@@ -79,7 +100,9 @@ $('#btnBack').click(function(event) {
 });
 
 $('#btnNext').click(function(event) {
-    showLast();
-    hideFirst();
-    $('#txtuserrfc').focus();
+    if (validateFirst() == 1) {
+        showLast();
+        hideFirst();
+        $('#txtuserrfc').focus();
+    }
 });
