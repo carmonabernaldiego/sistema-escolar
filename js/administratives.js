@@ -68,9 +68,6 @@ window.onresize = function() {
         $('#btnBack').hide();
         $('#btnNext').hide();
         $('#btnSave').show();
-    } else if (anchoVentana <= 700) {
-        showFirst();
-        hideLast();
     }
 };
 
