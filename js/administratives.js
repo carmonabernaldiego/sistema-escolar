@@ -57,6 +57,7 @@ if (anchoVentana > 700) {
 } else if (anchoVentana <= 700) {
     showFirst();
     hideLast();
+    $('#txtusername').focus();
 }
 
 window.onresize = function() {
@@ -71,14 +72,14 @@ window.onresize = function() {
     }
 };
 
-$('#btnNext').click(function(event) {
-    hideFirst();
-    showLast();
-    $('#txtuserrfc').focus();
-});
-
 $('#btnBack').click(function(event) {
     hideLast();
     showFirst();
     $('#txtusername').focus();
+});
+
+$('#btnNext').click(function(event) {
+    showLast();
+    hideFirst();
+    $('#txtuserrfc').focus();
 });
