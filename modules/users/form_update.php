@@ -78,7 +78,7 @@ echo '
 				</div>
 				<div class="first">
 					<label for="txtuseremail" class="label">Email</label>
-					<input id="txtuseremail" class="text" type="email" name="txtemailupdate" value="' . $_SESSION['email'][0] . '" maxlength="200" autofocus/>
+					<input id="txtuseremail" class="text" type="email" name="txtemailupdate" value="' . $_SESSION['email'][0] . '" placeholder="example@email.com" maxlength="200" autofocus/>
 				</div>
 				<div class="last">
 					<label for="selectusertype" class="label">Permisos</label>

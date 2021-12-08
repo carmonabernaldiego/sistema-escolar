@@ -22,6 +22,11 @@ $dateEnd = new DateTime($_POST['datespend']);
 $diff = $dateStart->diff($dateEnd);
 $days = $diff->invert;
 
+$_POST['datespstart'] = str_replace('/', '-', $_POST['datespstart']);
+$_POST['datespstart'] = date('Y-m-d', strtotime($_POST['datespstart']));
+$_POST['datespend'] = str_replace('/', '-', $_POST['datespend']);
+$_POST['datespend'] = date('Y-m-d', strtotime($_POST['datespend']));
+
 if ($days > 0) {
 	Error('La fecha en que termina el periodo escolar, debe ser mayor que la fecha de inicio.');
 	header('Location: /modules/school_periods');
