@@ -17,9 +17,6 @@ if ($_POST['txtuserid'] == '') {
 	exit();
 }
 
-$_POST['dateofbirth'] = str_replace('/', '-', $_POST['dateofbirth']);
-$_POST['dateofbirth'] = date('Y-m-d', strtotime($_POST['dateofbirth']));
-
 $sql = "SELECT * FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
 
 if ($result = $conexion->query($sql)) {
