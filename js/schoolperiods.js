@@ -14,12 +14,14 @@ $(document).ready(function() {
 const dateStart = new Litepicker({
     element: document.getElementById('datespstart'),
     lang: 'es-MX',
+    format: 'DD/MM/YYYY',
     singleMode: true,
 });
 
 const dateEnd = new Litepicker({
     element: document.getElementById('datespend'),
     lang: 'es-MX',
+    format: 'DD/MM/YYYY',
     singleMode: true,
 });
 
