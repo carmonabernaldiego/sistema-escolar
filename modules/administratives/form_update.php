@@ -72,7 +72,7 @@ if ($_SESSION['administrative_gender'][0] == '') {
                         <option value="hombre">Hombre</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
 	';
-}elseif ($_SESSION['administrative_gender'][0] == 'nodecirlo') {
+} elseif ($_SESSION['administrative_gender'][0] == 'nodecirlo') {
 	echo '
 						<option value="nodecirlo">Prefiero no decirlo</option>
 						<option value="otro">Otro</option>
@@ -83,7 +83,7 @@ if ($_SESSION['administrative_gender'][0] == '') {
 echo '
                     </select>
 					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'][0] . '" pattern="\d{4}-\d{2}-\d{2}" placeholder="yyyy-mm-dd" maxlength="10" required/>
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'][0] . '" pattern="^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$" placeholder="DD/MM/YYYY" maxlength="10" required/>
 					<label for="txtusercurp" class="label">CURP</label>
 					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="' . $_SESSION['administrative_curp'][0] . '" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
 				</div>

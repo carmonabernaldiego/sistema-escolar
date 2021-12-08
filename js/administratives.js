@@ -13,6 +13,7 @@ const dateOfBirth = new Litepicker({
     element: document.getElementById('dateofbirth'),
     lang: 'es-MX',
     singleMode: true,
+    format: 'DD/MM/YYYY',
     dropdowns: { minYear: 1950, maxYear: (new Date()).getFullYear(), months: 1, years: 1 }
 });
 
