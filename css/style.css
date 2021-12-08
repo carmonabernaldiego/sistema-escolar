@@ -1311,35 +1311,6 @@ body.login {
     margin: 22px 0 25px 29%;
     width: 120px;
     height: 38px;
-    background: #3f6992;
-    box-shadow: 0 1px 6px rgba(63, 105, 146, 0.2);
-    border: none;
-    border-color: #7eb2e2;
-    border-radius: 0.4em;
-    color: #eef4ff;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: all 300ms ease-out;
-}
-
-.form-data .delete .btn-si:hover,
-.form-data .delete .btn-si:focus {
-    border: 4px solid #7eb2e2;
-    background: #2a4866;
-    color: #eef4ff98;
-    transition: all 200ms ease-in;
-}
-
-.form-data .delete .btn-si:active {
-    background: #3f6992;
-    transition: all 200ms ease-in;
-}
-
-.form-data .delete .btn-no {
-    float: right;
-    margin: 22px 29% 25px 0;
-    width: 120px;
-    height: 38px;
     background: #db4949;
     box-shadow: 0 1px 6px rgba(219, 73, 73, 0.2);
     border: none;
@@ -1351,16 +1322,45 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.form-data .delete .btn-no:hover,
-.form-data .delete .btn-no:focus {
+.form-data .delete .btn-si:hover,
+.form-data .delete .btn-si:focus {
     border: 4px solid #e77f7f;
     background: #aa3535;
     color: #eef4ff98;
     transition: all 200ms ease-in;
 }
 
-.form-data .delete .btn-no:active {
+.form-data .delete .btn-si:active {
     background: #db4949;
+    transition: all 200ms ease-in;
+}
+
+.form-data .delete .btn-no {
+    float: right;
+    margin: 22px 29% 25px 0;
+    width: 120px;
+    height: 38px;
+    background: #3f6992;
+    box-shadow: 0 1px 6px rgba(63, 105, 146, 0.2);
+    border: none;
+    border-color: #7eb2e2;
+    border-radius: 0.4em;
+    color: #eef4ff;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.form-data .delete .btn-no:hover,
+.form-data .delete .btn-no:focus {
+    border: 4px solid #7eb2e2;
+    background: #2a4866;
+    color: #eef4ff98;
+    transition: all 200ms ease-in;
+}
+
+.form-data .delete .btn-no:active {
+    background: #3f6992;
     transition: all 200ms ease-in;
 }
 

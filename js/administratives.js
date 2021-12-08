@@ -100,9 +100,15 @@ $('#btnBack').click(function(event) {
 });
 
 $('#btnNext').click(function(event) {
-    if (validateFirst() == 1) {
+    if ($('#txtusername').val() == undefined) {
         showLast();
         hideFirst();
         $('#txtuserrfc').focus();
+    } else {
+        if (validateFirst() == 1) {
+            showLast();
+            hideFirst();
+            $('#txtuserrfc').focus();
+        }
     }
 });
