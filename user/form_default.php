@@ -49,8 +49,8 @@ echo '
 		<div class="section-croppie-image">
 			<div class="image-crop"></div>
 			<div class="options">
-				<a href="#" class="crop-btn"><span class="icon">crop</span></a>
 				<a href="#" class="change-btn"><span class="icon">sync</span></a>
+				<a href="#" class="crop-btn"><span class="icon">crop</span></a>	
 				<a href="/user" class="cancel-btn"><span class="icon">close</span></a>
 			</div>
 		</div>
