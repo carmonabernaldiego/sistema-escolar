@@ -189,5 +189,5 @@ include_once "../sections/options-disabled.php";
 echo '
 </div>
 <script src="/js/controls/dataexpandable.js"></script>
-<script src="/js/updatesubject.js"></script>
+<script src="/js/modules/updatesubject.js"></script>
 ';

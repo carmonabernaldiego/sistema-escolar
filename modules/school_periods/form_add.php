@@ -40,4 +40,4 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
     include_once "../sections/options-disabled.php";
     ?>
 </div>
-<script src="/js/schoolperiods.js" type="text/javascript"></script>
+<script src="/js/modules/schoolperiods.js" type="text/javascript"></script>
