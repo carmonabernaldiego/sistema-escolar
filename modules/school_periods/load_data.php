@@ -22,7 +22,7 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM school_periods WHERE school_period LIKE '%" . $_POST['search'] . "%' OR start_date LIKE '%" . $_POST['search'] . "%' OR end_date LIKE '%" . $_POST['search'] . "%' ORDER BY school_period DESC";
+	$sql = "SELECT * FROM school_periods WHERE school_period LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR start_date LIKE '%" . $_POST['search'] . "%' OR end_date LIKE '%" . $_POST['search'] . "%' ORDER BY school_period DESC";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
