@@ -33,7 +33,7 @@ if (!empty($_POST['btn'])) {
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
 	<script src="/js/external/jquery.min.js" type="text/javascript"></script>
 	<script src="/js/external/prefixfree.min.js" type="text/javascript"></script>
-	<script src="/js/controls/unsetnotifuser.js" type="text/javascript"></script>
+	<script src="/js/controls/unsetnotif.js" type="text/javascript"></script>
 	<script src="/js/external/croppie.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
