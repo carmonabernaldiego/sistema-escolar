@@ -68,4 +68,4 @@ $id_generate = 'admin' . unique_id(5);
     include_once "../sections/options-disabled.php";
     ?>
 </div>
-<script src="/js/administratives.js" type="text/javascript"></script>
+<script src="/js/modules/administratives.js" type="text/javascript"></script>
