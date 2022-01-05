@@ -37,7 +37,7 @@ if ($days > 0) {
 		} else {
 			$date = date('Y-m-d H:i:s');
 
-			$sql_insert = "INSERT INTO school_periods(school_period, start_date, end_date, active, current, created_at) VALUES('" . $_POST['txtspid'] . "', '" . $_POST['datespstart'] . "', '" . $_POST['datespend'] . "', '" . $_POST['selectactive'] . "', '" . $_POST['selectcurrent'] . "', '" . $date . "')";
+			$sql_insert = "INSERT INTO school_periods(school_period, name, start_date, end_date, active, current, created_at) VALUES('" . $_POST['txtspid'] . "', '" . $_POST['txtspname'] . "', '" . $_POST['datespstart'] . "', '" . $_POST['datespend'] . "', '" . $_POST['selectactive'] . "', '" . $_POST['selectcurrent'] . "', '" . $date . "')";
 
 			if (mysqli_query($conexion, $sql_insert)) {
 				if ($_POST['selectcurrent'] == '1') {

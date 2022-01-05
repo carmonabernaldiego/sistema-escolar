@@ -12,6 +12,7 @@ $sql = "SELECT * FROM school_periods WHERE school_period = '" . $_POST['txtspid'
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
 		$_SESSION['sp_id'][0] = $row['school_period'];
+		$_SESSION['sp_name'][0] = $row['name'];
 		$_SESSION['sp_start'][0] = $row['start_date'];
 		$_SESSION['sp_end'][0] = $row['end_date'];
 		$_SESSION['sp_active'][0] = $row['active'];
@@ -30,13 +31,15 @@ echo '
 				<div class="first">
 					<label for="txtspid" class="label">Periodo escolar</label>
 					<input style="display: none;" type="text" name="txtspid" value="' . $_SESSION['sp_id'][0] . '" maxlength="20"/>
-					<input id="txtspid" class="text" type="text" name="txt" value="' . $_SESSION['sp_id'][0] . '" maxlength="20" disabled/>
+					<input id="txtspid" class="text" type="text" name="txt" value="' . $_SESSION['sp_id'][0] . '" maxlength="20" placeholder="ID Periodo escolar" disabled/>
+					<label for="txtspname" class="label">Nombre</label>
+					<input id="txtspname" class="text" type="text" name="txtspname" value="' . $_SESSION['sp_name'][0] . '" maxlength="100" placeholder="Nombre" required autofocus />
 					<label for="datespstart" class="label">Inicia</label>
-					<input id="datespstart" class="date" type="text" name="datespstart" value="' . $_SESSION['sp_start'][0] . '" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD" maxlength="10" required autofocus/>
-					<label for="datespend" class="label">Termina</label>
-					<input id="datespend" class="date" type="text" name="datespend" value="' . $_SESSION['sp_end'][0] . '" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD" maxlength="10" required/>
+					<input id="datespstart" class="date" type="text" name="datespstart" value="' . $_SESSION['sp_start'][0] . '" pattern="\d{4}-\d{2}-\d{2}" placeholder="aaaa-mm-dd" maxlength="10" required/>
 				</div>
 				<div class="last">
+					<label for="datespend" class="label">Termina</label>
+					<input id="datespend" class="date" type="text" name="datespend" value="' . $_SESSION['sp_end'][0] . '" pattern="\d{4}-\d{2}-\d{2}" placeholder="aaaa-mm-dd" maxlength="10" required/>
 					<label for="selectactive" class="label">Activo</label>
 					<select id="selectactive" class="select" name="selectactive" required>
 				';
@@ -84,7 +87,3 @@ echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
 echo '</div>
 <script src="/js/schoolperiods.js" type="text/javascript"></script>';
-?>
-<script type="text/javascript">
-	$('#datespstart').focus();
-</script>

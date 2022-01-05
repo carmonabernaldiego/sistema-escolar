@@ -46,5 +46,5 @@ echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
 echo '
 </div>
-<script src="/js/dataexpandable.js"></script>
+<script src="/js/controls/dataexpandable.js"></script>
 ';

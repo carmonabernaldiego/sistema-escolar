@@ -1,41 +1,54 @@
 /*-------------------------------------------
-  addgroup.js
-  By Diego Carmona Bernal
+  updatesubject.js
+  By Diego Carmona Bernal - CBDX
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
 
+let selectTeachers = ',';
+
 $(document).ready(function() {
-    $('.select-subjects').select2();
+    $(".selectCareer").select2({
+        minimumResultsForSearch: Infinity
+    });
+    $('.select-careers-teachers').select2();
+
+    let txtSubjectCareer = '',
+        tempSubjectCareer = '',
+        txtSubjectTeachers = '',
+        arraySubjectTeachers;
+
+    //Obtener carrera
+    txtSubjectCareer = $('#txtsubjectcareer').val();
+    tempSubjectCareer = $('#tempsubjectcareer').val();
+
+    if (txtSubjectCareer == tempSubjectCareer) {
+        //Obtener docentes seleccionados
+        txtSubjectTeachers = $('#txtsubjectteachers').val();
+        selectTeachers = txtSubjectTeachers;
+
+        arraySubjectTeachers = txtSubjectTeachers.split(',');
+        arraySubjectTeachers = arraySubjectTeachers.filter(me => me != '');
+
+        $('.select-careers-teachers').val(arraySubjectTeachers).trigger("change");
+    }
 });
 
+//Obtener datos del formulario, seleccionar carrera, buscar los docentes y rellenar el select-docentes
 let txtSubject = '',
     txtSubjectName = '',
     txtSubjectSemester = '',
     txtSubjectDescription = '',
-    txtSemester = '',
-    selectSubjectCareer = '',
     selectSubjectCareerId = '',
-    selectSubjectCareerName = '',
-    optionSelect = '';
+    selectSubjectCareerName = '';
 
-selectSubjectCareer = document.getElementById('txtgroupsemester');
-selectSubjectCareer.addEventListener('change',
-    function() {
-        optionSelect = this.options[selectSubjectCareer.selectedIndex];
-        selectSubjectCareerId = optionSelect.value;
-        selectSubjectCareerName = optionSelect.text;
-    });
-
-txtSemester = document.getElementById('txtgroupsemester');
-txtSemester.addEventListener('change', () => {
+$('.selectCareer').on('select2:select', function(e) {
+    selectSubjectCareerId = e.params.data.id;
+    selectSubjectCareerName = e.params.data.text;
     txtSubject = $('#txtsubject').val();
     txtSubjectName = $('#txtsubjectname').val();
     txtSubjectSemester = $('#txtsubjectsemester').val();
     txtSubjectDescription = $('#txtsubjectdescription').val();
-
-    let n = $('#txtgroupsemester').val();
-    console.log(n);
 
     $.ajax({
         type: 'POST',
@@ -54,8 +67,8 @@ txtSemester.addEventListener('change', () => {
     });
 });
 
-let selectTeachers = ',',
-    valueSelectTeacher = '',
+//Capturar seleccionados y deseleccionados
+let valueSelectTeacher = '',
     valueUnselectTeacher = '',
     tempSelectTeachers = '',
     findTeacher = '';
@@ -74,6 +87,7 @@ $('.select-careers-teachers').on('select2:unselect', function(e) {
     selectTeachers = findTeacher;
 });
 
+//Enviar datos
 function sendTeachers() {
     $.ajax({
         type: 'POST',

@@ -30,4 +30,4 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
     include_once "../sections/options-disabled.php";
     ?>
 </div>
-<script src="/js/dataexpandable.js"></script>
+<script src="/js/controls/dataexpandable.js"></script>

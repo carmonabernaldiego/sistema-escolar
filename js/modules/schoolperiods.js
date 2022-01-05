@@ -1,6 +1,6 @@
 /*-------------------------------------------
   schoolperiods.js
-  By Diego Carmona Bernal
+  By Diego Carmona Bernal - CBDX
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
@@ -14,13 +14,13 @@ $(document).ready(function() {
 const dateStart = new Litepicker({
     element: document.getElementById('datespstart'),
     lang: 'es-MX',
-    singleMode: true,
+    singleMode: true
 });
 
 const dateEnd = new Litepicker({
     element: document.getElementById('datespend'),
     lang: 'es-MX',
-    singleMode: true,
+    singleMode: true
 });
 
 $('#datespstart').focus(function() {

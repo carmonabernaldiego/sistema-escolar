@@ -15,18 +15,20 @@ if (!empty($_POST['search'])) {
 
 	$_SESSION['sp_id'] = array();
 	$_SESSION['sp_start'] = array();
+	$_SESSION['sp_name'] = array();
 	$_SESSION['sp_end'] = array();
 	$_SESSION['sp_active'] = array();
 	$_SESSION['sp_current'] = array();
 
 	$i = 0;
 
-	$sql = "SELECT * FROM school_periods WHERE school_period LIKE '%" . $_POST['search'] . "%' OR start_date LIKE '%" . $_POST['search'] . "%' OR end_date LIKE '%" . $_POST['search'] . "%' ORDER BY school_period";
+	$sql = "SELECT * FROM school_periods WHERE school_period LIKE '%" . $_POST['search'] . "%' OR start_date LIKE '%" . $_POST['search'] . "%' OR end_date LIKE '%" . $_POST['search'] . "%' ORDER BY school_period DESC";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
 			$_SESSION['sp_id'][$i] = $row['school_period'];
 			$_SESSION['sp_start'][$i] = $row['start_date'];
+			$_SESSION['sp_name'][$i] = $row['name'];
 			$_SESSION['sp_end'][$i] = $row['end_date'];
 			$_SESSION['sp_current'][$i] = $row['current'];
 
@@ -48,6 +50,7 @@ if (!empty($_POST['search'])) {
 	$_SESSION['total_school_periods'] = count($_SESSION['sp_id']);
 } else {
 	$_SESSION['sp_id'] = array();
+	$_SESSION['sp_name'] = array();
 	$_SESSION['sp_start'] = array();
 	$_SESSION['sp_end'] = array();
 	$_SESSION['sp_active'] = array();
@@ -55,11 +58,12 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM school_periods ORDER BY school_period LIMIT $inicio, $max";
+	$sql = "SELECT * FROM school_periods ORDER BY school_period DESC LIMIT $inicio, $max";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
 			$_SESSION['sp_id'][$i] = $row['school_period'];
+			$_SESSION['sp_name'][$i] = $row['name'];
 			$_SESSION['sp_start'][$i] = $row['start_date'];
 			$_SESSION['sp_end'][$i] = $row['end_date'];
 			$_SESSION['sp_current'][$i] = $row['current'];

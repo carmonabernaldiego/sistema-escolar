@@ -136,5 +136,5 @@ if (strpos($url_actual, 'modules')) {
         </nav>
     </header>
 </div>
-<script src="/js/gsap.min.js"></script>
-<script src="/js/menumobile.js"></script>
+<script src="/js/external/gsap.min.js"></script>
+<script src="/js/controls/menumobile.js"></script>

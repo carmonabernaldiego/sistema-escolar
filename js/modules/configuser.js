@@ -1,16 +1,31 @@
 /*-------------------------------------------
-  users.js
-  By Diego Carmona Bernal
+  configuser.js
+  By Diego Carmona Bernal - CBDX
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
+
+function confirmPass() {
+    pass1 = document.getElementById('pass1');
+    pass2 = document.getElementById('pass2');
+
+    if (pass1.value != pass2.value) {
+        document.getElementById('labelError').classList.add('show');
+
+        return false;
+    } else {
+        document.getElementById('labelError').classList.remove('show');
+
+        return true;
+    }
+}
 
 let image_crop = $('.image-crop').croppie({
     enableExif: true,
     viewport: {
         width: 190,
         height: 190,
-        type: 'circle' //square
+        type: 'circle'
     },
     boundary: {
         width: 224,
@@ -24,17 +39,21 @@ let imageSize = {
     type: 'square'
 };
 
-$('#section-croppie-image').hide();
+$('.section-croppie-image').hide();
 
-$('#btnAddOptions').addClass('btn-disabled');
+$('.btn-edit-email').click(function(event) {
+    $('#txtemailupdate').prop('disabled', false);
+    $('#txtemailupdate').focus();
 
-$('.cancel-btn').click(function(event) {
-    $('.section-user-image').show();
-    $('.section-user-info').show();
-    $('.first').show();
-    $('.last').show();
-    $('#btnSave').show();
-    $('.section-croppie-image').hide();
+    $('.btn-edit-email').prop('disabled', true);
+    $('.btn-edit-email').addClass('disabled');
+});
+
+$('#txtemailupdate').change(function(event) {
+    $('#txtemailupdate').prop('disabled', true);
+
+    $('.btn-edit-email').prop('disabled', false);
+    $('.btn-edit-email').removeClass('disabled');
 });
 
 $('.change-btn').click(function(event) {
@@ -56,11 +75,7 @@ $('#fileuploadimage').on('change', function() {
         });
     }
     reader.readAsDataURL(this.files[0]);
-    $('.section-user-image').hide();
-    $('.section-user-info').hide();
-    $('.first').hide();
-    $('.last').hide();
-    $('#btnSave').hide();
+    $('.wrap').hide();
     $('.section-croppie-image').show();
 });
 
@@ -68,15 +83,11 @@ $('.crop-btn').click(function(event) {
     image_crop.croppie('result', {
         type: 'canvas',
         size: imageSize,
-        quality: 0,
+        quality: 1,
         circle: false
     }).then(function(response) {
         $('.loader-user').css('visibility', 'visible');
-        $('.section-user-image').show();
-        $('.section-user-info').show();
-        $('.first').show();
-        $('.last').show();
-        $('#btnSave').show();
+        $('.wrap').show();
         $('.section-croppie-image').hide();
         $.ajax({
             url: 'upload.php',
@@ -85,8 +96,8 @@ $('.crop-btn').click(function(event) {
                 'image': response
             },
             success: function() {
-                $('.loader-user').css('visibility', 'hidden');
-                location.reload();
+                location.href = location.href;
+                window.location.href = '/user';
             }
         });
     })

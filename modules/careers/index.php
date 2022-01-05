@@ -43,9 +43,9 @@ include_once 'load_data.php';
 	<title>Carreras | Sistema de Control Escolar</title>
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
-	<script src="/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/prefixfree.min.js" type="text/javascript"></script>
-	<script src="/js/unsetnotif.js" type="text/javascript"></script>
+	<script src="/js/external/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/external/prefixfree.min.js" type="text/javascript"></script>
+	<script src="/js/controls/unsetnotif.js"  type="text/javascript"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$(".loader").fadeOut("slow");
@@ -75,6 +75,6 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
-<script src="/js/controlbuttons.js" type="text/javascript"></script>
+<script src="/js/controls/controlbuttons.js" type="text/javascript"></script>
 
 </html>

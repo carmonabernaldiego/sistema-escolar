@@ -29,7 +29,7 @@ if ($days > 0) {
 } else {
 	$date = date('Y-m-d H:i:s');
 
-	$sql_update = "UPDATE school_periods SET start_date = '" . $_POST['datespstart'] . "', end_date = '" . $_POST['datespend'] . "', active = '" . $_POST['selectactive'] . "', current = '" . $_POST['selectcurrent'] . "', updated_at = '" . $date . "' WHERE school_period = '" . $_POST['txtspid'] . "'";
+	$sql_update = "UPDATE school_periods SET name = '" . $_POST['txtspname'] . "', start_date = '" . $_POST['datespstart'] . "', end_date = '" . $_POST['datespend'] . "', active = '" . $_POST['selectactive'] . "', current = '" . $_POST['selectcurrent'] . "', updated_at = '" . $date . "' WHERE school_period = '" . $_POST['txtspid'] . "'";
 
 	if (mysqli_query($conexion, $sql_update)) {
 		if ($_POST['selectcurrent'] == '1') {

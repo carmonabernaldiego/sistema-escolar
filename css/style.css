@@ -2,7 +2,7 @@
 
 /*-------------------------------------------
   style.css
-  By Diego Carmona Bernal
+  By Diego Carmona Bernal - CBDX - CBDX
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
@@ -494,10 +494,10 @@ body.login {
     left: 0;
     right: 0;
     margin: -55px auto 0;
-    background: url(../images/icon_user.png)#eef4ff no-repeat bottom / 125px 125px;
+    background: url(../images/icon_user.png)#eef4ff no-repeat bottom / 126px 126px;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
     border: 4px solid #6f7a9a;
-    border-radius: 5em;
+    border-radius: 100%;
 }
 
 .logo-form-login img {
