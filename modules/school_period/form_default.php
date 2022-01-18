@@ -5,7 +5,7 @@ unset($_SESSION['school_periods_id']);
 unset($_SESSION['school_periods_start_date']);
 unset($_SESSION['school_periods_end_date']);
 
-//Cargamos Periodos Activos
+//Cargamos Periodos Activos unicamente
 if (isset($_SESSION['school_period']) != '') {
 	$_SESSION['school_periods_id'] = array();
 	$_SESSION['school_periods_start_date'] = array();
