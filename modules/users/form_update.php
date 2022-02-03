@@ -5,50 +5,50 @@ if (isset($_POST['id'])) {
 	$_SESSION['POST_id'] = $_POST['id'];
 }
 
-$_SESSION['user_id'] = array();
-$_SESSION['email'] = array();
-$_SESSION['user_type'] = array();
-$_SESSION['user_image'] = array();
-$_SESSION['user_name'] = array();
-$_SESSION['user_surnames'] = array();
+$_SESSION['user_id'];
+$_SESSION['email'];
+$_SESSION['user_type'];
+$_SESSION['user_image'];
+$_SESSION['user_name'];
+$_SESSION['user_surnames'];
 
 $sql = "SELECT user_id, email, permissions, image FROM users WHERE user_id = '" . $_SESSION['POST_id'] . "'";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['user_id'][0] = $row['user_id'];
-		$_SESSION['email'][0] = $row['email'];
-		$_SESSION['user_type'][0] = $row['permissions'];
-		$_SESSION['user_image'][0] = $row['image'];
+		$_SESSION['user_id'] = $row['user_id'];
+		$_SESSION['email'] = $row['email'];
+		$_SESSION['user_type'] = $row['permissions'];
+		$_SESSION['user_image'] = $row['image'];
 
-		if ($_SESSION['user_type'][0] == 'admin' || $_SESSION['user_type'][0] == 'editor') {
-			$sql = "SELECT name, surnames FROM administratives WHERE user = '" . $_SESSION['user_id'][0] . "'";
+		if ($_SESSION['user_type'] == 'admin' || $_SESSION['user_type'] == 'editor') {
+			$sql = "SELECT name, surnames FROM administratives WHERE user = '" . $_SESSION['user_id'] . "'";
 
 			if ($result = $conexion->query($sql)) {
 				if ($row = mysqli_fetch_array($result)) {
-					$_SESSION['user_name'][0] = $row['name'];
-					$_SESSION['user_surnames'][0] = $row['surnames'];
+					$_SESSION['user_name'] = $row['name'];
+					$_SESSION['user_surnames'] = $row['surnames'];
 				}
 			}
 		}
 	}
 }
 
-$name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'][0] . '';
+$name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'] . '';
 
 if (!file_exists($name_image_user)) {
-	$sql = "SELECT image FROM users WHERE user_id = '" . $_SESSION['user_id'][0] . "'";
+	$sql = "SELECT image FROM users WHERE user_id = '" . $_SESSION['user_id'] . "'";
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {
-			$_SESSION['user_image'][0] = $row['image'];
+			$_SESSION['user_image'] = $row['image'];
 		}
 
-		$name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'][0] . '';
+		$name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'] . '';
 
 		if (file_exists($name_image_user)) {
 		} else {
-			$_SESSION['user_image'][0] = 'user.png';
+			$_SESSION['user_image'] = 'user.png';
 		}
 	}
 }
@@ -68,53 +68,66 @@ echo '
 		<form name="form-update-users" action="update.php" enctype="multipart/form-data" method="POST">
 			<div class="wrap">
 				<div class="section-user-image">
-					<img src="' . '/images/users/' . $_SESSION['user_image'][0] . '" />
+					<img src="' . '/images/users/' . $_SESSION['user_image'] . '" />
 					<a href="#" class="file"><span class="icon">add_a_photo</span></a>
 					<input id="fileuploadimage" style="display: none;" type="file" name="fileuploadimage" accept=".jpg, .jpeg, .png" />
 				</div>
 				<div class="section-user-info">
-					<span class="user-name">' . $_SESSION['user_name'][0] . ' ' . $_SESSION['user_surnames'][0] . '</span>
-					<span class="user-id">' . $_SESSION['user_id'][0] . '</span>
+					<span class="user-name">' . $_SESSION['user_name'] . ' ' . $_SESSION['user_surnames'] . '</span>
+					<span class="user-id">' . $_SESSION['user_id'] . '</span>
 				</div>
 				<div class="first">
 					<label for="txtuseremail" class="label">Email</label>
-					<input id="txtuseremail" class="text" type="email" name="txtemailupdate" value="' . $_SESSION['email'][0] . '" placeholder="example@email.com" maxlength="200" autofocus/>
+					<input id="txtuseremail" class="text" type="email" name="txtemailupdate" value="' . $_SESSION['email'] . '" placeholder="example@email.com" maxlength="200" autofocus/>
 				</div>
 				<div class="last">
 					<label for="selectusertype" class="label">Permisos</label>
 					<select id="selectusertype" class="select" name="txtusertype">
 					';
-if ($_SESSION['user_type'][0] == 'admin') {
+if ($_SESSION['user_type'] == 'admin') {
 	echo
 	'
 								<option value="admin">Administrador</option>
+								<option value="capturist">Capturista</option>
+								<option value="editor">Editor</option>	
 								<option value="student">Alumno</option>
 								<option value="teacher">Docente</option>
-								<option value="editor">Editor</option>	
 							';
-} elseif ($_SESSION['user_type'][0] == 'student') {
+} elseif ($_SESSION['user_type'] == 'capturist') {
 	echo
 	'
-								<option value="student">Alumno</option>
+								<option value="capturist">Capturista</option>
 								<option value="admin">Administrador</option>
-								<option value="teacher">Docente</option>
-								<option value="editor">Editor</option>	
-							';
-} elseif ($_SESSION['user_type'][0] == 'teacher') {
-	echo
-	'
-								<option value="teacher">Docente</option>
-								<option value="admin">Administrador</option>
+								<option value="editor">Editor</option>
 								<option value="student">Alumno</option>
-								<option value="editor">Editor</option>	
+								<option value="teacher">Docente</option>
 							';
-} elseif ($_SESSION['user_type'][0] == 'editor') {
+} elseif ($_SESSION['user_type'] == 'editor') {
 	echo
 	'
 								<option value="editor">Editor</option>
 								<option value="admin">Administrador</option>
+								<option value="capturist">Capturista</option>
 								<option value="student">Alumno</option>
 								<option value="teacher">Docente</option>
+							';
+} elseif ($_SESSION['user_type'] == 'student') {
+	echo
+	'
+								<option value="student">Alumno</option>
+								<option value="admin">Administrador</option>
+								<option value="capturist">Capturista</option>
+								<option value="editor">Editor</option>	
+								<option value="teacher">Docente</option>
+							';
+} elseif ($_SESSION['user_type'] == 'teacher') {
+	echo
+	'
+								<option value="teacher">Docente</option>
+								<option value="admin">Administrador</option>
+								<option value="capturist">Capturista</option>
+								<option value="editor">Editor</option>	
+								<option value="student">Alumno</option>	
 							';
 }
 echo
