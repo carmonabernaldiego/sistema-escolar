@@ -5,12 +5,12 @@ if (isset($_POST['id'])) {
 	$_SESSION['POST_id'] = $_POST['id'];
 }
 
-$_SESSION['user_id'];
-$_SESSION['email'];
-$_SESSION['user_type'];
-$_SESSION['user_image'];
-$_SESSION['user_name'];
-$_SESSION['user_surnames'];
+$_SESSION['user_id'] = '';
+$_SESSION['email'] = '';
+$_SESSION['user_type'] = '';
+$_SESSION['user_image'] = '';
+$_SESSION['user_name'] = '';
+$_SESSION['user_surnames'] = '';
 
 $sql = "SELECT user_id, email, permissions, image FROM users WHERE user_id = '" . $_SESSION['POST_id'] . "'";
 
