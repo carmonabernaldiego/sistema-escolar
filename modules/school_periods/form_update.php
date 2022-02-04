@@ -1,11 +1,11 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
-$_SESSION['sp_id'];
-$_SESSION['sp_start'];
-$_SESSION['sp_end'];
-$_SESSION['sp_active'];
-$_SESSION['sp_current'];
+$_SESSION['sp_id'] = '';
+$_SESSION['sp_start'] = '';
+$_SESSION['sp_end'] = '';
+$_SESSION['sp_active'] = '';
+$_SESSION['sp_current'] = '';
 
 $sql = "SELECT * FROM school_periods WHERE school_period = '" . $_POST['txtspid'] . "'";
 

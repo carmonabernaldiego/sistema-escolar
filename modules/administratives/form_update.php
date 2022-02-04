@@ -1,8 +1,8 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
-$_SESSION['user_id'];
-$_SESSION['administrative_name'];
+$_SESSION['user_id'] = '';
+$_SESSION['administrative_name'] = '';
 $_SESSION['administrative_surnames'] = '';
 
 $sql = "SELECT * FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
