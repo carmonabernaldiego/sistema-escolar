@@ -32,7 +32,7 @@ $id_generate = 'admin' . unique_id(5);
                         <option value="nodecirlo">Prefiero no decirlo</option>
                     </select>
                     <label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" pattern="\d{4}-\d{2}-\d{2}" placeholder="aaaa-mm-dd" maxlength="10" required />
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" placeholder="aaaa-mm-dd" pattern="\d{4}-\d{2}-\d{2}" maxlength="10" required />
                     <label for="txtusercurp" class="label">CURP</label>
                     <input id="txtusercurp" class="text" type="text" name="txtcurp" value="" placeholder="Clave Única de Registro de Población" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
                 </div>
@@ -40,7 +40,7 @@ $id_generate = 'admin' . unique_id(5);
                     <label for="txtuserrfc" class="label">RFC</label>
                     <input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" placeholder="XAXX010101000" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
                     <label for="txtuserphone" class="label">Telefono</label>
-                    <input id="txtuserphone" class="text" type="text" name="txtphone" value="" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido." placeholder="9998887766" maxlength="10" required />
+                    <input id="txtuserphone" class="text" type="text" name="txtphone" value="" placeholder="9998887766" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido." maxlength="10" required />
                     <label for="txtuseraddress" class="label">Domicilio</label>
                     <input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" placeholder="Domicilio" maxlength="200" required />
                     <label for="selectlevelstudies" class="label">Nivel de estudios</label>
