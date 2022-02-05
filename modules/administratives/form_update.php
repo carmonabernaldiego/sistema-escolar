@@ -81,7 +81,7 @@ echo '
 					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
                     <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['administrative_date_of_birth'] . '" pattern="\d{4}-\d{2}-\d{2}" placeholder="aaaa-mm-dd" maxlength="10" required/>
 					<label for="txtusercurp" class="label">CURP</label>
-					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="' . $_SESSION['administrative_curp'] . '" placeholder="Clave Única de Registro de Población" pattern="[A-Za-z0-9]{13}" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
+					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="' . $_SESSION['administrative_curp'] . '" placeholder="Clave Única de Registro de Población" pattern="[A-Za-z0-9]{18}" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required/>
 				</div>
 				<div class="last">
 					<label for="txtuserrfc" class="label">RFC</label>
