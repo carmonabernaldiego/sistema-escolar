@@ -10,7 +10,7 @@ if (empty($_POST['txtuserid'])) {
 	exit();
 }
 
-$sql_delete = "DELETE FROM users WHERE user_id = '" . $_POST['txtuserid'] . "'";
+$sql_delete = "DELETE FROM users WHERE user = '" . $_POST['txtuserid'] . "'";
 
 if (mysqli_query($conexion, $sql_delete)) {
 	$sql_delete = "DELETE FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
