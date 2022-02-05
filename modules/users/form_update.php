@@ -5,18 +5,11 @@ if (isset($_POST['id'])) {
 	$_SESSION['POST_id'] = $_POST['id'];
 }
 
-$_SESSION['user_id'] = '';
-$_SESSION['email'] = '';
-$_SESSION['user_type'] = '';
-$_SESSION['user_image'] = '';
-$_SESSION['user_name'] = '';
-$_SESSION['user_surnames'] = '';
-
-$sql = "SELECT user_id, email, permissions, image FROM users WHERE user_id = '" . $_SESSION['POST_id'] . "'";
+$sql = "SELECT user, email, permissions, image FROM users WHERE user = '" . $_SESSION['POST_id'] . "'";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['user_id'] = $row['user_id'];
+		$_SESSION['user_id'] = $row['user'];
 		$_SESSION['email'] = $row['email'];
 		$_SESSION['user_type'] = $row['permissions'];
 		$_SESSION['user_image'] = $row['image'];
@@ -37,7 +30,7 @@ if ($result = $conexion->query($sql)) {
 $name_image_user = $_SESSION['raiz'] . '/images/users/' . $_SESSION['user_image'] . '';
 
 if (!file_exists($name_image_user)) {
-	$sql = "SELECT image FROM users WHERE user_id = '" . $_SESSION['user_id'] . "'";
+	$sql = "SELECT image FROM users WHERE user = '" . $_SESSION['user_id'] . "'";
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {

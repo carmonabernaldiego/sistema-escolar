@@ -21,7 +21,7 @@ if (isset($_POST["image"])) {
 	$uploadImage = $_SESSION['raiz'] . '/images/users/' . $imageName . '';
 
 	if (file_exists($uploadImage)) {
-		$sql_update = "UPDATE users SET image = '" . $imageName . "' WHERE user_id = '" . $_SESSION['user_id'][0] . "'";
+		$sql_update = "UPDATE users SET image = '" . $imageName . "' WHERE user = '" . $_SESSION['user_id'][0] . "'";
 
 		if (mysqli_query($conexion, $sql_update)) {
 			if ($_SESSION['user_image'][0] != "user.png") {

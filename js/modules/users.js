@@ -5,6 +5,10 @@
   www.mysoftup.com
 -------------------------------------------*/
 
+$(".select").select2({
+    minimumResultsForSearch: Infinity
+});
+
 let image_crop = $('.image-crop').croppie({
     enableExif: true,
     viewport: {
