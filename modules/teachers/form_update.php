@@ -55,7 +55,7 @@ echo '
 					<label for="txtuserphone" class="label">Telefono</label>
 					<input id="txtuserphone" class="text" type="number" name="txtphone" value="' . $_SESSION['teacher_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
 					<label for="txtuseraddress" class="label">Domicilio</label>
-					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="' . $_SESSION['teacher_address'][0] . '" maxlength="100" required/>
+					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="' . $_SESSION['teacher_address'][0] . '" maxlength="200" required/>
 					<label for="selectusercareer" class="label">Facultad</label>
 					<select id="selectusercareer" class="select" name="selectcareer">
 						<option value="' . $_SESSION['teacher_career'][0] . '">' . $_SESSION['teacher_career_name'][0] . '</option>

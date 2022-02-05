@@ -23,16 +23,26 @@ $id_generate = 'tchr' . unique_id(6);
 					<input id="txtusername" class="text" type="text" name="txtname" value="" maxlength="30" required autofocus />
 					<label for="txtusersurnames" class="label">Apellidos</label>
 					<input id="txtusersurnames" class="text" type="text" name="txtsurnames" value="" maxlength="50" required />
+					<label for="selectgender" class="label">Género</label>
+					<select id="selectgender" class="select" name="selectgender" required>
+						<option value="">Seleccioné</option>
+						<option value="mujer">Mujer</option>
+						<option value="hombre">Hombre</option>
+						<option value="otro">Otro</option>
+						<option value="nodecirlo">Prefiero no decirlo</option>
+					</select>
+					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
+					<input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" pattern="\d{4}-\d{2}-\d{2}" placeholder="aaaa-mm-dd" maxlength="10" required />
 					<label for="txtusercurp" class="label">CURP</label>
 					<input id="txtusercurp" class="text" type="text" name="txtcurp" value="" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
-					<label for="txtuserrfc" class="label">RFC</label>
-					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
 				</div>
 				<div class="last">
+					<label for="txtuserrfc" class="label">RFC</label>
+					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
 					<label for="txtuserphone" class="label">Telefono</label>
-					<input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10"  required />
+					<input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10" required />
 					<label for="txtuseraddress" class="label">Domicilio</label>
-					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" maxlength="100" required />
+					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" maxlength="200" required />
 					<label for="selectusercareer" class="label">Facultad</label>
 					<select id="selectusercareer" class="select" name="selectcareer">
 						<?php
