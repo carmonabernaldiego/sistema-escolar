@@ -1,12 +1,6 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
-$_SESSION['user_id'] = '';
-$_SESSION['email'] = '';
-$_SESSION['user_type'] = '';
-$_SESSION['user_image'] = '';
-$_SESSION['image_updated_at'] = '';
-
 $sql = "SELECT user, email, permissions, image, image_updated_at FROM users WHERE user = '" . $_SESSION['user'] . "'";
 
 if ($result = $conexion->query($sql)) {
@@ -39,5 +33,5 @@ if (!file_exists($name_image_user)) {
 }
 
 if ($_SESSION['user_type'] == 'admin') {
-	$_SESSION['user_type'] = 'Administrador';
+	$_SESSION['user_type'] = 'Adminisrador';
 }
