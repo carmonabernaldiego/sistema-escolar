@@ -42,7 +42,7 @@ $id_generate = 'admin' . unique_id(5);
                     <label for="txtuserphone" class="label">Telefono</label>
                     <input id="txtuserphone" class="text" type="text" name="txtphone" value="" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido." placeholder="9998887766" maxlength="10" required />
                     <label for="txtuseraddress" class="label">Domicilio</label>
-                    <input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" placeholder="Domicilio" maxlength="100" required />
+                    <input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" placeholder="Domicilio" maxlength="200" required />
                     <label for="selectlevelstudies" class="label">Nivel de estudios</label>
                     <select id="selectlevelstudies" class="select" name="selectlevelstudies" required>
                         <option value="">Seleccioné</option>
