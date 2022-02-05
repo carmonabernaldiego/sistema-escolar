@@ -1,7 +1,7 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
-
+include_once '../notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 

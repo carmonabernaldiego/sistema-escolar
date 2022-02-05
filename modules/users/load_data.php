@@ -19,7 +19,7 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM users WHERE user_id LIKE '%" . $_POST['search'] . "%' OR email LIKE '%" . $_POST['search'] . "%' ORDER BY user_id";
+	$sql = "SELECT * FROM users WHERE user_id LIKE '%" . $_POST['search'] . "%' OR email LIKE '%" . $_POST['search'] . "%' OR permissions LIKE '%" . $_POST['search'] . "%' ORDER BY user_id";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {

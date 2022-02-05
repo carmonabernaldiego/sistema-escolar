@@ -89,4 +89,4 @@ $id_generate = 'tchr' . unique_id(6);
 	include_once "../sections/options-disabled.php";
 	?>
 </div>
-<script src="/js/modules/administratives.js" type="text/javascript"></script>
+<script src="/js/modules/teachers.js" type="text/javascript"></script>
