@@ -25,7 +25,7 @@ function UpdateUserDB($conex, $user, $email, $permissions)
 }
 
 if (!empty($_SESSION['user_id']) && !empty($_POST['txtusertype'] == 'admin' || $_POST['txtusertype'] == 'editor')) {
-	$sql = "SELECT user FROM users WHERE email = '" . $_POST['txtemailupdate'] . "' AND user != '" . $_SESSION['user_id'][0] . "' LIMIT 1";
+	$sql = "SELECT user FROM users WHERE email = '" . $_POST['txtemailupdate'] . "' AND user != '" . $_SESSION['user_id'] . "' LIMIT 1";
 
 	if ($result = $conexion->query($sql)) {
 		if ($row = mysqli_fetch_array($result)) {
@@ -33,7 +33,7 @@ if (!empty($_SESSION['user_id']) && !empty($_POST['txtusertype'] == 'admin' || $
 			header('Location: /modules/users');
 			exit();
 		} else {
-			UpdateUserDB($conexion, $_SESSION['user_id'][0], $_POST['txtemailupdate'], $_POST['txtusertype']);
+			UpdateUserDB($conexion, $_SESSION['user_id'], $_POST['txtemailupdate'], $_POST['txtusertype']);
 		}
 	}
 } else {
