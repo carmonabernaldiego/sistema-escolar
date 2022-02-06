@@ -1,5 +1,5 @@
 <?php
-require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 ?>
 <div class="form-gridview">
 	<table class="default">
@@ -12,15 +12,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 						<th>CURP</th>
 						<th class="view center"><a class="icon">visibility</a></th>
 						<th class="edit center"><a class="icon">edit</a></th>
-						';
-			if ($_SESSION['permissions'] != 'editor') {
-				echo '
 						<th class="delete center"><a class="icon">delete</a></th>
-				';
-			}
-			echo '
 					</tr>
-			';
+		';
 		}
 		for ($i = 0; $i < $_SESSION['total_users']; $i++) {
 			echo '
@@ -39,18 +33,13 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 								<input style="display:none;" type="text" name="txtuserid" value="' . $_SESSION["user_id"][$i] . '"/>
 								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
-						</td>';
-			if ($_SESSION['permissions'] != 'editor') {
-				echo '
-								<td>
-									<form action="" method="POST">
-										<input style="display:none;" type="text" name="txtuserid" value="' . $_SESSION["user_id"][$i] . '"/>
-										<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
-									</form>
-								</td>
-							';
-			}
-			echo '
+						</td>
+						<td>
+							<form action="" method="POST">
+								<input style="display:none;" type="text" name="txtuserid" value="' . $_SESSION["user_id"][$i] . '"/>
+								<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
+							</form>
+						</td>
 					</tr>
 				';
 		}

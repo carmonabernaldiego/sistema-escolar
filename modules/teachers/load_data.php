@@ -1,5 +1,5 @@
 <?php
-require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
 $sql = "SELECT COUNT(user) AS total FROM teachers";
 
@@ -12,14 +12,14 @@ if ($result = $conexion->query($sql)) {
 if (!empty($_POST['search'])) {
 	$_POST['search'] = trim($_POST['search']);
 	$_POST['search'] = mysqli_real_escape_string($conexion, $_POST['search']);
-
+	
 	$_SESSION['user_id'] = array();
 	$_SESSION['teacher_name'] = array();
 	$_SESSION['teacher_curp'] = array();
 
 	$i = 0;
 
-	$sql = "SELECT * FROM teachers WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR curp LIKE '%" . $_POST['search'] . "%' OR career LIKE '%" . $_POST['search'] . "%' ORDER BY career, name";
+	$sql = "SELECT * FROM teachers WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR surnames LIKE '%" . $_POST['search'] . "%' OR curp LIKE '%" . $_POST['search'] . "%' ORDER BY name";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
@@ -38,7 +38,7 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM teachers ORDER BY career, name LIMIT $inicio, $max";
+	$sql = "SELECT * FROM teachers ORDER BY user, name LIMIT $inicio, $max";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {

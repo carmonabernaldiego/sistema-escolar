@@ -1,32 +1,22 @@
 <?php
-require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
-
-$_SESSION['user_id'] = array();
-$_SESSION['teacher_name'] = array();
-$_SESSION['teacher_surnames'] = array();
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 
 $sql = "SELECT * FROM teachers WHERE user = '" . $_POST['txtuserid'] . "'";
 
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['user_id'][0] = $row['user'];
-		$_SESSION['teacher_name'][0] = $row['name'];
-		$_SESSION['teacher_surnames'][0] = $row['surnames'];
-		$_SESSION['teacher_curp'][0] = $row['curp'];
-		$_SESSION['teacher_rfc'][0] = $row['rfc'];
-		$_SESSION['teacher_address'][0] = $row['address'];
-		$_SESSION['teacher_phone'][0] = $row['phone'];
-		$_SESSION['teacher_level_studies'][0] = $row['level_studies'];
-		$_SESSION['teacher_specialty'][0] = $row['specialty'];
-
-		$sql = "SELECT * FROM careers WHERE career = '" . $row['career'] . "' ORDER BY name";
-
-		if ($result = $conexion->query($sql)) {
-			while ($row = mysqli_fetch_array($result)) {
-				$_SESSION['teacher_career'][0] = $row['career'];
-				$_SESSION['teacher_career_name'][0] = $row['name'];
-			}
-		}
+		$_SESSION['user_id'] = $row['user'];
+		$_SESSION['teacher_name'] = $row['name'];
+		$_SESSION['teacher_surnames'] = $row['surnames'];
+		$_SESSION['teacher_gender'] = $row['gender'];
+		$_SESSION['teacher_date_of_birth'] = $row['date_of_birth'];
+		$_SESSION['teacher_curp'] = $row['curp'];
+		$_SESSION['teacher_rfc'] = $row['rfc'];
+		$_SESSION['teacher_phone'] = $row['phone'];
+		$_SESSION['teacher_address'] = $row['address'];
+		$_SESSION['teacher_level_studies'] = $row['level_studies'];
+		$_SESSION['teacher_specialty'] = $row['specialty'];
+		$_SESSION['teacher_career'] = $row['career'];
 	}
 }
 
@@ -36,34 +26,78 @@ echo '
 		<h1 class="titulo">Consultar</h1>
     </div>
     <div class="body">
-        <form name="form-consult-teachers" action="" method="POST">
+        <form name="form-consult-teachers" action="#" method="POST">
 			<div class="wrap">
 				<div class="first">
 					<label class="label">Usuario</label>
 					<input style="display: none;" type="text" name="btn" value="form_default"/>
-					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'][0] . '" disabled/>
+					<input class="text" type="text" name="txt" value="' . $_SESSION['user_id'] . '" disabled/>
 					<label class="label">Nombre</label>
-					<input class="text" type="text" name="txtname" value="' . $_SESSION['teacher_name'][0] . '" autofocus disabled/>
+					<input class="text" type="text" name="txtname" value="' . $_SESSION['teacher_name'] . '" disabled/>
 					<label class="label">Apellidos</label>
-					<input class="text" type="text" name="txtsurnames" value="' . $_SESSION['teacher_surnames'][0] . '" disabled/>
-					<label class="label">CURP</label>
-					<input class="text" type="text" name="txtcurp" value="' . $_SESSION['teacher_curp'][0] . '" disabled/>
-					<label class="label">RFC</label>
-					<input class="text" type="text" name="txtrfc" value="' . $_SESSION['teacher_rfc'][0] . '" disabled/>
+					<input class="text" type="text" name="txtsurnames" value="' . $_SESSION['teacher_surnames'] . '" disabled/>
+					<label for="dateofbirth" class="label">Fecha de nacimiento</label>
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="' . $_SESSION['teacher_date_of_birth'] . '" disabled/>
+                    <label for="selectgender" class="label">Género</label>
+                    <select id="selectgender" class="select" name="selectgender" disabled>
+					';
+if ($_SESSION['teacher_gender'] == '') {
+	echo '
+						<option value="">Seleccioné</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="otro">Otro</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+} elseif ($_SESSION['teacher_gender'] == 'mujer') {
+	echo '
+						<option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="otro">Otro</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+} elseif ($_SESSION['teacher_gender'] == 'hombre') {
+	echo '
+						<option value="hombre">Hombre</option>
+						<option value="mujer">Mujer</option>
+                        <option value="otro">Otro</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+} elseif ($_SESSION['teacher_gender'] == 'otro') {
+	echo '
+						<option value="otro">Otro</option>
+						<option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="nodecirlo">Prefiero no decirlo</option>
+	';
+} elseif ($_SESSION['teacher_gender'] == 'nodecirlo') {
+	echo '
+						<option value="nodecirlo">Prefiero no decirlo</option>
+						<option value="otro">Otro</option>
+						<option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+	';
+}
+echo '
+                    </select>
 				</div>
 				<div class="last">
+					<label class="label">CURP</label>
+					<input class="text" type="text" name="txtcurp" value="' . $_SESSION['teacher_curp'] . '" disabled/>
+					<label class="label">RFC</label>
+					<input class="text" type="text" name="txtrfc" value="' . $_SESSION['teacher_rfc'] . '" disabled/>
 					<label class="label">Telefono</label>
-					<input class="text" type="number" name="txtphone" value="' . $_SESSION['teacher_phone'][0] . '" disabled/>
+					<input class="text" type="text" name="txtphone" value="' . $_SESSION['teacher_phone'] . '" disabled/>
 					<label class="label">Domicilio</label>
-					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['teacher_address'][0] . '" disabled/>
-					<label class="label">Facultad</label>
-					<select class="select" name="selectcareer" disabled>
-						<option value="' . $_SESSION['teacher_career'][0] . '">' . $_SESSION['teacher_career_name'][0] . '</option>
-					</select>
+					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['teacher_address'] . '" disabled/>
+					<label for="selectuserspecialty" class="label">Especialidad</label>
+					<input id="selectuserspecialty" class="text" type="text" name="txtspecialty" value="' . $_SESSION['teacher_specialty'] . '" maxlength="100" disabled/>
+				</div>
+				<div class="content-full">
 					<label class="label">Nivel de estudios</label>
 					<select class="select" name="selectnivelestudios" disabled>
 				';
-if ($_SESSION['teacher_level_studies'][0] == 'Licenciatura') {
+if ($_SESSION['teacher_level_studies'] == 'Licenciatura') {
 	echo
 	'
 							<option value="Licenciatura">Licenciatura</option>
@@ -71,7 +105,7 @@ if ($_SESSION['teacher_level_studies'][0] == 'Licenciatura') {
 							<option value="Maestria">Maestria</option>
 							<option value="Doctorado">Doctorado</option>
 						';
-} elseif ($_SESSION['teacher_level_studies'][0] == 'Ingenieria') {
+} elseif ($_SESSION['teacher_level_studies'] == 'Ingenieria') {
 	echo
 	'
 							<option value="Ingenieria">Ingenieria</option>
@@ -79,7 +113,7 @@ if ($_SESSION['teacher_level_studies'][0] == 'Licenciatura') {
 							<option value="Maestria">Maestria</option>
 							<option value="Doctorado">Doctorado</option>
 						';
-} elseif ($_SESSION['teacher_level_studies'][0] == 'Maestria') {
+} elseif ($_SESSION['teacher_level_studies'] == 'Maestria') {
 	echo
 	'
 							<option value="Maestria">Maestria</option>
@@ -87,7 +121,7 @@ if ($_SESSION['teacher_level_studies'][0] == 'Licenciatura') {
 							<option value="Ingenieria">Ingenieria</option>
 							<option value="Doctorado">Doctorado</option>
 						';
-} elseif ($_SESSION['teacher_level_studies'][0] == 'Doctorado') {
+} elseif ($_SESSION['teacher_level_studies'] == 'Doctorado') {
 	echo
 	'
 							<option value="Doctorado">Doctorado</option>
@@ -98,15 +132,43 @@ if ($_SESSION['teacher_level_studies'][0] == 'Licenciatura') {
 }
 echo '
 					</select>
-					<label class="label">Especialidad</label>
-					<input class="text" type="text" name="txtspecialty" value="' . $_SESSION['teacher_specialty'][0] . '" disabled/>
 				</div>
+				<div class="content-full">
+                    <label class="label">Carrera</label>
+                    <select class="select-careers-teachers disabled" name="selectCareersTeachers[]" multiple="multiple" disabled>
+';
+$_SESSION['teacher_career'] = trim($_SESSION['teacher_career'], ',');
+$arraySubjectTeachers = explode(',', $_SESSION['teacher_career']);
+
+foreach ($arraySubjectTeachers as $key) {
+	$sql = "SELECT career, name FROM careers where career = '" . $key . "'";
+
+	if ($result = $conexion->query($sql)) {
+		while ($row = mysqli_fetch_array($result)) {
+			$_SESSION['teacher_career_id'] = $row['career'];
+			$_SESSION['teacher_career_name'] = $row['name'];
+		}
+		if ($_SESSION['teacher_career_id'] != '') {
+			echo
+			'
+							<option value="' . $_SESSION['teacher_career_id'] . '" selected>' . $_SESSION['teacher_career_name'] . '</option>
+			';
+		}
+	}
+}
+echo
+'
+                    </select>
+                </div>
 			</div>
+			<button id="btnBack" class="btn back icon" type="button">arrow_back</button>
+			<button id="btnNext" class="btn icon" type="button">arrow_forward</button>
 			<button id="btnSave" class="btn icon" type="submit" autofocus>done</button>
-        </form>
+		</form>
     </div>
 </div>
 ';
 echo '<div class="content-aside">';
 include_once "../sections/options-disabled.php";
-echo '</div>';
+echo '</div>
+<script src="/js/modules/teachers.js" type="text/javascript"></script>';
