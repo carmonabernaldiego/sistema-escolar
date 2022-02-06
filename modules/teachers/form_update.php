@@ -134,44 +134,28 @@ if ($result = $conexion->query($sql)) {
 				</div>
 				<div class="content-full">
 					<label for="selectusercareers" class="label">Carrera</label>
-					<select id="selectusercareers" class="select-user-careers" name="selectUserCareers" multiple="multiple" required>
+					<select id="selectusercareers" class="select-user-careers" name="selectUserCareers[]" multiple="multiple" required>
 						<?php
 						$_SESSION['teacher_career'] = trim($_SESSION['teacher_career'], ',');
 						$careers = explode(',', $_SESSION['teacher_career']);
 
-						foreach ($careers as $list) {
-							$sql = "SELECT career, name FROM careers where career = '" . $list . "'";
+						$i = 0;
 
-							if ($result = $conexion->query($sql)) {
-								while ($row = mysqli_fetch_array($result)) {
-									$_SESSION['teacher_career_id_selected'] = $row['career'];
-									$_SESSION['teacher_career_name_selected'] = $row['name'];
-								}
-								if ($_SESSION['teacher_career_id_selected'] != '') {
-									echo
-									'
-										<option value="' . $_SESSION['teacher_career_id_selected'] . '" selected>' . $_SESSION['teacher_career_name_selected'] . '</option>
-									';
-								}
-							}
-						}
 						$sql = "SELECT career, name FROM careers";
 
 						if ($result = $conexion->query($sql)) {
 							while ($row = mysqli_fetch_array($result)) {
-								$_SESSION['teacher_career'] = trim($_SESSION['teacher_career'], ',');
-							echo 	$careers = explode(',', $_SESSION['teacher_career']);
-
-								foreach ($careers as $list) {
-									echo $list;
-									if ($_SESSION['teacher_career_id_selected'] != $careers[$list]) {
-										$_SESSION['teacher_career_id'] = $row['career'];
-										$_SESSION['teacher_career_name'] = $row['name'];
-										echo
-										'
-											<option value="' . $_SESSION['teacher_career_id'] . '">' . $_SESSION['teacher_career_name'] . '</option>
-										';
-									}
+								if ($row['career'] == $careers[$i]) {
+									echo
+									'
+										<option value="' . $row['career'] . '" selected>' . $row['name'] . '</option>
+									';
+									$i++;
+								} else {
+									echo
+									'
+										<option value="' . $row['career'] . '">' . $row['name'] . '</option>
+									';
 								}
 							}
 						}
