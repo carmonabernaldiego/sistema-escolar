@@ -69,6 +69,8 @@ include_once 'load_data.php';
 		<?php
 		if (!empty($_SESSION['section-admin']) == 'go-' . $_SESSION['user']) {
 			include_once '../sections/section-admin.php';
+		} elseif (!empty($_SESSION['section-editor']) == 'go-' . $_SESSION['user']) {
+			include_once '../sections/section-editor.php';
 		}
 		?>
 	</aside>
@@ -78,6 +80,6 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
-<script src="/js/controls/controlbuttons.js" type="text/javascript"></script>
+<script src="/js/controls/buttons.js" type="text/javascript"></script>
 
 </html>

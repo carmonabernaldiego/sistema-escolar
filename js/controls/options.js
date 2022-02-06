@@ -5,39 +5,39 @@
   www.mysoftup.com
 -------------------------------------------*/
 
-let btnSearchMobileDisabled = $('#btnSearchMobile');
-let btnSearchDisabled = $('#btnSearch');
+let btnSearchMobile = $('#btnSearchMobile');
+let btnSearch = $('#btnSearch');
 
-function activateSearchMobileClick() {
-    btnSearchMobileDisabled.attr('disabled', false);
+function activateSearchMobile() {
+    btnSearchMobile.attr('disabled', false);
 }
 
-function activateSearchClick() {
-    btnSearchDisabled.attr('disabled', false);
+function activateSearch() {
+    btnSearch.attr('disabled', false);
 }
 
-function disabledSearchClick() {
-    btnSearchDisabled.attr('disabled', true);
+function disabledSearch() {
+    btnSearch.attr('disabled', true);
 }
 
 $(function() {
     let formSearch = $('.search');
 
-    btnSearchMobileDisabled.on('click', function() {
+    btnSearchMobile.on('click', function() {
         if (formSearch.is(':hidden')) {
             formSearch.slideToggle();
             document.getElementById('txtSearch').focus();
-            btnSearchMobileDisabled.attr('disabled', true);
-            setTimeout(activateSearchMobileClick, 800);
+            btnSearchMobile.attr('disabled', true);
+            setTimeout(activateSearchMobile, 800);
         } else {
             formSearch.slideToggle();
-            btnSearchMobileDisabled.attr('disabled', true);
-            setTimeout(activateSearchMobileClick, 800);
+            btnSearchMobile.attr('disabled', true);
+            setTimeout(activateSearchMobile, 800);
         }
     });
 
-    btnSearchDisabled.on('click', function() {
-        setTimeout(disabledSearchClick, 300);
-        setTimeout(activateSearchClick, 800);
+    btnSearch.on('click', function() {
+        setTimeout(disabledSearch, 300);
+        setTimeout(activateSearch, 800);
     });
 });

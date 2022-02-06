@@ -81,7 +81,7 @@ include_once 'load_data.php';
 		?>
 	</section>
 </body>
-<script src="/js/controls/controlbuttons.js" type="text/javascript"></script>
+<script src="/js/controls/buttons.js" type="text/javascript"></script>
 <script src="/js/modules/users.js"></script>
 
 </html>

@@ -45,6 +45,6 @@ include_once 'modules/notif_info_unset.php';
         ?>
     </aside>
 </body>
-<script src="/js/controls/controlbuttons.js" type="text/javascript"></script>
+<script src="/js/controls/buttons.js" type="text/javascript"></script>
 
 </html>

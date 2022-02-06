@@ -51,6 +51,6 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 		</form>
 	</div>
 </body>
-<script src="/js/controls/controlbuttons.js" type="text/javascript"></script>
+<script src="/js/controls/buttons.js" type="text/javascript"></script>
 
 </html>
