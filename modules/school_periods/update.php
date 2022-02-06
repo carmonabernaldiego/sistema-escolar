@@ -46,7 +46,7 @@ if ($days > 0) {
 			Error('Error al actualizar.');
 		}
 	} elseif ($_POST['selectcurrent'] == '0' && $_SESSION['school_period'] == $_POST['txtspid']) {
-		Error('Error al actualizar, seleccioná un periodo actual.');
+		Error('Error al actualizar, seleccioné otro periodo actual.');
 	}
 	header('Location: /modules/school_periods');
 }
