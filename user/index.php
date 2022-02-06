@@ -65,6 +65,6 @@ if (!empty($_POST['btn'])) {
 	</section>
 </body>
 <script src="/js/controls/buttons.js" type="text/javascript"></script>
-<script src="/js/modules/configuser.js" type="text/javascript"></script>
+<script src="/js/modules/user.js" type="text/javascript"></script>
 
 </html>

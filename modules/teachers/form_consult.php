@@ -165,7 +165,7 @@ if ($result = $conexion->query($sql)) {
 		</form>
 	</div>
 </div>
-<div class="content-aside">';
+<div class="content-aside">
 	<?php include_once "../sections/options-disabled.php"; ?>
 </div>
 <script src="/js/modules/teachers.js" type="text/javascript"></script>

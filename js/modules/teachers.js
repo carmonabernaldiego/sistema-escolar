@@ -8,6 +8,7 @@
 $('.select').select2({
     minimumResultsForSearch: Infinity
 });
+$('.select-careers-teachers').select2();
 
 const dateOfBirth = new Litepicker({
     element: document.getElementById('dateofbirth'),

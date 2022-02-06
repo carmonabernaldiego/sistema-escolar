@@ -1088,14 +1088,9 @@ body.login {
     width: 44%;
 }
 
-.form-data .body .full {
-    width: 88%;
-}
-
 .form-data .body .content-full {
     display: block;
     width: 92%;
-    margin-bottom: 10px;
 }
 
 .form-data .body .label {
@@ -2450,7 +2445,6 @@ input[type="range"]:active {
     }
     .form-data .body .content-full {
         width: 88%;
-        margin-bottom: 35px;
     }
     .form-data .body .textarea {
         width: 94%;
@@ -2462,9 +2456,6 @@ input[type="range"]:active {
     }
     .form-gridview .pages ul li button {
         width: 5%;
-    }
-    .content-full {
-        margin-bottom: 0 !important;
     }
     .form-options .options .btn {
         width: 35px;
