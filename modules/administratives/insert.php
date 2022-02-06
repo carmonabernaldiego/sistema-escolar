@@ -30,7 +30,7 @@ if ($result = $conexion->query($sql)) {
 		$sql_insert_user = "INSERT INTO users(user, pass, permissions, image, created_at) VALUES('" . $_POST['txtuserid'] . "', '" . $_POST['txtuserid'] . "', 'editor', 'user.png','" . $date . "')";
 
 		if (mysqli_query($conexion, $sql_insert_user)) {
-			$sql_insert_administrative = "INSERT INTO administratives(user, name, surnames, curp, rfc, gender, date_of_birth, phone, address, level_studies, occupation, observations, created_at) VALUES('" . $_POST['txtuserid'] . "', '" . $_POST['txtname'] . "', '" . $_POST['txtsurnames'] . "', '" . $_POST['txtcurp'] . "', '" . $_POST['txtrfc'] . "', '" . $_POST['selectgender'] . "', '" . $_POST['dateofbirth'] . "', '" . $_POST['txtphone'] . "', '" . $_POST['txtaddress'] . "', '" . $_POST['selectlevelstudies'] . "', '" . $_POST['txtoccupation'] . "', '" . $_POST['txtobservation'] . "', '" . $date . "')";
+			$sql_insert_administrative = "INSERT INTO administratives(user, name, surnames, curp, rfc, date_of_birth, gender, phone, address, level_studies, occupation, observations, created_at) VALUES('" . $_POST['txtuserid'] . "', '" . $_POST['txtname'] . "', '" . $_POST['txtsurnames'] . "', '" . $_POST['txtcurp'] . "', '" . $_POST['txtrfc'] . "', '" . $_POST['dateofbirth'] . "', '" . $_POST['selectgender'] . "', '" . $_POST['txtphone'] . "', '" . $_POST['txtaddress'] . "', '" . $_POST['selectlevelstudies'] . "', '" . $_POST['txtoccupation'] . "', '" . $_POST['txtobservation'] . "', '" . $date . "')";
 
 			if (mysqli_query($conexion, $sql_insert_administrative)) {
 				Info('Personal administrativo agregado.');

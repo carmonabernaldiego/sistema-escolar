@@ -23,7 +23,7 @@ if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
 		$date = date('Y-m-d H:i:s');
 
-		$sql_update = "UPDATE administratives SET name = '" . $_POST['txtname'] . "', surnames = '" . $_POST['txtsurnames'] . "', curp = '" . $_POST['txtcurp'] . "', rfc = '" . $_POST['txtrfc'] . "', gender = '" . $_POST['selectgender'] . "', date_of_birth = '" . $_POST['dateofbirth'] . "', phone = '" . $_POST['txtphone'] . "', address = '" . $_POST['txtaddress'] . "', level_studies = '" . $_POST['selectlevelstudies'] . "', occupation = '" . $_POST['txtoccupation'] . "', observations = '" . $_POST['txtobservation'] . "', updated_at = '" . $date . "' WHERE user = '" . $_POST['txtuserid'] . "'";
+		$sql_update = "UPDATE administratives SET name = '" . $_POST['txtname'] . "', surnames = '" . $_POST['txtsurnames'] . "', curp = '" . $_POST['txtcurp'] . "', rfc = '" . $_POST['txtrfc'] . "', date_of_birth = '" . $_POST['dateofbirth'] . "', gender = '" . $_POST['selectgender'] . "', phone = '" . $_POST['txtphone'] . "', address = '" . $_POST['txtaddress'] . "', level_studies = '" . $_POST['selectlevelstudies'] . "', occupation = '" . $_POST['txtoccupation'] . "', observations = '" . $_POST['txtobservation'] . "', updated_at = '" . $date . "' WHERE user = '" . $_POST['txtuserid'] . "'";
 
 		if (mysqli_query($conexion, $sql_update)) {
 			Info('Personal administrativo actualizado.');
@@ -35,6 +35,6 @@ if ($result = $conexion->query($sql)) {
 		exit();
 	} else {
 		Error('Este ID de administrativo no existe.');
-		header('Location: /modules/school_periods');
+		header('Location: /modules/administratives');
 	}
 }

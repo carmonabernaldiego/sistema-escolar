@@ -23,6 +23,8 @@ $id_generate = 'admin' . unique_id(5);
                     <input id="txtusername" class="text" type="text" name="txtname" value="" placeholder="Nombre" maxlength="30" required autofocus />
                     <label for="txtusersurnames" class="label">Apellidos</label>
                     <input id="txtusersurnames" class="text" type="text" name="txtsurnames" placeholder="Apellidos" value="" maxlength="60" required />
+                    <label for="dateofbirth" class="label">Fecha de nacimiento</label>
+                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" placeholder="aaaa-mm-dd" pattern="\d{4}-\d{2}-\d{2}" maxlength="10" required />
                     <label for="selectgender" class="label">Género</label>
                     <select id="selectgender" class="select" name="selectgender" required>
                         <option value="">Seleccioné</option>
@@ -31,8 +33,6 @@ $id_generate = 'admin' . unique_id(5);
                         <option value="otro">Otro</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
                     </select>
-                    <label for="dateofbirth" class="label">Fecha de nacimiento</label>
-                    <input id="dateofbirth" class="date" type="text" name="dateofbirth" value="" placeholder="aaaa-mm-dd" pattern="\d{4}-\d{2}-\d{2}" maxlength="10" required />
                     <label for="txtusercurp" class="label">CURP</label>
                     <input id="txtusercurp" class="text" type="text" name="txtcurp" value="" placeholder="Clave Única de Registro de Población" pattern="[A-Za-z0-9]{18}" maxlength="18" onkeyup="this.value = this.value.toUpperCase()" required />
                 </div>
@@ -43,8 +43,8 @@ $id_generate = 'admin' . unique_id(5);
                     <input id="txtuserphone" class="text" type="text" name="txtphone" value="" placeholder="9998887766" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido." maxlength="10" required />
                     <label for="txtuseraddress" class="label">Domicilio</label>
                     <input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" placeholder="Domicilio" maxlength="200" required />
-                    <label for="selectlevelstudies" class="label">Nivel de estudios</label>
-                    <select id="selectlevelstudies" class="select" name="selectlevelstudies" required>
+                    <label for="selectuserlevelstudies" class="label">Nivel de estudios</label>
+                    <select id="selectuserlevelstudies" class="select" name="selectlevelstudies" required>
                         <option value="">Seleccioné</option>
                         <option value="Licenciatura">Licenciatura</option>
                         <option value="Ingenieria">Ingenieria</option>

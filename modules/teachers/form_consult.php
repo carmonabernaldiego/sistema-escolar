@@ -1,5 +1,5 @@
 <?php
-require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
+require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
 $sql = "SELECT * FROM teachers WHERE user = '" . $_POST['txtuserid'] . "'";
 
@@ -8,8 +8,8 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['user_id'] = $row['user'];
 		$_SESSION['teacher_name'] = $row['name'];
 		$_SESSION['teacher_surnames'] = $row['surnames'];
-		$_SESSION['teacher_gender'] = $row['gender'];
 		$_SESSION['teacher_date_of_birth'] = $row['date_of_birth'];
+		$_SESSION['teacher_gender'] = $row['gender'];
 		$_SESSION['teacher_curp'] = $row['curp'];
 		$_SESSION['teacher_rfc'] = $row['rfc'];
 		$_SESSION['teacher_phone'] = $row['phone'];
@@ -89,8 +89,8 @@ if ($result = $conexion->query($sql)) {
 					<input class="text" type="text" name="txtphone" value="<?php echo $_SESSION['teacher_phone']; ?>" disabled />
 					<label class="label">Domicilio</label>
 					<input class="text" type="text" name="txtaddress" value="<?php echo $_SESSION['teacher_address']; ?>" disabled />
-					<label for="selectuserspecialty" class="label">Especialidad</label>
-					<input id="selectuserspecialty" class="text" type="text" name="txtspecialty" value="<?php echo $_SESSION['teacher_specialty']; ?>" maxlength="100" disabled />
+					<label class="label">Especialidad</label>
+					<input class="text" type="text" name="txtspecialty" value="<?php echo $_SESSION['teacher_specialty']; ?>" disabled />
 				</div>
 				<div class="content-full">
 					<label class="label">Nivel de estudios</label>
@@ -134,7 +134,7 @@ if ($result = $conexion->query($sql)) {
 				</div>
 				<div class="content-full">
 					<label class="label">Carrera</label>
-					<select class="select-careers-teachers disabled" name="selectCareersTeachers[]" multiple="multiple" disabled>
+					<select class="select-user-careers disabled" name="selectUserCareers[]" multiple="multiple" disabled>
 						<?php
 						$_SESSION['teacher_career'] = trim($_SESSION['teacher_career'], ',');
 						$arraySubjectTeachers = explode(',', $_SESSION['teacher_career']);
