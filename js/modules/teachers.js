@@ -6,9 +6,13 @@
 -------------------------------------------*/
 
 $('.select').select2({
-    minimumResultsForSearch: Infinity
+    minimumResultsForSearch: Infinity,
 });
-$('.select-user-careers').select2();
+
+
+$('.select-user-careers').select2({
+    placeholder: "Seleccioné",
+});
 
 const dateOfBirth = new Litepicker({
     element: document.getElementById('dateofbirth'),
