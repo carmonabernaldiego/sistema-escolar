@@ -8,6 +8,7 @@ header('Cache-Control: no-cache, must-revalidate, max-age=0');
 header('Cache-Control: post-check=0, pre-check=0', false);
 header('Pragma: no-cache');
 
+//Permisos de administrador y editor
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
 // Formulario actual
@@ -68,8 +69,6 @@ include_once 'load_data.php';
 		<?php
 		if (!empty($_SESSION['section-admin']) == 'go-' . $_SESSION['user']) {
 			include_once '../sections/section-admin.php';
-		} elseif (!empty($_SESSION['section-editor']) == 'go-' . $_SESSION['user']) {
-			include_once '../sections/section-editor.php';
 		}
 		?>
 	</aside>
