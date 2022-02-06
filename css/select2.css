@@ -38,7 +38,7 @@
     box-sizing: border-box;
     cursor: pointer;
     display: block;
-    min-height: 32px;
+    min-height: 36px;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -59,8 +59,8 @@
     box-sizing: border-box;
     border: none;
     font-size: 100%;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 8px;
+    margin-left: 1.5%;
     padding: 0;
     max-width: 100%;
     resize: none;
@@ -279,7 +279,7 @@
     font-size: 0.9em;
     font-weight: 500;
     cursor: text;
-    padding: 5px 9px 9.5px 4px;
+    padding: 0 5px 5px 0;
     position: relative;
     transition: all 300ms ease-out;
 }
@@ -421,11 +421,10 @@
 }
 
 .select2-container--default .select2-search--inline .select2-search__field {
-    margin-top: 10px;
     background: transparent;
     border: none;
     color: #4a567c !important;
-    font-size: 0.95em;
+    font-size: 1em;
     font-weight: 500;
     outline: 0;
     box-shadow: none;

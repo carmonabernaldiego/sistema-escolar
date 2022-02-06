@@ -2462,6 +2462,9 @@ input[type="range"]:active {
         right: 2%;
         width: 20px;
     }
+    .form-data .body .content-full .select2-container .select2-search--inline .select2-search__field {
+        margin-left: 3%;
+    }
     .form-data .body .textarea {
         width: 94%;
         padding: 6px 3%;
