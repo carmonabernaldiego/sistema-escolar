@@ -36,11 +36,15 @@ if ($result = $conexion->query($sql)) {
 				Info('Personal administrativo agregado.');
 			} else {
 				$sql_delete_users = "DELETE FROM users WHERE user = '" . $_POST['txtuserid'] . "'";
-				Error('Error al guardar.');
+
+				if (mysqli_query($conexion, $sql_delete_users)) {
+					Error('Error al guardar.');
+				}
 			}
 		} else {
 			Error('Error al guardar.');
 		}
 		header('Location: /modules/administratives');
+		exit();
 	}
 }

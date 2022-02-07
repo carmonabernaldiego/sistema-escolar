@@ -58,7 +58,7 @@ $id_generate = 'admin' . unique_id(5);
                 </div>
                 <div class="content-full">
                     <label for="selectusercareers" class="label">Carrera</label>
-                    <select id="selectusercareers" class="select-user-careers" name="selectUserCareers[]" multiple="multiple" placeholder="holi" required>
+                    <select id="selectusercareers" class="select-user-careers" name="selectCareers[]" multiple="multiple" placeholder="holi" required>
                         <?php
                         $sql = "SELECT career, name FROM careers";
 

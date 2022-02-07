@@ -24,8 +24,8 @@ if ($result = $conexion->query($sql)) {
 		$date = date('Y-m-d H:i:s');
 		$careers = '';
 
-		for ($i = 0; $i < count($_POST["selectUserCareers"]); $i++) {
-			$careers .= $_POST["selectUserCareers"][$i] . ',';
+		for ($i = 0; $i < count($_POST["selectCareers"]); $i++) {
+			$careers .= $_POST["selectCareers"][$i] . ',';
 		}
 
 		$careers = trim($careers, ',');
@@ -43,5 +43,6 @@ if ($result = $conexion->query($sql)) {
 	} else {
 		Error('Este ID de docente no existe.');
 		header('Location: /modules/teachers');
+		exit();
 	}
 }

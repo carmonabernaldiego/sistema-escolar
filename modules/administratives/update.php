@@ -36,5 +36,6 @@ if ($result = $conexion->query($sql)) {
 	} else {
 		Error('Este ID de administrativo no existe.');
 		header('Location: /modules/administratives');
+		exit();
 	}
 }

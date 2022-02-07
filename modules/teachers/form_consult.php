@@ -134,7 +134,7 @@ if ($result = $conexion->query($sql)) {
 				</div>
 				<div class="content-full">
 					<label class="label">Carrera</label>
-					<select class="select-user-careers disabled" name="selectUserCareers[]" multiple="multiple" disabled>
+					<select class="select-user-careers disabled" name="selectCareers[]" multiple="multiple" disabled>
 						<?php
 						$_SESSION['teacher_career'] = trim($_SESSION['teacher_career'], ',');
 						$arraySubjectTeachers = explode(',', $_SESSION['teacher_career']);

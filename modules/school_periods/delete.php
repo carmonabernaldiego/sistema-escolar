@@ -38,5 +38,6 @@ if ($result = $conexion->query($sql)) {
 			Error('Error al eliminar.');
 		}
 		header('Location: /modules/school_periods');
+		exit();
 	}
 }

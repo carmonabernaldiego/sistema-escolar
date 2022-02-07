@@ -53,4 +53,5 @@ if ($days > 0) {
 		}
 	}
 	header('Location: /modules/school_periods');
+	exit();
 }
