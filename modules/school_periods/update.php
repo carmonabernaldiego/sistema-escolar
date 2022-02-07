@@ -27,26 +27,30 @@ if ($days > 0) {
 	header('Location: /modules/school_periods');
 	exit();
 } else {
-	if ($_POST['selectcurrent'] == '1') {
+	if ($_POST['selectcurrent'] == '0' && $_SESSION['school_period'] == $_POST['txtspid']) {
+		Error('Error al actualizar, seleccioné otro periodo actual.');
+	} else {
 		$date = date('Y-m-d H:i:s');
 
 		$sql_update = "UPDATE school_periods SET name = '" . $_POST['txtspname'] . "', start_date = '" . $_POST['datespstart'] . "', end_date = '" . $_POST['datespend'] . "', active = '" . $_POST['selectactive'] . "', current = '" . $_POST['selectcurrent'] . "', updated_at = '" . $date . "' WHERE school_period = '" . $_POST['txtspid'] . "'";
 
 		if (mysqli_query($conexion, $sql_update)) {
-			$sql_update = "UPDATE school_periods SET current = '0' WHERE school_period != '" . $_POST['txtspid'] . "'";
+			if ($_POST['selectcurrent'] == '1') {
+				$sql_update = "UPDATE school_periods SET current = '0' WHERE school_period != '" . $_POST['txtspid'] . "'";
 
-			mysqli_query($conexion, $sql_update);
+				if (mysqli_query($conexion, $sql_update)) {
+					$_SESSION['school_period'] = $_POST['txtspid'];
 
-			$_SESSION['school_period'] = $_POST['txtspid'];
-
-			Info('Periodo escolar actualizado.');
+					Info('Periodo escolar actualizado.');
+				} else {
+					Error('Error al actualizar.');
+				}
+			} else {
+				Info('Periodo escolar actualizado.');
+			}
 		} else {
-			$_SESSION['msgbox_info'] = 0;
-			$_SESSION['msgbox_error'] = 1;
 			Error('Error al actualizar.');
 		}
-	} elseif ($_POST['selectcurrent'] == '0' && $_SESSION['school_period'] == $_POST['txtspid']) {
-		Error('Error al actualizar, seleccioné otro periodo actual.');
 	}
 	header('Location: /modules/school_periods');
 }

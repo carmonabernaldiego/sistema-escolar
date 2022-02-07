@@ -19,6 +19,6 @@ $sp_id = $_POST['txtspid'];
         </form>
     </div>
 </div>
-<div class="content-aside">';
+<div class="content-aside">
     <?php include_once "../sections/options-disabled.php"; ?>
 </div>
