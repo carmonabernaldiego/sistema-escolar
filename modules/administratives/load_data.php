@@ -16,16 +16,18 @@ if (!empty($_POST['search'])) {
 	$_SESSION['user_id'] = array();
 	$_SESSION['administrative_name'] = array();
 	$_SESSION['administrative_curp'] = array();
+	$_SESSION['administrative_phone'] = array();
 
 	$i = 0;
 
-	$sql = "SELECT * FROM administratives WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR surnames LIKE '%" . $_POST['search'] . "%' OR curp LIKE '%" . $_POST['search'] . "%' OR phone LIKE '%" . $_POST['search'] . "%' ORDER BY name";
+	$sql = "SELECT * FROM administratives WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR surnames LIKE '%" . $_POST['search'] . "%' OR phone LIKE '%" . $_POST['search'] . "%' ORDER BY name";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
 			$_SESSION['user_id'][$i] = $row['user'];
 			$_SESSION['administrative_curp'][$i] = $row['curp'];
 			$_SESSION['administrative_name'][$i] = $row['name'] . ' ' . $row['surnames'];
+			$_SESSION['administrative_phone'][$i] = $row['phone'];
 
 			$i += 1;
 		}
