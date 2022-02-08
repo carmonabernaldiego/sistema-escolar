@@ -44,7 +44,7 @@ echo '
 					<input class="text" type="text" name="txtrfc" value="' . $_SESSION['student_rfc'][0] . '" disabled/>
 				</div>
 				<div class="last">
-					<label class="label">Telefono</label>
+					<label class="label">Número de teléfono</label>
 					<input class="text" type="number" name="txtphone" value="' . $_SESSION['student_phone'][0] . '" disabled/>
 					<label class="label">Domicilio</label>
 					<input class="text" type="text" name="txtaddress" value="' . $_SESSION['student_address'][0] . '" disabled/>

@@ -29,7 +29,7 @@ $id_generate = 'stdt' . unique_id(6);
 					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required />
 				</div>
 				<div class="last">
-					<label for="txtuserphone" class="label">Telefono</label>
+					<label for="txtuserphone" class="label">Número de teléfono</label>
 					<input id="txtuserphone" class="text" type="number" name="txtphone" value="" min="0" max="9999999999" maxlength="10"  required />
 					<label for="txtuseraddress" class="label">Domicilio</label>
 					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" maxlength="100" required />

@@ -44,7 +44,7 @@ echo '
 					<input id="txtuserrfc" class="text" type="text" name="txtrfc" value="' . $_SESSION['student_rfc'][0] . '" maxlength="13" onkeyup="this.value = this.value.toUpperCase()" required/>
 				</div>
 				<div class="last">
-					<label for="txtuserphone" class="label">Telefono</label>
+					<label for="txtuserphone" class="label">Número de teléfono</label>
 					<input id="txtuserphone" class="text" type="number" name="txtphone" value="' . $_SESSION['student_phone'][0] . '" min="0" max="9999999999" maxlength="10" required/>
 					<label for="txtuseraddress" class="label">Domicilio</label>
 					<input id="txtuseraddress" class="text" type="text" name="txtaddress" value="' . $_SESSION['student_address'][0] . '" maxlength="100" required/>

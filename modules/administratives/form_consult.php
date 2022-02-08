@@ -85,7 +85,7 @@ if ($result = $conexion->query($sql)) {
 				<div class="last">
 					<label class="label">RFC</label>
 					<input class="text" type="text" name="txtrfc" value="<?php echo $_SESSION['administrative_rfc']; ?>" disabled />
-					<label class="label">Telefono</label>
+					<label class="label">Número de teléfono</label>
 					<input class="text" type="text" name="txtphone" value="<?php echo $_SESSION['administrative_phone']; ?>" disabled />
 					<label class="label">Domicilio</label>
 					<input class="text" type="text" name="txtaddress" value="<?php echo $_SESSION['administrative_address']; ?>" disabled />
