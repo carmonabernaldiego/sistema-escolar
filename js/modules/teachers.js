@@ -57,6 +57,10 @@ const showLast = () => {
     $('.last').show();
 }
 
+const showContentFull = () => {
+    $('.content-full').show();
+}
+
 const hideFirst = () => {
     $('.first').hide();
     $('#btnBack').show();
@@ -71,16 +75,22 @@ const hideLast = () => {
     $('#btnSave').hide();
 }
 
+const hideContentFull = () => {
+    $('.content-full').hide();
+}
+
 let anchoVentana = window.innerWidth;
 
 if (anchoVentana > 700) {
     showFirst();
     showLast();
+    showContentFull();
     $('#btnBack').hide();
     $('#btnNext').hide();
     $('#btnSave').show();
 } else if (anchoVentana <= 700) {
     showFirst();
+    hideContentFull();
     hideLast();
     $('#txtusername').focus();
 }
@@ -90,6 +100,7 @@ window.onresize = function() {
 
     if (anchoVentana > 700) {
         showFirst();
+        showContentFull();
         showLast();
         $('#btnBack').hide();
         $('#btnNext').hide();
@@ -99,6 +110,7 @@ window.onresize = function() {
 
 $('#btnBack').click(function(event) {
     hideLast();
+    hideContentFull();
     showFirst();
     $('#txtusername').focus();
 });
@@ -106,11 +118,13 @@ $('#btnBack').click(function(event) {
 $('#btnNext').click(function(event) {
     if ($('#txtusername').val() == undefined) {
         showLast();
+        showContentFull();
         hideFirst();
         $('#txtuserrfc').focus();
     } else {
         if (validateFirst() == 1) {
             showLast();
+            showContentFull();
             hideFirst();
             $('#txtuserrfc').focus();
         }
