@@ -5,10 +5,8 @@
   www.mysoftup.com
 -------------------------------------------*/
 
-$(document).ready(function() {
-    $('.select').select2({
-        minimumResultsForSearch: Infinity
-    });
+$('.select').select2({
+    minimumResultsForSearch: Infinity
 });
 
 const dateStart = new Litepicker({
@@ -31,6 +29,11 @@ $('#datespstart').focus(function() {
 $('#datespend').focus(function() {
     dateEnd.show();
     dateStart.hide();
+});
+
+$(".select").next(".select2").find(".select2-selection").focus(function() {
+    dateStart.hide();
+    dateEnd.hide();
 });
 
 let valcurrent, valactive;

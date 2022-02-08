@@ -38,7 +38,7 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM administratives ORDER BY user, name LIMIT $inicio, $max";
+	$sql = "SELECT * FROM administratives ORDER BY created_at DESC, user, name LIMIT $inicio, $max";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {

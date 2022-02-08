@@ -9,7 +9,6 @@ $('.select').select2({
     minimumResultsForSearch: Infinity,
 });
 
-
 $('.select-user-careers').select2({
     placeholder: "Seleccioné",
 });
@@ -25,7 +24,7 @@ $('#dateofbirth').focus(function(event) {
     dateOfBirth.show();
 });
 
-$('#txtusercurp').focus(function(event) {
+$(".select").next(".select2").find(".select2-selection").focus(function() {
     dateOfBirth.hide();
 });
 
