@@ -8,7 +8,7 @@ $sql = "SELECT COUNT(career) AS total FROM careers";
 if ($result = $conexion->query($sql)) {
 	if ($row = mysqli_fetch_array($result)) {
 		if ($row['total'] == 0) {
-			Error('Crea como mínimo una carrera para agregar docentes.');
+			Error('Crea como mínimo una carrera antes de agregar docentes.');
 			header('Location: /modules/careers');
 			exit();
 		} else {
