@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 03-02-2022 a las 08:28:48
+-- Tiempo de generación: 09-02-2022 a las 06:43:24
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -31,14 +31,14 @@ CREATE TABLE `administratives` (
   `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `surnames` varchar(60) COLLATE utf8_spanish2_ci NOT NULL,
-  `gender` varchar(30) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `date_of_birth` date DEFAULT NULL,
+  `gender` varchar(30) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `curp` varchar(18) COLLATE utf8_spanish2_ci NOT NULL,
   `rfc` varchar(13) COLLATE utf8_spanish2_ci NOT NULL,
   `phone` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
-  `address` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
+  `address` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
   `level_studies` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
-  `occupation` varchar(100) COLLATE utf8_spanish2_ci NOT NULL DEFAULT '',
+  `occupation` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `observations` varchar(200) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -48,11 +48,11 @@ CREATE TABLE `administratives` (
 -- Volcado de datos para la tabla `administratives`
 --
 
-INSERT INTO `administratives` (`user`, `name`, `surnames`, `gender`, `date_of_birth`, `curp`, `rfc`, `phone`, `address`, `level_studies`, `occupation`, `observations`, `created_at`, `updated_at`) VALUES
-('admin', 'Diego', 'Carmona Bernal', 'hombre', '1997-04-05', 'CABD970405HCSRRG03', 'CABD9704052K5', '9614044227', 'Av. Aquiles Serdán 915, Bienestar Social, 29077, Tuxtla Gutiérrez, Chiapas.', 'Ingenieria', 'Programador', '', '2021-12-05 18:33:37', '2022-02-03 07:51:33'),
-('admineb405', 'Magnolia', 'Montejo Gómez', 'mujer', '1985-03-16', 'MMGO160385MCSRRG01', 'MMGO160385MCS', '9613459810', 'Av. Tulipanes #132, Bienestar Social, Tuxtla Gutiérrez, Chiapas', 'Licenciatura', 'Administrativo', '', '2021-12-04 02:13:36', '2022-02-03 07:51:46'),
-('adminec4e9', 'Rosalinda', 'Pascacio Mendoza', 'mujer', '1997-09-16', 'PMRO970916MCSLLS09', 'PMRO970916MCS', '9654392021', 'Conocido', 'Maestria', 'Recurso Humanos', '', '2021-08-27 03:41:36', '2022-02-03 07:52:57'),
-('editor', 'Jesús Antonio', 'Olvera Gálvez', 'hombre', '1989-10-14', 'OGJA891014HCSRRG02', 'OGJA8910142V9', '9614044227', '9 Av. Sur. Ote #2167', 'Maestria', 'Recursos Humanos', '', '2020-12-01 18:33:52', '2021-12-07 22:07:34');
+INSERT INTO `administratives` (`user`, `name`, `surnames`, `date_of_birth`, `gender`, `curp`, `rfc`, `phone`, `address`, `level_studies`, `occupation`, `observations`, `created_at`, `updated_at`) VALUES
+('admin', 'Diego', 'Carmona Bernal', '1997-04-05', 'hombre', 'CABD970405HCSRRG03', 'CABD9704052K5', '9614044227', 'Av. Aquiles Serdán 915, Bienestar Social, 29077, Tuxtla Gutiérrez, Chiapas.', 'Ingenieria', 'Programador', '', '2021-12-05 18:33:37', '2022-02-08 06:29:26'),
+('admin-eb405', 'Magnolia', 'Montejo Gómez', '1985-03-16', 'mujer', 'MMGO160385MCSRRG01', 'MMGO160385MCS', '9613459810', 'Av. Tulipanes #132, Bienestar Social, Tuxtla Gutiérrez, Chiapas', 'Licenciatura', 'Administrativo', '', '2021-12-04 02:13:36', '2022-02-05 23:24:23'),
+('admin-ec4e9', 'Rosalinda', 'Pascacio Mendoza', '1997-09-16', 'mujer', 'PMRO970916MCSLLS09', 'PMRO970916MCS', '9654392021', 'Conocido', 'Maestria', 'Recurso Humanos', '', '2021-08-27 03:41:36', '2022-02-03 07:52:57'),
+('editor', 'Jesús Antonio', 'Olvera Gálvez', '1989-10-14', 'hombre', 'OGJA891014HCSRRG02', 'OGJA8910142V9', '9614044227', '9 Av. Sur. Ote #2167', 'Maestria', 'Recursos Humanos', '', '2020-12-01 18:33:52', '2021-12-07 22:07:34');
 
 -- --------------------------------------------------------
 
@@ -171,10 +171,10 @@ CREATE TABLE `school_periods` (
 --
 
 INSERT INTO `school_periods` (`school_period`, `name`, `start_date`, `end_date`, `active`, `current`, `created_at`, `updated_at`) VALUES
-('2021-1', 'Enero - Abril 2021', '2021-01-06', '2021-04-09', 1, 0, '2021-12-04 00:57:04', '2022-01-05 06:59:35'),
-('2021-2', 'Abril - Julio 2021', '2021-04-30', '2021-07-23', 1, 0, '2021-10-08 20:38:04', '2022-01-05 05:35:37'),
-('2021-3', 'Septiembre - Diciembre 2021', '2021-08-30', '2021-12-14', 1, 0, '2021-12-04 00:59:21', '2022-01-05 18:53:07'),
-('2022-1', 'Enero - Abril 2022', '2022-01-03', '2022-04-26', 1, 1, '2022-01-05 05:37:49', '2022-02-03 07:32:49');
+('2021-1', 'Enero - Abril 2021', '2021-01-06', '2021-04-09', 1, 0, '2021-12-04 00:57:04', '2022-02-04 06:15:56'),
+('2021-2', 'Abril - Julio 2021', '2021-04-30', '2021-07-23', 1, 0, '2021-10-08 20:38:04', '2022-02-04 06:14:40'),
+('2021-3', 'Septiembre - Diciembre 2021', '2021-08-30', '2021-12-14', 1, 0, '2021-12-04 00:59:21', '2022-02-06 01:43:49'),
+('2022-1', 'Enero - Abril 2022', '2022-01-03', '2022-04-26', 1, 1, '2022-01-05 05:37:49', '2022-02-07 16:19:39');
 
 -- --------------------------------------------------------
 
@@ -241,26 +241,30 @@ CREATE TABLE `teachers` (
   `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `surnames` varchar(60) COLLATE utf8_spanish2_ci NOT NULL,
+  `date_of_birth` date DEFAULT NULL,
+  `gender` varchar(30) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `curp` varchar(18) COLLATE utf8_spanish2_ci NOT NULL,
   `rfc` varchar(13) COLLATE utf8_spanish2_ci NOT NULL,
-  `address` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `phone` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
+  `address` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
   `level_studies` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `specialty` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
-  `career` varchar(20) COLLATE utf8_spanish2_ci NOT NULL
+  `career` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `teachers`
 --
 
-INSERT INTO `teachers` (`user`, `name`, `surnames`, `curp`, `rfc`, `address`, `phone`, `level_studies`, `specialty`, `career`) VALUES
-('tchra80e12', 'Pamela', 'Sánchez', 'ATME980215KMN32221', 'ATME980215KMN', 'Av. Siempre Viva', '9991020394', 'Licenciatura', 'Negocios', 'IDS'),
-('teacher_5c1ca', 'Moisés', 'Gómez Meléndez', 'KSK92992292KSA0000', 'CONOCIDO', 'CONOCIDO', '9716278838', 'Ingenieria', 'Cálculo Diferencial', 'INGPLRA'),
-('teacher_617af', 'Rigoberto', 'Nanguluru Conde', 'CLLLS9202JS8KS90SS', 'CONOCIDO', 'CONOCIDO', '9881877732', 'Doctorado', 'Maestría en Computación', 'IDS'),
-('teacher_e9408', 'Juanita de la Cruz', 'Nepomuceno', 'KSKKS020020219100S', 'CONOCIDO', 'CONOCIDO', '9672282646', 'Maestria', 'Enseñanza del Español', 'MATBASICAS'),
-('teacher_e9423', 'Carlos Alberto', 'Marín Roblero', 'KSKKS020020219100S', 'CONOCIDO', 'CONOCIDO', '9613334538', 'Ingenieria', 'Automatas', 'INGPLRA'),
-('teacher_e9443', 'Jaime', 'Ponce Torres', 'KSKKS020020219100S', 'CONOCIDO', 'CONOCIDO', '9653649800', 'Ingenieria', 'Máquinas', 'IDS');
+INSERT INTO `teachers` (`user`, `name`, `surnames`, `date_of_birth`, `gender`, `curp`, `rfc`, `phone`, `address`, `level_studies`, `specialty`, `career`, `created_at`, `updated_at`) VALUES
+('tchr-5c1ca', 'Moisés', 'Gómez Meléndez', '1996-02-02', 'hombre', 'KSK92992292KSA0000', 'CCCCCCONOCIDO', '9716278838', 'CONOCIDO', 'Ingenieria', 'Cálculo Diferencial', 'IDS,INGPLRA', '2022-02-06 20:37:47', '2022-02-06 20:34:37'),
+('tchr-617af', 'Rigoberto', 'Nanguluru Conde', '2022-02-18', 'hombre', 'CLLLS9202JS8KS90SS', 'CCCCCCONOCIDO', '9881877732', 'CONOCIDO', 'Doctorado', 'Maestría en Computación', 'IDS,MATBASICAS', '2022-02-06 20:37:53', '2022-02-06 21:50:33'),
+('tchr-a80e12', 'Pamela', 'Sánchez', '2022-02-08', 'mujer', 'ATME980215KMN32221', 'ATME980215KMN', '9991020394', 'Av. Siempre Viva', 'Licenciatura', 'Negocios', 'INGBIO,INGPLRA,MATBASICAS', '2022-02-02 00:47:13', '2022-02-08 06:30:00'),
+('tchr-e9408', 'Juanita de la Cruz', 'Nepomuceno', '2022-02-08', 'mujer', 'KSKKS020020219100S', 'JJJJJCONOCIDO', '9672282646', 'CONOCIDO', 'Maestria', 'Enseñanza del Español', 'INGBIO,MATBASICAS', '2022-02-06 20:37:59', '2022-02-06 20:38:44'),
+('tchr-e9423', 'Carlos Alberto', 'Marín Roblero', '1987-04-15', 'hombre', 'ASKKS020020219100S', 'KKKKKCONOCIDO', '9613334538', 'CONOCIDO', 'Ingenieria', 'Automatas', 'IDS,IEM,INGBIO,INGPLRA,MATBASICAS,MTABIOTEC', '2022-02-08 20:38:03', '2022-02-08 08:08:44'),
+('tchr-e9443', 'Aime', 'Ponce Torres', '2022-02-08', 'nodecirlo', 'KSKKS020020219100S', 'MMMMMCONOCIDO', '9653649800', 'CONOCIDO', 'Ingenieria', 'Máquinas', 'INGBIO,MATBASICAS', '2022-02-06 20:38:07', '2022-02-08 07:54:26');
 
 -- --------------------------------------------------------
 
@@ -269,7 +273,7 @@ INSERT INTO `teachers` (`user`, `name`, `surnames`, `curp`, `rfc`, `address`, `p
 --
 
 CREATE TABLE `users` (
-  `user_id` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `email` varchar(200) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `pass` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `permissions` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
@@ -283,10 +287,10 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`user_id`, `email`, `pass`, `permissions`, `image`, `image_updated_at`, `created_at`, `updated_at`) VALUES
-('admin', 'carmonabernaldiego@gmail.com', 'root', 'admin', 'admin810.png', '2022-01-06 18:04:15', '2021-12-05 18:27:39', '2022-01-05 19:22:07'),
-('admineb405', 'magnoliamontejogomez@gmail.com', 'admineb405', 'admin', 'user.png', NULL, '2021-12-04 02:13:36', '2022-01-05 07:10:06'),
-('adminec4e9', 'rosalindamendoza@gmail.com', 'adminec4e9', 'admin', 'user.png', NULL, '2021-08-27 03:41:36', NULL),
+INSERT INTO `users` (`user`, `email`, `pass`, `permissions`, `image`, `image_updated_at`, `created_at`, `updated_at`) VALUES
+('admin', 'carmonabernaldiego@gmail.com', 'root', 'admin', 'user.png', '2022-01-06 18:04:15', '2021-12-05 18:27:39', '2022-02-05 22:54:50'),
+('admin-eb405', 'magnoliamontejogomez@gmail.com', 'admin-eb405', 'editor', 'user.png', NULL, '2021-12-04 02:13:36', '2022-02-05 23:12:14'),
+('admin-ec4e9', 'rosalindamendoza@gmail.com', 'admin-ec4e9', 'admin', 'user.png', NULL, '2021-08-27 03:41:36', NULL),
 ('editor', 'editor@gmail.com', 'editor', 'editor', 'user.png', NULL, '2021-05-01 00:00:00', NULL);
 
 --
@@ -345,7 +349,7 @@ ALTER TABLE `teachers`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`),
+  ADD PRIMARY KEY (`user`),
   ADD UNIQUE KEY `email` (`email`);
 COMMIT;
 

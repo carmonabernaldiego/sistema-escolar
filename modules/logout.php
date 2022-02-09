@@ -13,3 +13,4 @@ setcookie('section-admin', '', time() - 42000, '/');
 setcookie('remember', '', time() - 42000, '/');
 
 header('Location: /');
+exit();
