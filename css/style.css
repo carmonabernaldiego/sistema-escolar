@@ -861,16 +861,6 @@ body.login {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 1400px) {
-    .form-gridview table.default.full {
-        display: block;
-        max-width: fit-content;
-        overflow-x: auto;
-        white-space: nowrap;
-        box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
-    }
-}
-
 .form-gridview th {
     padding: 7px 15px;
     background: #282a36;
