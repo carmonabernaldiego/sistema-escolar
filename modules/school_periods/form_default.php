@@ -2,15 +2,13 @@
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 ?>
 <div class="form-gridview">
-	<table class="default full">
+	<table class="default">
 		<?php
 		if ($_SESSION['total_school_periods'] != 0) {
 			echo '
 					<tr>
 						<th>Periodo Escolar</th>
 						<th>Nombre</th>
-						<th>Fecha Inicio</th>
-						<th>Fecha Fin</th>
 						<th class="center">Activo</th>
 						<th class="center">Actual</th>
 						<th class="edit center"><a class="icon">edit</a></th>
@@ -23,8 +21,6 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 					<tr>
 						<td>' . $_SESSION["sp_id"][$i] . '</td>
 						<td>' . $_SESSION["sp_name"][$i] . '</td>
-						<td>' . $_SESSION["sp_start"][$i] . '</td>
-						<td>' . $_SESSION["sp_end"][$i] . '</td>
 						<td class="center">' . $_SESSION["sp_active"][$i] . '</td>
 						<td class="center">' . $_SESSION["sp_current"][$i] . '</td>
 						<td>

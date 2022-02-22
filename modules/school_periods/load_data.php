@@ -14,9 +14,7 @@ if (!empty($_POST['search'])) {
 	$_POST['search'] = mysqli_real_escape_string($conexion, $_POST['search']);
 
 	$_SESSION['sp_id'] = array();
-	$_SESSION['sp_start'] = array();
 	$_SESSION['sp_name'] = array();
-	$_SESSION['sp_end'] = array();
 	$_SESSION['sp_active'] = array();
 	$_SESSION['sp_current'] = array();
 
@@ -27,9 +25,7 @@ if (!empty($_POST['search'])) {
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
 			$_SESSION['sp_id'][$i] = $row['school_period'];
-			$_SESSION['sp_start'][$i] = $row['start_date'];
 			$_SESSION['sp_name'][$i] = $row['name'];
-			$_SESSION['sp_end'][$i] = $row['end_date'];
 			$_SESSION['sp_current'][$i] = $row['current'];
 
 			if ($row['active'] == 1) {
@@ -51,8 +47,6 @@ if (!empty($_POST['search'])) {
 } else {
 	$_SESSION['sp_id'] = array();
 	$_SESSION['sp_name'] = array();
-	$_SESSION['sp_start'] = array();
-	$_SESSION['sp_end'] = array();
 	$_SESSION['sp_active'] = array();
 	$_SESSION['sp_current'] = array();
 
@@ -64,8 +58,6 @@ if (!empty($_POST['search'])) {
 		while ($row = mysqli_fetch_array($result)) {
 			$_SESSION['sp_id'][$i] = $row['school_period'];
 			$_SESSION['sp_name'][$i] = $row['name'];
-			$_SESSION['sp_start'][$i] = $row['start_date'];
-			$_SESSION['sp_end'][$i] = $row['end_date'];
 			$_SESSION['sp_current'][$i] = $row['current'];
 
 			if ($row['active'] == 1) {
