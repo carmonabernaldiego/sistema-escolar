@@ -38,7 +38,7 @@ tl.to('.menu-mobile nav span', {
     duration: 0.3
 });
 
-tl.to('.active', {
+tl.to('.active-menu', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05,
@@ -85,7 +85,7 @@ tlU.to('.user-mobile nav span', {
     duration: 0.3
 });
 
-tlU.to('.active', {
+tlU.to('.active-user', {
     opacity: 1,
     transform: 'translateX(0)',
     stagger: .05,

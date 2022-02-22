@@ -112,52 +112,52 @@ if (strpos($url_actual, 'modules')) {
             <ul>
                 <li>
                     <a class="<?php if ($output[1] == 'home') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/home" title="Dashboard"><span class="icon">dashboard</span><span class="text">Dashboard</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'users') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/users" title="Usuarios"><span class="icon">manage_accounts</span><span class="text">Usuarios</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'administratives') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/administratives" title="Administrativos"><span class="icon">supervised_user_circle</span><span class="text">Administrativos</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'teachers') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/teachers" title="Docentes"><span class="icon">connect_without_contact</span><span class="text">Docentes</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'students') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/students" title="Alumnos"><span class="icon">recent_actors</span><span class="text">Alumnos</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'school_periods') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/school_periods" title="Perido Escolar"><span class="icon">date_range</span><span class="text">Perido Escolar</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'careers') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/careers" title="Carreras"><span class="icon">school</span><span class="text">Carreras</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'subjects') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/subjects" title="Asignaturas"><span class="icon">library_books</span><span class="text">Asignaturas</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'groups') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/groups" title="Grupos"><span class="icon">groups</span><span class="text">Grupos</span></a>
                 </li>
                 <li>
                     <a class="<?php if ($output[1] == 'attendance') {
-                                    echo 'active';
+                                    echo 'active-menu';
                                 } ?>" href="/modules/attendance" title="Asistencias"><span class="icon">fact_check</span><span class="text">Asistencias</span></a>
                 </li>
             </ul>
@@ -170,9 +170,9 @@ if (strpos($url_actual, 'modules')) {
         <img class="activator-user" id="activator-user" src="/images/users/<?php echo $_SESSION['image']; ?>">
         <nav>
             <ul>
-                <li class="first">
+                <li class="first-item">
                     <a class="<?php if ($output[1] == 'user') {
-                                    echo 'active';
+                                    echo 'active-user';
                                 } ?>" href="/user" title="Configuración"><span class="icon">settings</span></a>
                 </li>
                 <li>
