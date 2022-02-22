@@ -279,9 +279,9 @@ body.login {
     text-decoration: none;
     font-size: 1em;
     font-weight: 500;
-    transition: all 300ms ease-out;
     outline: none;
     outline-width: none;
+    transition: all 300ms ease-out;
 }
 
 .nav-home .user span.logout_user>a:hover,
@@ -290,12 +290,7 @@ body.login {
     transition: all 200ms ease-in;
 }
 
-.nav-home .user span.logout_user>a:active {
-    color: #7875a1;
-    transition: all 200ms ease-in;
-}
-
-.nav-home .user span.logout_user>a+ul>li {
+.nav-home .user span.logout_user>a+ul {
     display: none;
     position: absolute;
     right: 3%;
@@ -305,12 +300,19 @@ body.login {
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
     border: 3px solid #6272a4;
     border-radius: 0.4em;
+    font-size: 0.95em;
     text-align: left;
     cursor: pointer;
 }
 
-.nav-home .user span.logout_user>a+ul>li>a {
-    font-size: 0.875em;
+.nav-home .user span.logout_user>a+ul>li>a.active-logout {
+    color: #9492c0;
+    transition: all 200ms ease-in;
+}
+
+.nav-home .user span.logout_user>a+ul>li>a.active-logout:active {
+    color: #7875a1;
+    transition: all 200ms ease-in;
 }
 
 .nav-home .user span.logout_user>a+ul>li>a .icon {
@@ -320,7 +322,12 @@ body.login {
     font-size: 1em;
 }
 
-.nav-home .user span.logout_user>a:focus+ul>li {
+.nav-home .user span.logout_user>a+ul:hover {
+    display: block;
+    animation: fadeIn 200ms;
+}
+
+.nav-home .user span.logout_user>a:focus+ul {
     display: block;
     animation: fadeIn 200ms;
 }
@@ -335,10 +342,6 @@ body.login {
     100% {
         opacity: 1;
     }
-}
-
-.nav-home .user span.logout_user>a+ul:hover>li {
-    display: block;
 }
 
 .nav-home ul {

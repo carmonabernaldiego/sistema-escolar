@@ -52,7 +52,11 @@ if (strpos($url_actual, 'modules')) {
             <a class="icon" href="#">expand_more</a>
             <ul>
                 <li>
-                    <a style="border-bottom: 3px solid #6272a4;" href="/user"><span class="icon">settings</span>Configuración</a>
+                    <a class="<?php if ($output[1] == 'user') {
+                                    echo 'active-logout';
+                                } ?>" style="border-bottom: 3px solid #6272a4;" href="/user"><span class="icon">settings</span>Configuración</a>
+                </li>
+                <li>
                     <a href="/modules/logout"><span class="icon">logout</span>Cerrar Sesión</a>
                 </li>
             </ul>
@@ -61,31 +65,40 @@ if (strpos($url_actual, 'modules')) {
     <ul>
         <li><a class="<?php if ($output[1] == 'home') {
                             echo 'active';
-                        } ?>" href="/home"><span class="icon">dashboard</span>Dashboard</a></li>
+                        } ?>" href="/home"><span class="icon">dashboard</span>Dashboard</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'users') {
                             echo 'active';
-                        } ?>" href="/modules/users"><span class="icon">manage_accounts</span>Usuarios</a></li>
+                        } ?>" href="/modules/users"><span class="icon">manage_accounts</span>Usuarios</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'administratives') {
                             echo 'active';
-                        } ?>" href="/modules/administratives"><span class="icon">supervised_user_circle</span>Administrativos</a></li>
+                        } ?>" href="/modules/administratives"><span class="icon">supervised_user_circle</span>Administrativos</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'teachers') {
                             echo 'active';
-                        } ?>" href="/modules/teachers"><span class="icon">connect_without_contact</span>Docentes</a></li>
+                        } ?>" href="/modules/teachers"><span class="icon">connect_without_contact</span>Docentes</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'students') {
                             echo 'active';
-                        } ?>" href="/modules/students"><span class="icon">recent_actors</span>Alumnos</a></li>
+                        } ?>" href="/modules/students"><span class="icon">recent_actors</span>Alumnos</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'school_periods') {
                             echo 'active';
-                        } ?>" href="/modules/school_periods"><span class="icon">date_range</span>Periodo Escolar</a></li>
+                        } ?>" href="/modules/school_periods"><span class="icon">date_range</span>Periodo Escolar</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'careers') {
                             echo 'active';
-                        } ?>" href="/modules/careers"><span class="icon">school</span>Carreras</a></li>
+                        } ?>" href="/modules/careers"><span class="icon">school</span>Carreras</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'subjects') {
                             echo 'active';
-                        } ?>" href="/modules/subjects"><span class="icon">library_books</span>Asignaturas</a></li>
+                        } ?>" href="/modules/subjects"><span class="icon">library_books</span>Asignaturas</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'groups') {
                             echo 'active';
-                        } ?>" href="/modules/groups"><span class="icon">groups</span>Grupos</a></li>
+                        } ?>" href="/modules/groups"><span class="icon">groups</span>Grupos</a>
+        </li>
         <li><a class="<?php if ($output[1] == 'attendance') {
                             echo 'active';
                         } ?>" href="/modules/attendance"><span class="icon">fact_check</span>Asistencias</a>
