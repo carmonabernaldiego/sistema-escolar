@@ -2047,13 +2047,13 @@ input[type="range"]:active {
 }
 
 .user-mobile header img {
-    max-width: 45px;
-    max-height: 45px;
+    max-width: 46px;
+    max-height: 46px;
 }
 
 .user-mobile header .activator-user {
-    width: 45px;
-    height: 45px;
+    width: 46px;
+    height: 46px;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border: 3px solid #44475a;
@@ -2079,7 +2079,7 @@ input[type="range"]:active {
 .user-mobile nav {
     display: none;
     width: 0;
-    max-height: 51px;
+    height: 52px;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
     border-top-left-radius: 10em;
@@ -2092,44 +2092,38 @@ input[type="range"]:active {
 }
 
 .user-mobile nav ul li.first-item {
-    margin-left: 18px;
-    margin-right: 14px;
+    margin-left: 8px;
+    margin-right: 28px;
 }
 
 .user-mobile nav ul li {
-    margin: 0;
+    margin-right: 0;
 }
 
 .user-mobile nav ul li a {
     display: block;
-    margin: 3px 0 0 0;
+    width: 129%;
+    margin: 4.5px 0 0 0;
     color: #eef4ff;
     font-size: 1.3em;
     text-align: center;
     text-decoration: none;
+    border-radius: 0.9em;
     outline: none;
     outline-width: none;
     transition: all 300ms ease-out;
 }
 
-.user-mobile nav ul li a>span.icon {
-    display: block;
-    width: 35px;
-    height: 35px;
-    margin: 0 auto;
-    border-radius: 100%;
-    line-height: 1.7em;
-}
-
 .user-mobile header nav ul li a span.text {
     display: block;
     width: 100%;
-    margin-top: -2px;
+    margin-top: -5px;
+    padding-bottom: 2px;
     font-size: 0.5em;
     font-weight: bold;
 }
 
-.user-mobile nav ul li a:hover span.icon,
+.user-mobile nav ul li a:hover,
 .user-mobile nav ul li a:focus {
     background: #323844;
     box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);

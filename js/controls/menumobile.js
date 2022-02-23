@@ -75,7 +75,7 @@ tlU.to('.user-mobile .activator-user', {
 
 tlU.to('.user-mobile nav', {
     display: 'block',
-    width: '180px',
+    width: '200px',
     duration: 0.2
 });
 
