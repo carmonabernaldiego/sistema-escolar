@@ -18,6 +18,7 @@ let tl = gsap.timeline({
 });
 
 let toggle = false;
+let toggleU = false;
 
 tl.to('.activator', {
     background: '#6272a4',
@@ -49,7 +50,20 @@ tl.pause();
 
 card.addEventListener('click', () => {
     toggle = !toggle;
-    if (toggle ? tl.play() : tl.reverse());
+
+    if (toggle) {
+        tl.play();
+
+        toggleU = !toggleU;
+
+        if (!toggleU) {
+            tlU.reverse();
+        } else {
+            toggleU = !toggleU;
+        }
+    } else {
+        tl.reverse();
+    }
 });
 
 /*-------------------------------------------
@@ -63,8 +77,6 @@ let tlU = gsap.timeline({
         ease: 'power2.inOut'
     }
 });
-
-let toggleU = false;
 
 tlU.to('.user-mobile .activator-user', {
     background: '#6272a4',
@@ -97,5 +109,18 @@ tlU.pause();
 
 cardU.addEventListener('click', () => {
     toggleU = !toggleU;
-    if (toggleU ? tlU.play() : tlU.reverse());
+
+    if (toggleU) {
+        tlU.play();
+
+        toggle = !toggle;
+
+        if (!toggle) {
+            tl.reverse();
+        } else {
+            toggle = !toggle;
+        }
+    } else {
+        tlU.reverse();
+    }
 });

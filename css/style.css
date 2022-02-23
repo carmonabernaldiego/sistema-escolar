@@ -2103,7 +2103,7 @@ input[type="range"]:active {
 .user-mobile nav ul li a {
     display: block;
     width: 129%;
-    margin: 4.5px 0 0 0;
+    margin: 4px 0 0 0;
     color: #eef4ff;
     font-size: 1.3em;
     text-align: center;
@@ -2175,7 +2175,7 @@ input[type="range"]:active {
     margin: -55px auto 0px;
     padding: 0;
     background: url(../images/logo.svg) no-repeat center;
-    background-size: 160px;
+    background-size: 156px;
     text-indent: -999px;
 }
 
@@ -2236,7 +2236,7 @@ input[type="range"]:active {
 
 .menu-mobile header nav ul li a {
     display: block;
-    margin: 4.5px 6px 0 0;
+    margin: 4px 6px 0 0;
     padding: 0em .35em;
     color: #eef4ff;
     font-size: 1.3em;
