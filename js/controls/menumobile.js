@@ -74,7 +74,8 @@ tlU.to('.user-mobile .activator-user', {
 });
 
 tlU.to('.user-mobile nav', {
-    clipPath: 'ellipse(100% 100% at 100% 50%)',
+    display: 'block',
+    width: '180px',
     duration: 0.2
 });
 

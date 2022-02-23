@@ -294,7 +294,7 @@ body.login {
     display: none;
     position: absolute;
     right: 3%;
-    width: 52%;
+    width: 50%;
     margin-top: -10%;
     background: #383a59;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
@@ -2062,12 +2062,12 @@ input[type="range"]:active {
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
     cursor: pointer;
-    transition: background 100ms ease-in;
+    transition: background 300ms ease-out;
 }
 
 .user-mobile header .activator-user:hover {
     background: #44475a;
-    transition: background 100ms ease-in;
+    transition: background 200ms ease-in;
 }
 
 .user-mobile ul {
@@ -2077,67 +2077,70 @@ input[type="range"]:active {
 }
 
 .user-mobile nav {
-    max-height: 57px;
+    display: none;
+    width: 0;
+    max-height: 51px;
     background: #44475a;
     box-shadow: 0 2px 2px rgba(73, 80, 104, 0.4);
-    border-radius: 5em 0 0 5em;
-    clip-path: ellipse(50% 50% at 150% 50%);
+    border-top-left-radius: 10em;
+    border-bottom-left-radius: 10em;
+    overflow: hidden;
 }
 
 .user-mobile nav ul {
     display: flex;
 }
 
-.user-mobile nav ul {
-    width: 107px;
-}
-
 .user-mobile nav ul li.first-item {
-    margin-left: 9px;
-    margin-right: 7px;
+    margin-left: 18px;
+    margin-right: 14px;
 }
 
 .user-mobile nav ul li {
-    margin-right: 9px;
+    margin: 0;
 }
 
 .user-mobile nav ul li a {
     display: block;
-    margin: 0 auto;
-    margin-top: 6px;
-    width: 40px;
-    height: 40px;
+    margin: 3px 0 0 0;
     color: #eef4ff;
     font-size: 1.3em;
-    line-height: 2.24em;
-    text-decoration: none;
     text-align: center;
-    border-radius: 100%;
+    text-decoration: none;
     outline: none;
     outline-width: none;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+.user-mobile nav ul li a>span.icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 100%;
+    line-height: 1.7em;
 }
 
 .user-mobile header nav ul li a span.text {
     display: block;
-    margin-top: -5px;
-    padding-bottom: 2px;
+    width: 100%;
+    margin-top: -2px;
     font-size: 0.5em;
     font-weight: bold;
 }
 
-.user-mobile nav ul li a:hover,
+.user-mobile nav ul li a:hover span.icon,
 .user-mobile nav ul li a:focus {
     background: #323844;
     box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
     color: #eef4ff98;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .user-mobile nav ul li a:active,
 .user-mobile nav ul li a.active-user:active {
     background: #282d36;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .user-mobile nav ul li a.active-user {
@@ -2199,12 +2202,12 @@ input[type="range"]:active {
     font-size: 1.3em;
     line-height: 0.95em;
     cursor: pointer;
-    transition: color 100ms ease-in;
+    transition: color 300ms ease-out;
 }
 
 .menu-mobile header .activator:hover {
     background: #44475a;
-    transition: color 100ms ease-in;
+    transition: color 200ms ease-in;
 }
 
 .menu-mobile header span.activator {
@@ -2248,7 +2251,7 @@ input[type="range"]:active {
     border-radius: 0.4em;
     outline: none;
     outline-width: none;
-    transition: all 350ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .menu-mobile header nav ul li a span.text {
@@ -2264,13 +2267,13 @@ input[type="range"]:active {
     background: #323844;
     box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
     color: #eef4ff98;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .menu-mobile header nav ul li a:active,
 .menu-mobile header nav ul li a.active-menu:active {
     background: #282d36;
-    transition: all 350ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .menu-mobile header nav ul li a.active-menu {
