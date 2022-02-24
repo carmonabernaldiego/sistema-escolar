@@ -2418,25 +2418,30 @@ input[type="range"]:active {
         margin-bottom: 27px;
     }
     .form-options .options {
-        padding: 1.5% 10%;
+        padding: 7px 10%;
         border: none;
+    }
+    .form-options .options .btn {
+        width: 35px;
+        height: 35px;
     }
     .form-options .options .btn-search-mobile {
         display: block;
     }
     .form-options .search {
         display: none;
-        padding: .5% 0 2.1%;
+        padding: 5px 0 12px;
     }
     .form-options .search .text-search {
-        width: 63%;
-        height: 36px;
+        width: 73%;
+        height: 35px;
         margin-left: 6.5%;
-        padding: 0 22% 0 2%;
+        padding: 0 12% 0 2%;
     }
     .form-options .search .btn-search {
-        width: 20%;
-        height: 36px;
+        width: 10%;
+        height: 35px;
+        margin: 0 6.5% 0 -10%;
     }
 }
 
@@ -2484,10 +2489,6 @@ input[type="range"]:active {
     }
     .form-gridview .pages ul li button {
         width: 5%;
-    }
-    .form-options .options .btn {
-        width: 35px;
-        height: 35px;
     }
     .form-config-user .body .first,
     .form-config-user .body .last {
@@ -2546,6 +2547,14 @@ input[type="range"]:active {
     .form-data.form-users .body .wrap {
         padding: 25px 0 0 0;
     }
+    .form-options .search .text-search {
+        width: 69%;
+        padding: 0 16% 0 2%;
+    }
+    .form-options .search .btn-search {
+        width: 14%;
+        margin: 0 6.5% 0 -14%;
+    }
 }
 
 @media only screen and (max-width: 540px) {
@@ -2590,9 +2599,6 @@ input[type="range"]:active {
     }
     .form-data .delete .btn-no {
         margin: 22px 6% 25px 0;
-    }
-    .form-options .options {
-        padding: 8px 35px;
     }
 }
 
