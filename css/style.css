@@ -2089,6 +2089,7 @@ input[type="range"]:active {
 
 .user-mobile nav ul {
     display: flex;
+    float: right;
 }
 
 .user-mobile nav ul li.first-item {
@@ -2096,11 +2097,15 @@ input[type="range"]:active {
     margin-right: 18px;
 }
 
+.user-mobile nav ul li {
+    margin-right: 18px;
+}
+
 .user-mobile nav ul li a {
     display: block;
     width: 100%;
     padding: 0 6px;
-    margin: 4px 0 0 0;
+    margin-top: 4px;
     color: #eef4ff;
     font-size: 1.3em;
     text-align: center;
