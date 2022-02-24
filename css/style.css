@@ -2130,13 +2130,14 @@ input[type="range"]:active {
 .user-mobile nav ul li a:focus {
     background: #323844;
     box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
-    color: #eef4ff98;
+    color: #9492c0;
     transition: all 200ms ease-in;
 }
 
 .user-mobile nav ul li a:active,
 .user-mobile nav ul li a.active-user:active {
     background: #282d36;
+    color: #7875a1;
     transition: all 200ms ease-in;
 }
 
@@ -2144,7 +2145,7 @@ input[type="range"]:active {
     background: #323844;
     box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
     opacity: 0;
-    color: #eef4ff98;
+    color: #9492c0;
     transform: translateX(10px);
 }
 
@@ -2263,13 +2264,14 @@ input[type="range"]:active {
 .menu-mobile header nav ul li a:focus {
     background: #323844;
     box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
-    color: #eef4ff98;
+    color: #9492c0;
     transition: all 200ms ease-in;
 }
 
 .menu-mobile header nav ul li a:active,
 .menu-mobile header nav ul li a.active-menu:active {
     background: #282d36;
+    color: #7875a1;
     transition: all 200ms ease-in;
 }
 
@@ -2277,7 +2279,7 @@ input[type="range"]:active {
     background: #323844;
     box-shadow: 0 0 2px rgba(73, 80, 104, 0.4);
     opacity: 0;
-    color: #eef4ff98;
+    color: #9492c0;
     transform: translateX(-10px);
 }
 
