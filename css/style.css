@@ -519,7 +519,7 @@ body.login {
 
 .form-login .label.error {
     margin: 8px 0 3px 0;
-    color: #ff5858;
+    color: #ca3636;
     text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
     font-size: 1.2em;
     font-weight: 600;
