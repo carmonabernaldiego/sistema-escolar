@@ -294,7 +294,7 @@ body.login {
     display: none;
     position: absolute;
     right: 3%;
-    width: 50%;
+    width: 170px;
     margin-top: -10%;
     background: #383a59;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
