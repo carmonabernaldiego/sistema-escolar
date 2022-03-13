@@ -10,7 +10,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 						<th>Usuario</th>
 						<th>Correo</th>
 						<th>Permisos</th>
-						<th class="edit center"><a class="icon">edit</a></th>
+						<th class="center"><a class="icon">edit</a></th>
 					</tr>
 		';
 		}
@@ -18,7 +18,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 			echo '
 		    		<tr>
 						<td>' . $_SESSION["user_id"][$i] . '</td>
-						<td><p>' . $_SESSION["user_email"][$i] . '</p></td>
+						<td class="tdbreak">' . $_SESSION["user_email"][$i] . '</td>
 						<td>' . $_SESSION["user_type"][$i] . '</td>
 						<td>
 							<form action="" method="POST">

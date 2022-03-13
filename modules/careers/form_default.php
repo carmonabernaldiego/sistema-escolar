@@ -9,11 +9,11 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 					<tr>
 						<th>Carrera</th>
 						<th>Nombre</th>
-						<th class="view center"><a class="icon">visibility</a></th>
-						<th class="edit center"><a class="icon">edit</a></th>
+						<th class="center"><a class="icon">visibility</a></th>
+						<th class="center"><a class="icon">edit</a></th>
 			';
 			if ($_SESSION['permissions'] != 'editor') {
-				echo '<th class="delete center"><a class="icon">delete</a></th>';
+				echo '<th class="center"><a class="icon">delete</a></th>';
 			}
 			echo '	
 					</tr>

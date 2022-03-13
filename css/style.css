@@ -850,7 +850,7 @@ body.login {
 
 .form-gridview table.default,
 .form-gridview table.users {
-    width: 93%;
+    width: 91%;
     margin: 4.5% auto 0;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
     border-collapse: collapse;
@@ -877,7 +877,7 @@ body.login {
     text-align: center;
 }
 
-.form-gridview th a {
+.form-gridview th a.icon {
     color: #eef4ff;
     font-size: 1.2em;
     text-decoration: none;
@@ -895,11 +895,12 @@ body.login {
     transition: all 300ms ease-out;
 }
 
-.form-gridview td p.email {
-    width: 220px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.form-gridview td.tdbreak {
+    word-break: break-all;
+}
+
+.form-gridview td.tdbreakw {
+    word-break: break-word;
 }
 
 .form-gridview td.center {

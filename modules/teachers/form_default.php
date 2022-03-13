@@ -11,9 +11,9 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 						<th>Nombre</th>
 						<th>CURP</th>
 						<th>Teléfono</th>
-						<th class="view center"><a class="icon">visibility</a></th>
-						<th class="edit center"><a class="icon">edit</a></th>
-						<th class="delete center"><a class="icon">delete</a></th>
+						<th class="center"><a class="icon">visibility</a></th>
+						<th class="center"><a class="icon">edit</a></th>
+						<th class="center"><a class="icon">delete</a></th>
 					</tr>
 		';
 		}

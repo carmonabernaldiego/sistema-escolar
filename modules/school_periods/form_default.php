@@ -11,8 +11,8 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 						<th>Nombre</th>
 						<th class="center">Activo</th>
 						<th class="center">Actual</th>
-						<th class="edit center"><a class="icon">edit</a></th>
-						<th class="delete center"><a class="icon">delete</a></th>
+						<th class="center"><a class="icon">edit</a></th>
+						<th class="center"><a class="icon">delete</a></th>
 					</tr>
 		';
 		}
@@ -20,7 +20,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin.php');
 			echo '
 					<tr>
 						<td>' . $_SESSION["sp_id"][$i] . '</td>
-						<td>' . $_SESSION["sp_name"][$i] . '</td>
+						<td class="tdbreak">' . $_SESSION["sp_name"][$i] . '</td>
 						<td class="center">' . $_SESSION["sp_active"][$i] . '</td>
 						<td class="center">' . $_SESSION["sp_current"][$i] . '</td>
 						<td>

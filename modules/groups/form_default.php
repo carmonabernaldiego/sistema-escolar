@@ -10,12 +10,12 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 						<th>Grupo</th>
 						<th>Nombre</th>
 						<th class="center">Semestre</th>
-						<th class="view center"><a class="icon">visibility</a></th>
-						<th class="edit center"><a class="icon">edit</a></th>
+						<th class="center"><a class="icon">visibility</a></th>
+						<th class="center"><a class="icon">edit</a></th>
 			';
 			if ($_SESSION['permissions'] != 'editor') {
 				echo '
-						<th class="delete center"><a class="icon">delete</a></th>
+						<th class="center"><a class="icon">delete</a></th>
 				';
 			}
 			echo '
