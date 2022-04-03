@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 01-03-2022 a las 17:25:01
+-- Tiempo de generación: 03-04-2022 a las 17:54:14
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -49,7 +49,10 @@ CREATE TABLE `administratives` (
 --
 
 INSERT INTO `administratives` (`user`, `name`, `surnames`, `date_of_birth`, `gender`, `curp`, `rfc`, `phone`, `address`, `level_studies`, `occupation`, `observations`, `created_at`, `updated_at`) VALUES
-('admin', 'Diego', 'Carmona Bernal', '1997-04-05', 'hombre', 'CABD970405HCSRRG03', 'CABD9704052K5', '9614044227', 'Av. Aquiles Serdán 915, Bienestar Social, 29077, Tuxtla Gutiérrez, Chiapas.', 'Ingenieria', 'Programador', '', '2021-12-05 18:33:37', '2022-02-08 06:29:26');
+('admin', 'Diego', 'Carmona Bernal', '1997-04-05', 'hombre', 'CABD970405HCSRRG03', 'CABD9704052K5', '9614044227', 'Av. Aquiles Serdán 915, Bienestar Social, 29077, Tuxtla Gutiérrez, Chiapas.', 'Ingenieria', 'Programador', '', '2021-12-05 18:33:37', '2022-04-03 06:06:33'),
+('admineb405', 'Magnolia', 'Montejo Gómez', '1985-03-16', 'mujer', 'MMGO160385MCSRRG01', 'MMGO160385MCS', '9613459810', 'Av. Tulipanes #132, Bienestar Social, Tuxtla Gutiérrez, Chiapas', 'Licenciatura', 'Administrativo', '', '2021-12-04 02:13:36', '2022-02-05 23:24:23'),
+('adminec4e9', 'Rosalinda', 'Pascacio Mendoza', '1997-09-16', 'mujer', 'PMRO970916MCSLLS09', 'PMRO970916MCS', '9654392021', 'Conocido', 'Maestria', 'Recurso Humanos', '', '2021-08-27 03:41:36', '2022-02-03 07:52:57'),
+('editor', 'Jesús Antonio', 'Olvera Gálvez', '1989-10-14', 'hombre', 'OGJA891014HCSRRG02', 'OGJA8910142V9', '9614044227', '9 Av. Sur. Ote #2167', 'Maestria', 'Recursos Humanos', '', '2020-12-01 18:33:52', '2021-12-07 22:07:34');
 
 -- --------------------------------------------------------
 
@@ -105,20 +108,20 @@ CREATE TABLE `attendance_details` (
 CREATE TABLE `careers` (
   `career` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
-  `description` text COLLATE utf8_spanish2_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `description` text COLLATE utf8_spanish2_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Volcado de datos para la tabla `careers`
 --
 
-INSERT INTO `careers` (`career`, `name`, `description`, `created_at`, `updated_at`) VALUES
-('IDS', 'Ingeniería de Software', 'Es la aplicación práctica del conocimiento científico y humanístico al diseño y construcción de programas de computadora, diseñando soluciones de software innovadoras y acordes con el entorno social y empresarial, mediante herramientas, técnicas, tecnologías de usabilidad, base de datos, redes, teleproceso y lenguajes de programación. En Politécnica de Chiapas formamos ingenieros profesionales especializados en el desarrollo de software; capaces de crear, innovar y aplicar la tecnología para ofrecer soluciones en las áreas de la comunicación digital, automatización, negocios, sistemas computacionales, educación, transportes, diversión y entretenimiento.', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-('IEM', 'Ingeniería Mecatrónica', 'En esta Ingeniería se combinan diversas disciplinas como la mecánica, electrónica, computación, y control. Las (os) ingenieros mecatrónicos diseñan, integran y desarrollan diversos productos, mecanismos, equipos, maquinaria y sistemas integrales de automatización, así como la elaboración de análisis y consultorías técnicas en procesos relacionados con las áreas de aplicación de la ingeniería mecatrónica, todo esto con la ayuda de herramientas de hardware y software de vanguardia. En la Politécnica de Chiapas contamos con una formación integral, humana, práctica, teórica, empresarial, que permite a nuestras (os) ingenieros desarrollar e implementar tecnología para ofrecer soluciones que contribuyan a mejorar la calidad de vida de las personas así como optimizar los recursos de las empresas. Para ello, contamos con laboratorios equipados, académicos reconocidos y un programa educativo reconocido por una institución de calidad, CACEI.', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-('INGBIO', 'Ingeniería Biomédica', 'En esta rama de la ingeniería se fusionan aspectos de electrónica, medicina, física, informática, química, biología y matemáticas. Las y los ingenieros biomédicos diseñan, crean, desarrollan, innovan e implementan equipos, dispositivos y sistemas médicos que ofrezcan soluciones tecnológicas y científicas en el área de la salud; así también manejan programas de mejoramiento, administración, operación y conservación de instalaciones y equipo hospitalario. En Politécnica de Chiapas formamos ingenieras (os) biomédicos profesionales y especializados, con valores, capaces de desarrollar, adoptar y aplicar la tecnología para ofrecer soluciones científicas y administrativas integrales en el campo de la salud en nuestro país.', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-('INGPLRA', 'Ingeniería Petrolera', 'El ingeniero petrolero se forma aprovechando de manera sustentable los recursos naturales, atendiendo la preservación del medio ambiente, aplicando para ello las nuevas tecnologías, con habilidades, actitudes, aptitudes analíticas y creativas, de liderazgo y calidad humana, con un espíritu de superación permanente para investigar, desarrollar y aplicar el conocimiento científico y tecnológico. Las y los ingenieros petroleros son profesionistas capaces de atender las necesidades emanadas de los procesos de explotación de hidrocarburos, de agua y de energía geotérmica, a fin de redituar beneficios económicos al país y prever los posibles daños ecológicos al medio ambiente. En la Politécnica de Chiapas formamos ingenieros(as) petroleros de manera profesional, técnica y humana, comprometidos con las necesidades sociales, ambientales y económicas.', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `careers` (`career`, `name`, `description`) VALUES
+('IDS', 'Ingeniería en Desarrollo de Software', 'Es la aplicación práctica del conocimiento científico y humanístico al diseño y construcción de programas de computadora, diseñando soluciones de software innovadoras y acordes con el entorno social y empresarial, mediante herramientas, técnicas, tecnologías de usabilidad, base de datos, redes, teleproceso y lenguajes de programación. En Politécnica de Chiapas formamos ingenieros profesionales especializados en el desarrollo de software; capaces de crear, innovar y aplicar la tecnología para ofrecer soluciones en las áreas de la comunicación digital, automatización, negocios, sistemas computacionales, educación, transportes, diversión y entretenimiento.'),
+('IEM', 'Ingeniería Mecatrónica', 'En esta Ingeniería se combinan diversas disciplinas como la mecánica, electrónica, computación, y control. Las (os) ingenieros mecatrónicos diseñan, integran y desarrollan diversos productos, mecanismos, equipos, maquinaria y sistemas integrales de automatización, así como la elaboración de análisis y consultorías técnicas en procesos relacionados con las áreas de aplicación de la ingeniería mecatrónica, todo esto con la ayuda de herramientas de hardware y software de vanguardia. En la Politécnica de Chiapas contamos con una formación integral, humana, práctica, teórica, empresarial, que permite a nuestras (os) ingenieros desarrollar e implementar tecnología para ofrecer soluciones que contribuyan a mejorar la calidad de vida de las personas así como optimizar los recursos de las empresas. Para ello, contamos con laboratorios equipados, académicos reconocidos y un programa educativo reconocido por una institución de calidad, CACEI.'),
+('INGBIO', 'Ingeniería Biomédica', 'En esta rama de la ingeniería se fusionan aspectos de electrónica, medicina, física, informática, química, biología y matemáticas. Las y los ingenieros biomédicos diseñan, crean, desarrollan, innovan e implementan equipos, dispositivos y sistemas médicos que ofrezcan soluciones tecnológicas y científicas en el área de la salud; así también manejan programas de mejoramiento, administración, operación y conservación de instalaciones y equipo hospitalario. En Politécnica de Chiapas formamos ingenieras (os) biomédicos profesionales y especializados, con valores, capaces de desarrollar, adoptar y aplicar la tecnología para ofrecer soluciones científicas y administrativas integrales en el campo de la salud en nuestro país.'),
+('INGPLRA', 'Ingeniería Petrolera', 'El ingeniero petrolero se forma aprovechando de manera sustentable los recursos naturales, atendiendo la preservación del medio ambiente, aplicando para ello las nuevas tecnologías, con habilidades, actitudes, aptitudes analíticas y creativas, de liderazgo y calidad humana, con un espíritu de superación permanente para investigar, desarrollar y aplicar el conocimiento científico y tecnológico. Las y los ingenieros petroleros son profesionistas capaces de atender las necesidades emanadas de los procesos de explotación de hidrocarburos, de agua y de energía geotérmica, a fin de redituar beneficios económicos al país y prever los posibles daños ecológicos al medio ambiente. En la Politécnica de Chiapas formamos ingenieros(as) petroleros de manera profesional, técnica y humana, comprometidos con las necesidades sociales, ambientales y económicas.'),
+('MATBASICAS', 'Tronco común', ''),
+('MTABIOTEC', 'Maestría en Biotecnología', 'Mediante la biotecnología, los científicos buscan formas de aprovechar la \"tecnología biológica\" de los seres vivos para generar alimentos más saludables, mejores medicamentos, materiales más resistentes o menos contaminantes, cultivos más productivos, fuentes de energía renovables e incluso sistemas para eliminar la contaminación.\r\n\r\nLas y los maestros en Biotecnología podrán coadyuvar en la incorporación de procesos y técnicas biotecnológicas para la producción y transformación en diferentes sectores socioeconómicos, así también podrán participar en ámbitos académicos, empresariales y de investigación.');
 
 -- --------------------------------------------------------
 
@@ -170,8 +173,9 @@ CREATE TABLE `school_periods` (
 INSERT INTO `school_periods` (`school_period`, `name`, `start_date`, `end_date`, `active`, `current`, `created_at`, `updated_at`) VALUES
 ('2021-1', 'Enero - Abril 2021', '2021-01-06', '2021-04-09', 1, 0, '2021-12-04 00:57:04', '2022-02-04 06:15:56'),
 ('2021-2', 'Abril - Julio 2021', '2021-04-30', '2021-07-23', 1, 0, '2021-10-08 20:38:04', '2022-02-04 06:14:40'),
-('2021-3', 'Septiembre - Diciembre 2021', '2021-08-30', '2021-12-14', 1, 0, '2021-12-04 00:59:21', '2022-02-06 01:43:49'),
-('2022-1', 'Enero - Abril 2022', '2022-01-03', '2022-04-26', 1, 1, '2022-01-05 05:37:49', '2022-02-07 16:19:39');
+('2021-3', 'Septiembre - Diciembre 2021', '2021-08-30', '2021-12-14', 1, 0, '2021-12-04 00:59:21', '2022-03-13 04:02:16'),
+('2022-1', 'Enero - Abril 2022', '2022-01-03', '2022-04-26', 1, 1, '2022-01-05 05:37:49', '2022-03-13 03:27:59'),
+('2022-2', 'Abril - Julio 2022', '2022-04-27', '2022-07-08', 1, 0, '2022-04-03 05:30:20', '2022-04-03 06:10:09');
 
 -- --------------------------------------------------------
 
@@ -183,14 +187,28 @@ CREATE TABLE `students` (
   `user` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `name` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `surnames` varchar(60) COLLATE utf8_spanish2_ci NOT NULL,
+  `date_of_birth` date DEFAULT NULL,
+  `gender` varchar(30) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `curp` varchar(18) COLLATE utf8_spanish2_ci NOT NULL,
   `rfc` varchar(13) COLLATE utf8_spanish2_ci NOT NULL,
-  `address` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
   `phone` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
-  `career` varchar(100) COLLATE utf8_spanish2_ci NOT NULL,
+  `address` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
+  `career` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `documentation` int(1) NOT NULL,
-  `admission_date` date NOT NULL
+  `admission_date` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `students`
+--
+
+INSERT INTO `students` (`user`, `name`, `surnames`, `date_of_birth`, `gender`, `curp`, `rfc`, `phone`, `address`, `career`, `documentation`, `admission_date`, `created_at`, `updated_at`) VALUES
+('stdt8ef8ba', 'Carlos Esteban', 'Robles Flores', NULL, NULL, 'CSJJSSIKJSKLSKOSKJ', 'JNDKJHJDLKJSL', '9651251012', 'Conocido', 'IEM', 0, '2021-10-08', '2022-04-03 17:52:52', NULL),
+('student_0beb9', 'Jesus', 'Ruiz Ruiz', NULL, NULL, 'PIJA0SKKS000022236', 'CONOCIDO', '2737283838', 'Conocido', 'IEM', 1, '2021-08-02', '2022-04-03 17:53:02', NULL),
+('student_28e64', 'María Juana', 'Pompeya Corzo', NULL, NULL, 'L02LSLSJLJKJ89994P', 'CONOCIDO', '9828782828', 'Conocido', 'IEM', 0, '2021-08-02', '2022-04-03 17:53:06', NULL),
+('student_f0404', 'Ricardo', 'Flores Magon', NULL, NULL, 'KKSKK99991P9199191', 'CONOCIDO', '272878328', 'Conocido', 'IEM', 1, '2021-08-02', '2022-04-03 17:53:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -246,7 +264,13 @@ CREATE TABLE `teachers` (
 --
 
 INSERT INTO `teachers` (`user`, `name`, `surnames`, `date_of_birth`, `gender`, `curp`, `rfc`, `phone`, `address`, `level_studies`, `specialty`, `career`, `created_at`, `updated_at`) VALUES
-('tchr-b79e1', 'Jesús Antonio', 'Olvera Gálvez', '1989-10-12', 'hombre', 'OEGJ891014HDFLLS01', 'OEGJ891014IV6', '9616541519', 'Av. 9a Sur Ote, entre 12 de Octubre y Pino Suarez, Bienestar Social, 29077, Tuxtla Gutierrez, Chiapas.', 'Ingenieria', 'Software', 'IDS', '2022-02-22 19:57:38', '2022-02-23 17:40:39');
+('tchr-0daed', 'jdjjd', 'kkk', '2022-04-20', 'nodecirlo', 'UJJJJJJJJJJJJJJJJJ', 'JJJJJJJJJJJJJ', '2222222222', 'av', 'Ingenieria', 'j', 'IEM', '2022-04-03 17:35:39', NULL),
+('tchra80e12', 'Pamela', 'Sánchez', '2022-02-08', 'mujer', 'ATME980215KMN32221', 'ATME980215KMN', '9991020394', 'Av. Siempre Viva', 'Licenciatura', 'Negocios', 'IDS,INGBIO,MATBASICAS,MTABIOTEC', '2022-02-02 00:47:13', '2022-02-07 12:45:38'),
+('teacher_5c1ca', 'Moisés', 'Gómez Meléndez', '1996-02-02', 'hombre', 'KSK92992292KSA0000', 'CCCCCCONOCIDO', '9716278838', 'CONOCIDO', 'Ingenieria', 'Cálculo Diferencial', 'IDS,INGPLRA', '2022-02-06 20:37:47', '2022-02-06 20:34:37'),
+('teacher_617af', 'Rigoberto', 'Nanguluru Conde', '2022-02-18', 'hombre', 'CLLLS9202JS8KS90SS', 'CCCCCCONOCIDO', '9881877732', 'CONOCIDO', 'Doctorado', 'Maestría en Computación', 'IDS,MATBASICAS', '2022-02-06 20:37:53', '2022-04-03 05:57:35'),
+('teacher_e9408', 'Juanita de la Cruz', 'Nepomuceno', '2022-02-08', 'mujer', 'KSKKS020020219100S', 'JJJJJCONOCIDO', '9672282646', 'CONOCIDO', 'Maestria', 'Enseñanza del Español', 'INGBIO,MATBASICAS', '2022-02-06 20:37:59', '2022-02-06 20:38:44'),
+('teacher_e9423', 'Carlos Alberto', 'Marín Roblero', '1987-04-15', 'hombre', 'KSKKS020020219100S', 'KKKKKCONOCIDO', '9613334538', 'CONOCIDO', 'Ingenieria', 'Automatas', 'IDS,IEM,INGBIO,INGPLRA,MATBASICAS,MTABIOTEC', '2022-02-06 20:38:03', '2022-04-03 06:16:28'),
+('teacher_e9443', 'Jaime', 'Ponce Torres', '2022-02-08', 'hombre', 'KSKKS020020219100S', 'XAXX010101000', '9653649801', 'CONOCIDO', 'Ingenieria', 'Máquinas', 'INGBIO,MATBASICAS', '2022-02-06 20:38:07', '2022-04-03 06:16:36');
 
 -- --------------------------------------------------------
 
@@ -270,8 +294,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user`, `email`, `pass`, `permissions`, `image`, `image_updated_at`, `created_at`, `updated_at`) VALUES
-('admin', 'carmonabernaldiego@gmail.com', 'root', 'admin', 'user.png', '2022-01-06 18:04:15', '2021-12-05 18:27:39', '2022-02-05 22:54:50'),
-('tchr-b79e1', NULL, 'tchr-b79e1', 'teacher', 'user.png', NULL, '2022-02-22 19:57:38', NULL);
+('admin', 'carmonabernaldiego@gmail.com', 'root', 'admin', 'admin221.png', '2022-02-22 15:18:06', '2021-12-05 18:27:39', '2022-04-03 06:10:34'),
+('admineb405', 'magnoliamontejogomez@gmail.com', 'admineb405', 'editor', 'user.png', NULL, '2021-12-04 02:13:36', '2022-03-13 02:59:59'),
+('adminec4e9', 'rosalindamendoza@gmail.com', 'adminec4e9', 'admin', 'user.png', NULL, '2021-08-27 03:41:36', NULL),
+('editor', 'editor@gmail.com', 'editor', 'editor', 'user.png', NULL, '2021-05-01 00:00:00', NULL),
+('tchr-0daed', NULL, 'tchr-0daed', 'teacher', 'user.png', NULL, '2022-04-03 17:35:39', NULL);
 
 --
 -- Índices para tablas volcadas
