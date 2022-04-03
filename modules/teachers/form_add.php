@@ -13,7 +13,7 @@ $id_generate = 'tchr-' . unique_id(5);
         <h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-teachers" action="insert.php" method="POST" autocomplete="off" autocapitalize="off">
+        <form name="form-add-teachers" action="insert.php" method="POST" autocomplete="off" autocapitalize="on">
             <div class="wrap">
                 <div class="first">
                     <label for="txtuserid" class="label">Usuario</label>

@@ -1,5 +1,7 @@
 <?php
 if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
+    //Eliminar espacios en blanco
+    $_POST['txtuser'] = trim($_POST['txtuser']);
     //Limpiar String
     $user = mysqli_real_escape_string($conexion, $_POST['txtuser']);
     $pass = mysqli_real_escape_string($conexion, $_POST['txtpass']);
@@ -70,7 +72,7 @@ if (!empty($_POST['txtuser']) and !empty($_POST['txtpass'])) {
                 }
             }
 
-            //Cargar datos sesión usuario
+            //Cargar datos sesión usuario COOKIE
             if (!empty($_POST['remember_session'])) {
                 setcookie('remember', 'si', time() + 15 * 24 * 60 * 60);
                 setcookie('user', $user, time() + 15 * 24 * 60 * 60);

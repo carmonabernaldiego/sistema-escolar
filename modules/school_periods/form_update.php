@@ -19,7 +19,7 @@ if ($result = $conexion->query($sql)) {
 		<h1 class="titulo">Actualizar</h1>
 	</div>
 	<div class="body">
-		<form name="form-update-school-periods" action="update.php" method="POST" autocomplete="off" autocapitalize="off">
+		<form name="form-update-school-periods" action="update.php" method="POST" autocomplete="off" autocapitalize="on">
 			<div class="wrap">
 				<div class="first">
 					<label for="txtspid" class="label">Periodo escolar</label>
