@@ -22,7 +22,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 		    		<tr>
 		    			<td>' . $_SESSION["user_id"][$i] . '</td>
 						<td>' . $_SESSION["teacher_name"][$i] . '</td>
-						<td>' . $_SESSION["teacher_curp"][$i] . '</td>
+						<td class="tdbreakw">' . $_SESSION["teacher_curp"][$i] . '</td>
 						<td>' . $_SESSION["teacher_phone"][$i] . '</td>
 						<td>
 							<form action="" method="POST">

@@ -20,7 +20,7 @@ if (!empty($_POST['search'])) {
 
 	$i = 0;
 
-	$sql = "SELECT * FROM administratives WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR surnames LIKE '%" . $_POST['search'] . "%' OR phone LIKE '%" . $_POST['search'] . "%' ORDER BY name";
+	$sql = "SELECT * FROM administratives WHERE user LIKE '%" . $_POST['search'] . "%' OR name LIKE '%" . $_POST['search'] . "%' OR surnames LIKE '%" . $_POST['search'] . "%' OR CURP LIKE '%" . $_POST['search'] . "%' OR phone LIKE '%" . $_POST['search'] . "%' ORDER BY name";
 
 	if ($result = $conexion->query($sql)) {
 		while ($row = mysqli_fetch_array($result)) {
