@@ -13,7 +13,7 @@ $id_generate = 'tchr-' . unique_id(5);
         <h1 class="titulo">Agregar</h1>
     </div>
     <div class="body">
-        <form name="form-add-teachers" action="insert.php" method="POST" autocomplete="off" autocapitalize="on">
+        <form name="form-add-students" action="insert.php" method="POST" autocomplete="off" autocapitalize="on">
             <div class="wrap">
                 <div class="first">
                     <label for="txtuserid" class="label">Usuario</label>
@@ -33,6 +33,12 @@ $id_generate = 'tchr-' . unique_id(5);
                         <option value="otro">Otro</option>
                         <option value="nodecirlo">Prefiero no decirlo</option>
                     </select>
+                    <label for="selectuserdocumentation" class="label">Documentación</label>
+                    <select id="selectuserdocumentation" class="select" name="selectDocumentation" required>
+                        <option value="">Seleccioné</option>
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
                 </div>
                 <div class="last">
                     <label for="txtusercurp" class="label">CURP</label>
@@ -43,22 +49,9 @@ $id_generate = 'tchr-' . unique_id(5);
                     <input id="txtuserphone" class="text" type="text" name="txtphone" value="" placeholder="9998887766" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido." maxlength="10" required />
                     <label for="txtuseraddress" class="label">Domicilio</label>
                     <input id="txtuseraddress" class="text" type="text" name="txtaddress" value="" placeholder="Domicilio" maxlength="200" required />
-                    <label for="txtuserspecialty" class="label">Especialidad</label>
-                    <input id="txtuserspecialty" class="text" type="text" name="txtspecialty" value="" placeholder="Especialidad" maxlength="100" required />
-                </div>
-                <div class="content-full">
-                    <label for="selectuserlevelstudies" class="label">Nivel de estudios</label>
-                    <select id="selectuserlevelstudies" class="select" name="selectlevelstudies" required>
-                        <option value="">Seleccioné</option>
-                        <option value="Licenciatura">Licenciatura</option>
-                        <option value="Ingenieria">Ingenieria</option>
-                        <option value="Maestria">Maestria</option>
-                        <option value="Doctorado">Doctorado</option>
-                    </select>
-                </div>
-                <div class="content-full">
                     <label for="selectusercareers" class="label">Carrera</label>
-                    <select id="selectusercareers" class="select-user-careers" name="selectCareers[]" multiple="multiple" placeholder="holi" required>
+                    <select id="selectusercareers" class="select" name="selectCareer" required>
+                        <option value="">Seleccioné</option>
                         <?php
                         $sql = "SELECT career, name FROM careers";
 
@@ -66,12 +59,14 @@ $id_generate = 'tchr-' . unique_id(5);
                             while ($row = mysqli_fetch_array($result)) {
                                 echo
                                 '
-									<option value="' . $row['career'] . '">' . $row['name'] . '</option>
+										<option value="' . $row['career'] . '">' . $row['name'] . '</option>
 								';
                             }
                         }
                         ?>
                     </select>
+                    <label for="dateuseradmission" class="label">Fecha de admisión</label>
+                    <input id="dateuseradmission" class="date" type="date" name="dateadmission" value="<?php echo date('Y-m-d'); ?>" required />
                 </div>
             </div>
             <button id="btnBack" class="btn back icon" type="button">arrow_back</button>
@@ -85,4 +80,4 @@ $id_generate = 'tchr-' . unique_id(5);
     include_once "../sections/options-disabled.php";
     ?>
 </div>
-<script src="/js/modules/teachers.js" type="text/javascript"></script>
+<script src="/js/modules/students.js" type="text/javascript"></script>
