@@ -9,13 +9,13 @@ $('.select').select2({
     minimumResultsForSearch: Infinity
 });
 
-const dateStart = new Litepicker({
+dateStart = new Litepicker({
     element: document.getElementById('datespstart'),
     lang: 'es-MX',
     singleMode: true
 });
 
-const dateEnd = new Litepicker({
+dateEnd = new Litepicker({
     element: document.getElementById('datespend'),
     lang: 'es-MX',
     singleMode: true

@@ -12,17 +12,18 @@ if (empty($_POST['txtuserid'])) {
 
 $sql_delete = "DELETE FROM users WHERE user = '" . $_POST['txtuserid'] . "'";
 
-if (mysqli_query($conexion, $sql_delete)) {
-	$sql_delete = "DELETE FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
+if ($result = $conexion->query($sql_delete)) {
+	if ($row = mysqli_fetch_array($result)) {
+		$sql_delete = "DELETE FROM administratives WHERE user = '" . $_POST['txtuserid'] . "'";
 
-	if (mysqli_query($conexion, $sql_delete)) {
-		Error('Personal administrativo eliminado.');
+		if (mysqli_query($conexion, $sql_delete)) {
+			Error('Personal administrativo eliminado.');
+		} else {
+			Error('Error al eliminar.');
+		}
 	} else {
 		Error('Error al eliminar.');
 	}
-} else {
-	Error('Error al eliminar.');
 }
-
 header('Location: /modules/administratives');
 exit();

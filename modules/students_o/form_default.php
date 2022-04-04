@@ -10,7 +10,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 						<th>Usuario</th>
 						<th>Nombre</th>
 						<th>CURP</th>
-						<th class="center" style="width: 80px;">Admisión</th>
+						<th class="center">Fecha de Ingreso</th>
 						<th class="center"><a class="icon">visibility</a></th>
 						<th class="center"><a class="icon">edit</a></th>
 			';
@@ -26,7 +26,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 		    		<tr>
 		    			<td>' . $_SESSION["user_id"][$i] . '</td>
 						<td>' . $_SESSION["student_name"][$i] . '</td>
-						<td class="tdbreakw">' . $_SESSION["student_curp"][$i] . '</td>
+						<td>' . $_SESSION["student_curp"][$i] . '</td>
 						<td class="center">' . $_SESSION["student_date"][$i] . '</td>
 						<td>
 							<form action="" method="POST">
@@ -39,13 +39,18 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 								<input style="display:none;" type="text" name="txtuserid" value="' . $_SESSION["user_id"][$i] . '"/>
 								<button class="btnedit" name="btn" value="form_update" type="submit"></button>
 							</form>
-						</td>
-						<td>
-							<form action="" method="POST">
-								<input style="display:none;" type="text" name="txtuserid" value="' . $_SESSION["user_id"][$i] . '"/>
-								<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
-							</form>
-						</td>
+						</td>';
+			if ($_SESSION['permissions'] != 'editor') {
+				echo '
+								<td>
+									<form action="" method="POST">
+										<input style="display:none;" type="text" name="txtuserid" value="' . $_SESSION["user_id"][$i] . '"/>
+										<button class="btndelete" name="btn" value="form_delete" type="submit"></button>
+									</form>
+								</td>
+							';
+			}
+			echo '
 					</tr>
 				';
 		}

@@ -8,7 +8,6 @@ header('Cache-Control: no-cache, must-revalidate, max-age=0');
 header('Cache-Control: post-check=0, pre-check=0', false);
 header('Pragma: no-cache');
 
-//Permisos de administrador y editor
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
 // Formulario actual
@@ -39,17 +38,15 @@ include_once 'load_data.php';
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<meta name="robots" content="noindex">
-	<meta name="google" value="notranslate">
+    <meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 	<title>Alumnos | Sistema Escolar</title>
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
-	<link rel="stylesheet" href="/css/style.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/select2.css" media="screen, projection" type="text/css" />
-	<link rel="stylesheet" href="/css/litepicker.css" media="screen, projection" type="text/css" />
 	<script src="/js/external/jquery.min.js" type="text/javascript"></script>
-	<script src="/js/external/litepicker.js" type="text/javascript"></script>
-	<script src="/js/external/prefixfree.min.js" type="text/javascript"></script>
-	<script src="/js/controls/unsetnotif.js" type="text/javascript"></script>
+    <script src="/js/external/prefixfree.min.js" type="text/javascript"></script>
+	<script src="/js/controls/unsetnotif.js"  type="text/javascript"></script>
 	<script src="/js/external/select2.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
@@ -60,6 +57,7 @@ include_once 'load_data.php';
 
 <body>
 	<div class="loader"></div>
+
 	<header class="header">
 		<?php
 		include_once "../sections/section-info-title.php";
@@ -81,5 +79,13 @@ include_once 'load_data.php';
 	</section>
 </body>
 <script src="/js/controls/buttons.js" type="text/javascript"></script>
+
+<script>
+	$(document).ready(function() {
+		$(".select").select2({
+			minimumResultsForSearch: Infinity
+		});
+	});
+</script>
 
 </html>

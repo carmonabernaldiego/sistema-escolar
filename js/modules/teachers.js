@@ -13,7 +13,7 @@ $('.select-user-careers').select2({
     placeholder: "Seleccioné",
 });
 
-const dateOfBirth = new Litepicker({
+dateOfBirth = new Litepicker({
     element: document.getElementById('dateofbirth'),
     lang: 'es-MX',
     singleMode: true,
@@ -28,7 +28,7 @@ $(".select").next(".select2").find(".select2-selection").focus(function() {
     dateOfBirth.hide();
 });
 
-const validateFirst = () => {
+validateFirst = () => {
     if ($('#txtusername').val().length == 0) {
         $('#txtusername').focus();
         return 0;
@@ -49,33 +49,33 @@ const validateFirst = () => {
     }
 }
 
-const showFirst = () => {
+showFirst = () => {
     $('.first').show();
 }
 
-const showLast = () => {
+showLast = () => {
     $('.last').show();
 }
 
-const showContentFull = () => {
+showContentFull = () => {
     $('.content-full').show();
 }
 
-const hideFirst = () => {
+hideFirst = () => {
     $('.first').hide();
     $('#btnBack').show();
     $('#btnNext').hide();
     $('#btnSave').show();
 }
 
-const hideLast = () => {
+hideLast = () => {
     $('.last').hide();
     $('#btnBack').hide();
     $('#btnNext').show();
     $('#btnSave').hide();
 }
 
-const hideContentFull = () => {
+hideContentFull = () => {
     $('.content-full').hide();
 }
 

@@ -1,12 +1,22 @@
 /*-------------------------------------------
-  administratives.js
+  teachers.js
   By Diego Carmona Bernal - CBDX
   www.diegocarmonabernal.com
   www.mysoftup.com
 -------------------------------------------*/
 
 $('.select').select2({
-    minimumResultsForSearch: Infinity
+    minimumResultsForSearch: Infinity,
+});
+
+dateUserAdmission = new Litepicker({
+    element: document.getElementById('dateuseradmission'),
+    lang: 'es-MX',
+    singleMode: true
+});
+
+$('#dateuseradmission').focus(function(event) {
+    dateUserAdmission.show();
 });
 
 dateOfBirth = new Litepicker({
@@ -24,6 +34,10 @@ $(".select").next(".select2").find(".select2-selection").focus(function() {
     dateOfBirth.hide();
 });
 
+$("#btnSave").focus(function(event) {
+    dateUserAdmission.hide();
+});
+
 validateFirst = () => {
     if ($('#txtusername').val().length == 0) {
         $('#txtusername').focus();
@@ -37,8 +51,8 @@ validateFirst = () => {
     } else if ($('#dateofbirth').val().length == 0) {
         $('#dateofbirth').focus();
         return 0;
-    } else if ($('#txtusercurp').val().length == 0) {
-        $('#txtusercurp').focus();
+    } else if ($('#selectuserdocumentation').val().length == 0) {
+        $('#selectuserdocumentation').focus();
         return 0;
     } else {
         return 1;
@@ -51,6 +65,10 @@ showFirst = () => {
 
 showLast = () => {
     $('.last').show();
+}
+
+showContentFull = () => {
+    $('.content-full').show();
 }
 
 hideFirst = () => {
@@ -67,16 +85,22 @@ hideLast = () => {
     $('#btnSave').hide();
 }
 
+hideContentFull = () => {
+    $('.content-full').hide();
+}
+
 let anchoVentana = window.innerWidth;
 
 if (anchoVentana > 700) {
     showFirst();
     showLast();
+    showContentFull();
     $('#btnBack').hide();
     $('#btnNext').hide();
     $('#btnSave').show();
 } else if (anchoVentana <= 700) {
     showFirst();
+    hideContentFull();
     hideLast();
     $('#txtusername').focus();
 }
@@ -86,6 +110,7 @@ window.onresize = function() {
 
     if (anchoVentana > 700) {
         showFirst();
+        showContentFull();
         showLast();
         $('#btnBack').hide();
         $('#btnNext').hide();
@@ -95,6 +120,7 @@ window.onresize = function() {
 
 $('#btnBack').click(function(event) {
     hideLast();
+    hideContentFull();
     showFirst();
     $('#txtusername').focus();
 });
@@ -102,13 +128,15 @@ $('#btnBack').click(function(event) {
 $('#btnNext').click(function(event) {
     if ($('#txtusername').val() == undefined) {
         showLast();
+        showContentFull();
         hideFirst();
-        $('#txtuserrfc').focus();
+        $('#txtusercurp').focus();
     } else {
         if (validateFirst() == 1) {
             showLast();
+            showContentFull();
             hideFirst();
-            $('#txtuserrfc').focus();
+            $('#txtusercurp').focus();
         }
     }
 });

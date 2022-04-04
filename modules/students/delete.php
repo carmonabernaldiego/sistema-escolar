@@ -1,7 +1,7 @@
 <?php
 include_once '../security.php';
 include_once '../conexion.php';
-
+include_once '../notif_info_msgbox.php';
 
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
 
@@ -10,17 +10,21 @@ if (empty($_POST['txtuserid'])) {
 	exit();
 }
 
-$sql_delete = "DELETE FROM students WHERE user = '" . $_POST['txtuserid'] . "'";
+$sql_delete = "DELETE FROM users WHERE user = '" . $_POST['txtuserid'] . "'";
 
-if (mysqli_query($conexion, $sql_delete)) {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Estudiante eliminado.';
-} else {
-	$_SESSION['msgbox_info'] = 0;
-	$_SESSION['msgbox_error'] = 1;
-	$_SESSION['text_msgbox_error'] = 'Error al eliminar.';
+if ($result = $conexion->query($sql_delete)) {
+	if ($row = mysqli_fetch_array($result)) {
+		$sql_delete = "DELETE FROM students WHERE user = '" . $_POST['txtuserid'] . "'";
+
+		if (mysqli_query($conexion, $sql_delete)) {
+			Error('Alumno eliminado.');
+		} else {
+			Error('Error al eliminar.');
+		}
+	} else {
+		Error('Error al eliminar.');
+	}
 }
 
-
 header('Location: /modules/students');
+exit();
