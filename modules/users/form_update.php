@@ -14,6 +14,10 @@ if ($result = $conexion->query($sql)) {
 		$_SESSION['user_type'] = $row['permissions'];
 		$_SESSION['user_image'] = $row['image'];
 
+		if($_SESSION['user_image'] == null) {
+			$_SESSION['user_image'] = 'user.png';
+		}
+
 		if ($_SESSION['user_type'] == 'admin' || $_SESSION['user_type'] == 'editor') {
 			$sql = "SELECT name, surnames FROM administratives WHERE user = '" . $_SESSION['user_id'] . "'";
 
@@ -75,8 +79,19 @@ echo '
 				</div>
 				<div class="last">
 					<label for="selectusertype" class="label">Permisos</label>
-					<select id="selectusertype" class="select" name="txtusertype">
+					<select id="selectusertype" class="select" name="txtusertype" required>
 					';
+if ($_SESSION['user_type'] == '') {
+	echo
+	'
+								<option value="">Seleccioné</option>
+								<option value="admin">Administrador</option>
+								<option value="capturist">Capturista</option>
+								<option value="editor">Editor</option>	
+								<option value="student">Alumno</option>
+								<option value="teacher">Docente</option>
+	';
+}
 if ($_SESSION['user_type'] == 'admin') {
 	echo
 	'
