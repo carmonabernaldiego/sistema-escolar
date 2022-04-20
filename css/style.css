@@ -497,7 +497,7 @@ body.login {
     left: 0;
     right: 0;
     margin: -55px auto 0;
-    background: url(../images/icon_user.png)#eef4ff no-repeat bottom / 126px 126px;
+    background: url(../images/icon_user.png) #eef4ff no-repeat bottom / 126px 126px;
     box-shadow: 0 1px 6px rgba(142, 136, 192, 0.2);
     border: 4px solid #6f7a9a;
     border-radius: 100%;
