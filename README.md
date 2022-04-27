@@ -1,4 +1,4 @@
-# asistencia_escolar
+# sistema_escolar
 Sistema Escolar - Control de Asistencias
 
 http://mysoftup.com
