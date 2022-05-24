@@ -1,5 +1,5 @@
 # Sistema Escolar
-Sistema Escolar - Control de Asistencias
+Control de Asistencias
 
 http://mysoftup.com
 
