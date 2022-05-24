@@ -4,6 +4,7 @@ Control de Asistencias
 http://mysoftup.com
 
 user: editor
+
 pass: editor
 
 ![image](https://user-images.githubusercontent.com/43613125/160877647-2228e861-b991-419a-85cd-326550f49c50.png)
