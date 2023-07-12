@@ -1,6 +1,4 @@
 # Sistema Escolar
-Control de Asistencias
-
 user: editor
 
 pass: editor
