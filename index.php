@@ -23,8 +23,8 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 	<title>Sistema Escolar</title>
 	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
 	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal, Gestión de Asistencias" />
-	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
-	<link rel="stylesheet" href="css/pretty-checkbox.css" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="/css/style.css" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="/css/pretty-checkbox.css" media="screen, projection" type="text/css" />
 	<script src="/js/external/jquery.min.js" type="text/javascript"></script>
     <script src="/js/external/prefixfree.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
